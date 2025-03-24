@@ -21,21 +21,21 @@ Adoptium is happy to announce the immediate availability of Eclipse Temurin 24+3
 
 * [JEP 475: Late Barrier Expansion for G1](https://openjdk.org/jeps/475)
 
-* [JEP 478:	Key Derivation Function API (Preview)](https://openjdk.org/jeps/478)
+* [JEP 478: Key Derivation Function API (Preview)](https://openjdk.org/jeps/478)
 
-* [JEP 479:	Remove the Windows 32-bit x86 Port](https://openjdk.org/jeps/479)
+* [JEP 479: Remove the Windows 32-bit x86 Port](https://openjdk.org/jeps/479)
 
-* [JEP 483:	Ahead-of-Time Class Loading & Linking](https://openjdk.org/jeps/483)
+* [JEP 483: Ahead-of-Time Class Loading & Linking](https://openjdk.org/jeps/483)
 
-* [JEP 484:	Class-File API](https://openjdk.org/jeps/484)
+* [JEP 484: Class-File API](https://openjdk.org/jeps/484)
 
-* [JEP 485:	Stream Gatherers](https://openjdk.org/jeps/485)
+* [JEP 485: Stream Gatherers](https://openjdk.org/jeps/485)
 
-* [JEP 486:	Permanently Disable the Security Manager](https://openjdk.org/jeps/486)
+* [JEP 486: Permanently Disable the Security Manager](https://openjdk.org/jeps/486)
 
-* [JEP 493:	Linking Runtime Images without JMODs](https://openjdk.org/jeps/493)
+* [JEP 493: Linking Runtime Images without JMODs](https://openjdk.org/jeps/493)
 
-* [JEP 494:	Module Import Declarations (Second Preview)](https://openjdk.org/jeps/494)
+* [JEP 494: Module Import Declarations (Second Preview)](https://openjdk.org/jeps/494)
 
 For a complete list of the enhancements (including ones that only impact developers of OpenJDK), [see the JDK 24 overview over at OpenJDK](https://openjdk.org/projects/jdk/24/).
 
