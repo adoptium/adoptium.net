@@ -33,7 +33,7 @@ Adoptium is happy to announce the immediate availability of Eclipse Temurin 24+3
 
 * [JEP 486:	Permanently Disable the Security Manager](https://openjdk.org/jeps/486)
 
-* [JEP 493:	Linking Run-Time Images without JMODs](https://openjdk.org/jeps/493)
+* [JEP 493:	Linking Runtime Images without JMODs](https://openjdk.org/jeps/493)
 
 * [JEP 494:	Module Import Declarations (Second Preview)](https://openjdk.org/jeps/494)
 
