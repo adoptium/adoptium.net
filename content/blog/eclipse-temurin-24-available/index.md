@@ -17,13 +17,11 @@ Adoptium is happy to announce the immediate availability of Eclipse Temurin 24+3
 
 ## Overview of Java 24 Features
 
-As mentioned in this Adoptium blog post [Eclipse Temurin JDK 24.0.0+36 enables JEP 493](https://adoptium.net/blog/2025/03/eclipse-temurin-jdk24-JEP493-enabled/), is available in this release.
-
-For additional details you can see here:
+As mentioned in this Adoptium blog post [Eclipse Temurin JDK 24.0.0+36 enables JEP 493](https://adoptium.net/blog/2025/03/eclipse-temurin-jdk24-JEP493-enabled/),
 
 * [JEP 493: Linking Runtime Images without JMODs](https://openjdk.org/jeps/493)
 
-Some other features available in this release also include the following:
+is available in this release. Some other features available in this release include the following:
 
 * [JEP 472: Prepare to Restrict the Use of JNI](https://openjdk.org/jeps/472)
 
