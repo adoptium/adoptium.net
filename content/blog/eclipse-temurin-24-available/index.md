@@ -43,7 +43,7 @@ For a complete list of the enhancements (including ones that only impact develop
 
 ### ppc64 AIX unavailable for JDK 24
 
-Temurin jdk-24+36 for the AIX Linux platform is currently unavailable.  A small number of test failures indicated that there is need to investigate and update the upstream codebase.  We hope that this platforms on JDK 24 will be ready for release for the April CPU.
+Temurin jdk-24+36 for the AIX Linux platform is currently unavailable.  A small number of test failures indicated that there is need to investigate and update the upstream codebase.  We hope that this platform on JDK 24 will be ready for release for the April CPU.
 
 ### Linux installation packages changes
 
