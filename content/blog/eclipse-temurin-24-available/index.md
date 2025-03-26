@@ -72,7 +72,7 @@ This change is only being made for the currently supported RPM based distributio
 | CentOS         | 7, 9, 10              |
 | Rocky          | 8                     |
 | RHEL           | 7, 8, 9               |
-| Fedora         | 35, 36, 37, 38, 39, 40, 41, 42, rawhide |
+| Fedora         | 40, 41, 42 |
 | OracleLinux    | 7, 8                   |
 | Amazon Linux   | 2                     |
 | openSUSE       | 15.3, 15.4, 15.5      |
