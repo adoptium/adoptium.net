@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin 24 Available
-date: "2025-03-24T12:00:00+00:00"
+date: "2025-03-26T12:00:00+00:00"
 author: pmc
 description: Adoptium is excited to announce the immediate availability of Eclipse Temurin 24.
 tags:
