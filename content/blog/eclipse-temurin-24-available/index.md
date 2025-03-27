@@ -48,36 +48,3 @@ For a complete list of the enhancements (including ones that only impact develop
 ### ppc64 AIX unavailable for JDK 24
 
 Temurin jdk-24+36 for the AIX platform is currently unavailable.  A small number of test failures indicated that there is need to investigate and update the upstream codebase.  We hope that this platform on JDK 24 will be ready for release for the April CPU.
-
-### Linux installation packages changes
-
-For JDK 24 onwards, a change has been made for the RPM distribution filenames uploaded to packages.adoptium.net, to align with other JDK vendors RPM file naming. Adoptium will now use the
-
-&lt;java&gt;-&lt;feature version&gt;&lt;-vendor&gt;
-
-naming convention designed by http://www.jpackage.org/.
-
-e.g, following the previous conventions for Temurin, the release RPM would have looked like the below:
-
-temurin-24-jdk-24.0.0.0.0.36-0.x86_64.rpm
-
-Whereas from JDK24 onwards, the package filenames will look like this:
-
-java-24-temurin-jdk-24.0.0.0.0.36-0.x86_64.rpm
-
-This change is only being made for the currently supported RPM based distributions available via the package repositories listed below.
-
-| Distribution   | Versions              |
-|----------------|-----------------------|
-| CentOS         | 7, 9, 10              |
-| Rocky          | 8                     |
-| RHEL           | 7, 8, 9               |
-| Fedora         | 40, 41, 42 |
-| OracleLinux    | 7, 8                   |
-| Amazon Linux   | 2                     |
-| openSUSE       | 15.3, 15.4, 15.5      |
-| SLES           | 12, 15                |
-
-It is also worth noting, that the existing installation instructions do not require updating, and that both dnf install java-24-temurin-jdk and dnf install temurin-24-jdk have the same results.
-
-Package names for Alpine & Debian based distributions have not been updated.
