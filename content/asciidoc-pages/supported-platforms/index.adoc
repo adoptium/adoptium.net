@@ -14,7 +14,7 @@ icon:check[] - Supported, icon:docker[] - Docker image available, icon:times[] -
 |===
 .2+h|Operating System 5+h|Eclipse Temurin Version h|
 
-{nbsp} 8 h|11 h|17 h|21 h|23
+{nbsp} 8 h|11 h|17 h|21 h|24
 6+h| Windows (x64)
 | Windows Server 2022 | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:check[] icon:docker[]
 | Windows Server 2019 | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:check[] icon:docker[]| icon:check[] icon:docker[]
@@ -23,8 +23,8 @@ icon:check[] - Supported, icon:docker[] - Docker image available, icon:times[] -
 | Windows 10 | icon:check[] | icon:check[] | icon:check[] | icon:check[] | icon:check[]
 
 6+h| Windows (aarch64)
-| Windows Server 2022 | icon:times[] | icon:times[] | icon:times[] | icon:check[] | icon:check[]
-| Windows 11 | icon:times[] | icon:times[] | icon:times[] | icon:check[] | icon:check[]
+| Windows Server 2022 | icon:times[] | icon:times[] | icon:times[] | icon:check[] | icon:times[]
+| Windows 11 | icon:times[] | icon:times[] | icon:times[] | icon:check[] | icon:times[]
 
 6+h| Windows (x86)
 | Windows Server 2022 | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:check[] icon:docker[] | icon:times[] | icon:times[]
