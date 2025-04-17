@@ -64,7 +64,7 @@
     "react-tabs": "^6.1.0",
     "react-use-flexsearch": "^0.1.1",
     "react-world-flags": "^1.6.0",
-    "remark-gfm": "^1.0.0",
+    "remark-gfm": "^4.0.1",
     "sass": "1.86.3",
     "typescript-plugin-css-modules": "^5.1.0"
   },
@@ -77,8 +77,8 @@
     "@types/react": "^18.3.13",
     "@types/react-dom": "^18.3.1",
     "@types/react-world-flags": "^1.6.0",
-    "@vitejs/plugin-react": "^4.4.0",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.1.1",
     "ajv": "^8.17.1",
     "axios-mock-adapter": "^2.1.0",
     "babel-preset-gatsby": "^3.14.0",
@@ -86,7 +86,7 @@
     "jest-canvas-mock": "^2.5.2",
     "jsdom": "^25.0.1",
     "prettier": "3.5.3",
-    "vitest": "^2.0.2",
+    "vitest": "^3.1.1",
     "vitest-axe": "^0.1.0",
     "vitest-canvas-mock": "^0.3.3"
   },
