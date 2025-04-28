@@ -35,6 +35,7 @@ See: https://bugs.openjdk.org/browse/JDK-8348625
 The change to headless behaviour in Windows for JDK17 & JDK21 has been reverted.
 
 ### Removal Of Docker Images For Windows ServerCore & NanoCore 1809
+
 See: https://github.com/adoptium/containers/pull/751
 
 Both ServerCore and NanoCore were end of life in October 2020, so have now been removed.
