@@ -29,10 +29,9 @@ This release contains the following fixes and updates.
 
 ### Reversion to previous headless behaviour on Windows
 
-Revert JDK-8185862 to restore old java.awt.headless behavior on Windows.
-See: https://bugs.openjdk.org/browse/JDK-8348625
+Revert a change to detecting a headless AWT system on Windows that was introduced in `17.0.12` and `21.0.4` releases ([JDK-8185862](https://bugs.openjdk.org/browse/JDK-8185862)). The fix restores JDK `17.0.15` and JDK `21.0.7` releases to the old headless detection mechanism used prior to JDK `17.0.12` and JDK `21.0.4` releases as the new detection change caused regressions on some Windows systems.
 
-The change to headless behaviour in Windows for JDK17 & JDK21 has been reverted.
+See the backout bug for details: [JDK-8348625](https://bugs.openjdk.org/browse/JDK-8348625)
 
 ### Removal Of Docker Images For Windows ServerCore & NanoCore 1809
 
