@@ -1,7 +1,7 @@
 ---
 title: Eclipse Temurin 8u452, 11.0.27, 17.0.15, 21.0.7 and 24.0.1 Available
 date: "2025-04-29"
-author: steelhead31
+author: pmc
 description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u452, 11.0.27, 17.0.15, 21.0.7 and 24.0.1. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 tags:
   - temurin
@@ -38,3 +38,11 @@ See the backout bug for details: [JDK-8348625](https://bugs.openjdk.org/browse/J
 See: https://github.com/adoptium/containers/pull/751
 
 Both ServerCore and NanoCore were end of life in October 2020, so have now been removed.
+
+### Windows aarch64 unavailable for JDK24
+
+Temurin jdk-24.0.1 for the Windows on Aarch64 platform is currently unavailable.  A small number of test failures indicated that there is need to investigate and correct before release. We hope that these issues will be rectified swiftly and a release completed in a future cycle.
+
+### ppc64 AIX JDK24 now available
+
+For ppc64/AIX there was an extra patch that we needed on top of 24.0.1+9 to pass our rigourous testing process. For this reason, the ppc64/AIX version of Temurin is 24.0.1+9.1 instead of 24.0.1+9. The fix is [JDK24u PR 180](https://github.com/openjdk/jdk24u/pull/180) from [JBS bug JDK-8353053](https://bugs.openjdk.org/browse/JDK-8353053).
