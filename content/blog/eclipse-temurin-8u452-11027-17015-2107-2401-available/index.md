@@ -29,7 +29,7 @@ This release contains the following fixes and updates.
 
 ### Reversion to previous headless behaviour on Windows
 
-Revert a change to detecting a headless AWT system on Windows that was introduced in `17.0.12` and `21.0.4` releases ([JDK-8185862](https://bugs.openjdk.org/browse/JDK-8185862)). The fix restores JDK `17.0.15` and JDK `21.0.7` releases to the old headless detection mechanism used prior to JDK `17.0.12` and JDK `21.0.4` releases as the new detection change caused regressions on some Windows systems.
+Revert a change to detecting a headless AWT system on Windows that was introduced in the upstream codebase for the `17.0.12` and `21.0.4` releases ([JDK-8185862](https://bugs.openjdk.org/browse/JDK-8185862)). The fix restores JDK `17.0.15` and JDK `21.0.7` releases to the old headless detection mechanism used prior to JDK `17.0.12` and JDK `21.0.4` releases as the new detection change caused regressions on some Windows systems.
 
 See the backout bug for details: [JDK-8348625](https://bugs.openjdk.org/browse/JDK-8348625)
 
@@ -43,6 +43,6 @@ Both ServerCore and NanoCore were end of life in October 2020, so have now been 
 
 Temurin jdk-24.0.1 for the Windows on Aarch64 platform is currently unavailable.  A small number of test failures indicated that there is need to investigate and correct before release. We hope that these issues will be rectified swiftly and a release completed in a future cycle.
 
-### ppc64 AIX JDK24 now available
+### AIX ppc64 JDK24 now available
 
 For AIX we were unable to ship JDK 24+36 in the initial release. For 24.0.1+9 there was an extra patch that we needed to correct this and pass our rigorous testing process. For this reason, the AIX version of Temurin is 24.0.1+9.1 instead of 24.0.1+9. The functionality in this new version is the same as for other platforms. The backported fix in Temurin is [JDK24u PR 180](https://github.com/openjdk/jdk24u/pull/180) from [JBS bug JDK-8353053](https://bugs.openjdk.org/browse/JDK-8353053).
