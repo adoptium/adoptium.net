@@ -45,4 +45,4 @@ Temurin jdk-24.0.1 for the Windows on Aarch64 platform is currently unavailable.
 
 ### ppc64 AIX JDK24 now available
 
-For ppc64/AIX there was an extra patch that we needed on top of 24.0.1+9 to pass our rigourous testing process. For this reason, the ppc64/AIX version of Temurin is 24.0.1+9.1 instead of 24.0.1+9. The fix is [JDK24u PR 180](https://github.com/openjdk/jdk24u/pull/180) from [JBS bug JDK-8353053](https://bugs.openjdk.org/browse/JDK-8353053).
+For AIX we were unable to ship JDK 24+36 in the initial release. For 24.0.1+9 there was an extra patch that we needed to correct this and pass our rigorous testing process. For this reason, the AIX version of Temurin is 24.0.1+9.1 instead of 24.0.1+9. The functionality in this new version is the same as for other platforms. The backported fix in Temurin is [JDK24u PR 180](https://github.com/openjdk/jdk24u/pull/180) from [JBS bug JDK-8353053](https://bugs.openjdk.org/browse/JDK-8353053).
