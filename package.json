@@ -20,7 +20,7 @@
     "axios": "^1.9.0",
     "bootstrap": "^5.3.5",
     "date-fns": "^4.1.0",
-    "flexsearch": "^0.8.158",
+    "flexsearch": "^0.8.161",
     "gatsby": "^5.14.3",
     "gatsby-adapter-netlify": "^1.2.0",
     "gatsby-plugin-feed": "^5.14.0",
