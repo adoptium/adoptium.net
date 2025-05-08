@@ -43,7 +43,7 @@ By capturing the SHAs of all test material in use during a test run, and specify
 
 ![TAP file snippet](tapFileSnippet.png)
 
-While we have had aspects of this functionality in place for some time, we have expanded the approach to find any test material in the workspace, including undeclared test material, and list it in the TAP file along with the declared material. 
+While we have had aspects of this functionality in place for some time, we have expanded the approach to find any test material in the workspace, including undeclared test material, and list it in the TAP file along with the declared material.
 
 Improved traceability supports development work by helping identify rare, hard-to-replicate bugs and also allows for investigations to take place well after the failure was seen, since the SHAs can be fed back into the test pipelines weeks and months later to reproduce the same environment as the day a failure occured.  This rigorous and disciplined approach is a major boost for long-term test reliability, traceability, and secure supply chains.
 
@@ -54,7 +54,7 @@ Introduced interleaved benchmark testing and configurable visual indicators (“
 ![Traffic Lights Per Benchmark view](trafficLights1.png)
 ![Traffic Lights Data Details view](trafficLights2.png)
 
-By the introduction of "traffic lights" and the ability to interleave baseline and test JDK runs, we have a greater ability to identify performance regressions and pinpoint them to particular changes in the code base.  Performance test results can now become 'blockers' to releases until the root causes of regressions are identified.
+By the introduction of "traffic lights" and the ability to interleave baseline and test JDK runs, we have a greater ability to identify performance regressions and pinpoint them to particular changes in the codebase.  Performance test results can now become 'blockers' to releases until the root causes of regressions are identified.
 
 Later in 2025, we intend to host a team of students as part of Semester of Code that will progress this work to develop a more adaptive approach to performance testing.
 
