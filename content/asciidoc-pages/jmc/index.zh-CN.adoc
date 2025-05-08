@@ -1,0 +1,171 @@
+= Eclipse Mission Control
+:page-authors: avbest
+:stable: 9.1.0
+:snapshot: 10.0.0-SNAPSHOT
+
+Eclipse Mission Control 是一套低成本的JVM分析与诊断工具集.
+
+要阅读Eclipse Mission Control的介绍，参看
+https://github.com/thegreystone/jmc-tutorial[Marcus Hirt的教程].
+
+== 最终版 Eclipse Mission Control {stable} (latest stable)
+
+[width="100%",cols="15%,25%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |{stable}
+|https://github.com/adoptium/jmc-build/releases/download/{stable}/org.openjdk.jmc-{stable}-win32.win32.x86_64.zip[org.openjdk.jmc-{stable}-win32.win32.x86_64.zip]
+
+|macOS (x86_64) |{stable}
+|https://github.com/adoptium/jmc-build/releases/download/{stable}/org.openjdk.jmc-{stable}-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-{stable}-macosx.cocoa.x86_64.tar.gz]
+
+|macOS (aarch_64) |{stable}
+|https://github.com/adoptium/jmc-build/releases/download/{stable}/org.openjdk.jmc-{stable}-macosx.cocoa.aarch64.tar.gz[org.openjdk.jmc-{stable}-macosx.cocoa.aarch64.tar.gz]
+
+|Linux |{stable}
+|https://github.com/adoptium/jmc-build/releases/download/{stable}/org.openjdk.jmc-{stable}-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-{stable}-linux.gtk.x86_64.tar.gz]
+
+|Linux (aarch64)|{stable}
+|https://github.com/adoptium/jmc-build/releases/download/{stable}/org.openjdk.jmc-{stable}-linux.gtk.aarch64.tar.gz[org.openjdk.jmc-{stable}-linux.gtk.aarch64.tar.gz]
+|=======================================================================
+
+== 预览版 Eclipse Mission Control {snapshot} (early access)
+
+[width="100%",cols="15%,25%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |{snapshot}
+|https://github.com/adoptium/jmc-build/releases/download/{snapshot}/org.openjdk.jmc-{snapshot}-win32.win32.x86_64.zip[org.openjdk.jmc-{snapshot}-win32.win32.x86_64.zip]
+
+|macOS (x86_64) |{snapshot}
+|https://github.com/adoptium/jmc-build/releases/download/{snapshot}/org.openjdk.jmc-{snapshot}-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-{snapshot}-macosx.cocoa.x86_64.tar.gz]
+
+|macOS (aarch_64) |{snapshot}
+|https://github.com/adoptium/jmc-build/releases/download/{snapshot}/org.openjdk.jmc-{snapshot}-macosx.cocoa.aarch64.tar.gz[org.openjdk.jmc-{snapshot}-macosx.cocoa.aarch_64.tar.gz]
+
+|Linux (x86_64)|{snapshot}
+|https://github.com/adoptium/jmc-build/releases/download/{snapshot}/org.openjdk.jmc-{snapshot}-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-{snapshot}-linux.gtk.x86_64.tar.gz]
+
+|Linux (aarch64)|{snapshot}
+|https://github.com/adoptium/jmc-build/releases/download/{snapshot}/org.openjdk.jmc-{snapshot}-linux.gtk.aarch64.tar.gz[org.openjdk.jmc-{snapshot}-linux.gtk.aarch64.tar.gz]
+
+|=======================================================================
+
+== 注意 (MacOS X)
+
+使用下面这条命令解包:
+
+[source,bash,subs="attributes"]
+----
+cat org.openjdk.jmc-{stable}-macosx.cocoa.x86_64.tar.gz | tar xv -
+----
+
+我们也提供了Eclipse update site archive，便于你把JMC安装进Eclipse IDE:
+
+[width="100%",cols="30%,70%",options="header"]
+|=======================================================================
+|版本 |下载
+|{stable}
+|https://github.com/adoptium/jmc-build/releases/download/{stable}/org.openjdk.jmc.updatesite.ide-{stable}.zip[org.openjdk.jmc.updatesite.ide-{stable}.zip]
+
+|{snapshot}
+|https://github.com/adoptium/jmc-build/releases/download/{snapshot}/org.openjdk.jmc.updatesite.ide-{snapshot}.zip[org.openjdk.jmc.updatesite.ide-{snapshot}.zip]
+|=======================================================================
+
+== 老版本
+
+=== 最终版 Eclipse Mission Control 9.0.0
+
+[cols="20%,20%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |9.0.0
+|https://github.com/adoptium/jmc-build/releases/download/9.0.0/org.openjdk.jmc-9.0.0-win32.win32.x86_64.zip[org.openjdk.jmc-9.0.0-win32.win32.x86_64.zip]
+
+|macOS |9.0.0
+|https://github.com/adoptium/jmc-build/releases/download/9.0.0/org.openjdk.jmc-9.0.0-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-9.0.0-macosx.cocoa.x86_64.tar.gz]
+
+|Linux |9.0.0
+|https://github.com/adoptium/jmc-build/releases/download/9.0.0/org.openjdk.jmc-9.0.0-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-9.0.0-linux.gtk.x86_64.tar.gz]
+
+|Linux (aarch64)|9.0.0
+|https://github.com/adoptium/jmc-build/releases/download/9.0.0/org.openjdk.jmc-9.0.0-linux.gtk.aarch64.tar.gz[org.openjdk.jmc-9.0.0-linux.gtk.aarch64.tar.gz]
+|=======================================================================
+
+=== 最终版 Eclipse Mission Control 8.3.0
+
+[cols="20%,20%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |8.3.0
+|https://github.com/adoptium/jmc-build/releases/download/8.3.0/org.openjdk.jmc-8.3.0-win32.win32.x86_64.zip[org.openjdk.jmc-8.3.0-win32.win32.x86_64.zip]
+
+|macOS |8.3.0
+|https://github.com/adoptium/jmc-build/releases/download/8.3.0/org.openjdk.jmc-8.3.0-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-8.3.0-macosx.cocoa.x86_64.tar.gz]
+
+|Linux |8.3.0
+|https://github.com/adoptium/jmc-build/releases/download/8.3.0/org.openjdk.jmc-8.3.0-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-8.3.0-linux.gtk.x86_64.tar.gz]
+
+|Linux (aarch64)|8.3.0
+|https://github.com/adoptium/jmc-build/releases/download/8.3.0/org.openjdk.jmc-8.3.0-linux.gtk.aarch64.tar.gz[org.openjdk.jmc-8.3.0-linux.gtk.aarch64.tar.gz]
+|=======================================================================
+
+=== 最终版 Eclipse Mission Control 8.2.0
+
+[cols="20%,20%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |8.2.0
+|https://github.com/adoptium/jmc-build/releases/download/8.2.0/org.openjdk.jmc-8.2.0-win32.win32.x86_64.zip[org.openjdk.jmc-8.2.0-win32.win32.x86_64.zip]
+
+|macOS |8.2.0
+|https://github.com/adoptium/jmc-build/releases/download/8.2.0/org.openjdk.jmc-8.2.0-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-8.2.0-macosx.cocoa.x86_64.tar.gz]
+
+|Linux |8.2.0
+|https://github.com/adoptium/jmc-build/releases/download/8.2.0/org.openjdk.jmc-8.2.0-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-8.2.0-linux.gtk.x86_64.tar.gz]
+|=======================================================================
+
+=== 最终版 Eclipse Mission Control 8.1.1
+
+[cols="20%,20%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |8.1.1
+|https://github.com/adoptium/jmc-build/releases/download/8.1.1/org.openjdk.jmc-8.1.1-win32.win32.x86_64.zip[org.openjdk.jmc-8.1.1-win32.win32.x86_64.zip]
+
+|macOS |8.1.1
+|https://github.com/adoptium/jmc-build/releases/download/8.1.1/org.openjdk.jmc-8.1.1-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-8.1.1-macosx.cocoa.x86_64.tar.gz]
+
+|Linux |8.1.1
+|https://github.com/adoptium/jmc-build/releases/download/8.1.1/org.openjdk.jmc-8.1.1-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-8.1.1-linux.gtk.x86_64.tar.gz]
+|=======================================================================
+
+=== 最终版 Eclipse Mission Control 8.1.0
+
+[cols="20%,20%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |8.1.0
+|https://github.com/adoptium/jmc-build/releases/download/8.1.0/org.openjdk.jmc-8.1.0-win32.win32.x86_64.zip[org.openjdk.jmc-8.1.0-win32.win32.x86_64.zip]
+
+|macOS |8.1.0
+|https://github.com/adoptium/jmc-build/releases/download/8.1.0/org.openjdk.jmc-8.1.0-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-8.1.0-macosx.cocoa.x86_64.tar.gz]
+
+|Linux |8.1.0
+|https://github.com/adoptium/jmc-build/releases/download/8.1.0/org.openjdk.jmc-8.1.0-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-8.1.0-linux.gtk.x86_64.tar.gz]
+|=======================================================================
+
+=== 最终版 Eclipse Mission Control 8.0.0
+
+[cols="20%,20%,70%",options="header"]
+|=======================================================================
+|操作系统 |版本 | 下载
+|Windows |8.0.0
+|https://github.com/adoptium/jmc-build/releases/download/8.0.0/org.openjdk.jmc-8.0.0-win32.win32.x86_64.zip[org.openjdk.jmc-8.0.0-win32.win32.x86_64.zip]
+
+|macOS |8.0.0
+|https://github.com/adoptium/jmc-build/releases/download/8.0.0/org.openjdk.jmc-8.0.0-macosx.cocoa.x86_64.tar.gz[org.openjdk.jmc-8.0.0-macosx.cocoa.x86_64.tar.gz]
+
+|Linux |8.0.0
+|https://github.com/adoptium/jmc-build/releases/download/8.0.0/org.openjdk.jmc-8.0.0-linux.gtk.x86_64.tar.gz[org.openjdk.jmc-8.0.0-linux.gtk.x86_64.tar.gz]
+|=======================================================================
