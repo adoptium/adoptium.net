@@ -18,7 +18,7 @@
     "@popperjs/core": "^2.11.8",
     "@react-icons/all-files": "^4.1.0",
     "axios": "^1.9.0",
-    "bootstrap": "^5.3.5",
+    "bootstrap": "^5.3.6",
     "date-fns": "^4.1.0",
     "flexsearch": "^0.8.161",
     "gatsby": "^5.14.3",
