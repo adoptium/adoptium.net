@@ -11,7 +11,7 @@ tags:
 
 AQAvit is a project dedicated to quality assurance, verifying that OpenJDK binaries are production-ready and meet a stringent quality bar, including good performance, exceptional security, resilience, and the ability to pass a wide variety of application test suites and a broad set of workloads in diverse environments.
 
-The AQAvit project exists not only to test Temurin binaries but offers a useful test suite, tools, and processes that all OpenJDK distributors can utilize and can contribute towards.
+The [AQAvit project](https://projects.eclipse.org/projects/adoptium.aqavit) exists not only to test Temurin binaries but offers a useful test suite, tools, and processes that all OpenJDK distributors can utilize and can contribute towards.
 
 ## Recent Innovations in AQAvit
 
