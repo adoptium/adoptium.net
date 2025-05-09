@@ -1,6 +1,6 @@
 ---
 title: AQAvit in 2025
-date: "2025-05-08T12:20:00+00:00"
+date: "2025-05-09T12:20:00+00:00"
 author: shelleylambert
 description: This post highlights the recent new features, innovations, and tools in the AQAvit toolkit and looks forward to planned features for 2025.
 tags:
