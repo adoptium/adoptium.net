@@ -66,7 +66,7 @@ In a recent example, we started gathering information during release periods on 
 
 ### GUI Test Automation
 
-Leveraging Amazon’s open-sourced [Arctic](https://github.com/corretto/arctic) tool, manual GUI testing can now automated.  We have been actively engaging in automating GUI tests from the OpenJDK project (within the AQAvit project) and the interactive tests from the Technology Compliance Kit (TCK) provided through the OCTLA (within the Temurin-Compliance project).
+Leveraging Amazon’s open-sourced [Arctic](https://github.com/corretto/arctic) tool, manual GUI testing can now automated.  We have been actively engaging in automating GUI tests from the OpenJDK project (within the AQAvit project) and the interactive tests from the Technology Compatibility Kit (TCK) provided through the OCTLA (within the Temurin-Compliance project).
 
 We have been capturing what we have learned in this [Arctic Project Guide](https://github.com/adoptium/aqa-tests/wiki/Arctic-Project-Guide) and this detailed instruction for [Setting up Arctic Recording and Playback in Jenkins](https://github.com/adoptium/aqa-tests/wiki/Arctic-%E2%80%90-Recording-&-Playback-setup-for-Jenkins-execution-in-Xvfb).  The intent is to commit our documentation to the Arctic repository, along with any other enhancements to the tool that may be useful, once our work is completed.
 
