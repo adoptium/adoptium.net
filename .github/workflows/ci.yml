@@ -22,7 +22,10 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm install
+          # Clear cache even though this is an ephemeral environment
+      - run: |
+          rm -rf node_modules package-lock.json 
+          npm install
 
       - run: npm run coverage
 
