@@ -29,7 +29,7 @@ Jobs that report as unstable are those that are able to complete, but have testc
 
 ### Change-Based Testing (CBT) - Phase 1
 
-Enables smarter testing by executing only the tests relevant to changed code areas. This cuts resource usage without sacrificing test coverage and quality.
+Changed-based testing enables smarter testing by executing only the tests relevant to changed code areas. This cuts resource usage without sacrificing test coverage and quality.
 
 Phase 1 of this feature is relatively 'crude', but still useful.  It identifies what changes have happened in the upstream repository between the tag of the current build under test and the tag of the previous release.  Upon setting search strings, typically directory paths, the automation can warn the user that certain packages have changed.  We can then correlate those directories with test targets and make decisions about what targets should be run, and which test targets to de-prioritize.
 
@@ -49,7 +49,7 @@ Improved traceability supports development work by helping identify rare, hard-t
 
 ### Performance Benchmarking Enhancements
 
-Introduced interleaved benchmark testing and configurable visual indicators (“traffic lights”) to help detect regressions more accurately and quickly.  This work shifts us into the next phase of performance testing at AQAvit.  We run 80+ benchmarks at the project, currently to ensure that they can run.  We have pinned these runs onto particular machines and have been gathering performance data over the past years worth of releases.  
+We introduced interleaved benchmark testing and configurable visual indicators (“traffic lights”) to help detect regressions more accurately and quickly.  This work shifts us into the next phase of performance testing at AQAvit.  We run 80+ benchmarks at the project, currently to ensure that they can run.  We have pinned these runs onto particular machines and have been gathering performance data over the past years worth of releases.  
 
 ![Traffic Lights Per Benchmark view](trafficLights1.png)
 ![Traffic Lights Data Details view](trafficLights2.png)
