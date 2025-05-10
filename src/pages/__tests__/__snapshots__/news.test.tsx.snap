@@ -358,7 +358,7 @@ exports[`News page > renders spinner when news not loaded 1`] = `
               viewBox="22 22 44 44"
             >
               <circle
-                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-960umw-MuiCircularProgress-circle"
+                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
                 cx="44"
                 cy="44"
                 fill="none"
