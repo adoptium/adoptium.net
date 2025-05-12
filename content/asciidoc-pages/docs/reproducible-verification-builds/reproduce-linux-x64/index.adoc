@@ -185,7 +185,7 @@ export PATH=<bootjdk>/bin:$PATH
 
 . Clone required upstream OpenJDK source
 +
-Replace jdk21u with the upstream release being built
+Replace "jdk21u" in the command below with the upstream release being built
 +
 [source,]
 ----
