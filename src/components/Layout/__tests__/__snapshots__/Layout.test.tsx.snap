@@ -4,7 +4,7 @@ exports[`Layout component > renders correctly with data 1`] = `
 <div>
   <div
     class="container-fluid p-0"
-    style="transition: color 0.2s ease-out, background 0.2s ease-out;"
+    style="background-color: var(--bg); color: var(--text-normal); transition: color 0.2s ease-out, background 0.2s ease-out;"
   >
     <div
       class="slice--navbar"
