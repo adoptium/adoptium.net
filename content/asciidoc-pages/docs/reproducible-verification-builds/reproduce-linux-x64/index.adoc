@@ -3,7 +3,7 @@
 :keywords: Reproducible Builds Secure Supply Chain
 :orgname: Eclipse Adoptium
 :lang: en
-:page-authors: andrew-m-leonard
+:page-authors: andrew-m-leonard, rfyuz
 
 The following instructions detail the process of rebuilding identically from "source" in a secure build environment, a reproducible build for a given Eclipse Temurin release on the Linux x64 platform. The process is performed in a secure manner, using only the upstream sources and securely verified build tooling, so as to provide a mechanism to securely verify the given Eclipse Temurin release binary. This verification then helps determine the security of the supply chains used to build the Eclipse Temurin official release binaries.
 
