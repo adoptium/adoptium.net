@@ -1,26 +1,27 @@
-import React, { memo } from "react"
+import React, { memo, useMemo, useState } from "react"
 import Pagination from "../News/Pagination"
 
 const TimeLine = ({ data }) => {
   const totalCount = data?.length
   const postsPerPage = 6
   const totalPages = Math.ceil(totalCount / postsPerPage)
-  const currentPage = 1
+  const [currentPage, setCurrentPage] = useState(1)
 
-  // For page 1, there is no previous page.
-  const previousPageNumber = null
+  const startIndex = (currentPage - 1) * postsPerPage
+  const endIndex = startIndex + postsPerPage
+  const paginatedData = data.slice(startIndex, endIndex)
+
+  const previousPageNumber = useMemo(
+    () => (Boolean(currentPage - 1) ? currentPage - 1 : 1),
+    [currentPage],
+  )
   const previousPageLink = null
 
-  // If there are more pages, calculate the next page's link.
   const nextPageNumber = currentPage < totalPages ? currentPage + 1 : null
-  const nextPage = nextPageNumber ? `/news/page/${nextPageNumber}` : null
   return (
     <div className="relative">
-      {/* Full vertical line */}
-
-      {data.map((event, index) => {
+      {paginatedData.map((event, index) => {
         const isRight = index % 2 === 0
-
         return (
           <div
             key={index}
@@ -30,7 +31,6 @@ const TimeLine = ({ data }) => {
           >
             <div className="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2" />
 
-            {/* Left or right content depending on isRight */}
             <div className="w-5/12">
               <div className={`text-${isRight ? "right" : "left"}`}>
                 <span className="text-base text-grey">
@@ -54,7 +54,6 @@ const TimeLine = ({ data }) => {
               </div>
             </div>
 
-            {/* Center Dot */}
             <div className="relative z-10 flex justify-center">
               <div className="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full" />
             </div>
@@ -67,13 +66,14 @@ const TimeLine = ({ data }) => {
       <Pagination
         previousPageNumber={previousPageNumber}
         previousPageLink={previousPageLink}
-        nextPage={nextPage}
+        nextPage={nextPageNumber}
         currentPage={currentPage}
         totalPages={totalPages}
+        onNavigate={page => setCurrentPage(page)}
       />
       <div className="flex items-center gap-5 mb-15">
         <a
-          href="https://newsroom.eclipse.org/eclipse/community-news"
+          href="https://events.eclipse.org/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3"
@@ -82,12 +82,12 @@ const TimeLine = ({ data }) => {
         </a>
         |
         <a
-          href="https://newsroom.eclipse.org/node/add/news"
+          href="https://newsroom.eclipse.org/node/add/events"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3"
         >
-          Submit news
+          Submit an event
         </a>
       </div>
     </div>

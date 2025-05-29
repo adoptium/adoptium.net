@@ -5,10 +5,11 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 interface PaginationProps {
   previousPageNumber?: number | null
   previousPageLink?: string | null
-  nextPage?: string | null
+  nextPage?: string | number | null
   currentPage: number
   totalPages: number
   baseUrl?: string
+  onNavigate?: (page: number) => void
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -18,6 +19,7 @@ const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   totalPages,
   baseUrl,
+  onNavigate,
 }) => {
   // Helper to build a link for a given page number.
   // If page 1, return the baseUrl; otherwise append "/page/{page}".
@@ -72,17 +74,32 @@ const Pagination: React.FC<PaginationProps> = ({
   return (
     <div className="flex justify-center items-center gap-8 md:gap-14 my-8">
       {/* Previous arrow using your passed parameters */}
-      {previousPageNumber && previousPageLink && (
-        <Link
-          to={previousPageLink}
+      {previousPageNumber && onNavigate ? (
+        <button
+          type="button"
           rel="prev"
-          className="flex items-center gap-3"
+          disabled={!previousPageNumber}
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => onNavigate(previousPageNumber)}
         >
           <span className="cursor-pointer">
             <FaChevronLeft />
           </span>
           <p className="tab-button-text mb-0 hidden md:block">Previous</p>
-        </Link>
+        </button>
+      ) : (
+        previousPageLink && (
+          <Link
+            to={previousPageLink}
+            rel="prev"
+            className="flex items-center gap-3"
+          >
+            <span className="cursor-pointer">
+              <FaChevronLeft />
+            </span>
+            <p className="tab-button-text mb-0 hidden md:block">Previous</p>
+          </Link>
+        )
       )}
 
       {/* Numbered pagination */}
@@ -93,6 +110,20 @@ const Pagination: React.FC<PaginationProps> = ({
               <p key={index} className="tab-button-text mb-0">
                 ...
               </p>
+            ) : onNavigate ? (
+              <span
+                key={index}
+                onClick={() => onNavigate(page as number)}
+                className="cursor-pointer"
+              >
+                <p
+                  className={`tab-button-text mb-0 ${
+                    page === currentPage ? "font-bold text-pink" : ""
+                  }`}
+                >
+                  {page}
+                </p>
+              </span>
             ) : (
               <Link key={index} to={createPageLink(page as number)}>
                 <p
@@ -107,10 +138,22 @@ const Pagination: React.FC<PaginationProps> = ({
           )}
         </div>
       </div>
-
       {/* Next arrow using your passed parameters */}
-      {nextPage && (
-        <Link to={nextPage} className="flex items-center gap-3">
+      {onNavigate ? (
+        <button
+          type="button"
+          rel="next"
+          disabled={!nextPage}
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => onNavigate(nextPage as number)}
+        >
+          <p className="tab-button-text mb-0 hidden md:block">Next</p>
+          <span>
+            <FaChevronRight />
+          </span>
+        </button>
+      ) : (
+        <Link to={nextPage as string} className="flex items-center gap-3">
           <p className="tab-button-text mb-0 hidden md:block">Next</p>
           <span className="cursor-pointer">
             <FaChevronRight />
