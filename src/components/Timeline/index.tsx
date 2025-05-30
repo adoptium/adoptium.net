@@ -2,22 +2,31 @@ import React, { memo, useMemo, useState } from "react"
 import Pagination from "../News/Pagination"
 
 const TimeLine = ({ data }) => {
-  const totalCount = data?.length
+  const today = new Date()
+  const validEvents = data?.filter(
+    event => !!event.date && !isNaN(new Date(event.date).getTime()),
+  )
+  const sortedEvents = validEvents.sort((a, b) => {
+    const dateA = new Date(a.date)
+    const dateB = new Date(b.date)
+    const diffA = Math.abs(dateA.getTime() - today.getTime())
+    const diffB = Math.abs(dateB.getTime() - today.getTime())
+
+    return diffA - diffB
+  })
+
+  const totalCount = sortedEvents?.length
   const postsPerPage = 6
   const totalPages = Math.ceil(totalCount / postsPerPage)
   const [currentPage, setCurrentPage] = useState(1)
 
   const startIndex = (currentPage - 1) * postsPerPage
   const endIndex = startIndex + postsPerPage
-  const paginatedData = data.slice(startIndex, endIndex)
+  const paginatedData = sortedEvents.slice(startIndex, endIndex)
+  const previousPageNumber = currentPage > 1 ? currentPage - 1 : currentPage
+  const nextPageNumber =
+    currentPage < totalPages ? currentPage + 1 : currentPage
 
-  const previousPageNumber = useMemo(
-    () => (Boolean(currentPage - 1) ? currentPage - 1 : 1),
-    [currentPage],
-  )
-  const previousPageLink = null
-
-  const nextPageNumber = currentPage < totalPages ? currentPage + 1 : null
   return (
     <div className="relative">
       {paginatedData.map((event, index) => {
@@ -65,7 +74,6 @@ const TimeLine = ({ data }) => {
       })}
       <Pagination
         previousPageNumber={previousPageNumber}
-        previousPageLink={previousPageLink}
         nextPage={nextPageNumber}
         currentPage={currentPage}
         totalPages={totalPages}
