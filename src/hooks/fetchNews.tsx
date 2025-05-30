@@ -9,7 +9,7 @@ export function fetchNewsItems(isVisible: boolean, page: number): News | null {
 
   useEffect(() => {
     if (isVisible) {
-      (async () => {
+      ;(async () => {
         setNews(await fetchLatestNews(page))
         setEvents(await fetchLatestEvents())
       })()
@@ -40,10 +40,10 @@ async function fetchLatestNews(page) {
     })
 }
 
-async function fetchLatestEvents() {
+export async function fetchLatestEvents() {
   const url = new URL(`${baseUrl}/events`)
-  url.searchParams.append('parameters[publish_to]', 'adoptium')
-  url.searchParams.append('pagesize', '20')
+  url.searchParams.append("parameters[publish_to]", "adoptium")
+  url.searchParams.append("pagesize", "20")
 
   return axios
     .get(url.toString())
@@ -63,10 +63,10 @@ export interface News {
 export interface NewsResponse {
   news: NewsItem[]
   pager: {
-    current_page: number;
-    items_per_page: number;
-    total_items: number;
-    total_pages: number;
+    current_page: number
+    items_per_page: number
+    total_items: number
+    total_pages: number
   } | null
 }
 
