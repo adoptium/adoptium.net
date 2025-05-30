@@ -234,13 +234,15 @@ exports[`AQAvit page > renders correctly 1`] = `
             <p
               class="text-gray-300 text-lg leading-relaxed mb-6"
             >
-              The AQAvit project gets its name from 
+              The AQAvit project gets its name from
+               
               <span
                 class="font-semibold text-purple-200"
               >
                 Adoptium Quality Assurance
               </span>
-               'AQA' and 'vit' for vitality and speed.
+               
+              'AQA' and 'vit' for vitality and speed.
             </p>
             <p
               class="text-gray-300 text-lg leading-relaxed"
@@ -387,7 +389,8 @@ exports[`AQAvit page > renders correctly 1`] = `
                 href="https://github.com/adoptium/aqa-tests"
                 target="_blank"
               >
-                View on GitHub 
+                View on GitHub
+                 
                 <svg
                   class="ml-2 text-sm group-hover:translate-x-1 transition-transform duration-200"
                   fill="currentColor"
@@ -421,7 +424,8 @@ exports[`AQAvit page > renders correctly 1`] = `
             <p
               class="text-gray-300 text-lg leading-relaxed mb-6"
             >
-              AQAvit is comprised of many repositories listed in the Developer Resources section of the Eclipse Foundation AQAvit project page. The central repository is 
+              AQAvit is comprised of many repositories listed in the Developer Resources section of the Eclipse Foundation AQAvit project page. The central repository is
+               
               <span
                 class="font-semibold text-purple-200"
               >
@@ -432,13 +436,15 @@ exports[`AQAvit page > renders correctly 1`] = `
             <p
               class="text-gray-300 text-lg leading-relaxed mb-6"
             >
-              To participate in the project, join the Adoptium Slack workspace and ask questions in the 
+              To participate in the project, join the Adoptium Slack workspace and ask questions in the
+               
               <span
                 class="font-semibold text-purple-200"
               >
                 #testing-aqavit
               </span>
-               channel.
+               
+              channel.
             </p>
             <div
               class="mt-4 flex items-center"

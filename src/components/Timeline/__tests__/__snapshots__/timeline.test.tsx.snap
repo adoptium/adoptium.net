@@ -1,0 +1,293 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TimeLine component > should render correctly with events 1`] = `
+<div>
+  <div
+    class="relative"
+  >
+    <div
+      class="relative my-4 flex justify-between items-start w-full flex-row"
+    >
+      <div
+        class="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2"
+      />
+      <div
+        class="w-5/12"
+      >
+        <div
+          class="text-right"
+        >
+          <span
+            class="text-base text-grey"
+          >
+            27 May 2025
+          </span>
+          <a
+            href="https://example.com/a"
+            style="text-decoration: underline; text-underline-offset: 5px;"
+            target="_blank"
+          >
+            <h1
+              class="text-xl mt-5 mb-2 font-bold hover:transform hover:-translate-y-[2px] transition-transform duration-200"
+            >
+              Event A
+            </h1>
+          </a>
+          <p
+            class="text-base text-grey "
+          >
+            This is a description for Event A.
+          </p>
+        </div>
+      </div>
+      <div
+        class="relative z-10 flex justify-center"
+      >
+        <div
+          class="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full"
+        />
+      </div>
+      <div
+        class="w-5/12"
+      />
+    </div>
+    <div
+      class="relative my-4 flex justify-between items-start w-full flex-row-reverse"
+    >
+      <div
+        class="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2"
+      />
+      <div
+        class="w-5/12"
+      >
+        <div
+          class="text-left"
+        >
+          <span
+            class="text-base text-grey"
+          >
+            29 May 2025
+          </span>
+          <a
+            href="https://example.com/b"
+            style="text-decoration: underline; text-underline-offset: 5px;"
+            target="_blank"
+          >
+            <h1
+              class="text-xl mt-5 mb-2 font-bold hover:transform hover:-translate-y-[2px] transition-transform duration-200"
+            >
+              Event B
+            </h1>
+          </a>
+          <p
+            class="text-base text-grey "
+          >
+            This is a description for Event B.
+          </p>
+        </div>
+      </div>
+      <div
+        class="relative z-10 flex justify-center"
+      >
+        <div
+          class="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full"
+        />
+      </div>
+      <div
+        class="w-5/12"
+      />
+    </div>
+    <div
+      class="flex justify-center items-center gap-8 md:gap-14 my-8"
+    >
+      <button
+        class="flex items-center gap-3 cursor-pointer"
+        rel="prev"
+        type="button"
+      >
+        <span
+          class="cursor-pointer"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            />
+          </svg>
+        </span>
+        <p
+          class="tab-button-text mb-0 hidden md:block"
+        >
+          Previous
+        </p>
+      </button>
+      <div
+        class="flex items-center gap-5"
+      >
+        <div
+          class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+        >
+          <span
+            class="cursor-pointer"
+          >
+            <p
+              class="tab-button-text mb-0 font-bold text-pink"
+            >
+              1
+            </p>
+          </span>
+        </div>
+      </div>
+      <button
+        class="flex items-center gap-3 cursor-pointer"
+        rel="next"
+        type="button"
+      >
+        <p
+          class="tab-button-text mb-0 hidden md:block"
+        >
+          Next
+        </p>
+        <span>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      class="flex items-center gap-5 mb-15"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="https://events.eclipse.org/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="https://newsroom.eclipse.org/node/add/events"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Submit an event
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimeLine component > should render correctly with no events 1`] = `
+<div>
+  <div
+    class="relative"
+  >
+    <div
+      class="flex justify-center items-center gap-8 md:gap-14 my-8"
+    >
+      <button
+        class="flex items-center gap-3 cursor-pointer"
+        rel="prev"
+        type="button"
+      >
+        <span
+          class="cursor-pointer"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+            />
+          </svg>
+        </span>
+        <p
+          class="tab-button-text mb-0 hidden md:block"
+        >
+          Previous
+        </p>
+      </button>
+      <div
+        class="flex items-center gap-5"
+      >
+        <div
+          class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+        />
+      </div>
+      <button
+        class="flex items-center gap-3 cursor-pointer"
+        rel="next"
+        type="button"
+      >
+        <p
+          class="tab-button-text mb-0 hidden md:block"
+        >
+          Next
+        </p>
+        <span>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      class="flex items-center gap-5 mb-15"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="https://events.eclipse.org/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="https://newsroom.eclipse.org/node/add/events"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Submit an event
+      </a>
+    </div>
+  </div>
+</div>
+`;
