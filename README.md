@@ -1,6 +1,6 @@
-# Adoptium Website (Next.js)
+# Adoptium.net (Next.js)
 
-This repository contains the Next.js rewrite of the [adoptium.net](https://adoptium.net) website, originally hosted at [github.com/adoptium/adoptium.net](https://github.com/adoptium/adoptium.net).
+This repository contains the Next.js rewrite of the [adoptium.net](https://adoptium.net) site, originally hosted at [github.com/adoptium/adoptium.net](https://github.com/adoptium/adoptium.net).
 
 ## Getting Started
 
@@ -21,6 +21,7 @@ You can start editing the pages by modifying files in the `src/app` directory. T
 ## Project Structure
 
 This project uses:
+
 - [Next.js](https://nextjs.org) App Router
 - [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) for font optimization
 - TypeScript for type safety
@@ -29,7 +30,7 @@ This project uses:
 
 ## Contributing
 
-Contributions to the Adoptium website are welcome! Please follow the contribution guidelines in the repository.
+Contributions to the Adoptium site are welcome! Please follow the contribution guidelines in the repository.
 
 ## Learn More
 
@@ -40,7 +41,8 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Deployment
 
-The website is deployed according to the Adoptium project's infrastructure requirements.
+The site is deployed according to the Adoptium project's infrastructure requirements.
 
 For more information about deploying Next.js applications:
+
 - [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)

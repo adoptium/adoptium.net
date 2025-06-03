@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import 'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
 @import "tailwindcss";
 
 @layer utilities {
@@ -28,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Hanken Grotesk", "Inter", sans-serif !important;
+  font-family: "Hanken Grotesk", Inter, sans-serif !important;
   background-color: var(--purple);
   color: var(--color-text);
   line-height: 1.6;
@@ -73,28 +72,15 @@ body {
   border: solid 2px transparent;
   background-origin: border-box !important;
   background-clip: content-box, border-box !important;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(110%);
-    transition-duration: 300ms;
-  }
-}
-
-.underline {
-  text-underline-offset: 1em;
-}
-
-.gradient-border {
-  border-radius: 80px;
-  border: solid 2px transparent;
   background-image: linear-gradient(#14003c, #14003c), linear-gradient(90deg, #ff1464, #ff14620b);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
   cursor: pointer;
 }
 
 .gradient-border:hover {
   transform: scale(1.1);
   transition-duration: 300ms;
+}
+
+.underline {
+  text-underline-offset: 1em;
 }

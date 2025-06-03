@@ -7,7 +7,7 @@
   content: "";
   position: absolute;
   bottom: -600px;
-  right: 0px;
+  right: 0;
   background-size: 100% 100%;
   background-position: center;
   width: 100%;
@@ -18,7 +18,7 @@
   opacity: 0.45;
 }
 
-@media screen and (max-width: 1380px) {
+@media (width <= 1380px) {
   .thank-greeting {
     font-size: 85px !important;
     line-height: 70px;

@@ -34,7 +34,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .testimonial-container {
     padding: 1.5rem;
   }
