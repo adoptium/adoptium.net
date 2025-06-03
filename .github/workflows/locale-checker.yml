@@ -1,0 +1,33 @@
+name: Locale Checker
+
+on:
+  workflow_dispatch:
+  push:
+    paths: [ content/asciidoc-pages/** ]
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  locale-checker:
+    if: github.repository_owner == 'adoptium'
+    name: Check Locales for Changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Check asciidoc docs
+        run: python3 .github/workflows/locale-checker.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -34,8 +34,8 @@ const RandomContributor: React.FC<RandomContributorProps> = ({ style }) => {
               rel="nofollow noopener noreferrer"
             >
               <Image
-                width={150}
-                height={150}
+                width={140}
+                height={140}
                 src={contributor.avatarUri}
                 className="!mb-0 rounded-full"
                 alt="Avatar of an Adoptium contributor"

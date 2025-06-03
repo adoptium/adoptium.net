@@ -29,8 +29,13 @@ export default getRequestConfig(async ({ requestLocale }) => {
   };
 });
 
+// Type definitions for locale messages
+interface LocaleMessages {
+  [key: string]: LocaleMessages | string;
+}
+
 // Helper function to deeply merge objects for locales
-function deepMerge(target: any, source: any) {
+function deepMerge(target: LocaleMessages, source: LocaleMessages): LocaleMessages {
   const output = { ...target };
   
   if (isObject(target) && isObject(source)) {
@@ -39,7 +44,7 @@ function deepMerge(target: any, source: any) {
         if (!(key in target)) {
           Object.assign(output, { [key]: source[key] });
         } else {
-          output[key] = deepMerge(target[key], source[key]);
+          output[key] = deepMerge(target[key] as LocaleMessages, source[key] as LocaleMessages);
         }
       } else {
         Object.assign(output, { [key]: source[key] });
@@ -50,6 +55,6 @@ function deepMerge(target: any, source: any) {
   return output;
 }
 
-function isObject(item: any): boolean {
-  return item && typeof item === 'object' && !Array.isArray(item);
+function isObject(item: unknown): boolean {
+  return item !== null && typeof item === 'object' && !Array.isArray(item);
 }

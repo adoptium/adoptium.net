@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Adoptium",
+    "icon": "vendor-adoptium.png",
+    "postDownload": null
+  },
+  {
+    "name": "Red Hat",
+    "icon": "vendor-redhat.png",
+    "postDownload": "https://access.redhat.com/products/openjdk"
+  },
+  {
+    "name": "Microsoft",
+    "icon": "vendor-microsoft.png",
+    "postDownload": "https://learn.microsoft.com/java/openjdk/"
+  },
+  {
+    "name": "Azul",
+    "icon": "vendor-azul.png",
+    "iconPadding": "0.7em",
+    "postDownload": "https://www.azul.com/downloads"
+  },
+  {
+    "name": "IBM",
+    "icon": "vendor-ibm.png",
+    "postDownload": "https://developer.ibm.com/languages/java/semeru-runtimes"
+  },
+  {
+    "name": "Alibaba",
+    "icon": "vendor-alibaba.png",
+    "postDownload": "https://dragonwell-jdk.io/"
+  }
+]

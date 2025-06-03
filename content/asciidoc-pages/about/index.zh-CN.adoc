@@ -1,0 +1,38 @@
+= About Eclipse Adoptium(R)
+:page-authors: zdtsw, gdams
+:page-based-on: 50e5dbed709fcbf4e2b5f225c9da68a17ebb301e
+
+Eclipse Adoptium 作为顶级项目的使命是生产高质量的 Java 运行时和相关技术，以应用于 Java 生态系统。
+
+为实现这一目标，我们建立了一系列的 Adoptium PMC 子项目，并且与外部项目有着密切的合作伙伴关系，其中最著名的是提供了 Java SE 运行时的 OpenJDK 。
+我们的目标是提供一套全面的 Java 应用程序技术，与现有标准、基础架构和云平台一同运作，以满足 Eclipse 社区和广泛的用户需求。
+
+经过多年的讨论，关于如何改善普遍缺乏开放性、可复制构建性以及跨多个平台的 OpenJDK 源代码测试系统，AdoptOpenJDK 项目于 2017 年成立。
+至今，它已成为企业级嵌入式系统、台式机、传统服务器、现代云平台和大型主机广泛使用的优质 OpenJDK 的主要供应商。
+Eclipse Adoptium 项目是原 AdoptOpenJDK 项目的延续。
+
+== 范围
+
+Eclipse Adoptium 提供高性能的运行时二进制文件，这些文件符合整个 Java 生态系统的 Java SE 标准，具有企业级、跨平台、开源许可和经过 TCK 测试的特性。
+此外，Eclipse Adoptium 还提供开源的基础设施即代码、全面的持续集成构建和测试农场，以及广泛的质量测试，
+这些制品可供 Eclipse Adoptium 项目和其他运行时技术构建者使用，以确保提供安全的、经过 Java SE TCK 测试的、兼容的和生产就绪的运行时。
+
+该项目的范围包括开发、管理、推广和技术支持，例如：
+
+* 运行时和开发工具包：支持为各版本的 Java SE 指定的 API，并可用于多种处理器架构和操作系统的组合。
+* TCK 测试平台：提供运行 Java SE TCK 的基础架构，以确保一致性和兼容性。
+* JDK Mission Control：低成本的用于分析和诊断 JVM 的工具套件。
+* 安装程序和存储库：提供各种机制去获取和管理运行时技术的安装，例如平台原生安装程序、容器镜像、下载服务器、网站和工件存储库。
+
+
+除了提供可靠的 Java 运行时二进制文件外，Eclipse Adoptium 项目同时对开发人员、学术人事和研究人员提供一个实验平台，可以用来尝试新的运行时、构建、测试和基础架构等想法。
+属于这个顶级项目的示例包括:
+“jlink.online” : 用于为应用程序开发人员提供大小合适的运行时;
+“Github Action” : 在 Git 的工作流程中下载和测试运行时;
+“TKG”: 测试套件生成框架;
+“Bumblebench”: 微基准测试框架, 等等。
+
+== 许可证
+
+* 构建脚本和其他用来生成二进制文件、门户网站和构建基础架构的代码已获得 https://www.apache.org/licenses/LICENSE-2.0[Apache License, Version 2.0] 许可.
+* OpenJDK 代码本身已获得 https://openjdk.java.net/legal/gplv2+ce.html[GPL v2 with Classpath Exception] (GPLv2+CE) 和 https://openjdk.java.net/legal/assembly-exception.html[GPL v2 with Assembly Exception] (GPLv2+Assembly) 许可.
