@@ -2,11 +2,11 @@
 
 import React, { MutableRefObject, useRef } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { useOnScreen } from "@/hooks/useOnScreen"
 import { useAdoptiumContributorsApi } from "@/hooks/useAdoptiumContributorsApi"
 import AnimatedPlaceholder from "@/components/AnimatedPlaceholder"
 import LinkText from "@/components/LinkText"
-import { useTranslations } from "next-intl"
 
 interface RandomContributorProps {
   style?: React.CSSProperties

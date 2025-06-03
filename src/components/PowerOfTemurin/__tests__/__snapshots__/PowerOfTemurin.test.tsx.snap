@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PowerOfTemurin component > should render correctly 1`] = `
+<div>
+  <div
+    class="bg-purple py-16"
+  >
+    <div
+      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16"
+    >
+      <h2
+        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
+      >
+        The Power of Eclipse Temurin™
+      </h2>
+      <h3
+        class="text-center text-base leading-6 font-normal text-grey mt-6"
+      >
+        Text
+      </h3>
+      <a
+        href="/en/business-benefits"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Text
+        </button>
+      </a>
+    </div>
+    <div>
+      UiVirtualScroll
+    </div>
+  </div>
+</div>
+`;

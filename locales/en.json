@@ -10,6 +10,11 @@
     "title": "Sorry, we couldn't find this page",
     "back-to-home": "Back to Home"
   },
+  "PowerOfTemurin": {
+    "title": "The Power of Eclipse Temurin",
+    "description": "OpenJDK Based: Eclipse Temurin offer high-performance, cross-platform, open source Java™ Runtimes binaries that are enterprise-ready and Java SE TCK certified and AQAvit verified for general use in the Java Ecosystem.",
+    "button": "Business Benefits"
+  },
   "RandomContributors": {
     "thank-you": "Thank you to our <highlight>300+</highlight> contributors",
     "thank-you-mobile": "Thank you <linebreak></linebreak> to our <highlight>300+</highlight> contributors"

@@ -10,6 +10,11 @@
     "title": "Lo sentimos, no pudimos encontrar esta página",
     "back-to-home": "Volver a la página de inicio"
   },
+  "PowerOfTemurin": {
+    "title": "El poder de Eclipse Temurin",
+    "description": "Basado en OpenJDK: Eclipse Temurin ofrece binarios de Java™ Runtimes de código abierto, multiplataforma, de alto rendimiento, listos para empresas y certificados por Java SE TCK y verificados por AQAvit para uso general en el ecosistema Java.",
+    "button": "Beneficios Empresariales"
+  },
   "RandomContributors": {
     "thank-you": "Gracias a nuestros <highlight>300+</highlight> contribuyentes",
     "thank-you-mobile": "Gracias <linebreak></linebreak> a nuestros <highlight>300+</highlight> contribuyentes"

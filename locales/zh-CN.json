@@ -10,6 +10,11 @@
     "title": "抱歉，我们无法找到此页面",
     "back-to-home": "返回主页"
   },
+  "PowerOfTemurin": {
+    "title": "Eclipse Temurin 的力量",
+    "description": "基于 OpenJDK：Eclipse Temurin 提供高性能、跨平台、开源的 Java™ 运行时二进制文件，已准备好企业级使用，并通过 Java SE TCK 认证和 AQAvit 验证，可在 Java 生态系统中广泛使用。",
+    "button": "商业优势"
+  },
   "RandomContributors": {
     "thank-you": "感谢我们的 <highlight>300+</highlight> 名贡献者",
     "thank-you-mobile": "感谢 <linebreak></linebreak> 我们的 <highlight>300+</highlight> 名贡献者"
