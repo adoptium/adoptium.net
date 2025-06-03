@@ -1,0 +1,22 @@
+{
+  "HomePage": {
+    "the-power": "Eclipse Temurin™ 的力量",
+    "download-temurin-for": "为 {userOSName} {arch} 下载 Temurin {defaultVersion}",
+    "download-temurin-short": "下载 Temurin {defaultVersion}",
+    "other-downloads": "其他下载",
+    "download-temurin-button": "下载 Temurin™"
+  },
+  "NotFoundPage": {
+    "title": "抱歉，我们无法找到此页面",
+    "back-to-home": "返回主页"
+  },
+  "RandomContributors": {
+    "thank-you": "感谢我们的 <highlight>300+</highlight> 名贡献者",
+    "thank-you-mobile": "感谢 <linebreak></linebreak> 我们的 <highlight>300+</highlight> 名贡献者"
+  },
+  "RandomContributor": {
+    "thank-you": "感谢 <name></name> 对 <repo></repo> 做出的 <contributions></contributions>",
+    "contribution-singular": "贡献",
+    "contribution-plural": "贡献"
+  }
+}

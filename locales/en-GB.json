@@ -1,0 +1,5 @@
+{
+  "HomePage": {
+    "download-temurin-for": "Download Temurin {defaultVersion} for {userOSName} {arch}"
+  }
+}

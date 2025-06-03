@@ -2,10 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import Banner from '@/components/Banner'
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
-// import ContributorsSection from '@/components/ContributorsSection'
+import { getLocale } from 'next-intl/server'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,13 +47,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  // Get locale dynamically - this will work for both the root path (/)
+  // and localized paths (/[locale])
+  const locale = await getLocale();
+  
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
@@ -97,12 +98,7 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <Banner />
-        <NavBar />
-        <main>{children}</main>
-        {/* TODO implement ContributorsSection */}
-        {/* <ContributorsSection /> */}
-        <Footer />
+          {children}
       </body>
     </html>
   )

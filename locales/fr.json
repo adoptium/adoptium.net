@@ -1,0 +1,22 @@
+{
+  "HomePage": {
+    "the-power": "La puissance d'Eclipse Temurin™",
+    "download-temurin-for": "Télécharger Temurin {defaultVersion} pour {userOSName} {arch}",
+    "download-temurin-short": "Télécharger Temurin {defaultVersion}",
+    "other-downloads": "Autres Téléchargements",
+    "download-temurin-button": "Télécharger Temurin™"
+  },
+  "NotFoundPage": {
+    "title": "Désolé, nous n'avons pas pu trouver cette page",
+    "back-to-home": "Retour à la page d'accueil"
+  },
+  "RandomContributors": {
+    "thank-you": "Merci à nos <highlight>300+</highlight> contributeurs",
+    "thank-you-mobile": "Merci <linebreak></linebreak> à nos <highlight>300+</highlight> contributeurs"
+  },
+  "RandomContributor": {
+    "thank-you": "Merci à <name></name> pour <contributions></contributions> à <repo></repo>",
+    "contribution-singular": "contribution",
+    "contribution-plural": "contributions"
+  }
+}

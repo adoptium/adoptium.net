@@ -16,7 +16,7 @@ import { FaChevronDown, FaRegBell } from "react-icons/fa"
 import { BsXLg, BsList } from "react-icons/bs"
 
 import IconSocial from "@/components/IconSocial"
-// import LanguageSelector from "@/components/LanguageSelector"
+import LanguageSelector from "@/components/LanguageSelector"
 
 interface NavItem {
   name: string
@@ -159,7 +159,7 @@ function isActivePath(path: string | undefined): boolean {
   return normalizedPath === normalizedLongestMatch
 }
 
-const NavBar = () => {
+const NavBar = ({ locale }: { locale: string }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [showAnnouncement, setShowAnnouncement] = useState(false)
@@ -285,8 +285,7 @@ const NavBar = () => {
             </div>
             <div className="flex space-x-3 h-12">
               <div className="hidden sm:block">
-                {/* TODO enable Language Selector once implemented */}
-                {/* <LanguageSelector /> */}
+                <LanguageSelector locale={locale} />
               </div>
               <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer">
                 <div
@@ -461,12 +460,12 @@ const NavBar = () => {
           </div>
           <div>
             <div className="py-6">
-              <a
+              <Link
                 href="/contact"
                 className="bg-primary w-full text-base flex justify-center items-center text-white font-bold h-[48px] rounded-full"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
             <ul className="flex mb-0 space-x-8 justify-center">
               <IconSocial />

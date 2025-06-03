@@ -3,6 +3,12 @@
 
 @import "tailwindcss";
 
+@layer utilities {
+  .bg-temurin-hero {
+    background-image: url('/images/backgrounds/temurin-hero-img.png');
+  }
+}
+
 /* CSS Variables */
 :root {
   --purple: #14003c;
@@ -76,3 +82,8 @@ body {
     transition-duration: 300ms;
   }
 }
+
+.underline {
+  text-underline-offset: 1em;
+}
+

@@ -1,0 +1,45 @@
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.animatedBackground {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f6f6;
+  background: linear-gradient(to right, #f6f6f6 8%, #bcbcbc 18%, #f6f6f6 33%);
+  background-size: 800px 104px;
+  height: 96px;
+  position: relative;
+}
+
+.animatedPlaceholder {
+  display: flex;
+  width: 100%;
+}
+
+.animatedPlaceholderImage {
+  composes: animatedBackground;
+  height: 60px;
+  margin-right: 10px;
+  min-width: 60px;
+  border-radius: 50%; /* Use border-radius instead of clip-path for better compatibility */
+}
+
+.animatedPlaceholderText {
+  width: 100%;
+}
+
+.animatedPlaceholderTextLine {
+  composes: animatedBackground;
+  height: 10px;
+  margin: 4px 0;
+  width: 100%;
+}
