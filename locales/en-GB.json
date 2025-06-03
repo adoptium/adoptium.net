@@ -1,4 +1,11 @@
 {
+  "PowerOfTemurin": {
+    "benefits": {
+      "performance": {
+        "description": "Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimised for seamless operation across diverse environments."
+      }
+    }
+  },
   "TemurinFeatures": {
     "features": {
       "performance-optimization": {

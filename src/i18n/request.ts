@@ -11,22 +11,33 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
-  // For en-GB, we'll merge the messages with en (default) messages as fallback
-  if (locale === 'en-GB') {
-    const defaultMessages = (await import('../../locales/en.json')).default;
-    const gbMessages = (await import('../../locales/en-GB.json')).default;
-    
-    // Deep merge the messages, with en-GB overriding en when both define the same key
+  // Load default English messages for fallback
+  const defaultMessages = (await import('../../locales/en.json')).default;
+  
+  // If the locale is English, just return those messages
+  if (locale === routing.defaultLocale) {
     return {
       locale,
-      messages: deepMerge(defaultMessages, gbMessages),
+      messages: defaultMessages,
     };
   }
-
-  return {
-    locale,
-    messages: (await import(`../../locales/${locale}.json`)).default,
-  };
+  
+  try {
+    // Load the locale-specific messages
+    const localeMessages = (await import(`../../locales/${locale}.json`)).default;
+    
+    // Merge with the default messages, with locale-specific messages taking precedence
+    return {
+      locale,
+      messages: deepMerge(defaultMessages, localeMessages),
+    };
+  } catch {
+    console.warn(`Could not load messages for locale ${locale}, falling back to default locale.`);
+    return {
+      locale,
+      messages: defaultMessages,
+    };
+  }
 });
 
 // Type definitions for locale messages
