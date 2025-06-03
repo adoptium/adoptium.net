@@ -3,7 +3,17 @@ import LogoCarousel from '@/components/LogoCarousel';
 import PowerOfTemurin from '@/components/PowerOfTemurin';
 import DownloadCounter from '@/components/DownloadCounter';
 import TemurinFeatures from '@/components/TemurinFeatures';
+import WGProjects from '@/components/WGProjects';
+import Testimonials from '@/components/Testimonials';
 import ContributorsHome from '@/components/Contributors/home'
+
+const LatestNews = () => {
+    return (
+        <div className="w-full h-[500px] flex items-center justify-center">
+            <h1 className="text-2xl font-bold">TODO - implement LatestNews</h1>
+        </div>
+    );
+}
 
 export default function HomePage() {
     return (
@@ -14,6 +24,9 @@ export default function HomePage() {
             <PowerOfTemurin />
             <DownloadCounter />
             <TemurinFeatures />
+            <WGProjects />
+            <Testimonials />
+            <LatestNews />
             <ContributorsHome />
         </div>
     );
