@@ -24,7 +24,8 @@ This project uses:
 - [Next.js](https://nextjs.org) App Router
 - [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) for font optimization
 - TypeScript for type safety
-- CSS Modules or your preferred styling solution
+- [next-intl](./locales/README.md) from i18n
+- CSS Modules for styling
 
 ## Contributing
 

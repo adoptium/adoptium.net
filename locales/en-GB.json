@@ -1,5 +1,9 @@
 {
-  "HomePage": {
-    "download-temurin-for": "Download Temurin {defaultVersion} for {userOSName} {arch}"
+  "TemurinFeatures": {
+    "features": {
+      "performance-optimization": {
+        "title": "Performance Optimisation"
+      }
+    }
   }
 }
