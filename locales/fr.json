@@ -23,5 +23,10 @@
     "thank-you": "Merci à <name></name> pour <contributions></contributions> à <repo></repo>",
     "contribution-singular": "contribution",
     "contribution-plural": "contributions"
+  },
+  "DownloadCounter": {
+    "title": "Alimentant des millions d'utilisateurs dans le monde entier avec Eclipse Temurin",
+    "total-download-docker-pulls-ever": "Total des téléchargements/extractions Docker",
+    "loading": "Chargement..."
   }
 }

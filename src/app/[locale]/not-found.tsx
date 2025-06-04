@@ -12,14 +12,12 @@ export default function CatchAllPage() {
         src="/images/backgrounds/404-error-bg.png"
         alt="Background 404 image"
         fill
-        objectFit="cover"
       />
       <Image
         className="absolute top-0 left-0 w-full h-full -z-10 block md:hidden"
         src="/images/backgrounds/404-error-bg-mobile.png"
         alt="Background 404 image"
         fill
-        objectFit="cover"
       />
       <div className="max-w-[280px] sm:max-w-[470px] mx-auto px-2">
         <Error404Icon />
@@ -41,7 +39,7 @@ export default function CatchAllPage() {
             </div>
           </div>
           <Link href="/">
-            <button className="bg-primary text-white tab-button-text px-6 py-4 rounded-[80px] mt-3">
+            <button className="gradient-border bg-transparent mt-10 text-white text-base leading-6 font-bold min-w-[191px] px-6 h-[48px] rounded-2xl">
               {t('back-to-home')}
             </button>
           </Link>

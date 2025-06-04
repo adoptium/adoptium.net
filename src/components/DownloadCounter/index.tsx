@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 import { DiGithubFull } from "react-icons/di"
 
 interface DownloadCountData {
@@ -8,6 +9,7 @@ interface DownloadCountData {
 }
 
 const DownloadCounter = () => {
+  const t = useTranslations('DownloadCounter')
   const [downloadData, setDownloadData] = useState<DownloadCountData | null>(null)
   const [count, setCount] = useState(0)
   const [animate, setAnimate] = useState(false)
@@ -28,7 +30,6 @@ const DownloadCounter = () => {
         
         // Use cached data if it exists and is less than 1 hour old
         if (cachedData && cachedTimestamp && (now - parseInt(cachedTimestamp, 10)) < oneHourInMs) {
-          console.log('Using cached download count data')
           setDownloadData({ total: parseInt(cachedData, 10) })
           setLoading(false)
           return
@@ -113,17 +114,17 @@ const DownloadCounter = () => {
       <div className="bg-purple py-8 lg:py-16">
         <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
           <h2 className="text-center text-[36px] sm:text-5xl font-semibold leading-[44px] sm:leading-[56px] text-white">
-            Powering Millions Worldwide with Eclipse Temurin
+            {t('title')}
           </h2>
           <h3 className="text-center text-[64px] lg:text-[104px] leading-[72px] lg:leading-[120px] font-semibold" style={{ color: '#FF1365' }}>
-            Loading...
+            {t('loading')}
           </h3>
           <div className="flex items-center gap-4 flex-wrap sm:gap-6 justify-center">
             <span>
               <DiGithubFull size={70} />
             </span>
             <p className="text-[16px] font-normal leading-6 text-white mb-0">
-              Total Downloads/Docker pulls ever
+              {t('total-download-docker-pulls-ever')}
             </p>
           </div>
         </div>
@@ -136,7 +137,7 @@ const DownloadCounter = () => {
       <div className="bg-purple py-8 lg:py-16">
         <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
           <h2 className="text-center text-[36px] sm:text-5xl font-semibold leading-[44px] sm:leading-[56px] text-white">
-            Powering Millions Worldwide with Eclipse Temurin
+            {t('title')}
           </h2>
           <h3 className="text-center text-[64px] lg:text-[104px] leading-[72px] lg:leading-[120px] font-semibold text-pink my-8">
             1B+
@@ -146,7 +147,7 @@ const DownloadCounter = () => {
               <DiGithubFull size={70} />
             </span>
             <p className="text-[16px] font-normal leading-6 text-white mb-0">
-              Total Downloads/Docker pulls ever
+              {t('total-download-docker-pulls-ever')}
             </p>
           </div>
         </div>
@@ -158,7 +159,7 @@ const DownloadCounter = () => {
     <div className="bg-purple py-8 lg:py-16" ref={counterRef}>
       <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
         <h2 className="text-center text-[36px] sm:text-5xl font-semibold leading-[44px] sm:leading-[56px] text-white">
-          Powering Millions Worldwide with Eclipse Temurin
+          {t('title')}
         </h2>
         <h3 className="text-center text-[64px] lg:text-[104px] leading-[72px] lg:leading-[120px] font-semibold my-8" style={{ color: '#FF1365' }}>
           {count.toLocaleString()}
@@ -168,7 +169,7 @@ const DownloadCounter = () => {
             <DiGithubFull size={70} />
           </span>
           <p className="text-[16px] font-normal leading-6 text-white mb-0">
-            Total Downloads/Docker pulls ever
+            {t('total-download-docker-pulls-ever')}
           </p>
         </div>
       </div>

@@ -1,0 +1,396 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NotFound page > renders correctly 1`] = `
+<div
+  class="relative pt-24 pb-24 md:pt-32 md:pb-32 flex flex-col justify-center items-center"
+>
+  <img
+    alt="Background 404 image"
+    class="absolute top-0 left-0 w-full h-full -z-10 hidden md:block"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    sizes="100vw"
+    src="/_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=3840&q=75"
+    srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg.png&w=3840&q=75 3840w"
+    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+  />
+  <img
+    alt="Background 404 image"
+    class="absolute top-0 left-0 w-full h-full -z-10 block md:hidden"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    sizes="100vw"
+    src="/_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=3840&q=75"
+    srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2F404-error-bg-mobile.png&w=3840&q=75 3840w"
+    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+  />
+  <div
+    class="max-w-[280px] sm:max-w-[470px] mx-auto px-2"
+  >
+    <svg
+      fill="none"
+      height="332"
+      viewBox="0 0 479 332"
+      width="100%"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        filter="url(#filter0_ddi_6409_38909)"
+      >
+        <path
+          d="M171.896 299.42L130.972 275.838L52.5968 321L31.2668 308.709L2 198.092L26.5543 183.943L132.956 245.254L160.487 229.391L186.033 244.111L158.503 259.975L199.427 283.556L171.896 299.42ZM58.5494 299.277L47.8844 294.275L105.426 261.118L27.0504 215.957H33.995L58.5494 299.277Z"
+          fill="url(#paint0_radial_6409_38909)"
+        />
+        <path
+          d="M301.506 227.308C291.089 233.311 280.507 237.313 269.759 239.313C259.011 241.124 248.263 241.505 237.516 240.457C226.933 239.313 216.599 237.17 206.513 234.025C196.427 230.881 186.836 227.165 177.742 222.878C168.813 218.495 160.546 214.112 152.94 209.73C145.664 205.537 138.306 200.917 130.866 195.867C123.59 190.722 117.224 185.339 111.768 179.717C106.311 173.905 102.674 167.998 100.855 161.996C98.8706 155.898 99.6147 149.753 103.087 143.559C106.394 137.271 113.173 131.173 123.425 125.266C133.677 119.359 144.094 115.453 154.676 113.547C165.424 111.546 176.006 111.07 186.423 112.118C197.005 113.071 207.257 115.071 217.178 118.12C227.099 121.169 236.606 124.837 245.701 129.125C254.795 133.412 263.145 137.748 270.751 142.13C278.688 146.704 286.459 151.658 294.065 156.994C301.506 162.234 307.872 167.808 313.163 173.715C318.454 179.431 322.009 185.291 323.828 191.293C325.647 197.296 324.903 203.346 321.596 209.444C318.289 215.542 311.592 221.496 301.506 227.308ZM274.967 212.016C283.069 207.348 286.542 202.203 285.384 196.581C284.227 190.769 279.762 184.672 271.991 178.288C264.385 171.809 254.96 165.33 243.716 158.852C231.646 151.896 219.989 146.227 208.745 141.844C197.667 137.366 187.167 134.842 177.246 134.27C167.16 133.603 157.983 135.651 149.715 140.415C143.432 144.036 139.96 147.942 139.298 152.134C138.637 156.327 140.208 160.757 144.011 165.426C147.649 169.999 152.774 174.763 159.388 179.717C166.002 184.481 173.526 189.293 181.959 194.152C190.061 198.82 198.245 203.06 206.513 206.871C214.946 210.587 223.13 213.493 231.067 215.589C239.004 217.685 246.693 218.59 254.133 218.305C261.574 217.828 268.519 215.732 274.967 212.016Z"
+          fill="url(#paint1_radial_6409_38909)"
+        />
+        <path
+          d="M449.469 139.476L408.545 115.895L330.17 161.057L308.84 148.766L279.573 38.1487L304.128 24L410.53 85.3111L438.06 69.4474L463.607 84.1677L436.076 100.031L477 123.613L449.469 139.476ZM336.123 139.333L325.458 134.331L382.999 101.175L304.624 56.0132H311.568L336.123 139.333Z"
+          fill="url(#paint2_radial_6409_38909)"
+        />
+      </g>
+      <g
+        filter="url(#filter1_bddi_6409_38909)"
+      >
+        <path
+          d="M171.896 275.42L130.972 251.838L52.5968 297L31.2668 284.709L2 174.092L26.5543 159.943L132.956 221.254L160.487 205.391L186.033 220.111L158.503 235.975L199.427 259.556L171.896 275.42ZM58.5494 275.277L47.8844 270.275L105.426 237.118L27.0504 191.957H33.995L58.5494 275.277Z"
+          fill="#E4E8F3"
+          fill-opacity="0.25"
+          shape-rendering="crispEdges"
+        />
+        <path
+          d="M301.506 203.308C291.089 209.311 280.507 213.313 269.759 215.313C259.011 217.124 248.263 217.505 237.516 216.457C226.933 215.313 216.599 213.17 206.513 210.025C196.427 206.881 186.836 203.165 177.742 198.878C168.813 194.495 160.546 190.112 152.94 185.73C145.664 181.537 138.306 176.917 130.866 171.867C123.59 166.722 117.224 161.339 111.768 155.717C106.311 149.905 102.674 143.998 100.855 137.996C98.8706 131.898 99.6147 125.753 103.087 119.559C106.394 113.271 113.173 107.173 123.425 101.266C133.677 95.359 144.094 91.4526 154.676 89.5471C165.424 87.5462 176.006 87.0698 186.423 88.1179C197.005 89.0707 207.257 91.0715 217.178 94.1204C227.099 97.1693 236.606 100.837 245.701 105.125C254.795 109.412 263.145 113.748 270.751 118.13C278.688 122.704 286.459 127.658 294.065 132.994C301.506 138.234 307.872 143.808 313.163 149.715C318.454 155.431 322.009 161.291 323.828 167.293C325.647 173.296 324.903 179.346 321.596 185.444C318.289 191.542 311.592 197.496 301.506 203.308ZM274.967 188.016C283.069 183.348 286.542 178.203 285.384 172.581C284.227 166.769 279.762 160.672 271.991 154.288C264.385 147.809 254.96 141.33 243.716 134.852C231.646 127.896 219.989 122.227 208.745 117.844C197.667 113.366 187.167 110.842 177.246 110.27C167.16 109.603 157.983 111.651 149.715 116.415C143.432 120.036 139.96 123.942 139.298 128.134C138.637 132.327 140.208 136.757 144.011 141.426C147.649 145.999 152.774 150.763 159.388 155.717C166.002 160.481 173.526 165.293 181.959 170.152C190.061 174.82 198.245 179.06 206.513 182.871C214.946 186.587 223.13 189.493 231.067 191.589C239.004 193.685 246.693 194.59 254.133 194.305C261.574 193.828 268.519 191.732 274.967 188.016Z"
+          fill="#E4E8F3"
+          fill-opacity="0.25"
+          shape-rendering="crispEdges"
+        />
+        <path
+          d="M449.469 115.476L408.545 91.8951L330.17 137.057L308.84 124.766L279.573 14.1487L304.128 0L410.53 61.3111L438.06 45.4474L463.607 60.1677L436.076 76.0314L477 99.6126L449.469 115.476ZM336.123 115.333L325.458 110.331L382.999 77.1748L304.624 32.0132H311.568L336.123 115.333Z"
+          fill="#E4E8F3"
+          fill-opacity="0.25"
+          shape-rendering="crispEdges"
+        />
+      </g>
+      <defs>
+        <filter
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="307.769"
+          id="filter0_ddi_6409_38909"
+          width="478.077"
+          x="0.461538"
+          y="24"
+        >
+          <feflood
+            flood-opacity="0"
+            result="BackgroundImageFix"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="9.23077"
+          />
+          <fegaussianblur
+            stdDeviation="0.769231"
+          />
+          <fecomposite
+            in2="hardAlpha"
+            operator="out"
+          />
+          <fecolormatrix
+            type="matrix"
+            values="0 0 0 0 1 0 0 0 0 0.0823529 0 0 0 0 0.396078 0 0 0 1 0"
+          />
+          <feblend
+            in2="BackgroundImageFix"
+            mode="normal"
+            result="effect1_dropShadow_6409_38909"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="3.07692"
+          />
+          <fegaussianblur
+            stdDeviation="0.769231"
+          />
+          <fecomposite
+            in2="hardAlpha"
+            operator="out"
+          />
+          <fecolormatrix
+            type="matrix"
+            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"
+          />
+          <feblend
+            in2="effect1_dropShadow_6409_38909"
+            mode="normal"
+            result="effect2_dropShadow_6409_38909"
+          />
+          <feblend
+            in="SourceGraphic"
+            in2="effect2_dropShadow_6409_38909"
+            mode="normal"
+            result="shape"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="0.587216"
+          />
+          <fegaussianblur
+            stdDeviation="0.587216"
+          />
+          <fecomposite
+            in2="hardAlpha"
+            k2="-1"
+            k3="1"
+            operator="arithmetic"
+          />
+          <fecolormatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+          />
+          <feblend
+            in2="shape"
+            mode="darken"
+            result="effect3_innerShadow_6409_38909"
+          />
+        </filter>
+        <filter
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="343.977"
+          id="filter1_bddi_6409_38909"
+          width="521.977"
+          x="-21.4886"
+          y="-23.4886"
+        >
+          <feflood
+            flood-opacity="0"
+            result="BackgroundImageFix"
+          />
+          <fegaussianblur
+            in="BackgroundImageFix"
+            stdDeviation="11.7443"
+          />
+          <fecomposite
+            in2="SourceAlpha"
+            operator="in"
+            result="effect1_backgroundBlur_6409_38909"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="9.23077"
+          />
+          <fegaussianblur
+            stdDeviation="0.769231"
+          />
+          <fecomposite
+            in2="hardAlpha"
+            operator="out"
+          />
+          <fecolormatrix
+            type="matrix"
+            values="0 0 0 0 0.991667 0 0 0 0 0.975139 0 0 0 0 0.980789 0 0 0 0.24 0"
+          />
+          <feblend
+            in2="effect1_backgroundBlur_6409_38909"
+            mode="normal"
+            result="effect2_dropShadow_6409_38909"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="3.07692"
+          />
+          <fegaussianblur
+            stdDeviation="0.769231"
+          />
+          <fecomposite
+            in2="hardAlpha"
+            operator="out"
+          />
+          <fecolormatrix
+            type="matrix"
+            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+          />
+          <feblend
+            in2="effect2_dropShadow_6409_38909"
+            mode="normal"
+            result="effect3_dropShadow_6409_38909"
+          />
+          <feblend
+            in="SourceGraphic"
+            in2="effect3_dropShadow_6409_38909"
+            mode="normal"
+            result="shape"
+          />
+          <fecolormatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feoffset
+            dy="0.587216"
+          />
+          <fegaussianblur
+            stdDeviation="0.587216"
+          />
+          <fecomposite
+            in2="hardAlpha"
+            k2="-1"
+            k3="1"
+            operator="arithmetic"
+          />
+          <fecolormatrix
+            type="matrix"
+            values="0 0 0 0 0.342674 0 0 0 0 0.352133 0 0 0 0 0.579167 0 0 0 0.1 0"
+          />
+          <feblend
+            in2="shape"
+            mode="darken"
+            result="effect4_innerShadow_6409_38909"
+          />
+        </filter>
+        <radialgradient
+          cx="0"
+          cy="0"
+          gradientTransform="translate(75.3118 172.5) scale(306.485 366.977)"
+          gradientUnits="userSpaceOnUse"
+          id="paint0_radial_6409_38909"
+          r="1"
+        >
+          <stop
+            stop-color="#D478F4"
+          />
+          <stop
+            offset="1"
+            stop-color="#FF1464"
+          />
+        </radialgradient>
+        <radialgradient
+          cx="0"
+          cy="0"
+          gradientTransform="translate(75.3118 172.5) scale(306.485 366.977)"
+          gradientUnits="userSpaceOnUse"
+          id="paint1_radial_6409_38909"
+          r="1"
+        >
+          <stop
+            stop-color="#D478F4"
+          />
+          <stop
+            offset="1"
+            stop-color="#FF1464"
+          />
+        </radialgradient>
+        <radialgradient
+          cx="0"
+          cy="0"
+          gradientTransform="translate(75.3118 172.5) scale(306.485 366.977)"
+          gradientUnits="userSpaceOnUse"
+          id="paint2_radial_6409_38909"
+          r="1"
+        >
+          <stop
+            stop-color="#D478F4"
+          />
+          <stop
+            offset="1"
+            stop-color="#FF1464"
+          />
+        </radialgradient>
+      </defs>
+    </svg>
+  </div>
+  <div
+    class="mx-auto max-w-[848px] w-full px-6 lg:px-0 flex flex-col items-center justify-center md:mt-14"
+  >
+    <div
+      class="self-stretch flex-col justify-center items-center gap-6 flex"
+    >
+      <div
+        class="self-stretch  flex-col justify-center items-center gap-4 flex"
+      >
+        <div
+          class="justify-start items-center gap-3 inline-flex"
+        >
+          <svg
+            fill="none"
+            height="14"
+            viewBox="0 0 14 14"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#FF1464"
+              height="8"
+              rx="2"
+              width="8"
+              x="3"
+              y="3"
+            />
+            <rect
+              height="11"
+              rx="3.5"
+              stroke="#FF1464"
+              stroke-opacity="0.25"
+              stroke-width="3"
+              width="11"
+              x="1.5"
+              y="1.5"
+            />
+          </svg>
+          <div
+            class="text-rose-600 text-base font-bold leading-normal"
+          >
+            404 Error
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-white text-[48px] md:text-[56px] leading-[116.667%] md:leading-[114.286%] font-semibold"
+        >
+          <h1>
+            Text
+          </h1>
+        </div>
+      </div>
+      <a
+        href="/"
+      >
+        <button
+          class="gradient-border bg-transparent mt-10 text-white text-base leading-6 font-bold min-w-[191px] px-6 h-[48px] rounded-2xl"
+        >
+          Text
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;

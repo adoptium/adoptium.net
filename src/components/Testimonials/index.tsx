@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6"
 import Image from "next/image"
+import "./styles.css"
 
 const testimonialData = [
   {
@@ -84,38 +85,6 @@ const Testimonials = () => {
 
   return (
     <>
-      <style jsx>{`
-        @keyframes slideInLeft {
-          from {
-            transform: translateX(-30px) scale(0.95);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0) scale(1);
-            opacity: 1;
-          }
-        }
-        
-        @keyframes slideInRight {
-          from {
-            transform: translateX(30px) scale(0.95);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0) scale(1);
-            opacity: 1;
-          }
-        }
-        
-        .animate-slideInLeft {
-          animation: slideInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-        
-        .animate-slideInRight {
-          animation: slideInRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-      `}</style>
-
       <section className="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
