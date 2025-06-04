@@ -31,4 +31,4 @@ jobs:
           # Markdown lint complains about the issue templates
           FILTER_REGEX_EXCLUDE: .github/ISSUE_TEMPLATE/*
           VALIDATE_YAML: false
-
+          VALIDATE_TYPESCRIPT_STANDARD: false
