@@ -3,9 +3,9 @@
 import React, { MutableRefObject, useRef } from "react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl';
-import { FaApple, FaWindows, FaLinux } from "react-icons/fa"
 import { detectOS, UserOS } from "@/utils/detectOS"
 import { useFetchLatestForOS, useOnScreen } from "@/hooks"
+import OSIcon from './OSIcon'
 
 let userOSName: string
 let userOSAPIName: string
@@ -92,13 +92,10 @@ const LatestTemurin: React.FC<LatestTemurinProps> = ({ latestLTS }) => {
             }}
             className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
           >
-            {userOS === UserOS.MAC ? (
-              <FaApple size={25} />
-            ) : userOS === UserOS.WIN ? (
-              <FaWindows size={25} />
-            ) : (
-              <FaLinux size={25} />
-            )}
+            {/* Icon will only render on client-side */}
+            <span className="w-6 h-6 flex items-center justify-center">
+              <OSIcon os={userOS} />
+            </span>
             {t("download-temurin-button")}
           </Link>
         ) : (
@@ -106,13 +103,10 @@ const LatestTemurin: React.FC<LatestTemurinProps> = ({ latestLTS }) => {
             href="#"
             className="rounded-[80px] bg-[#FF1464] cursor-not-allowed hover:bg-transparent border transition duration-300 ease-in-out hover:text-[#FF1464] border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
           >
-            {userOS === UserOS.MAC ? (
-              <FaApple size={25} />
-            ) : userOS === UserOS.WIN ? (
-              <FaWindows size={25} />
-            ) : (
-              <FaLinux size={25} />
-            )}
+            {/* Icon will only render on client-side */}
+            <span className="w-6 h-6 flex items-center justify-center">
+              <OSIcon os={userOS} />
+            </span>
             {t("download-temurin-button")}
           </a>
         )}

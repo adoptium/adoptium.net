@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import RandomContributor from "@/components/RandomContributor"
 import { CSSProperties } from 'react'
+import "./styles.css"
 
 const ContributorsHome = () => {
   const t = useTranslations('RandomContributors');
@@ -38,7 +39,7 @@ const ContributorsHome = () => {
   const set3 = contributorStyles.slice(4, 6)
 
   return (
-    <div className="xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-center mx-auto">
+    <div className="xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-cente contributors mx-auto">
       {/* ==========================================SET-1=============================================== */}
       {/* Contributors cards for Set 1 */}
       <div className="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden">

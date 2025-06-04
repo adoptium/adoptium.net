@@ -1,6 +1,9 @@
-# Adoptium Website (Next.js)
+# Adoptium.net (Next.js)
 
-This repository contains the Next.js rewrite of the [adoptium.net](https://adoptium.net) website, originally hosted at [github.com/adoptium/adoptium.net](https://github.com/adoptium/adoptium.net).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/17e64afa-e88c-45da-9367-db893a423b6f/deploy-status)](https://app.netlify.com/projects/adoptium-next/deploys)
+[![codecov](https://codecov.io/gh/adoptium/adoptium.net-next/branch/main/graph/badge.svg?token=XGJMJVT8BA)](https://codecov.io/gh/adoptium/adoptium.net-next) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net-next/badge)](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net-next)
+
+This repository contains the Next.js rewrite of the [adoptium.net](https://adoptium.net) site, originally hosted at [github.com/adoptium/adoptium.net](https://github.com/adoptium/adoptium.net).
 
 ## Getting Started
 
@@ -21,14 +24,16 @@ You can start editing the pages by modifying files in the `src/app` directory. T
 ## Project Structure
 
 This project uses:
+
 - [Next.js](https://nextjs.org) App Router
 - [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) for font optimization
 - TypeScript for type safety
-- CSS Modules or your preferred styling solution
+- [next-intl](./locales/README.md) from i18n
+- CSS Modules for styling
 
 ## Contributing
 
-Contributions to the Adoptium website are welcome! Please follow the contribution guidelines in the repository.
+Contributions to the Adoptium site are welcome! Please follow the contribution guidelines in the repository.
 
 ## Learn More
 
@@ -39,7 +44,8 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Deployment
 
-The website is deployed according to the Adoptium project's infrastructure requirements.
+The site is deployed according to the Adoptium project's infrastructure requirements.
 
 For more information about deploying Next.js applications:
+
 - [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)
