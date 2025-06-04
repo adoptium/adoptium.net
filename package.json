@@ -6,6 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "update-snapshots": "vitest --run -u",
     "lint": "next lint"
   },
   "dependencies": {
@@ -26,14 +29,23 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.8",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.15.29",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@types/react-slick": "^0.23.13",
     "@types/react-world-flags": "^1.6.0",
+    "@vitejs/plugin-react": "^4.5.1",
+    "@vitest/coverage-v8": "^3.2.1",
     "eslint": "^9.28.0",
     "eslint-config-next": "15.3.3",
+    "jsdom": "^26.1.0",
     "tailwindcss": "^4.1.8",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.1",
+    "vitest-axe": "^0.1.0"
   }
 }

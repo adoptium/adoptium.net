@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AnimatedPlaceholder component > should render correctly with default skeleton 1`] = `
+<div>
+  <div
+    class="_animatedPlaceholder_283780"
+  >
+    <div
+      class="_animatedPlaceholderImage_283780"
+    />
+    <div
+      class="_animatedPlaceholderText_283780"
+    >
+      <div
+        class="_animatedPlaceholderTextLine_283780"
+      />
+      <div
+        class="_animatedPlaceholderTextLine_283780"
+      />
+      <div
+        class="_animatedPlaceholderTextLine_283780"
+      />
+      <div
+        class="_animatedPlaceholderTextLine_283780"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AnimatedPlaceholder component > should support passing loader skeleton from outside 1`] = `
+<div>
+  <div
+    class="_animatedPlaceholder_283780"
+  >
+    <div
+      class="animated-placeholder__image"
+    />
+  </div>
+</div>
+`;

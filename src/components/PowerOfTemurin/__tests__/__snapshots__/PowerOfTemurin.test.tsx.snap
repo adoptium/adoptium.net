@@ -11,7 +11,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
       >
-        The Power of Eclipse Temurin™
+        Text
       </h2>
       <h3
         class="text-center text-base leading-6 font-normal text-grey mt-6"
@@ -19,7 +19,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         Text
       </h3>
       <a
-        href="/en/business-benefits"
+        href="/business-benefits"
       >
         <button
           class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
@@ -28,8 +28,256 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         </button>
       </a>
     </div>
-    <div>
-      UiVirtualScroll
+    <div
+      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
+      <img
+        alt="Description"
+        class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
+        height="366"
+        loading="lazy"
+        src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
+        width="366"
+      />
+      <img
+        alt="scroll divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
+        width="16"
+      />
+      <div
+        class="flex flex-col flex-1 px-4"
+      >
+        <h1
+          class="text-xl my-5 font-bold"
+        >
+          Text
+        </h1>
+        <p
+          class="text-base text-grey"
+        >
+          Text
+        </p>
+      </div>
+    </div>
+    <div
+      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
+      <img
+        alt="Description"
+        class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
+        height="366"
+        loading="lazy"
+        src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
+        width="366"
+      />
+      <img
+        alt="scroll divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
+        width="16"
+      />
+      <div
+        class="flex flex-col flex-1 px-4"
+      >
+        <h1
+          class="text-xl my-5 font-bold"
+        >
+          Text
+        </h1>
+        <p
+          class="text-base text-grey"
+        >
+          Text
+        </p>
+      </div>
+    </div>
+    <div
+      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
+      <img
+        alt="Description"
+        class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
+        height="366"
+        loading="lazy"
+        src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
+        width="366"
+      />
+      <img
+        alt="scroll divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
+        width="16"
+      />
+      <div
+        class="flex flex-col flex-1 px-4"
+      >
+        <h1
+          class="text-xl my-5 font-bold"
+        >
+          Text
+        </h1>
+        <p
+          class="text-base text-grey"
+        >
+          Text
+        </p>
+      </div>
+    </div>
+    <div
+      class="lg:block hidden open-animation-wrapper"
+    >
+      <div
+        class="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0"
+      >
+        <div
+          class="progress absolute top-0 bottom-4 left-0 right-0"
+        >
+          <div
+            class="progress-fill w-full h-full"
+            style="transform: scaleY(1);"
+          />
+        </div>
+        <div
+          class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
+          style="top: 100%;"
+        />
+        <div
+          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"
+        >
+          <div
+            class="w-[50%]"
+          >
+            <img
+              alt="Description"
+              class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
+              width="436"
+            />
+          </div>
+          <div
+            class="w-[50%]"
+          >
+            <div
+              class="max-w-[436px] ml-auto"
+            >
+              <h1
+                class="text-xl md-pt-6 my-5 font-bold"
+              >
+                Text
+              </h1>
+              <p
+                class="text-base text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-2"
+        >
+          <div
+            class="w-[50%]"
+          >
+            <img
+              alt="Description"
+              class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
+              width="436"
+            />
+          </div>
+          <div
+            class="w-[50%]"
+          >
+            <div
+              class="max-w-[436px] ml-auto"
+            >
+              <h1
+                class="text-xl md-pt-6 my-5 font-bold"
+              >
+                Text
+              </h1>
+              <p
+                class="text-base text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-3"
+        >
+          <div
+            class="w-[50%]"
+          >
+            <img
+              alt="Description"
+              class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
+              width="436"
+            />
+          </div>
+          <div
+            class="w-[50%]"
+          >
+            <div
+              class="max-w-[436px] ml-auto"
+            >
+              <h1
+                class="text-xl md-pt-6 my-5 font-bold"
+              >
+                Text
+              </h1>
+              <p
+                class="text-base text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -28,7 +28,6 @@ const DownloadCounter = () => {
         
         // Use cached data if it exists and is less than 1 hour old
         if (cachedData && cachedTimestamp && (now - parseInt(cachedTimestamp, 10)) < oneHourInMs) {
-          console.log('Using cached download count data')
           setDownloadData({ total: parseInt(cachedData, 10) })
           setLoading(false)
           return

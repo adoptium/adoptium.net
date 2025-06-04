@@ -12,14 +12,12 @@ export default function CatchAllPage() {
         src="/images/backgrounds/404-error-bg.png"
         alt="Background 404 image"
         fill
-        objectFit="cover"
       />
       <Image
         className="absolute top-0 left-0 w-full h-full -z-10 block md:hidden"
         src="/images/backgrounds/404-error-bg-mobile.png"
         alt="Background 404 image"
         fill
-        objectFit="cover"
       />
       <div className="max-w-[280px] sm:max-w-[470px] mx-auto px-2">
         <Error404Icon />
