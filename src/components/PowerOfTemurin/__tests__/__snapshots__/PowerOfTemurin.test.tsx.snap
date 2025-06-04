@@ -22,7 +22,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         href="/business-benefits"
       >
         <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+          class="gradient-border bg-transparent mt-10 text-white text-base leading-6 font-bold min-w-[191px] px-6 h-[48px] rounded-2xl"
         >
           Text
         </button>

@@ -39,7 +39,7 @@ export default function CatchAllPage() {
             </div>
           </div>
           <Link href="/">
-            <button className="bg-primary text-white tab-button-text px-6 py-4 rounded-[80px] mt-3">
+            <button className="gradient-border bg-transparent mt-10 text-white text-base leading-6 font-bold min-w-[191px] px-6 h-[48px] rounded-2xl">
               {t('back-to-home')}
             </button>
           </Link>

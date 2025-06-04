@@ -812,7 +812,7 @@ exports[`Index page > renders correctly 1`] = `
         href="/business-benefits"
       >
         <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+          class="gradient-border bg-transparent mt-10 text-white text-base leading-6 font-bold min-w-[191px] px-6 h-[48px] rounded-2xl"
         >
           Text
         </button>
@@ -1079,13 +1079,13 @@ exports[`Index page > renders correctly 1`] = `
       <h2
         class="text-center text-[36px] sm:text-5xl font-semibold leading-[44px] sm:leading-[56px] text-white"
       >
-        Powering Millions Worldwide with Eclipse Temurin
+        Text
       </h2>
       <h3
         class="text-center text-[64px] lg:text-[104px] leading-[72px] lg:leading-[120px] font-semibold"
         style="color: rgb(255, 19, 101);"
       >
-        Loading...
+        Text
       </h3>
       <div
         class="flex items-center gap-4 flex-wrap sm:gap-6 justify-center"
@@ -1109,7 +1109,7 @@ exports[`Index page > renders correctly 1`] = `
         <p
           class="text-[16px] font-normal leading-6 text-white mb-0"
         >
-          Total Downloads/Docker pulls ever
+          Text
         </p>
       </div>
     </div>

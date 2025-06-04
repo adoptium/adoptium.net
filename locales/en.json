@@ -67,5 +67,26 @@
     "thank-you": "Thank you <name></name> for making <contributions></contributions> to <repo></repo>",
     "contribution-singular": "contribution",
     "contribution-plural": "contributions"
+  },
+  "DownloadCounter": {
+    "title": "Powering Millions Worldwide with Eclipse Temurin",
+    "total-download-docker-pulls-ever": "Total Downloads/Docker pulls ever",
+    "loading": "Loading..."
+  },
+  "WaysToSupport": {
+    "title": "Ways to support us",
+    "description": "If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group",
+    "contribute": {
+      "how-to-contribute": "How to Contribute",
+      "description": "Contribute to our projects with technical and non-technical development. Join our community to help shape the future of Java runtimes."
+    },
+    "sustainers": {
+      "title": "Become a Sustainer",
+      "description": "Join us in strengthening the future of Eclipse Temurin"
+    },
+    "member": {
+      "title": "Become a Member",
+      "description": "Join us shaping the future of Eclipse Adoptium"
+    }
   }
 }

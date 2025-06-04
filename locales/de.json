@@ -6,11 +6,11 @@
     "other-downloads": "Andere Downloads",
     "download-temurin-button": "Temurin™ herunterladen"
   },
-    "NotFoundPage": {
+  "NotFoundPage": {
     "title": "Entschuldigung, wir konnten diese Seite nicht finden",
     "back-to-home": "Zurück zur Startseite"
   },
-    "PowerOfTemurin": {
+  "PowerOfTemurin": {
     "title": "Die Kraft von Eclipse Temurin",
     "description": "OpenJDK-basiert: Eclipse Temurin bietet leistungsstarke, plattformübergreifende, quelloffene Java™-Runtimes-Binärdateien, die für den Unternehmenseinsatz bereit sind und die Java SE TCK-zertifiziert und AQAvit-überprüft sind für den allgemeinen Einsatz im Java-Ökosystem.",
     "button": "Geschäftsvorteile"
@@ -23,5 +23,10 @@
     "thank-you": "Danke <name></name> für <contributions></contributions> zu <repo></repo>",
     "contribution-singular": "Beitrag",
     "contribution-plural": "Beiträge"
+  },
+  "DownloadCounter": {
+    "title": "Alimentando a millones de usuarios en todo el mundo con Eclipse Temurin",
+    "total-download-docker-pulls-ever": "Total de descargas/extracciones de Docker",
+    "loading": "Cargando..."
   }
 }
