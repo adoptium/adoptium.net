@@ -23,12 +23,9 @@ jobs:
           cache: npm
 
       - run: npm install
-
-      - run: npm test
+      - run: npm run coverage
 
     #   Disabled until Codecov is set up
-      # - run: npm run coverage
-
     #   - name: Upload coverage to Codecov
     #     uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
     #     with:
