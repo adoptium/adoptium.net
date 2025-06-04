@@ -66,7 +66,8 @@ const navigation: NavItem[] = [
     name: "Community",
     children: [
       { name: "Support", href: "/support" },
-      { name: "News & Updates", href: "/news" },
+      { name: "News", href: "/news" },
+      { name: "Events", href: "/events" },
       { name: "Slack", href: "/slack" },
     ],
   },
@@ -245,13 +246,13 @@ const NavBar = ({ locale }: { locale: string }) => {
                       >
                         <div className="py-6 px-4">
                           {item.children.map(child => (
-                            <MenuItem key={`mobile-${child.name}`}>
-                              {/* {({ focus }) => (
+                            <MenuItem key={`mobile-${child.name}`} as="div">
+                              {() => (
                                 <MobileLink
                                   href={child.href}
                                   name={child.name}
                                 />
-                              )} */}
+                              )}
                             </MenuItem>
                           ))}
                         </div>

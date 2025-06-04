@@ -13,7 +13,51 @@
   "PowerOfTemurin": {
     "title": "The Power of Eclipse Temurin",
     "description": "OpenJDK Based: Eclipse Temurin offer high-performance, cross-platform, open source Java™ Runtimes binaries that are enterprise-ready and Java SE TCK certified and AQAvit verified for general use in the Java Ecosystem.",
-    "button": "Business Benefits"
+    "button": "Business Benefits",
+    "benefits": {
+      "performance": {
+        "title": "Performance & Reliability",
+        "description": "Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments."
+      },
+      "cost": {
+        "title": "Cost-Effective Innovation",
+        "description": "Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance."
+      },
+      "developers": {
+        "title": "Empowering Developers",
+        "description": "Boost developer productivity with Eclipse Temurin's consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide."
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "Prebuilt OpenJDK Binaries for Free!",
+    "description": "Java™ is the world's leading programming language and platform. The Adoptium Working Group promotes and supports high-quality, TCK certified runtimes and associated technology for use across the Java ecosystem. Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.",
+    "features": {
+      "secure-supply-chain": {
+        "title": "Secure Supply Chain",
+        "description": "Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain."
+      },
+      "tck-certified": {
+        "title": "TCK Certified",
+        "description": "Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build."
+      },
+      "performance-optimization": {
+        "title": "Performance Optimization",
+        "description": "Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments."
+      },
+      "cross-platform": {
+        "title": "Cross-Platform Consistency",
+        "description": "Consistent behavior and builds across all major operating systems and hardware architectures."
+      },
+      "community-driven": {
+        "title": "Community Driven Development",
+        "description": "Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating."
+      },
+      "enterprise-ready": {
+        "title": "Enterprise Ready Support",
+        "description": "Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability."
+      }
+    }
   },
   "RandomContributors": {
     "thank-you": "Thank you to our <highlight>300+</highlight> contributors",
