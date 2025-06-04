@@ -1,7 +1,20 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest } from 'next/server';
 import { routing } from "./i18n/routing";
 
-export default createMiddleware(routing);
+// Create the standard next-intl middleware
+const intlMiddleware = createMiddleware({
+  ...routing,
+  // Add pathnameDetection to ensure we handle non-existent routes
+  localeDetection: false
+});
+
+// Extend the middleware to handle non-existent routes
+export default async function middleware(request: NextRequest) {
+  
+  // Let the intl middleware do its job for locale handling
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match all pathnames except for

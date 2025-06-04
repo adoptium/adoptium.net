@@ -1,4 +1,4 @@
-= Commercial Support Options for Eclipse Temurin(TM)
+= Comercial Soporte para Eclipse Temurin(TM)
 :page-authors: gdams, tellison, hendrikebbers
 :page-based-on: 4f7e0d66e577a9c619e38c6d670d86f9c4736874
 

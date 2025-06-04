@@ -26,7 +26,6 @@ export default async function LocaleLayout({
     // Set the request locale
     setRequestLocale(locale);
 
-
     return (
         <NextIntlClientProvider messages={messages}>
             <Banner />

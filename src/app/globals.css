@@ -1,6 +1,8 @@
 @import 'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "prism-themes/themes/prism-shades-of-purple.css";
 
 @layer utilities {
   .bg-temurin-hero {
@@ -17,13 +19,40 @@
   --border-radius: 4px;
   --color-text: white;
   --color-primary: #7026b9;
-  --color-code-bg: grey;
+  --color-code-bg: rgba(110, 118, 129, 0.4);
   --color-code: white;
 }
 
 /* Global styles */
 html {
   scroll-behavior: smooth;
+}
+
+/* Inline code blocks (not processed by Prism) */
+:not(pre) > code {
+  background: var(--color-code-bg);
+  color: var(--color-code);
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 0.875em;
+  white-space: nowrap;
+}
+
+code::before,
+code::after,
+tt::before,
+tt::after {
+  content: "\00a0";
+  letter-spacing: -0.2em;
+}
+
+pre code::before,
+pre code::after,
+pre tt::before,
+pre tt::after {
+  content: none;
 }
 
 body {

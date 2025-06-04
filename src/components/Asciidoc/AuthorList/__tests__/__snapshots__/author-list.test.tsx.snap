@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AuthorsList component > renders correctly 1`] = `
+<div>
+  <div
+    class="mt-10 flex-col justify-center items-start gap-4"
+  >
+    <div
+      class="self-stretch text-white my-5 text-lg font-semibold leading-normal"
+    >
+      Text
+    </div>
+    <div
+      class="flex flex-wrap justify-start items-center space-x-[-12px]"
+    >
+      <a
+        aria-label="test-author"
+        href="https://github.com/test-author"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="test-author"
+          class="rounded-full border-solid border-4 border-purple mb-6"
+          data-nimg="1"
+          decoding="async"
+          height="55"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fgithub.com%2Ftest-author.png%3Fsize%3D55&w=128&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fgithub.com%2Ftest-author.png%3Fsize%3D55&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fgithub.com%2Ftest-author.png%3Fsize%3D55&w=128&q=75 2x"
+          style="color: transparent;"
+          width="55"
+        />
+      </a>
+      <a
+        aria-label="another-test-author"
+        href="https://github.com/another-test-author"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="another-test-author"
+          class="rounded-full border-solid border-4 border-purple mb-6"
+          data-nimg="1"
+          decoding="async"
+          height="55"
+          loading="lazy"
+          src="/_next/image?url=https%3A%2F%2Fgithub.com%2Fanother-test-author.png%3Fsize%3D55&w=128&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fgithub.com%2Fanother-test-author.png%3Fsize%3D55&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fgithub.com%2Fanother-test-author.png%3Fsize%3D55&w=128&q=75 2x"
+          style="color: transparent;"
+          width="55"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
