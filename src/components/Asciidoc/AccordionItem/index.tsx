@@ -30,9 +30,9 @@ const AccordionItem = ({ title, children }: AccordionItemProps) => {
           >
             <span>{title}</span>
             {isOpen ? (
-              <CiCircleMinus size={45} strokeWidth={0.1} />
+              <CiCircleMinus size={45} strokeWidth={0.1} data-testid="minus-icon" />
             ) : (
-              <CiCirclePlus size={45} strokeWidth={0.1} />
+              <CiCirclePlus size={45} strokeWidth={0.1} data-testid="plus-icon" />
             )}
           </button>
         </h2>

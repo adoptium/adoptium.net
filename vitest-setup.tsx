@@ -1,9 +1,12 @@
 import React from 'react';
 import { vi, expect } from 'vitest';
 import * as matchers from 'vitest-axe/matchers';
+import * as jestDomMatchers from '@testing-library/jest-dom/matchers';
 
 // This explicitly adds the accessibility matchers to Vitest
 expect.extend(matchers);
+// This extends Vitest's expect with Jest-DOM matchers
+expect.extend(jestDomMatchers);
 
 // Mock GSAP and ScrollTrigger
 vi.mock('gsap', () => {

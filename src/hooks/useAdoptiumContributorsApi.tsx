@@ -195,11 +195,40 @@ export function useAdoptiumContributorsApi(
   const [contributor, setContributor] = useState<Contributor | null>(null)
   
   useEffect(() => {
-    if (isVisible && typeof window !== 'undefined') {
-      (async () => {
-        setContributor(await fetchRandomContributor())
-      })()
+    // Check for window first to prevent issues in test environments
+    if (typeof window === 'undefined') {
+      return;
     }
+
+    // Only proceed if the component is visible
+    if (!isVisible) {
+      return;
+    }
+    
+    // Create an abort controller to handle cleanup
+    const abortController = new AbortController();
+    
+    // Fetch data with proper cleanup handling
+    (async () => {
+      try {
+        const data = await fetchRandomContributor();
+        
+        // Check if the request was aborted before updating state
+        if (!abortController.signal.aborted) {
+          setContributor(data);
+        }
+      } catch (error) {
+        // Only log error if not aborted
+        if (!abortController.signal.aborted && error instanceof Error) {
+          console.error('Error fetching contributor:', error.message);
+        }
+      }
+    })();
+    
+    // Cleanup function to prevent state updates after unmount
+    return () => {
+      abortController.abort();
+    };
   }, [isVisible])
 
   return contributor
