@@ -98,7 +98,7 @@ export default async function Blog(
     }>
   }
 ) {
-  const { slug, year, month } = await params;
+  const { slug } = await params;
   const post = getBlogPosts().find((post) => post.slug === slug)
 
   if (!post) {
@@ -106,7 +106,7 @@ export default async function Blog(
   }
 
   const author = AuthorData[post.metadata.author as keyof typeof AuthorData]
-  const postURL = `${metadata.siteUrl}/news/${year}/${month}/${slug}`
+  const postURL = `${metadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`
 
   return (
     <section>
@@ -123,7 +123,7 @@ export default async function Blog(
             image: post.metadata.featuredImage
               ? `${metadata.siteUrl}${post.metadata.featuredImage}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${metadata.siteUrl}/news/${year}/${month}/${post.slug}`,
+            url: postURL,
             author: {
               '@type': 'Person',
               name: author.name,

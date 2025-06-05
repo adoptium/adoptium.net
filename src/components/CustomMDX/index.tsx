@@ -157,11 +157,10 @@ export function CustomMDX(props: MDXProps) {
     <MDXRemote
       source={props.source}
       options={mdxOptions}
-      // @ts-expect-error - MDXRemote expects a string, but we pass a ReactNode
-      components={{
-        ...components,
-        ...(props.components || {}),
-      }}
+      components={
+        // eslint-disable-next-line
+        { ...components, ...(props.components || {}) } as any
+      }
     />
   );
 }

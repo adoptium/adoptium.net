@@ -45,7 +45,7 @@ interface ShareButtonProps {
 const ShareButton: React.FC<ShareButtonProps> = props => {
   const { location, siteMetadata, post } = props
   const twitter = [siteMetadata.social.twitter]
-  const url = siteMetadata.siteUrl + location
+  const url = location
 
   return (
     <div id="share-buttons">

@@ -35,11 +35,6 @@ function parseFrontmatter(fileContent: string) {
   if (data.tags && !Array.isArray(data.tags)) {
     data.tags = [data.tags]
   }
-  
-  // Handle mapping of date to publishedAt for compatibility
-  if (data.date && !data.publishedAt) {
-    data.publishedAt = data.date
-  }
 
   return { metadata: data as Metadata, content }
 }
@@ -97,7 +92,7 @@ function getMDXData(dir: string) {
   return mdxFiles.map((file) => {
     const { metadata, content } = readMDXFile(file.path)
 
-    // Parse the date components from publishedAt for URL construction
+    // Parse the date components from date for URL construction
     let urlParts = { year: '', month: '' };
     // Default to current date if date is missing
     const date = metadata.date || new Date().toISOString().slice(0, 10);
