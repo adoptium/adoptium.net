@@ -20,6 +20,16 @@ import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
 // Base directory for AsciiDoc content - same as in asciidocService.ts
 const CONTENT_BASE_DIR = path.join(process.cwd(), 'content/asciidoc-pages');
 
+export async function generateStaticParams() {
+    const paths = await getAllAsciidocPaths();
+
+    return paths.map(({ slug, locale }) => ({
+        slug: slug.split('/'),
+        locale,
+    }));
+}
+
+
 export async function generateMetadata(
     { params }: { params: Promise<{ slug: string[]; locale: string }> }
 ): Promise<Metadata> {
@@ -38,15 +48,6 @@ export async function generateMetadata(
         description: asciidoc.metadata.description ||
             `${asciidoc.metadata.title} - Eclipse Adoptium documentation`,
     };
-}
-
-export async function generateStaticParams() {
-    const paths = await getAllAsciidocPaths();
-
-    return paths.map(({ slug, locale }) => ({
-        slug: slug.split('/'),
-        locale,
-    }));
 }
 
 export default async function AsciidocPage({ params }: {

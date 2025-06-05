@@ -78,7 +78,7 @@ export async function getAllAsciidocPaths() {
         // Skip _partials directories
         traverseDirectory(path.join(dir, entry.name), [...currentPath, entry.name]);
       } else if (entry.isFile() && entry.name.endsWith('.adoc')) {
-        const match = entry.name.match(/^index(?:\.([\\w-]+))?\\.adoc$/);
+        const match = entry.name.match(/^index(?:\.([a-zA-Z0-9_-]+))?\.adoc$/);
         
         if (match) {
           const locale = match[1] || 'en';
