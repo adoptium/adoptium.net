@@ -11,8 +11,6 @@ Object.assign(navigator, {
   },
 })
 
-const navigatorClipboardSpy = vi.spyOn(navigator.clipboard, "writeText")
-
 afterEach(() => {
   vi.clearAllMocks()
 })

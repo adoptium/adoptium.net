@@ -37,7 +37,7 @@
 }
 
 .shell-box code::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 20%);
 }
 
 .shell-box code > span.install-text-command {
