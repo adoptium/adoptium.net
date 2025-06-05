@@ -113,3 +113,18 @@ body {
 .underline {
   text-underline-offset: 1em;
 }
+
+.adopt-demo-container {
+  position: relative;
+}
+
+.adopt-demo {
+  background: #1f272a;
+  border-radius: 0.4rem;
+  box-shadow: 5px 10px 50px rgba(0, 0, 0, 25%);
+  color: #fff;
+  height: 450px;
+  max-width: 832px;
+  width: 90vw;
+  z-index: 2;
+}

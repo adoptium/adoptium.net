@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
+import fs from 'fs';
+import path from 'path';
 import { redirect } from '@/i18n/navigation';
 import { getAsciidocContent, getAllAsciidocPaths } from '@/services/asciidocService';
 import PageHeader from '@/components/Common/PageHeader';
@@ -10,8 +12,7 @@ import AuthorList from '@/components/Asciidoc/AuthorList';
 import EditLink from '@/components/Asciidoc/EditLink';
 import ContactUs from '@/components/ContactUs';
 import SyntaxHighlighter from '@/components/SyntaxHighlighter';
-import fs from 'fs';
-import path from 'path';
+import InstallTabs from '@/components/InstallTabs';
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
@@ -146,13 +147,13 @@ export default async function AsciidocPage({ params }: {
                                 />
                             </div>
                         )} */}
-                        {/* {slug === "/installation/" && (
-                            <section className="adopt-demo-container hide-on-mobile my-5">
+                        {slug === "installation" && (
+                            <section className="adopt-demo-container hidden md:block my-5">
                                 <div className="adopt-demo mx-auto">
                                     <InstallTabs />
                                 </div>
                             </section>
-                        )} */}
+                        )}
                         <div className="asciidoc-content prose prose-invert lg:prose-lg max-w-none">
                             <AsciiDocFormatter content={asciidoc.content} />
                             <SyntaxHighlighter />

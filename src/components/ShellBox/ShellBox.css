@@ -1,0 +1,83 @@
+.shell-box {
+  --mono: consolas, monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--mono);
+  padding: 0 0 1.8rem 1.6rem;
+  position: relative;
+  overflow: visible;
+}
+
+.shell-box code {
+  color: #ed5393;
+  font-family: inherit;
+  line-height: 30px;
+  overflow-x: hidden;
+  position: absolute;
+  top: 30px;
+  width: calc(100% - 20px);
+  text-align: left;
+}
+
+.shell-box code:hover {
+  overflow-x: auto;
+}
+
+.shell-box code::-webkit-scrollbar {
+  height: 0.5em;
+}
+
+.shell-box code::-webkit-scrollbar,
+.shell-box code::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.shell-box code::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.shell-box code > span.install-text-command {
+  color: #fff;
+}
+
+.shell-box code > span.function {
+  color: #d07912;
+}
+
+.shell-box .shell-box-top {
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.shell-box .shell-box-top span,
+.shell-box .shell-box-top button {
+  align-items: center;
+  display: inherit;
+  font-size: 1.6rem;
+  height: 23px;
+  justify-content: center;
+  width: 86px;
+}
+
+.shell-box .shell-box-top span {
+  background-color: #d9e1e4;
+  border-radius: 0 0.3rem 0.3rem;
+  color: #2c3437;
+  margin-left: 1.6rem;
+}
+
+.shell-box .shell-box-top button {
+  background-color: #c5e5b4;
+  border-radius: 0 0.3rem 0.3rem;
+  border-width: 0;
+}
+
+.shell-box .shell-box-top button i {
+  padding: 0;
+}
