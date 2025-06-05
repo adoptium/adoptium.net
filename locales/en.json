@@ -88,5 +88,18 @@
       "title": "Become a Member",
       "description": "Join us shaping the future of Eclipse Adoptium"
     }
+  },
+  "AuthorList": {
+    "documentation-authors": "Documentation Authors"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "Help us make these docs great!",
+    "all-adoptium-docs-are-open-source": "All Adoptium docs are open source. See something that's wrong or unclear?",
+    "edit-this-page": "Edit this page"
+  },
+  "Asciidoc": {
+    "table-of-contents": "Table of Contents",
+    "warn-default-locale": "This page is the <englishVersionLink>English version</englishVersionLink> because it is not available in your language. Please help us by translating this page into your language. See our <translationGuideLink>translation guide</translationGuideLink> for more information.",
+    "warn-outdated": "This localized page is based on a <previousEnglishVersionLink>previous version of the English page</previousEnglishVersionLink> and might be inaccurate. Please help us by updating this page to match the <lastEnglishVersionLink>latest version of the English page</lastEnglishVersionLink>. See our <translationGuideLink>translation guide</translationGuideLink> for more information."
   }
 }

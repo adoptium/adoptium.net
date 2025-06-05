@@ -1,4 +1,4 @@
-= Frequently Asked Questions
+= Häufig gestellte Fragen
 :page-authors: gdams, HanSolo, sw-fox, aumann, hendrikebbers, xavierfacq
 :page-based-on: 7ca352f4545cad6fd03722c9206d31da76063d4a
 

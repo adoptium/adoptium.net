@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AsciiDocFormatter > renders basic HTML content correctly 1`] = `
+<div>
+  <div
+    class="prose prose-invert lg:prose-lg max-w-none"
+  >
+    <p>
+      Hello world
+    </p>
+  </div>
+</div>
+`;

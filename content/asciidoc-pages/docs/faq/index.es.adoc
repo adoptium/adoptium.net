@@ -1,4 +1,4 @@
-= Frequently Asked Questions
+= Preguntas Frecuentes
 :page-authors: eddumelendez, czelabueno, jdluna, raulmj, tellison, gdams, hendrikebbers, xavierfacq
 :page-based-on: 50dc526fadcdd7dd03b386f112ac1ab4043bb554
 

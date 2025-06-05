@@ -36,7 +36,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
         sizes="100vw"
       />
       
-      <div className="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center md:bg-transparent bg-white rounded-3xl md:backdrop-blur-0 backdrop-blur-12">
+      <div className="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12">
         <Image
           className="!mb-0"
           src="/images/icons/message.svg"
