@@ -1,7 +1,6 @@
-
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import fs from 'fs';
 import path from 'path';
 import { redirect } from '@/i18n/navigation';
@@ -13,6 +12,7 @@ import EditLink from '@/components/Asciidoc/EditLink';
 import ContactUs from '@/components/ContactUs';
 import SyntaxHighlighter from '@/components/SyntaxHighlighter';
 import InstallTabs from '@/components/InstallTabs';
+import LinkText from '@/components/LinkText';
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
@@ -82,6 +82,20 @@ export default async function AsciidocPage({ params }: {
         notFound();
     }
 
+    const t = await getTranslations('Asciidoc');
+    
+    // Determine if we should display the default locale warning
+    // Show warning when:
+    // 1. The current locale is not English ('en') or British English ('en-GB')
+    // 2. The page content is in English (not available in user's locale)
+    const displayDefaultLocaleWarning = locale !== 'en' && 
+                                       locale !== 'en-GB' && 
+                                       !asciidoc.availableLocales.includes(locale);
+    
+    // Get the relative path for the current document
+    // This is used in the warning message for the GitHub edit link
+    const relativePath = `${asciidoc.slug}/${path.basename(asciidoc.path)}`;
+
     return (
         <div>
             <PageHeader
@@ -95,28 +109,42 @@ export default async function AsciidocPage({ params }: {
                         {/* Leaving space for a table of contents (side bar) */}
                     </div>
                     <div className="asciidoc col-lg-6 col-md-12">
-                        {/* {displayDefaultLocaleWarning && (
-                            <div className="alert alert-warning">
-                                <i className="fas fa-exclamation-triangle pe-1" />
-                                <Trans
-                                    i18nKey="asciidoc.template.warn.default.locale"
-                                    defaults="This page is the <englishVersionLink>English version</englishVersionLink> because it is not available in your language. Please help us by translating this page into your language. See our <translationGuideLink>translation guide</translationGuideLink> for more information."
-                                    components={{
-                                        englishVersionLink: (
-                                            <LinkText
-                                                href={`https://github.com/adoptium/adoptium.net/blob/main/content/asciidoc-pages/${relativePath.replace(
-                                                    `.${locale}`,
-                                                    "",
-                                                )}`}
-                                            />
-                                        ),
-                                        translationGuideLink: (
-                                            <LinkText href="https://github.com/adoptium/adoptium.net/tree/main/content/asciidoc-pages#localising-documentation" />
-                                        ),
-                                    }}
-                                />
+                        {displayDefaultLocaleWarning && (
+                            <div className="mb-6 bg-purple-950/40 border-l-4 border-purple-400 p-4 rounded-md shadow-sm">
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-5 w-5 text-purple-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div className="ml-3">
+                                        <p className="text-sm text-gray-300">
+                                            {t.rich('warn-default-locale', {
+                                                englishVersionLink: (chunks: React.ReactNode) => (
+                                                    <span className="font-medium text-purple-300 hover:text-purple-200">
+                                                        <LinkText
+                                                            href={`https://github.com/adoptium/adoptium.net/blob/main/content/asciidoc-pages/${relativePath.replace(
+                                                                `.${locale}`,
+                                                                "",
+                                                            )}`}
+                                                        >
+                                                            {chunks}
+                                                        </LinkText>
+                                                    </span>
+                                                ),
+                                                translationGuideLink: (chunks: React.ReactNode) => (
+                                                    <span className="font-medium text-purple-300 hover:text-purple-200">
+                                                        <LinkText href="https://github.com/adoptium/adoptium.net/tree/main/content/asciidoc-pages#localising-documentation">
+                                                            {chunks}
+                                                        </LinkText>
+                                                    </span>
+                                                ),
+                                            })}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        )} */}
+                        )}
                         {/* {displayOutdatedWarning && (
                             <div className="alert alert-warning">
                                 <i className="fas fa-exclamation-triangle pe-1" />
@@ -160,7 +188,7 @@ export default async function AsciidocPage({ params }: {
                         </div>
                         <div className="h-px my-5 border border-gray-700"></div>
                         <AuthorList authors={asciidoc.metadata.authors} />
-                        <EditLink relativePath={`${asciidoc.slug}/${asciidoc.path.split('/').pop()}`} />
+                        <EditLink relativePath={relativePath} />
                     </div>
                     <div className="col-lg-3 hide-on-mobile"></div>
                 </div>

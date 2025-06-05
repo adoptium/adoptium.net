@@ -949,12 +949,12 @@ exports[`Index page > renders correctly 1`] = `
         >
           <div
             class="progress-fill w-full h-full"
-            style="transform: scaleY(1);"
+            style="transform: scaleY(0);"
           />
         </div>
         <div
           class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
-          style="top: 100%;"
+          style="top: 0%;"
         />
         <div
           class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"

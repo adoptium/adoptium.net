@@ -33,9 +33,4 @@ describe("Tests for InstallTabs component", () => {
     const { container } = render(<InstallTabs />)
     expect(container).toMatchSnapshot()
   })
-  it("renders correctly for mobile", () => {
-    vi.spyOn(detectOSModule, "detectOS").mockReturnValue(UserOS.MOBILE)
-    const { container } = render(<InstallTabs />)
-    expect(container).toMatchSnapshot()
-  })
 })

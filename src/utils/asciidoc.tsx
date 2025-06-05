@@ -1,6 +1,7 @@
 import Asciidoctor from '@asciidoctor/core';
 import fs from 'fs';
 import path from 'path';
+import { decode } from 'html-entities';
 
 // Define interfaces for Asciidoctor types
 interface AsciidoctorDocument {
@@ -125,32 +126,7 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
  * Decode HTML entities in a string
  */
 export function decodeHtmlEntities(text: string): string {
-  // Create temporary DOM element to decode entities
-  if (typeof document !== 'undefined') {
-    // Client-side
-    const textArea = document.createElement('textarea');
-    textArea.innerHTML = text;
-    return textArea.value;
-  } else {
-    // Server-side
-    return text
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, "'")
-      .replace(/&#x27;/g, "'")
-      .replace(/&#x2F;/g, '/')
-      .replace(/&#32;/g, ' ')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&#8482;/g, '™')
-      .replace(/&trade;/g, '™')
-      .replace(/&#174;/g, '®')
-      .replace(/&reg;/g, '®')
-      .replace(/&#169;/g, '©')
-      .replace(/&copy;/g, '©')
-      .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec));
-  }
+  return decode(text);
 }
 
 /**

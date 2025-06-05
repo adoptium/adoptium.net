@@ -28,5 +28,10 @@
     "title": "Alimentando a millones de usuarios en todo el mundo con Eclipse Temurin",
     "total-download-docker-pulls-ever": "Total de descargas/extracciones de Docker",
     "loading": "Cargando..."
+  },
+  "Asciidoc": {
+    "table-of-contents": "Tabla de Contenidos",
+    "warn-default-locale": "Esta página es la <englishVersionLink>versión en inglés</englishVersionLink> porque no está disponible en su idioma. Por favor, ayudenos traduciendo esta página a su idioma. Para más información, visite nuestra <translationGuideLink>guía de traducción</translationGuideLink>",
+    "warn-outdated": "La traducción de esta página está basada en una <previousEnglishVersionLink>versión anterior de la página en inglés</previousEnglishVersionLink> y puede no ser exacta. Por favor, ayúdenos actualizando esta página para que coincida con la <lastEnglishVersionLink>última versión de la pagina en inglés</lastEnglishVersionLink>. Para más información, visite nuestra <translationGuideLink>guía de traducción</translationGuideLink>."
   }
 }

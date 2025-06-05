@@ -5,24 +5,66 @@ import * as matchers from 'vitest-axe/matchers';
 // This explicitly adds the accessibility matchers to Vitest
 expect.extend(matchers);
 
+// Mock GSAP and ScrollTrigger
+vi.mock('gsap', () => {
+  const mockGsap = {
+    registerPlugin: vi.fn(),
+    to: vi.fn(),
+    from: vi.fn(),
+    fromTo: vi.fn(),
+    set: vi.fn(),
+    timeline: vi.fn(() => ({
+      to: vi.fn(),
+      from: vi.fn(),
+      fromTo: vi.fn(),
+      add: vi.fn(),
+    })),
+  };
+  
+  return {
+    gsap: mockGsap,
+    default: mockGsap,
+  };
+});
+
+// Create a mock for ScrollTrigger before other imports can use it
+const mockScrollTrigger = {
+  create: vi.fn(() => ({
+    kill: vi.fn(),
+    progress: 0,
+  })),
+  refresh: vi.fn(),
+  update: vi.fn(),
+  getAll: vi.fn(() => []),
+  killAll: vi.fn(),
+  addEventListener: vi.fn(),
+  removeEventListener: vi.fn(),
+};
+
+vi.mock('gsap/ScrollTrigger', () => {
+  return {
+    ScrollTrigger: mockScrollTrigger,
+  };
+});
+
 // Mock the useTranslations hook to return a simple text value with rich formatting support
 vi.mock('next-intl', () => ({
-    useTranslations: () => {
-        // Create a translator function with rich text support
-        const translator = (key: string) => "Text";
-        
-        // Add rich method to support rich text formatting with components
-        translator.rich = (key: string, options?: Record<string, any>) => {
-            if (options) {
-                return "Text";
-            }
-            return "Text";
-        };
-        
-        return translator;
-    },
-    // Add other exports that might be used in your app
-    NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  useTranslations: () => {
+    // Create a translator function with rich text support
+    const translator = (key: string) => "Text";
+
+    // Add rich method to support rich text formatting with components
+    translator.rich = (key: string, options?: Record<string, any>) => {
+      if (options) {
+        return "Text";
+      }
+      return "Text";
+    };
+
+    return translator;
+  },
+  // Add other exports that might be used in your app
+  NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
 type SwiperProps = {
@@ -42,7 +84,7 @@ vi.mock("swiper/react", () => ({
     // Use a callback ref to assign the mock swiper object to the ref
     React.useEffect(() => {
       if (ref && typeof ref !== "function") {
-        ;(ref as React.MutableRefObject<any>).current = { swiper: mockSwiper }
+        ; (ref as React.MutableRefObject<any>).current = { swiper: mockSwiper }
       }
     }, [ref])
 
@@ -57,7 +99,7 @@ class IntersectionObserverMock implements IntersectionObserver {
   root: Element | Document | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
-  
+
   disconnect = vi.fn()
   observe = vi.fn(() => {
     // When observe is called, trigger the callback with a mock entry
@@ -72,9 +114,9 @@ class IntersectionObserverMock implements IntersectionObserver {
         width: 0,
         x: 0,
         y: 0,
-        toJSON: () => {}
+        toJSON: () => { }
       } as DOMRectReadOnly;
-      
+
       const mockEntry = {
         isIntersecting: true,
         boundingClientRect: rect,
@@ -84,7 +126,7 @@ class IntersectionObserverMock implements IntersectionObserver {
         target: document.createElement('div'),
         time: Date.now(),
       } as IntersectionObserverEntry;
-      
+
       this.callback([mockEntry], this as unknown as IntersectionObserver);
     }
   })
@@ -108,10 +150,10 @@ global.fetch = vi.fn().mockImplementation((url) => {
       json: () => Promise.resolve({ version: '17.0.8+7' }),
     });
   }
-  
+
   // Mock response for download stats API
-  if (url === 'https://api.adoptium.net/v3/stats/downloads/total' || 
-      url.toString().includes('api.adoptium.net/v3/stats/downloads/total')) {
+  if (url === 'https://api.adoptium.net/v3/stats/downloads/total' ||
+    url.toString().includes('api.adoptium.net/v3/stats/downloads/total')) {
     return Promise.resolve({
       ok: true,
       json: () => Promise.resolve({
@@ -121,7 +163,7 @@ global.fetch = vi.fn().mockImplementation((url) => {
       }),
     });
   }
-  
+
   // Default mock response
   return Promise.resolve({
     ok: true,
@@ -133,23 +175,23 @@ global.fetch = vi.fn().mockImplementation((url) => {
  * fix: `matchMedia` not present, legacy browsers require a polyfill
  */
 global.matchMedia =
-    global.matchMedia ||
-    function (query) {
-        return {
-            matches: false,
-            media: query,
-            onchange: null,
-            // Legacy API
-            addListener: function () { },
-            removeListener: function () { },
-            // Modern API used by MUI v6
-            addEventListener: function () { },
-            removeEventListener: function () { },
-            dispatchEvent: function () {
-                return false;
-            },
-        };
-    }
+  global.matchMedia ||
+  function (query) {
+    return {
+      matches: false,
+      media: query,
+      onchange: null,
+      // Legacy API
+      addListener: function () { },
+      removeListener: function () { },
+      // Modern API used by MUI v6
+      addEventListener: function () { },
+      removeEventListener: function () { },
+      dispatchEvent: function () {
+        return false;
+      },
+    };
+  }
 
 /**
  * Mock localStorage

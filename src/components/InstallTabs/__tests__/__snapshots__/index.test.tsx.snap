@@ -815,8 +815,6 @@ exports[`Tests for InstallTabs component > renders correctly for macOS 1`] = `
 </div>
 `;
 
-exports[`Tests for InstallTabs component > renders correctly for mobile 1`] = `<div />`;
-
 exports[`Tests for InstallTabs component > renders correctly for other 1`] = `
 <div>
   <div

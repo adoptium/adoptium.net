@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import parse, { domToReact, HTMLReactParserOptions, Element, DOMNode } from "html-react-parser";
 import AccordionItem from "@/components/Asciidoc/AccordionItem";
 
@@ -11,6 +12,7 @@ interface AsciiDocFormatterProps {
 
 const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
   const isBrowser = typeof window !== "undefined";
+  const t = useTranslations("Asciidoc");
 
   const options: HTMLReactParserOptions = {
     replace: (node) => {
@@ -91,7 +93,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
                 <div className="flex items-center">
                   <i className="fa fa-list-ul mr-3 text-pink dark:text-purple-400" aria-hidden="true" />
                   <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
-                    Table of Contents
+                    {t('table-of-contents')}
                   </span>
                 </div>
                 <i className="fa fa-chevron-down text-pink dark:text-purple-400 group-open:rotate-180 transition-transform duration-300" aria-hidden="true" />

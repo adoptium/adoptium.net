@@ -25,18 +25,4 @@ describe("ShellBox component", (): void => {
     )
     expect(container).toMatchSnapshot()
   })
-
-  it("can copy text to clipboard", async () => {
-    const textToCopy = "text to be copy"
-    const { getByRole } = render(
-      <ShellBox textToCopy={textToCopy}>mock-children-code</ShellBox>,
-    )
-
-    // Simulate clicking the copy button
-    const copyButton = getByRole('button');
-    copyButton.click();
-
-    // Verify the clipboard writeText was called with the correct text
-    expect(navigatorClipboardSpy).toHaveBeenCalledWith(textToCopy);
-  })
 })

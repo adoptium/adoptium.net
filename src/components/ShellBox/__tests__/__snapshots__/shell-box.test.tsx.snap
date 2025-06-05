@@ -7,7 +7,15 @@ exports[`ShellBox component > renders correctly 1`] = `
   >
     <div
       class="shell-box-top"
-    />
+    >
+      <button
+        aria-label="Copy to clipboard"
+      >
+        <i
+          class="fa fa-copy"
+        />
+      </button>
+    </div>
     <code
       class="shell-box-code"
     >
