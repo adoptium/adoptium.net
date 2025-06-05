@@ -1,13 +1,33 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ProfilePicInline component > should render correctly - no profile pic found 1`] = `<div />`;
+exports[`ProfilePicInline component > should render correctly - no profile pic found 1`] = `
+<div>
+  <img
+    class="ml-2 mb-0 rounded-full"
+    data-nimg="1"
+    decoding="async"
+    height="30"
+    loading="lazy"
+    src="/_next/image?url=%2Fimages%2Fauthors%2Ffoo.jpg&w=64&q=75"
+    srcset="/_next/image?url=%2Fimages%2Fauthors%2Ffoo.jpg&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Ffoo.jpg&w=64&q=75 2x"
+    style="color: transparent;"
+    width="30"
+  />
+</div>
+`;
 
 exports[`ProfilePicInline component > should render correctly 1`] = `
 <div>
   <img
-    image="[object Object]"
-    stlye="[object Object]"
-    style="margin-left: 0.5rem; margin-bottom: 0px; min-width: 30px; border-radius: 100%;"
+    class="ml-2 mb-0 rounded-full"
+    data-nimg="1"
+    decoding="async"
+    height="30"
+    loading="lazy"
+    src="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=64&q=75"
+    srcset="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=64&q=75 2x"
+    style="color: transparent;"
+    width="30"
   />
 </div>
 `;

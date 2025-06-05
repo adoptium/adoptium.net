@@ -3,57 +3,100 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
+import { mdxOptions } from '@/utils/markdown'
 
-function Table({ data }) {
-  let headers = data.headers.map((header, index) => (
-    <th key={index}>{header}</th>
-  ))
-  let rows = data.rows.map((row, index) => (
-    <tr key={index}>
-      {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
-      ))}
-    </tr>
-  ))
-
+interface TableProps {
+  data: {
+    headers: string[]
+    rows: (string | number)[][]
+  }
+}
+const Table: React.FC<TableProps> = ({ data }) => {
   return (
     <table>
       <thead>
-        <tr>{headers}</tr>
+        <tr className="text-left">
+          {data.headers.map((header, idx) => (
+            <th key={idx}>{header}</th>
+          ))}
+        </tr>
       </thead>
-      <tbody>{rows}</tbody>
+      <tbody>
+        {data.rows.map((row, rowIdx) => (
+          <tr key={rowIdx}>
+            {row.map((cell, cellIdx) => (
+              <td key={cellIdx}>{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
     </table>
   )
 }
 
-function CustomLink(props) {
-  let href = props.href
+type CustomLinkProps = React.ComponentProps<'a'>
 
-  if (href.startsWith('/')) {
+const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
+  ({ href, children, ...props }, ref) => {
+    const hrefValue = href ?? ''
+
+    // Internal Next.js route
+    if (hrefValue.startsWith('/')) {
+      return (
+        <Link href={hrefValue} ref={ref} {...props}>
+          {children}
+        </Link>
+      )
+    }
+
+    // In-page anchor or no href
+    if (hrefValue.startsWith('#') || hrefValue === '') {
+      return (
+        <a ref={ref} {...props}>
+          {children}
+        </a>
+      )
+    }
+
+    // External link
     return (
-      <Link href={href} {...props}>
-        {props.children}
-      </Link>
+      <a
+        ref={ref}
+        href={hrefValue}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      >
+        {children}
+      </a>
     )
   }
+)
+CustomLink.displayName = 'CustomLink'
 
-  if (href.startsWith('#')) {
-    return <a {...props} />
-  }
-
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+interface ImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  [key: string]: unknown;
 }
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+function RoundedImage(props: ImageProps) {
+  return <Image className="rounded-lg" {...props} alt="blog image" />
 }
 
-function Code({ children, ...props }) {
-  let codeHTML = highlight(children)
+interface CodeProps {
+  children: string;
+  [key: string]: unknown;
+}
+
+function Code({ children, ...props }: CodeProps) {
+  const codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function slugify(str) {
+function slugify(str: string): string {
   return str
     .toString()
     .toLowerCase()
@@ -64,9 +107,13 @@ function slugify(str) {
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
-    let slug = slugify(children)
+function createHeading(level: number) {
+  interface HeadingProps {
+    children: string;
+  }
+
+  const Heading = ({ children }: HeadingProps) => {
+    const slug = slugify(children)
     return React.createElement(
       `h${level}`,
       { id: slug },
@@ -86,7 +133,7 @@ function createHeading(level) {
   return Heading
 }
 
-let components = {
+const components = {
   h1: createHeading(1),
   h2: createHeading(2),
   h3: createHeading(3),
@@ -97,13 +144,24 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+};
+
+// Define proper types for MDXRemote in RSC mode
+interface MDXProps {
+  source: string; // Content to be rendered
+  components?: Record<string, React.ComponentType<unknown>>; // Custom components
 }
 
-export function CustomMDX(props) {
+export function CustomMDX(props: MDXProps) {
   return (
     <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
+      source={props.source}
+      options={mdxOptions}
+      // @ts-expect-error - MDXRemote expects a string, but we pass a ReactNode
+      components={{
+        ...components,
+        ...(props.components || {}),
+      }}
     />
-  )
+  );
 }

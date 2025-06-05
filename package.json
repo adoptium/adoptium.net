@@ -33,9 +33,14 @@
     "react-slick": "^0.30.3",
     "react-tabs": "^6.1.0",
     "react-world-flags": "^1.6.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "slick-carousel": "^1.8.1",
     "sugar-high": "^0.9.3",
-    "swiper": "^11.2.8"
+    "swiper": "^11.2.8",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

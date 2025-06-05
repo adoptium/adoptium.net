@@ -6,6 +6,7 @@ import { CustomMDX } from '@/components/CustomMDX'
 import Byline from '@/components/News/Byline'
 import ShareButton from '@/components/News/ShareButton'
 import Tags from '@/components/News/Tags'
+import SharePost from '@/components/News/SharePost'
 
 // TODO Hardcoded metadata for now, perhaps we could improve this?
 const metadata = {
@@ -16,14 +17,14 @@ const metadata = {
 }
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts()
+  const posts = getBlogPosts()
 
   return posts.map((post) => {
     // Extract year and month from date format: "2025-05-15"
     // Default to current date if date is missing
     const date = post.metadata.date || new Date().toISOString().slice(0, 10);
     const [year, month] = date.split('-');
-    
+
     return {
       year,
       month,
@@ -32,29 +33,35 @@ export async function generateStaticParams() {
   })
 }
 
-export async function generateMetadata({ params }: { params: { slug: string, year: string, month: string, locale: string } }) {
+export async function generateMetadata(
+  { params }: {
+    params: Promise<{
+      slug: string
+      year: string
+      month: string
+      locale: string
+    }>
+  }
+) {
   const { slug } = await params;
-  let post = getBlogPosts().find((post) => post.slug === slug)
+  const post = getBlogPosts().find((post) => post.slug === slug)
   if (!post) {
     return
   }
 
-  let {
+  const {
     title,
-    date: publishedTime,
+    date: date,
     description: description,
     featuredImage,
   } = post.metadata
-  
-  // Default publishedTime to current date if missing
-  publishedTime = publishedTime || new Date().toISOString().slice(0, 10);
 
-  let ogImage = featuredImage
+  const ogImage = featuredImage
     ? featuredImage
     : `${metadata.siteUrl}/og?title=${encodeURIComponent(title)}`
 
-  // Extract year and month from publishedAt
-  const [year, month] = publishedTime.split('-');
+  // Extract year and month from date
+  const [year, month] = date.split('-');
   const postURL = `${metadata.siteUrl}/news/${year}/${month}/${post.slug}`;
 
   return {
@@ -64,7 +71,7 @@ export async function generateMetadata({ params }: { params: { slug: string, yea
       title,
       description,
       type: 'article',
-      publishedTime,
+      publishedTime: date,
       url: postURL,
       images: [
         {
@@ -81,9 +88,18 @@ export async function generateMetadata({ params }: { params: { slug: string, yea
   }
 }
 
-export default async function Blog({ params }: { params: { slug: string, year: string, month: string, locale: string } }) {
+export default async function Blog(
+  { params }: {
+    params: Promise<{
+      slug: string
+      year: string
+      month: string
+      locale: string
+    }>
+  }
+) {
   const { slug, year, month } = await params;
-  let post = getBlogPosts().find((post) => post.slug === slug)
+  const post = getBlogPosts().find((post) => post.slug === slug)
 
   if (!post) {
     notFound()
@@ -155,7 +171,7 @@ export default async function Blog({ params }: { params: { slug: string, year: s
             </article>
             <Tags tags={post.metadata.tags} />
             {/* <Comments /> */}
-            {/* <SharePost /> */}
+            <SharePost />
           </article>
 
           <div>

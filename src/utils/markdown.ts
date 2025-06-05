@@ -1,6 +1,22 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
+
+/**
+ * MDX options configuration for next-mdx-remote
+ * This adds GitHub Flavored Markdown support (tables, task lists, strikethrough, etc)
+ */
+export const mdxOptions = {
+  mdxOptions: {
+    remarkPlugins: [remarkGfm],
+    // You can add more plugins here if needed
+  }
+};
 
 type Metadata = {
   title: string
@@ -60,15 +76,27 @@ function getMDXFiles(dir: string): MDXFile[] {
 }
 
 function readMDXFile(filePath: string) {
-  let rawContent = fs.readFileSync(filePath, 'utf-8')
+  const rawContent = fs.readFileSync(filePath, 'utf-8')
   return parseFrontmatter(rawContent)
 }
 
+// Process markdown content with GitHub Flavored Markdown support
+export async function processMarkdown(content: string): Promise<string> {
+  const result = await unified()
+    .use(remarkParse) // Parse markdown content
+    .use(remarkGfm)   // Add GitHub Flavored Markdown support (tables, strikethrough, task lists, etc.)
+    .use(remarkRehype) // Convert to HTML
+    .use(rehypeStringify) // Stringify HTML
+    .process(content)
+
+  return result.toString()
+}
+
 function getMDXData(dir: string) {
-  let mdxFiles = getMDXFiles(dir)
+  const mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
-    let { metadata, content } = readMDXFile(file.path)
-    
+    const { metadata, content } = readMDXFile(file.path)
+
     // Parse the date components from publishedAt for URL construction
     let urlParts = { year: '', month: '' };
     // Default to current date if date is missing
@@ -89,8 +117,8 @@ export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), 'content', 'blog'))
 }
 
-export function formatDate(date: string = '', includeRelative = false) {
-  let targetDate = date ? new Date(date) : new Date();
+export function formatDate(date: string = '') {
+  const targetDate = date ? new Date(date) : new Date();
   return targetDate.toLocaleDateString('en-US', {
     month: 'long',
     day: '2-digit',
