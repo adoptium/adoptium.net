@@ -14,9 +14,6 @@ import SyntaxHighlighter from '@/components/SyntaxHighlighter';
 import InstallTabs from '@/components/InstallTabs';
 import LinkText from '@/components/LinkText';
 
-import "@fortawesome/fontawesome-free/css/all.min.css"
-import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
-
 // Base directory for AsciiDoc content - same as in asciidocService.ts
 const CONTENT_BASE_DIR = path.join(process.cwd(), 'content/asciidoc-pages');
 

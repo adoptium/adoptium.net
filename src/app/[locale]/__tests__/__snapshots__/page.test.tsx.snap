@@ -69,724 +69,161 @@ exports[`Index page > renders correctly 1`] = `
       Temurin is trusted by millions of developers
     </h2>
     <div
-      class="slick-slider mt-6 slick-initialized"
-      dir="ltr"
+      class="mt-6"
+      data-testid="react-slick-mock"
     >
-      <div
-        class="slick-list"
+      <span
+        class="px-4"
       >
-        <div
-          class="slick-track"
-          style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
-        >
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-6"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Michelin"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-michelin-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-5"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Microsoft"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-microsoft-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-4"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="MongoDB"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-mongodb-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-3"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Red Hat"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-2"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Societe Generale"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-societe-generale-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="-1"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="T-Systems"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-t-systems-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active slick-current"
-            data-index="0"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Arm"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-arm-white.svg"
-                  style="color: transparent; padding: 1em;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="1"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Atlassian"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-atlassian-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="2"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Dynatrace"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
-                  srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="3"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Mercedes-Benz Tech Innovation GmbH"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
-                  srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="4"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Michelin"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-michelin-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="false"
-            class="slick-slide slick-active"
-            data-index="5"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Microsoft"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-microsoft-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="6"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="MongoDB"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-mongodb-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="7"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Red Hat"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="8"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Societe Generale"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-societe-generale-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide"
-            data-index="9"
-            style="outline: none; width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="T-Systems"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-t-systems-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="10"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Arm"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-arm-white.svg"
-                  style="color: transparent; padding: 1em;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="11"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Atlassian"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-atlassian-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="12"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Dynatrace"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
-                  srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="13"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Mercedes-Benz Tech Innovation GmbH"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
-                  srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="14"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Michelin"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-michelin-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="15"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Microsoft"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-microsoft-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="16"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="MongoDB"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-mongodb-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="17"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Red Hat"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="18"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="Societe Generale"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-societe-generale-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            aria-hidden="true"
-            class="slick-slide slick-cloned"
-            data-index="19"
-            style="width: 0px;"
-            tabindex="-1"
-          >
-            <div>
-              <span
-                class="px-4"
-                style="width: 100%; display: inline-block;"
-                tabindex="-1"
-              >
-                <img
-                  alt="T-Systems"
-                  class="h-[100px] w-auto object-contain mx-auto"
-                  data-nimg="1"
-                  decoding="async"
-                  height="100"
-                  loading="lazy"
-                  src="/images/adopters/logo-t-systems-white.svg"
-                  style="color: transparent; padding: 0px;"
-                  width="200"
-                />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+        <img
+          alt="Arm"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-arm-white.svg"
+          style="color: transparent; padding: 1em;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Atlassian"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-atlassian-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Dynatrace"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Mercedes-Benz Tech Innovation GmbH"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Michelin"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-michelin-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Microsoft"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-microsoft-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="MongoDB"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-mongodb-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Red Hat"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Societe Generale"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-societe-generale-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="T-Systems"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-t-systems-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
     </div>
   </div>
   <div

@@ -20,7 +20,7 @@ vi.mock('gsap', () => {
       add: vi.fn(),
     })),
   };
-  
+
   return {
     gsap: mockGsap,
     default: mockGsap,
@@ -252,6 +252,32 @@ if (typeof HTMLCanvasElement !== 'undefined') {
     clip: vi.fn(),
   }));
 }
+
+/**
+ * Mock for react-slick to avoid "window is not defined" errors in tests
+ */
+vi.mock('react-slick', () => {
+  const Slider = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+    return <div data-testid="react-slick-mock" className={className || ''}>{children}</div>
+  };
+
+  Slider.defaultProps = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  return {
+    __esModule: true,
+    default: Slider
+  };
+});
+
+// Mock slick-carousel CSS imports that might be required by components
+vi.mock('slick-carousel/slick/slick.css', () => ({}));
+vi.mock('slick-carousel/slick/slick-theme.css', () => ({}));
 
 // Export everything from testing-library/react
 export * from '@testing-library/react';

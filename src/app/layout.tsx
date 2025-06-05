@@ -1,4 +1,6 @@
 import './globals.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import '@fortawesome/fontawesome-free/css/v4-shims.min.css'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
 import Script from 'next/script'
