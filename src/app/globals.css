@@ -3,6 +3,7 @@
 @import "tailwindcss";
 @import "prism-themes/themes/prism-shades-of-purple.css";
 @plugin "@tailwindcss/typography";
+
 @layer utilities {
   .bg-temurin-hero {
     background-image: url('/images/backgrounds/temurin-hero-img.png');

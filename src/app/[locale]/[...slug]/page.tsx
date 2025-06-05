@@ -118,7 +118,7 @@ export default async function AsciidocPage({ params }: {
                                         </svg>
                                     </div>
                                     <div className="ml-3">
-                                        <p className="text-sm text-gray-300">
+                                        <div className="text-sm text-gray-300">
                                             {t.rich('warn-default-locale', {
                                                 englishVersionLink: (chunks: React.ReactNode) => (
                                                     <span className="font-medium text-purple-300 hover:text-purple-200">
@@ -140,7 +140,7 @@ export default async function AsciidocPage({ params }: {
                                                     </span>
                                                 ),
                                             })}
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
