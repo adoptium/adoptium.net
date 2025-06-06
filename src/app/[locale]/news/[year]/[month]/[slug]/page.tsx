@@ -61,13 +61,11 @@ export async function generateMetadata(
 
   // Extract year and month from date
   const [year, month] = date.split('-');
-
   const postURL = `${metadata.siteUrl}/news/${year}/${month}/${post.slug}`;
 
   const ogImage = featuredImage
     ? featuredImage
     : `/news/${year}/${month}/${post.slug}/opengraph-image`
-
 
   return {
     title,

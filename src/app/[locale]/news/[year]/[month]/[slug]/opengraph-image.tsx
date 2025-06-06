@@ -1,12 +1,10 @@
 import { ImageResponse } from 'next/og'
 import { getBlogPosts } from '@/utils/markdown'
 import AuthorData from "@/data/authors.json"
-import fs from 'fs'
-import path from 'path'
 
-const backgroundImagePath = path.join(process.cwd(), 'src/app/[locale]/news/blog-background.png')
-const backgroundImage = fs.readFileSync(backgroundImagePath)
-const backgroundImageBase64 = `data:image/png;base64,${backgroundImage.toString('base64')}`
+const websiteURL = process.env.NODE_ENV === 'production'
+    ? process.env.DEPLOY_URL
+    : 'http://localhost:3000'
 
 // Output size
 export const size = {
@@ -51,7 +49,7 @@ export default async function Image({
           backgroundColor: '#0E002A',
 
           // Background image settings:
-          backgroundImage: `url(${backgroundImageBase64})`,
+          backgroundImage: `url(${websiteURL}/images/blog/blog-background.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
