@@ -2,6 +2,7 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { formatDate } from "@/utils/markdown"
+import { sanitizeString } from "@/utils/sanitize"
 
 interface EventCardProps {
     post: {
@@ -83,13 +84,29 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
 
                 <div className="mt-auto pt-4">
                     {isExternalLink ? (
-                        <a href={post.slug} target="_blank" rel="noopener noreferrer">
+                        <a 
+                            href={sanitizeString(post.slug)} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                                // Additional security check - only allow https URLs
+                                const url = post.slug || '';
+                                if (!url.startsWith('https://')) {
+                                    e.preventDefault();
+                                    console.error('Invalid URL scheme detected');
+                                }
+                            }}
+                        >
                             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block">
                                 Read More
                             </button>
                         </a>
                     ) : (
-                        <Link href={`/news/${post.year}/${post.month}/${post.slug}`}>
+                        <Link 
+                            href={{
+                                pathname: `/news/${sanitizeString(post.year)}/${sanitizeString(post.month)}/${sanitizeString(post.slug)}`,
+                            }}
+                        >
                             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block">
                                 Read More
                             </button>

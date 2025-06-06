@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { formatDate, getBlogPosts } from '@/utils/markdown'
+import { sanitizeObject } from '@/utils/sanitize'
 import AuthorData from "@/data/authors.json"
 import { PinkIcon } from "@/components/Common/Icon"
 import { CustomMDX } from '@/components/CustomMDX'
@@ -108,27 +109,33 @@ export default async function Blog(
   const author = AuthorData[post.metadata.author as keyof typeof AuthorData]
   const postURL = `${metadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`
 
+  // Create JSON-LD schema with potentially unsafe user content
+  const jsonLdSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.metadata.title,
+    datePublished: post.metadata.date || new Date().toISOString().slice(0, 10),
+    description: post.metadata.description,
+    image: post.metadata.featuredImage
+      ? `${metadata.siteUrl}${post.metadata.featuredImage}`
+      : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+    url: postURL,
+    author: {
+      '@type': 'Person',
+      name: author?.name || 'Unknown Author',
+    },
+  };
+
+  // Sanitize the schema to prevent XSS
+  const sanitizedJsonLd = sanitizeObject(jsonLdSchema);
+
   return (
     <section>
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.metadata.title,
-            datePublished: post.metadata.date || new Date().toISOString().slice(0, 10),
-            description: post.metadata.description,
-            image: post.metadata.featuredImage
-              ? `${metadata.siteUrl}${post.metadata.featuredImage}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: postURL,
-            author: {
-              '@type': 'Person',
-              name: author.name,
-            },
-          }),
+          __html: JSON.stringify(sanitizedJsonLd),
         }}
       />
       <div className="pt-48 pb-12">
