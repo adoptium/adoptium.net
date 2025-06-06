@@ -96,7 +96,7 @@ function getMDXData(dir: string) {
     let urlParts = { year: '', month: '' };
     // Default to current date if date is missing
     const date = metadata.date || new Date().toISOString().slice(0, 10);
-    const [year, month] = date.split('-');
+    const [year = '', month = ''] = date.split('-');
     urlParts = { year, month };
     
     return {

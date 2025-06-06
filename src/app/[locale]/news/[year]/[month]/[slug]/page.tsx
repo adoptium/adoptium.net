@@ -24,12 +24,13 @@ export async function generateStaticParams() {
     // Extract year and month from date format: "2025-05-15"
     // Default to current date if date is missing
     const date = post.metadata.date || new Date().toISOString().slice(0, 10);
-    const [year, month] = date.split('-');
+    const [year = "", month = ""] = date.split('-');
 
     return {
       year,
       month,
-      slug: post.slug,
+      slug: post.slug || "",
+      locale: "en" // Default locale
     };
   })
 }
@@ -99,15 +100,19 @@ export default async function Blog(
     }>
   }
 ) {
-  const { slug } = await params;
+  const { slug, year, month } = await params;
   const post = getBlogPosts().find((post) => post.slug === slug)
 
   if (!post) {
     notFound()
   }
 
-  const author = AuthorData[post.metadata.author as keyof typeof AuthorData]
-  const postURL = `${metadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`
+  // Get author data safely
+  const authorId = post.metadata.author || '';
+  const author = authorId ? (AuthorData[authorId as keyof typeof AuthorData] || { name: 'Unknown Author' }) : { name: 'Unknown Author' };
+  
+  // Create a safe URL for this post
+  const postURL = `${metadata.siteUrl}/news/${year || post.year || ''}/${month || post.month || ''}/${post.slug || ''}`
 
   // Create JSON-LD schema with potentially unsafe user content
   const jsonLdSchema = {
@@ -157,8 +162,8 @@ export default async function Blog(
             </div>
             <Byline
               date={formatDate(post.metadata.date)}
-              author={author.name}
-              identifier={post.metadata.author}
+              author={author?.name || 'Unknown Author'}
+              identifier={post.metadata.author || ''}
             />
           </div>
         </div>
