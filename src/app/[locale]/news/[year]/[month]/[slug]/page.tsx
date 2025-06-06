@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { formatDate, getBlogPosts } from '@/utils/markdown'
 import { sanitizeObject } from '@/utils/sanitize'
+import { safeJsonLd } from '@/utils/jsonLd'
 import AuthorData from "@/data/authors.json"
 import { PinkIcon } from "@/components/Common/Icon"
 import { CustomMDX } from '@/components/CustomMDX'
@@ -140,7 +141,7 @@ export default async function Blog(
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(sanitizedJsonLd),
+          __html: safeJsonLd(sanitizedJsonLd),
         }}
       />
       <div className="pt-48 pb-12">
