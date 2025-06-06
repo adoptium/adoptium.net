@@ -51,8 +51,7 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
             ) : (
                 <Image
                     className="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-                    // TODO implement a default image or placeholder
-                    src='/default-banner.jpg'
+                    src='/images/blog/blog-background.png'
                     width={385}
                     height={200}
                     alt="blog banner image"

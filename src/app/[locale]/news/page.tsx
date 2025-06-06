@@ -1,11 +1,17 @@
 import React from 'react';
-import { getBlogPosts } from '@/utils/markdown'
+import { Metadata } from 'next';
+import { getNews } from '@/utils/news'
 import PageHeader from '@/components/Common/PageHeader';
 import NewsCardList from '@/components/News/NewsCardList';
 
+export const metadata: Metadata = {
+  title: "News & Updates",
+  description: "Latest news and updates from the Eclipse Adoptium Project",
+}
+
 
 export default function NewsPage() {
-    const posts = getBlogPosts();
+    const { posts, totalPages } = getNews({ numPosts: 6, page: 1 });
     if (!posts || posts.length === 0) {
         return <div>No news articles available.</div>;
     }
@@ -19,11 +25,11 @@ export default function NewsPage() {
             />
             <NewsCardList
                 posts={posts}
-                previousPageNumber={1}
-                previousPageLink={'/news/page/1'}
-                nextPage={'/news/page/2'}
+                previousPageNumber={null}
+                previousPageLink={null}
+                nextPage={totalPages > 1 ? '/news/page/2' : ''}
                 currentPage={1}
-                totalPages={3}
+                totalPages={totalPages}
                 baseUrl={'/news'}
             />
         </div>

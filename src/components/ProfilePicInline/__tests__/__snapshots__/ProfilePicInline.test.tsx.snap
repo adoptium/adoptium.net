@@ -3,6 +3,7 @@
 exports[`ProfilePicInline component > should render correctly - no profile pic found 1`] = `
 <div>
   <img
+    alt="Sample Name"
     class="ml-2 mb-0 rounded-full"
     data-nimg="1"
     decoding="async"
@@ -19,6 +20,7 @@ exports[`ProfilePicInline component > should render correctly - no profile pic f
 exports[`ProfilePicInline component > should render correctly 1`] = `
 <div>
   <img
+    alt="Sample Name"
     class="ml-2 mb-0 rounded-full"
     data-nimg="1"
     decoding="async"
