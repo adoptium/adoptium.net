@@ -52,7 +52,7 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
             ) : (
                 <Image
                     className="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-                    src='/images/blog/blog-background.png'
+                    src={`/news/${post.year}/${post.month}/${post.slug}/opengraph-image`}
                     width={385}
                     height={200}
                     alt="blog banner image"
