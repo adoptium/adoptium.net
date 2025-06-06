@@ -12,10 +12,10 @@ import SharePost from '@/components/News/SharePost'
 
 // TODO Hardcoded metadata for now, perhaps we could improve this?
 const metadata = {
-  "social": {
-    "twitter": "@adoptium"
+  social: {
+    twitter: "@adoptium"
   },
-  "siteUrl": "https://adoptium.net",
+  siteUrl: "https://adoptium.net",
 }
 
 export async function generateStaticParams() {
@@ -59,13 +59,15 @@ export async function generateMetadata(
     featuredImage,
   } = post.metadata
 
-  const ogImage = featuredImage
-    ? featuredImage
-    : `${metadata.siteUrl}/og?title=${encodeURIComponent(title)}`
-
   // Extract year and month from date
   const [year, month] = date.split('-');
+
   const postURL = `${metadata.siteUrl}/news/${year}/${month}/${post.slug}`;
+
+  const ogImage = featuredImage
+    ? featuredImage
+    : `/news/${year}/${month}/${post.slug}/opengraph-image`
+
 
   return {
     title,
@@ -111,7 +113,7 @@ export default async function Blog(
   // Get author data safely
   const authorId = post.metadata.author || '';
   const author = authorId ? (AuthorData[authorId as keyof typeof AuthorData] || { name: 'Unknown Author' }) : { name: 'Unknown Author' };
-  
+
   // Create a safe URL for this post
   const postURL = `${metadata.siteUrl}/news/${year || post.year || ''}/${month || post.month || ''}/${post.slug || ''}`
 
