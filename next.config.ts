@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: 'github.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'newsroom.eclipse.org',
+        pathname: '/**',
+      },
     ],
   },
 };
