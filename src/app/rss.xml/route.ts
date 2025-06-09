@@ -24,6 +24,7 @@ export async function GET() {
   return new Response(feed.xml(), {
     headers: {
       'Content-Type': 'application/rss+xml',
+      'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
     },
   });
 }
