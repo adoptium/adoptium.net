@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Slider from "react-slick"
+import { useTranslations } from "next-intl"
 import adoptersData from "@/data/adopters.json"
 
 // Import the CSS for slick-carousel
@@ -21,6 +22,7 @@ interface Adopter {
 const featuredAdopters = (adoptersData as Adopter[]).filter(adopter => adopter.featured)
 
 const LogoCarousel = () => {
+  const t = useTranslations("LogoCarousel")
   const settings = {
     dots: false,
     infinite: true,
@@ -62,7 +64,7 @@ const LogoCarousel = () => {
   return (
     <div className="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8">
       <h2 className="text-center text-xl font-normal leading-7 text-grey">
-        Temurin is trusted by millions of developers
+        {t('title')}
       </h2>
       <Slider {...settings} className="mt-6">
         {featuredAdopters.map((adopter, index) => (

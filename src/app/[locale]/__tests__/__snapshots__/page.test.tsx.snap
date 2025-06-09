@@ -66,7 +66,7 @@ exports[`Index page > renders correctly 1`] = `
     <h2
       class="text-center text-xl font-normal leading-7 text-grey"
     >
-      Temurin is trusted by millions of developers
+      Text
     </h2>
     <div
       class="mt-6"
@@ -288,11 +288,11 @@ exports[`Index page > renders correctly 1`] = `
         >
           Text
         </h1>
-        <p
+        <div
           class="text-base text-grey"
         >
           Text
-        </p>
+        </div>
       </div>
     </div>
     <div
@@ -328,11 +328,11 @@ exports[`Index page > renders correctly 1`] = `
         >
           Text
         </h1>
-        <p
+        <div
           class="text-base text-grey"
         >
           Text
-        </p>
+        </div>
       </div>
     </div>
     <div
@@ -368,11 +368,11 @@ exports[`Index page > renders correctly 1`] = `
         >
           Text
         </h1>
-        <p
+        <div
           class="text-base text-grey"
         >
           Text
-        </p>
+        </div>
       </div>
     </div>
     <div
@@ -422,11 +422,11 @@ exports[`Index page > renders correctly 1`] = `
               >
                 Text
               </h1>
-              <p
+              <div
                 class="text-base text-grey"
               >
                 Text
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -459,11 +459,11 @@ exports[`Index page > renders correctly 1`] = `
               >
                 Text
               </h1>
-              <p
+              <div
                 class="text-base text-grey"
               >
                 Text
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -496,11 +496,11 @@ exports[`Index page > renders correctly 1`] = `
               >
                 Text
               </h1>
-              <p
+              <div
                 class="text-base text-grey"
               >
                 Text
-              </p>
+              </div>
             </div>
           </div>
         </div>

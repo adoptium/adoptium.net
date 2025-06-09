@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback, ReactElement } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
@@ -13,7 +13,7 @@ interface SubText {
 
 interface DataItem {
   title: string;
-  description: string;
+  description: ReactElement | string;
   image: string;
   subtext?: SubText;
 }
@@ -107,7 +107,7 @@ const UiVirtualContent = ({ data }: { data: DataItem[] }) => {
           <div className="w-[50%]">
             <div className="max-w-[436px] ml-auto">
               <h1 className="text-xl md-pt-6 my-5 font-bold">{item.title}</h1>
-              <p className="text-base text-grey">{item.description}</p>
+              <div className="text-base text-grey">{item.description}</div>
             </div>
           </div>
         </div>
