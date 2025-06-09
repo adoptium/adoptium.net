@@ -17,46 +17,46 @@ const DownloadCounter = () => {
   const [error, setError] = useState<string | null>(null)
   const counterRef = useRef<HTMLDivElement>(null)
 
-  // Fetch download count directly from the Adoptium API with caching
+  // Fetch download count from our API route with caching
   useEffect(() => {
     const fetchDownloadCount = async () => {
       try {
         // Check if we have cached data and if it's still valid (less than 1 hour old)
         const cachedData = localStorage.getItem('adoptium_download_count')
         const cachedTimestamp = localStorage.getItem('adoptium_download_count_timestamp')
-        
+
         const now = Date.now()
         const oneHourInMs = 60 * 60 * 1000
-        
+
         // Use cached data if it exists and is less than 1 hour old
         if (cachedData && cachedTimestamp && (now - parseInt(cachedTimestamp, 10)) < oneHourInMs) {
           setDownloadData({ total: parseInt(cachedData, 10) })
           setLoading(false)
           return
         }
-        
-        // If no valid cache, fetch from API
-        const response = await fetch('https://api.adoptium.net/v3/stats/downloads/total')
+
+        // If no valid cache, fetch from our API route
+        const response = await fetch('/api/download-counter')
         if (!response.ok) {
           throw new Error('Failed to fetch download count')
         }
-        
+
         const data = await response.json()
-        
+
         // Handle the total downloads count from the API response
-        if (data.total_downloads && typeof data.total_downloads.total === 'number') {
-          const total = data.total_downloads.total
-          
+        if (data && typeof data.total === 'number') {
+          const total = data.total
+
           // Save to cache
           localStorage.setItem('adoptium_download_count', total.toString())
           localStorage.setItem('adoptium_download_count_timestamp', now.toString())
-          
+
           setDownloadData({ total })
         } else {
           console.error('Unexpected data structure:', data)
           throw new Error('Invalid response structure')
         }
-        
+
         setLoading(false)
       } catch (err) {
         console.error('Error fetching download count:', err)
@@ -82,7 +82,7 @@ const DownloadCounter = () => {
         if (entry.isIntersecting && !animate) {
           setAnimate(true)
           let startTimestamp: number | null = null
-          
+
           const step = (timestamp: number) => {
             if (!startTimestamp) startTimestamp = timestamp
             const progress = Math.min(
