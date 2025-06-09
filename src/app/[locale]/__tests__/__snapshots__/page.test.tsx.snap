@@ -1418,13 +1418,9 @@ exports[`Index page > renders correctly 1`] = `
     </div>
   </section>
   <div
-    class="w-full h-[500px] flex items-center justify-center"
+    data-testid="mocked-latest-news"
   >
-    <h1
-      class="text-2xl font-bold"
-    >
-      TODO - implement LatestNews
-    </h1>
+    Latest News Content
   </div>
   <div
     class="xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-cente contributors mx-auto"

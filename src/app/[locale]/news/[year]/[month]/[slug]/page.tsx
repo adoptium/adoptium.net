@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
-import { formatDate, getBlogPosts } from '@/utils/markdown'
+import { getBlogPosts } from '@/utils/markdown'
+import { formatDate } from '@/utils/date'
 import { sanitizeObject } from '@/utils/sanitize'
 import { safeJsonLd } from '@/utils/jsonLd'
 import AuthorData from "@/data/authors.json"

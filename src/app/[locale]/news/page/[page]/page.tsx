@@ -33,7 +33,7 @@ export default async function NewsPage(
     }
 
     const pageNumber = parseInt(page, 10);
-    const { posts, totalPages } = getNews({ numPosts: 6, page: pageNumber });
+    const { posts, totalPages } = await getNews({ numPosts: 9, page: pageNumber, includeEF: true });
     if (!posts || posts.length === 0) {
         notFound();
     }

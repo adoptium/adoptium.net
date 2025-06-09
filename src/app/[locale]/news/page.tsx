@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation'
 import { getNews } from '@/utils/news'
 import PageHeader from '@/components/Common/PageHeader';
 import NewsCardList from '@/components/News/NewsCardList';
@@ -9,11 +10,10 @@ export const metadata: Metadata = {
   description: "Latest news and updates from the Eclipse Adoptium Project",
 }
 
-
-export default function NewsPage() {
-    const { posts, totalPages } = getNews({ numPosts: 6, page: 1 });
+export default async function NewsPage() {
+    const { posts, totalPages } = await getNews({ numPosts: 9, page: 1, includeEF: true });
     if (!posts || posts.length === 0) {
-        return <div>No news articles available.</div>;
+        notFound();
     }
     return (
         <div>

@@ -9,6 +9,13 @@ vi.mock("@/hooks/useAdoptiumContributorsApi", () => ({
   useAdoptiumContributorsApi: () => null
 }))
 
+// Mock the LatestNews component with a synchronous version
+vi.mock("@/components/News/LatestNews", () => {
+  return {
+    default: () => <div data-testid="mocked-latest-news">Latest News Content</div>
+  }
+})
+
 describe("Index page", () => {
   it("renders correctly", () => {
     const { container } = render(<Index />)

@@ -5,15 +5,8 @@ import DownloadCounter from '@/components/DownloadCounter';
 import TemurinFeatures from '@/components/TemurinFeatures';
 import WGProjects from '@/components/WGProjects';
 import Testimonials from '@/components/Testimonials';
+import LatestNews from '@/components/News/LatestNews';
 import ContributorsHome from '@/components/Contributors/home'
-
-const LatestNews = () => {
-    return (
-        <div className="w-full h-[500px] flex items-center justify-center">
-            <h1 className="text-2xl font-bold">TODO - implement LatestNews</h1>
-        </div>
-    );
-}
 
 export default function HomePage() {
     return (
