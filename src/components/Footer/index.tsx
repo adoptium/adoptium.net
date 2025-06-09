@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { FooterIcon } from "@/components/Common/Icon"
 import IconSocial from "@/components/IconSocial"

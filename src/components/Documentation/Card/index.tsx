@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { FaExternalLinkAlt } from "react-icons/fa"
 
 interface LinkItem {
@@ -24,7 +24,7 @@ const DocumentationCard: React.FC<Props> = ({ links, title, Icon }) => {
         <div className="relative p-6">
           {/* Decorative element */}
           <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-[#FF1464]/30 to-[#FF4B54]/20 rounded-full blur-xl opacity-50"></div>
-          
+
           <div className="relative">
             <p className="mb-5 text-xl font-semibold flex items-center">
               <span className="inline-flex items-center justify-center bg-[#2B1A4F] p-3 rounded-xl mr-3 shadow-inner border border-white/10">

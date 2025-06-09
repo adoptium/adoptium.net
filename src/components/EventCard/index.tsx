@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { formatDate } from '@/utils/date'
 import { sanitizeString } from "@/utils/sanitize"
@@ -81,9 +81,9 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
 
                 <div className="mt-auto">
                     {isExternalLink ? (
-                        <a 
-                            href={sanitizeString(post.slug)} 
-                            target="_blank" 
+                        <a
+                            href={sanitizeString(post.slug)}
+                            target="_blank"
                             rel="noopener noreferrer"
                         >
                             <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block">
@@ -91,7 +91,7 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
                             </button>
                         </a>
                     ) : (
-                        <Link 
+                        <Link
                             href={{
                                 pathname: `/news/${sanitizeString(post.year)}/${sanitizeString(post.month)}/${sanitizeString(post.slug)}`,
                             }}

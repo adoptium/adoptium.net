@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, Fragment } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import {
   Dialog,
@@ -85,7 +85,7 @@ const MobileLink: React.FC<{
     "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
     isActivePath(href) ? "text-rose-600" : "",
   )
-  
+
   if (href && href.startsWith("/")) {
     return (
       <Link href={href} className={commonClasses}>
@@ -110,23 +110,23 @@ const MobileDivider: React.FC = () => (
 function isActivePath(path: string | undefined): boolean {
   if (!path) return false
   if (typeof window === "undefined") return false
-  
+
   const currentPath = window.location.pathname
-  
+
   // Remove locale prefix from current path (e.g., /en-GB/docs/faq -> /docs/faq)
   const removeLocalePrefix = (pathname: string): string => {
     // Match patterns like /en-GB/, /de/, /es/, /fr/, /zh-CN/, etc.
     const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//
     return pathname.replace(localePattern, '/')
   }
-  
+
   const pathWithoutLocale = removeLocalePrefix(currentPath)
   const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path
   const normalizedCurrentPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale
-  
+
   // Get all navigation paths to find the most specific match
   const allPaths: string[] = []
-  
+
   navigation.forEach(item => {
     if (item.href) {
       allPaths.push(item.href)
@@ -139,22 +139,22 @@ function isActivePath(path: string | undefined): boolean {
       })
     }
   })
-  
+
   // Find all matching paths
   const matchingPaths = allPaths.filter(navPath => {
     const normalizedNavPath = navPath.endsWith('/') ? navPath.slice(0, -1) : navPath
-    return normalizedCurrentPath === normalizedNavPath || 
-           normalizedCurrentPath.startsWith(normalizedNavPath + '/')
+    return normalizedCurrentPath === normalizedNavPath ||
+      normalizedCurrentPath.startsWith(normalizedNavPath + '/')
   })
-  
+
   // If no matches, return false
   if (matchingPaths.length === 0) return false
-  
+
   // Find the longest (most specific) matching path
-  const longestMatch = matchingPaths.reduce((longest, current) => 
+  const longestMatch = matchingPaths.reduce((longest, current) =>
     current.length > longest.length ? current : longest
   )
-  
+
   // Only highlight if this path is the most specific match
   const normalizedLongestMatch = longestMatch.endsWith('/') ? longestMatch.slice(0, -1) : longestMatch
   return normalizedPath === normalizedLongestMatch
@@ -192,11 +192,10 @@ const NavBar = ({ locale }: { locale: string }) => {
 
   return (
     <header
-      className={`sticky inset-x-0 top-0 z-50 ${
-        scrolled
+      className={`sticky inset-x-0 top-0 z-50 ${scrolled
           ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl"
           : ""
-      }`}
+        }`}
     >
       {/* Container div to center the nav content */}
       <div className="max-w-[1288px] w-full mx-auto px-3">
@@ -205,9 +204,9 @@ const NavBar = ({ locale }: { locale: string }) => {
           aria-label="Global"
         >
           <Link href="/">
-            <Image 
-              src="/images/adoptium-logo-dark.svg" 
-              alt="Adoptium Logo" 
+            <Image
+              src="/images/adoptium-logo-dark.svg"
+              alt="Adoptium Logo"
               width={160}
               height={40}
               className="h-10 w-auto"
@@ -349,9 +348,8 @@ const NavBar = ({ locale }: { locale: string }) => {
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">
             {/* Mobile menu – main navigation */}
             <div
-              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${
-                showLastSlide ? "left-[-100%]" : ""
-              }`}
+              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${showLastSlide ? "left-[-100%]" : ""
+                }`}
             >
               <div className="space-y-2 py-6">
                 {navigation.map((item, index) => (
@@ -396,9 +394,8 @@ const NavBar = ({ locale }: { locale: string }) => {
 
             {/* Mobile menu – last slide (child links) */}
             <div
-              className={`absolute duration-200 w-full h-full ${
-                showLastSlide ? "left-0" : "left-full"
-              }`}
+              className={`absolute duration-200 w-full h-full ${showLastSlide ? "left-0" : "left-full"
+                }`}
             >
               <div
                 onClick={() => setShowLastSlide(false)}

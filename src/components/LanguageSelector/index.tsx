@@ -23,6 +23,8 @@ function getCountryCode(locale: string): string {
       return "cn"
     case "de":
       return "de"
+    case "pt-BR":
+      return "br"
     default:
       return locale
   }
@@ -34,6 +36,8 @@ function getLanguageCode(locale: string): string {
       return "zh"
     case "en-GB":
       return "en"
+    case "pt-BR":
+      return "pt"
     default:
       return locale
   }
@@ -46,11 +50,10 @@ interface LanguageSelectorProps {
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({ locale }) => {
   const router = useRouter();
   const pathname = usePathname();
-  
+
   // Function to change the language - uses next-intl router
   const changeLanguage = (newLocale: string) => {
-    console.log(`Changing language to: ${newLocale}`);
-    
+
     // Navigate to the same pathname but with the new locale
     router.push(pathname, { locale: newLocale });
   };
@@ -78,7 +81,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ locale }) => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <MenuItems className="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
+        <MenuItems className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
           <div className="py-1">
             {routing.locales.map((lng) => (
               <MenuItem key={lng}>

@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { getTranslations } from "next-intl/server"
 import { getNews } from "@/utils/news"
 import { formatDate } from '@/utils/date'

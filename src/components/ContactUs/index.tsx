@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 
 interface ContactUsProps {
@@ -35,7 +35,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
         priority
         sizes="100vw"
       />
-      
+
       <div className="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12">
         <Image
           className="!mb-0"
