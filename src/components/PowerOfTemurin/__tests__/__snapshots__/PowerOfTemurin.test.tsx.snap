@@ -61,11 +61,11 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         >
           Text
         </h1>
-        <p
+        <div
           class="text-base text-grey"
         >
           Text
-        </p>
+        </div>
       </div>
     </div>
     <div
@@ -101,11 +101,11 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         >
           Text
         </h1>
-        <p
+        <div
           class="text-base text-grey"
         >
           Text
-        </p>
+        </div>
       </div>
     </div>
     <div
@@ -141,11 +141,11 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         >
           Text
         </h1>
-        <p
+        <div
           class="text-base text-grey"
         >
           Text
-        </p>
+        </div>
       </div>
     </div>
     <div
@@ -195,11 +195,11 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               >
                 Text
               </h1>
-              <p
+              <div
                 class="text-base text-grey"
               >
                 Text
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -232,11 +232,11 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               >
                 Text
               </h1>
-              <p
+              <div
                 class="text-base text-grey"
               >
                 Text
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -269,11 +269,11 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               >
                 Text
               </h1>
-              <p
+              <div
                 class="text-base text-grey"
               >
                 Text
-              </p>
+              </div>
             </div>
           </div>
         </div>
