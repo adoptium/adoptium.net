@@ -6,14 +6,23 @@ interface NewsResult {
   totalPages: number;
 }
 
+// Interface for Eclipse Foundation news items
+interface EclipseNewsItem {
+  title: string;
+  date: string;
+  link: string;
+  body: string;
+  image?: string;
+}
+
 export async function getNews({ numPosts = 9, page = 1, includeEF = false } = {}): Promise<NewsResult> {
   const blogs = getBlogPosts();
   if (includeEF) {
     const efNews = await fetchLatestNews();
     // structure efNews to match the blog posts format
     const efPosts = efNews.news
-      .filter((newsItem: any) => !newsItem.link.startsWith('https://adoptium.net'))
-      .map((newsItem: any) => ({
+      .filter((newsItem: EclipseNewsItem) => !newsItem.link.startsWith('https://adoptium.net'))
+      .map((newsItem: EclipseNewsItem) => ({
       slug: newsItem.link,
       newsItem,
       metadata: {

@@ -2,19 +2,23 @@ import React from "react";
 import EventCard from "@/components/EventCard";
 import Pagination from "@/components/News/Pagination";
 
+type Post = {
+  slug: string;
+  year: string;
+  month: string;
+  metadata: {
+    title: string;
+    description: string;
+    date: string;
+    featuredImage?: string;
+    tags?: string[];
+  };
+  author?: string;
+  tags?: string[];
+};
+
 interface NewsCardListProps {
-  posts: Array<{
-    slug: string;
-    year: string;
-    month: string;
-    metadata: {
-      title: string;
-      description: string;
-      date: string;
-      featuredImage?: string;
-      tags?: string[];
-    }
-  }>;
+  posts: Array<Post>;
   previousPageNumber: number | null;
   previousPageLink: string | null;
   nextPage: string;
@@ -34,7 +38,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
 }) => {
   const allPosts = [...posts];
   const rowsNeeded = Math.ceil(allPosts.length / 3);
-  let rowData: Post[][] = [];
+  const rowData: Post[][] = [];
 
   // Create rows with up to 3 cards each
   for (let i = 0; i < rowsNeeded; i++) {

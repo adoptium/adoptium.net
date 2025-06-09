@@ -13,7 +13,7 @@ export async function fetchLatestNews() {
     .then(function (response) {
       return response.data
     })
-    .catch(function (error) {
+    .catch(function () {
       return { news: [], pager: null }
     })
 }
