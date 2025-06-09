@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { PinkIcon } from "../Common/Icon"
 
 interface Project {
@@ -32,26 +33,18 @@ const projects: Project[] = [
 ]
 
 const WGProjects = () => {
+  const t = useTranslations('WGProjects')
   return (
     <div className="bg-[#0d002a] py-24 sm:py-28">
       <div className="mx-auto max-w-3xl md:max-w-7xl w-full px-6 xl:px-0">
         <div className="mx-auto max-w-4xl sm:text-center">
           <h2 className="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4">
-            Discover all our projects
+            {t('discover-all-our-projects')}
           </h2>
         </div>
         <div className="flex flex-col justify-center items-center">
           <p className="mt-6 max-w-2xl mb-0 text-base leading-6 text-lightgrey text-center md:text-justify md:[text-align-last:center]">
-            Eclipse Adoptium provides runtime binaries that are high
-            performance, enterprise-caliber, cross-platform, open-source
-            licensed, Java SE TCK-tested and compliant for general use across
-            the Java ecosystem. Eclipse Adoptium also provides artifacts
-            including open-source infrastructure as code, a comprehensive
-            continuous integration build and test farm, and extensive quality
-            assurance tests. These artifacts may be used by Eclipse Adoptium
-            projects and other runtime technology builders to ensure the
-            provision of secure, Java SE TCK-tested and compliant,
-            production-ready runtimes.
+            {t('description')}
           </p>
         </div>
         <div className="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8">

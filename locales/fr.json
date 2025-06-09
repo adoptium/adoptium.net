@@ -3,35 +3,112 @@
     "the-power": "La puissance d'Eclipse Temurin™",
     "download-temurin-for": "Télécharger Temurin {defaultVersion} pour {userOSName} {arch}",
     "download-temurin-short": "Télécharger Temurin {defaultVersion}",
-    "other-downloads": "Autres Téléchargements",
+    "other-downloads": "Autres téléchargements",
     "download-temurin-button": "Télécharger Temurin™"
   },
   "NotFoundPage": {
     "title": "Désolé, nous n'avons pas pu trouver cette page",
-    "back-to-home": "Retour à la page d'accueil"
+    "back-to-home": "Retour à l'accueil"
   },
   "PowerOfTemurin": {
     "title": "La puissance d'Eclipse Temurin",
-    "description": "Basé sur OpenJDK : Eclipse Temurin offre des binaires de Java™ Runtimes open source, multiplateformes, haute performance, prêts pour l'entreprise et certifiés par Java SE TCK et vérifiés par AQAvit pour une utilisation générale dans l'écosystème Java.",
-    "button": "Avantages pour les entreprises"
+    "description": "Basé sur OpenJDK : Eclipse Temurin fournit des binaires Java™ open source, performants, multiplateformes, prêts pour l'entreprise, certifiés par le TCK Java SE et vérifiés par AQAvit pour une utilisation générale dans l'écosystème Java.",
+    "button": "Avantages pour les entreprises",
+    "benefits": {
+      "performance": {
+        "title": "Performance et fiabilité",
+        "description": "Exécutez vos applications d'entreprise en toute confiance avec Eclipse Temurin, une machine virtuelle Java sécurisée et performante, rigoureusement testée pour sa stabilité et optimisée pour fonctionner sans accroc dans divers environnements."
+      },
+      "cost": {
+        "title": "Innovation économique",
+        "description": "Adoptez Java open source de haute qualité sans frais de licence. Réduisez vos coûts tout en bénéficiant d’un écosystème solide garantissant une durabilité à long terme et des performances prêtes pour l’entreprise."
+      },
+      "developers": {
+        "title": "Autonomiser les développeurs",
+        "description": "Améliorez la productivité des développeurs grâce aux builds cohérents et multiplateformes d’Eclipse Temurin. Concentrez-vous sur l’innovation en vous appuyant sur une machine virtuelle fiable et de haute qualité, adoptée par des millions d’utilisateurs dans le monde."
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "Binaires OpenJDK précompilés et gratuits !",
+    "description": "Java™ est le langage de programmation et la plateforme leader dans le monde. Le groupe de travail Adoptium promeut et soutient des runtimes de haute qualité, certifiés TCK, et des technologies associées pour une utilisation dans tout l'écosystème Java. Eclipse Temurin est la distribution OpenJDK proposée par Adoptium.",
+    "features": {
+      "secure-supply-chain": {
+        "title": "Chaîne d'approvisionnement sécurisée",
+        "description": "Conçu selon des normes de sécurité strictes, assurant une chaîne d’approvisionnement fiable, transparente et sans vulnérabilités connues."
+      },
+      "tck-certified": {
+        "title": "Certifié TCK",
+        "description": "Testé rigoureusement avec AQAvit pour garantir des performances, une fiabilité et une sécurité optimales dans chaque version."
+      },
+      "performance-optimization": {
+        "title": "Optimisation des performances",
+        "description": "Conçu pour des performances optimales : rapidité, efficacité et stabilité dans une large gamme d’environnements."
+      },
+      "cross-platform": {
+        "title": "Cohérence multiplateforme",
+        "description": "Comportement et builds cohérents sur tous les principaux systèmes d’exploitation et architectures matérielles."
+      },
+      "community-driven": {
+        "title": "Développement piloté par la communauté",
+        "description": "Les projets Eclipse Adoptium sont animés par une communauté mondiale dynamique qui améliore et innove en continu."
+      },
+      "enterprise-ready": {
+        "title": "Prêt pour l'entreprise",
+        "description": "Soutenu par des partenaires commerciaux de niveau entreprise pour une intégration fluide, une grande évolutivité et une durabilité à long terme."
+      }
+    }
   },
   "RandomContributors": {
     "thank-you": "Merci à nos <highlight>300+</highlight> contributeurs",
     "thank-you-mobile": "Merci <linebreak></linebreak> à nos <highlight>300+</highlight> contributeurs"
   },
   "RandomContributor": {
-    "thank-you": "Merci à <name></name> pour <contributions></contributions> à <repo></repo>",
+    "thank-you": "Merci <name></name> pour tes <contributions></contributions> dans <repo></repo>",
     "contribution-singular": "contribution",
     "contribution-plural": "contributions"
   },
   "DownloadCounter": {
-    "title": "Alimentant des millions d'utilisateurs dans le monde entier avec Eclipse Temurin",
-    "total-download-docker-pulls-ever": "Total des téléchargements/extractions Docker",
+    "title": "Eclipse Temurin alimente des millions d’utilisateurs dans le monde",
+    "total-download-docker-pulls-ever": "Nombre total de téléchargements / pulls Docker",
     "loading": "Chargement..."
+  },
+  "WaysToSupport": {
+    "title": "Comment nous soutenir",
+    "description": "Si vous appréciez les technologies Eclipse, envisagez de devenir sponsor via la Fondation Eclipse. Les contributions d'utilisateurs comme vous aident à financer les opérations du groupe de travail Adoptium. Tous les fonds versés à la Fondation Eclipse serviront à soutenir la communauté Eclipse via le groupe de travail Adoptium.",
+    "contribute": {
+      "how-to-contribute": "Comment contribuer",
+      "description": "Participez à nos projets techniques et non techniques. Rejoignez notre communauté pour contribuer à façonner l’avenir des runtimes Java."
+    },
+    "sustainers": {
+      "title": "Devenez un soutien",
+      "description": "Aidez-nous à renforcer l’avenir d’Eclipse Temurin"
+    },
+    "member": {
+      "title": "Devenez membre",
+      "description": "Rejoignez-nous pour façonner l’avenir d’Eclipse Adoptium"
+    }
+  },
+  "AuthorList": {
+    "documentation-authors": "Auteurs de la documentation"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "Aidez-nous à améliorer cette documentation !",
+    "all-adoptium-docs-are-open-source": "Toutes les documentations Adoptium sont open source. Une erreur ou un point flou ?",
+    "edit-this-page": "Modifier cette page"
   },
   "Asciidoc": {
     "table-of-contents": "Table des matières",
-    "warn-default-locale": "Cette page est la <englishVersionLink>version en anglais</englishVersionLink> car elle n'existe pas dans votre langue. Aidez-nous à la traduire en français. Consultez notre <translationGuideLink>guide de traduction</translationGuideLink> pour plus d'informations.",
-    "warn-outdated": "Cette page est la <englishVersionLink>version en anglais</englishVersionLink> car elle n'existe pas dans votre langue. Aidez-nous à traduire la dernière <englishVersionLink>version en anglais</englishVersionLink>. Consultez notre <translationGuideLink>guide de traduction</translationGuideLink> pour plus d'informations."
+    "warn-default-locale": "Cette page est la <englishVersionLink>version anglaise</englishVersionLink> car elle n'est pas encore disponible dans votre langue. Vous pouvez nous aider à la traduire. Consultez notre <translationGuideLink>guide de traduction</translationGuideLink> pour en savoir plus.",
+    "warn-outdated": "Cette page traduite est basée sur une <previousEnglishVersionLink>ancienne version de la page en anglais</previousEnglishVersionLink> et pourrait être obsolète. Aidez-nous à la mettre à jour pour qu’elle corresponde à la <lastEnglishVersionLink>version la plus récente</lastEnglishVersionLink>. Voir notre <translationGuideLink>guide de traduction</translationGuideLink> pour plus d’informations."
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "Dernières actualités et mises à jour",
+    "subtitle": "Suivez les dernières mises à jour du projet Eclipse Adoptium",
+    "see-all-news": "Voir toutes les actualités"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "Découvrez tous nos projets",
+    "description": "Eclipse Adoptium fournit des binaires d'exécution haute performance, de niveau entreprise, multiplateformes, sous licence open source, testés et conformes au TCK de Java SE pour une utilisation générale dans l'écosystème Java. Eclipse Adoptium fournit également des artefacts tels que de l'infrastructure en tant que code open source, une ferme complète d'intégration continue pour la construction et les tests, ainsi que de nombreux tests d'assurance qualité. Ces artefacts peuvent être utilisés par les projets Eclipse Adoptium ou par d'autres fournisseurs de technologies d'exécution afin d'assurer des runtimes sécurisés, testés avec le TCK de Java SE et prêts pour la production."
   }
 }

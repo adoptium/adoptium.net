@@ -13,7 +13,51 @@
   "PowerOfTemurin": {
     "title": "Die Kraft von Eclipse Temurin",
     "description": "OpenJDK-basiert: Eclipse Temurin bietet leistungsstarke, plattformübergreifende, quelloffene Java™-Runtimes-Binärdateien, die für den Unternehmenseinsatz bereit sind und die Java SE TCK-zertifiziert und AQAvit-überprüft sind für den allgemeinen Einsatz im Java-Ökosystem.",
-    "button": "Geschäftsvorteile"
+    "button": "Geschäftsvorteile",
+    "benefits": {
+      "performance": {
+        "title": "Leistung & Zuverlässigkeit",
+        "description": "Führen Sie Ihre Unternehmensanwendungen mit Vertrauen aus – mit Eclipse Temurin, einer sicheren, leistungsstarken Java-Laufzeitumgebung, die gründlich auf Stabilität getestet und für den nahtlosen Betrieb in verschiedensten Umgebungen optimiert wurde."
+      },
+      "cost": {
+        "title": "Kosteneffiziente Innovation",
+        "description": "Nutzen Sie hochwertige Open-Source-Java-Lösungen ohne Lizenzgebühren. Senken Sie Kosten und profitieren Sie von einem robusten Ökosystem mit langfristiger Nachhaltigkeit und unternehmensfähiger Leistung."
+      },
+      "developers": {
+        "title": "Entwickler stärken",
+        "description": "Steigern Sie die Produktivität Ihrer Entwickler mit den konsistenten, plattformübergreifenden Builds von Eclipse Temurin. Konzentrieren Sie sich auf Innovation mit einer zuverlässigen Laufzeit, der Millionen weltweit vertrauen."
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "Kostenlose vorgefertigte OpenJDK-Binärdateien!",
+    "description": "Java™ ist die führende Programmiersprache und Plattform der Welt. Die Adoptium Working Group fördert und unterstützt hochwertige, TCK-zertifizierte Laufzeiten und zugehörige Technologien für den Einsatz im gesamten Java-Ökosystem. Eclipse Temurin ist die OpenJDK-Distribution von Adoptium.",
+    "features": {
+      "secure-supply-chain": {
+        "title": "Sichere Lieferkette",
+        "description": "Erstellt nach strengen Sicherheitsstandards – für eine vertrauenswürdige, transparente und fehlerfreie Lieferkette."
+      },
+      "tck-certified": {
+        "title": "TCK-zertifiziert",
+        "description": "Gründlich getestet mit AQAvit, um Leistung, Zuverlässigkeit und Sicherheit in jedem Build zu gewährleisten."
+      },
+      "performance-optimization": {
+        "title": "Leistungsoptimierung",
+        "description": "Für optimale Leistung entwickelt – bietet Geschwindigkeit, Effizienz und Stabilität in verschiedenen Umgebungen."
+      },
+      "cross-platform": {
+        "title": "Plattformübergreifende Konsistenz",
+        "description": "Konsistentes Verhalten und konsistente Builds auf allen gängigen Betriebssystemen und Hardwarearchitekturen."
+      },
+      "community-driven": {
+        "title": "Community-getriebene Entwicklung",
+        "description": "Die Eclipse Adoptium-Projekte werden von einer lebendigen, globalen Community gestaltet, die ständig verbessert und innoviert."
+      },
+      "enterprise-ready": {
+        "title": "Unternehmensgerechter Support",
+        "description": "Unterstützt von kommerziellen Partnern auf Unternehmensniveau – für reibungslose Integration, Skalierbarkeit und langfristige Nachhaltigkeit."
+      }
+    }
   },
   "RandomContributors": {
     "thank-you": "Danke an unsere <highlight>300+</highlight> Mitwirkenden",
@@ -25,13 +69,46 @@
     "contribution-plural": "Beiträge"
   },
   "DownloadCounter": {
-    "title": "Alimentando a millones de usuarios en todo el mundo con Eclipse Temurin",
-    "total-download-docker-pulls-ever": "Total de descargas/extracciones de Docker",
-    "loading": "Cargando..."
+    "title": "Millionen weltweit vertrauen auf Eclipse Temurin",
+    "total-download-docker-pulls-ever": "Gesamte Downloads/Docker-Pulls",
+    "loading": "Lädt..."
+  },
+  "WaysToSupport": {
+    "title": "Unterstützungsmöglichkeiten",
+    "description": "Wenn Sie Eclipse-Technologien schätzen, ziehen Sie bitte in Betracht, Sponsor über die Eclipse Foundation zu werden. Beiträge von Nutzern wie Ihnen helfen dabei, die Arbeit der Adoptium Working Group zu finanzieren. Alle Gelder, die der Eclipse Foundation gespendet werden, unterstützen die Eclipse-Community über die Adoptium Working Group.",
+    "contribute": {
+      "how-to-contribute": "So können Sie beitragen",
+      "description": "Beteiligen Sie sich mit technischen und nicht-technischen Beiträgen. Treten Sie unserer Community bei und helfen Sie mit, die Zukunft der Java-Laufzeiten mitzugestalten."
+    },
+    "sustainers": {
+      "title": "Werden Sie Fördermitglied",
+      "description": "Unterstützen Sie uns dabei, die Zukunft von Eclipse Temurin zu stärken"
+    },
+    "member": {
+      "title": "Werden Sie Mitglied",
+      "description": "Gestalten Sie mit uns die Zukunft von Eclipse Adoptium"
+    }
+  },
+  "AuthorList": {
+    "documentation-authors": "Dokumentations-Autoren"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "Hilf uns, diese Dokumentation zu verbessern!",
+    "all-adoptium-docs-are-open-source": "Alle Adoptium-Dokumentationen sind Open Source. Etwas falsch oder unklar?",
+    "edit-this-page": "Diese Seite bearbeiten"
   },
   "Asciidoc": {
     "table-of-contents": "Inhaltsverzeichnis",
-    "warn-default-locale": "Dies ist die <englishVersionLink>englische Version</englishVersionLink> der Seite, da aktuell noch keine deutsche Übersetzung verfügbar ist. Du kannst uns helfen diese Seite in deutsch bereitzustellen. In unserem <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> findest du mehr Informationen.",
-    "warn-outdated": "Die deutsche Übersetzung dieser Seite basiert auf einem <previousEnglishVersionLink>nicht mehr aktuellen englischen Text</previousEnglishVersionLink>. Daher ist es Möglich, dass Teile des Textes nicht mehr zutreffen. Du kannst helfen die Seite aktuell zu halten und eine überarbeitete Übersetzung der <lastEnglishVersionLink>aktuellen englischen Seite</lastEnglishVersionLink> bereitzustellen. In unserem <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> findest du mehr Informationen."
+    "warn-default-locale": "Dies ist die <englishVersionLink>englische Version</englishVersionLink> der Seite, da aktuell noch keine deutsche Übersetzung verfügbar ist. Du kannst uns helfen, diese Seite auf Deutsch bereitzustellen. In unserem <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> findest du mehr Informationen.",
+    "warn-outdated": "Die deutsche Übersetzung dieser Seite basiert auf einem <previousEnglishVersionLink>nicht mehr aktuellen englischen Text</previousEnglishVersionLink> und könnte ungenau sein. Du kannst helfen, die Seite zu aktualisieren und eine überarbeitete Übersetzung der <lastEnglishVersionLink>aktuellen englischen Seite</lastEnglishVersionLink> bereitzustellen. Siehe unseren <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> für mehr Informationen."
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "Neueste Nachrichten und Updates",
+    "subtitle": "Verfolgen Sie die neuesten Updates des Eclipse Adoptium-Projekts",
+    "see-all-news": "Alle Nachrichten anzeigen"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "Entdecken Sie all unsere Projekte",
+    "description": "Eclipse Adoptium bietet Laufzeit-Binärdateien, die leistungsstark, unternehmensgerecht, plattformübergreifend, Open-Source-lizenziert sowie durch den Java SE TCK getestet und konform für den allgemeinen Einsatz im Java-Ökosystem sind. Eclipse Adoptium stellt außerdem Artefakte bereit, darunter Open-Source-Infrastruktur als Code, eine umfassende Continuous-Integration-Build- und Testfarm sowie umfangreiche Qualitätssicherungstests. Diese Artefakte können von Eclipse Adoptium-Projekten und anderen Anbietern von Laufzeittechnologien genutzt werden, um sichere, Java SE TCK-konforme, produktionsreife Laufzeiten bereitzustellen."
   }
 }
