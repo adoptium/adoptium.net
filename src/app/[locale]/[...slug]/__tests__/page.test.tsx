@@ -17,10 +17,6 @@ vi.mock('next-intl/server', () => ({
   setRequestLocale: vi.fn()
 }));
 
-vi.mock('@/i18n/navigation', () => ({
-  redirect: vi.fn()
-}));
-
 vi.mock('fs', () => ({
   existsSync: vi.fn(() => true),
   lstatSync: vi.fn(() => ({
@@ -66,11 +62,11 @@ describe('AsciidocPage', () => {
     const { container } = render(await AsciidocPage({ params }));
     expect(container.firstChild).toMatchSnapshot();
   });
-  
+
   it('has no accessibility violations', async () => {
     const params = Promise.resolve({ slug: ['test'], locale: 'en' });
     const { container } = render(await AsciidocPage({ params }));
-    
+
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });

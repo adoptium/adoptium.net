@@ -70,6 +70,13 @@ vi.mock('next-intl', () => ({
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
+vi.mock('@/i18n/navigation', () => ({
+  redirect: vi.fn(),
+  Link: ({ href, children, ...props }: { href: string; children: React.ReactNode;[key: string]: any }) => (
+    <a href={href} {...props}>{children}</a>
+  )
+}));
+
 type SwiperProps = {
   children: React.ReactNode
 }

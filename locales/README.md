@@ -22,6 +22,7 @@ Each language is represented by a JSON file following the [BCP 47](https://en.wi
 - `de.json` - German
 - `es.json` - Spanish
 - `fr.json` - French
+- `pt-BR.json` - Brazilian Portuguese
 - `zh-CN.json` - Simplified Chinese
 
 ## How Localization Works
@@ -34,18 +35,18 @@ Each language is represented by a JSON file following the [BCP 47](https://en.wi
 Components use the `useTranslations` hook to access translations:
 
 ```tsx
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function MyComponent() {
-  const t = useTranslations('SectionName');
-  
-  return <h1>{t('title')}</h1>;  // Uses "SectionName.title" from the locale file
+  const t = useTranslations("SectionName");
+
+  return <h1>{t("title")}</h1>; // Uses "SectionName.title" from the locale file
 }
 ```
 
 ## Default Language and Fallbacks
 
-English (`en.json`) is the default language and contains the complete set of translations. 
+English (`en.json`) is the default language and contains the complete set of translations.
 
 For the British English locale (`en-GB.json`), we implement a special fallback mechanism. The `en-GB.json` file only needs to contain entries that differ from standard English. All other keys automatically fall back to `en.json`.
 
@@ -141,23 +142,26 @@ export const routing = defineRouting({
 ## Examples
 
 ### Simple translation:
+
 ```tsx
-const t = useTranslations('HomePage');
-return <h1>{t('title')}</h1>;
+const t = useTranslations("HomePage");
+return <h1>{t("title")}</h1>;
 ```
 
 ### Translation with variables:
+
 ```tsx
 // In locale file: "greeting": "Hello, {name}!"
-const t = useTranslations('CommonTexts');
-return <p>{t('greeting', { name: userName })}</p>;
+const t = useTranslations("CommonTexts");
+return <p>{t("greeting", { name: userName })}</p>;
 ```
 
 ### Rich text with formatting:
+
 ```tsx
 // In locale file: "welcome": "Welcome to <highlight>Adoptium</highlight>"
-const t = useTranslations('HomePage');
-return t.rich('welcome', {
-  highlight: (chunks) => <span className="text-pink">{chunks}</span>
+const t = useTranslations("HomePage");
+return t.rich("welcome", {
+  highlight: (chunks) => <span className="text-pink">{chunks}</span>,
 });
 ```
