@@ -1,7 +1,7 @@
 'use client'
 
 import React, { MutableRefObject, useRef } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useTranslations } from 'next-intl';
 import { detectOS, UserOS } from "@/utils/detectOS"
 import { useFetchLatestForOS, useOnScreen } from "@/hooks"

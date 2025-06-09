@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
 import parse, { domToReact, HTMLReactParserOptions, Element, DOMNode } from "html-react-parser";
 import AccordionItem from "@/components/Asciidoc/AccordionItem";
@@ -19,7 +19,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       if (!(node instanceof Element)) {
         return undefined;
       }
-      
+
       // Transform <a> tags
       if (node.name === "a" && node.attribs) {
         let isExternal = false;
@@ -51,8 +51,8 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
 
       // Transform <i> tags
       if (
-        node.name === "i" && 
-        node.attribs?.class && 
+        node.name === "i" &&
+        node.attribs?.class &&
         node.attribs.class.includes("fa-docker")
       ) {
         return <i className={node.attribs.class.replace("fa", "fab")} />;
@@ -78,14 +78,14 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       ) {
         // Get the ul element class="sectlevel1"
         const tocList = node.children.find(
-          (child) => 
-            child instanceof Element && 
+          (child) =>
+            child instanceof Element &&
             child.attribs &&
             child.attribs.class &&
             typeof child.attribs.class === 'string' &&
             child.attribs.class.includes("sectlevel1")
         ) as Element | undefined;
-        
+
         return (
           <div className="my-6 rounded-lg shadow-md overflow-hidden border border-gray-300 dark:border-gray-700">
             <details className="group">
@@ -124,15 +124,15 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       // Transform <details> and <summary> tags into Accordion
       if (node.name === "details") {
         const summary = node.children.find(
-          (child) => 
-            child instanceof Element && 
+          (child) =>
+            child instanceof Element &&
             child.name === "summary"
         ) as Element | undefined;
-        
-        const summaryContent = summary 
+
+        const summaryContent = summary
           ? domToReact(summary.children as DOMNode[], options)
           : "Details";
-          
+
         const detailsContent = node.children.filter(
           child => !(child instanceof Element && child.name === "summary")
         );

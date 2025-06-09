@@ -70,6 +70,23 @@ vi.mock('next-intl', () => ({
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
+vi.mock("@/i18n/navigation", () => ({
+  redirect: vi.fn(),
+  Link: ({
+    href,
+    children,
+    ...props
+  }: {
+    href: string;
+    children: React.ReactNode;
+    [key: string]: any;
+  }) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  ),
+}));
+
 type SwiperProps = {
   children: React.ReactNode
 }
@@ -226,6 +243,7 @@ Object.defineProperty(window, 'localStorage', {
  * This prevents the "Not implemented: HTMLCanvasElement.prototype.getContext" error
  */
 if (typeof HTMLCanvasElement !== 'undefined') {
+  // @ts-expect-error - We are mocking getContext
   HTMLCanvasElement.prototype.getContext = vi.fn(() => ({
     fillRect: vi.fn(),
     clearRect: vi.fn(),

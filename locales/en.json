@@ -12,7 +12,7 @@
   },
   "PowerOfTemurin": {
     "title": "The Power of Eclipse Temurin",
-    "description": "OpenJDK Based: Eclipse Temurin offer high-performance, cross-platform, open source Java™ Runtimes binaries that are enterprise-ready and Java SE TCK certified and AQAvit verified for general use in the Java Ecosystem.",
+    "description": "OpenJDK Based: Eclipse Temurin offers high-performance, cross-platform, open source Java™ Runtimes binaries that are enterprise-ready and Java SE TCK certified and AQAvit verified for general use in the Java Ecosystem.",
     "button": "Business Benefits",
     "benefits": {
       "performance": {
@@ -101,6 +101,15 @@
     "table-of-contents": "Table of Contents",
     "warn-default-locale": "This page is the <englishVersionLink>English version</englishVersionLink> because it is not available in your language. Please help us by translating this page into your language. See our <translationGuideLink>translation guide</translationGuideLink> for more information.",
     "warn-outdated": "This localized page is based on a <previousEnglishVersionLink>previous version of the English page</previousEnglishVersionLink> and might be inaccurate. Please help us by updating this page to match the <lastEnglishVersionLink>latest version of the English page</lastEnglishVersionLink>. See our <translationGuideLink>translation guide</translationGuideLink> for more information."
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "Latest news and updates",
+    "subtitle": "Follow the latest updates from the Eclipse Adoptium Project",
+    "see-all-news": "See all news"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "Discover all our projects",
+    "description": "Eclipse Adoptium provides runtime binaries that are high performance, enterprise-caliber, cross-platform, open-source licensed, Java SE TCK-tested and compliant for general use across the Java ecosystem. Eclipse Adoptium also provides artifacts including open-source infrastructure as code, a comprehensive continuous integration build and test farm, and extensive quality assurance tests. These artifacts may be used by Eclipse Adoptium projects and other runtime technology builders to ensure the provision of secure, Java SE TCK-tested and compliant, production-ready runtimes."
   },
   "LogoCarousel": {
     "title": "Temurin is trusted by millions, including these leading adopters:"

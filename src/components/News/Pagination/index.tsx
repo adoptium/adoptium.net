@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface PaginationProps {
@@ -92,9 +92,8 @@ const Pagination: React.FC<PaginationProps> = ({
             ) : (
               <Link key={index} href={createPageLink(page as number)}>
                 <p
-                  className={`tab-button-text mb-0 cursor-pointer ${
-                    page === currentPage ? "font-bold text-pink" : ""
-                  }`}
+                  className={`tab-button-text mb-0 cursor-pointer ${page === currentPage ? "font-bold text-pink" : ""
+                    }`}
                 >
                   {page}
                 </p>

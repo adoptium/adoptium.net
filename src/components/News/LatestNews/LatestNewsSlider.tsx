@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef, useEffect } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import SwiperCore from "swiper"
 import { Navigation } from "swiper/modules"

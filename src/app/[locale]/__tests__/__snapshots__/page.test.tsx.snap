@@ -947,7 +947,7 @@ exports[`Index page > renders correctly 1`] = `
         <h2
           class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
         >
-          Discover all our projects
+          Text
         </h2>
       </div>
       <div
@@ -956,7 +956,7 @@ exports[`Index page > renders correctly 1`] = `
         <p
           class="mt-6 max-w-2xl mb-0 text-base leading-6 text-lightgrey text-center md:text-justify md:[text-align-last:center]"
         >
-          Eclipse Adoptium provides runtime binaries that are high performance, enterprise-caliber, cross-platform, open-source licensed, Java SE TCK-tested and compliant for general use across the Java ecosystem. Eclipse Adoptium also provides artifacts including open-source infrastructure as code, a comprehensive continuous integration build and test farm, and extensive quality assurance tests. These artifacts may be used by Eclipse Adoptium projects and other runtime technology builders to ensure the provision of secure, Java SE TCK-tested and compliant, production-ready runtimes.
+          Text
         </p>
       </div>
       <div
