@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { formatDate } from "@/utils/markdown"
+import { formatDate } from '@/utils/date'
 import { sanitizeString } from "@/utils/sanitize"
 
 interface EventCardProps {

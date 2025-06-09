@@ -5,18 +5,11 @@ import WGProjects from "@/components/WGProjects"
 import ContactUs from "@/components/ContactUs"
 import WaysToSupport from "@/components/WaysToSupport"
 import Testimonials from "@/components/Testimonials"
+import LatestNews from '@/components/News/LatestNews';
 
 export const metadata: Metadata = {
   title: "What We Do",
   description: "Adoptium champions open-source Java solutions, empowering businesses with cutting-edge technology and collaborative innovation.",
-}
-
-const LatestNews = () => {
-    return (
-        <div className="w-full h-[500px] flex items-center justify-center">
-            <h1 className="text-2xl font-bold">TODO - implement LatestNews</h1>
-        </div>
-    );
 }
 
 export default function WhatWeDoPage() {
