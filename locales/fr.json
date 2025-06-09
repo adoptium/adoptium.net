@@ -110,5 +110,8 @@
   "WGProjects": {
     "discover-all-our-projects": "Découvrez tous nos projets",
     "description": "Eclipse Adoptium fournit des binaires d'exécution haute performance, de niveau entreprise, multiplateformes, sous licence open source, testés et conformes au TCK de Java SE pour une utilisation générale dans l'écosystème Java. Eclipse Adoptium fournit également des artefacts tels que de l'infrastructure en tant que code open source, une ferme complète d'intégration continue pour la construction et les tests, ainsi que de nombreux tests d'assurance qualité. Ces artefacts peuvent être utilisés par les projets Eclipse Adoptium ou par d'autres fournisseurs de technologies d'exécution afin d'assurer des runtimes sécurisés, testés avec le TCK de Java SE et prêts pour la production."
+  },
+  "LogoCarousel": {
+    "title": "Temurin est approuvé par des millions d'utilisateurs, y compris ces principaux adopteurs :"
   }
 }

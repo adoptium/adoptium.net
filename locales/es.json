@@ -110,5 +110,8 @@
   "WGProjects": {
     "discover-all-our-projects": "Descubre todos nuestros proyectos",
     "description": "Eclipse Adoptium proporciona binarios de tiempo de ejecución que son de alto rendimiento, de nivel empresarial, multiplataforma, con licencia de código abierto, probados y compatibles con el TCK de Java SE para su uso general en todo el ecosistema Java. Eclipse Adoptium también proporciona artefactos como infraestructura como código de código abierto, un sistema integral de integración continua y pruebas, y pruebas exhaustivas de aseguramiento de calidad. Estos artefactos pueden ser utilizados por los proyectos de Eclipse Adoptium y otros desarrolladores de tecnologías de tiempo de ejecución para garantizar entornos seguros, probados con el TCK de Java SE y listos para producción."
+  },
+  "LogoCarousel": {
+    "title": "Temurin cuenta con la confianza de millones de usuarios, incluidos estos líderes en adopción:"
   }
 }

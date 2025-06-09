@@ -110,5 +110,8 @@
   "WGProjects": {
     "discover-all-our-projects": "Entdecken Sie all unsere Projekte",
     "description": "Eclipse Adoptium bietet Laufzeit-Binärdateien, die leistungsstark, unternehmensgerecht, plattformübergreifend, Open-Source-lizenziert sowie durch den Java SE TCK getestet und konform für den allgemeinen Einsatz im Java-Ökosystem sind. Eclipse Adoptium stellt außerdem Artefakte bereit, darunter Open-Source-Infrastruktur als Code, eine umfassende Continuous-Integration-Build- und Testfarm sowie umfangreiche Qualitätssicherungstests. Diese Artefakte können von Eclipse Adoptium-Projekten und anderen Anbietern von Laufzeittechnologien genutzt werden, um sichere, Java SE TCK-konforme, produktionsreife Laufzeiten bereitzustellen."
+  },
+  "LogoCarousel": {
+    "title": "Temurin wird von Millionen Nutzern vertraut – darunter diese führenden Anwender:"
   }
 }

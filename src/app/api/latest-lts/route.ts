@@ -1,21 +1,25 @@
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export async function GET() {
   try {
-    // Currently, we're hardcoding to return Java 21 as the latest LTS
-    // In a production environment, this would ideally be fetched from an API
-    // or a database that's regularly updated
-    const data = {
-      version: 21
-    };
-    
+    const response = await fetch(
+      "https://api.adoptium.net/v3/info/available_releases"
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const releases = await response.json();
+    const data = { version: releases.most_recent_lts };
     return Response.json({ mostRecentLts: data });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Failed to fetch latest LTS version' + error }), {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    return new Response(
+      JSON.stringify({ error: "Failed to fetch latest LTS version" + error }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   }
 }

@@ -1,10 +1,15 @@
-import React from "react"
+import React, { ReactElement } from "react"
+
 import Image from "next/image"
 
 interface DataItem {
   image: string;
   title: string;
-  description: string;
+  description: ReactElement | string;
+  subtext?: {
+    title: string;
+    amount: string;
+  };
 }
 
 const UiMobileScroll = ({ data }: { data: DataItem[] }) => {
@@ -30,7 +35,7 @@ const UiMobileScroll = ({ data }: { data: DataItem[] }) => {
       />
       <div className="flex flex-col flex-1 px-4">
         <h1 className="text-xl my-5 font-bold">{item.title}</h1>
-        <p className="text-base text-grey">{item.description}</p>
+        <div className="text-base text-grey">{item.description}</div>
       </div>
     </div>
   ))

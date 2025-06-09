@@ -110,5 +110,8 @@
   "WGProjects": {
     "discover-all-our-projects": "探索我们所有的项目",
     "description": "Eclipse Adoptium 提供高性能、企业级、跨平台、开源许可的运行时二进制文件，这些文件已通过 Java SE TCK 测试并符合规范，可广泛应用于 Java 生态系统中。Eclipse Adoptium 还提供包括开源基础设施即代码、全面的持续集成构建和测试环境以及广泛的质量保障测试等制品。这些制品可供 Eclipse Adoptium 项目及其他运行时技术构建者使用，以提供安全、通过 Java SE TCK 测试并符合规范、可用于生产环境的运行时。"
+  },
+  "LogoCarousel": {
+    "title": "Temurin 深受数百万用户信赖，包括以下主要采用者："
   }
 }

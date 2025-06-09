@@ -1,6 +1,6 @@
 # Internationalization (i18n) Guide
 
-This folder contains all translation files used for internationalization in the Adoptium website. The project uses [next-intl](https://next-intl-docs.vercel.app/) for managing translations.
+This folder contains all translation files used for internationalization in the Adoptium site. The project uses [next-intl](https://next-intl-docs.vercel.app/) for managing translations.
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ Each language is represented by a JSON file following the [BCP 47](https://en.wi
 
 ## How Localization Works
 
-1. The website detects the user's locale from the URL path (e.g., `/de/download` for German)
+1. The site detects the user's locale from the URL path (e.g., `/de/download` for German)
 2. The appropriate locale file is loaded based on the URL
 3. Translation keys are looked up in the locale file
 4. If a translation is missing, it falls back to English (`en.json`)
