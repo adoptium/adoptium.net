@@ -80,10 +80,11 @@ const navigation: NavItem[] = [
 const MobileLink: React.FC<{
   href?: string
   name: string
-}> = ({ href, name }) => {
+  activePaths: Set<string>
+}> = ({ href, name, activePaths }) => {
   const commonClasses = classNames(
     "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
-    isActivePath(href) ? "text-rose-600" : "",
+    href && activePaths.has(href) ? "text-rose-600" : "",
   )
 
   if (href && href.startsWith("/")) {
@@ -107,11 +108,8 @@ const MobileDivider: React.FC = () => (
   <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
 )
 
-function isActivePath(path: string | undefined): boolean {
-  if (!path) return false
-  if (typeof window === "undefined") return false
-
-  const currentPath = window.location.pathname
+function calculateActivePaths(currentPath: string): Set<string> {
+  if (!currentPath) return new Set();
 
   // Remove locale prefix from current path (e.g., /en-GB/docs/faq -> /docs/faq)
   const removeLocalePrefix = (pathname: string): string => {
@@ -120,44 +118,42 @@ function isActivePath(path: string | undefined): boolean {
     return pathname.replace(localePattern, '/')
   }
 
-  const pathWithoutLocale = removeLocalePrefix(currentPath)
-  const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path
-  const normalizedCurrentPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale
+  const pathWithoutLocale = removeLocalePrefix(currentPath);
+  const normalizedCurrentPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale;
 
   // Get all navigation paths to find the most specific match
-  const allPaths: string[] = []
+  const allPaths: { path: string, normalizedPath: string }[] = [];
 
   navigation.forEach(item => {
     if (item.href) {
-      allPaths.push(item.href)
+      const normalizedPath = item.href.endsWith('/') ? item.href.slice(0, -1) : item.href;
+      allPaths.push({ path: item.href, normalizedPath });
     }
     if (item.children) {
       item.children.forEach(child => {
         if (child.href) {
-          allPaths.push(child.href)
+          const normalizedPath = child.href.endsWith('/') ? child.href.slice(0, -1) : child.href;
+          allPaths.push({ path: child.href, normalizedPath });
         }
       })
     }
-  })
+  });
 
   // Find all matching paths
-  const matchingPaths = allPaths.filter(navPath => {
-    const normalizedNavPath = navPath.endsWith('/') ? navPath.slice(0, -1) : navPath
-    return normalizedCurrentPath === normalizedNavPath ||
-      normalizedCurrentPath.startsWith(normalizedNavPath + '/')
-  })
+  const matchingPaths = allPaths.filter(({ normalizedPath }) =>
+    normalizedCurrentPath === normalizedPath || normalizedCurrentPath.startsWith(normalizedPath + '/')
+  );
 
-  // If no matches, return false
-  if (matchingPaths.length === 0) return false
+  // If no matches, return empty set
+  if (matchingPaths.length === 0) return new Set();
 
   // Find the longest (most specific) matching path
   const longestMatch = matchingPaths.reduce((longest, current) =>
-    current.length > longest.length ? current : longest
-  )
+    current.normalizedPath.length > longest.normalizedPath.length ? current : longest
+  );
 
-  // Only highlight if this path is the most specific match
-  const normalizedLongestMatch = longestMatch.endsWith('/') ? longestMatch.slice(0, -1) : longestMatch
-  return normalizedPath === normalizedLongestMatch
+  // Only highlight the most specific match
+  return new Set([longestMatch.path]);
 }
 
 const NavBar = ({ locale }: { locale: string }) => {
@@ -165,12 +161,22 @@ const NavBar = ({ locale }: { locale: string }) => {
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [showAnnouncement, setShowAnnouncement] = useState(false)
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
+  // To prevent hydration mismatch, we'll start with no active paths
+  const [activePaths, setActivePaths] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     if (!mobileMenuOpen) {
       setShowLastSlide(false)
     }
   }, [mobileMenuOpen])
+
+  // Calculate active paths on client-side only after initial render
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const paths = calculateActivePaths(window.location.pathname);
+      setActivePaths(paths);
+    }
+  }, []);
 
   const openLastSlideHandler = (item: NavItem) => {
     setShowLastSlide(true)
@@ -193,8 +199,8 @@ const NavBar = ({ locale }: { locale: string }) => {
   return (
     <header
       className={`sticky inset-x-0 top-0 z-50 ${scrolled
-          ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl"
-          : ""
+        ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl"
+        : ""
         }`}
     >
       {/* Container div to center the nav content */}
@@ -250,6 +256,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                 <MobileLink
                                   href={child.href}
                                   name={child.name}
+                                  activePaths={activePaths}
                                 />
                               )}
                             </MenuItem>
@@ -264,7 +271,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                     href={item.href}
                     className={classNames(
                       "text-sm font-semibold leading-6 text-white-900",
-                      isActivePath(item.href) ? "text-rose-600" : "",
+                      item.href && activePaths.has(item.href) ? "text-rose-600" : ""
                     )}
                   >
                     {item.name}
@@ -275,7 +282,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                     href={item.href}
                     className={classNames(
                       "text-sm font-semibold leading-6 text-white-900",
-                      isActivePath(item.href) ? "text-rose-600" : "",
+                      item.href && activePaths.has(item.href) ? "text-rose-600" : ""
                     )}
                   >
                     {item.name}
@@ -383,6 +390,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                         <MobileLink
                           href={item.href}
                           name={item.name}
+                          activePaths={activePaths}
                         />
                       </div>
                     )}
@@ -445,6 +453,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                         <MobileLink
                           href={item.href}
                           name={item.name}
+                          activePaths={activePaths}
                         />
                       </div>
                       {activeLastSlide.children &&
@@ -456,19 +465,48 @@ const NavBar = ({ locale }: { locale: string }) => {
               </div>
             </div>
           </div>
-          <div>
-            <div className="py-6">
-              <Link
-                href="/contact"
-                className="bg-primary w-full text-base flex justify-center items-center text-white font-bold h-[48px] rounded-full"
-              >
-                Contact Us
-              </Link>
+
+          {/* Social media and announcement */}
+          {!showLastSlide && (
+            <div className="border-t-[1px] border-[#3E3355] space-y-3 pt-6">
+              <span className="text-sm text-center">Find us on</span>
+              <div className="flex flex-wrap items-center gap-4 justify-center mt-3">
+                <IconSocial
+                  link="https://twitter.com/adoptium"
+                  className="text-2xl"
+                  icon="twitter"
+                />
+                <IconSocial
+                  link="https://www.youtube.com/c/EclipseAdoptium"
+                  className="text-2xl"
+                  icon="youtube"
+                />
+                <IconSocial
+                  link="https://github.com/adoptium"
+                  className="text-2xl"
+                  icon="github"
+                />
+                <IconSocial
+                  link="https://adoptium.slack.com/"
+                  className="text-2xl"
+                  icon="slack"
+                />
+                <IconSocial
+                  link="https://www.linkedin.com/showcase/adoptium/"
+                  className="text-2xl"
+                  icon="linkedin"
+                />
+              </div>
+              <div className="sm:hidden w-full mt-6">
+                <LanguageSelector locale={locale} />
+              </div>
+              {showAnnouncement && (
+                <div className="text-center text-sm font-light">
+                  No new announcements at this time
+                </div>
+              )}
             </div>
-            <ul className="flex mb-0 space-x-8 justify-center">
-              <IconSocial />
-            </ul>
-          </div>
+          )}
         </DialogPanel>
       </Dialog>
     </header>

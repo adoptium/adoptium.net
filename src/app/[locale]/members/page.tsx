@@ -1,6 +1,6 @@
 import React from "react"
 import { Metadata } from "next"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import PageHeader from "@/components/Common/PageHeader"
 import ContactUs from "@/components/ContactUs"
 import Logos, { LogoType } from "@/components/Logos"

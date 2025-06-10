@@ -113,5 +113,10 @@
   },
   "LogoCarousel": {
     "title": "Temurin is trusted by millions, including these leading adopters:"
+  },
+  "ChecksumModal": {
+    "compre-the-checksum": "Compare the checksum below with the file you downloaded to ensure it's complete and unmodified.",
+    "verify-using": "Verify using:",
+    "replace-file": "Replace \"file\" with the actual filename you downloaded"
   }
 }
