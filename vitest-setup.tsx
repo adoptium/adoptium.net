@@ -164,7 +164,7 @@ vi.stubGlobal("IntersectionObserver", IntersectionObserverMock)
 // Mock fetch API to handle network requests
 global.fetch = vi.fn().mockImplementation((url) => {
   // Mock response for LTS version API
-  if (url === '/api/latest-lts' || url.toString().includes('/api/latest-lts')) {
+  if (url === '/api/available-releases' || url.toString().includes('/api/available-releases')) {
     return Promise.resolve({
       ok: true,
       json: () => Promise.resolve({ version: '17.0.8+7' }),

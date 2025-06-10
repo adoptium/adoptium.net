@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VersionSelector component > renders correctly 1`] = `
+<div>
+  <div
+    class="w-full max-w-[1264px] mx-auto "
+  >
+    <div
+      class="relative min-w-full w-full overflow-auto md:overflow-visible"
+    >
+      <span
+        class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-0 z-[-1]"
+      />
+      <div
+        class="flex space-x-10 whitespace-nowrap lg:justify-center py-3"
+      >
+        <button>
+          <span
+            class="py-3 w-full text-base font-normal leading-6 
+            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
+          >
+            All Versions
+          </span>
+        </button>
+        <button>
+          <span
+            class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+          >
+            JDK 
+            8
+          </span>
+        </button>
+        <button>
+          <span
+            class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+          >
+            JDK 
+            11
+          </span>
+        </button>
+        <button>
+          <span
+            class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+          >
+            JDK 
+            17
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

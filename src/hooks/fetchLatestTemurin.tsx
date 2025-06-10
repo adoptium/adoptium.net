@@ -1,28 +1,10 @@
 'use client'
 
+import { Binary, VersionMetaData } from "@/types/temurin"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
 const baseUrl = "https://api.adoptium.net/v3"
-
-export interface VersionMetaData {
-  major: number
-  minor: number
-  security: number
-  pre?: string
-  patch?: number
-  build: number
-  optional?: string
-  adopt_build_number?: number
-  openjdk_version: string
-  semver: string
-}
-
-export interface Binary {
-  release_name: string
-  link: string
-  checksum: string
-}
 
 export interface LatestTemurin {
   download_count: number
@@ -85,7 +67,7 @@ export function useFetchLatestForOS(
     if (!os || !isVisible) {
       return;
     }
-    
+
     const fetchBinary = async () => {
       const url = `${baseUrl}/assets/feature_releases/${version}/ga?os=${os}&architecture=${arch}&image_type=jdk&jvm_impl=hotspot&page_size=1&vendor=eclipse`
 
@@ -101,10 +83,14 @@ export function useFetchLatestForOS(
           binary_checksum = json.binaries[0].installer.checksum;
         }
 
-        const binary = {
+        const packageData = json.binaries[0].package;
+        const binary: Binary = {
           release_name: json.release_name,
           link: binary_link,
           checksum: binary_checksum,
+          type: json.binaries[0].image_type,
+          size: packageData.size,
+          extension: packageData.name.split('.').pop() || ''
         };
         setBinary(binary);
       } catch {

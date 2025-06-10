@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")

@@ -9,7 +9,7 @@ const HeroSection = () => {
   useEffect(() => {
     const fetchLatestLTS = async () => {
       try {
-        const response = await fetch('/api/latest-lts');
+        const response = await fetch('/api/available-releases');
         const data = await response.json();
         if (data.mostRecentLts && data.mostRecentLts.version) {
           setLatestLTS(data.mostRecentLts.version);
