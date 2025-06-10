@@ -21,29 +21,41 @@ export default function CommonSelector({
   selectorUpdater,
 }: ListBoxSelectProps) {
 
-  const initialSelected = useMemo(() => defaultValue ? defaultValue : list[0], [defaultValue, list])
-  const [selected, setSelected] = useState<ListItem>(initialSelected)
+  const initialSelected = useMemo(() => {
+    // First try to use defaultValue if provided
+    if (defaultValue) return defaultValue
+    // If list has items, use the first one as default
+    if (list && list.length > 0) return list[0]
+    // Fallback to a safe default
+    return { name: "Select an option", value: "" }
+  }, [defaultValue, list])
+
+  const [selected, setSelected] = useState<ListItem | null>(initialSelected)
 
   // Update selected when defaultValue changes (controlled from parent)
   useEffect(() => {
-    if (defaultValue) {
+    if (defaultValue && selected && defaultValue.value !== selected.value) {
+      setSelected(defaultValue)
+    } else if (defaultValue && !selected) {
       setSelected(defaultValue)
     }
-  }, [defaultValue])
+  }, [defaultValue, selected])
 
   const handleChange = (newValue: ListItem) => {
     setSelected(newValue)
-    selectorUpdater(newValue.value)
+    if (newValue && newValue.value !== undefined) {
+      selectorUpdater(newValue.value)
+    }
   }
 
-  if (!selected || list.length === 0) return
+  if (list.length === 0) return null
 
   return (
     <Listbox value={selected} onChange={handleChange}>
       <div className="relative mt-1">
         <ListboxButton className="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
           <span className="flex items-center justify-between text-nowrap">
-            {selected.name}
+            {selected?.name || "Select an option"}
           </span>
           <span>
             <FaChevronDown />

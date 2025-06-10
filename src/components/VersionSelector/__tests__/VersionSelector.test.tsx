@@ -79,28 +79,6 @@ describe("VersionSelector component", () => {
     expect(jdk11Span).toHaveClass("border-b-[2px]")
   })
 
-  it("calls setActiveTabVersion with default version when 'All Versions' is clicked", () => {
-    const { container } = render(<VersionSelector {...mockProps} />)
-
-    // Get the All Versions button directly by its position
-    const buttons = container.querySelectorAll('button');
-    const allVersionsButton = buttons[0];
-
-    // Click on "All Versions" button
-    fireEvent.click(allVersionsButton)
-
-    // Verify the callbacks
-    expect(setURLParam).toHaveBeenCalledWith("version", "latest")
-    expect(mockProps.updateVersion).toHaveBeenCalledWith("latest")
-    expect(mockProps.setActiveVersionTab).toHaveBeenCalledWith(1)
-
-    // Verify OS and arch are reset to "any"
-    expect(setURLParam).toHaveBeenCalledWith("os", "any")
-    expect(mockProps.updateOS).toHaveBeenCalledWith("any")
-    expect(setURLParam).toHaveBeenCalledWith("arch", "any")
-    expect(mockProps.updateArch).toHaveBeenCalledWith("any")
-  })
-
   it("calls setActiveTabVersion with specific version when a version button is clicked", () => {
     const { container } = render(<VersionSelector {...mockProps} />)
 

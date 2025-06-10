@@ -11,12 +11,15 @@ export interface TemurinReleaseAssets extends Array<ReleaseAsset> {
 const baseUrl = "https://api.adoptium.net/v3"
 
 export async function loadLatestAssets(
-  version: number,
+  version: string | number,
   os: string,
   architecture: string,
-  packageType: string,
 ): Promise<TemurinReleaseAssets> {
-  const url = new URL(`${baseUrl}/assets/latest/${version}/hotspot?`)
+  const versionToUse = version === 'any' ?
+    'feature' : // Use 'feature' to get all versions
+    typeof version === 'string' ? parseInt(version, 10) : version
+
+  const url = new URL(`${baseUrl}/assets/latest/${versionToUse}/hotspot?`)
 
   if (os !== "any") {
     url.searchParams.append("os", os)
@@ -28,7 +31,7 @@ export async function loadLatestAssets(
   // NOTE: Do not filter the query by 'image_type' because we need to have 'sources
   // to display the Release Notes and source download (cf src/components/TemurinDownloadTable/index.tsx)
 
-  let pkgsFound: TemurinRelease[] = await axios
+  const pkgsFound: TemurinRelease[] = await axios
     .get(url.toString())
     .then(function (response) {
       return response.data
@@ -36,17 +39,6 @@ export async function loadLatestAssets(
     .catch(function () {
       return []
     })
-
-  // Filter JDK/JRE if necessary
-  if (packageType === "jdk") {
-    pkgsFound = pkgsFound.filter(
-      (pkg: TemurinRelease) => pkg.binary.image_type !== "jre",
-    )
-  } else if (packageType === "jre") {
-    pkgsFound = pkgsFound.filter(
-      (pkg: TemurinRelease) => pkg.binary.image_type !== "jdk",
-    )
-  }
 
   return renderReleases(pkgsFound)
 }

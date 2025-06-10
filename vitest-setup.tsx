@@ -184,6 +184,17 @@ global.fetch = vi.fn().mockImplementation((url) => {
     });
   }
 
+  // Mock response for download counter API route
+  if (url === '/api/download-counter' ||
+    url.toString().includes('/api/download-counter')) {
+    return Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        total: 1234567890
+      }),
+    });
+  }
+
   // Default mock response
   return Promise.resolve({
     ok: true,

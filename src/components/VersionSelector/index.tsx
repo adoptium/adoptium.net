@@ -28,9 +28,8 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({
 
     // If All Versions tab is clicked (tab 1)
     if (newTab === 1) {
-      // Use latest version when All Versions is clicked
-      setURLParam("version", "latest")
-      updateVersion("latest")
+      // For All Versions tab, we'll preserve the current version
+      // Don't need to update version in URL, parent component will handle this
 
       // Reset OS and arch to "any"
       setURLParam("os", "any")
