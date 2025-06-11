@@ -125,6 +125,7 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
         }, 0);
 
         // This effect should only run once when we have all the data loaded
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [versionOptions.length > 0, latestLTS, osOptions.length, architectureOptions.length])
 
     // Handle changes for each filter

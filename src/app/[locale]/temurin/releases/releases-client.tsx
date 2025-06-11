@@ -21,7 +21,7 @@ export default function TemurinReleasesPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   // Filter state
-  const [selectedVersion, setSelectedVersion] = useState<string>("any")
+  const [selectedVersion, setSelectedVersion] = useState<string>("")
   const [selectedOS, setSelectedOS] = useState("any")
   const [selectedArch, setSelectedArch] = useState("any")
 
@@ -131,6 +131,7 @@ export default function TemurinReleasesPage() {
       setSelectedVersion(initialVersion)
     }
     // Re-run when latestLTS changes or ltsVersions updates
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestLTS, ltsVersions.length, searchParams])
 
   // Listen for URL parameter changes and update filters accordingly
@@ -209,6 +210,7 @@ export default function TemurinReleasesPage() {
       // Fetch with new parameters
       fetchReleases(version, os, arch);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, ltsVersions, hasInitialFetch, isFilterChange]);
 
   const fetchReleases = async (

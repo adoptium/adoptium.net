@@ -27,7 +27,7 @@ const osIcons = {
     solaris: SolarisIcon,
 }
 
-const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
+const ReleaseResults: React.FC<ReleaseResultsProps> = ({
     releases,
     isLoading,
     openModalWithChecksum,
@@ -379,4 +379,4 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
     );
 };
 
-export default ReleaseResultsImproved;
+export default ReleaseResults;
