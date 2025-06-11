@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslations, useLocale } from "next-intl"
 import { ReleaseAsset } from "@/types/temurin"
 import { FaWindows, FaApple } from "react-icons/fa"
 import { FcLinux } from "react-icons/fc"
@@ -32,6 +33,8 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
     isLoading,
     openModalWithChecksum,
 }) => {
+    const t = useTranslations("Temurin.Releases.ReleaseResults");
+    const locale = useLocale();
     // Track selected architecture for each OS
     const [selectedArchitectures, setSelectedArchitectures] = useState<Record<string, string>>({});
 
@@ -230,7 +233,7 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
                                 {/* Release details header */}
                                 <h5 className="pb-6 border-b-[1px] text-2xl font-semibold border-[#3E3355]">
                                     {`Temurin ${releaseGroup[0]?.release_name || ""} - ${releaseGroup[0]?.release_date
-                                        ? new Date(releaseGroup[0].release_date).toLocaleDateString(undefined, {
+                                        ? new Date(releaseGroup[0].release_date).toLocaleDateString(locale, {
                                             day: "2-digit",
                                             month: "2-digit",
                                             year: "numeric",
@@ -270,7 +273,7 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
                                                             style={{ color: "rgb(83, 127, 185)" }}
                                                             data-toggle="tooltip"
                                                             data-placement="bottom"
-                                                            title="This build is JCK certified"
+                                                            title={t('this-build-is-jck-certified')}
                                                         />
                                                         <Link href="/aqavit/">
                                                             <Image
@@ -280,7 +283,7 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
                                                                 alt="AQAvit logo"
                                                                 data-toggle="tooltip"
                                                                 data-placement="bottom"
-                                                                title="This build is AQAvit Verified"
+                                                                title={t('this-build-is-aqavit-verified')}
                                                                 className="img-fluid mb-0"
                                                             />
                                                         </Link>
@@ -297,7 +300,7 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
                                                                 <BsCopy size={20} />
                                                             </a>
                                                         </span>
-                                                        <h5 className="text-base font-normal">Checksum</h5>
+                                                        <h5 className="text-base font-normal">{t('checksum')}</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -337,7 +340,7 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
                                                             style={{ color: "rgb(83, 127, 185)" }}
                                                             data-toggle="tooltip"
                                                             data-placement="bottom"
-                                                            title="This build is JCK certified"
+                                                            title={t('this-build-is-jck-certified')}
                                                         />
                                                         <Link href="/aqavit/">
                                                             <Image
@@ -364,7 +367,7 @@ const ReleaseResultsImproved: React.FC<ReleaseResultsProps> = ({
                                                                 <BsCopy size={20} />
                                                             </a>
                                                         </span>
-                                                        <h5 className="text-base font-normal">Checksum</h5>
+                                                        <h5 className="text-base font-normal">{t('checksum')}</h5>
                                                     </div>
                                                 </div>
                                             </div>

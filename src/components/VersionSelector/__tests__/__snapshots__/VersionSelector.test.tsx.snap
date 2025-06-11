@@ -14,7 +14,9 @@ exports[`VersionSelector component > renders correctly 1`] = `
       <div
         class="flex space-x-10 whitespace-nowrap lg:justify-center py-3"
       >
-        <button>
+        <button
+          data-testid="version-tab"
+        >
           <span
             class="py-3 w-full text-base font-normal leading-6 
             outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
@@ -22,7 +24,9 @@ exports[`VersionSelector component > renders correctly 1`] = `
             All Versions
           </span>
         </button>
-        <button>
+        <button
+          data-testid="version-tab"
+        >
           <span
             class="py-3 w-full text-base font-normal leading-6
             outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
@@ -31,7 +35,9 @@ exports[`VersionSelector component > renders correctly 1`] = `
             8
           </span>
         </button>
-        <button>
+        <button
+          data-testid="version-tab"
+        >
           <span
             class="py-3 w-full text-base font-normal leading-6
             outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
@@ -40,7 +46,9 @@ exports[`VersionSelector component > renders correctly 1`] = `
             11
           </span>
         </button>
-        <button>
+        <button
+          data-testid="version-tab"
+        >
           <span
             class="py-3 w-full text-base font-normal leading-6
             outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"

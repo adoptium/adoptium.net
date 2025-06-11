@@ -113,5 +113,54 @@
   },
   "LogoCarousel": {
     "title": "Temurin 深受数百万用户信赖，包括以下主要采用者："
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "请将下面的校验和与您下载的文件进行比对，以确保其完整且未被修改。",
+    "verify-using": "使用以下命令验证：",
+    "replace-file": "将 \"file\" 替换为您实际下载的文件名",
+    "close": "关闭",
+    "copied": "已复制",
+    "copy": "复制"
+  },
+  "ReleaseFilters": {
+    "reset-to-defaults": "重置为默认值",
+    "loading-versions": "正在加载版本...",
+    "filter-releases": "筛选版本",
+    "version": "版本",
+    "operating-system": "操作系统",
+    "architecture": "架构"
+  },
+  "TemurinReleases": {
+    "title": "下载 Temurin™ JDK",
+    "latest-releases": "最新版本",
+    "description": "选择版本、软件包类型和 JDK/JRE，下载相应的二进制文件。"
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "重置为默认值",
+        "loading-versions": "正在加载版本...",
+        "filter-releases": "筛选版本",
+        "version": "版本",
+        "operating-system": "操作系统",
+        "architecture": "架构",
+        "any-os": "任意操作系统",
+        "any-architecture": "任意架构"
+      },
+      "ReleaseLinks": {
+        "release-notes": "发行说明",
+        "installation-guide": "安装指南",
+        "supported-platforms": "支持的平台",
+        "source-code": "源代码"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "此构建已通过 JCK 认证",
+        "this-build-is-aqavit-verified": "此构建已通过 AQAvit 验证",
+        "checksum": "校验和"
+      }
+    },
+    "VersionSelector": {
+      "all-versions": "所有版本"
+    }
   }
 }

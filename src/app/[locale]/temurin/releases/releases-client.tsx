@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 import { loadLatestAssets } from "@/hooks"
 import { useSearchParams } from "next/navigation"
 import { ReleaseAsset } from "@/types/temurin"
@@ -15,6 +16,7 @@ import VersionSelector from "@/components/VersionSelector"
 import ChecksumModal from "@/components/ChecksumModal"
 
 export default function TemurinReleasesPage() {
+  const t = useTranslations("TemurinReleases")
   const [modalOpen, setModalOpen] = useState(false)
   const [currentChecksum, setCurrentChecksum] = useState("")
   const [releases, setReleases] = useState<ReleaseAsset[]>([])
@@ -260,9 +262,9 @@ export default function TemurinReleasesPage() {
   return (
     <div>
       <PageHeader
-        title={"Download Temurin&reg; JDK"}
-        subtitle={"Latest Releases"}
-        description={"Pick a version, package type, JDK/JRE, and download the binaries."}
+        title={t('title')}
+        subtitle={t('latest-releases')}
+        description={t('description')}
       />
 
       <main className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 pb-20">

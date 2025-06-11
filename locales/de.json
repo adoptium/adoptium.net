@@ -113,5 +113,54 @@
   },
   "LogoCarousel": {
     "title": "Temurin wird von Millionen Nutzern vertraut – darunter diese führenden Anwender:"
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "Vergleichen Sie die untenstehende Prüfsumme mit der heruntergeladenen Datei, um sicherzustellen, dass sie vollständig und unverändert ist.",
+    "verify-using": "Verifizieren mit:",
+    "replace-file": "Ersetzen Sie \"file\" durch den tatsächlichen Dateinamen, den Sie heruntergeladen haben",
+    "close": "Schließen",
+    "copied": "Kopiert",
+    "copy": "Kopieren"
+  },
+  "ReleaseFilters": {
+    "reset-to-defaults": "Zurücksetzen auf Standardwerte",
+    "loading-versions": "Versionen werden geladen...",
+    "filter-releases": "Versionen filtern",
+    "version": "Version",
+    "operating-system": "Betriebssystem",
+    "architecture": "Architektur"
+  },
+  "TemurinReleases": {
+    "title": "Temurin™ JDK herunterladen",
+    "latest-releases": "Neueste Versionen",
+    "description": "Wählen Sie eine Version, ein Paketformat, JDK oder JRE und laden Sie die Binärdateien herunter."
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "Zurücksetzen auf Standardwerte",
+        "loading-versions": "Versionen werden geladen...",
+        "filter-releases": "Versionen filtern",
+        "version": "Version",
+        "operating-system": "Betriebssystem",
+        "architecture": "Architektur",
+        "any-os": "Beliebiges Betriebssystem",
+        "any-architecture": "Beliebige Architektur"
+      },
+      "ReleaseLinks": {
+        "release-notes": "Versionshinweise",
+        "installation-guide": "Installationsanleitung",
+        "supported-platforms": "Unterstützte Plattformen",
+        "source-code": "Quellcode"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "Dieser Build ist JCK-zertifiziert",
+        "this-build-is-aqavit-verified": "Dieser Build ist AQAvit-geprüft",
+        "checksum": "Prüfsumme"
+      }
+    },
+    "VersionSelector": {
+      "all-versions": "Alle Versionen"
+    }
   }
 }

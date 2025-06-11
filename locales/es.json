@@ -113,5 +113,54 @@
   },
   "LogoCarousel": {
     "title": "Temurin cuenta con la confianza de millones de usuarios, incluidos estos líderes en adopción:"
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "Compara la suma de verificación a continuación con el archivo que descargaste para asegurarte de que esté completo y sin modificar.",
+    "verify-using": "Verificar usando:",
+    "replace-file": "Reemplaza \"file\" con el nombre real del archivo que descargaste",
+    "close": "Cerrar",
+    "copied": "Copiado",
+    "copy": "Copiar"
+  },
+  "ReleaseFilters": {
+    "reset-to-defaults": "Restablecer valores predeterminados",
+    "loading-versions": "Cargando versiones...",
+    "filter-releases": "Filtrar versiones",
+    "version": "Versión",
+    "operating-system": "Sistema operativo",
+    "architecture": "Arquitectura"
+  },
+  "TemurinReleases": {
+    "title": "Descargar Temurin™ JDK",
+    "latest-releases": "Últimas versiones",
+    "description": "Elige una versión, tipo de paquete, JDK/JRE y descarga los binarios."
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "Restablecer valores predeterminados",
+        "loading-versions": "Cargando versiones...",
+        "filter-releases": "Filtrar versiones",
+        "version": "Versión",
+        "operating-system": "Sistema operativo",
+        "architecture": "Arquitectura",
+        "any-os": "Cualquier sistema operativo",
+        "any-architecture": "Cualquier arquitectura"
+      },
+      "ReleaseLinks": {
+        "release-notes": "Notas de la versión",
+        "installation-guide": "Guía de instalación",
+        "supported-platforms": "Plataformas compatibles",
+        "source-code": "Código fuente"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "Esta compilación está certificada por JCK",
+        "this-build-is-aqavit-verified": "Esta compilación está verificada por AQAvit",
+        "checksum": "Suma de verificación"
+      }
+    },
+    "VersionSelector": {
+      "all-versions": "Todas las versiones"
+    }
   }
 }
