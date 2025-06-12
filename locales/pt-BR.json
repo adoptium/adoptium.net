@@ -113,5 +113,54 @@
   },
   "LogoCarousel": {
     "title": "Temurin é confiável por milhões, incluindo estes principais adotantes:"
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "Compare o checksum abaixo com o arquivo que você baixou para garantir que está completo e não foi modificado.",
+    "verify-using": "Verificar usando:",
+    "replace-file": "Substitua \"file\" pelo nome real do arquivo que você baixou",
+    "close": "Fechar",
+    "copied": "Copiado",
+    "copy": "Copiar"
+  },
+  "ReleaseFilters": {
+    "reset-to-defaults": "Restaurar padrões",
+    "loading-versions": "Carregando versões...",
+    "filter-releases": "Filtrar versões",
+    "version": "Versão",
+    "operating-system": "Sistema operacional",
+    "architecture": "Arquitetura"
+  },
+  "TemurinReleases": {
+    "title": "Baixar Temurin™ JDK",
+    "latest-releases": "Versões mais recentes",
+    "description": "Escolha uma versão, tipo de pacote, JDK/JRE e baixe os binários."
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "Restaurar padrões",
+        "loading-versions": "Carregando versões...",
+        "filter-releases": "Filtrar versões",
+        "version": "Versão",
+        "operating-system": "Sistema operacional",
+        "architecture": "Arquitetura",
+        "any-os": "Qualquer sistema operacional",
+        "any-architecture": "Qualquer arquitetura"
+      },
+      "ReleaseLinks": {
+        "release-notes": "Notas de versão",
+        "installation-guide": "Guia de instalação",
+        "supported-platforms": "Plataformas suportadas",
+        "source-code": "Código-fonte"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "Esta build é certificada pelo JCK",
+        "this-build-is-aqavit-verified": "Esta build é verificada pelo AQAvit",
+        "checksum": "Checksum"
+      }
+    },
+    "VersionSelector": {
+      "all-versions": "Todas as versões"
+    }
   }
 }

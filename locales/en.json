@@ -115,8 +115,44 @@
     "title": "Temurin is trusted by millions, including these leading adopters:"
   },
   "ChecksumModal": {
-    "compre-the-checksum": "Compare the checksum below with the file you downloaded to ensure it's complete and unmodified.",
+    "compare-the-checksum": "Compare the checksum below with the file you downloaded to ensure it's complete and unmodified.",
     "verify-using": "Verify using:",
-    "replace-file": "Replace \"file\" with the actual filename you downloaded"
+    "replace-file": "Replace \"file\" with the actual filename you downloaded",
+    "close": "Close",
+    "copied": "Copied",
+    "copy": "Copy"
+  },
+  "TemurinReleases": {
+    "title": "Download Temurin™ JDK",
+    "latest-releases": "Latest Releases",
+    "description": "Pick a version, package type, JDK/JRE, and download the binaries."
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "Reset to Defaults",
+        "loading-versions": "Loading versions...",
+        "filter-releases": "Filter Releases",
+        "version": "Version",
+        "operating-system": "Operating System",
+        "architecture": "Architecture",
+        "any-os": "Any OS",
+        "any-architecture": "Any Architecture"
+      },
+      "ReleaseLinks": {
+        "release-notes": "Release notes",
+        "installation-guide": "Installation guide",
+        "supported-platforms": "Supported Platforms",
+        "source-code": "Source Code"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "This build is JCK certified",
+        "this-build-is-aqavit-verified": "This build is AQAvit Verified",
+        "checksum": "Checksum"
+      }
+    },
+    "VersionSelector": {
+      "all-versions": "All Versions"
+    }
   }
 }

@@ -2,6 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { ReleaseAsset } from "@/types/temurin"
 import { TemurinReleaseAssets } from "@/hooks/fetchTemurinReleases"
 import { FaRegFileCode } from "react-icons/fa"
@@ -17,6 +18,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
     selectedVersion,
     releases,
 }) => {
+    const t = useTranslations("Temurin.Releases.ReleaseLinks")
     // Only show if we have releases
     if (!releases.length) {
         return null
@@ -59,7 +61,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                         <span className="group">
                             <GrNotes />
                         </span>
-                        Release notes
+                        {t('release-notes')}
                     </li>
                 </Link>
 
@@ -68,7 +70,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                         <span className="group">
                             <GrInstall />
                         </span>
-                        Installation guide
+                        {t('installation-guide')}
                     </li>
                 </Link>
 
@@ -77,7 +79,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                         <span className="group">
                             <GiFlatPlatform />
                         </span>
-                        Supported Platforms
+                        {t('supported-platforms')}
                     </li>
                 </Link>
 
@@ -86,7 +88,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                         <span className="group">
                             <FaRegFileCode />
                         </span>
-                        Source Code
+                        {t('source-code')}
                     </li>
                 </Link>
             </ul>

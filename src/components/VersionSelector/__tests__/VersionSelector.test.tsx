@@ -10,6 +10,11 @@ vi.mock("@/utils/setURLParam", () => ({
   setURLParam: vi.fn(),
 }))
 
+// Mock next-intl's useTranslations to always return 'All Versions' for 'all-versions', otherwise return the key
+vi.mock("next-intl", () => ({
+  useTranslations: () => (key: string) => key === "all-versions" ? "All Versions" : key
+}))
+
 describe("VersionSelector component", () => {
   const mockProps = {
     activeVersionTab: 1,
@@ -45,11 +50,7 @@ describe("VersionSelector component", () => {
 
   it("renders 'All Versions' button and version buttons", () => {
     const { container } = render(<VersionSelector {...mockProps} />)
-
-    // Get all buttons
-    const buttons = container.querySelectorAll('button');
-
-    // Check for button content by getting the text content
+    const buttons = container.querySelectorAll('[data-testid="version-tab"]');
     expect(buttons[0].textContent).toContain("All Versions")
     expect(buttons[1].textContent).toContain("JDK 8")
     expect(buttons[2].textContent).toContain("JDK 11")
