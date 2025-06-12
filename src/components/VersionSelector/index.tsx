@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { useTranslations } from "next-intl"
 import { setURLParam } from "@/utils/setURLParam"
 
 interface VersionSelectorProps {
@@ -21,6 +22,7 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({
   updateOS,
   updateArch,
 }) => {
+  const t = useTranslations("Temurin.VersionSelector")
   // Handle tab selection with proper URL and state updates
   const handleTabClick = (newTab: number | string) => {
     // Notify parent of tab change
@@ -56,18 +58,19 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({
       <div className="relative min-w-full w-full overflow-auto md:overflow-visible">
         <span className="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-0 z-[-1]"></span>
         <div className="flex space-x-10 whitespace-nowrap lg:justify-center py-3">
-          <button onClick={() => handleTabClick(1)}>
+          <button onClick={() => handleTabClick(1)} data-testid="version-tab">
             <span
               className={`py-3 w-full text-base font-normal leading-6 
             outline-none cursor-pointer transition-all duration-200 ease-in-out ${activeVersionTab === 1 ? "border-primary border-b-[2px] text-white" : "text-[#8a809e] border-transparent border-b"}`}
             >
-              All Versions
+              {t('all-versions')}
             </span>
           </button>
           {versions.map((version, index) => (
             <button
               key={index}
               onClick={() => handleTabClick(version.value)}
+              data-testid="version-tab"
             >
               <span
                 className={`py-3 w-full text-base font-normal leading-6

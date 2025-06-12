@@ -4,6 +4,16 @@ import { render, screen, act, cleanup } from "@testing-library/react"
 import { describe, expect, it, vi, afterEach } from "vitest"
 import ChecksumModal from ".." // Ensure this import path is correct
 
+// Mock next-intl's useTranslations to return the correct i18n values for ChecksumModal
+vi.mock("next-intl", () => ({
+  useTranslations: () => (key: string) => {
+    if (key === "copied") return "Copied";
+    if (key === "copy") return "Copy";
+    if (key === "close") return "Close";
+    return key;
+  }
+}))
+
 // Setup for navigator.clipboard mock
 Object.assign(navigator, {
   clipboard: {

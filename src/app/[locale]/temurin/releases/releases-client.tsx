@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 import { loadLatestAssets } from "@/hooks"
 import { useSearchParams } from "next/navigation"
 import { ReleaseAsset } from "@/types/temurin"
@@ -15,13 +16,14 @@ import VersionSelector from "@/components/VersionSelector"
 import ChecksumModal from "@/components/ChecksumModal"
 
 export default function TemurinReleasesPage() {
+  const t = useTranslations("TemurinReleases")
   const [modalOpen, setModalOpen] = useState(false)
   const [currentChecksum, setCurrentChecksum] = useState("")
   const [releases, setReleases] = useState<ReleaseAsset[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
   // Filter state
-  const [selectedVersion, setSelectedVersion] = useState<string>("any")
+  const [selectedVersion, setSelectedVersion] = useState<string>("")
   const [selectedOS, setSelectedOS] = useState("any")
   const [selectedArch, setSelectedArch] = useState("any")
 
@@ -131,6 +133,7 @@ export default function TemurinReleasesPage() {
       setSelectedVersion(initialVersion)
     }
     // Re-run when latestLTS changes or ltsVersions updates
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestLTS, ltsVersions.length, searchParams])
 
   // Listen for URL parameter changes and update filters accordingly
@@ -209,6 +212,7 @@ export default function TemurinReleasesPage() {
       // Fetch with new parameters
       fetchReleases(version, os, arch);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, ltsVersions, hasInitialFetch, isFilterChange]);
 
   const fetchReleases = async (
@@ -260,9 +264,9 @@ export default function TemurinReleasesPage() {
   return (
     <div>
       <PageHeader
-        title={"Download Temurin&reg; JDK"}
-        subtitle={"Latest Releases"}
-        description={"Pick a version, package type, JDK/JRE, and download the binaries."}
+        title={t('title')}
+        subtitle={t('latest-releases')}
+        description={t('description')}
       />
 
       <main className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 pb-20">

@@ -87,7 +87,7 @@ const ChecksumModal: React.FC<ChecksumModalProps> = ({ open, setOpen, checksum }
                         <div className="flex items-start space-x-2">
                           <FaInfoCircle className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400 mt-0.5 flex-shrink-0" />
                           <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
-                            {t('compre-the-checksum')}
+                            {t('compare-the-checksum')}
                           </p>
                         </div>
 
@@ -208,7 +208,7 @@ const ChecksumModal: React.FC<ChecksumModalProps> = ({ open, setOpen, checksum }
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
-                    Close
+                    {t('close')}
                   </button>
                   <button
                     type="button"
@@ -219,7 +219,7 @@ const ChecksumModal: React.FC<ChecksumModalProps> = ({ open, setOpen, checksum }
                       }`}
                     onClick={handleCopy}
                   >
-                    {copied ? "Copied" : "Copy"}
+                    {copied ? t('copied') : t('copy')}
                   </button>
                 </div>
               </DialogPanel>
