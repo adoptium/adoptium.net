@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, Fragment } from "react"
-import { Link } from "@/i18n/navigation"
+import { Link, usePathname } from "@/i18n/navigation"
 import Image from "next/image"
 import {
   Dialog,
@@ -81,7 +81,8 @@ const MobileLink: React.FC<{
   href?: string
   name: string
   activePaths: Set<string>
-}> = ({ href, name, activePaths }) => {
+  onClick?: () => void
+}> = ({ href, name, activePaths, onClick }) => {
   const commonClasses = classNames(
     "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
     href && activePaths.has(href) ? "text-rose-600" : "",
@@ -89,13 +90,13 @@ const MobileLink: React.FC<{
 
   if (href && href.startsWith("/")) {
     return (
-      <Link href={href} className={commonClasses}>
+      <Link href={href} className={commonClasses} onClick={onClick}>
         {name}
       </Link>
     )
   }
   return (
-    <a href={href} className={commonClasses}>
+    <a href={href} className={commonClasses} onClick={onClick}>
       {name}
     </a>
   )
@@ -163,6 +164,7 @@ const NavBar = ({ locale }: { locale: string }) => {
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
   // To prevent hydration mismatch, we'll start with no active paths
   const [activePaths, setActivePaths] = useState<Set<string>>(new Set())
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -173,10 +175,10 @@ const NavBar = ({ locale }: { locale: string }) => {
   // Calculate active paths on client-side only after initial render
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const paths = calculateActivePaths(window.location.pathname);
+      const paths = calculateActivePaths(pathname);
       setActivePaths(paths);
     }
-  }, []);
+  }, [pathname]);
 
   const openLastSlideHandler = (item: NavItem) => {
     setShowLastSlide(true)
@@ -391,6 +393,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                           href={item.href}
                           name={item.name}
                           activePaths={activePaths}
+                          onClick={() => setMobileMenuOpen(false)}
                         />
                       </div>
                     )}
@@ -454,6 +457,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                           href={item.href}
                           name={item.name}
                           activePaths={activePaths}
+                          onClick={() => setMobileMenuOpen(false)}
                         />
                       </div>
                       {activeLastSlide.children &&
