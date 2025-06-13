@@ -7,5 +7,10 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./vitest-setup.tsx"],
+    server: {
+      deps: {
+        inline: ["@mui/x-data-grid"],
+      },
+    },
   },
 });

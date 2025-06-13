@@ -1,0 +1,565 @@
+.release-notes-container {
+  position: relative;
+  transform: translateZ(0);
+}
+
+.release-notes-container::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 20, 100, 0.18) 0%,
+    rgba(255, 75, 84, 0.06) 50%,
+    transparent 70%
+  );
+  border-radius: 100%;
+  filter: blur(30px);
+  z-index: -1;
+  opacity: 0.75;
+  animation: pulse-slow 10s ease-in-out infinite alternate;
+}
+
+.release-notes-container::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -150px;
+  width: 370px;
+  height: 370px;
+  background: radial-gradient(
+    circle,
+    rgba(100, 90, 255, 0.18) 0%,
+    rgba(75, 84, 255, 0.06) 50%,
+    transparent 70%
+  );
+  border-radius: 100%;
+  filter: blur(40px);
+  z-index: -1;
+  opacity: 0.65;
+  animation: pulse-slow 13s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pulse-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.release-notes-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0.8) 70%,
+    var(--pink) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.release-notes-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), rgba(255, 75, 84, 0.7));
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.release-notes-description {
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  position: relative;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.release-notes-description strong {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.release-notes-description strong::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 20, 100, 0.4), transparent);
+}
+
+.MuiDataGrid-root {
+  background: rgba(35, 17, 70, 0.5) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDataGrid-root:hover {
+  box-shadow: 0 8px 38px 0 rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.MuiDataGrid-root * {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDataGrid-columnHeaders {
+  background: linear-gradient(
+    to right,
+    rgba(43, 26, 79, 0.95),
+    rgba(50, 30, 90, 0.9)
+  ) !important;
+  color: white !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding: 12px 0 !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  font-size: 0.95rem !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+.MuiDataGrid-columnHeader,
+.MuiDataGrid-columnHeaders,
+.MuiDataGrid-columnSeparator {
+  color: white !important;
+  background-color: rgba(43, 26, 79, 0.95) !important;
+}
+
+.MuiDataGrid-columnHeaders button,
+.MuiDataGrid-columnHeaders span,
+.MuiDataGrid-columnHeaders div,
+.MuiDataGrid-columnHeaders p {
+  color: white !important;
+}
+
+.MuiDataGrid-columnHeader {
+  position: relative !important;
+  overflow: visible !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.MuiDataGrid-columnHeader:not(:last-child)::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: 60% !important;
+  width: 1px !important;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  ) !important;
+}
+
+.MuiDataGrid-menuIcon,
+.MuiDataGrid-sortIcon {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiMenu-paper,
+.MuiMenu-list,
+.MuiPopover-paper {
+  background-color: #2b1a4f !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root,
+.MuiMenu-list .MuiMenuItem-root,
+.MuiPopover-paper .MuiMenuItem-root {
+  color: white !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root:hover,
+.MuiMenu-list .MuiMenuItem-root:hover,
+.MuiPopover-paper .MuiMenuItem-root:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected,
+.MuiMenu-list .MuiMenuItem-root.Mui-selected,
+.MuiPopover-paper .MuiMenuItem-root.Mui-selected {
+  background-color: rgba(255, 19, 101, 0.15) !important;
+}
+
+.MuiMenu-paper .MuiMenuItem-root.Mui-selected:hover,
+.MuiMenu-list .MuiMenuItem-root.Mui-selected:hover,
+.MuiPopover-paper .MuiMenuItem-root.Mui-selected:hover {
+  background-color: rgba(255, 19, 101, 0.25) !important;
+}
+
+.MuiMenu-paper .MuiCheckbox-root,
+.MuiMenu-list .MuiCheckbox-root,
+.MuiPopover-paper .MuiCheckbox-root {
+  color: var(--pink) !important;
+}
+
+.MuiDataGrid-panel {
+  background-color: #2b1a4f !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.MuiDataGrid-panel .MuiFormLabel-root,
+.MuiDataGrid-panel .MuiInputBase-root,
+.MuiDataGrid-panel .MuiFormControl-root,
+.MuiDataGrid-panel .MuiSelect-select,
+.MuiDataGrid-panel .MuiDataGrid-filterFormValueInput,
+.MuiDataGrid-panel .MuiDataGrid-filterFormColumnInput,
+.MuiDataGrid-panel .MuiDataGrid-filterFormOperatorInput,
+.MuiDataGrid-panel .MuiInputLabel-root,
+.MuiDataGrid-panel .MuiFormHelperText-root,
+.MuiDataGrid-panel .MuiAutocomplete-root {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDataGrid-panel .MuiInputBase-input {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDataGrid-panel .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.MuiDataGrid-panel
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.MuiDataGrid-panel
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--pink) !important;
+}
+
+.MuiDataGrid-panel .MuiButton-root {
+  color: var(--pink) !important;
+  border-color: var(--pink) !important;
+}
+
+.MuiDataGrid-panel .MuiButton-root:hover {
+  background-color: rgba(255, 19, 101, 0.15) !important;
+}
+
+.MuiDataGrid-panel .MuiDataGrid-filterFormLinkOperatorInput {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDataGrid-panel .MuiIconButton-root {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDataGrid-panel .MuiIconButton-root:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiDataGrid-panel .MuiSelect-select,
+.MuiDataGrid-panel .MuiSelect-outlined {
+  background-color: rgba(35, 17, 70, 0.6) !important;
+}
+
+.MuiDataGrid-panel .MuiSelect-select:focus,
+.MuiDataGrid-panel .MuiSelect-outlined:focus {
+  background-color: rgba(35, 17, 70, 0.8) !important;
+}
+
+.MuiDataGrid-panel .MuiDataGrid-filterFormColumnSelectorButton,
+.MuiDataGrid-panel .MuiDataGrid-filterFormOperatorSelectorButton,
+.MuiDataGrid-panel .MuiDataGrid-filterFormValueInput {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(35, 17, 70, 0.4) !important;
+}
+
+.MuiDataGrid-panel .MuiDataGrid-filterFormColumnSelectorButton:hover,
+.MuiDataGrid-panel .MuiDataGrid-filterFormOperatorSelectorButton:hover,
+.MuiDataGrid-panel .MuiDataGrid-filterFormValueInput:hover {
+  background-color: rgba(35, 17, 70, 0.6) !important;
+}
+
+.MuiDataGrid-panel .MuiDataGrid-panelHeader,
+.MuiDataGrid-panel .MuiDataGrid-panelContent,
+.MuiDataGrid-panel .MuiDataGrid-panelFooter {
+  background-color: #2b1a4f !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiDataGrid-panel .MuiDataGrid-panelHeader {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiDataGrid-panel .MuiDataGrid-panelFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiTablePagination-toolbar p {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  text-align: left !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  padding: 12px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.MuiDataGrid-row {
+  transition: all 0.2s ease-in-out !important;
+}
+
+.MuiDataGrid-row:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiDataGrid-row:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.MuiDataGrid-row:nth-of-type(odd):hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.MuiTablePagination-root {
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-top: 16px !important;
+  background: rgba(35, 17, 70, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiTablePagination-toolbar {
+  padding: 0 8px !important;
+  min-height: 40px !important;
+}
+
+.MuiTablePagination-actions {
+  margin-left: 12px !important;
+}
+
+.MuiTablePagination-actions button {
+  padding: 4px !important;
+  border-radius: 4px !important;
+  margin: 0 2px !important;
+  background-color: rgba(35, 17, 70, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.2s ease !important;
+}
+
+.MuiTablePagination-actions button:hover {
+  background-color: rgba(255, 19, 101, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+.MuiTablePagination-selectLabel,
+.MuiTablePagination-displayedRows,
+.MuiSelect-select {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500 !important;
+}
+
+.MuiTablePagination-select {
+  background-color: rgba(35, 17, 70, 0.6) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 4px 8px !important;
+  margin: 0 8px !important;
+}
+
+.MuiSelect-select,
+.MuiInputBase-input {
+  border: none !important;
+  outline: none !important;
+}
+
+.MuiSelect-outlined {
+  border: none !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+.MuiButton-root {
+  color: var(--pink) !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  background-color: rgba(255, 19, 101, 0.05) !important;
+  border: 1px solid rgba(255, 19, 101, 0.1) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  margin: 8px 4px !important;
+}
+
+.MuiButton-root:hover {
+  background-color: rgba(255, 19, 101, 0.15) !important;
+  border-color: rgba(255, 19, 101, 0.25) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.MuiSvgIcon-root {
+  color: var(--pink) !important;
+  margin-right: 4px !important;
+  font-size: 1.2rem !important;
+}
+
+.MuiTablePagination-root .MuiSvgIcon-root {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 1.1rem !important;
+}
+
+.MuiSelect-icon {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.badge {
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 2.5rem !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  transform: translateZ(0) !important;
+  transition: all 0.3s ease !important;
+}
+
+.badge:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.priority-1 {
+  background: linear-gradient(135deg, #ff1464, #e5121a) !important;
+  padding: 5px 10px !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.priority-2 {
+  background: linear-gradient(135deg, #ff8a47, #ec8448) !important;
+  padding: 5px 10px !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.priority-3 {
+  background: linear-gradient(135deg, #38e969, #27ea51) !important;
+  padding: 5px 10px !important;
+  color: #1a1a1a !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.priority-4 {
+  background: linear-gradient(135deg, #0095ff, #0088e7) !important;
+  padding: 5px 10px !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.priority-5 {
+  background: linear-gradient(135deg, #b40cc1, #a400b0) !important;
+  padding: 5px 10px !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.MuiCircularProgress-root {
+  color: var(--pink) !important;
+}
+
+.issue-link {
+  color: var(--pink) !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  background: rgba(255, 19, 101, 0.08) !important;
+}
+
+.issue-link:hover {
+  color: #ff4b54 !important;
+  text-decoration: none !important;
+  background: rgba(255, 19, 101, 0.15) !important;
+}
+
+.issue-link:hover::after {
+  width: 100% !important;
+}
+
+.issue-link::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(to right, var(--pink), transparent) !important;
+  transition: width 0.3s ease !important;
+}
