@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 import SelectorHeader from "@/components/Common/SelectorHeader"
-
 import { useOses, useArches } from '@/hooks/fetchConstants'
 import { packageTypes } from "@/utils/defaults"
 
@@ -34,6 +34,7 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
   updateArch,
   updatePackageType,
 }) => {
+  const t = useTranslations("Temurin.Releases.ReleaseFilters")
   // Track selected values for filtering
   const [selectedOS, setSelectedOS] = useState<string | undefined>(defaultOS);
   const [selectedArch, setSelectedArch] = useState<string | undefined>(defaultArch);
@@ -136,19 +137,18 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
   // Add "Any" option to the filtered lists
   const osListWithAny = useMemo(() => {
     if (filteredOsList.length === 0) return [];
-    return [{ name: "Any", value: "any" }, ...filteredOsList];
-  }, [filteredOsList]);
+    return [{ name: t("any-os"), value: "any" }, ...filteredOsList];
+  }, [filteredOsList, t]);
 
   const archListWithAny = useMemo(() => {
     if (filteredArchList.length === 0) return [];
-    return [{ name: "Any", value: "any" }, ...filteredArchList];
-  }, [filteredArchList]);
-
+    return [{ name: t("any-architecture"), value: "any" }, ...filteredArchList];
+  }, [filteredArchList, t]);
 
   // Create packageTypesWithAny unconditionally (following React Hooks rules)
   const packageTypesWithAny = useMemo(() => {
-    return [{ name: "Any", value: "any" }, ...packageTypes];
-  }, []);
+    return [{ name: t("any-package-type"), value: "any" }, ...packageTypes];
+  }, [t]);
 
   // Conditionally use the data after hooks have been called
   const data = [osListWithAny, archListWithAny, versionsList];
@@ -161,10 +161,7 @@ const ReleaseSelector: React.FC<ReleaseSelectorProps> = ({
     selectorUpdaters.push(updatePackageType)
   }
 
-  const titles = ["Operating System", "Architecture", "Version"]
-  if (marketplace) {
-    titles.push("Package Type")
-  }
+  const titles = [t('operating-system'), t('architecture'), t('version'), t('package-type')]
 
   const defaultValues: string[] = []
   if (defaultOS) defaultValues.push(defaultOS)

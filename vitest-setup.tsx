@@ -66,6 +66,7 @@ vi.mock('next-intl', () => ({
 
     return translator;
   },
+  useLocale: () => "en",
   // Add other exports that might be used in your app
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
@@ -86,6 +87,11 @@ vi.mock("@/i18n/navigation", () => ({
     </a>
   ),
 }));
+
+// Mock the useAdoptiumContributorsApi hook
+vi.mock("@/hooks/useAdoptiumContributorsApi", () => ({
+  useAdoptiumContributorsApi: () => null
+}))
 
 type SwiperProps = {
   children: React.ReactNode

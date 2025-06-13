@@ -28,6 +28,7 @@ const excludedContributors = [
   "dependabot[bot]",
   "github-actions[bot]",
   "eclipse-temurin-bot",
+  "eclipse-otterdog[bot]",
 ]
 
 /**
@@ -127,7 +128,7 @@ async function fetchRandomContributor() {
   if (typeof window === 'undefined') {
     return null; // Early return on server side
   }
-  
+
   // choose a random repo from the list
   const repository = repositories[Math.floor(Math.random() * repositories.length)]
 
@@ -157,10 +158,10 @@ async function fetchRandomContributor() {
     let randomPage = 0
 
     // If no localStorage or data is more than 1 month old
-    if(!maxContributors || needToRefetch) {
+    if (!maxContributors || needToRefetch) {
       // get fresh data
       const [randomPageUpdate, lastPageUpdate] = await getMaxContributors(repository)
-      if(!randomPageUpdate || !lastPageUpdate) return null
+      if (!randomPageUpdate || !lastPageUpdate) return null
 
       if (window.localStorage) {
         window.localStorage.setItem(wlsFetchDate, String(Date.now()))
@@ -193,7 +194,7 @@ export function useAdoptiumContributorsApi(
   isVisible: boolean,
 ): Contributor | null {
   const [contributor, setContributor] = useState<Contributor | null>(null)
-  
+
   useEffect(() => {
     // Check for window first to prevent issues in test environments
     if (typeof window === 'undefined') {
@@ -204,15 +205,15 @@ export function useAdoptiumContributorsApi(
     if (!isVisible) {
       return;
     }
-    
+
     // Create an abort controller to handle cleanup
     const abortController = new AbortController();
-    
+
     // Fetch data with proper cleanup handling
     (async () => {
       try {
         const data = await fetchRandomContributor();
-        
+
         // Check if the request was aborted before updating state
         if (!abortController.signal.aborted) {
           setContributor(data);
@@ -224,7 +225,7 @@ export function useAdoptiumContributorsApi(
         }
       }
     })();
-    
+
     // Cleanup function to prevent state updates after unmount
     return () => {
       abortController.abort();

@@ -10,6 +10,15 @@ vi.mock("@/utils/shuffle", () => ({
     shuffle: (arr: unknown[]) => arr,
 }))
 
+vi.mock("next-intl", () => ({
+    useTranslations: () => (key: string, options?: { selected: number; total: number }) => {
+        if (key === "vendors-selected" && options) {
+            return `${options.selected} of ${options.total} vendors selected`
+        }
+        return key
+    },
+}))
+
 describe("Marketplace VendorSelector", () => {
     const mockSetSelectedVendorIdentifiers = vi.fn()
     const initialSelectedVendors = vendors.map(v => getVendorIdentifier(v))
