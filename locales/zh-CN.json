@@ -174,6 +174,30 @@
         "checksum": "校验和"
       }
     },
+    "Nightly": {
+      "title": "每晚构建",
+      "subtitle": "抢先体验",
+      "description": "获取用于测试和开发的最新每晚构建版本。",
+      "be-aware": "请注意，此归档包含作为通往<fullReleaseLink>完整版本</fullReleaseLink>的开发步骤创建的中间构建。中间构建是临时的，未来可能会被删除。",
+      "notice-title": "以下通知适用于中间构建：",
+      "quoted-notice": "这是一个中间构建，仅用于测试目的。代码未经测试，可能不符合 Java SE 规范。请不要部署或依赖此代码，而应使用经过测试和认证的 Java SE 兼容版本。重新分发此构建时必须保留此通知。",
+      "unsupported-in-production": "这些构建不受支持，不适用于生产环境。",
+      "latest-releases": "最新版本",
+      "download-not-available": "不可用",
+      "no-results": "所选版本暂无每晚构建。",
+      "checksum": "校验和",
+      "select-options-filter": "选择选项以筛选每晚构建列表",
+      "version": "版本",
+      "number-of-builds": "构建数量",
+      "builds-prior-to": "构建时间早于",
+      "platform": "平台",
+      "type": "类型",
+      "build-tag": "构建标签",
+      "date": "日期",
+      "binary": "二进制",
+      "installer": "安装程序",
+      "release-name": "版本名称"
+    },
     "VersionSelector": {
       "all-versions": "所有版本"
     }

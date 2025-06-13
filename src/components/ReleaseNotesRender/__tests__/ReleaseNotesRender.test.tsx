@@ -3,7 +3,7 @@ import { render } from "@testing-library/react"
 import { describe, afterEach, expect, it, vi } from "vitest"
 import ReleaseNotesRender, { fetchTitle, sortReleaseNotesBy } from "../index"
 import { useFetchReleaseNotesForVersion } from "@/hooks/fetchReleaseNotes"
-import { createMockReleaseNotesAPI } from "../__fixtures__/hooks"
+import { createMockReleaseNotesAPI } from "./__fixtures__/hooks"
 
 vi.mock("@/hooks/fetchReleaseNotes")
 

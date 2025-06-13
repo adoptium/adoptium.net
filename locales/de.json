@@ -174,6 +174,30 @@
         "checksum": "Prüfsumme"
       }
     },
+    "Nightly": {
+      "title": "Nightly-Builds",
+      "subtitle": "Früher Zugang",
+      "description": "Lade die neuesten Nightly-Builds für Test- und Entwicklungszwecke herunter.",
+      "be-aware": "Bitte beachte, dass dieses Archiv Zwischen-Builds enthält, die als Entwicklungsschritt zu einer <fullReleaseLink>vollständigen Version</fullReleaseLink> erstellt wurden. Zwischen-Builds sind vergänglich und könnten in Zukunft entfernt werden.",
+      "notice-title": "Folgende Hinweise gelten für Zwischen-Builds:",
+      "quoted-notice": "Dies ist ein Zwischen-Build, der nur zu Testzwecken bereitgestellt wird. Der Code ist ungetestet und vermutlich nicht mit der Java SE-Spezifikation kompatibel. Du solltest diesen Code nicht produktiv verwenden oder darauf aufbauen. Verwende stattdessen die getestete und zertifizierte Java SE-kompatible Version. Bei Weiterverteilung muss dieser Hinweis beibehalten werden.",
+      "unsupported-in-production": "Diese Builds sind nicht unterstützt und nicht für den produktiven Einsatz geeignet.",
+      "latest-releases": "Neueste Versionen",
+      "download-not-available": "Nicht verfügbar",
+      "no-results": "Keine Nightly-Builds für die ausgewählte Version verfügbar.",
+      "checksum": "Prüfsumme",
+      "select-options-filter": "Optionen auswählen, um die Nightly-Build-Liste zu filtern",
+      "version": "Version",
+      "number-of-builds": "Anzahl der Builds",
+      "builds-prior-to": "Builds vor",
+      "platform": "Plattform",
+      "type": "Typ",
+      "build-tag": "Build/Tag",
+      "date": "Datum",
+      "binary": "Binärdatei",
+      "installer": "Installer",
+      "release-name": "Release-Name"
+    },
     "VersionSelector": {
       "all-versions": "Alle Versionen"
     }

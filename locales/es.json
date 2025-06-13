@@ -174,6 +174,30 @@
         "checksum": "Suma de verificación"
       }
     },
+    "Nightly": {
+      "title": "Compilaciones nocturnas",
+      "subtitle": "Acceso anticipado",
+      "description": "Obtén las últimas compilaciones nocturnas para pruebas y desarrollo.",
+      "be-aware": "Ten en cuenta que este archivo contiene compilaciones intermedias creadas como un paso hacia una <fullReleaseLink>versión completa</fullReleaseLink>. Estas compilaciones son efímeras y pueden desaparecer en el futuro.",
+      "notice-title": "El siguiente aviso se aplica a las compilaciones intermedias:",
+      "quoted-notice": "Esta es una compilación intermedia disponible solo con fines de prueba. El código no ha sido probado y se presume que no es compatible con la especificación Java SE. No debes desplegar ni desarrollar sobre este código, sino utilizar la versión compatible y certificada. La redistribución de esta compilación debe mantener este aviso.",
+      "unsupported-in-production": "Estas compilaciones no están soportadas y no deben usarse en producción.",
+      "latest-releases": "Últimas versiones",
+      "download-not-available": "No disponible",
+      "no-results": "No hay compilaciones nocturnas disponibles para la versión seleccionada.",
+      "checksum": "Suma de verificación",
+      "select-options-filter": "Selecciona opciones para filtrar la lista de compilaciones nocturnas",
+      "version": "Versión",
+      "number-of-builds": "Número de compilaciones",
+      "builds-prior-to": "Compilaciones anteriores a",
+      "platform": "Plataforma",
+      "type": "Tipo",
+      "build-tag": "Build/Tag",
+      "date": "Fecha",
+      "binary": "Binario",
+      "installer": "Instalador",
+      "release-name": "Nombre de la versión"
+    },
     "VersionSelector": {
       "all-versions": "Todas las versiones"
     }
