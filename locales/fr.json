@@ -177,5 +177,11 @@
     "VersionSelector": {
       "all-versions": "Toutes les versions"
     }
+  },
+  "ReleaseNotes": {
+    "title": "Notes de version",
+    "couldnt-find-release-notes": "Oups... Nous n'avons pas trouvé ces notes de version",
+    "not-found-helper": "Veuillez vérifier que vous avez spécifié une version à l’aide du paramètre d’URL 'version' :",
+    "description": "Cette section organise les changements de la mise à jour sélectionnée selon le composant principal associé à chaque problème."
   }
 }

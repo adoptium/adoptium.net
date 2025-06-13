@@ -15,5 +15,8 @@
   },
   "WGProjects": {
     "description": "Eclipse Adoptium provides runtime binaries that are high performance, enterprise-grade, cross-platform, open-source licensed, Java SE TCK-tested and compliant for general use across the Java ecosystem. Eclipse Adoptium also provides artefacts including open-source infrastructure as code, a comprehensive continuous integration build and test farm, and extensive quality assurance tests. These artefacts may be used by Eclipse Adoptium projects and other runtime technology builders to ensure the provision of secure, Java SE TCK-tested and compliant, production-ready runtimes."
+  },
+  "ReleaseNotes": {
+    "description": "This section organises the changes in the selected update release by the main component under which each issue is filed."
   }
 }

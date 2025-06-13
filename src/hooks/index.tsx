@@ -4,6 +4,7 @@ export * from "./useOnScreen"
 export * from "./fetchLatestTemurin"
 export * from "./fetchTemurinReleases"
 export * from "./fetchMarketplace"
+export * from "./fetchReleaseNotes"
 
 export interface VersionMetaData {
     major: number

@@ -169,5 +169,11 @@
     "VersionSelector": {
       "all-versions": "All Versions"
     }
+  },
+  "ReleaseNotes": {
+    "title": "Release Notes",
+    "couldnt-find-release-notes": "Oops... We couldn't find those release notes",
+    "not-found-helper": "Please ensure that you have a specified a version using the version URL parameter:",
+    "description": "This section organizes the changes in the selected update release by the main component under which each issue is filed."
   }
 }

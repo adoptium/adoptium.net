@@ -25,13 +25,14 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
     }
 
     // Find first release to get version info
-    const firstRelease = releases[0]
-    const versionFormatted = firstRelease ? firstRelease.release_name : selectedVersion
+    let releaseNotesUrl = "/temurin/release-notes"
+    if (typeof releases === "object" && "source" in releases && releases.source) {
+        releaseNotesUrl = `/temurin/release-notes/?version=${releases.source.release_name}`
+    }
 
     // Prepare links
-    const releaseNotesUrl = `/temurin/release-notes/?version=${encodeURIComponent(versionFormatted)}`
-    const installationGuideUrl = `/installation`
-    const supportedPlatformsUrl = `/supported-platforms`
+    const installationGuideUrl = "/installation"
+    const supportedPlatformsUrl = "/supported-platforms"
 
     // Find source code link if available
     let sourceCodeUrl = "#"
