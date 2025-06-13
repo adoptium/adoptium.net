@@ -10,6 +10,19 @@
     "title": "很抱歉，无法找到此页面",
     "back-to-home": "返回首页"
   },
+  "Marketplace": {
+    "title": "Adoptium® 市场",
+    "subtitle": "市场",
+    "description": "Java™ 是全球领先的编程语言和平台。Adoptium 市场推广高质量、通过 TCK 认证且通过 AQAvit 验证的运行时，广泛用于 Java 生态系统。",
+    "VendorSelector": {
+      "vendors-selected": "已选择 {selected} 个，共 {total} 个供应商"
+    },
+    "Releases": {
+      "download": "下载",
+      "build-date": "构建日期",
+      "vendor": "供应商"
+    }
+  },
   "PowerOfTemurin": {
     "title": "Eclipse Temurin 的强大优势",
     "description": "基于 OpenJDK：Eclipse Temurin 提供高性能、跨平台的开源 Java™ 运行时二进制文件，适用于企业环境，已通过 Java SE TCK 认证并经 AQAvit 验证，适用于 Java 生态系统中的广泛使用。",
@@ -144,8 +157,10 @@
         "version": "版本",
         "operating-system": "操作系统",
         "architecture": "架构",
+        "package-type": "软件包类型",
         "any-os": "任意操作系统",
-        "any-architecture": "任意架构"
+        "any-architecture": "任意架构",
+        "any-package-type": "任意软件包类型"
       },
       "ReleaseLinks": {
         "release-notes": "发行说明",

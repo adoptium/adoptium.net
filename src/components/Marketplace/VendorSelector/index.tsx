@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { FaCheck } from "react-icons/fa"
 import vendors from "@/data/marketplace.json"
 import getVendorIdentifier from "@/utils/vendors"
@@ -23,6 +24,7 @@ const VendorSelector: React.FC<VendorSelectorProps> = ({
     setSelectedVendorIdentifiers,
 }) => {
     const [randomizedVendors, setRandomizedVendors] = useState<Vendor[]>([])
+    const t = useTranslations("Marketplace.VendorSelector")
 
     useEffect(() => {
         const vendorsCpy = [...vendors] // Assuming `vendors` is typed correctly
@@ -49,7 +51,10 @@ const VendorSelector: React.FC<VendorSelectorProps> = ({
             <div className="relative px-4 py-2">
                 {randomizedVendors.length > 0 && (
                     <div className="text-right mb-2 text-sm text-gray-600 dark:text-gray-300">
-                        {selectedVendorIdentifiers.length} of {randomizedVendors.length} vendors selected
+                        {t("vendors-selected", {
+                            selected: selectedVendorIdentifiers.length,
+                            total: randomizedVendors.length,
+                        })}
                     </div>
                 )}
 

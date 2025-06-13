@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import Image from "next/image"
+import { useTranslations, useLocale } from "next-intl"
 import { BsCopy } from "react-icons/bs"
 import { FiDownload } from "react-icons/fi"
 import { FaRedo } from "react-icons/fa"
@@ -19,6 +20,8 @@ interface AllReleaseCardProps {
 }
 
 const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => {
+    const t = useTranslations()
+    const locale = useLocale();
     const [modalOpen, setModalOpen] = useState(false)
     const [currentChecksum, setCurrentChecksum] = useState("")
 
@@ -191,9 +194,13 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
                                 {/* Details Grid */}
                                 <div className="grid grid-cols-2 gap-3 text-sm">
                                     <div className="space-y-1">
-                                        <span className="text-slate-300">Build Date</span>
+                                        <span className="text-slate-300">{t("Marketplace.Releases.build-date")}</span>
                                         <p className="text-white font-medium">
-                                            {new Date(release.binary.timestamp).toLocaleDateString()}
+                                            {new Date(release.binary.timestamp).toLocaleDateString(locale, {
+                                                day: "2-digit",
+                                                month: "2-digit",
+                                                year: "numeric",
+                                            })}
                                         </p>
                                     </div>
                                     <div className="space-y-1">
@@ -203,13 +210,13 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
                                         </p>
                                     </div>
                                     <div className="space-y-1">
-                                        <span className="text-slate-300">Architecture</span>
+                                        <span className="text-slate-300">{t("Temurin.Releases.ReleaseFilters.architecture")}</span>
                                         <p className="text-white font-medium">
                                             {release.binary.architecture}
                                         </p>
                                     </div>
                                     <div className="space-y-1">
-                                        <span className="text-slate-300">Vendor</span>
+                                        <span className="text-slate-300">{t("Marketplace.Releases.vendor")}</span>
                                         <p className="text-white font-medium">
                                             {release.vendor}
                                         </p>
@@ -225,14 +232,14 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
                                             aria-label="View checksum"
                                         >
                                             <BsCopy className="w-4 h-4" />
-                                            Checksum
+                                            {t("Temurin.Releases.ReleaseResults.checksum")}
                                         </button>
                                         <a
                                             href={typeof release.binary.package.link === 'string' ? release.binary.package.link : release.binary.package.link.toString()}
                                             className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] rounded-lg text-white text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-[#FF1464]/30 hover:transform hover:scale-105"
                                         >
                                             <FiDownload className="w-4 h-4" />
-                                            Download ({fetchExtension(release.binary.package.name)})
+                                            {t("Marketplace.Releases.download")} ({fetchExtension(release.binary.package.name)})
                                         </a>
                                     </div>
                                 </div>
@@ -271,9 +278,13 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
 
                                 {/* Build Date */}
                                 <div className="w-[120px] flex-shrink-0 px-2">
-                                    <span className="text-xs text-slate-300 block">Build Date</span>
+                                    <span className="text-xs text-slate-300 block">{t("Marketplace.Releases.build-date")}</span>
                                     <p className="text-sm text-white font-medium truncate">
-                                        {new Date(release.binary.timestamp).toLocaleDateString()}
+                                        {new Date(release.binary.timestamp).toLocaleDateString(locale, {
+                                            day: "2-digit",
+                                            month: "2-digit",
+                                            year: "numeric",
+                                        })}
                                     </p>
                                 </div>
 
@@ -287,7 +298,7 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
 
                                 {/* Architecture */}
                                 <div className="w-[100px] flex-shrink-0 px-2">
-                                    <span className="text-xs text-slate-300 block">Arch</span>
+                                    <span className="text-xs text-slate-300 block">{t("Temurin.Releases.ReleaseFilters.architecture")}</span>
                                     <p className="text-sm text-white font-medium truncate">
                                         {release.binary.architecture}
                                     </p>
@@ -303,14 +314,14 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
                                         aria-label="View checksum"
                                     >
                                         <BsCopy className="w-4 h-4" />
-                                        Checksum
+                                        {t("Temurin.Releases.ReleaseResults.checksum")}
                                     </button>
                                     <a
                                         href={typeof release.binary.package.link === 'string' ? release.binary.package.link : release.binary.package.link.toString()}
                                         className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] rounded-lg text-white text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-[#FF1464]/30 hover:transform hover:scale-105"
                                     >
                                         <FiDownload className="w-4 h-4" />
-                                        Download ({fetchExtension(release.binary.package.name)})
+                                        {t("Marketplace.Releases.download")} ({fetchExtension(release.binary.package.name)})
                                     </a>
                                 </div>
                             </div>

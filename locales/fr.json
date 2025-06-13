@@ -10,6 +10,19 @@
     "title": "Désolé, nous n'avons pas pu trouver cette page",
     "back-to-home": "Retour à l'accueil"
   },
+  "Marketplace": {
+    "title": "Marketplace Adoptium®",
+    "subtitle": "Marketplace",
+    "description": "Java™ est le principal langage et plateforme de programmation au monde. Le Marketplace Adoptium promeut des runtimes de haute qualité, certifiés TCK et vérifiés AQAvit pour une utilisation dans l’écosystème Java.",
+    "VendorSelector": {
+      "vendors-selected": "{selected} sur {total} fournisseurs sélectionnés"
+    },
+    "Releases": {
+      "download": "Télécharger",
+      "build-date": "Date de création",
+      "vendor": "Fournisseur"
+    }
+  },
   "PowerOfTemurin": {
     "title": "La puissance d'Eclipse Temurin",
     "description": "Basé sur OpenJDK : Eclipse Temurin fournit des binaires Java™ open source, performants, multiplateformes, prêts pour l'entreprise, certifiés par le TCK Java SE et vérifiés par AQAvit pour une utilisation générale dans l'écosystème Java.",
@@ -144,8 +157,10 @@
         "version": "Version",
         "operating-system": "Système d’exploitation",
         "architecture": "Architecture",
+        "package-type": "Type de paquet",
         "any-os": "N’importe quel système d’exploitation",
-        "any-architecture": "N’importe quelle architecture"
+        "any-architecture": "N’importe quelle architecture",
+        "any-package-type": "N’importe quel type de paquet"
       },
       "ReleaseLinks": {
         "release-notes": "Notes de version",

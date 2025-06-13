@@ -1,0 +1,47 @@
+.about-aqavit {
+  position: relative;
+  width: 100%;
+}
+.about-aqavit::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url("/images/backgrounds/gradient-overlay.png");
+}
+
+@media screen and (max-width: 767px) {
+  .about-aqavit::after {
+    background-image: url("/images/backgrounds/gradient-overlay-mobile.png");
+    z-index: -1;
+  }
+}
+
+.aqavit-card {
+  border-radius: 1.5rem;
+  background: var(--tones-white-5, rgba(255, 255, 255, 5%));
+  backdrop-filter: blur(12px);
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.aqavit-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: linear-gradient(285deg, #30195edb 40.01%, #574974f7 63.36%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
