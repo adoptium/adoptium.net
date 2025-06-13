@@ -37,7 +37,7 @@ e.g temurin-17-jdk or temurin-8-jdk
 +
 [source, bash]
 ----
-apt install -y wget apt-transport-https
+apt install -y wget apt-transport-https gpg
 ----
 +
 . Download the Eclipse Adoptium GPG key:
