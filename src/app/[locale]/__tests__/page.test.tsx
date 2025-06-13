@@ -4,11 +4,6 @@ import { describe, expect, it, vi } from "vitest"
 import { axe } from "vitest-axe"
 import Index from "../page"
 
-// Mock the useAdoptiumContributorsApi hook
-vi.mock("@/hooks/useAdoptiumContributorsApi", () => ({
-  useAdoptiumContributorsApi: () => null
-}))
-
 // Mock the LatestNews component with a synchronous version
 vi.mock("@/components/News/LatestNews", () => {
   return {

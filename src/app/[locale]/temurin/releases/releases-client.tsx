@@ -269,7 +269,7 @@ export default function TemurinReleasesPage() {
         description={t('description')}
       />
 
-      <main className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 pb-20">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 pb-20">
         {/* Version Selector Tabs */}
         <section className="pt-8">
           <VersionSelector
@@ -357,7 +357,7 @@ export default function TemurinReleasesPage() {
           openModalWithChecksum={openModalWithChecksum}
         />
 
-      </main>
+      </div>
       <DownloadMethods />
       <ChecksumModal
         open={modalOpen}

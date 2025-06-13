@@ -2,11 +2,12 @@
   position: relative;
   width: 100%;
 }
+
 .about-aqavit::after {
   content: "";
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   background-size: 100% 100%;
   background-position: center;
   width: 100%;
@@ -16,7 +17,7 @@
   background-image: url("/images/backgrounds/gradient-overlay.png");
 }
 
-@media screen and (max-width: 767px) {
+@media (width <= 767px) {
   .about-aqavit::after {
     background-image: url("/images/backgrounds/gradient-overlay-mobile.png");
     z-index: -1;
@@ -41,6 +42,7 @@
   padding: 2px;
   background: linear-gradient(285deg, #30195edb 40.01%, #574974f7 63.36%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
