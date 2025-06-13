@@ -12,8 +12,8 @@
   height: 320px;
   background: radial-gradient(
     circle,
-    rgba(255, 20, 100, 0.18) 0%,
-    rgba(255, 75, 84, 0.06) 50%,
+    rgba(255, 20, 100, 18%) 0%,
+    rgba(255, 75, 84, 6%) 50%,
     transparent 70%
   );
   border-radius: 100%;
@@ -32,8 +32,8 @@
   height: 370px;
   background: radial-gradient(
     circle,
-    rgba(100, 90, 255, 0.18) 0%,
-    rgba(75, 84, 255, 0.06) 50%,
+    rgba(100, 90, 255, 18%) 0%,
+    rgba(75, 84, 255, 6%) 50%,
     transparent 70%
   );
   border-radius: 100%;
@@ -48,6 +48,7 @@
     transform: scale(1);
     opacity: 0.6;
   }
+
   100% {
     transform: scale(1.1);
     opacity: 0.8;
@@ -61,7 +62,7 @@
   background: linear-gradient(
     90deg,
     #fff 0%,
-    rgba(255, 255, 255, 0.8) 70%,
+    rgba(255, 255, 255, 80%) 70%,
     var(--pink) 100%
   );
   -webkit-background-clip: text;
@@ -70,7 +71,7 @@
   color: transparent;
   display: inline-block;
   letter-spacing: -0.02em;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 20%);
   position: relative;
   z-index: 1;
 }
@@ -82,25 +83,25 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--pink), rgba(255, 75, 84, 0.7));
+  background: linear-gradient(90deg, var(--pink), rgba(255, 75, 84, 70%));
   border-radius: 2px;
   z-index: -1;
 }
 
 .release-notes-description {
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 85%) !important;
   font-size: 1.05rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
   position: relative;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 10%);
 }
 
 .release-notes-description strong {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 95%) !important;
   font-weight: 600;
   position: relative;
   display: inline-block;
@@ -113,46 +114,46 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 20, 100, 0.4), transparent);
+  background: linear-gradient(90deg, rgba(255, 20, 100, 40%), transparent);
 }
 
 .MuiDataGrid-root {
-  background: rgba(35, 17, 70, 0.5) !important;
+  background: rgba(35, 17, 70, 50%) !important;
   border-radius: 16px !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 18%) !important;
   overflow: hidden !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
   transition: all 0.3s ease !important;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 90%) !important;
 }
 
 .MuiDataGrid-root:hover {
-  box-shadow: 0 8px 38px 0 rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 38px 0 rgba(0, 0, 0, 20%) !important;
+  border: 1px solid rgba(255, 255, 255, 15%) !important;
 }
 
 .MuiDataGrid-root * {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 90%) !important;
 }
 
 .MuiDataGrid-columnHeaders {
   background: linear-gradient(
     to right,
-    rgba(43, 26, 79, 0.95),
-    rgba(50, 30, 90, 0.9)
+    rgba(43, 26, 79, 95%),
+    rgba(50, 30, 90, 90%)
   ) !important;
   color: white !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 12%) !important;
   padding: 12px 0 !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 10%) !important;
 }
 
 .MuiDataGrid-columnHeaderTitle {
   font-weight: 600 !important;
-  color: rgba(255, 255, 255, 0.95) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  color: rgba(255, 255, 255, 95%) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 20%) !important;
   font-size: 0.95rem !important;
   white-space: nowrap !important;
   overflow: visible !important;
@@ -162,7 +163,7 @@
 .MuiDataGrid-columnHeaders,
 .MuiDataGrid-columnSeparator {
   color: white !important;
-  background-color: rgba(43, 26, 79, 0.95) !important;
+  background-color: rgba(43, 26, 79, 95%) !important;
 }
 
 .MuiDataGrid-columnHeaders button,
@@ -190,14 +191,14 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 30%),
     transparent
   ) !important;
 }
 
 .MuiDataGrid-menuIcon,
 .MuiDataGrid-sortIcon {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 70%) !important;
 }
 
 .MuiMenu-paper,
@@ -205,9 +206,9 @@
 .MuiPopover-paper {
   background-color: #2b1a4f !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
   border-radius: 8px !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 30%) !important;
 }
 
 .MuiMenu-paper .MuiMenuItem-root,
@@ -219,19 +220,19 @@
 .MuiMenu-paper .MuiMenuItem-root:hover,
 .MuiMenu-list .MuiMenuItem-root:hover,
 .MuiPopover-paper .MuiMenuItem-root:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(255, 255, 255, 10%) !important;
 }
 
 .MuiMenu-paper .MuiMenuItem-root.Mui-selected,
 .MuiMenu-list .MuiMenuItem-root.Mui-selected,
 .MuiPopover-paper .MuiMenuItem-root.Mui-selected {
-  background-color: rgba(255, 19, 101, 0.15) !important;
+  background-color: rgba(255, 19, 101, 15%) !important;
 }
 
 .MuiMenu-paper .MuiMenuItem-root.Mui-selected:hover,
 .MuiMenu-list .MuiMenuItem-root.Mui-selected:hover,
 .MuiPopover-paper .MuiMenuItem-root.Mui-selected:hover {
-  background-color: rgba(255, 19, 101, 0.25) !important;
+  background-color: rgba(255, 19, 101, 25%) !important;
 }
 
 .MuiMenu-paper .MuiCheckbox-root,
@@ -243,9 +244,9 @@
 .MuiDataGrid-panel {
   background-color: #2b1a4f !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
   border-radius: 8px !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 30%) !important;
 }
 
 .MuiDataGrid-panel .MuiFormLabel-root,
@@ -258,21 +259,21 @@
 .MuiDataGrid-panel .MuiInputLabel-root,
 .MuiDataGrid-panel .MuiFormHelperText-root,
 .MuiDataGrid-panel .MuiAutocomplete-root {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 90%) !important;
 }
 
 .MuiDataGrid-panel .MuiInputBase-input {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 90%) !important;
 }
 
 .MuiDataGrid-panel .MuiOutlinedInput-notchedOutline {
-  border-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 20%) !important;
 }
 
 .MuiDataGrid-panel
   .MuiOutlinedInput-root:hover
   .MuiOutlinedInput-notchedOutline {
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 30%) !important;
 }
 
 .MuiDataGrid-panel
@@ -287,70 +288,70 @@
 }
 
 .MuiDataGrid-panel .MuiButton-root:hover {
-  background-color: rgba(255, 19, 101, 0.15) !important;
+  background-color: rgba(255, 19, 101, 15%) !important;
 }
 
 .MuiDataGrid-panel .MuiDataGrid-filterFormLinkOperatorInput {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 90%) !important;
 }
 
 .MuiDataGrid-panel .MuiIconButton-root {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 90%) !important;
 }
 
 .MuiDataGrid-panel .MuiIconButton-root:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(255, 255, 255, 10%) !important;
 }
 
 .MuiDataGrid-panel .MuiSelect-select,
 .MuiDataGrid-panel .MuiSelect-outlined {
-  background-color: rgba(35, 17, 70, 0.6) !important;
+  background-color: rgba(35, 17, 70, 60%) !important;
 }
 
 .MuiDataGrid-panel .MuiSelect-select:focus,
 .MuiDataGrid-panel .MuiSelect-outlined:focus {
-  background-color: rgba(35, 17, 70, 0.8) !important;
+  background-color: rgba(35, 17, 70, 80%) !important;
 }
 
 .MuiDataGrid-panel .MuiDataGrid-filterFormColumnSelectorButton,
 .MuiDataGrid-panel .MuiDataGrid-filterFormOperatorSelectorButton,
 .MuiDataGrid-panel .MuiDataGrid-filterFormValueInput {
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  background-color: rgba(35, 17, 70, 0.4) !important;
+  border-color: rgba(255, 255, 255, 20%) !important;
+  background-color: rgba(35, 17, 70, 40%) !important;
 }
 
 .MuiDataGrid-panel .MuiDataGrid-filterFormColumnSelectorButton:hover,
 .MuiDataGrid-panel .MuiDataGrid-filterFormOperatorSelectorButton:hover,
 .MuiDataGrid-panel .MuiDataGrid-filterFormValueInput:hover {
-  background-color: rgba(35, 17, 70, 0.6) !important;
+  background-color: rgba(35, 17, 70, 60%) !important;
 }
 
 .MuiDataGrid-panel .MuiDataGrid-panelHeader,
 .MuiDataGrid-panel .MuiDataGrid-panelContent,
 .MuiDataGrid-panel .MuiDataGrid-panelFooter {
   background-color: #2b1a4f !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 10%) !important;
 }
 
 .MuiDataGrid-panel .MuiDataGrid-panelHeader {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 10%) !important;
 }
 
 .MuiDataGrid-panel .MuiDataGrid-panelFooter {
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 1px solid rgba(255, 255, 255, 10%) !important;
 }
 
 .MuiTablePagination-toolbar p {
   margin: 0 !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 85%) !important;
 }
 
 .MuiDataGrid-root .MuiDataGrid-cell {
   white-space: normal !important;
   word-wrap: break-word !important;
   text-align: left !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 5%) !important;
+  color: rgba(255, 255, 255, 85%) !important;
   padding: 12px 16px !important;
   transition: all 0.2s ease !important;
 }
@@ -360,27 +361,27 @@
 }
 
 .MuiDataGrid-row:hover {
-  background-color: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 8%) !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 10%) !important;
 }
 
 .MuiDataGrid-row:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.02) !important;
+  background-color: rgba(255, 255, 255, 2%) !important;
 }
 
 .MuiDataGrid-row:nth-of-type(odd):hover {
-  background-color: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 8%) !important;
 }
 
 .MuiTablePagination-root {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 85%) !important;
   margin-top: 16px !important;
-  background: rgba(35, 17, 70, 0.3) !important;
+  background: rgba(35, 17, 70, 30%) !important;
   border-radius: 8px !important;
   padding: 8px !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 8%) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 10%) !important;
 }
 
 .MuiTablePagination-toolbar {
@@ -396,27 +397,27 @@
   padding: 4px !important;
   border-radius: 4px !important;
   margin: 0 2px !important;
-  background-color: rgba(35, 17, 70, 0.4) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  background-color: rgba(35, 17, 70, 40%) !important;
+  border: 1px solid rgba(255, 255, 255, 5%) !important;
   transition: all 0.2s ease !important;
 }
 
 .MuiTablePagination-actions button:hover {
-  background-color: rgba(255, 19, 101, 0.15) !important;
+  background-color: rgba(255, 19, 101, 15%) !important;
   transform: translateY(-1px) !important;
 }
 
 .MuiTablePagination-selectLabel,
 .MuiTablePagination-displayedRows,
 .MuiSelect-select {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 85%) !important;
   font-weight: 500 !important;
 }
 
 .MuiTablePagination-select {
-  background-color: rgba(35, 17, 70, 0.6) !important;
+  background-color: rgba(35, 17, 70, 60%) !important;
   border-radius: 6px !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
   padding: 4px 8px !important;
   margin: 0 8px !important;
 }
@@ -442,17 +443,17 @@
   transition: all 0.2s ease !important;
   padding: 6px 12px !important;
   border-radius: 8px !important;
-  background-color: rgba(255, 19, 101, 0.05) !important;
-  border: 1px solid rgba(255, 19, 101, 0.1) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(255, 19, 101, 5%) !important;
+  border: 1px solid rgba(255, 19, 101, 10%) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 10%) !important;
   margin: 8px 4px !important;
 }
 
 .MuiButton-root:hover {
-  background-color: rgba(255, 19, 101, 0.15) !important;
-  border-color: rgba(255, 19, 101, 0.25) !important;
+  background-color: rgba(255, 19, 101, 15%) !important;
+  border-color: rgba(255, 19, 101, 25%) !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 20%) !important;
 }
 
 .MuiSvgIcon-root {
@@ -462,12 +463,12 @@
 }
 
 .MuiTablePagination-root .MuiSvgIcon-root {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 85%) !important;
   font-size: 1.1rem !important;
 }
 
 .MuiSelect-icon {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 85%) !important;
 }
 
 .badge {
@@ -479,53 +480,53 @@
   min-width: 2.5rem !important;
   font-size: 0.8rem !important;
   letter-spacing: 0.5px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 25%) !important;
   transform: translateZ(0) !important;
   transition: all 0.3s ease !important;
 }
 
 .badge:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 30%) !important;
 }
 
 .priority-1 {
   background: linear-gradient(135deg, #ff1464, #e5121a) !important;
   padding: 5px 10px !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 30%) !important;
 }
 
 .priority-2 {
   background: linear-gradient(135deg, #ff8a47, #ec8448) !important;
   padding: 5px 10px !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 20%) !important;
 }
 
 .priority-3 {
   background: linear-gradient(135deg, #38e969, #27ea51) !important;
   padding: 5px 10px !important;
   color: #1a1a1a !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 20%) !important;
 }
 
 .priority-4 {
   background: linear-gradient(135deg, #0095ff, #0088e7) !important;
   padding: 5px 10px !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 20%) !important;
 }
 
 .priority-5 {
   background: linear-gradient(135deg, #b40cc1, #a400b0) !important;
   padding: 5px 10px !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 10%) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 20%) !important;
 }
 
 .MuiCircularProgress-root {
@@ -540,13 +541,13 @@
   position: relative !important;
   padding: 2px 6px !important;
   border-radius: 4px !important;
-  background: rgba(255, 19, 101, 0.08) !important;
+  background: rgba(255, 19, 101, 8%) !important;
 }
 
 .issue-link:hover {
   color: #ff4b54 !important;
   text-decoration: none !important;
-  background: rgba(255, 19, 101, 0.15) !important;
+  background: rgba(255, 19, 101, 15%) !important;
 }
 
 .issue-link:hover::after {
