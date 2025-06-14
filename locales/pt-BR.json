@@ -174,6 +174,30 @@
         "checksum": "Checksum"
       }
     },
+    "Nightly": {
+      "title": "Builds Noturnas",
+      "subtitle": "Acesso Antecipado",
+      "description": "Obtenha os builds noturnos mais recentes para testes e desenvolvimento.",
+      "be-aware": "Observe que este arquivo contém builds intermediários criados como um passo de desenvolvimento para uma <fullReleaseLink>versão completa</fullReleaseLink>. Builds intermediários são efêmeros e podem desaparecer futuramente.",
+      "notice-title": "O seguinte aviso se aplica aos builds intermediários:",
+      "quoted-notice": "Este é um build intermediário disponibilizado apenas para testes. O código não foi testado e presume-se que não é compatível com a especificação Java SE. Você não deve implantar ou desenvolver com este código, e sim usar a versão testada e certificada compatível com Java SE. A redistribuição deste build deve manter este aviso.",
+      "unsupported-in-production": "Esses builds não são suportados e não devem ser usados em produção.",
+      "latest-releases": "Últimos Lançamentos",
+      "download-not-available": "Não Disponível",
+      "no-results": "Nenhum build noturno disponível para a versão selecionada.",
+      "checksum": "Checksum",
+      "select-options-filter": "Selecione opções para filtrar a lista de builds noturnos",
+      "version": "Versão",
+      "number-of-builds": "Número de builds",
+      "builds-prior-to": "Builds anteriores a",
+      "platform": "Plataforma",
+      "type": "Tipo",
+      "build-tag": "Build/Tag",
+      "date": "Data",
+      "binary": "Binário",
+      "installer": "Instalador",
+      "release-name": "Nome do Lançamento"
+    },
     "VersionSelector": {
       "all-versions": "Todas as versões"
     }

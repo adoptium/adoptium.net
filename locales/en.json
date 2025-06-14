@@ -166,6 +166,30 @@
         "checksum": "Checksum"
       }
     },
+    "Nightly": {
+      "title": "Nightly Builds",
+      "subtitle": "Early Access",
+      "description": "Get the latest nightly builds for testing and development purposes.",
+      "be-aware": "Please be aware that this archive contains intermediate builds created as a development step towards a <fullReleaseLink>full release</fullReleaseLink>. Intermediate builds are ephemeral, and may disappear in the future.",
+      "notice-title": "The following notice applies to intermediate builds:",
+      "quoted-notice": "This is an intermediate build made available for testing purposes only. The code is untested and presumed incompatible with the Java SE specification. You should not deploy or write to this code, but instead use the tested and certified Java SE compatible version of the code. Redistribution of this build must retain this notice.",
+      "unsupported-in-production": "These builds are unsupported and not for use in production.",
+      "latest-releases": "Latest Releases",
+      "download-not-available": "Not Available",
+      "no-results": "No nightly builds available for the selected version.",
+      "checksum": "Checksum",
+      "select-options-filter": "Select options to filter the list of nightly builds",
+      "version": "Version",
+      "number-of-builds": "Number of builds",
+      "builds-prior-to": "Builds prior to",
+      "platform": "Platform",
+      "type": "Type",
+      "build-tag": "Build/Tag",
+      "date": "Date",
+      "binary": "Binary",
+      "installer": "Installer",
+      "release-name": "Release Name"
+    },
     "VersionSelector": {
       "all-versions": "All Versions"
     }

@@ -1,0 +1,245 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TemurinNightly page > renders correctly 1`] = `
+<div>
+  <div
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Text
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Text
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="max-w-[1264px] mx-auto px-2 sm:px-6 py-4 sm:py-8"
+  >
+    <div
+      class="bg-[#26193F] rounded-2xl p-3 sm:p-6 md:p-8 mb-6 md:mb-10"
+    >
+      <div
+        class="prose prose-invert max-w-none text-sm sm:text-base"
+      >
+        <p>
+          Text
+        </p>
+        <h4
+          class="mt-4 mb-2 sm:mt-6 sm:mb-3 text-base sm:text-lg font-medium"
+        >
+          Text
+        </h4>
+        <blockquote
+          class="border-l-4 border-gray-500 pl-3 sm:pl-4 italic my-3 sm:my-4"
+        >
+          Text
+        </blockquote>
+        <div
+          class="bg-amber-900/30 border-l-4 border-amber-600 p-3 sm:p-4 mt-4 sm:mt-6"
+        >
+          <p
+            class="text-amber-400 font-medium"
+          >
+            Text
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8"
+      >
+        <a
+          class="rounded-[80px] bg-[#FF1464] border transition duration-300 ease-in-out hover:bg-transparent hover:text-[#FF1464] border-[#FF1464] flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 text-white font-bold leading-6 text-sm sm:text-base"
+          href="/temurin/releases"
+        >
+          Text
+           
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div
+      class="overflow-x-auto"
+    >
+      <div>
+        <div
+          class="max-w-3xl mx-auto my-8"
+        >
+          <h3
+            class="text-xl text-white mb-4 font-medium text-center"
+          >
+            Text
+          </h3>
+          <div
+            class="bg-[#26193F] rounded-xl p-6 mb-8"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-end gap-6 justify-center"
+            >
+              <div
+                class="w-full md:w-auto"
+              >
+                <label
+                  class="block text-gray-300 mb-2 font-medium"
+                  for="version-filter"
+                >
+                  Text
+                </label>
+                <select
+                  aria-label="version-filter"
+                  class="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464]"
+                  data-testid="version-filter"
+                  id="version-filter"
+                />
+              </div>
+              <div
+                class="w-full md:w-auto"
+              >
+                <label
+                  class="block text-gray-300 mb-2 font-medium"
+                  for="build-num-filter"
+                >
+                  Text
+                </label>
+                <select
+                  aria-label="Filter by number of builds"
+                  class="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464]"
+                  data-testid="build-num-filter"
+                  id="build-num-filter"
+                >
+                  <option
+                    value="1"
+                  >
+                    1
+                  </option>
+                  <option
+                    value="5"
+                  >
+                    5
+                  </option>
+                  <option
+                    value="10"
+                  >
+                    10
+                  </option>
+                  <option
+                    value="20"
+                  >
+                    20
+                  </option>
+                  <option
+                    value="50"
+                  >
+                    50
+                  </option>
+                </select>
+              </div>
+              <div
+                class="w-full md:w-auto"
+              >
+                <label
+                  class="block text-gray-300 mb-2 font-medium"
+                  for="build-date"
+                >
+                  Text
+                </label>
+                <input
+                  aria-label="Build Date"
+                  class="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464] date-picker"
+                  id="build-date"
+                  max="2025-06-13"
+                  type="date"
+                  value="2025-06-13"
+                />
+                <style>
+                  .date-picker::-webkit-calendar-picker-indicator { filter: invert(39%) sepia(76%) saturate(7464%) hue-rotate(324deg) brightness(98%) contrast(105%); }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center text-gray-400 py-8"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

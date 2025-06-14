@@ -174,6 +174,30 @@
         "checksum": "Somme de contrôle"
       }
     },
+    "Nightly": {
+      "title": "Versions nocturnes",
+      "subtitle": "Accès anticipé",
+      "description": "Obtenez les dernières versions nocturnes pour les tests et le développement.",
+      "be-aware": "Veuillez noter que cette archive contient des versions intermédiaires créées comme une étape vers une <fullReleaseLink>version complète</fullReleaseLink>. Ces versions sont éphémères et peuvent disparaître à l'avenir.",
+      "notice-title": "L'avis suivant s'applique aux versions intermédiaires :",
+      "quoted-notice": "Ceci est une version intermédiaire mise à disposition uniquement à des fins de test. Le code n'est pas testé et est présumé incompatible avec la spécification Java SE. Vous ne devez pas utiliser ou déployer ce code. Utilisez plutôt la version testée et certifiée compatible Java SE. Toute redistribution doit conserver cet avis.",
+      "unsupported-in-production": "Ces versions ne sont pas prises en charge et ne doivent pas être utilisées en production.",
+      "latest-releases": "Dernières versions",
+      "download-not-available": "Indisponible",
+      "no-results": "Aucune version nocturne disponible pour la version sélectionnée.",
+      "checksum": "Somme de contrôle",
+      "select-options-filter": "Sélectionnez les options pour filtrer la liste des versions nocturnes",
+      "version": "Version",
+      "number-of-builds": "Nombre de versions",
+      "builds-prior-to": "Versions antérieures à",
+      "platform": "Plateforme",
+      "type": "Type",
+      "build-tag": "Build/Tag",
+      "date": "Date",
+      "binary": "Binaire",
+      "installer": "Programme d'installation",
+      "release-name": "Nom de la version"
+    },
     "VersionSelector": {
       "all-versions": "Toutes les versions"
     }
