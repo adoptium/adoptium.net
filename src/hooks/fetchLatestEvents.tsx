@@ -12,7 +12,7 @@ export async function fetchLatestEvents() {
         .then(function (response) {
             return response.data.events
         })
-        .catch(function (error) {
+        .catch(function () {
             return []
         })
 }

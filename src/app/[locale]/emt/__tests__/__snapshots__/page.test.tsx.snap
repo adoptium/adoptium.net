@@ -29,8 +29,14 @@ exports[`EMT page > renders correctly 1`] = `
         >
           <img
             alt="background-image"
-            src="/images/projects/adoptium-icon.png"
-            style="width: 8em;"
+            data-nimg="1"
+            decoding="async"
+            height="128"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fprojects%2Fadoptium-icon.png&w=256&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fprojects%2Fadoptium-icon.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fprojects%2Fadoptium-icon.png&w=256&q=75 2x"
+            style="color: transparent; width: 8em;"
+            width="128"
           />
         </div>
         <div

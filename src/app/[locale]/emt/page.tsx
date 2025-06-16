@@ -1,5 +1,6 @@
 import { Metadata } from "next"
-import React from "react"
+import Image from "next/image"
+import { Link } from "@/i18n/navigation"
 import { FaTools, FaBullseye, FaExclamationTriangle, FaFileAlt, FaCogs, FaBolt, FaCheckCircle, FaArrowRight } from "react-icons/fa"
 
 export const metadata: Metadata = {
@@ -23,7 +24,13 @@ export default function EMTPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="pt-24 pb-20 md:pt-32 md:pb-28 flex flex-col items-center">
                         <div className="absolute sm:static sm:z-auto top-[80px] z-[-1] left-[50%] translate-x-[-50%] sm:translate-x-0">
-                            <img src="/images/projects/adoptium-icon.png" style={{ width: "8em" }} alt="background-image" />
+                            <Image
+                                src="/images/projects/adoptium-icon.png"
+                                style={{ width: "8em" }}
+                                alt="background-image"
+                                width={128}
+                                height={128}
+                            />
                         </div>
 
                         <div className="text-center max-w-4xl mx-auto">
@@ -109,7 +116,7 @@ export default function EMTPage() {
                                 <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 text-white">Java Migration Made Simple</h2>
                                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                                     The Eclipse Migration Toolkit for Java (EMT4J) is designed to simplify the process of upgrading Java applications across versions.
-                                    Whether you're migrating from JDK 8 to 11 or JDK 11 to 17, EMT4J provides the tools and insights you need.
+                                    Whether you&apos;re migrating from JDK 8 to 11 or JDK 11 to 17, EMT4J provides the tools and insights you need.
                                 </p>
                                 <p className="text-gray-300 text-lg leading-relaxed">
                                     By analyzing your codebase statically and dynamically, EMT4J identifies potential compatibility issues and provides detailed
@@ -207,17 +214,17 @@ export default function EMTPage() {
                                 </p>
                                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                                     Each migration path includes specific checks for known compatibility issues, API changes, and system modifications
-                                    that could affect your application's functionality.
+                                    that could affect your application&apos;s functionality.
                                 </p>
                                 <div className="mt-6">
-                                    <a
+                                    <Link
                                         href="/news/2022/12/emt4j-an-easier-upgrade-for-java-applications/"
                                         className="group px-6 py-4 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-semibold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center w-fit"
                                     >
                                         <FaFileAlt className="text-xl mr-2 group-hover:animate-pulse" />
                                         <span>Read the Blog Post</span>
                                         <FaArrowRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="relative">

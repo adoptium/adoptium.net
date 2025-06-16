@@ -2,7 +2,7 @@
 
 import React, { memo, useState, useEffect } from "react"
 import { useLocale } from "next-intl"
-import Pagination from "@/components/News/Pagination"
+import ClientPagination from "./ClientPagination"
 import { truncateIfLonger } from "@/utils/truncateLonger"
 import { fetchLatestEvents } from "@/hooks"
 
@@ -46,9 +46,6 @@ const TimeLine = ({ data }: TimeLineProps) => {
     const startIndex = (currentPage - 1) * postsPerPage
     const endIndex = startIndex + postsPerPage
     const paginatedData = validEvents.slice(startIndex, endIndex)
-    const previousPageNumber = currentPage > 1 ? currentPage - 1 : currentPage
-    const nextPageNumber =
-        currentPage < totalPages ? currentPage + 1 : currentPage
 
     // Helper for date formatting
     const newDate = (dateString: string) => {
@@ -104,12 +101,10 @@ const TimeLine = ({ data }: TimeLineProps) => {
                     </div>
                 )
             })}
-            <Pagination
-                previousPageNumber={previousPageNumber}
-                nextPage={String(nextPageNumber)}
+            <ClientPagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                baseUrl="/timeline"
+                onNavigate={setCurrentPage}
             />
             <div className="flex items-center gap-5 mb-15 justify-center">
                 <a

@@ -3,7 +3,15 @@ import React, { useEffect } from 'react';
 
 declare global {
     interface Window {
-        hbspt?: any;
+        hbspt?: {
+            forms: {
+                create: (options: {
+                    portalId: string;
+                    formId: string;
+                    target: string;
+                }) => void;
+            };
+        };
     }
 }
 
@@ -27,7 +35,7 @@ export default function HubspotForm({ portalId, formId }: HubspotFormProps) {
                 });
             }
         });
-    }, []);
+    }, [formId, portalId]);
 
     return (
         <div id="hubspotForm" className="hubspotForm"></div>

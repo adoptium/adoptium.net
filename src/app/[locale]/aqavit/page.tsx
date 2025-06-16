@@ -133,7 +133,7 @@ export default function AQAvitPage() {
                                     <span className="font-semibold text-purple-200">
                                         Adoptium Quality Assurance
                                     </span>{" "}
-                                    'AQA' and 'vit' for vitality and speed.
+                                    &apos;AQA&apos; and &apos;vit&apos; for vitality and speed.
                                 </p>
                                 <p className="text-gray-300 text-lg leading-relaxed">
                                     As the project engages with vendors and enterprise consumers,
@@ -205,7 +205,7 @@ export default function AQAvitPage() {
                                         </div>
                                     </div>
                                     <div className="text-gray-300 mb-4">
-                                        The central repository for AQAvit's test definitions,
+                                        The central repository for AQAvit&apos;s test definitions,
                                         documentation, and test suite resources.
                                     </div>
                                     <a
@@ -232,7 +232,7 @@ export default function AQAvitPage() {
                                     <span className="font-semibold text-purple-200">
                                         aqa-tests
                                     </span>
-                                    , which houses the project's test definition files,
+                                    , which houses the project&apos;s test definition files,
                                     documentation, and serves as the base for running the AQAvit
                                     test suite.
                                 </p>
@@ -281,8 +281,8 @@ export default function AQAvitPage() {
                                     AQAvit Verification
                                 </h2>
                                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                                    The AQAvit project was created to "make quality certain to
-                                    happen." AQAvit verification is achieved through the process
+                                    The AQAvit project was created to &quot;make quality certain to
+                                    happen.&quot; AQAvit verification is achieved through the process
                                     of running and passing a prescribed and versioned set of tests
                                     in the AQAvit test suite.
                                 </p>
