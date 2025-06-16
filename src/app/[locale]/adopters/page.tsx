@@ -6,11 +6,11 @@ import ContactUs from "@/components/ContactUs"
 import Logos, { LogoType } from "@/components/Logos"
 
 export const metadata: Metadata = {
-    title: "Sustainers",
-    description: "Support the Adoptium project and become a Sustainer"
+    title: "Our Adopters",
+    description: "View the companies that use Eclipse Temurin in production.",
 }
 
-export default function SustainersPage() {
+export default function AdoptersPage() {
     return (
         <div>
             <PageHeader

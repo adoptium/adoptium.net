@@ -6,8 +6,8 @@ import PageHeader from '@/components/Common/PageHeader';
 import NewsCardList from '@/components/News/NewsCardList';
 
 export const metadata: Metadata = {
-  title: "News & Updates",
-  description: "Latest news and updates from the Eclipse Adoptium Project",
+    title: "News & Updates",
+    description: "Latest news and updates from the Eclipse Adoptium Project",
 }
 
 export default async function NewsPage() {

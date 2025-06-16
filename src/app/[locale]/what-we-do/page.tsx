@@ -55,7 +55,7 @@ export default function WhatWeDoPage() {
         title="Connect with the community"
         buttontitle="Learn More"
         description="Join our Slack channel to discuss work and reach out to project maintainers."
-        linkTo="/slack" 
+        linkTo="/slack"
       />
       <Testimonials />
       <LatestNews />
