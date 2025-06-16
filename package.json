@@ -20,7 +20,7 @@
     "@mui/material": "^7.1.1",
     "@mui/x-data-grid": "^8.5.2",
     "axios": "^1.9.0",
-    "framer-motion": "^12.18.0",
+    "framer-motion": "^12.18.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "html-entities": "^2.6.0",
