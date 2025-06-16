@@ -10,8 +10,8 @@ def check_value(data, val):
     return any(adopter["name"] == val for adopter in data)
 
 
-# Load the local Adopters JSON file in src/json/adopters.json
-with open("src/json/adopters.json") as f:
+# Load the local Adopters JSON file in src/data/adopters.json
+with open("src/data/adopters.json") as f:
     data = list(json.load(f))
     current_adopters = data
 
@@ -64,8 +64,8 @@ if temurin_project is not None:
                 )
                 new_adopter["logo_white"] = "adopters/" + adopter["logo_white"]
 
-    # Write the updated list of adopters to src/json/adopters.json
-    with open("src/json/adopters.json", "w") as f:
+    # Write the updated list of adopters to src/data/adopters.json
+    with open("src/data/adopters.json", "w") as f:
         # Sort the list of adopters alphabetically
         current_adopters.sort(key=lambda x: x["name"].lower())
         # format JSON to be human readable
