@@ -3,7 +3,7 @@ title: Eclipse Adoptium Welcomes You
 date: "2021-03-23T12:00:00+00:00"
 author: georgeadams
 description: After months of hard work, the migration process has begun!
-featuredImage: "./adoptium_banner.jpg"
+featuredImage: "/images/news/eclipse-adoptium-announcement/adoptium_banner.jpg"
 tags:
   - adoptium
 ---
@@ -16,7 +16,7 @@ Firstly we'd like to take this opportunity to thank the [Eclipse Foundation](htt
 
 As part of the move to the Eclipse Foundation, we decided to rebrand and change the name from AdoptOpenJDK to Adoptium:
 
-![Adoptium Logo](./adoptium_logo.png)
+![Adoptium Logo](/images/news/eclipse-adoptium-announcement/adoptium_logo.png)
 
 Many of you will have seen the new logo rollout to GitHub, Twitter, Slack and more over the last few days!
 

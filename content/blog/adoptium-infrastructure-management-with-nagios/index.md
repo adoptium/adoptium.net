@@ -17,7 +17,7 @@ To aid in this task, the [Nagios Core](https://www.nagios.org/projects/nagios-co
 Useful Links:
 
 - [Visual view of the Adoptium infrastructure](https://github.com/adoptium/infrastructure/blob/master/docs/adoptopenjdk.pdf)
-- [Infrastructure Repository README](https://github.com/adoptium/infrastructure/blob/master/README.md)
+- [Infrastructure Repository readme](https://github.com/adoptium/infrastructure/blob/master/README.md)
 - [Usage Of Ansible](https://raw.githubusercontent.com/adoptium/infrastructure/master/ansible/inventory.yml),
 
 ## 2. How It Works
@@ -28,31 +28,31 @@ The Nagios server is responsible for running a series of checks on various serve
 
 The Adoptium Nagios server can be accessed via this URL: [https://nagios.adoptopenjdk.net/nagios/](https://nagios.adoptopenjdk.net/nagios/), but it does require a login, which can be requested by logging an issue in the [infrastructure GitHub repository](https://github.com/adoptium/infrastructure/issues). Once logged in you will be presented with the following screen:
 
-![Nagios_Main_Screen](Nagios_Main.jpg)
+![Nagios_Main_Screen](/images/news/adoptium-infrastructure-management-with-nagios/Nagios_Main.jpg)
 
 ### 2.2 Key Features Overview
 
 As shown in the screenshot below, there are 3 key areas which will display the states of the hosts and services being monitored in Nagios. These key areas are highlighted in the screenshot and documented in the named sections below
 
-![Nagios_Main_Screen_Key_Features](Nagios_Main_hl.jpg)
+![Nagios_Main_Screen_Key_Features](/images/news/adoptium-infrastructure-management-with-nagios/Nagios_Main_hl.jpg)
 
 #### 2.2.1 Nagios Hostgroups Overview
 
 The Nagios configuration allows hosts to be grouped together, as the Adoptium public infrastructure is supplied by a number of different providers, this is a good way to check on the hosts and services on a per provider basis. The Host Groups page shown in the screenshot below allows you to quickly see the number of individual servers, and the status of the services for each individual server on a single page.
 
-![Nagios_Hostgroups](Nagios_HGs.jpg)
+![Nagios_Hostgroups](/images/news/adoptium-infrastructure-management-with-nagios/Nagios_HGs.jpg)
 
 #### 2.2.2 Nagios Servicegroups Overview
 
 In addition to the Host Groups grouping detailed in 2.2.1, the Nagios configuration also allows hosts to be grouped together with a second optional grouping known as Service Groups. Currently, there are only two service groups being monitored in this fashion, the docker host servers (which host docker containers) and Infra servers, which is a specialist group for monitoring key infrastructure servers. The page shown in the screenshot below allows you to quickly see the number of individual servers, and the status of the services for each host allocated to a service group.
 
-![Nagios_Servicegroups](Nagios_SGs.jpg)
+![Nagios_Servicegroups](/images/news/adoptium-infrastructure-management-with-nagios/Nagios_SGs.jpg)
 
 #### 2.2.3 Nagios Problems Overview
 
 The final page shown in the screenshot below is a more detailed view of all the warnings and critical issues across the whole set of infrastructure, it allows easy viewing of elements that need attention. These are periodically monitored, and issues are logged within the GitHub Adoptium infrastructure repository to allow remediation works to be carried out, as in some cases, downtime, or potentially the impact of the works may need more than a simple fix.
 
-![Nagios_Problems](Nagios_Problems.jpg)
+![Nagios_Problems](/images/news/adoptium-infrastructure-management-with-nagios/Nagios_Problems.jpg)
 
 ## 3. Summary
 

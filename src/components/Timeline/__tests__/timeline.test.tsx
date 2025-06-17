@@ -7,13 +7,13 @@ const mockData = [
     {
         title: "Event A",
         description: "This is a description for Event A.",
-        date: new Date().toISOString(), // today
+        date: "2023-10-01T00:00:00Z",
         infoLink: "https://example.com/a",
     },
     {
         title: "Event B",
         description: "This is a description for Event B.",
-        date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 2).toISOString(), // 2 days from now
+        date: "2023-10-03T00:00:00Z",
         infoLink: "https://example.com/b",
     },
 ]

@@ -3,7 +3,7 @@ title: Eclipse Temurin 17 Available
 date: "2021-09-23T12:00:00+00:00"
 author: georgeadams
 description: Adoptium is excited to announce the immediate availability of Eclipse Temurin 17.
-featuredImage: "./eclipse_temurin_17.jpg"
+featuredImage: "/images/news/eclipse-temurin-17-available/eclipse_temurin_17.jpg"
 tags:
   - adoptium
   - temurin
@@ -11,7 +11,7 @@ tags:
 
 Adoptium is happy to announce the immediate availability of Eclipse Temurin 17. As always, all binaries are available free of charge without usage restrictions on a wide range of platforms.
 
-![Eclipse_17 Logo](./eclipse_temurin_17.jpg)
+![Eclipse_17 Logo](/images/news/eclipse-temurin-17-available/eclipse_temurin_17.jpg)
 
 - [List of changes in OpenJDK 17](https://bugs.openjdk.java.net/browse/JDK-8263045?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20%2217%22%20ORDER%20BY%20created%20DESC)
 

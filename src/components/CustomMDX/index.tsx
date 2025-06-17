@@ -83,7 +83,9 @@ interface ImageProps {
 }
 
 function RoundedImage(props: ImageProps) {
-  return <Image className="rounded-lg" {...props} alt="blog image" />
+  const width = props.width || 800;
+  const height = props.height || 400;
+  return <Image className="rounded-lg" {...props} alt={props.alt || 'blog image'} width={width} height={height} />;
 }
 
 interface CodeProps {
@@ -140,7 +142,7 @@ const components = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
-  Image: RoundedImage,
+  img: RoundedImage,
   a: CustomLink,
   code: Code,
   Table,

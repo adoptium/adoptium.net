@@ -48,16 +48,16 @@ The job does:
 
 - Call the jdk reproducible comparison process in [temurin-build](https://github.com/adoptium/temurin-build/tree/master/tooling) (pre steps are done to ensure all files are comparable) and archive the results.
 
-![Build flow](buildFlow.png)
+![Build flow](/images/news/Reproducible-Comparison-Builds/buildFlow.png)
 
 Build parameters are as follows
-![Build parameters](parameter.png)
+![Build parameters](/images/news/Reproducible-Comparison-Builds/parameter.png)
 
 Build results or artifacts
-![Build results](result.png)
+![Build results](/images/news/Reproducible-Comparison-Builds/result.png)
 
 Currently enabled comparison builds platforms for both jdk17 & jdk21 are linux-x64, linux-ppc64le, linux-s390x, linux-aarch64, windows-x64, mac-x64 and mac-aarch64.
-![Enabled builds](builds.png)
+![Enabled builds](/images/news/Reproducible-Comparison-Builds/builds.png)
 
 ## Monitoring - How to use it
 
