@@ -215,8 +215,8 @@ const NavBar = ({ locale }: { locale: string }) => {
             <Image
               src="/images/adoptium-logo-dark.svg"
               alt="Adoptium Logo"
-              width={160}
-              height={40}
+              width={0}
+              height={0}
               className="h-10 w-auto"
             />
           </Link>
@@ -339,8 +339,8 @@ const NavBar = ({ locale }: { locale: string }) => {
                 className="h-8 mb-0 w-auto"
                 src="/images/adoptium-logo-dark.svg"
                 alt="Adoptium Logo"
-                width={128}
-                height={32}
+                width={0}
+                height={0}
               />
             </Link>
             <button
