@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { Link } from '@/i18n/navigation'
 import { getBlogPosts } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
 import { sanitizeObject } from '@/utils/sanitize'
@@ -9,7 +10,8 @@ import { CustomMDX } from '@/components/CustomMDX'
 import Byline from '@/components/News/Byline'
 import ShareButton from '@/components/News/ShareButton'
 import Tags from '@/components/News/Tags'
-import SharePost from '@/components/News/SharePost'
+import RelatedArticles from '@/components/News/RelatedArticles'
+import SyntaxHighlighter from '@/components/SyntaxHighlighter'
 
 // TODO Hardcoded metadata for now, perhaps we could improve this?
 const metadata = {
@@ -136,6 +138,16 @@ export default async function Blog(
   // Sanitize the schema to prevent XSS
   const sanitizedJsonLd = sanitizeObject(jsonLdSchema);
 
+  // Find the index of the current post in the sorted list
+  const posts = getBlogPosts().sort((a, b) => {
+    const dateA = new Date(a.metadata.date).getTime();
+    const dateB = new Date(b.metadata.date).getTime();
+    return dateB - dateA; // Newest first
+  });
+  const currentIndex = posts.findIndex((p) => p.slug === slug);
+  const next = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const previous = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+
   return (
     <section>
       <script
@@ -145,70 +157,78 @@ export default async function Blog(
           __html: safeJsonLd(sanitizedJsonLd),
         }}
       />
-      <div className="pt-48 pb-12">
+      {/* Restore classic header layout and sizing */}
+      <div className="pt-16 md:pt-24 pb-12">
         <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
-          <div className="self-stretch h-52 flex-col justify-center items-center gap-6 flex">
-            <div className="self-stretch h-32 flex-col justify-center items-center gap-4 flex">
+          <div className="self-stretch flex-col justify-center items-center gap-6 flex pb-4">
+            <div className="self-stretch flex-col justify-center items-center gap-4 flex">
               <div className="justify-start items-center gap-3 inline-flex">
                 <PinkIcon />
-                <div className="text-rose-600 text-base font-bold leading-normal">
-                  News article
-                </div>
+                <div className="text-rose-600 text-base font-bold leading-normal">News article</div>
               </div>
-              <h1 className="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold">
-                {post.metadata.title}
+              <h1 className="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold break-words">
+                <span className="break-words whitespace-normal">{post.metadata.title}</span>
               </h1>
             </div>
             <div className="self-stretch text-center text-grey text-grey-300 text-lg md:text-xl font-normal leading-7">
               {post.metadata.description}
             </div>
-            <Byline
-              date={formatDate(post.metadata.date)}
-              author={author?.name || 'Unknown Author'}
-              identifier={post.metadata.author || ''}
-            />
+            <div className="flex justify-center items-center gap-5">
+              <Byline
+                date={formatDate(post.metadata.date)}
+                author={author?.name || 'Unknown Author'}
+                identifier={post.metadata.author || ''}
+              />
+            </div>
           </div>
         </div>
       </div>
-      <section className="mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center w-full">
-        <div className="m-4 max-w-4/5 md:max-w-4xl">
+      <section className="w-full mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center">
+        <div className="w-full max-w-full m-2 md:m-4 md:max-w-4xl bg-white/5 rounded-2xl shadow-2xl p-2 md:p-12 relative z-10 overflow-x-auto">
           <article>
-            <header className="py-5">
+            <header className="py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-white/10 mb-8 px-2 md:px-0">
               <ShareButton
                 location={postURL}
                 siteMetadata={metadata}
                 post={post.metadata}
               />
+              <Tags tags={post.metadata.tags} />
             </header>
-            <article className="prose prose-invert lg:prose-lg max-w-none">
+            <article className="prose prose-invert lg:prose-lg max-w-full px-2 md:px-0">
               <CustomMDX source={post.content} />
+              {/* Add SyntaxHighlighter to enable Prism highlighting on client */}
+              <SyntaxHighlighter />
             </article>
-            <Tags tags={post.metadata.tags} />
-            {/* <Comments /> */}
-            <SharePost />
           </article>
-
-          <div>
+          <div className="mt-8 px-2 md:px-0">
             <ul className="flex flex-wrap justify-between list-none pt-5 md:p-0">
               <li>
-                {/* {next && (
-                  <Link to={next.fields.postPath} rel="next">
-                    ← {next.frontmatter.title}
+                {next && (
+                  <Link
+                    href={`/news/${next.year}/${next.month}/${next.slug}`}
+                    rel="next"
+                    className="text-pink hover:underline"
+                  >
+                    ← {next.metadata.title}
                   </Link>
-                )} */}
+                )}
               </li>
               <li>
-                {/* {previous && (
-                  <Link to={previous.fields.postPath} rel="prev">
-                    {previous.frontmatter.title} →
+                {previous && (
+                  <Link
+                    href={`/news/${previous.year}/${previous.month}/${previous.slug}`}
+                    rel="prev"
+                    className="text-pink hover:underline"
+                  >
+                    {previous.metadata.title} →
                   </Link>
-                )} */}
+                )}
               </li>
             </ul>
           </div>
         </div>
       </section>
-      {/* <RelatedArticles /> */}
+      <RelatedArticles currentSlug={post.slug} tags={post.metadata.tags} />
     </section>
   )
 }

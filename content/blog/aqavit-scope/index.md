@@ -18,12 +18,12 @@ AQAvit has rapidly become the de facto standard by which companies can measure w
 
 At this time, there are a number of vendors listed in the [Adoptium marketplace](https://adoptium.net/marketplace/). The marketplace API includes links to AQAvit results for the different distributions. This serves as direct evidence of the quality of the binaries listed in the marketplace as well as an indicator of the open and transparent nature of their quality assurance work.
 
-![Adoptium Marketplace Vendors](marketplaceVendors.png)
+![Adoptium Marketplace Vendors](/images/news/aqavit-scope/marketplaceVendors.png)
 
 The Adoptium project uses AQAvit verification for the release activities for its Eclipse Temurin binaries. Since Temurin covers a broad set of platforms and versions, this is an ambitious effort! An overview of the activities of AQAvit testing and triage is covered by this [presentation](https://youtu.be/TWD_b8cwIVg), which takes a look at the January and April 2024 Critical Patch Update (CPU) triage activities.
 
-![April AQAvit Triage](1PlatformSH.png)
-![April AQAvit Triage](54PlatformsSH.png)
+![April AQAvit Triage](/images/news/aqavit-scope/1PlatformSH.png)
+![April AQAvit Triage](/images/news/aqavit-scope/54PlatformsSH.png)
 
 In summary, millions of tests are run during a release! The test pipelines produce artifacts to show details about which binary is under test, what tests were run against that product, noting where the test material was sourced, whether the product passed those tests, what machines the tests were run on and so forth. These artifacts are then uploaded and made available via the Adoptium marketplace API for reference alongside the binaries.
 
