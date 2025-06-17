@@ -9,7 +9,7 @@
     background-image: url("/images/backgrounds/temurin-hero-img.png");
   }
 
-  @media (max-width: 640px) {
+  @media (width <= 640px) {
     .bg-temurin-hero {
       background-image: none;
     }
