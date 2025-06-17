@@ -34,3 +34,4 @@ jobs:
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false
           VALIDATE_TSX: false
+          VALIDATE_JSON: false

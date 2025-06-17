@@ -28,7 +28,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const UiVirtualContent = ({ data }: { data: DataItem[] }) => {
   const [scaleY, setScaleY] = useState(0)
-  
+
   const onProgressHandler = useCallback((self: ScrollTriggerInstance) => {
     setScaleY(parseFloat(self.progress.toFixed(4)))
     const progress = parseFloat(self.progress.toFixed(4)) * 100
@@ -50,7 +50,7 @@ const UiVirtualContent = ({ data }: { data: DataItem[] }) => {
       }
     })
   }, [data])
-  
+
   useEffect(() => {
     ScrollTrigger.create({
       trigger: ".ui-virtual-wrapper",
@@ -77,9 +77,8 @@ const UiVirtualContent = ({ data }: { data: DataItem[] }) => {
       {data.map((item, index) => (
         <div
           key={index}
-          className={`flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-${
-            index + 1
-          }`}
+          className={`flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-${index + 1
+            }`}
         >
           <div className="w-[50%]">
             {item.subtext !== undefined ? (
