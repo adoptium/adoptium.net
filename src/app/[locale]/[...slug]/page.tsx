@@ -81,15 +81,15 @@ export default async function AsciidocPage({ params }: {
     }
 
     const t = await getTranslations('Asciidoc');
-    
+
     // Determine if we should display the default locale warning
     // Show warning when:
     // 1. The current locale is not English ('en') or British English ('en-GB')
     // 2. The page content is in English (not available in user's locale)
-    const displayDefaultLocaleWarning = locale !== 'en' && 
-                                       locale !== 'en-GB' && 
-                                       !asciidoc.availableLocales.includes(locale);
-    
+    const displayDefaultLocaleWarning = locale !== 'en' &&
+        locale !== 'en-GB' &&
+        !asciidoc.availableLocales.includes(locale);
+
     // Get the relative path for the current document
     // This is used in the warning message for the GitHub edit link
     const relativePath = `${asciidoc.slug}/${path.basename(asciidoc.path)}`;

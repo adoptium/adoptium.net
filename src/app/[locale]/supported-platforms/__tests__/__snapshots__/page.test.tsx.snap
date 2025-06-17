@@ -1,0 +1,765 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Supported Platforms page > renders correctly 1`] = `
+<div>
+  <div
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Eclipse Temurin
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Supported Platforms
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full"
+        >
+          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="max-w-[1200px] w-full mx-auto px-4 md:px-6 pt-6 md:pt-8 pb-12 md:pb-14 lg:pb-28 lg:pt-16"
+  >
+    <div
+      class="text-center"
+    >
+      <p
+        class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4"
+      >
+        This section lists the operating systems that are supported with the latest release of Eclipse Temurin.
+      </p>
+    </div>
+    <div
+      class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 lg:gap-8 items-center py-6 md:py-8 lg:py-12 px-4"
+    >
+      <div
+        class="flex items-center gap-3 px-4 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 w-full sm:w-auto justify-center sm:justify-start"
+      >
+        <svg
+          class="text-emerald-400 flex-shrink-0"
+          fill="currentColor"
+          height="20"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M170.718 216.482L141.6 245.6l93.6 93.6 208-208-29.118-29.118L235.2 279.918l-64.482-63.436zM422.4 256c0 91.518-74.883 166.4-166.4 166.4S89.6 347.518 89.6 256 164.482 89.6 256 89.6c15.6 0 31.2 2.082 45.764 6.241L334 63.6C310.082 53.2 284.082 48 256 48 141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208h-41.6z"
+          />
+        </svg>
+        <span
+          class="text-sm font-medium text-white"
+        >
+          Supported
+        </span>
+      </div>
+      <div
+        class="flex items-center gap-3 px-4 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 w-full sm:w-auto justify-center sm:justify-start"
+      >
+        <svg
+          class="text-blue-400 flex-shrink-0"
+          fill="currentColor"
+          height="20"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 640 512"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"
+          />
+        </svg>
+        <span
+          class="text-sm font-medium text-white"
+        >
+          Docker Available
+        </span>
+      </div>
+      <div
+        class="flex items-center gap-3 px-4 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 w-full sm:w-auto justify-center sm:justify-start"
+      >
+        <svg
+          class="text-red-400 flex-shrink-0"
+          fill="currentColor"
+          height="20"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 32 32"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M 7.21875 5.78125 L 5.78125 7.21875 L 14.5625 16 L 5.78125 24.78125 L 7.21875 26.21875 L 16 17.4375 L 24.78125 26.21875 L 26.21875 24.78125 L 17.4375 16 L 26.21875 7.21875 L 24.78125 5.78125 L 16 14.5625 Z"
+          />
+        </svg>
+        <span
+          class="text-sm font-medium text-white"
+        >
+          Not Supported
+        </span>
+      </div>
+    </div>
+    <div
+      class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl overflow-hidden"
+    >
+      <div
+        class="hidden md:grid md:grid-cols-6 gap-6 p-6 md:p-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50 border-b border-white/10"
+      >
+        <div
+          class="text-lg font-semibold text-white/90"
+        >
+          Text
+        </div>
+        <div
+          class="text-lg font-semibold text-white/90 text-center"
+        >
+          JDK 
+          8
+        </div>
+        <div
+          class="text-lg font-semibold text-white/90 text-center"
+        >
+          JDK 
+          11
+        </div>
+        <div
+          class="text-lg font-semibold text-white/90 text-center"
+        >
+          JDK 
+          17
+        </div>
+        <div
+          class="text-lg font-semibold text-white/90 text-center"
+        >
+          JDK 
+          21
+        </div>
+        <div
+          class="text-lg font-semibold text-white/90 text-center"
+        >
+          JDK 
+          24
+        </div>
+      </div>
+      <div
+        class="md:hidden bg-gradient-to-r from-purple-900/50 to-indigo-900/50 border-b border-white/10"
+      >
+        <div
+          class="p-4"
+        >
+          <h4
+            class="text-lg font-semibold text-white/90 mb-3 text-center"
+          >
+            Text
+          </h4>
+        </div>
+      </div>
+      <div
+        class="divide-y divide-white/5"
+      >
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Windows (x64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Windows (aarch64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Windows (x86)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Linux (x64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Linux (ARM 64-bit)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Linux (ARM 32-bit Hard-Float)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Linux (PowerPC 64-bit Little Endian)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Linux (s390x)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Linux (riscv64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              macOS (x64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              macOS (Apple Silicon)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Solaris (x64 and Sparc)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              AIX (PowerPC 64-bit)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="relative xl:px-0 px-6 md:py-32 py-16 md:py-28 py-12"
+  >
+    <img
+      alt="gradient overlay"
+      class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <img
+      alt="gradient overlay mobile"
+      class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <div
+      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+    >
+      <img
+        alt="message icon"
+        class="!mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="64"
+        loading="lazy"
+        src="/images/icons/message.svg"
+        style="color: transparent;"
+        width="64"
+      />
+      <p
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
+      >
+        Connect with the community
+      </p>
+      <span
+        class="text-gray-300 text-base leading-6"
+      >
+        Join our Slack channel to discuss work and reach out to project maintainers.
+      </span>
+      <a
+        href="/slack"
+      >
+        <button
+          class="rounded-2xl bg-transparent border-2 border-pink-500 text-white text-base leading-6 font-normal w-[179px] h-[48px] transition-all duration-500 ease-in-out hidden md:block mt-8 hover:bg-pink-500/10"
+        >
+          Learn More
+        </button>
+      </a>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,756 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EMT page > renders correctly 1`] = `
+<div>
+  <div
+    class="bg-purple bg-gradient-to-br from-purple to-[#1a0b38] relative overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 bg-center bg-no-repeat opacity-40 mix-blend-overlay"
+    />
+    <div
+      class="absolute top-0 left-0 w-full h-full overflow-hidden"
+    >
+      <div
+        class="absolute -top-40 -right-40 w-96 h-96 bg-pink/30 rounded-full filter blur-3xl opacity-20"
+      />
+      <div
+        class="absolute top-1/2 -left-40 w-80 h-80 bg-blue-500/30 rounded-full filter blur-3xl opacity-20"
+      />
+    </div>
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="pt-24 pb-20 md:pt-32 md:pb-28 flex flex-col items-center"
+      >
+        <div
+          class="absolute sm:static sm:z-auto top-[80px] z-[-1] left-[50%] translate-x-[-50%] sm:translate-x-0"
+        >
+          <img
+            alt="background-image"
+            data-nimg="1"
+            decoding="async"
+            height="128"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fprojects%2Fadoptium-icon.png&w=256&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fprojects%2Fadoptium-icon.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fprojects%2Fadoptium-icon.png&w=256&q=75 2x"
+            style="color: transparent; width: 8em;"
+            width="128"
+          />
+        </div>
+        <div
+          class="text-center max-w-4xl mx-auto"
+        >
+          <h1
+            class="font-bold leading-none text-transparent bg-clip-text bg-gradient-to-r from-white to-pink-300 text-6xl sm:text-7xl md:text-8xl"
+          >
+            Eclipse Migration Toolkit for Java
+          </h1>
+          <p
+            class="mt-8 text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed font-medium max-w-3xl mx-auto"
+          >
+            A comprehensive tooling project for assisting Java version migration. EMT4J provides static and dynamic tools with detailed analysis reports to help migrate Java applications from previous versions of OpenJDK with confidence and ease.
+          </p>
+          <div
+            class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <a
+              class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+              href="https://github.com/adoptium/emt4j"
+              target="_blank"
+            >
+              <svg
+                class="text-xl"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"
+                />
+              </svg>
+              <span>
+                Get Started
+              </span>
+            </a>
+            <a
+              class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+              href="https://projects.eclipse.org/projects/adoptium.emt4j"
+              target="_blank"
+            >
+              <svg
+                class="text-xl"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 496 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 432c-101.69 0-184-82.29-184-184 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184zm0-312c-70.69 0-128 57.31-128 128s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 192c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                />
+              </svg>
+              <span>
+                Learn More
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg-gradient-to-b from-[#1a0b38] to-[#200e46] text-white py-20"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div
+          class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-pink-500/50 hover:bg-white/10 transform hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20"
+        >
+          <div
+            class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-pink-500/30 ring-2 ring-pink-400/30"
+          >
+            <svg
+              class="text-white text-xl"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"
+              />
+            </svg>
+          </div>
+          <h2
+            class="text-2xl font-bold mb-4 text-white"
+          >
+            Multiple Tool Types
+          </h2>
+          <p
+            class="text-gray-300 leading-relaxed"
+          >
+            Java Agent, command-line tools, and Maven plugins provide flexible integration options for different development workflows and environments.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-pink-500/50 hover:bg-white/10 transform hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20"
+        >
+          <div
+            class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-pink-500/30 ring-2 ring-pink-400/30"
+          >
+            <svg
+              class="text-white text-xl"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              />
+            </svg>
+          </div>
+          <h2
+            class="text-2xl font-bold mb-4 text-white"
+          >
+            Incompatibility Analysis
+          </h2>
+          <p
+            class="text-gray-300 leading-relaxed"
+          >
+            Comprehensive analysis of potential incompatibility issues across Java versions, including JDK internal API usage and system changes.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-pink-500/50 hover:bg-white/10 transform hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20"
+        >
+          <div
+            class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-pink-500/30 ring-2 ring-pink-400/30"
+          >
+            <svg
+              class="text-white text-xl"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"
+              />
+            </svg>
+          </div>
+          <h2
+            class="text-2xl font-bold mb-4 text-white"
+          >
+            Multiple Output Formats
+          </h2>
+          <p
+            class="text-gray-300 leading-relaxed"
+          >
+            Generate detailed analysis reports in HTML, TXT, and JSON formats to integrate with your existing development and documentation workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg-gradient-to-b from-[#200e46] to-[#2a1359] py-24 text-white"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="flex flex-col space-y-24"
+      >
+        <div
+          class="grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div
+            class="order-2 md:order-1"
+          >
+            <span
+              class="bg-purple-900/50 text-purple-200 text-xs font-semibold px-3 py-1 rounded-full border border-purple-500/50 shadow-sm"
+            >
+              ABOUT
+            </span>
+            <h2
+              class="text-3xl md:text-4xl font-bold mt-4 mb-6 text-white"
+            >
+              Java Migration Made Simple
+            </h2>
+            <p
+              class="text-gray-300 text-lg leading-relaxed mb-6"
+            >
+              The Eclipse Migration Toolkit for Java (EMT4J) is designed to simplify the process of upgrading Java applications across versions. Whether you're migrating from JDK 8 to 11 or JDK 11 to 17, EMT4J provides the tools and insights you need.
+            </p>
+            <p
+              class="text-gray-300 text-lg leading-relaxed"
+            >
+              By analyzing your codebase statically and dynamically, EMT4J identifies potential compatibility issues and provides detailed reports with actionable recommendations to ensure a smooth migration process.
+            </p>
+          </div>
+          <div
+            class="order-1 md:order-2 bg-gradient-to-br from-purple-600/40 to-pink-600/40 rounded-2xl p-6 shadow-xl backdrop-blur-sm border border-white/20 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/20 group"
+          >
+            <div
+              class="bg-white/15 backdrop-blur-md rounded-xl p-6 transform rotate-1 shadow-lg border border-white/10 group-hover:border-white/20 transition-all duration-300"
+            >
+              <div
+                class="flex items-center mb-4"
+              >
+                <div
+                  class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-purple-500/40 ring-2 ring-purple-400/30"
+                >
+                  <svg
+                    class="text-white text-lg"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 320 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div
+                    class="text-sm text-gray-400"
+                  >
+                    Project Status
+                  </div>
+                  <div
+                    class="text-lg font-bold text-purple-300"
+                  >
+                    Incubating
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex space-x-2 mb-2"
+              >
+                <div
+                  class="bg-purple-800/50 backdrop-blur-sm rounded-full px-3 py-1 text-sm text-purple-200 border border-purple-500/50 shadow-sm"
+                >
+                  Migration
+                </div>
+                <div
+                  class="bg-purple-800/50 backdrop-blur-sm rounded-full px-3 py-1 text-sm text-purple-200 border border-purple-500/50 shadow-sm"
+                >
+                  Analysis
+                </div>
+                <div
+                  class="bg-pink-800/50 backdrop-blur-sm rounded-full px-3 py-1 text-sm text-pink-200 border border-pink-500/50 shadow-sm"
+                >
+                  Toolkit
+                </div>
+              </div>
+              <div
+                class="text-gray-300"
+              >
+                An active project under the Adoptium umbrella, continuously evolving to support the latest Java versions.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid md:grid-cols-2 gap-12 items-center mt-24"
+        >
+          <div
+            class="order-2 md:order-1 bg-gradient-to-br from-purple-600/40 to-pink-600/40 rounded-2xl p-6 shadow-xl backdrop-blur-sm border border-white/20 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/20 group"
+          >
+            <div
+              class="bg-white/15 backdrop-blur-md rounded-xl p-6 transform -rotate-1 shadow-lg border border-white/10 group-hover:border-white/20 transition-all duration-300"
+            >
+              <div
+                class="flex items-center mb-4"
+              >
+                <div
+                  class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-purple-500/40 ring-2 ring-purple-400/30"
+                >
+                  <svg
+                    class="text-white text-lg"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 640 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div
+                    class="text-sm text-gray-400"
+                  >
+                    Available Tools
+                  </div>
+                  <div
+                    class="text-lg font-bold text-purple-300"
+                  >
+                    3 Integration Options
+                  </div>
+                </div>
+              </div>
+              <div
+                class="space-y-3"
+              >
+                <div
+                  class="bg-blue-800/50 backdrop-blur-sm rounded-lg px-3 py-2 border border-blue-500/50 shadow-sm"
+                >
+                  <div
+                    class="text-sm font-medium text-blue-200"
+                  >
+                    Java Agent
+                  </div>
+                  <div
+                    class="text-xs text-blue-300/80"
+                  >
+                    Runtime context & accurate call stack
+                  </div>
+                </div>
+                <div
+                  class="bg-green-800/50 backdrop-blur-sm rounded-lg px-3 py-2 border border-green-500/50 shadow-sm"
+                >
+                  <div
+                    class="text-sm font-medium text-green-200"
+                  >
+                    Command-line Tool
+                  </div>
+                  <div
+                    class="text-xs text-green-300/80"
+                  >
+                    Easy to use, no app startup required
+                  </div>
+                </div>
+                <div
+                  class="bg-amber-800/50 backdrop-blur-sm rounded-lg px-3 py-2 border border-amber-500/50 shadow-sm"
+                >
+                  <div
+                    class="text-sm font-medium text-amber-200"
+                  >
+                    Maven Plugin
+                  </div>
+                  <div
+                    class="text-xs text-amber-300/80"
+                  >
+                    Build phase integration
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="order-1 md:order-2"
+          >
+            <span
+              class="bg-purple-900/50 text-purple-200 text-xs font-semibold px-3 py-1 rounded-full border border-purple-500/50 shadow-sm"
+            >
+              FEATURES
+            </span>
+            <h2
+              class="text-3xl md:text-4xl font-bold mt-4 mb-6 text-white"
+            >
+              Flexible Integration Options
+            </h2>
+            <p
+              class="text-gray-300 text-lg leading-relaxed mb-6"
+            >
+              EMT4J provides three different tools to fit your development workflow:
+            </p>
+            <ul
+              class="space-y-4 text-gray-300"
+            >
+              <li
+                class="flex items-start"
+              >
+                <svg
+                  class="text-green-400 mt-1 mr-3 flex-shrink-0"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  />
+                </svg>
+                <div>
+                  <strong
+                    class="text-white"
+                  >
+                    Java Agent:
+                  </strong>
+                   Provides runtime context information and accurate call stack analysis to find more potential issues
+                </div>
+              </li>
+              <li
+                class="flex items-start"
+              >
+                <svg
+                  class="text-green-400 mt-1 mr-3 flex-shrink-0"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  />
+                </svg>
+                <div>
+                  <strong
+                    class="text-white"
+                  >
+                    Command-line Tool:
+                  </strong>
+                   Easy to use without starting your application, though may have some false positives
+                </div>
+              </li>
+              <li
+                class="flex items-start"
+              >
+                <svg
+                  class="text-green-400 mt-1 mr-3 flex-shrink-0"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  />
+                </svg>
+                <div>
+                  <strong
+                    class="text-white"
+                  >
+                    Maven Plugin:
+                  </strong>
+                   Integrates directly into your build process to catch issues during development
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="grid md:grid-cols-2 gap-12 items-center mt-24"
+        >
+          <div>
+            <span
+              class="bg-pink-900/50 text-pink-200 text-xs font-semibold px-3 py-1 rounded-full border border-pink-500/50 shadow-sm"
+            >
+              COMPATIBILITY
+            </span>
+            <h2
+              class="text-3xl md:text-4xl font-bold mt-4 mb-6 text-white"
+            >
+              Supported Migration Paths
+            </h2>
+            <p
+              class="text-gray-300 text-lg leading-relaxed mb-6"
+            >
+              EMT4J supports analysis for the most common Java migration scenarios, covering both JDK 8 to 11 and JDK 11 to 17 upgrade paths.
+            </p>
+            <p
+              class="text-gray-300 text-lg leading-relaxed mb-6"
+            >
+              Each migration path includes specific checks for known compatibility issues, API changes, and system modifications that could affect your application's functionality.
+            </p>
+            <div
+              class="mt-6"
+            >
+              <a
+                class="group px-6 py-4 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-semibold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center w-fit"
+                href="/news/2022/12/emt4j-an-easier-upgrade-for-java-applications/"
+              >
+                <svg
+                  class="text-xl mr-2 group-hover:animate-pulse"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 384 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"
+                  />
+                </svg>
+                <span>
+                  Read the Blog Post
+                </span>
+                <svg
+                  class="ml-3 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div
+            class="relative"
+          >
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl blur opacity-40 animate-pulse"
+            />
+            <div
+              class="relative bg-white/15 backdrop-blur-md rounded-2xl p-8 shadow-xl border border-white/20 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-500/20"
+            >
+              <div
+                class="space-y-6 relative z-10"
+              >
+                <div
+                  class="absolute -top-10 -right-10 w-40 h-40 bg-pink-500/5 rounded-full filter blur-xl"
+                />
+                <div
+                  class="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500/5 rounded-full filter blur-xl"
+                />
+                <div
+                  class="border border-purple-500/30 rounded-xl p-4 bg-purple-900/20"
+                >
+                  <h3
+                    class="text-lg font-medium text-white mb-3 flex items-center"
+                  >
+                    <span
+                      class="w-2 h-2 bg-purple-400 rounded-full mr-2"
+                    />
+                    JDK 8 to JDK 11
+                  </h3>
+                  <ul
+                    class="space-y-2 text-sm text-gray-300"
+                  >
+                    <li>
+                      • JDK Internal API usage detection
+                    </li>
+                    <li>
+                      • System ClassLoader changes
+                    </li>
+                    <li>
+                      • Arrays.asList return type changes
+                    </li>
+                    <li>
+                      • Java Version schema updates
+                    </li>
+                    <li>
+                      • JPMS add-exports and add-opens requirements
+                    </li>
+                    <li>
+                      • Time zone data CLDR changes
+                    </li>
+                    <li>
+                      • Pattern.compile API changes
+                    </li>
+                    <li>
+                      • JVM option modifications
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="border border-pink-500/30 rounded-xl p-4 bg-pink-900/20"
+                >
+                  <h3
+                    class="text-lg font-medium text-white mb-3 flex items-center"
+                  >
+                    <span
+                      class="w-2 h-2 bg-pink-400 rounded-full mr-2"
+                    />
+                    JDK 11 to JDK 17
+                  </h3>
+                  <ul
+                    class="space-y-2 text-sm text-gray-300"
+                  >
+                    <li>
+                      • Removed Nashorn engine
+                    </li>
+                    <li>
+                      • Removed RMI and Java Applet support
+                    </li>
+                    <li>
+                      • Field access restrictions in some classes
+                    </li>
+                    <li>
+                      • Additional API deprecations and removals
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-24 mb-8 relative overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-purple-600/50 to-pink-600/50 rounded-3xl blur-2xl opacity-30 -z-10"
+          />
+          <div
+            class="relative bg-gradient-to-br from-[#1a0b38]/90 to-[#2b1a4f]/90 backdrop-blur-lg rounded-3xl border border-white/10 p-12 shadow-2xl overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-pink-500/20 rounded-full filter blur-3xl"
+            />
+            <div
+              class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl"
+            />
+            <div
+              class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8"
+            >
+              <div
+                class="max-w-2xl"
+              >
+                <h2
+                  class="text-3xl md:text-4xl font-bold text-white mb-4"
+                >
+                  Start your Java migration journey today
+                </h2>
+                <p
+                  class="text-lg text-white/80"
+                >
+                  Join developers worldwide who are using EMT4J to upgrade their Java applications with confidence and minimal risk.
+                </p>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row gap-4"
+              >
+                <a
+                  class="px-8 py-4 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center"
+                  href="https://github.com/adoptium/emt4j"
+                  target="_blank"
+                >
+                  <svg
+                    class="mr-2"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"
+                    />
+                  </svg>
+                  Get EMT4J
+                </a>
+                <a
+                  class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center"
+                  href="https://projects.eclipse.org/projects/adoptium.emt4j"
+                  target="_blank"
+                >
+                  <svg
+                    class="mr-2"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 496 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 432c-101.69 0-184-82.29-184-184 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184zm0-312c-70.69 0-128 57.31-128 128s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 192c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"
+                    />
+                  </svg>
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="w-full h-[1px] bg-[#3E3355] opacity-50"
+  />
+</div>
+`;
