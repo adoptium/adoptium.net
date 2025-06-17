@@ -79,11 +79,18 @@ exports[`Docs page > renders correctly 1`] = `
       class="main-search-box d-block mx-auto"
     >
       <div
-        class="flex justify-center h-20"
+        class="h-20 flex flex-col items-center"
       >
-        <span>
-          TODO implement search feature
-        </span>
+        <div
+          class="relative w-96"
+        >
+          <input
+            class="rounded-lg px-4 py-2 w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-400"
+            placeholder="Search documentation..."
+            type="text"
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>

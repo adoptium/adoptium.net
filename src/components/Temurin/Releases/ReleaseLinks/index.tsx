@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 import { ReleaseAsset } from "@/types/temurin"
 import { TemurinReleaseAssets } from "@/hooks/fetchTemurinReleases"

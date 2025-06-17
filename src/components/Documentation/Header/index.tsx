@@ -1,5 +1,6 @@
 import React from "react"
-import { PinkIcon } from "../../Common/Icon"
+import { PinkIcon } from "@/components/Common/Icon"
+import DocumentationSearch from "@/components/Documentation/Search"
 
 const DocumentationHeader: React.FC = () => {
   return (
@@ -32,12 +33,7 @@ const DocumentationHeader: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="main-search-box d-block mx-auto">
-          {/* TODO implement search feature */}
-          <div className="flex justify-center h-20">
-            <span>TODO implement search feature</span>
-          </div>
-        </div>
+      <DocumentationSearch />
     </div>
   )
 }
