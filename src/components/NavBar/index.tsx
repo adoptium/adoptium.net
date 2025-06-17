@@ -473,12 +473,16 @@ const NavBar = ({ locale }: { locale: string }) => {
           {/* Social media and announcement */}
           {!showLastSlide && (
             <div className="border-t-[1px] border-[#3E3355] space-y-3 pt-6">
-              <span className="text-sm text-center">Find us on</span>
-              <div className="flex flex-wrap items-center gap-4 justify-center mt-3">
+              <div className="flex items-center justify-between">
                 <IconSocial
                   link="https://twitter.com/adoptium"
                   className="text-2xl"
                   icon="twitter"
+                />
+                <IconSocial
+                  link="https://www.linkedin.com/showcase/adoptium/"
+                  className="text-2xl"
+                  icon="linkedin"
                 />
                 <IconSocial
                   link="https://www.youtube.com/c/EclipseAdoptium"
@@ -496,19 +500,19 @@ const NavBar = ({ locale }: { locale: string }) => {
                   icon="slack"
                 />
                 <IconSocial
-                  link="https://www.linkedin.com/showcase/adoptium/"
+                  link="https://bsky.app/profile/adoptium.net"
                   className="text-2xl"
-                  icon="linkedin"
+                  icon="bluesky"
+                />
+                <IconSocial
+                  link="https://fosstodon.org/@adoptium"
+                  className="text-2xl"
+                  icon="mastodon"
                 />
               </div>
               <div className="sm:hidden w-full mt-6">
                 <LanguageSelector locale={locale} />
               </div>
-              {showAnnouncement && (
-                <div className="text-center text-sm font-light">
-                  No new announcements at this time
-                </div>
-              )}
             </div>
           )}
         </DialogPanel>

@@ -10,8 +10,21 @@ exports[`Index page > renders correctly 1`] = `
         class="relative isolate"
       >
         <div
-          class="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]"
-        />
+          class="absolute sm:hidden top-[80px] z-[-1] left-0 w-full flex justify-center"
+        >
+          <img
+            alt="Temurin Hero Mobile Background"
+            class="max-w-80 h-auto"
+            data-nimg="1"
+            decoding="async"
+            draggable="false"
+            height="0"
+            loading="lazy"
+            src="/images/backgrounds/temurin-hero-mobile.svg"
+            style="color: transparent;"
+            width="600"
+          />
+        </div>
         <div
           aria-hidden="true"
           class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
