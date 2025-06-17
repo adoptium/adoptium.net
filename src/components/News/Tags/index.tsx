@@ -13,7 +13,7 @@ const Tags: React.FC<TagsProps> = ({ tags = [] }) => {
         <Link
           key={index}
           href={`/news/tag/${encodeURIComponent(tag)}`}
-          className="px-3 py-1 text-sm bg-neutral-800 hover:bg-rose-800 transition-colors rounded-full text-white"
+          className="px-3 py-1 text-sm bg-pink hover:bg-rose-800 transition-colors rounded-full text-white"
         >
           #{tag}
         </Link>

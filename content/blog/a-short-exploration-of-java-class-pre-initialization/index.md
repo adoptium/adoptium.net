@@ -56,13 +56,13 @@ The native class pre-initialization mechanism requires explicit insertions of ob
 
 At the same time, we have added a security check mechanism of class pre-initialization to the JVM to ensure the virtual machine can still work normally in the worst case. The whole workflow is shown in the figure below:
 
-![workflow](workflow.jpg)
+![workflow](/images/news/a-short-exploration-of-java-class-pre-initialization/workflow.jpg)
 
 ### 2.3 Evaluation
 
 Class pre-initialization extends shared GC heap, it's a sub-phase of AppCDS dump time workflow, the following performance evaluation concerns AppCDS(Deep blue one) and AppCDS with Class pre-initialization(Green one). We found that about _90% (1800/2000) of classes can be pre-initialized safely in a better scenario_, and _average startup performance is improved by 19.2%_. In a larger-scale evaluation, we found that _class pre-initialization is slightly better than AppCDS, with a 5% performance improvement_.
 
-![evaluation](evaluation.jpg)
+![evaluation](/images/news/a-short-exploration-of-java-class-pre-initialization/evaluation.jpg)
 
 This is because some classes with high time consumption on initialization usually have side effects. They cannot be pre-initialized, but the pre-initialization mechanism of these classes will still be performed in common paths, and these hot paths will cause a performance penalty.
 

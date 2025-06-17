@@ -51,26 +51,26 @@ Useful Links:
 
 The below screen recording shows a typical run of the playbook used to build out the Nagios Server, the documentation in the infrastructure repository has a more detailed guide on how to do this, but other than the steps to configure secret elements such as the Nagios admin user password , slack URL, and elements like ssh keys, its a very straightforward process...
 
-![Install Nagios Server Using Playbook](buildserver.gif)
+![Install Nagios Server Using Playbook](/images/news/adoptium-automated-deployment-of-nagios/buildserver.gif)
 
 Once the playbook has completed, there will be a running Nagios server, and it will have configured the basic set of checks for the Nagios server itself, these elements can all be seen in the screenshots below:
 
-![Nagios Home Page](Nagios_Home.gif)
-![Nagios Hosts Page](Nagios_Hosts.gif)
-![Nagios Services Page](Nagios_Services.gif)
-![Nagios Checks Page](Nagios_Checks.gif) |
+![Nagios Home Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Home.gif)
+![Nagios Hosts Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Hosts.gif)
+![Nagios Services Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Services.gif)
+![Nagios Checks Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Checks.gif) |
 
 ## 4. Demonstration of the Nagios configuration playbook
 
 The below screen recording shows a typical run of the playbook used to configure the Nagios Server, it creates configuration based on the [Adoptium Ansible inventory file](https://raw.GitHubusercontent.com/adoptium/infrastructure/master/ansible/inventory.yml). The Nagios configuration playbook documentation in the infrastructure repository has a more detailed guide on how this functions, and how to customise its behaviour.
 
-![Configure Nagios Server Using Play Book](configserver.gif)
+![Configure Nagios Server Using Play Book](/images/news/adoptium-automated-deployment-of-nagios/configserver.gif)
 
 Once the run of the configuration of the playbook has completed, the configuration of service groups, hosts and checks will all be created, updated or amended based on the options configured, and the changes will be visible in Nagios as shown in the screenshots below.
 
-![Nagios Full Hosts Page](AllHosts.gif)
-![Nagios Service Groups Page](ServiceGroups.gif)
-![Nagios Host Check 1](host1.gif)
-![Nagios Host Check 2](host2.gif)
+![Nagios Full Hosts Page](/images/news/adoptium-automated-deployment-of-nagios/AllHosts.gif)
+![Nagios Service Groups Page](/images/news/adoptium-automated-deployment-of-nagios/ServiceGroups.gif)
+![Nagios Host Check 1](/images/news/adoptium-automated-deployment-of-nagios/host1.gif)
+![Nagios Host Check 2](/images/news/adoptium-automated-deployment-of-nagios/host2.gif)
 
 N.B. This demonstration is being run on an x64 Ubuntu 22.04 virtual machine, which is running in isolation from the production infrastructure. As such it is prevented from actually connecting to the public infrastructure to carry out any checks beyond a cursory "ping" test, and as shown in the last screenshots, most system checks fail, and this is expected behaviour for this demonstration.

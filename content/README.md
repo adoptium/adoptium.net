@@ -11,17 +11,26 @@ There are two different types of content; Blogs and Documentation. For adding/mo
    title: Hello World
    date: "2020-04-21T12:20:00+00:00"
    author: janedoe
-   featuredImage: "./featured_image.png" (optional)
+   featuredImage: "/images/news/hello-world/featured_image.jpg" (optional)
    ---
    ```
 
-   `title` is the title of your post as it appears on the site. `date` is the ISO 8601 timestamp of the publication date (`date -u +"%Y-%m-%dT%H:%M:%SZ"` generates that for you on the command-line) and `author` the identifier of the author as specified in the `authors.json`. `featuredImage` (optional) the relative path to the featured image.
+   `title` is the title of your post as it appears on the site. `date` is the ISO 8601 timestamp of the publication date (`date -u +"%Y-%m-%dT%H:%M:%SZ"` generates that for you on the command-line) and `author` the identifier of the author as specified in the `authors.json`. `featuredImage` (optional) is the absolute path to the featured image (see below for image handling).
 
-4. Write your post in Markdown. Save any images in the folder of your post alongside the `index.md`. Put the biggest resolution in there that you have. Responsive images will automatically be generated for you.
+4. Write your post in Markdown. **All images for your post must be placed in `public/news/<slug>/`** (where `<slug>` is your post's folder name). Reference images in your Markdown using the absolute path `/images/news/<slug>/image_name.jpg`.
 
-To preview your post, start the local development server by running `gatsby develop` in the root directory of the repository.
+   Example:
 
-**WARNING**: The RSS feed is only generated in production mode: `gatsby build && gatsby serve`.
+   ```markdown
+   ![Alt text](/images/news/hello-world/my-image.jpg)
+   _Your caption here_
+   ```
+
+   Do **not** use relative paths like `./image.jpg` or place images in the `content/blog` folder. All images must be in the `public/news/<slug>/` directory and referenced with the `/images/news/<slug>/` path for correct production builds and CDN support.
+
+To preview your post, start the local development server by running `npm run dev` or `yarn dev` in the root directory of the repository.
+
+**WARNING**: The RSS feed is only generated in production mode: `npm run build && npm run start`.
 
 ## Editing Conventions
 
@@ -34,7 +43,7 @@ On the front page, we only display excerpts and not full posts. By default, Gats
 To add captions to your images, use the following structure:
 
 ```markdown
-![Alt text](./image.jpg)
+![Alt text](/images/news/<slug>/image.jpg)
 _Your caption here_
 ```
 
@@ -43,7 +52,7 @@ Our CSS will take care of rendering it correctly by looking for `img + em`.
 Example:
 
 ```markdown
-![Photo depiciting a drop of water](./clean-drop-of-water-liquid.jpg)
+![Photo depicting a drop of water](/images/news/hello-world/clean-drop-of-water-liquid.jpg)
 _AQA v1.0 is a first drop in an on-going series of improvements._
 ```
 
