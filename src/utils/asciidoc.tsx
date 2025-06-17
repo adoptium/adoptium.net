@@ -32,9 +32,9 @@ class CustomIncludeProcessor {
   process(doc: AsciidoctorDocument, reader: AsciidoctorReader, target: string, attributes: AsciidoctorAttributes) {
     // Get current file directory to resolve relative includes correctly
     const currentDir = path.dirname(doc.getSourceLocation().getPath());
-    
+
     let includeFile = target;
-    
+
     // If target is a relative path, resolve it from current file directory
     if (!path.isAbsolute(target) && !target.startsWith('/')) {
       includeFile = path.resolve(currentDir, target);
@@ -61,27 +61,27 @@ class CustomIncludeProcessor {
 export function processAsciiDoc(filePath: string, content: string, options: Record<string, unknown> = {}) {
   const basePath = path.dirname(filePath);
   const registry = asciidoctor.Extensions.create();
-  
+
   // Create an instance of our custom processor
   const customProcessor = new CustomIncludeProcessor(basePath);
-  
+
   // Try using a simple approach first - just skip extension registration
   // and see if the document still processes correctly
   const skipExtensions = true;
-  
+
   if (!skipExtensions) {
     // Register include processor using a factory function
-    const IncludeProcessor = function() {};
-    IncludeProcessor.prototype.handles = function() { return true; };
-    IncludeProcessor.prototype.process = function(
-      doc: AsciidoctorDocument, 
-      reader: AsciidoctorReader, 
-      target: string, 
+    const IncludeProcessor = function () { };
+    IncludeProcessor.prototype.handles = function () { return true; };
+    IncludeProcessor.prototype.process = function (
+      doc: AsciidoctorDocument,
+      reader: AsciidoctorReader,
+      target: string,
       attrs: AsciidoctorAttributes
     ) {
       return customProcessor.process(doc, reader, target, attrs);
     };
-    
+
     registry.includeProcessor(IncludeProcessor);
   }
 
@@ -97,7 +97,7 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
       'idseparator': '-',
     }
   };
-  
+
   // Add extension registry only if we're not skipping extensions
   if (!skipExtensions) {
     defaultOptions.extension_registry = registry;
@@ -105,20 +105,25 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
 
   // Merge options
   const mergedOptions = { ...defaultOptions, ...options };
-  
+
   // Convert AsciiDoc to HTML - use the processor without extension registration
   // if we're having issues with extensions
   try {
-    return asciidoctor.convert(content, mergedOptions);
+    let html = asciidoctor.convert(content, mergedOptions) as string;
+    // Post-process image src paths: replace src="filename.png" with src="/docs/filename.png" if not already absolute or external
+    html = html.replace(/<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi, '<img$1src="/docs/$2"');
+    return html;
   } catch (error) {
     console.error("Error converting AsciiDoc content:", error);
-    
+
     // Try without extension registry as fallback
     // Create a new options object without the extension_registry property using destructuring
     // Use object destructuring with "rest" syntax to remove the property
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { extension_registry, ...fallbackOptions } = defaultOptions;
-    return asciidoctor.convert(content, fallbackOptions);
+    let html = asciidoctor.convert(content, fallbackOptions) as string;
+    html = html.replace(/<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi, '<img$1src="/docs/$2"');
+    return html;
   }
 }
 
@@ -139,25 +144,25 @@ export function extractMetadata(filePath: string, content: string): {
   attributes: Record<string, unknown>;
 } {
   const doc = asciidoctor.load(content, { safe: 'server' });
-  
+
   // Get the title and ensure it's a string
   const docTitle = doc.getDocumentTitle();
-  let title = typeof docTitle === 'string' 
-    ? docTitle 
+  let title = typeof docTitle === 'string'
+    ? docTitle
     : docTitle?.toString() || path.basename(filePath, path.extname(filePath));
-  
+
   // Decode HTML entities in the title
   title = decodeHtmlEntities(title);
-  
+
   // Get and decode description if it exists
-  const description = doc.hasAttribute('description') 
-    ? decodeHtmlEntities(String(doc.getAttribute('description'))) 
+  const description = doc.hasAttribute('description')
+    ? decodeHtmlEntities(String(doc.getAttribute('description')))
     : '';
-  
+
   return {
     title,
     description,
-    authors: doc.hasAttribute('page-authors') 
+    authors: doc.hasAttribute('page-authors')
       ? String(doc.getAttribute('page-authors')).split(',').map((author: string) => author.trim())
       : [],
     attributes: doc.getAttributes() as Record<string, unknown>,
@@ -182,11 +187,11 @@ export function fileExists(filePath: string): boolean {
 export function getLanguageVariants(basePath: string, fileName: string): string[] {
   const dir = path.dirname(basePath);
   const baseFileName = path.basename(fileName, '.adoc');
-  
+
   // Get all adoc files in the directory
   const files = fs.readdirSync(dir)
     .filter(file => file.startsWith(baseFileName) && file.endsWith('.adoc'));
-  
+
   // Extract locales from filenames
   return files.map(file => {
     // Format: index.de.adoc -> de

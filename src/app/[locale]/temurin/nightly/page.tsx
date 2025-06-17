@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 import { FaArrowCircleRight } from "react-icons/fa"
 import PageHeader from "@/components/Common/PageHeader"
