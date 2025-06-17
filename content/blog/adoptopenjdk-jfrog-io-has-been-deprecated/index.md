@@ -3,7 +3,7 @@ title: AdoptOpenJDK.jfrog.io has been deprecated!
 date: "2023-07-06T12:00:00+00:00"
 author: pmc
 description: DEPRECATION - Scheduled brownouts for adoptopenjdk.jfrog.io
-featuredImage: "./deprecated.png"
+featuredImage: "/images/news/adoptopenjdk-jfrog-io-has-been-deprecated/deprecated.png"
 tags:
   - Deprecation
   - Installers
@@ -11,7 +11,7 @@ tags:
 
 **TL;DR -- `adoptopenjdk.jfrog.io` is being shut down, users should move to `packages.adoptium.net` to obtain Adoptium's Temurin packages.**
 
-![Deprecated Banner](./deprecated.png)
+![Deprecated Banner](/images/news/adoptopenjdk-jfrog-io-has-been-deprecated/deprecated.png)
 
 [AdoptOpenJDK moved](https://blog.adoptopenjdk.net/2021/08/goodbye-adoptopenjdk-hello-adoptium/) to become Eclipse Adoptium back in August 2021. Since then the packaged versions of Eclipse Temurin have been made available via [packages.adoptium.net](https://packages.adoptium.net) and `adoptopenjdk.jfrog.io` has been deprecated.
 

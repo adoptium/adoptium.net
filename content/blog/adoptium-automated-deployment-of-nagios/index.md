@@ -38,39 +38,39 @@ Inventory Management: Ansible uses an inventory file that contains information a
 
 Ansible Playbooks: Ansible playbooks are YAML files that contain a set of instructions, or tasks, to be executed on the managed hosts. These playbooks define the desired state of the infrastructure and automate the deployment and configuration tasks. These playbooks are run periodically both on new and existing hosts to maintain consistent configuration.
 
-Continuous Integration/Continuous Deployment (CI/CD): Within the Adoptium infrastructure repository, GitHub actions are leveraged to test the changes made to Ansible playbooks prior to being merged into the main codebase. This occurs whenever a PR is created within the infrastructure repository. This automated testing prior to any deployment across the regular infrastructure, either automatically via AWX or manually when building out new hosts, allows a much greater degree of confidence in the playbooks, thus making the management of the Adoptium project's inventory more efficient. In addition to this, tools such as the VagrantPlayBook check facility within the [Adoptium Jenkins Server](https://ci.adoptium.net/) allow development and testing of any changes to the Ansible playbooks.
+Continuous Integration/Continuous Deployment (CI/CD): Within the Adoptium infrastructure repository, GitHub Actions are leveraged to test the changes made to Ansible playbooks prior to being merged into the main codebase. This occurs whenever a PR is created within the infrastructure repository. This automated testing prior to any deployment across the regular infrastructure, either automatically via AWX or manually when building out new hosts, allows a much greater degree of confidence in the playbooks, thus making the management of the Adoptium project's inventory more efficient. In addition to this, tools such as the VagrantPlayBook check facility within the [Adoptium Jenkins Server](https://ci.adoptium.net/) allow development and testing of any changes to the Ansible playbooks.
 
 In summary, Ansible is used to automate infrastructure provisioning and configuration, while GitHub provides version control and collaboration capabilities for managing the Ansible playbooks and inventory files. This combination allows for efficient and streamlined management of the Adoptium project's inventory.
 
 Useful Links:
 
-- [Infrastructure Repository README](https://GitHub.com/adoptium/infrastructure/blob/master/README.md)
+- [Infrastructure Repository readme](https://GitHub.com/adoptium/infrastructure/blob/master/README.md)
 - [Ansible Inventory](https://raw.GitHubusercontent.com/adoptium/infrastructure/master/ansible/inventory.yml)
 
 ## 3. Demonstration of the Nagios server installation playbooks
 
-The below screen recording shows a typical run of the playbook used to build out the Nagios Server, the documentation in the infrastructure repository has a more detailed guide on how to do this, but other than the steps to configure secret elements such as the Nagios admin user password , slack URL, and elements like ssh keys, its a very straightforward process...
+The below screen recording shows a typical run of the playbook used to build out the Nagios Server, the documentation in the infrastructure repository has a more detailed guide on how to do this, but other than the steps to configure secret elements such as the Nagios admin user password , slack URL, and elements like SSH keys, its a very straightforward process...
 
-![Install Nagios Server Using Playbook](buildserver.gif)
+![Install Nagios Server Using Playbook](/images/news/adoptium-automated-deployment-of-nagios/buildserver.gif)
 
 Once the playbook has completed, there will be a running Nagios server, and it will have configured the basic set of checks for the Nagios server itself, these elements can all be seen in the screenshots below:
 
-![Nagios Home Page](Nagios_Home.gif)
-![Nagios Hosts Page](Nagios_Hosts.gif)
-![Nagios Services Page](Nagios_Services.gif)
-![Nagios Checks Page](Nagios_Checks.gif) |
+![Nagios Home Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Home.gif)
+![Nagios Hosts Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Hosts.gif)
+![Nagios Services Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Services.gif)
+![Nagios Checks Page](/images/news/adoptium-automated-deployment-of-nagios/Nagios_Checks.gif) |
 
 ## 4. Demonstration of the Nagios configuration playbook
 
 The below screen recording shows a typical run of the playbook used to configure the Nagios Server, it creates configuration based on the [Adoptium Ansible inventory file](https://raw.GitHubusercontent.com/adoptium/infrastructure/master/ansible/inventory.yml). The Nagios configuration playbook documentation in the infrastructure repository has a more detailed guide on how this functions, and how to customise its behaviour.
 
-![Configure Nagios Server Using Play Book](configserver.gif)
+![Configure Nagios Server Using Play Book](/images/news/adoptium-automated-deployment-of-nagios/configserver.gif)
 
 Once the run of the configuration of the playbook has completed, the configuration of service groups, hosts and checks will all be created, updated or amended based on the options configured, and the changes will be visible in Nagios as shown in the screenshots below.
 
-![Nagios Full Hosts Page](AllHosts.gif)
-![Nagios Service Groups Page](ServiceGroups.gif)
-![Nagios Host Check 1](host1.gif)
-![Nagios Host Check 2](host2.gif)
+![Nagios Full Hosts Page](/images/news/adoptium-automated-deployment-of-nagios/AllHosts.gif)
+![Nagios Service Groups Page](/images/news/adoptium-automated-deployment-of-nagios/ServiceGroups.gif)
+![Nagios Host Check 1](/images/news/adoptium-automated-deployment-of-nagios/host1.gif)
+![Nagios Host Check 2](/images/news/adoptium-automated-deployment-of-nagios/host2.gif)
 
 N.B. This demonstration is being run on an x64 Ubuntu 22.04 virtual machine, which is running in isolation from the production infrastructure. As such it is prevented from actually connecting to the public infrastructure to carry out any checks beyond a cursory "ping" test, and as shown in the last screenshots, most system checks fail, and this is expected behaviour for this demonstration.

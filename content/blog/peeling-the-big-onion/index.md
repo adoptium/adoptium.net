@@ -23,7 +23,7 @@ This is a story of reducing complexity. Given the provenance of some of the auto
 
 At one point we decided to replace this legacy TCK Perl wrapper with a new test framework that was being designed to drive stress tests — the [System Test Framework (STF)](https://github.com/adoptium/STF). This was also the point at which these frameworks were open-sourced. However, we soon decided that STF was simply too lofty for the needs of TCK execution. First, STF would need users to define test cases as a series of conceptual 'stages' written in Java code. It would then take those ‘stages’ and generate a set of Perl scripts to orchestrate the second layer of Java command lines which would culminate in the eventual automated test job in the Continuous Integration (CI) system. While this has benefits in terms of debug-ability of load/stress tests, it was not the best way to drive the TCK, which itself comes with its own sophisticated test harness, the [Java Test harness](https://docs.oracle.com/javacomponents/javatest-4-6/architect-guide/html/toc.htm) which is publicly documented in Oracle's Help Center under the [Testing Tools](https://docs.oracle.com/en/java/java-components/testing-tools.html) section if you wish to learn more.
 
-![The Big Onion](bigo.jpg)
+![The Big Onion](/images/news/peeling-the-big-onion/bigo.jpg)
 
 Result—the ‘Big Onion’. By adopting STF to run TCKs, not only did we introduce unnecessary layers of indirection in our automation story `(Java -> Perl -> Java)`, but we also ended up incurring additional compilation time in TCK builds in our CI system, since STF requires checking out and compiling from both its own Git repository, as well as one extra Git repository that of the System tests.
 
@@ -31,7 +31,7 @@ Result—the ‘Big Onion’. By adopting STF to run TCKs, not only did we intro
 
 So, to run the TCK harness with less indirection and more efficiency, we decided to decouple it from the STF stress test framework altogether and replace it with [JavaTestRunner](https://github.com/adoptium/aqa-tests/blob/master/jck/jtrunner/JavaTestRunner.java)– a simple Java class that can perform the essential tasks of generating command files for TCK, building a result summary, starting required services and managing execution of the TCK harness itself.
 
-![The Peeled Onion](bigo-peeled.jpg)
+![The Peeled Onion](/images/news/peeling-the-big-onion/bigo-peeled.jpg)
 
 Unlike the STF framework, JavaTestRunner is housed within the same [Adoptium aqa-tests repository](https://github.com/adoptium/aqa-tests) as the rest of the AQAvit test suites. This relieved us from having to checkout and compile two additional repositories— resulting in a dramatic reduction of compile time for TCK CI jobs (we ended up saving ~3,285 hours of machine time per year).
 

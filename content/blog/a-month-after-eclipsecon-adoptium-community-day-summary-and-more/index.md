@@ -3,7 +3,7 @@ title: A month after EclipseCon - Adoptium Community day summary, and more.
 date: "2022-11-24T12:00:00+00:00"
 author: carmendelgado
 description: Our Community Manager gives us a summary of Eclipse Adoptium activities around the EclipseCon event.
-featuredImage: "./community-day.jpg"
+featuredImage: "/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/community-day.jpg"
 tags:
   - "adoptium"
 ---
@@ -14,7 +14,7 @@ A month after EclipseCon. I, Carmen Delgado, Adoptium Community manager, want to
 
 On Monday, I had the opportunity to meet most of my Eclipse co-workers during our breakfast at the hotel. We had a morning session where Tim Ellison (Adoptium Working Group representative and PMC Lead), George Adams (Adoptium Chairman of the working group and PMC member), and Shelley Lambert (Adoptium Working Group member and PMC, and Eclipse board member) went through the Adoptium working group status and all the projects, and the community gave some feedback. You can view the presentation [here](Adoptium-Community-Day-EclipseCon2022.pdf).
 
-![community day](community-day.jpg)
+![community day](/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/community-day.jpg)
 _Tim, Shelley and George preparing Community day_
 
 ### A summary of
@@ -62,7 +62,7 @@ An important part of the software supply chain security. Currently, Temurin is c
 
 Again, our community representatives, Tim, George, and Shelley, together with Jan Westerkamp and myself as the community manager held a 35-minute open panel to talk with EclipseCon attendees by summarising all our main projects and explaining the 2023 plan. It was an excellent opportunity to hear from enterprise users about how and why they use Temurin over other distributions and get some ideas to keep people informed about project updates. We want to thank all the attendees!
 
-![Eclipse Adoptium Panel](eclipse-aopdtium-panel.jpg)
+![Eclipse Adoptium Panel](/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/eclipse-aopdtium-panel.jpg)
 _Tim, Shelley, Jan and George hosting Eclipse Adoptium panel_
 
 We also used this day to record videos about Eclipse Adoptium 2023 plan and promote our main projects. Stay tuned to watch them. We thank the Jakarta EE working group for sharing this recording space.
@@ -71,12 +71,12 @@ We also used this day to record videos about Eclipse Adoptium 2023 plan and prom
 
 In the morning, Shelley gave a talk explaining how Eclipse Adoptium is implementing SBOM (Software bill of materials) and why. Considering the audience, we realized it is a topic of interest as it is also linked to Eclipse foundation's goals for 2023 of achieving a security supply chain for all their projects.
 
-![SBOM talk by Shelley](sbom-talk-by-shelley.jpg)
+![SBOM talk by Shelley](/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/sbom-talk-by-shelley.jpg)
 _Shelley explaining what is an SBOM_
 
 The day closed with the Jakarta EE reception sponsored by IBM, and they invited me to give some words on behalf of the community we represented. It was also a good moment to meet other sponsors and working group members.
 
-![Jakarta EE IBM receptiom](jakartaee-ibm-reception.jpg)
+![Jakarta EE IBM receptiom](/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/jakartaee-ibm-reception.jpg)
 _Carmen giving a thank you toast to both Jakarta EE and IBM team_
 
 ## Thursday 26: Closure and Hackathon
