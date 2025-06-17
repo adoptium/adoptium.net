@@ -1,6 +1,6 @@
 ---
-title: Eclipse Temurin JDK 24.0.0+36 enables JEP 493
-date: "2025-03-10"
+title: Eclipse Temurin JDK 24 enables JEP 493
+date: "2025-06-06"
 author: sgehwolf
 description: Eclipse Temurin enables JEP 493 for the JDK 24 general availability release (24.0.0+36) which significantly reduces the size of the JDK archive.
 tags:
@@ -152,3 +152,53 @@ create a runtime with *all* JDK modules. If this is what you intended to get a
 If you are really interested in smaller custom runtimes, however, you should
 not include *all* JDK modules. I.e. consider using explicit modules in
 `--add-modules` clause instead.
+
+### Without JMODs I won't be able to cross-link a platform-foreign JDK
+
+As mentioned in the [JEP's](https://openjdk.org/jeps/493) "Restrictions"
+section, the default JDK tarball download of Eclipse Temurin 24 is not
+sufficient to create a custom runtime for a **different** platform other than
+the one driving `jlink` for the lack of included JMODs. For example, creating a
+runtime on Linux x64 for the Windows x64 platform.
+
+For those use-cases you can download the JMODs for a given Eclipse Temurin
+release via the Adoptium API and use them to generate a JDK for the desired
+platform.
+
+For example, to generate a Windows x64 JDK on Linux x64 you could use the
+following sequence of commands (in a bash terminal):
+
+```bash
+$ mkdir jdk-24.0.3 jdk-24.0.3-win-x64-jmods
+$ curl -OJLs https://api.adoptium.net/v3/binary/latest/24/ga/linux/x64/jdk/hotspot/normal/eclipse # Linux x64 JDK
+$ pushd jdk-24.0.3
+$ tar -xf ../OpenJDK24U-jdk*.tar.gz --strip-components=1
+$ popd
+$ curl -OJLs https://api.adoptium.net/v3/binary/latest/24/ga/windows/x64/jmods/hotspot/normal/eclipse # Windows x64 JMODs
+$ pushd jdk-24.0.3-win-x64-jmods
+$ unzip -d tmp ../OpenJDK24U-jmods*.zip
+$ mv tmp/jdk-24*jmods/*.jmod .
+$ rmdir tmp/jdk-24*jmods
+$ rmdir tmp
+$ popd
+$ pushd jdk-24.0.3
+$ ./bin/jlink --module-path ../jdk-24.0.3-win-x64-jmods \
+            --add-modules ALL-MODULE-PATH \
+            --output ../jdk-24.0.3-x64-win
+$ popd
+$ ./jdk-24.0.3-x64-win/bin/java.exe --version
+./jdk-24.0.3-x64-win/bin/java.exe: cannot execute binary file: Exec format error
+```
+
+This downloads the JDK 24.0.3 general availability release of Eclipse Temurin
+for the x64 Linux platform via the Adoptium API and extracts it using the `tar`
+and `unzip` utilities to folder `jdk-24.0.3`, and `jdk-24.0.3-win-x64-jmods`
+respectively. The JMODs for platform x64 Windows are then available in folder
+`jdk-24.0.3-win-x64-jmods` next to the `jdk-24.0.3` folder for `jlink` to pick
+them up. Then `jlink` from the `jdk-24.0.3` installation is invoked telling it
+to use a module path of `jdk-24.0.3-win-x64-jmods` and adding the
+`ALL-MODULE-PATH` argument to `--add-modules` will tell jlink to use all
+modules from the x64 Windows JMODs and will assemble the x64 Windows JDK in
+folder `jdk-24.0.3-x64-win`. The result in `jdk-24.0.3-x64-win` will of course
+not run on the host platform - x64 Linux. It would need to be transferred to a
+x64 Windows machine for it to be run.
