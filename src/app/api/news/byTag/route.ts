@@ -11,7 +11,11 @@ export async function GET(req: NextRequest) {
       return Response.json({ error: "Missing tag parameter" }, { status: 400 });
     }
     const news = getNewsByTag(tag, { numPosts, page });
-    return Response.json(news);
+    return Response.json(news, {
+      headers: {
+        "Cache-Control": "public, max-age=3600, stale-while-revalidate=60",
+      },
+    });
   } catch {
     return Response.json(
       { error: "Failed to fetch news by tag" },

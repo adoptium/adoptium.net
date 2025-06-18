@@ -20,8 +20,7 @@ export async function GET() {
     } else {
       throw new Error("Invalid response structure from Adoptium API");
     }
-  } catch (error) {
-    console.error("Error fetching download count:", error);
+  } catch {
     // Return a fallback value in case of errors
     return Response.json(
       { total: 1000000000, error: "Failed to fetch download statistics" },
