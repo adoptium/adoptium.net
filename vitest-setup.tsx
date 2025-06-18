@@ -110,7 +110,7 @@ vi.mock("swiper/react", () => ({
     // Use a callback ref to assign the mock swiper object to the ref
     React.useEffect(() => {
       if (ref && typeof ref !== "function") {
-        ; (ref as React.MutableRefObject<any>).current = { swiper: mockSwiper }
+        ; (ref as React.RefObject<any>).current = { swiper: mockSwiper }
       }
     }, [ref])
 

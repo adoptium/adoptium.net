@@ -2,18 +2,18 @@
 export function capitalize(text: string) {
   switch (text) {
     case "alpine-linux":
-      return "Alpine Linux"
+      return "Alpine Linux";
     case "alpine_linux":
-      return "Alpine Linux"
+      return "Alpine Linux";
     case "redhat":
-      return "Red Hat"
+      return "Red Hat";
     case "ibm":
-      return "IBM"
+      return "IBM";
     case "mac":
-      return "macOS"
+      return "macOS";
     case "semeru":
-      return "Semeru Runtimes"
+      return "Semeru Runtimes";
     default:
-      return text.charAt(0).toUpperCase() + text.slice(1)
+      return text.charAt(0).toUpperCase() + text.slice(1);
   }
 }

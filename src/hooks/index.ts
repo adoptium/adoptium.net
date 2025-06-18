@@ -7,6 +7,8 @@ export * from "./fetchMarketplace"
 export * from "./fetchReleaseNotes"
 export * from "./fetchTemurinNightly"
 export * from "./fetchLatestEvents"
+export * from "./useAdoptiumContributorsApi";
+export * from "./fetchConstants";
 
 export interface VersionMetaData {
     major: number

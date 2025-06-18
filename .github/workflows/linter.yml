@@ -33,5 +33,6 @@ jobs:
           VALIDATE_YAML: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_PRETTIER: false
           VALIDATE_TSX: false
           VALIDATE_JSON: false
