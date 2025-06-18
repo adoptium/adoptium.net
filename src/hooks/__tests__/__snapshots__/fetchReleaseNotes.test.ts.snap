@@ -24,6 +24,7 @@ exports[`useFetchReleaseNotesForVersion > returns valid JSON 1`] = `
       "openjdk_version": "openjdk_version_mock",
       "patch": 0,
       "security": 0,
+      "semver": "0.0.0+0",
     },
   },
 }

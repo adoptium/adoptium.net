@@ -10,7 +10,7 @@ describe("sendDownloadEvent", () => {
 
   it("calls window.gtag with correct parameters when gtag is defined", () => {
     const gtagMock = vi.fn();
-    // @ts-ignore
+    // @ts-expect-error: Mocking window.gtag
     global.window = { gtag: gtagMock };
 
     sendDownloadEvent({
@@ -32,7 +32,7 @@ describe("sendDownloadEvent", () => {
   });
 
   it("does nothing if window is undefined", () => {
-    // @ts-ignore
+    // @ts-expect-error: Mocking window.gtag
     delete global.window;
     expect(() =>
       sendDownloadEvent({
@@ -47,7 +47,7 @@ describe("sendDownloadEvent", () => {
   });
 
   it("does nothing if window.gtag is not a function", () => {
-    // @ts-ignore
+    // @ts-expect-error: Mocking window.gtag
     global.window = { gtag: undefined };
     expect(() =>
       sendDownloadEvent({

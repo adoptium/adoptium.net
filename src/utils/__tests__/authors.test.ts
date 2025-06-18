@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { getFormattedAuthorData, Author } from "../authors";
+import { getFormattedAuthorData } from "../authors";
 
 // Mock the authors.json import
 vi.mock("@/data/authors.json", () => ({
