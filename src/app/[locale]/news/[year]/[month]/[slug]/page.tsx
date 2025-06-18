@@ -108,7 +108,8 @@ export default async function Blog(
   const post = getBlogPosts().find((post) => post.slug === slug)
 
   if (!post) {
-    notFound()
+    notFound();
+    return null;
   }
 
   // Get author data safely
