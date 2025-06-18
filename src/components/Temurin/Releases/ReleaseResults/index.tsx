@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { useTranslations, useLocale } from "next-intl"
+import { sendDownloadEvent } from '@/utils/gtag'
 import { ReleaseAsset } from "@/types/temurin"
 import { FaWindows, FaApple } from "react-icons/fa"
 import { FcLinux } from "react-icons/fc"
@@ -257,11 +258,25 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                                 <div className="flex justify-between w-full items-center">
                                                     <div className="flex items-center gap-2">
                                                         <span className="cursor-pointer group">
-                                                            <a
-                                                                href={binary.link}
+                                                            <Link
+                                                                href={{
+                                                                    pathname: "/download",
+                                                                    query: {
+                                                                        link: binary.link,
+                                                                        vendor: "Adoptium",
+                                                                    }
+                                                                }}
+                                                                onClick={() => sendDownloadEvent({
+                                                                    link: binary.link,
+                                                                    os: release.os,
+                                                                    arch: release.architecture,
+                                                                    pkg_type: binary.type,
+                                                                    version: release.release_name,
+                                                                    vendor: "temurin"
+                                                                })}
                                                             >
                                                                 <BsDownload size={20} />
-                                                            </a>
+                                                            </Link>
                                                         </span>
                                                         <h5 className="text-base font-normal">
                                                             {`${binary.extension.toUpperCase()}, ${binary.size} MB`}
@@ -324,11 +339,25 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                                 <div className="flex justify-between w-full items-center">
                                                     <div className="flex items-center gap-2">
                                                         <span className="cursor-pointer group">
-                                                            <a
-                                                                href={binary.installer_link}
+                                                            <Link
+                                                                href={{
+                                                                    pathname: "/download",
+                                                                    query: {
+                                                                        link: binary.installer_link,
+                                                                        vendor: "Adoptium",
+                                                                    }
+                                                                }}
+                                                                onClick={() => sendDownloadEvent({
+                                                                    link: binary.installer_link || '',
+                                                                    os: release.os,
+                                                                    arch: release.architecture,
+                                                                    pkg_type: 'installer',
+                                                                    version: release.release_name,
+                                                                    vendor: "temurin"
+                                                                })}
                                                             >
                                                                 <BsDownload size={20} />
-                                                            </a>
+                                                            </Link>
                                                         </span>
                                                         <h5 className="text-base font-normal">
                                                             {`${binary.installer_extension?.toUpperCase() || 'INSTALLER'}, ${binary.installer_size} MB`}

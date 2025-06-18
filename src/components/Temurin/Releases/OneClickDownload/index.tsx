@@ -1,7 +1,9 @@
 "use client"
 
 import React from "react"
+import { Link } from "@/i18n/navigation"
 import { ReleaseAsset } from "@/types/temurin"
+import { sendDownloadEvent } from '@/utils/gtag'
 import { TemurinReleaseAssets } from "@/hooks/fetchTemurinReleases"
 import { FaWindows, FaApple } from "react-icons/fa"
 import { BsDownload } from "react-icons/bs"
@@ -147,9 +149,26 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                         <h5 className="text-base font-normal text-grey">{macOSDisplay}</h5>
                     </div>
                     <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
-                        <a href={macOSLink} aria-label="Download macOS package">
+                        <Link
+                            href={{
+                                pathname: "/download",
+                                query: {
+                                    link: macOSLink,
+                                    vendor: "Adoptium"
+                                }
+                            }}
+                            aria-label="Download macOS package"
+                            onClick={() => sendDownloadEvent({
+                                link: macOSLink,
+                                os: "mac",
+                                arch: foundMacOSArm ? "aarch64" : "x64",
+                                pkg_type: "jdk",
+                                version: versionFormatted,
+                                vendor: "Adoptium"
+                            })}
+                        >
                             <BsDownload size={25} />
-                        </a>
+                        </Link>
                     </span>
                 </div>
             </div>
@@ -165,9 +184,26 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                         <h5 className="text-base font-normal text-grey">{windowsDisplay}</h5>
                     </div>
                     <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
-                        <a href={windowsLink} aria-label="Download Windows package">
+                        <Link
+                            href={{
+                                pathname: "/download",
+                                query: {
+                                    link: windowsLink,
+                                    vendor: "Adoptium"
+                                }
+                            }}
+                            aria-label="Download Windows package"
+                            onClick={() => sendDownloadEvent({
+                                link: windowsLink,
+                                os: "windows",
+                                arch: "x64",
+                                pkg_type: "jdk",
+                                version: versionFormatted,
+                                vendor: "Adoptium"
+                            })}
+                        >
                             <BsDownload size={25} />
-                        </a>
+                        </Link>
                     </span>
                 </div>
             </div>

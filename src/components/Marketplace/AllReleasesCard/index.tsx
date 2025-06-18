@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import Image from "next/image"
+import { Link } from "@/i18n/navigation"
 import { useTranslations, useLocale } from "next-intl"
 import { BsCopy } from "react-icons/bs"
 import { FiDownload } from "react-icons/fi"
@@ -10,6 +11,7 @@ import ChecksumModal from "@/components/ChecksumModal"
 import AnimatedPlaceholder from "@/components/AnimatedPlaceholder"
 import type { MarketplaceRelease } from "@/hooks"
 
+import { sendDownloadEvent } from "@/utils/gtag"
 import { capitalize } from "@/utils/capitalize"
 import { getImageForDistribution } from "@/hooks"
 import { fetchExtension } from "@/utils/fetchExtension"
@@ -234,13 +236,27 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
                                             <BsCopy className="w-4 h-4" />
                                             {t("Temurin.Releases.ReleaseResults.checksum")}
                                         </button>
-                                        <a
-                                            href={typeof release.binary.package.link === 'string' ? release.binary.package.link : release.binary.package.link.toString()}
+                                        <Link
+                                            href={{
+                                                pathname: "/download",
+                                                query: {
+                                                    link: release.binary.package.link.toString(),
+                                                    vendor: capitalize(release.vendor)
+                                                }
+                                            }}
                                             className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] rounded-lg text-white text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-[#FF1464]/30 hover:transform hover:scale-105"
+                                            onClick={() => sendDownloadEvent({
+                                                link: release.binary.package.link.toString(),
+                                                os: release.binary.os,
+                                                arch: release.binary.architecture,
+                                                pkg_type: release.binary.image_type,
+                                                version: release.release_name,
+                                                vendor: capitalize(release.vendor)
+                                            })}
                                         >
                                             <FiDownload className="w-4 h-4" />
                                             {t("Marketplace.Releases.download")} ({fetchExtension(release.binary.package.name)})
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -316,13 +332,27 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
                                         <BsCopy className="w-4 h-4" />
                                         {t("Temurin.Releases.ReleaseResults.checksum")}
                                     </button>
-                                    <a
-                                        href={typeof release.binary.package.link === 'string' ? release.binary.package.link : release.binary.package.link.toString()}
+                                    <Link
+                                        href={{
+                                            pathname: "/download",
+                                            query: {
+                                                link: release.binary.package.link.toString(),
+                                                vendor: capitalize(release.vendor),
+                                            }
+                                        }}
                                         className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#FF1464] to-[#FF1464]/90 hover:from-[#FF1464]/90 hover:to-[#FF1464] rounded-lg text-white text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-[#FF1464]/30 hover:transform hover:scale-105"
+                                        onClick={() => sendDownloadEvent({
+                                            link: release.binary.package.link.toString(),
+                                            os: release.binary.os,
+                                            arch: release.binary.architecture,
+                                            pkg_type: release.binary.image_type,
+                                            version: release.release_name,
+                                            vendor: capitalize(release.vendor)
+                                        })}
                                     >
                                         <FiDownload className="w-4 h-4" />
                                         {t("Marketplace.Releases.download")} ({fetchExtension(release.binary.package.name)})
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
