@@ -1,6 +1,6 @@
 'use client'
 
-import React, { MutableRefObject, useRef } from "react"
+import React, { RefObject, useRef } from "react"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { useOnScreen } from "@/hooks/useOnScreen"
@@ -14,7 +14,7 @@ interface RandomContributorProps {
 
 const RandomContributor: React.FC<RandomContributorProps> = ({ style }) => {
   const ref = useRef<HTMLDivElement | null>(null)
-  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
+  const isVisible = useOnScreen(ref as RefObject<Element>, true)
   const contributor = useAdoptiumContributorsApi(isVisible)
   const t = useTranslations('RandomContributor')
 

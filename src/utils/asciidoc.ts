@@ -1,15 +1,20 @@
-import Asciidoctor from '@asciidoctor/core';
-import fs from 'fs';
-import path from 'path';
-import { decode } from 'html-entities';
+import Asciidoctor from "@asciidoctor/core";
+import fs from "fs";
+import path from "path";
+import { decode } from "html-entities";
 
-// Define interfaces for Asciidoctor types
 interface AsciidoctorDocument {
   getSourceLocation(): { getPath(): string };
 }
 
 interface AsciidoctorReader {
-  pushInclude(content: string, file: string, target: string, line: number, attributes: Record<string, unknown>): void;
+  pushInclude(
+    content: string,
+    file: string,
+    target: string,
+    line: number,
+    attributes: Record<string, unknown>
+  ): void;
 }
 
 interface AsciidoctorAttributes {
@@ -29,14 +34,19 @@ class CustomIncludeProcessor {
     this.basePath = basePath;
   }
 
-  process(doc: AsciidoctorDocument, reader: AsciidoctorReader, target: string, attributes: AsciidoctorAttributes) {
+  process(
+    doc: AsciidoctorDocument,
+    reader: AsciidoctorReader,
+    target: string,
+    attributes: AsciidoctorAttributes
+  ) {
     // Get current file directory to resolve relative includes correctly
     const currentDir = path.dirname(doc.getSourceLocation().getPath());
 
     let includeFile = target;
 
     // If target is a relative path, resolve it from current file directory
-    if (!path.isAbsolute(target) && !target.startsWith('/')) {
+    if (!path.isAbsolute(target) && !target.startsWith("/")) {
       includeFile = path.resolve(currentDir, target);
     }
 
@@ -46,11 +56,17 @@ class CustomIncludeProcessor {
     }
 
     if (fs.existsSync(includeFile)) {
-      const content = fs.readFileSync(includeFile, 'utf8');
+      const content = fs.readFileSync(includeFile, "utf8");
       return reader.pushInclude(content, includeFile, target, 1, attributes);
     } else {
       console.warn(`Include file not found: ${includeFile}`);
-      return reader.pushInclude(`[WARNING] Include file not found: ${target}`, target, target, 1, attributes);
+      return reader.pushInclude(
+        `[WARNING] Include file not found: ${target}`,
+        target,
+        target,
+        1,
+        attributes
+      );
     }
   }
 }
@@ -58,7 +74,11 @@ class CustomIncludeProcessor {
 /**
  * Process AsciiDoc content with proper include resolution
  */
-export function processAsciiDoc(filePath: string, content: string, options: Record<string, unknown> = {}) {
+export function processAsciiDoc(
+  filePath: string,
+  content: string,
+  options: Record<string, unknown> = {}
+) {
   const basePath = path.dirname(filePath);
   const registry = asciidoctor.Extensions.create();
 
@@ -71,8 +91,10 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
 
   if (!skipExtensions) {
     // Register include processor using a factory function
-    const IncludeProcessor = function () { };
-    IncludeProcessor.prototype.handles = function () { return true; };
+    const IncludeProcessor = function () {};
+    IncludeProcessor.prototype.handles = function () {
+      return true;
+    };
     IncludeProcessor.prototype.process = function (
       doc: AsciidoctorDocument,
       reader: AsciidoctorReader,
@@ -87,15 +109,15 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
 
   // Set default options with proper typing
   const defaultOptions: Record<string, unknown> = {
-    safe: 'server',
+    safe: "server",
     base_dir: basePath,
     attributes: {
-      'source-highlighter': 'highlight.js',
-      'icons': 'font',
-      'sectanchors': '',
-      'idprefix': '',
-      'idseparator': '-',
-    }
+      "source-highlighter": "highlight.js",
+      icons: "font",
+      sectanchors: "",
+      idprefix: "",
+      idseparator: "-",
+    },
   };
 
   // Add extension registry only if we're not skipping extensions
@@ -111,7 +133,10 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
   try {
     let html = asciidoctor.convert(content, mergedOptions) as string;
     // Post-process image src paths: replace src="filename.png" with src="/docs/filename.png" if not already absolute or external
-    html = html.replace(/<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi, '<img$1src="/docs/$2"');
+    html = html.replace(
+      /<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi,
+      '<img$1src="/docs/$2"'
+    );
     return html;
   } catch (error) {
     console.error("Error converting AsciiDoc content:", error);
@@ -122,7 +147,10 @@ export function processAsciiDoc(filePath: string, content: string, options: Reco
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { extension_registry, ...fallbackOptions } = defaultOptions;
     let html = asciidoctor.convert(content, fallbackOptions) as string;
-    html = html.replace(/<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi, '<img$1src="/docs/$2"');
+    html = html.replace(
+      /<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi,
+      '<img$1src="/docs/$2"'
+    );
     return html;
   }
 }
@@ -137,33 +165,39 @@ export function decodeHtmlEntities(text: string): string {
 /**
  * Extract metadata from AsciiDoc document
  */
-export function extractMetadata(filePath: string, content: string): {
+export function extractMetadata(
+  filePath: string,
+  content: string
+): {
   title: string;
   description: string;
   authors: string[];
   attributes: Record<string, unknown>;
 } {
-  const doc = asciidoctor.load(content, { safe: 'server' });
+  const doc = asciidoctor.load(content, { safe: "server" });
 
   // Get the title and ensure it's a string
   const docTitle = doc.getDocumentTitle();
-  let title = typeof docTitle === 'string'
-    ? docTitle
-    : docTitle?.toString() || path.basename(filePath, path.extname(filePath));
+  let title =
+    typeof docTitle === "string"
+      ? docTitle
+      : docTitle?.toString() || path.basename(filePath, path.extname(filePath));
 
   // Decode HTML entities in the title
   title = decodeHtmlEntities(title);
 
   // Get and decode description if it exists
-  const description = doc.hasAttribute('description')
-    ? decodeHtmlEntities(String(doc.getAttribute('description')))
-    : '';
+  const description = doc.hasAttribute("description")
+    ? decodeHtmlEntities(String(doc.getAttribute("description")))
+    : "";
 
   return {
     title,
     description,
-    authors: doc.hasAttribute('page-authors')
-      ? String(doc.getAttribute('page-authors')).split(',').map((author: string) => author.trim())
+    authors: doc.hasAttribute("page-authors")
+      ? String(doc.getAttribute("page-authors"))
+          .split(",")
+          .map((author: string) => author.trim())
       : [],
     attributes: doc.getAttributes() as Record<string, unknown>,
   };
@@ -184,18 +218,24 @@ export function fileExists(filePath: string): boolean {
 /**
  * Get all available language variants for a given base path
  */
-export function getLanguageVariants(basePath: string, fileName: string): string[] {
+export function getLanguageVariants(
+  basePath: string,
+  fileName: string
+): string[] {
   const dir = path.dirname(basePath);
-  const baseFileName = path.basename(fileName, '.adoc');
+  const baseFileName = path.basename(fileName, ".adoc");
 
   // Get all adoc files in the directory
-  const files = fs.readdirSync(dir)
-    .filter(file => file.startsWith(baseFileName) && file.endsWith('.adoc'));
+  const files = fs
+    .readdirSync(dir)
+    .filter((file) => file.startsWith(baseFileName) && file.endsWith(".adoc"));
 
   // Extract locales from filenames
-  return files.map(file => {
+  return files.map((file) => {
     // Format: index.de.adoc -> de
-    const match = file.match(new RegExp(`${baseFileName}(?:\\.([\\w-]+))?\\.adoc$`));
-    return match && match[1] ? match[1] : 'en';
+    const match = file.match(
+      new RegExp(`${baseFileName}(?:\\.([\\w-]+))?\\.adoc$`)
+    );
+    return match && match[1] ? match[1] : "en";
   });
 }

@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useArches > URL is set correctly 1`] = `
+[
+  {
+    "name": "mock_aarch64",
+    "value": "mock_aarch64",
+  },
+]
+`;
+
+exports[`useOses > URL is set correctly 1`] = `
+[
+  {
+    "name": "Mock_linux",
+    "value": "mock_linux",
+  },
+]
+`;

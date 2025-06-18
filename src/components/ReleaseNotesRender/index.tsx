@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, MutableRefObject } from "react"
+import React, { useRef, RefObject } from "react"
 import { useTranslations, useLocale } from "next-intl";
 import {
   DataGrid,
@@ -153,7 +153,7 @@ const ReleaseNotesRender = () => {
   const version = rawVersion ? rawVersion.replace(/ /g, "+") : undefined;
 
   const ref = useRef<HTMLDivElement | null>(null)
-  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
+  const isVisible = useOnScreen(ref as RefObject<Element>, true)
 
   const releaseNoteDataBag = useFetchReleaseNotesForVersion(isVisible, version, sortReleaseNotesBy);
   const releaseNotes = releaseNoteDataBag ? releaseNoteDataBag.releaseNoteAPIResponse : null;

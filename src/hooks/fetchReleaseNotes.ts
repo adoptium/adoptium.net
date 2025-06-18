@@ -31,8 +31,6 @@ export function useFetchReleaseNotesForVersion(
 
         const url = `${baseUrl}/${versionToDisplay}`;
 
-        console.log(`Fetching release notes for version: ${versionToDisplay} from URL: ${url}`)
-
         await axios
           .get(url.toString())
           .then(function (response) {

@@ -9,9 +9,9 @@ export const packageTypes = [
     name: "JRE",
     value: "jre",
   },
-]
+];
 
-const defaultPackageType = "jdk"
-const defaultArchitecture = "x64"
+const defaultPackageType = "jdk";
+const defaultArchitecture = "x64";
 
-export { defaultPackageType, defaultArchitecture }
+export { defaultPackageType, defaultArchitecture };
