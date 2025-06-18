@@ -1,7 +1,8 @@
 'use client'
 
-import React, { MutableRefObject, useRef } from "react"
+import React, { RefObject, useRef } from "react"
 import { Link } from "@/i18n/navigation"
+import { sendDownloadEvent } from "@/utils/gtag";
 import { useTranslations } from 'next-intl';
 import { detectOS, UserOS } from "@/utils/detectOS"
 import { useFetchLatestForOS, useOnScreen } from "@/hooks"
@@ -50,7 +51,7 @@ const LatestTemurin: React.FC<LatestTemurinProps> = ({ latestLTS }) => {
   }
 
   const ref = useRef<HTMLDivElement | null>(null)
-  const isVisible = useOnScreen(ref as MutableRefObject<Element>, true)
+  const isVisible = useOnScreen(ref as RefObject<Element>, true)
   const binary = useFetchLatestForOS(
     isVisible,
     defaultVersion,
@@ -83,14 +84,18 @@ const LatestTemurin: React.FC<LatestTemurinProps> = ({ latestLTS }) => {
               pathname: "/download",
               query: {
                 link: binary.link,
-                checksum: binary.checksum,
-                os: userOSName,
-                arch: arch,
-                pkg_type: "JDK",
-                java_version: binary.release_name,
+                vendor: "Adoptium",
               },
             }}
             className="rounded-[80px] hover:shadow-2xl transition-all duration-300 bg-[#FF1464] border ease-in-out border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+            onClick={() => sendDownloadEvent({
+              link: binary.link,
+              os: userOSAPIName,
+              arch: arch,
+              pkg_type: binary.installer_link ? "installer" : "archive",
+              version: String(defaultVersion),
+              vendor: "Adoptium"
+            })}
           >
             {/* Icon will only render on client-side */}
             <span className="w-6 h-6 flex items-center justify-center">

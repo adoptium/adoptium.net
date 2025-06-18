@@ -1,0 +1,460 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Download page > renders correctly 1`] = `
+<div>
+  <div
+    class="relative pt-40 pb-16 md:pb-36 md:pt-60 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[171px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[120px] md:top-[395px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[618px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Download Success
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Thank you for your download!
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+        >
+          You are downloading an Eclipse Temurin build, the open-source community build from the Eclipse Adoptium Working Group. If the download doesn't start in a few seconds, please
+           
+          <span
+            class="text-primary underline !underline-offset-[1px]"
+          >
+            <a
+              href="https://example.com/download"
+            >
+              click here
+            </a>
+          </span>
+           
+          to start the download.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  >
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="400"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
+        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
+        style="color: transparent;"
+        width="400"
+      />
+    </div>
+    <div
+      class="lg:max-w-[560px] w-full  "
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        What to do now?
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        You have successfully downloaded Temurin. For more details on usage and configuration, please take a look at our Installation Guide.
+      </p>
+      <a
+        href="/installation"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
+        >
+          Installation Guide
+        </button>
+         
+      </a>
+      <a
+        href="/installation"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+        >
+          Installation Guide
+        </button>
+      </a>
+    </div>
+  </section>
+  <section
+    class="pt-0 md:pt-14 md:pb-28"
+  >
+    <div
+      class="pt-12 pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-6 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+    >
+      <div
+        class=" w-full lg:w-[55%] text-center lg:text-left"
+      >
+        <div>
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+          >
+            Support Temurin & Secure Open Source Java for Everyone!
+          </h2>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            Eclipse Temurin provides high-quality, open-source Java runtimes trusted by millions. By becoming a Temurin Sustainer, you are ensuring continued innovation, security, and accessibility for Java developers worldwide.
+          </p>
+        </div>
+        <h2
+          class="text-2xl leading-[122%] md:text-2xl md:[116%] text-white font-semibold pt-8"
+        >
+          Why Fund Temurin?
+        </h2>
+        <div>
+          <div
+            class="text-grey justify-start inline-flex pt-2"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-2"
+            >
+              Help keep Eclipse Temurin free and accessible to all.
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-2"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-2"
+            >
+              Maintain and grow infrastructure, security updates, and testing for the Java community.
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-2"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-2"
+            >
+              Support open source contributors maintaining Temurin.
+            </div>
+          </div>
+        </div>
+        <h2
+          class="text-2xl leading-[122%] md:text-2xl md:[116%] text-white font-semibold pt-8"
+        >
+          How You Can Help
+        </h2>
+        <div>
+          <div
+            class="text-grey justify-start inline-flex pt-2"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-2"
+            >
+              Monthly Sustainer: Contribute as an individual sustainer to ensure via 
+              <a
+                class="text-pink"
+                href="https://github.com/sponsors/adoptium"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                **GitHub**
+              </a>
+               Sponsorship Temurin’s long-term viability, enhance security, and accelerate faster releases for the Java community
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-2"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-2"
+            >
+              One-Time Contributions – Help us scale our testing and infrastructure.
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-2"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-2"
+            >
+              Corporate Sustainer – Looking to make a bigger impact? Join as a 
+              <a
+                class="text-pink"
+                href="/become-a-sustainer/"
+              >
+                Corporate Sustainer
+              </a>
+              .
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+      >
+        <div
+          class="grow"
+        >
+          <h3
+            class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
+          >
+            Media & Promotion
+          </h3>
+          <p
+            class="mt-6 text-xl text-grey font-normal"
+          >
+            Follow and promote the latest updates from the Eclipse Adoptium Project
+          </p>
+        </div>
+        <a
+          href="/news/"
+        >
+          <button
+            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
+          >
+            Learn More
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;
