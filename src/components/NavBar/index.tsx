@@ -17,6 +17,7 @@ import { BsXLg, BsList } from "react-icons/bs"
 
 import IconSocial from "@/components/IconSocial"
 import LanguageSelector from "@/components/LanguageSelector"
+import Announcements from "@/components/Announcements"
 
 interface NavItem {
   name: string
@@ -205,6 +206,9 @@ const NavBar = ({ locale }: { locale: string }) => {
         : ""
         }`}
     >
+      {showAnnouncement && (
+        <Announcements handleClose={() => setShowAnnouncement(false)} />
+      )}
       {/* Container div to center the nav content */}
       <div className="max-w-[1288px] w-full mx-auto px-3">
         <nav
