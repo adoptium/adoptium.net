@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from "react"
+import Image from "next/image"
 import LatestTemurin from "@/components/HeroSection/LatestTemurin"
 
 const HeroSection = () => {
@@ -26,14 +27,15 @@ const HeroSection = () => {
     <div>
       <div className="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative">
         <div className="relative isolate">
-          <div className="absolute sm:hidden top-[80px] z-[-1] left-[50%] translate-x-[-50%]">
-            {/* <Image 
-              src="/images/backgrounds/temurin-hero-bg.svg" 
-              alt="background-image"
-              width={317}
-              height={415}
-              priority
-            /> */}
+          <div className="absolute sm:hidden top-[80px] z-[-1] left-0 w-full flex justify-center">
+            <Image
+              src="/images/backgrounds/temurin-hero-mobile.svg"
+              className="max-w-80 h-auto"
+              width={600}
+              height={0}
+              alt="Temurin Hero Mobile Background"
+              draggable="false"
+            />
           </div>
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"

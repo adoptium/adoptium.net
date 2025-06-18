@@ -8,6 +8,12 @@
   .bg-temurin-hero {
     background-image: url("/images/backgrounds/temurin-hero-img.png");
   }
+
+  @media (width <= 640px) {
+    .bg-temurin-hero {
+      background-image: none;
+    }
+  }
 }
 
 /* CSS Variables */
