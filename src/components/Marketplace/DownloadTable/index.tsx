@@ -51,7 +51,7 @@ const DownloadTable = () => {
             switch (userOS) {
                 case UserOS.MAC:
                     defaultSelectedOS = "mac";
-                    if (typeof window !== "undefined") {
+                    if (typeof window !== "undefined" && typeof document !== "undefined") {
                         const gl = document.createElement("canvas").getContext("webgl");
                         const ext = gl && gl.getExtension("WEBGL_debug_renderer_info");
                         const param = (ext && gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)) || "";
