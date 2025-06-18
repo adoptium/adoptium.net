@@ -313,6 +313,13 @@ vi.mock('react-slick', () => {
   };
 });
 
+// Mock ResizeObserver for Headless UI
+window.ResizeObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
+}));
+
 // Mock slick-carousel CSS imports that might be required by components
 vi.mock('slick-carousel/slick/slick.css', () => ({}));
 vi.mock('slick-carousel/slick/slick-theme.css', () => ({}));

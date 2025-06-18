@@ -101,6 +101,7 @@ exports[`Support Us page > renders correctly 1`] = `
       >
         <div
           class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+          data-testid="common-card"
         >
           <div
             class="grow"
@@ -132,6 +133,7 @@ exports[`Support Us page > renders correctly 1`] = `
       >
         <div
           class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+          data-testid="common-card"
         >
           <div
             class="grow"
@@ -163,6 +165,7 @@ exports[`Support Us page > renders correctly 1`] = `
       >
         <div
           class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+          data-testid="common-card"
         >
           <div
             class="grow"
@@ -409,6 +412,7 @@ exports[`Support Us page > renders correctly 1`] = `
         >
           <div
             class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+            data-testid="common-card"
           >
             <div
               class="grow"

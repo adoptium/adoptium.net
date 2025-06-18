@@ -30,12 +30,6 @@ Object.defineProperty(window, "matchMedia", {
   })),
 })
 
-window.ResizeObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}))
-
 const navigatorClipboardSpy = vi.spyOn(navigator.clipboard, "writeText")
 
 describe("ChecksumModal component", () => {
