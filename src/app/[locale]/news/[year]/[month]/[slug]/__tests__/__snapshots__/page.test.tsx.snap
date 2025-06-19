@@ -1,0 +1,274 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NewsArticlePage > renders article when post exists 1`] = `
+<div>
+  <section>
+    <script
+      type="application/ld+json"
+    >
+      {&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;BlogPosting&quot;,&quot;headline&quot;:&quot;Test Article&quot;,&quot;datePublished&quot;:&quot;2025-06-18&quot;,&quot;description&quot;:&quot;desc&quot;,&quot;image&quot;:&quot;/og?title=Test%20Article&quot;,&quot;url&quot;:&quot;https://adoptium.net/news/2025/06/test-article&quot;,&quot;author&quot;:{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;Unknown Author&quot;}}
+    </script>
+    <div
+      class="pt-16 md:pt-24 pb-12"
+    >
+      <div
+        class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-6 flex pb-4"
+        >
+          <div
+            class="self-stretch flex-col justify-center items-center gap-4 flex"
+          >
+            <div
+              class="justify-start items-center gap-3 inline-flex"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+              <div
+                class="text-rose-600 text-base font-bold leading-normal"
+              >
+                News article
+              </div>
+            </div>
+            <h1
+              class="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold break-words"
+            >
+              <span
+                class="break-words whitespace-normal"
+              >
+                Test Article
+              </span>
+            </h1>
+          </div>
+          <div
+            class="self-stretch text-center text-grey text-grey-300 text-lg md:text-xl font-normal leading-7"
+          >
+            desc
+          </div>
+          <div
+            class="flex justify-center items-center gap-5"
+          >
+            <div
+              class="flex justify-center items-center gap-5"
+            >
+              <img
+                alt="Unknown Author"
+                class="ml-2 mb-0 rounded-full"
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fauthors%2FJane%20Doe.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fauthors%2FJane%20Doe.jpg&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2FJane%20Doe.jpg&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+              <span
+                class="text-[16px] font-bold leading-[150%] text-white"
+              >
+                <a
+                  href="/news/author/Jane Doe"
+                >
+                  <span
+                    class="text-primary pr-2"
+                  >
+                    Unknown Author
+                    ,
+                  </span>
+                   
+                  June 18, 2025
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      class="w-full mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center"
+    >
+      <div
+        class="w-full max-w-full m-2 md:m-4 md:max-w-4xl bg-white/5 rounded-2xl shadow-2xl p-2 md:p-12 relative z-10 overflow-x-auto"
+      >
+        <article>
+          <header
+            class="py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-white/10 mb-8 px-2 md:px-0"
+          >
+            <div
+              id="share-buttons"
+            >
+              <button
+                aria-label="Share on X (Twitter)"
+                class="react-share__ShareButton mr-2"
+                style="background-color: transparent; padding: 0px; cursor: pointer;"
+              >
+                <svg
+                  fill="currentColor"
+                  height="25"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Share on Linkedin"
+                class="react-share__ShareButton mr-2"
+                style="background-color: transparent; padding: 0px; cursor: pointer;"
+              >
+                <svg
+                  fill="currentColor"
+                  height="25"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Share on Facebook"
+                class="react-share__ShareButton mr-2"
+                style="background-color: transparent; padding: 0px; cursor: pointer;"
+              >
+                <svg
+                  fill="currentColor"
+                  height="25"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Share on Reddit"
+                class="react-share__ShareButton mr-2"
+                style="background-color: transparent; padding: 0px; cursor: pointer;"
+              >
+                <svg
+                  fill="currentColor"
+                  height="25"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Share on Bluesky"
+                class="react-share__ShareButton mr-2"
+                style="background-color: transparent; padding: 0px; cursor: pointer;"
+              >
+                <svg
+                  fill="currentColor"
+                  height="25"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 576 512"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-label="Share via Email"
+                class="react-share__ShareButton mr-2"
+                style="background-color: transparent; padding: 0px; cursor: pointer;"
+              >
+                <svg
+                  fill="currentColor"
+                  height="25"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-wrap gap-2 mt-6"
+            >
+              <a
+                class="px-3 py-1 text-sm bg-pink hover:bg-rose-800 transition-colors rounded-full text-white"
+                href="/news/tag/temurin"
+              >
+                #
+                temurin
+              </a>
+            </div>
+          </header>
+          <article
+            class="prose prose-invert lg:prose-lg max-w-full px-2 md:px-0"
+          >
+            <div>
+              MDX Content
+            </div>
+          </article>
+        </article>
+        <div
+          class="mt-8 px-2 md:px-0"
+        >
+          <ul
+            class="flex flex-wrap justify-between list-none pt-5 md:p-0"
+          >
+            <li />
+            <li />
+          </ul>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+`;

@@ -8,7 +8,11 @@ export async function GET(req: NextRequest) {
     const page = parseInt(searchParams.get("page") || "1", 10);
     const includeEF = searchParams.get("includeEF") === "true";
     const news = await getNews({ numPosts, page, includeEF });
-    return Response.json(news);
+    return Response.json(news, {
+      headers: {
+        "Cache-Control": "public, max-age=3600, stale-while-revalidate=60",
+      },
+    });
   } catch {
     return Response.json({ error: "Failed to fetch news" }, { status: 500 });
   }
