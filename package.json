@@ -19,7 +19,7 @@
     "@headlessui/react": "^2.2.4",
     "@mui/material": "^7.1.1",
     "@mui/x-data-grid": "^8.5.2",
-    "@next/third-parties": "^15.3.3",
+    "@next/third-parties": "^15.3.4",
     "axios": "^1.10.0",
     "framer-motion": "^12.18.1",
     "gray-matter": "^4.0.3",
