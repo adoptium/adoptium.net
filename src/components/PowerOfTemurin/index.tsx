@@ -16,7 +16,7 @@ const PowerOfTemurin = () => {
           {t("description")}
         </h3>
         <Link href="/business-benefits">
-          <button className="gradient-border bg-transparent mt-10 text-white text-base leading-6 font-bold min-w-[191px] px-6 h-[48px] rounded-2xl">
+          <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
             {t("button")}
           </button>
         </Link>

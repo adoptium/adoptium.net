@@ -196,11 +196,11 @@ exports[`Members page > renders correctly 1`] = `
         class="!mb-0"
         data-nimg="1"
         decoding="async"
-        height="64"
+        height="120"
         loading="lazy"
         src="/images/icons/message.svg"
         style="color: transparent;"
-        width="64"
+        width="120"
       />
       <p
         class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
@@ -216,7 +216,7 @@ exports[`Members page > renders correctly 1`] = `
         href="/join"
       >
         <button
-          class="rounded-2xl bg-transparent border-2 border-pink-500 text-white text-base leading-6 font-normal w-[179px] h-[48px] transition-all duration-500 ease-in-out hidden md:block mt-8 hover:bg-pink-500/10"
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
         >
           Contact Us
         </button>

@@ -50,8 +50,8 @@
         "title": "Cadena de suministro segura",
         "description": "Construido con altos estándares de seguridad, asegurando una cadena de suministro confiable, transparente y libre de vulnerabilidades."
       },
-      "tck-certified": {
-        "title": "Certificado TCK",
+      "aqavit-verification": {
+        "title": "Verificación AQAvit",
         "description": "Probado exhaustivamente con AQAvit para garantizar rendimiento, confiabilidad y seguridad en cada compilación."
       },
       "performance-optimization": {

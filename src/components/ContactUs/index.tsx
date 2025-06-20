@@ -41,8 +41,8 @@ const ContactUs: React.FC<ContactUsProps> = ({
           className="!mb-0"
           src="/images/icons/message.svg"
           alt="message icon"
-          width={64}
-          height={64}
+          width={120}
+          height={120}
         />
         <p className="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6">
           {title}
@@ -58,7 +58,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
           )}
         </span>
         <Link href={linkTo}>
-          <button className="rounded-2xl bg-transparent border-2 border-pink-500 text-white text-base leading-6 font-normal w-[179px] h-[48px] transition-all duration-500 ease-in-out hidden md:block mt-8 hover:bg-pink-500/10">
+          <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
             {buttontitle}
           </button>
         </Link>
