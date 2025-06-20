@@ -81,7 +81,7 @@ const Features = () => {
                 {t("description")}
               </h3>
               <Link href="/temurin/releases">
-                <button className="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[212px] h-[48px] ">
+                <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
                   Download Temurin™
                 </button>
               </Link>
