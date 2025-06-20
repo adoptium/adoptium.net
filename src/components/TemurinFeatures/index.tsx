@@ -22,8 +22,8 @@ const Features = () => {
       img: "/images/icons/lock.svg"
     },
     {
-      heading: t("features.tck-certified.title"),
-      content: t("features.tck-certified.description"),
+      heading: t("features.aqavit-verification.title"),
+      content: t("features.aqavit-verification.description"),
       img: "/images/initiatives/testing.svg"
     },
     {

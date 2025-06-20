@@ -50,8 +50,8 @@
         "title": "安全的供应链",
         "description": "遵循严格的安全标准构建，确保供应链可信、透明且无已知漏洞。"
       },
-      "tck-certified": {
-        "title": "TCK 认证",
+      "aqavit-verification": {
+        "title": "AQAvit 验证",
         "description": "通过 AQAvit 严格测试，确保每个构建在性能、可靠性和安全性方面都达到高标准。"
       },
       "performance-optimization": {
