@@ -22,7 +22,7 @@ export default function BusinessBenefitsPage() {
       <UsingTemurin />
       <Logos
         members={LogoType.ADOPTERS}
-        title="Eclipse Temurin™ Adopters"
+        title="Eclipse Temurin® Adopters"
         description="Companies that use Eclipse Temurin in production."
       />
       <Testimonials />
