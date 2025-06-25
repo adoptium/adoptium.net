@@ -41,7 +41,7 @@ export default function NightlyVersionSelector() {
             "ea",
             numBuilds,
             new Date(buildDate),
-            1
+            0
         ).then(result => {
             setReleases(result?.releases || [])
         })
