@@ -44,7 +44,7 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
                 if (data.available_releases && Array.isArray(data.available_releases)) {
                     const versions = data.available_releases
                         .map((v: { name: string; value: number | string }) => ({
-                            name: `JDK ${v.name}`,
+                            name: v.name,
                             value: String(v.value)
                         }))
 

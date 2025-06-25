@@ -1,10 +1,10 @@
 {
   "HomePage": {
-    "the-power": "O Poder do Eclipse Temurin™",
+    "the-power": "O Poder do Eclipse Temurin®",
     "download-temurin-for": "Baixe o Temurin {defaultVersion} para {userOSName} {arch}",
     "download-temurin-short": "Baixar Temurin {defaultVersion}",
     "other-downloads": "Outros Downloads",
-    "download-temurin-button": "Baixar Temurin™"
+    "download-temurin-button": "Baixar Temurin®"
   },
   "NotFoundPage": {
     "title": "Desculpe, não conseguimos encontrar esta página",
@@ -144,7 +144,7 @@
     "architecture": "Arquitetura"
   },
   "TemurinReleases": {
-    "title": "Baixar Temurin™ JDK",
+    "title": "Baixar Temurin® JDK",
     "latest-releases": "Versões mais recentes",
     "description": "Escolha uma versão, tipo de pacote, JDK/JRE e baixe os binários."
   },

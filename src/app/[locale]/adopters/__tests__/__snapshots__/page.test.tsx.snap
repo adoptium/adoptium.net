@@ -65,7 +65,7 @@ exports[`Adopters page > renders correctly 1`] = `
           <div
             class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
           >
-            Eclipse Temurin™ Adopters
+            Eclipse Temurin® Adopters
           </div>
         </div>
         <div

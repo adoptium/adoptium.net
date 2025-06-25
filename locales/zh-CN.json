@@ -1,10 +1,10 @@
 {
   "HomePage": {
-    "the-power": "Eclipse Temurin™ 的强大优势",
+    "the-power": "Eclipse Temurin® 的强大优势",
     "download-temurin-for": "下载适用于 {userOSName} {arch} 的 Temurin {defaultVersion}",
     "download-temurin-short": "下载 Temurin {defaultVersion}",
     "other-downloads": "其他下载",
-    "download-temurin-button": "下载 Temurin™"
+    "download-temurin-button": "下载 Temurin®"
   },
   "NotFoundPage": {
     "title": "很抱歉，无法找到此页面",
@@ -144,7 +144,7 @@
     "architecture": "架构"
   },
   "TemurinReleases": {
-    "title": "下载 Temurin™ JDK",
+    "title": "下载 Temurin® JDK",
     "latest-releases": "最新版本",
     "description": "选择版本、软件包类型和 JDK/JRE，下载相应的二进制文件。"
   },

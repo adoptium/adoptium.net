@@ -13,7 +13,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Eclipse Temurin™",
+    title: "Eclipse Temurin®",
     imagePath: "temurin-project.svg",
     link: "/temurin",
     overline: "Runtimes and Development Kits",
