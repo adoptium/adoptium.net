@@ -27,7 +27,6 @@ export function getAppRoutes(): string[] {
             .replace(/\/index$/, "")
             .replace(/\\/g, "/"); // Windows safety
 
-        // Normalize index route to root
         if (route === "/index" || route === "/") {
           route = "/";
         }
@@ -66,11 +65,11 @@ export function getBlogRoutes(): BlogRoute[] {
     } else if (fs.existsSync(indexPathAdoc)) {
       indexPath = indexPathAdoc;
     } else {
-      continue; // skip folders without index
+      continue;
     }
 
     const stats = fs.statSync(indexPath);
-    const lastmod = stats.mtime.toISOString().split("T")[0]; // e.g. 2025-06-26
+    const lastmod = stats.mtime.toISOString().split("T")[0];
 
     routes.push({
       loc: `/en/${slug}`,
