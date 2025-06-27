@@ -71,7 +71,7 @@
     "eslint-config-next": "15.3.4",
     "jsdom": "^26.1.0",
     "jsdom-testing-mocks": "^1.13.1",
-    "tailwindcss": "^4.1.10",
+    "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.1",
