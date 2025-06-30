@@ -1,8 +1,11 @@
 export const dynamic = "force-static";
 export const revalidate = 3600; // Cache for 1 hour (3600 seconds)
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const ltsOnly = searchParams.get("lts-only") === "true";
+
     const response = await fetch(
       "https://api.adoptium.net/v3/info/available_releases",
       {
@@ -25,16 +28,23 @@ export async function GET() {
           name: `${version} - LTS`,
           value: version,
         })),
-      // Format available versions to match ReleaseSelector expectations
-      available_releases: rawData.available_releases
-        .sort((a: number, b: number) => b - a)
-        .map((version: number) => {
-          const isLTS = rawData.available_lts_releases.includes(version);
-          return {
-            name: isLTS ? `${version} - LTS` : version.toString(),
-            value: version.toString(),
-          };
-        }),
+      // Format available versions - if ltsOnly is true, only return LTS versions
+      available_releases: ltsOnly
+        ? rawData.available_lts_releases
+            .sort((a: number, b: number) => b - a)
+            .map((version: number) => ({
+              name: `${version} - LTS`,
+              value: version.toString(),
+            }))
+        : rawData.available_releases
+            .sort((a: number, b: number) => b - a)
+            .map((version: number) => {
+              const isLTS = rawData.available_lts_releases.includes(version);
+              return {
+                name: isLTS ? `${version} - LTS` : version.toString(),
+                value: version.toString(),
+              };
+            }),
     };
 
     return new Response(JSON.stringify(formattedData), {
