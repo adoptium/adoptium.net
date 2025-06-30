@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 
 const LOCALE_DIR = path.join(process.cwd(), "src", "app", "[locale]");
 const IGNORED_FOLDERS = ["__tests__"];
@@ -68,11 +69,25 @@ export function getBlogRoutes(): BlogRoute[] {
       continue;
     }
 
+    // Read date from frontmatter
+    let year = "";
+    let month = "";
+    try {
+      const file = fs.readFileSync(indexPath, "utf8");
+      const fm = matter(file);
+      if (fm.data && fm.data.date) {
+        const d = new Date(fm.data.date);
+        year = d.getUTCFullYear().toString();
+        month = (d.getUTCMonth() + 1).toString().padStart(2, "0");
+      }
+    } catch {}
+    if (!year || !month) continue;
+
     const stats = fs.statSync(indexPath);
     const lastmod = stats.mtime.toISOString().split("T")[0];
 
     routes.push({
-      loc: `/en/${slug}`,
+      loc: `/news/${year}/${month}/${slug}/`,
       lastmod,
     });
   }
