@@ -2,7 +2,7 @@ import { getAppRoutes, getBlogRoutes } from "@/utils/getAppRoutes";
 import { routing } from "@/i18n/routing";
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://acme.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://adoptium.net";
 
   const staticRoutes = getAppRoutes().filter(
     (route) => !route.includes("[...slug]") && !route.startsWith("/news")
