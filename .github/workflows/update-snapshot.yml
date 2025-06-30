@@ -6,7 +6,7 @@ permissions:
 
 on:
   repository_dispatch:
-    types: [update-snapshot]
+    types: [update_snapshot]
 
 jobs:
   update-snapshots:
