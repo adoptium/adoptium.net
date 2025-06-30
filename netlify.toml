@@ -1,3 +1,41 @@
 [build]
   publish = ".next"
   command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = '''
+    max-age=63072000;
+    includeSubDomains;
+    preload'''
+
+[[redirects]]
+  from = "https://blog.adoptium.net/*"
+  to = "https://adoptium.net/news/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/news/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/blog/*"
+  to = "/news/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/marketplace-policy"
+  to = "/docs/marketplace-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/qvs-policy"
+  to = "/docs/qvs-policy"
+  status = 301
+  force = true
