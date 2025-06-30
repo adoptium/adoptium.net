@@ -45,7 +45,7 @@ exports[`sitemap > generates the expected sitemap snapshot 1`] = `
     "url": "https://adoptium.net/page-2",
   },
   {
-    "lastModified": 2025-04-30T23:00:00.000Z,
+    "lastModified": 2025-05-01T00:00:00.000Z,
     "url": "https://adoptium.net/news/2025/05/post-1",
   },
   {
