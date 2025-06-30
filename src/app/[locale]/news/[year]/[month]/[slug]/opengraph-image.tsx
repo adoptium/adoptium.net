@@ -3,8 +3,7 @@ import { getBlogPosts } from '@/utils/markdown'
 import AuthorData from "@/data/authors.json"
 
 const websiteURL = process.env.NODE_ENV === 'production'
-    // TODO update this adoptium.net once the new site is live
-    ? 'https://adoptium-next.netlify.app'
+    ? 'https://adoptium.net'
     : 'http://localhost:3000'
 
 // Output size
