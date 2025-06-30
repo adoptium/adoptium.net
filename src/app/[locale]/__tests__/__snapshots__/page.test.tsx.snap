@@ -593,7 +593,7 @@ exports[`Index page > renders correctly 1`] = `
               <button
                 class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
               >
-                Download Temurin™
+                Download Temurin®
               </button>
             </a>
           </div>
@@ -982,7 +982,7 @@ exports[`Index page > renders correctly 1`] = `
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
           >
             <img
-              alt="Eclipse Temurin™ logo"
+              alt="Eclipse Temurin® logo"
               class="w-[140px]"
               data-nimg="1"
               decoding="async"
@@ -1033,7 +1033,7 @@ exports[`Index page > renders correctly 1`] = `
               <h2
                 class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
               >
-                Eclipse Temurin™
+                Eclipse Temurin®
               </h2>
               <a
                 href="/temurin"

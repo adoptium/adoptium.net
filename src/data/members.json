@@ -86,6 +86,12 @@
     "tier": "sponsor"
   },
   {
+    "name": "Bedag",
+    "logo": "sustainers/bedag.png",
+    "url": "https://bedag.ch",
+    "tier": "sponsor"
+  },
+  {
     "name": "Microsoft Azure",
     "logo": "sustainers/azure.png",
     "url": "https://azure.microsoft.com",

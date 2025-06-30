@@ -14,7 +14,7 @@ export default function AdoptersPage() {
     return (
         <div>
             <PageHeader
-                title="Eclipse Temurin™ Adopters"
+                title="Eclipse Temurin® Adopters"
                 subtitle="Our Adopters"
                 description="Companies that use Eclipse Temurin in production."
             />
