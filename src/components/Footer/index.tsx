@@ -4,6 +4,8 @@ import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { FooterIcon } from "@/components/Common/Icon"
 import IconSocial from "@/components/IconSocial"
+import { useState } from "react"
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci"
 
 interface FooterData {
   title: {
@@ -175,6 +177,82 @@ const footerData: FooterData[] = [
   },
 ]
 
+// Plus/Minus icon component
+const ToggleIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
+  isOpen ? (
+    <CiCircleMinus size={45} className="text-white" />
+  ) : (
+    <CiCirclePlus size={45} className="text-white" />
+  )
+)
+
+// Mobile footer section component
+const MobileFooterSection: React.FC<{ section: FooterData }> = ({ section }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div>
+      <button
+        className="flex justify-between w-full items-center"
+        onClick={() => setIsOpen(!isOpen)}
+        type="button"
+        aria-expanded={isOpen}
+      >
+        <span className="text-white text-xl font-semibold leading-7">
+          {section.title.defaultText}
+        </span>
+        <span className="text-white">
+          <ToggleIcon isOpen={isOpen} />
+        </span>
+      </button>
+
+      {isOpen && (
+        <div className="mt-4 mb-4">
+          <ul className="space-y-2 text-sm">
+            {section.links.map((link, linkIndex) => {
+              const isInternalLink = !/^https?:\/\//.test(link.url)
+              return (
+                <li key={linkIndex}>
+                  {isInternalLink ? (
+                    <Link
+                      href={link.url}
+                      className="text-white text-base font-normal leading-6 transition hover:opacity-75"
+                    >
+                      {link.text.defaultText}
+                    </Link>
+                  ) : link.disclaimerMessage ? (
+                    <a
+                      href="#"
+                      onClick={e => {
+                        e.preventDefault()
+                        if (link.disclaimerMessage && window.confirm(link.disclaimerMessage.defaultText)) {
+                          window.open(link.url, '_blank')
+                        }
+                      }}
+                      className="text-white text-base font-normal leading-6 transition hover:opacity-75"
+                    >
+                      {link.text.defaultText}
+                    </a>
+                  ) : (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-base font-normal leading-6 transition hover:opacity-75"
+                    >
+                      {link.text.defaultText}
+                    </a>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      )}
+    </div>
+  )
+}
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-blue">
@@ -231,11 +309,16 @@ const Footer: React.FC = () => {
             ))}
           </div>
           <div className="sm:flex sm:items-center sm:justify-between pt-4">
-            <div className="text-teal-600 flex dark:text-teal-300">
+            <div className="flex">
               <FooterIcon />
-              <p className="text-sm ml-3 flex items-center gap-4 text-white font-normal leading-5">
-                Copyright © Eclipse Foundation. All Rights Reserved.
-              </p>
+              <div className="ml-3">
+                <p className="text-xs flex items-center gap-4 text-white font-normal leading-5">
+                  Copyright © Eclipse Foundation. All Rights Reserved.
+                </p>
+                <p className="text-xs text-white font-normal leading-4 mt-1">
+                  Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.
+                </p>
+              </div>
             </div>
 
             <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
@@ -259,52 +342,23 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        {/* TODO: Add mobile footer component */}
+        {/* Mobile footer with accordion */}
         <div className="w-full px-4 md:hidden block">
-          <div className="space-y-8">
+          <div className="flex flex-col space-y-4 p-4">
             {footerData.map((section, index) => (
-              <div key={index}>
-                <p className="font-medium text-pink mb-4">
-                  {section.title.defaultText}
-                </p>
-                <ul className="space-y-2 text-sm">
-                  {section.links.map((link, linkIndex) => {
-                    const isInternalLink = !/^https?:\/\//.test(link.url)
-                    return (
-                      <li key={linkIndex}>
-                        {isInternalLink ? (
-                          <Link
-                            href={link.url}
-                            className="text-white text-base font-normal leading-6 transition hover:opacity-75"
-                          >
-                            {link.text.defaultText}
-                          </Link>
-                        ) : (
-                          <a
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white text-base font-normal leading-6 transition hover:opacity-75"
-                          >
-                            {link.text.defaultText}
-                          </a>
-                        )}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
+              <MobileFooterSection key={index} section={section} />
             ))}
             <div className="pt-4">
-              <div className="text-teal-600 flex dark:text-teal-300 mb-4">
-                <FooterIcon />
-                <p className="text-sm ml-3 flex items-center gap-4 text-white font-normal leading-5">
-                  Copyright © Eclipse Foundation. All Rights Reserved.
-                </p>
+              <div className="flex mb-4">
+                <div className="ml-3">
+                  <p className="text-xs flex items-center gap-4 text-white font-normal leading-5">
+                    Copyright © Eclipse Foundation. All Rights Reserved.
+                  </p>
+                  <p className="text-xs text-white font-normal leading-4 mt-1">
+                    Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.
+                  </p>
+                </div>
               </div>
-              <ul className="flex justify-start gap-6">
-                <IconSocial />
-              </ul>
             </div>
           </div>
         </div>

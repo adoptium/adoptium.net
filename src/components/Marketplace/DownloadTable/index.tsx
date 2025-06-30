@@ -1,19 +1,19 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 import ReleaseSelector from "@/components/Marketplace/ReleaseSelector"
 import VendorSelector from "@/components/Marketplace/VendorSelector"
 import AllReleaseCard from "@/components/Marketplace/AllReleasesCard"
 
 import { setURLParam } from "@/utils/setURLParam"
 import { detectOS, UserOS } from "@/utils/detectOS"
+import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases"
 import { packageTypes, defaultArchitecture, defaultPackageType } from '@/utils/defaults'
 import getVendorIdentifier from "@/utils/vendors"
 import { getAllPkgsForVersion, MarketplaceRelease } from "@/hooks"
 import { useArches, useOses } from '@/hooks/fetchConstants'
 import vendors from "@/data/marketplace.json"
-import { useSearchParams } from "next/navigation"
-import { fetchAvailableReleases } from '@/utils/fetchAvailableReleases'
 
 const DownloadTable = () => {
     const oses = useOses(true)
@@ -23,7 +23,6 @@ const DownloadTable = () => {
 
     const [os, updateOS] = useState("")
     const [arch, updateArch] = useState(defaultArchitecture)
-    // Fix: always use string for version, and vendor identifiers
     const [version, updateVersion] = useState("21")
     const [packageType, updatePackageType] = useState(defaultPackageType)
     const [selectedVendorIdentifiers, updateSelectedVendorIdentifiers] = useState<string[]>([])
@@ -84,9 +83,8 @@ const DownloadTable = () => {
         setReady(true);
     }, [oses, arches, searchParams]);
 
-    // Fetch available versions for ReleaseSelector
     useEffect(() => {
-        fetchAvailableReleases().then(setVersions)
+        fetchAvailableReleases(true).then(setVersions)
     }, [])
 
     useEffect(() => {
@@ -94,7 +92,7 @@ const DownloadTable = () => {
         (async () => {
             setReleases(
                 await getAllPkgsForVersion(
-                    Number(version), // fix: ensure number
+                    Number(version),
                     os,
                     arch,
                     packageType,
@@ -138,7 +136,7 @@ const DownloadTable = () => {
         <div className="max-w-[1264px] mx-auto px-6 pb-20">
             <ReleaseSelector
                 marketplace
-                versions={versions} // fix: pass versions prop
+                versions={versions}
                 updateVersion={versionUpdater}
                 defaultVersion={version}
                 updateOS={osUpdater}

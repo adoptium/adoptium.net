@@ -17,7 +17,8 @@ describe("GET /api/available-releases", () => {
         available_releases: [8, 11, 17, 21, 22, 23],
       }),
     });
-    const res = await GET();
+    const req = new Request("http://localhost/api/available-releases");
+    const res = await GET(req);
     expect(res.status).toBe(200);
     expect(res.headers.get("Cache-Control")).toBe(
       "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"

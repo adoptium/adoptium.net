@@ -67,12 +67,12 @@ export default function CommonSelector({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ListboxOptions className="origin-top-left absolute overflow-hidden left-0 mt-2 w-full rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355]">
+          <ListboxOptions className="origin-top-left absolute overflow-auto left-0 mt-2 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355]">
             {list.map((obj, index) => (
               <ListboxOption
                 key={index}
                 className={({ active }) =>
-                  `relative cursor-pointer select-none py-2 px-4 ${active
+                  `relative cursor-pointer select-none py-1 px-3 sm:py-2 sm:px-4 text-sm sm:text-base ${active
                     ? "text-white bg-[#3E3355]"
                     : "text-white hover:bg-[#2a223a]"
                   }`
