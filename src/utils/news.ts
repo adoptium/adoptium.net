@@ -15,27 +15,34 @@ interface EclipseNewsItem {
   image?: string;
 }
 
-export async function getNews({ numPosts = 9, page = 1, includeEF = false } = {}): Promise<NewsResult> {
+export async function getNews({
+  numPosts = 9,
+  page = 1,
+  includeEF = false,
+} = {}): Promise<NewsResult> {
   const blogs = getBlogPosts();
   if (includeEF) {
     const efNews = await fetchLatestNews();
     // structure efNews to match the blog posts format
     const efPosts = efNews.news
-      .filter((newsItem: EclipseNewsItem) => !newsItem.link.startsWith('https://adoptium.net'))
+      .filter(
+        (newsItem: EclipseNewsItem) =>
+          !newsItem.link.startsWith("https://adoptium.net")
+      )
       .map((newsItem: EclipseNewsItem) => ({
-      slug: newsItem.link,
-      newsItem,
-      metadata: {
-        title: newsItem.title,
-        date: newsItem.date,
-        tags: ['eclipse-news'],
-        author: 'Eclipse Foundation',
-        description: newsItem.body.substring(0, 150) + '...',
-        featuredImage:
-        newsItem.image && newsItem.image.trim() !== ''
-          ? newsItem.image
-          : '/images/blog/ef-default-news.jpg',
-      },
+        slug: newsItem.link,
+        newsItem,
+        metadata: {
+          title: newsItem.title,
+          date: newsItem.date,
+          tags: ["eclipse-news"],
+          author: "Eclipse Foundation",
+          description: newsItem.body.substring(0, 150) + "...",
+          featuredImage:
+            newsItem.image && newsItem.image.trim() !== ""
+              ? newsItem.image
+              : "/images/backgrounds/ef-default-news.jpg",
+        },
       }));
     // Combine the blog posts with the EF news posts
     blogs.push(...efPosts);
@@ -48,17 +55,25 @@ export async function getNews({ numPosts = 9, page = 1, includeEF = false } = {}
   });
 
   const totalPages = Math.ceil(sortedBlogs.length / numPosts);
-  const paginatedPosts = sortedBlogs.slice((page - 1) * numPosts, page * numPosts);
+  const paginatedPosts = sortedBlogs.slice(
+    (page - 1) * numPosts,
+    page * numPosts
+  );
 
   return {
     posts: paginatedPosts,
-    totalPages
+    totalPages,
   };
 }
 
-export function getNewsByTag(tag: string, { numPosts = 6, page = 1 } = {}): NewsResult {
+export function getNewsByTag(
+  tag: string,
+  { numPosts = 6, page = 1 } = {}
+): NewsResult {
   const blogs = getBlogPosts();
-  const filteredBlogs = blogs.filter(post => post.metadata.tags?.includes(tag));
+  const filteredBlogs = blogs.filter((post) =>
+    post.metadata.tags?.includes(tag)
+  );
 
   const sortedBlogs = filteredBlogs.sort((a, b) => {
     const dateA = new Date(a.metadata.date).getTime();
@@ -67,17 +82,23 @@ export function getNewsByTag(tag: string, { numPosts = 6, page = 1 } = {}): News
   });
 
   const totalPages = Math.ceil(sortedBlogs.length / numPosts);
-  const paginatedPosts = sortedBlogs.slice((page - 1) * numPosts, page * numPosts);
+  const paginatedPosts = sortedBlogs.slice(
+    (page - 1) * numPosts,
+    page * numPosts
+  );
 
   return {
     posts: paginatedPosts,
-    totalPages
+    totalPages,
   };
 }
 
-export function getNewsByAuthor(author: string, { numPosts = 6, page = 1 } = {}): NewsResult {
+export function getNewsByAuthor(
+  author: string,
+  { numPosts = 6, page = 1 } = {}
+): NewsResult {
   const blogs = getBlogPosts();
-  const filteredBlogs = blogs.filter(post => post.metadata.author === author);
+  const filteredBlogs = blogs.filter((post) => post.metadata.author === author);
 
   const sortedBlogs = filteredBlogs.sort((a, b) => {
     const dateA = new Date(a.metadata.date).getTime();
@@ -86,10 +107,13 @@ export function getNewsByAuthor(author: string, { numPosts = 6, page = 1 } = {})
   });
 
   const totalPages = Math.ceil(sortedBlogs.length / numPosts);
-  const paginatedPosts = sortedBlogs.slice((page - 1) * numPosts, page * numPosts);
+  const paginatedPosts = sortedBlogs.slice(
+    (page - 1) * numPosts,
+    page * numPosts
+  );
 
   return {
     posts: paginatedPosts,
-    totalPages
+    totalPages,
   };
 }

@@ -3,8 +3,7 @@ import { getBlogPosts } from '@/utils/markdown'
 import AuthorData from "@/data/authors.json"
 
 const websiteURL = process.env.NODE_ENV === 'production'
-    // TODO update this adoptium.net once the new site is live
-    ? 'https://adoptium-next.netlify.app'
+    ? 'https://adoptium.net'
     : 'http://localhost:3000'
 
 // Output size
@@ -50,7 +49,7 @@ export default async function Image({
                     backgroundColor: '#0E002A',
 
                     // Background image settings:
-                    backgroundImage: `url(${websiteURL}/images/blog/blog-background.png)`,
+                    backgroundImage: `url(${websiteURL}/images/backgrounds/blog-background.png)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
