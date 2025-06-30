@@ -49,7 +49,7 @@ export default async function Image({
                     backgroundColor: '#0E002A',
 
                     // Background image settings:
-                    backgroundImage: `url(${websiteURL}/images/blog/blog-background.png)`,
+                    backgroundImage: `url(${websiteURL}/images/backgrounds/blog-background.png)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
