@@ -5,19 +5,35 @@ permissions:
   pull-requests: write
 
 on:
-  issue_comment:
-    types: [created]
+  repository_dispatch:
+    types: [update-snapshot]
 
 jobs:
   update-snapshots:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '/update-snapshot')
     steps:
+      - name: Get PR details
+        id: pr
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            const { data: pullRequest } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: ${{ github.event.client_payload.pull_request.number }}
+            });
+            return {
+              ref: pullRequest.head.ref,
+              repo: pullRequest.head.repo.full_name,
+              number: pullRequest.number
+            };
+
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          ref: ${{ github.event.issue.head_ref }}
-          repository: ${{ github.event.issue.repository.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ fromJson(steps.pr.outputs.result).ref }}
+          repository: ${{ fromJson(steps.pr.outputs.result).repo }}
           fetch-depth: 0
 
       - name: Set up Node.js
@@ -34,8 +50,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "adoptium-bot"
+          git config --global user.email "adoptium-bot@eclipse.org"
           if git diff-index --quiet HEAD; then
             echo "NO_CHANGES_DETECTED=1" >> "${GITHUB_ENV}"
           else
@@ -48,6 +64,6 @@ jobs:
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.issue.number }}
+          issue-number: ${{ fromJson(steps.pr.outputs.result).number }}
           body: |
             ${{ env.NO_CHANGES_DETECTED == '1' && 'No snapshot changes detected.' || 'Snapshots updated and changes pushed to the PR.' }}
