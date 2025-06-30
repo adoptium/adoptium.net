@@ -41,7 +41,7 @@ jobs:
           else
             git add "**/*.snap"
             git commit -m "Update Vitest Snapshots"
-            git push
+            git push origin HEAD
           fi
 
       - name: Add comment
