@@ -40,7 +40,7 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({ results, onReset }) => 
     if (results === null) {
         return (
             <div className="mt-8">
-                <div className="grid gap-4">
+                <div className="grid gap-6">
                     {/* Create 3 skeleton cards for the loading state */}
                     {[1, 2, 3].map((index) => (
                         <div
