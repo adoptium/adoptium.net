@@ -6,7 +6,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
     <script
       type="application/ld+json"
     >
-      {&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;BlogPosting&quot;,&quot;headline&quot;:&quot;Test Article&quot;,&quot;datePublished&quot;:&quot;2025-06-18&quot;,&quot;description&quot;:&quot;desc&quot;,&quot;image&quot;:&quot;/og?title=Test%20Article&quot;,&quot;url&quot;:&quot;https://adoptium.net/news/2025/06/test-article&quot;,&quot;author&quot;:{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;Unknown Author&quot;}}
+      {"@context":"https://schema.org","@type":"BlogPosting","headline":"Test Article","datePublished":"2025-06-18","description":"desc","image":"https://adoptium.net/news/2025/06/test-article/opengraph-image","url":"https://adoptium.net/news/2025/06/test-article","author":{"@type":"Person","name":"Unknown Author"}}
     </script>
     <div
       class="pt-16 md:pt-24 pb-12"

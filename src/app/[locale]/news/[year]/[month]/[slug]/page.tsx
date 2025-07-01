@@ -3,7 +3,6 @@ import { Link } from '@/i18n/navigation'
 import { getBlogPosts } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
 import { sanitizeObject } from '@/utils/sanitize'
-import { safeJsonLd } from '@/utils/jsonLd'
 import AuthorData from "@/data/authors.json"
 import { PinkIcon } from "@/components/Common/Icon"
 import { CustomMDX } from '@/components/CustomMDX'
@@ -13,7 +12,6 @@ import Tags from '@/components/News/Tags'
 import RelatedArticles from '@/components/News/RelatedArticles'
 import SyntaxHighlighter from '@/components/SyntaxHighlighter'
 
-// TODO Hardcoded metadata for now, perhaps we could improve this?
 const metadata = {
   social: {
     twitter: "@adoptium"
@@ -34,7 +32,7 @@ export async function generateStaticParams() {
       year,
       month,
       slug: post.slug || "",
-      locale: "en" // Default locale
+      locale: "en"
     };
   })
 }
@@ -128,7 +126,7 @@ export default async function Blog(
     description: post.metadata.description,
     image: post.metadata.featuredImage
       ? `${metadata.siteUrl}${post.metadata.featuredImage}`
-      : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+      : `${metadata.siteUrl}/news/${year}/${month}/${post.slug}/opengraph-image`,
     url: postURL,
     author: {
       '@type': 'Person',
@@ -155,10 +153,9 @@ export default async function Blog(
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: safeJsonLd(sanitizedJsonLd),
+          __html: JSON.stringify(sanitizedJsonLd),
         }}
       />
-      {/* Restore classic header layout and sizing */}
       <div className="pt-16 md:pt-24 pb-12">
         <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
           <div className="self-stretch flex-col justify-center items-center gap-6 flex pb-4">
