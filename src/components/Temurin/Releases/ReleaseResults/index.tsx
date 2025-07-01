@@ -45,34 +45,34 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
     // Show loading state
     if (isLoading) {
         return (
-            <section className="py-8">
-                <div className="space-y-8">
+            <section className="py-4">
+                <div className="space-y-4">
                     {[1, 2, 3].map((index) => (
                         <div
                             key={index}
-                            className="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8 animate-pulse"
+                            className="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
                         >
                             <div className="w-full lg:w-[45%] flex flex-col">
                                 <AnimatedPlaceholder>
-                                    <div className="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6">
+                                    <div className="p-4 bg-[#2B1A4F] flex flex-col rounded-[16px] gap-4">
                                         <div className="flex justify-between items-center">
-                                            <div className="flex gap-4 justify-start items-center">
-                                                <div className="w-8 h-8 bg-gray-600 rounded-full animate-pulse"></div>
-                                                <div className="h-6 bg-gray-600 rounded w-24 animate-pulse"></div>
+                                            <div className="flex gap-3 justify-start items-center">
+                                                <div className="w-6 h-6 bg-gray-600 rounded-full animate-pulse"></div>
+                                                <div className="h-5 bg-gray-600 rounded w-20 animate-pulse"></div>
                                             </div>
-                                            <div className="flex gap-4">
-                                                <div className="h-6 bg-gray-600 rounded w-16 animate-pulse"></div>
+                                            <div className="flex gap-3">
+                                                <div className="h-5 bg-gray-600 rounded w-14 animate-pulse"></div>
                                             </div>
                                         </div>
-                                        <div className="h-12 bg-gray-600 rounded-full animate-pulse"></div>
+                                        <div className="h-8 bg-gray-600 rounded-full animate-pulse"></div>
                                     </div>
                                 </AnimatedPlaceholder>
                             </div>
-                            <div className="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0">
-                                <div className="h-6 bg-gray-600 rounded w-48 mb-6 animate-pulse"></div>
-                                <div className="space-y-4">
-                                    <div className="h-16 bg-gray-600 rounded-xl animate-pulse"></div>
-                                    <div className="h-16 bg-gray-600 rounded-xl animate-pulse"></div>
+                            <div className="flex flex-col w-full lg:w-[50%] mt-6 lg:mt-0">
+                                <div className="h-5 bg-gray-600 rounded w-48 mb-4 animate-pulse"></div>
+                                <div className="space-y-3">
+                                    <div className="h-12 bg-gray-600 rounded-xl animate-pulse"></div>
+                                    <div className="h-12 bg-gray-600 rounded-xl animate-pulse"></div>
                                 </div>
                             </div>
                         </div>
@@ -158,10 +158,26 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
         return selectedPackageTypes[key] || 'jdk';
     };
 
+    // Define the preferred order for OS display
+    const osOrder = ['linux', 'windows', 'mac', 'alpine-linux', 'aix', 'solaris'];
+
+    // Sort the OS entries according to the preferred order
+    const sortedOSEntries = Object.entries(groupedReleases).sort(([osA], [osB]) => {
+        const indexA = osOrder.indexOf(osA);
+        const indexB = osOrder.indexOf(osB);
+
+        // If OS not in order list, put it at the end
+        if (indexA === -1 && indexB === -1) return 0;
+        if (indexA === -1) return 1;
+        if (indexB === -1) return -1;
+
+        return indexA - indexB;
+    });
+
     return (
-        <section className="py-8">
-            <div className="space-y-8">
-                {Object.entries(groupedReleases).map(([os, architectures]) => {
+        <section className="py-4">
+            <div className="space-y-4">
+                {sortedOSEntries.map(([os, architectures]) => {
                     const IconComponent = osIcons[os as keyof typeof osIcons] || FcLinux;
                     const architectureList = Object.keys(architectures);
 
@@ -172,11 +188,11 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                     return (
                         <div
                             key={os}
-                            className="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-6 lg:p-8"
+                            className="flex justify-between border flex-wrap border-[#554772] rounded-[24px] !bg-[#200E46] items-start p-4 lg:p-6"
                         >
                             <div className="w-full lg:w-[45%] flex flex-col">
                                 <div>
-                                    <div className="p-6 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-6">
+                                    <div className="p-4 bg-[#2B1A4F] flex flex-col rounded-[24px] gap-4">
                                         <div className="flex justify-between items-center">
                                             <div className="flex gap-4 justify-start items-center">
                                                 <IconComponent size={30} />
@@ -192,7 +208,7 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                                         key={arch}
                                                         onClick={() => handleArchSelection(os, arch)}
                                                     >
-                                                        <span className={`py-3 w-full text-base font-normal leading-6 
+                                                        <span className={`py-2 w-full text-base font-normal leading-6 
                               outline-hidden cursor-pointer transition-all duration-200 ease-in-out ${selectedArch === arch
                                                                 ? "border-primary border-b-[2px] text-white"
                                                                 : "text-[#8a809e] border-transparent border-b"
@@ -206,7 +222,7 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                         </div>
 
                                         {/* Package type selector buttons */}
-                                        <div className="flex gap-2 mt-2">
+                                        <div className="flex gap-2 mt-1">
                                             <button
                                                 className={`px-4 py-2 text-sm font-medium rounded-full border transition-colors ${getPackageType(os, selectedArch) === "jdk"
                                                     ? "border-[#FF1464] text-[#FF1464] bg-[#2B1A4F]"
