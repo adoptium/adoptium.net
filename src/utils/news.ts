@@ -41,7 +41,7 @@ export async function getNews({
           featuredImage:
             newsItem.image && newsItem.image.trim() !== ""
               ? newsItem.image
-              : "/images/backgrounds/ef-default-news.jpg",
+              : "/images/backgrounds/ef-default-news.png",
         },
       }));
     // Combine the blog posts with the EF news posts
