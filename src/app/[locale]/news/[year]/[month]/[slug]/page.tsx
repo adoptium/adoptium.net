@@ -3,7 +3,6 @@ import { Link } from '@/i18n/navigation'
 import { getBlogPosts } from '@/utils/markdown'
 import { formatDate } from '@/utils/date'
 import { sanitizeObject } from '@/utils/sanitize'
-import { safeJsonLd } from '@/utils/jsonLd'
 import AuthorData from "@/data/authors.json"
 import { PinkIcon } from "@/components/Common/Icon"
 import { CustomMDX } from '@/components/CustomMDX'
@@ -127,7 +126,7 @@ export default async function Blog(
     description: post.metadata.description,
     image: post.metadata.featuredImage
       ? `${metadata.siteUrl}${post.metadata.featuredImage}`
-      : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+      : `${metadata.siteUrl}/news/${year}/${month}/${post.slug}/opengraph-image`,
     url: postURL,
     author: {
       '@type': 'Person',
