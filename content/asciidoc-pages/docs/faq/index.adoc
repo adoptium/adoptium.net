@@ -62,7 +62,7 @@ join us and tell us your ideas!
 == How long is Eclipse Temurin supported?
 
 Our release frequency and support statement is available
-https://adoptium.net/support/[here].
+link:/support[here].
 
 == Has Eclipse Temurin passed the JCK?
 

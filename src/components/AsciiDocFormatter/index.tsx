@@ -52,13 +52,13 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       // Transform heading tags (h1-h6) to add hoverable anchors
       if (node.name && /^h[1-6]$/.test(node.name)) {
         const id = node.attribs?.id;
-        const HeadingTag = node.name as keyof JSX.IntrinsicElements;
+        const headingProps = {
+          id,
+          className: `${node.attribs?.class || ''} group relative scroll-mt-30`
+        };
 
-        return (
-          <HeadingTag
-            id={id}
-            className={`${node.attribs?.class || ''} group relative scroll-mt-30`}
-          >
+        const headingContent = (
+          <>
             {domToReact(node.children as DOMNode[], options)}
             {id && (
               <a
@@ -69,8 +69,10 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
                 <i className="fa fa-link text-sm" aria-hidden="true" />
               </a>
             )}
-          </HeadingTag>
+          </>
         );
+
+        return React.createElement(node.name, headingProps, headingContent);
       }
 
       // Transform <i> tags
