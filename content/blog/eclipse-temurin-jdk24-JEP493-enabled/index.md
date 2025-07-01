@@ -71,7 +71,7 @@ Providers:
   java.desktop provides javax.sound.sampled.spi.FormatConversionProvider used by java.desktop
   java.desktop provides javax.sound.sampled.spi.MixerProvider used by java.desktop
   java.logging provides jdk.internal.logger.DefaultLoggerFinder used by java.base
-  java.desktop provides sun.datatransfer.DesktopDatatransferService used by java.datatransfer 
+  java.desktop provides sun.datatransfer.DesktopDatatransferService used by java.datatransfer
 $ ./jdk-24.se-only/bin/java --version
 openjdk 24-beta 2025-03-18
 OpenJDK Runtime Environment Temurin-24+36-202502111438 (build 24-beta+36-ea)
@@ -91,7 +91,7 @@ https://github.com/adoptium/adoptium-support/issues
 This is what JEP 493 changes. Since Eclipse Temurin 24 enables the feature at
 build time, `jlink` will link from the runtime image and will, therefore, no
 longer need JMODs for creating custom runtimes. The user experience is the same
-when using jlink.  One can check with `jlink --help` that JEP 493 is enabled:
+when using jlink. One can check with `jlink --help` that JEP 493 is enabled:
 
 ```bash
 $ ./jdk-24+36/bin/jlink --help | tail -n2
@@ -143,7 +143,7 @@ The relevant upstream OpenJDK change is
 [JDK-8345259](https://bugs.openjdk.org/browse/JDK-8345259). Prior to JDK 24,
 using `--add-modules ALL-MODULE-PATH` was equivalent to `--add-modules
 ALL-MODULE-PATH --module-path $JAVA_HOME/jmods` which essentially meant to
-create a runtime with *all* JDK modules. If this is what you intended to get a
+create a runtime with _all_ JDK modules. If this is what you intended to get a
 "smaller" runtime, then a similar result could be achieved by:
 
 1. Taking a JDK 24 Eclipse Temurin installation, copy it to a new location.
@@ -151,7 +151,7 @@ create a runtime with *all* JDK modules. If this is what you intended to get a
 2. Removing the `src.zip` file from the `lib` folder (~51 MB)
 
 If you are really interested in smaller custom runtimes, however, you should
-not include *all* JDK modules. I.e. consider using explicit modules in
+not include _all_ JDK modules. I.e. consider using explicit modules in
 `--add-modules` clause instead.
 
 ### Without JMODs I won't be able to cross-link a platform-foreign JDK
