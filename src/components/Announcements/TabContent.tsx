@@ -28,6 +28,24 @@ interface TabContentProps {
 
 const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false }) => {
     const locale = useLocale();
+
+    const formatTimeAgo = (date: string): string => {
+        const daysAgo = Math.floor((new Date().getTime() - new Date(date).getTime()) / (1000 * 60 * 60 * 24));
+
+        switch (true) {
+            case daysAgo === 0:
+                return 'Today';
+            case daysAgo === 1:
+                return '1 day ago';
+            case daysAgo < 7:
+                return `${daysAgo} days ago`;
+            case daysAgo < 14:
+                return '1 week ago';
+            default:
+                const weeksAgo = Math.floor(daysAgo / 7);
+                return `${weeksAgo} weeks ago`;
+        }
+    };
     if (isEvents) {
         return (
             <article>
@@ -80,15 +98,7 @@ const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false }) => {
                             <a href={link} target="_blank" rel="noopener noreferrer">
                                 <div className="text-[#c4bfce]">
                                     <p className="text-[12px] leading-[133.333%] text-lightgrey mb-0">
-                                        {(() => {
-                                            const daysAgo = Math.floor((new Date().getTime() - new Date(date).getTime()) / (1000 * 60 * 60 * 24));
-                                            if (daysAgo < 7) {
-                                                return daysAgo === 1 ? `1 day ago` : `${daysAgo} days ago`;
-                                            } else {
-                                                const weeksAgo = Math.floor(daysAgo / 7);
-                                                return weeksAgo === 1 ? `1 week ago` : `${weeksAgo} weeks ago`;
-                                            }
-                                        })()}
+                                        {formatTimeAgo(date)}
                                     </p>
                                     <h3 className="text-[20px] leading-[140%] text-white mb-4">
                                         {title}
@@ -102,15 +112,7 @@ const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false }) => {
                             <Link href={link}>
                                 <div className="text-[#c4bfce]">
                                     <p className="text-[12px] leading-[133.333%] text-lightgrey mb-0">
-                                        {(() => {
-                                            const daysAgo = Math.floor((new Date().getTime() - new Date(date).getTime()) / (1000 * 60 * 60 * 24));
-                                            if (daysAgo < 7) {
-                                                return daysAgo === 1 ? `1 day ago` : `${daysAgo} days ago`;
-                                            } else {
-                                                const weeksAgo = Math.floor(daysAgo / 7);
-                                                return weeksAgo === 1 ? `1 week ago` : `${weeksAgo} weeks ago`;
-                                            }
-                                        })()}
+                                        {formatTimeAgo(date)}
                                     </p>
                                     <h3 className="text-[20px] leading-[140%] text-white mb-4">
                                         {title}
