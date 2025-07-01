@@ -34,7 +34,7 @@ describe("AsciiDocFormatter", () => {
   it("transforms internal links correctly", () => {
     const content = '<p><a href="/internal-link">Internal Link</a></p>'
     render(<AsciiDocFormatter content={content} />)
-    
+
     const link = screen.getByText("Internal Link")
     expect(link.tagName).toBe("A")
     expect(link).toHaveAttribute("href", "/internal-link")
@@ -51,13 +51,13 @@ describe("AsciiDocFormatter", () => {
 
     const content = '<p><a href="https://example.com">External Link</a></p>'
     const { container } = render(<AsciiDocFormatter content={content} />)
-    
+
     const link = screen.getByText("External Link")
     expect(link.tagName).toBe("A")
     expect(link).toHaveAttribute("href", "https://example.com")
     expect(link).toHaveAttribute("target", "_blank")
     expect(link).toHaveAttribute("rel", "noopener noreferrer")
-    
+
     // Check for the external link icon
     const icon = container.querySelector(".fa-external-link")
     expect(icon).toBeInTheDocument()
@@ -66,7 +66,7 @@ describe("AsciiDocFormatter", () => {
   it("transforms FontAwesome Docker icon correctly", () => {
     const content = '<p><i class="fa fa-docker"></i></p>'
     const { container } = render(<AsciiDocFormatter content={content} />)
-    
+
     const icon = container.querySelector(".fab.fa-docker")
     expect(icon).toBeInTheDocument()
   })
@@ -81,10 +81,10 @@ describe("AsciiDocFormatter", () => {
       </div>
     `
     render(<AsciiDocFormatter content={content} />)
-    
+
     // Check for Table of Contents text
     expect(screen.getByText("Table of Contents")).toBeInTheDocument()
-    
+
     // Check for section links
     expect(screen.getByText("Section 1")).toBeInTheDocument()
     expect(screen.getByText("Section 2")).toBeInTheDocument()
@@ -93,7 +93,7 @@ describe("AsciiDocFormatter", () => {
   it("transforms iframe tags correctly", () => {
     const content = '<iframe src="https://example.com/embed" title="Sample Embed"></iframe>'
     const { container } = render(<AsciiDocFormatter content={content} />)
-    
+
     const iframe = container.querySelector("iframe")
     expect(iframe).toBeInTheDocument()
     expect(iframe).toHaveAttribute("src", "https://example.com/embed")
@@ -110,14 +110,14 @@ describe("AsciiDocFormatter", () => {
       </details>
     `
     render(<AsciiDocFormatter content={content} />)
-    
+
     // Check that the AccordionItem mock is used
     expect(screen.getByTestId("mock-accordion")).toBeInTheDocument()
-    
+
     // Check that the title and content are passed correctly
     const title = screen.getByTestId("accordion-title")
     expect(title).toHaveTextContent("Accordion Title")
-    
+
     const content_ = screen.getByTestId("accordion-content")
     expect(content_).toHaveTextContent("Accordion Content")
   })
@@ -125,8 +125,50 @@ describe("AsciiDocFormatter", () => {
   it("transforms icon td cells correctly", () => {
     const content = '<table><tbody><tr><td class="icon"></td></tr></tbody></table>'
     const { container } = render(<AsciiDocFormatter content={content} />)
-    
+
     const icon = container.querySelector(".fa-circle-info")
     expect(icon).toBeInTheDocument()
+  })
+
+  it("transforms heading tags with hoverable anchors correctly", () => {
+    const content = `
+      <h1 id="heading-1">Main Title</h1>
+      <h2 id="heading-2">Subtitle</h2>
+      <h3>Title without ID</h3>
+    `
+    const { container } = render(<AsciiDocFormatter content={content} />)
+
+    // Check that headings are rendered with proper classes
+    const h1 = screen.getByRole("heading", { level: 1 })
+    expect(h1).toHaveAttribute("id", "heading-1")
+    expect(h1).toHaveClass("group", "relative", "scroll-mt-30")
+    expect(h1).toHaveTextContent("Main Title")
+
+    const h2 = screen.getByRole("heading", { level: 2 })
+    expect(h2).toHaveAttribute("id", "heading-2")
+    expect(h2).toHaveClass("group", "relative", "scroll-mt-30")
+    expect(h2).toHaveTextContent("Subtitle")
+
+    // Check that anchor links are present for headings with IDs
+    const h1Anchor = container.querySelector('a[href="#heading-1"]')
+    expect(h1Anchor).toBeInTheDocument()
+    expect(h1Anchor).toHaveAttribute("aria-label", "Link to h1 section")
+    expect(h1Anchor).toHaveClass("absolute", "-left-6", "top-0", "opacity-0", "group-hover:opacity-100")
+
+    const h2Anchor = container.querySelector('a[href="#heading-2"]')
+    expect(h2Anchor).toBeInTheDocument()
+    expect(h2Anchor).toHaveAttribute("aria-label", "Link to h2 section")
+
+    // Check that anchor icons are present
+    const linkIcons = container.querySelectorAll(".fa-link")
+    expect(linkIcons).toHaveLength(2) // Only h1 and h2 should have anchors (h3 has no ID)
+
+    // Check that heading without ID doesn't have an anchor
+    const h3 = screen.getByRole("heading", { level: 3 })
+    expect(h3).toHaveClass("group", "relative", "scroll-mt-30")
+    expect(h3).toHaveTextContent("Title without ID")
+    const h3Parent = h3.parentElement
+    const h3Anchor = h3Parent?.querySelector('a[href="#"]')
+    expect(h3Anchor).not.toBeInTheDocument()
   })
 })

@@ -49,6 +49,32 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
         }
       }
 
+      // Transform heading tags (h1-h6) to add hoverable anchors
+      if (node.name && /^h[1-6]$/.test(node.name)) {
+        const id = node.attribs?.id;
+        const headingProps = {
+          id,
+          className: `${node.attribs?.class || ''} group relative scroll-mt-30`
+        };
+
+        const headingContent = (
+          <>
+            {domToReact(node.children as DOMNode[], options)}
+            {id && (
+              <a
+                href={`#${id}`}
+                className="absolute -left-6 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-pink dark:text-purple-400 hover:text-pink-600 dark:hover:text-purple-300 no-underline"
+                aria-label={`Link to ${node.name} section`}
+              >
+                <i className="fa fa-link text-sm" aria-hidden="true" />
+              </a>
+            )}
+          </>
+        );
+
+        return React.createElement(node.name, headingProps, headingContent);
+      }
+
       // Transform <i> tags
       if (
         node.name === "i" &&
