@@ -9,18 +9,53 @@ const Banner = () => {
   // The following is an example that can be used for future banner alert
   // Comment Out The Above Line ( return null ; ) and uncomment the below
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isDismissed, setIsDismissed] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Animation effect when component mounts
+  // Track when component mounts to prevent hydration issues
   useEffect(() => {
-    setIsVisible(true);
+    setIsMounted(true);
   }, []);
+
+  // Handle banner dismissal
+  const handleDismiss = () => {
+    setIsVisible(false);
+    // Wait for fade out animation to complete before removing from DOM
+    setTimeout(() => {
+      setIsDismissed(true);
+    }, 700);
+  };
+
+  // Don't render if dismissed
+  if (isDismissed) {
+    return null;
+  }
 
   return (
     <div className={`bg-gradient-to-r from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-4 mb-3 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-center relative">
+          {/* Close button - only show after mount to prevent hydration issues */}
+          {isMounted && (
+            <button
+              onClick={handleDismiss}
+              className="absolute top-0 right-0 md:top-[-8px] md:right-[-8px] p-2 text-gray-300 hover:text-white transition-colors duration-200 group"
+              aria-label="Dismiss banner"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
+
+          <div className={`flex items-center gap-4 mb-3 md:mb-0 ${isMounted ? 'pr-8' : ''}`}>{/* Only add padding after mount */}
             <div className="transform hover:scale-110 transition-transform duration-300">
               <PinkIcon />
             </div>
@@ -34,8 +69,8 @@ const Banner = () => {
             </div>
           </div>
           <div className="mt-2 md:mt-0">
-            <a 
-              href="https://forms.gle/vM5rigSGfvFTLVVQ7" 
+            <a
+              href="https://forms.gle/vM5rigSGfvFTLVVQ7"
               className="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center group"
             >
               Submit Your Proposal
@@ -47,7 +82,7 @@ const Banner = () => {
         </div>
       </div>
     </div>
-  )  
+  )
 }
 
 export default Banner
