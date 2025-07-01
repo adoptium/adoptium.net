@@ -13,7 +13,6 @@ import Tags from '@/components/News/Tags'
 import RelatedArticles from '@/components/News/RelatedArticles'
 import SyntaxHighlighter from '@/components/SyntaxHighlighter'
 
-// TODO Hardcoded metadata for now, perhaps we could improve this?
 const metadata = {
   social: {
     twitter: "@adoptium"
@@ -34,7 +33,7 @@ export async function generateStaticParams() {
       year,
       month,
       slug: post.slug || "",
-      locale: "en" // Default locale
+      locale: "en"
     };
   })
 }
@@ -155,10 +154,9 @@ export default async function Blog(
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: safeJsonLd(sanitizedJsonLd),
+          __html: JSON.stringify(sanitizedJsonLd),
         }}
       />
-      {/* Restore classic header layout and sizing */}
       <div className="pt-16 md:pt-24 pb-12">
         <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
           <div className="self-stretch flex-col justify-center items-center gap-6 flex pb-4">
