@@ -4,7 +4,7 @@ import { fetchDownloadCount } from "../fetchDownloadCount";
 
 // Mock global fetch
 const mockFetch = vi.fn();
-global.fetch = mockFetch as any;
+global.fetch = mockFetch as unknown as typeof fetch;
 
 describe("fetchDownloadCount", () => {
   afterEach(() => {
