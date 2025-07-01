@@ -9,13 +9,14 @@ tags:
   - release-notes
 ---
 
-The upcoming release of Eclipse Temurin 24.0.0+36 will have [JEP
-493](https://openjdk.org/jeps/493) enabled. Note: It's disabled by default.
-That is, the JDK 24 release archive of Eclipse Temurin will be about 35%
-smaller. The installed size on-disk will be about 15% smaller. It also means
-that the release no longer includes the `jmods` folder. That folder included
-packaged modules of the JDK and was being used when running the `jlink`
-command.
+The releases of Eclipse Temurin 24.0.0+36 and newer will have [JEP
+493](https://openjdk.org/jeps/493) enabled. Note: This functionality is
+disabled by default for JDK 24 builds and has to be explicitly enabled at build
+time. Since Eclipse Temurin 24 enables the JEP functionality, the JDK 24
+release archive of Eclipse Temurin will be about 35% smaller. The installed
+size on-disk will be about 15% smaller. It also means that the release no
+longer includes the `jmods` folder. That folder included packaged modules of
+the JDK and was being used when running the `jlink` command.
 
 JEP 493 enhances the JDK to use `jlink` without needing the `jmods` folder (or
 packaged modules). `jlink` will work as before for most use-cases. For example,
