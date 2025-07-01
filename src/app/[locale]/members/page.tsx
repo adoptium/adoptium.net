@@ -63,21 +63,21 @@ export default function MembersPage() {
         sectionId="strategic-sec"
         members={LogoType.STRATEGIC}
         title="Strategic Members"
-        description="Companies that use Eclipse Temurin in production."
+        description="Strategic Members are organizations that view Adoptium working group managed technology as critical to their organization’s future, and are investing significant resources to sustain and define the core activities that are the responsibility of the working group."
       />
 
       <Logos
         sectionId="enterprise-sec"
         members={LogoType.ENTERPRISE}
         title="Enterprise Members"
-        description="Companies that use Eclipse Temurin in production."
+        description="Enterprise Members are typically organizations that view the Adoptium working group managed technology as a critical part of their organization‘s business operations. These organizations want to influence the direction and support the development of a runtime technology ecosystem through Eclipse Adoptium."
       />
 
       <Logos
         sectionId="participant-sec"
         members={LogoType.PARTICIPANT}
         title="Participant Members"
-        description="Companies that use Eclipse Temurin in production."
+        description="Participant Members are typically organizations that deliver products or services based on Adoptium technology. These organizations want to participate in the evolution of the Eclipse Adoptium ecosystem to ensure it continues to meet their needs."
       />
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4">
