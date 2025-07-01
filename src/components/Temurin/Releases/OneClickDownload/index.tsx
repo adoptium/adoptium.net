@@ -137,18 +137,18 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
     })
 
     return (
-        <div className="flex justify-between flex-col md:flex-row w-full items-center gap-8 max-w-[1264px] mx-auto">
+        <div className="flex justify-between flex-col md:flex-row w-full items-center gap-6 max-w-[1264px] mx-auto">
             {/* macOS Download Card */}
-            <div className="p-8 bg-[#200E46] justify-between w-full border rounded-[24px] border-[#564873] h-[264px] flex flex-col transition-all duration-300 ease-in-out hover:border-primary shadow-[0_2px_4px_rgba(255,20,100,0.2)]">
-                <span className="p-6 rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
-                    <FaApple size={30} />
+            <div className="p-6 bg-[#200E46] justify-between w-full border rounded-[24px] border-[#564873] h-[200px] flex flex-col transition-all duration-300 ease-in-out hover:border-primary shadow-[0_2px_4px_rgba(255,20,100,0.2)]">
+                <span className="p-4 rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
+                    <FaApple size={24} />
                 </span>
-                <div className="flex justify-between items-center gap-8">
-                    <div className="flex flex-col space-y-2">
-                        <h4 className="text-4xl font-semibold">macOS</h4>
-                        <h5 className="text-base font-normal text-grey">{macOSDisplay}</h5>
+                <div className="flex justify-between items-center gap-6">
+                    <div className="flex flex-col space-y-1">
+                        <h4 className="text-3xl font-semibold">macOS</h4>
+                        <h5 className="text-sm font-normal text-grey">{macOSDisplay}</h5>
                     </div>
-                    <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
+                    <span className="p-2 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
                         <Link
                             href={{
                                 pathname: "/download",
@@ -167,23 +167,23 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                                 vendor: "Adoptium"
                             })}
                         >
-                            <BsDownload size={25} />
+                            <BsDownload size={20} />
                         </Link>
                     </span>
                 </div>
             </div>
 
             {/* Windows Download Card */}
-            <div className="p-8 bg-[#200E46] justify-between w-full border rounded-[24px] border-[#564873] h-[264px] flex flex-col transition-all duration-300 ease-in-out hover:border-primary shadow-[0_2px_4px_rgba(255,20,100,0.2)]">
-                <span className="p-6 rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
-                    <FaWindows size={30} />
+            <div className="p-6 bg-[#200E46] justify-between w-full border rounded-[24px] border-[#564873] h-[200px] flex flex-col transition-all duration-300 ease-in-out hover:border-primary shadow-[0_2px_4px_rgba(255,20,100,0.2)]">
+                <span className="p-4 rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76]">
+                    <FaWindows size={24} />
                 </span>
-                <div className="flex justify-between items-center gap-8">
-                    <div className="flex flex-col space-y-2">
-                        <h4 className="text-4xl font-semibold">Windows</h4>
-                        <h5 className="text-base font-normal text-grey">{windowsDisplay}</h5>
+                <div className="flex justify-between items-center gap-6">
+                    <div className="flex flex-col space-y-1">
+                        <h4 className="text-3xl font-semibold">Windows</h4>
+                        <h5 className="text-sm font-normal text-grey">{windowsDisplay}</h5>
                     </div>
-                    <span className="p-3 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
+                    <span className="p-2 group cursor-pointer rounded-full w-fit bg-[#2B1A4F] border border-[#5A4D76] hover:border-primary transition-all duration-300 ease-in-out">
                         <Link
                             href={{
                                 pathname: "/download",
@@ -202,7 +202,7 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                                 vendor: "Adoptium"
                             })}
                         >
-                            <BsDownload size={25} />
+                            <BsDownload size={20} />
                         </Link>
                     </span>
                 </div>
