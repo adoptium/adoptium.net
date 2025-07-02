@@ -118,7 +118,8 @@
   "LatestNews": {
     "latest-news-and-updates": "Últimas noticias y actualizaciones",
     "subtitle": "Sigue las últimas novedades del proyecto Eclipse Adoptium",
-    "see-all-news": "Ver todas las noticias"
+    "see-all-news": "Ver todas las noticias",
+    "read-more": "Leer más"
   },
   "WGProjects": {
     "discover-all-our-projects": "Descubre todos nuestros proyectos",
@@ -169,9 +170,11 @@
         "source-code": "Código fuente"
       },
       "ReleaseResults": {
-        "this-build-is-jck-certified": "Esta compilación está certificada por JCK",
-        "this-build-is-aqavit-verified": "Esta compilación está verificada por AQAvit",
-        "checksum": "Suma de verificación"
+        "this-build-is-jck-certified": "Esta versión está certificada por JCK",
+        "this-build-is-aqavit-verified": "Esta versión está verificada por AQAvit",
+        "checksum": "Suma de verificación",
+        "no-releases-found": "No se encontraron versiones",
+        "no-releases-found-description": "Ninguna versión coincide con los criterios de filtro actuales. Intente ajustar sus selecciones o restablezca todos los filtros para ver las versiones disponibles."
       }
     },
     "Nightly": {
@@ -200,6 +203,10 @@
     },
     "VersionSelector": {
       "all-versions": "Todas las versiones"
+    },
+    "DownloadMethods": {
+      "other-ways-to-download-temurin": "Otras formas de descargar Temurin",
+      "description": "Hay varias formas de obtener Eclipse Temurin además de las descargas directas. La siguiente lista curada muestra algunas de estas opciones para instalar binarios de tiempo de ejecución OpenJDK de alto rendimiento, multiplataforma y de código abierto."
     }
   },
   "ReleaseNotes": {

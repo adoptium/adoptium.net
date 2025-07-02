@@ -102,7 +102,7 @@ export default async function Blog(
     }>
   }
 ) {
-  const { slug, year, month } = await params;
+  const { slug, year, month, locale } = await params;
   const post = getBlogPosts().find((post) => post.slug === slug)
 
   if (!post) {
@@ -173,7 +173,7 @@ export default async function Blog(
             </div>
             <div className="flex justify-center items-center gap-5">
               <Byline
-                date={formatDate(post.metadata.date)}
+                date={formatDate(post.metadata.date, locale)}
                 author={author?.name || 'Unknown Author'}
                 identifier={post.metadata.author || ''}
               />

@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslations } from "next-intl"
 import { FaDocker, FaGithub, FaCalendarAlt } from "react-icons/fa";
 import { FcLinux, FcPackage } from "react-icons/fc";
 import { Link } from "@/i18n/navigation"
@@ -8,6 +9,7 @@ import {
 import CommonHeading from "@/components/Common/CommonHeading"
 
 const DownloadMethods = () => {
+  const t = useTranslations('Temurin.DownloadMethods');
   const TemurinMethod = [
     {
       icon: <FaDocker size={35} color="#1D63ED" />,
@@ -85,10 +87,8 @@ const DownloadMethods = () => {
   return (
     <section className="py-16 md:py-32 bg-[#0E002A] px-6">
       <CommonHeading
-        title={"Other ways to download Temurin"}
-        description={
-          "There are multiple different ways to get Eclipse Temurin beyond direct downloads. The curated list below shows some of these options for installing high-performance, cross-platform, open-source OpenJDK runtime binaries."
-        }
+        title={t('other-ways-to-download-temurin')}
+        description={t('description')}
         className={"text-center max-w-[680px] mx-auto"}
       />
       <div className=" mt-8 md:mt-16">

@@ -341,12 +341,12 @@ exports[`TemurinReleases page > renders correctly 1`] = `
       <h2
         class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
-        Other ways to download Temurin
+        Text
       </h2>
       <p
         class="text-grey mt-6 font-normal text-base"
       >
-        There are multiple different ways to get Eclipse Temurin beyond direct downloads. The curated list below shows some of these options for installing high-performance, cross-platform, open-source OpenJDK runtime binaries.
+        Text
       </p>
     </div>
     <div

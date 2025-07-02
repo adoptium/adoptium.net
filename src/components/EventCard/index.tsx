@@ -1,4 +1,5 @@
 import React from "react"
+import { useLocale } from 'next-intl'
 import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { formatDate } from '@/utils/date'
@@ -21,6 +22,7 @@ interface EventCardProps {
 }
 
 const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
+    const locale = useLocale()
     // Check if this is an external link (Eclipse Foundation news)
     const isExternalLink = isEclipseNews ||
         post.metadata.tags?.includes('eclipse-news')
@@ -34,7 +36,7 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
     // Handle potentially missing data
     const title = post.metadata.title || 'Untitled';
     const description = post.metadata.description || '';
-    const date = formatDate(post.metadata.date) || '';
+    const date = formatDate(post.metadata.date, locale) || '';
 
     return (
         <div className="flex flex-col max-w-[385px] w-full sm:w-[385px] min-h-[600px] rounded-3xl newscard-2 bg-[#200D46]">
