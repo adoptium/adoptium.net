@@ -15,7 +15,13 @@ import DownloadMethods from "@/components/Temurin/DownloadMethods"
 import VersionSelector from "@/components/VersionSelector"
 import ChecksumModal from "@/components/ChecksumModal"
 
-export default function TemurinReleasesPage() {
+interface AvailableReleases {
+  available_lts_releases: number[];
+  available_releases: number[];
+  most_recent_lts: number;
+}
+
+export default function TemurinReleasesPage({ availableReleases }: { availableReleases: AvailableReleases }) {
   const t = useTranslations("TemurinReleases")
   const [modalOpen, setModalOpen] = useState(false)
   const [currentChecksum, setCurrentChecksum] = useState("")
@@ -28,12 +34,20 @@ export default function TemurinReleasesPage() {
   const [selectedArch, setSelectedArch] = useState("any")
 
   // LTS version tab state
-  const [ltsVersions, setLTSVersions] = useState<Array<{ name: string; value: number }>>([])
-  const [latestLTS, setLatestLTS] = useState(21)
+  const ltsVersions = availableReleases.available_lts_releases.map((version: number) => ({
+    name: `${version} - LTS`,
+    value: version,
+  }))
+  const allVersions = availableReleases.available_releases.map((version: number) => {
+    const isLTS = availableReleases.available_lts_releases.includes(version);
+    return {
+      name: isLTS ? `${version} - LTS` : version.toString(),
+      value: version.toString(),
+    };
+  });
+  const latestLTS = availableReleases.most_recent_lts
   const [activeVersionTab, setActiveVersionTab] = useState<number | string>(21)
   const [isAllVersionsMode, setIsAllVersionsMode] = useState(false)
-
-  // We now use the mode=filter URL parameter instead of a state flag
 
   const searchParams = useSearchParams()
 
@@ -43,59 +57,13 @@ export default function TemurinReleasesPage() {
   // Flag to track if we're handling a filter change (vs initial page load)
   const [isFilterChange, setIsFilterChange] = useState(false)
 
-  // Fetch available LTS versions
-  useEffect(() => {
-    const fetchVersions = async () => {
-      try {
-        const response = await fetch('/api/available-releases')
-        const data = await response.json()
-
-        if (data.most_recent_lts) {
-          setLatestLTS(data.most_recent_lts)
-
-          // Get version from URL params if it exists
-          const params = Object.fromEntries(searchParams.entries());
-          const requestedVersion = params.version;
-
-          // If no version in URL params, default to latest LTS
-          if (!requestedVersion) {
-            setActiveVersionTab(data.most_recent_lts)
-          }
-          // If version is specified in URL and it's an LTS version, set that tab as active
-          else if (data.available_lts_releases && Array.isArray(data.available_lts_releases)) {
-            const isRequestedVersionLTS = data.available_lts_releases.some(
-              (lts: { name: string; value: number | string }) => String(lts.value) === requestedVersion
-            );
-
-            if (isRequestedVersionLTS) {
-              setActiveVersionTab(parseInt(requestedVersion, 10));
-              setIsAllVersionsMode(false);
-            } else {
-              // If not an LTS version, set to All Versions tab
-              setActiveVersionTab(1);
-              setIsAllVersionsMode(true);
-            }
-          }
-        }
-
-        if (data.available_lts_releases && Array.isArray(data.available_lts_releases)) {
-          setLTSVersions(data.available_lts_releases)
-        }
-      } catch (error) {
-        console.error("Failed to fetch available versions:", error)
-      }
-    }
-
-    fetchVersions()
-  }, [searchParams])
-
   // Load initial data when component mounts if no URL parameters
   useEffect(() => {
     // If we haven't fetched yet, and we're not already loading, do an initial fetch
     if (!hasInitialFetch && !isLoading) {
       // Get version from URL params if it exists
       const params = Object.fromEntries(searchParams.entries());
-      const initialVersion = params.version || String(latestLTS); // Use URL param or latest LTS as default
+      const initialVersion = params.version || String(latestLTS);
       const initialOS = params.os || "any";
       const initialArch = params.arch || "any";
 
@@ -132,9 +100,8 @@ export default function TemurinReleasesPage() {
       // Update selected version to match
       setSelectedVersion(initialVersion)
     }
-    // Re-run when latestLTS changes or ltsVersions updates
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [latestLTS, ltsVersions.length, searchParams])
+  }, [searchParams])
 
   // Listen for URL parameter changes and update filters accordingly
   useEffect(() => {
@@ -142,7 +109,7 @@ export default function TemurinReleasesPage() {
 
     // Only update if we have parameters
     if (Object.keys(params).length > 0) {
-      const version = params.version || "21";
+      const version = params.version || latestLTS.toString();
       const os = params.os || "any";
       const arch = params.arch || "any";
       const mode = params.mode;
@@ -213,7 +180,7 @@ export default function TemurinReleasesPage() {
       fetchReleases(version, os, arch);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams, ltsVersions, hasInitialFetch, isFilterChange]);
+  }, [searchParams, hasInitialFetch, isFilterChange]);
 
   const fetchReleases = async (
     version: string | number,
@@ -334,6 +301,8 @@ export default function TemurinReleasesPage() {
           <ReleaseFilters
             onFiltersChange={handleFiltersChange}
             initialParams={Object.fromEntries(searchParams.entries())}
+            allVersions={allVersions}
+            latestLTS={latestLTS}
           />
         )}
 

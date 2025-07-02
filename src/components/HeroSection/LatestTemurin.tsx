@@ -14,7 +14,7 @@ let arch: string = "x64"
 let isSafari: boolean
 
 interface LatestTemurinProps {
-  latestLTS: string | number;
+  latestLTS: number;
 }
 
 const LatestTemurin: React.FC<LatestTemurinProps> = ({ latestLTS }) => {

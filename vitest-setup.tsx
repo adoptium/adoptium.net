@@ -169,14 +169,6 @@ vi.stubGlobal("IntersectionObserver", IntersectionObserverMock)
 
 // Mock fetch API to handle network requests
 global.fetch = vi.fn().mockImplementation((url) => {
-  // Mock response for LTS version API
-  if (url === '/api/available-releases' || url.toString().includes('/api/available-releases')) {
-    return Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({ version: '17.0.8+7' }),
-    });
-  }
-
   // Mock response for download stats API
   if (url === 'https://api.adoptium.net/v3/stats/downloads/total' ||
     url.toString().includes('api.adoptium.net/v3/stats/downloads/total')) {
@@ -186,17 +178,6 @@ global.fetch = vi.fn().mockImplementation((url) => {
         total_downloads: {
           total: 1234567890
         }
-      }),
-    });
-  }
-
-  // Mock response for download counter API route
-  if (url === '/api/download-counter' ||
-    url.toString().includes('/api/download-counter')) {
-    return Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({
-        total: 1234567890
       }),
     });
   }

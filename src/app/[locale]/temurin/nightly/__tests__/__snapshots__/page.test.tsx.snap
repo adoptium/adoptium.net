@@ -165,7 +165,38 @@ exports[`TemurinNightly page > renders correctly 1`] = `
                   class="w-full md:w-auto px-4 py-2 bg-[#200E46] border border-[#3E3355] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[#FF1464]"
                   data-testid="version-filter"
                   id="version-filter"
-                />
+                >
+                  <option
+                    value="8"
+                  >
+                    8 - LTS
+                  </option>
+                  <option
+                    value="11"
+                  >
+                    11 - LTS
+                  </option>
+                  <option
+                    value="17"
+                  >
+                    17 - LTS
+                  </option>
+                  <option
+                    value="21"
+                  >
+                    21 - LTS
+                  </option>
+                  <option
+                    value="23"
+                  >
+                    23
+                  </option>
+                  <option
+                    value="24"
+                  >
+                    24
+                  </option>
+                </select>
               </div>
               <div
                 class="w-full md:w-auto"

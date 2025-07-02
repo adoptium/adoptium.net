@@ -4,14 +4,17 @@ import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { getAssetsForVersion, TemurinReleases } from "@/hooks"
 import TemurinNightlyTable from "@/components/Temurin/NightlyTable"
-import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases"
 import ChecksumModal from "@/components/ChecksumModal"
 const BUILD_NUMS = [1, 5, 10, 20, 50]
 
-export default function NightlyVersionSelector() {
+interface NightlyVersionSelectorProps {
+    allVersions: { value: string; name: string }[];
+    latestLTS: number;
+}
+
+export default function NightlyVersionSelector({ allVersions, latestLTS }: NightlyVersionSelectorProps) {
     const t = useTranslations("Temurin.Nightly")
-    const [versions, setVersions] = useState<{ name: string; value: string }[]>([])
-    const [version, setVersion] = useState<string>("")
+    const [version, setVersion] = useState<string>(latestLTS.toString())
     const [numBuilds, setNumBuilds] = useState<number>(5)
     const [buildDate, setBuildDate] = useState<string>(() => {
         const today = new Date()
@@ -20,19 +23,6 @@ export default function NightlyVersionSelector() {
     const [releases, setReleases] = useState<TemurinReleases[]>([])
     const [checksumModalOpen, setChecksumModalOpen] = useState(false)
     const [selectedChecksum, setSelectedChecksum] = useState("")
-
-    useEffect(() => {
-        fetchAvailableReleases().then(vs => {
-            setVersions(vs)
-            // Find the latest LTS version
-            const lts = vs.find(v => v.name.toLowerCase().includes('lts'))
-            if (lts) {
-                setVersion(lts.value)
-            } else if (vs.length > 0) {
-                setVersion(vs[0].value)
-            }
-        })
-    }, [])
 
     useEffect(() => {
         if (!version) return
@@ -70,7 +60,7 @@ export default function NightlyVersionSelector() {
                                 value={version}
                                 onChange={e => setVersion(e.target.value)}
                             >
-                                {versions.map(v => (
+                                {allVersions.map(v => (
                                     <option key={v.value} value={v.value}>{v.name}</option>
                                 ))}
                             </select>

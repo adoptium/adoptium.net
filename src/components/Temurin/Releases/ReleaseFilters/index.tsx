@@ -10,61 +10,23 @@ import { FaUndo } from "react-icons/fa"
 interface ReleaseFiltersProps {
     onFiltersChange: (version: string, os: string, arch: string) => void
     initialParams: Record<string, string>
+    allVersions: Array<{ name: string; value: string }>
+    latestLTS: number
 }
 
-const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initialParams }) => {
+const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initialParams, allVersions, latestLTS }) => {
     const t = useTranslations("Temurin.Releases.ReleaseFilters")
     // State for dropdown values
     const [version, setVersion] = useState<string>("any")
     const [os, setOS] = useState("any")
     const [arch, setArch] = useState("any")
 
-    // Available options
-    const [versionOptions, setVersionOptions] = useState<Array<{ name: string; value: string }>>([])
-    const [latestLTS, setLatestLTS] = useState(21)
-
     // Get OS and architecture options from hooks
     const osOptions = useOses(true)
     const architectureOptions = useArches(true)
 
-    // Fetch available versions on component mount
-    useEffect(() => {
-        const fetchVersions = async () => {
-            try {
-                const response = await fetch('/api/available-releases')
-                const data = await response.json()
-
-                if (data.most_recent_lts) {
-                    setLatestLTS(data.most_recent_lts)
-                }
-
-                const allVersions = []
-
-                // Then add non-LTS versions
-                if (data.available_releases && Array.isArray(data.available_releases)) {
-                    const versions = data.available_releases
-                        .map((v: { name: string; value: number | string }) => ({
-                            name: v.name,
-                            value: String(v.value)
-                        }))
-
-                    allVersions.push(...versions)
-                }
-
-                setVersionOptions(allVersions)
-            } catch (error) {
-                console.error("Failed to fetch available versions:", error)
-            }
-        }
-
-        fetchVersions()
-    }, [])
-
     // Initialize filters from URL parameters - this runs only once after version options are loaded
     useEffect(() => {
-        // Wait until version options are loaded (including the LTS info)
-        if (versionOptions.length === 0) return;
-
         // Don't set URL params during initialization, just update local state
         let initialVersion = String(latestLTS);
         let initialOS = "any";
@@ -92,7 +54,7 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
             }
 
             // Make sure the version exists in our options
-            if (versionOptions.length > 0 && !versionOptions.some(v => v.value === initialVersion)) {
+            if (allVersions.length > 0 && !allVersions.some(v => v.value === initialVersion)) {
                 initialVersion = String(latestLTS);
                 // Update URL if the version was invalid
                 if (initialParams.version !== initialVersion) {
@@ -128,7 +90,7 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
 
         // This effect should only run once when we have all the data loaded
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [versionOptions.length > 0, latestLTS, osOptions.length, architectureOptions.length])
+    }, [allVersions.length > 0, latestLTS, osOptions.length, architectureOptions.length])
 
     // Handle changes for each filter
     const handleVersionChange = (newVersion: string) => {
@@ -204,10 +166,10 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
                     {/* Version selector */}
                     <div className="filter-group">
                         <label className="block text-sm font-medium text-gray-200 mb-2">{t('version')}</label>
-                        {versionOptions.length > 0 ? (
+                        {allVersions.length > 0 ? (
                             <CommonSelector
-                                list={versionOptions}
-                                defaultValue={versionOptions.find(v => v.value === version)}
+                                list={allVersions}
+                                defaultValue={allVersions.find(v => v.value === version)}
                                 selectorUpdater={handleVersionChange}
                             />
                         ) : (

@@ -1,26 +1,21 @@
 import { Metadata } from "next"
-import { useTranslations } from "next-intl"
-import PageHeader from "@/components/Common/PageHeader"
-import DownloadTable from "@/components/Marketplace/DownloadTable"
-import AboutAQAvit from "@/components/About/AQAvit"
+import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases"
+import MarketplacePageClient from "./MarketplacePageClient"
 
 export const metadata: Metadata = {
   title: "Marketplace",
   description: "Java™ is the world's leading programming language and platform. The Adoptium Marketplace promotes high-quality, TCK certified and AQAvit verified runtimes for use across the Java ecosystem.",
 }
 
-export default function MarketplacePage() {
-  const t = useTranslations("Marketplace")
+export default async function MarketplacePage() {
+  const availableReleases = await fetchAvailableReleases()
+  const ltsVersions = availableReleases.available_lts_releases.map((version: number) => ({
+    name: version.toString(),
+    value: version.toString(),
+  }))
+  const latestLTS = availableReleases.most_recent_lts
 
   return (
-    <div>
-      <PageHeader
-        subtitle={t("subtitle")}
-        title={t("title")}
-        description={t("description")}
-      />
-      <DownloadTable />
-      <AboutAQAvit />
-    </div>
+    <MarketplacePageClient ltsVersions={ltsVersions} latestLTS={latestLTS} />
   )
 }
