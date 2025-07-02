@@ -8,14 +8,18 @@ import AllReleaseCard from "@/components/Marketplace/AllReleasesCard"
 
 import { setURLParam } from "@/utils/setURLParam"
 import { detectOS, UserOS } from "@/utils/detectOS"
-import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases"
 import { packageTypes, defaultArchitecture, defaultPackageType } from '@/utils/defaults'
 import getVendorIdentifier from "@/utils/vendors"
 import { getAllPkgsForVersion, MarketplaceRelease } from "@/hooks"
 import { useArches, useOses } from '@/hooks/fetchConstants'
 import vendors from "@/data/marketplace.json"
 
-const DownloadTable = () => {
+interface DownloadTableProps {
+    ltsVersions: { name: string; value: string }[]
+    latestLTS?: number
+}
+
+const DownloadTable: React.FC<DownloadTableProps> = ({ ltsVersions, latestLTS }) => {
     const oses = useOses(true)
     const arches = useArches(true)
     const [ready, setReady] = useState(false)
@@ -27,7 +31,6 @@ const DownloadTable = () => {
     const [packageType, updatePackageType] = useState(defaultPackageType)
     const [selectedVendorIdentifiers, updateSelectedVendorIdentifiers] = useState<string[]>([])
     const [releases, setReleases] = useState<MarketplaceRelease[] | null>(null)
-    const [versions, setVersions] = useState<{ name: string; value: string }[]>([])
 
     // Parse query params from Next.js router
     useEffect(() => {
@@ -36,7 +39,7 @@ const DownloadTable = () => {
         let defaultSelectedArch = defaultArchitecture;
         let defaultSelectedOS = "";
         let defaultSelectedPackageType = defaultPackageType;
-        let defaultSelectedVersion = "21";
+        let defaultSelectedVersion = String(latestLTS);
 
         // Arch param
         if (params.arch && arches.find(a => a.value === params.arch)) {
@@ -81,11 +84,7 @@ const DownloadTable = () => {
         updateVersion(defaultSelectedVersion);
         updatePackageType(defaultSelectedPackageType);
         setReady(true);
-    }, [oses, arches, searchParams]);
-
-    useEffect(() => {
-        fetchAvailableReleases(true).then(setVersions)
-    }, [])
+    }, [oses, arches, searchParams, latestLTS]);
 
     useEffect(() => {
         if (!ready) return;
@@ -136,7 +135,7 @@ const DownloadTable = () => {
         <div className="max-w-[1264px] mx-auto px-6 pb-20">
             <ReleaseSelector
                 marketplace
-                versions={versions}
+                versions={ltsVersions}
                 updateVersion={versionUpdater}
                 defaultVersion={version}
                 updateOS={osUpdater}

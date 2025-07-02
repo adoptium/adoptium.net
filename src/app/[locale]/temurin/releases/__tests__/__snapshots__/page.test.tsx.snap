@@ -104,6 +104,50 @@ exports[`TemurinReleases page > renders correctly 1`] = `
                 Text
               </span>
             </button>
+            <button
+              data-testid="version-tab"
+            >
+              <span
+                class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+              >
+                JDK 
+                8 - LTS
+              </span>
+            </button>
+            <button
+              data-testid="version-tab"
+            >
+              <span
+                class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+              >
+                JDK 
+                11 - LTS
+              </span>
+            </button>
+            <button
+              data-testid="version-tab"
+            >
+              <span
+                class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
+              >
+                JDK 
+                17 - LTS
+              </span>
+            </button>
+            <button
+              data-testid="version-tab"
+            >
+              <span
+                class="py-3 w-full text-base font-normal leading-6
+            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
+              >
+                JDK 
+                21 - LTS
+              </span>
+            </button>
           </div>
         </div>
       </div>

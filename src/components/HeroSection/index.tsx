@@ -1,28 +1,11 @@
-'use client'
-
-import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import LatestTemurin from "@/components/HeroSection/LatestTemurin"
 
-const HeroSection = () => {
-  const [latestLTS, setLatestLTS] = useState<number | string>(21); // Default to 21 if API fails
+type HeroSectionProps = {
+  latestLTS: number
+}
 
-  useEffect(() => {
-    const fetchLatestLTS = async () => {
-      try {
-        const response = await fetch('/api/available-releases');
-        const data = await response.json();
-        if (data.mostRecentLts && data.mostRecentLts.version) {
-          setLatestLTS(data.mostRecentLts.version);
-        }
-      } catch (error) {
-        console.error("Failed to fetch latest LTS version:", error);
-      }
-    };
-
-    fetchLatestLTS();
-  }, []);
-
+const HeroSection = ({ latestLTS }: HeroSectionProps) => {
   return (
     <div>
       <div className="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative">
