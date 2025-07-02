@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useRef, useEffect } from "react"
+import { useLocale } from 'next-intl'
 import { Link } from "@/i18n/navigation"
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
 import SwiperCore from "swiper"
@@ -30,6 +31,7 @@ interface LatestNewsSliderProps {
 }
 
 const LatestNewsSlider = ({ posts }: LatestNewsSliderProps) => {
+  const locale = useLocale()
   SwiperCore.use([Navigation])
   const swiperRef = useRef<SwiperRef>(null)
 
@@ -73,7 +75,7 @@ const LatestNewsSlider = ({ posts }: LatestNewsSliderProps) => {
               {card.metadata.title}
             </p>
             <span className="text-sm text-grey font-normal leading-5 block mt-2 mb-6">
-              {formatDate(card.metadata.date)}
+              {formatDate(card.metadata.date, locale)}
             </span>
             <Link
               href={`/news/${card.year}/${card.month}/${card.slug}`}

@@ -104,9 +104,9 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                             </svg>
                         </div>
                         <div className="space-y-2">
-                            <h3 className="text-2xl font-semibold text-white">No releases found</h3>
+                            <h3 className="text-2xl font-semibold text-white">{t('no-releases-found')}</h3>
                             <p className="text-gray-400 leading-relaxed">
-                                No releases match your current filter criteria. Try adjusting your selections or reset all filters to see available releases.
+                                {t('no-releases-found-description')}
                             </p>
                         </div>
                     </div>

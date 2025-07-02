@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "@/i18n/navigation"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, getLocale } from "next-intl/server"
 import { getNews } from "@/utils/news"
 import { formatDate } from '@/utils/date'
 import LatestNewsSlider from "./LatestNewsSlider"
@@ -23,6 +23,7 @@ type Post = {
 
 const LatestNews = async () => {
   const t = await getTranslations('LatestNews');
+  const locale = await getLocale();
   const { posts } = await getNews({ numPosts: 4 });
   const set1 = posts.slice(0, 2);
   const set2 = posts.slice(2, 4);
@@ -37,13 +38,13 @@ const LatestNews = async () => {
         {card.metadata.title}
       </p>
       <span className="text-sm text-grey font-normal leading-5 block">
-        {formatDate(card.metadata.date)}
+        {formatDate(card.metadata.date, locale)}
       </span>
       <Link
         href={`/news/${card.year}/${card.month}/${card.slug}`}
         className="py-3 text-base underline font-bold leading-6 text-white mt-2 block border-white w-fit"
       >
-        Read More
+        {t('read-more')}
       </Link>
     </div>
   )

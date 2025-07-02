@@ -118,7 +118,8 @@
   "LatestNews": {
     "latest-news-and-updates": "最新新闻与更新",
     "subtitle": "关注 Eclipse Adoptium 项目的最新动态",
-    "see-all-news": "查看所有新闻"
+    "see-all-news": "查看所有新闻",
+    "read-more": "阅读更多"
   },
   "WGProjects": {
     "discover-all-our-projects": "探索我们所有的项目",
@@ -169,9 +170,11 @@
         "source-code": "源代码"
       },
       "ReleaseResults": {
-        "this-build-is-jck-certified": "此构建已通过 JCK 认证",
-        "this-build-is-aqavit-verified": "此构建已通过 AQAvit 验证",
-        "checksum": "校验和"
+        "this-build-is-jck-certified": "此版本已通过 JCK 认证",
+        "this-build-is-aqavit-verified": "此版本已通过 AQAvit 验证",
+        "checksum": "校验和",
+        "no-releases-found": "未找到版本",
+        "no-releases-found-description": "没有符合当前筛选条件的版本。请尝试调整您的选择，或重置所有筛选器以查看可用版本。"
       }
     },
     "Nightly": {
@@ -200,6 +203,10 @@
     },
     "VersionSelector": {
       "all-versions": "所有版本"
+    },
+    "DownloadMethods": {
+      "other-ways-to-download-temurin": "获取 Temurin 的其他方式",
+      "description": "除了直接下载外，还有多种方式可以获取 Eclipse Temurin。下面的精选列表展示了一些用于安装高性能、跨平台、开源 OpenJDK 运行时二进制文件的选项。"
     }
   },
   "ReleaseNotes": {
