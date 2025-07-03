@@ -11,7 +11,24 @@ export default function DownloadPageClient() {
     const link = searchParams.get("link") || "";
     const vendor = searchParams.get("vendor") || "Adoptium";
 
-    if (!link || !link.startsWith("https://github.com/adoptium/temurin")) {
+    if (!link) {
+        redirect("/temurin/releases");
+    }
+
+    // Validate allowed download link origins for security
+    const allowedOrigins = [
+        "https://github.com/adoptium/temurin",
+        "https://cdn.azul.com/zulu/",
+        "https://aka.ms/download-jdk/",
+        "https://github.com/ibmruntimes/",
+        "https://github.com/dragonwell-project/",
+        "https://developers.redhat.com/"
+    ];
+
+    // Use Array.some for efficient matching and avoid prototype pollution
+    const isValidLink = allowedOrigins.some(origin => link.startsWith(origin));
+    if (!isValidLink) {
+        console.error("Invalid download link:", link);
         redirect("/temurin/releases");
     }
 

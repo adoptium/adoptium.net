@@ -19,7 +19,8 @@ vi.mock("next/navigation", () => ({
       if (key === "vendor") return "Adoptium"
       return null
     }
-  })
+  }),
+  redirect: vi.fn()
 }) as MockNavigation)
 
 describe("Download page", () => {
