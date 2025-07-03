@@ -77,7 +77,7 @@ exports[`Download page > renders correctly 1`] = `
             class="text-primary underline !underline-offset-[1px]"
           >
             <a
-              href="https://example.com/download"
+              href="https://github.com/adoptium/temurin-1-binaries/download"
             >
               click here
             </a>
