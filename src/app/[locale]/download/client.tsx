@@ -11,7 +11,7 @@ export default function DownloadPageClient() {
     const link = searchParams.get("link") || "";
     const vendor = searchParams.get("vendor") || "Adoptium";
 
-    if (!link) {
+    if (!link || !link.startsWith("https://github.com/adoptium/temurin")) {
         redirect("/temurin/releases");
     }
 

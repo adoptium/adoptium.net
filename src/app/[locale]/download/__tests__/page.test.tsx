@@ -15,7 +15,7 @@ interface MockNavigation {
 vi.mock("next/navigation", () => ({
   useSearchParams: (): MockSearchParams => ({
     get: (key: string): string | null => {
-      if (key === "link") return "https://example.com/download"
+      if (key === "link") return "https://github.com/adoptium/temurin-1-binaries/download"
       if (key === "vendor") return "Adoptium"
       return null
     }
