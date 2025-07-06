@@ -122,7 +122,7 @@ export default async function Blog(
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.metadata.title,
-    datePublished: post.metadata.date || new Date().toISOString().slice(0, 10),
+    datePublished: new Date(post.metadata.date).toISOString(),
     description: post.metadata.description,
     image: post.metadata.featuredImage
       ? `${metadata.siteUrl}${post.metadata.featuredImage}`
@@ -131,6 +131,7 @@ export default async function Blog(
     author: {
       '@type': 'Person',
       name: author?.name || 'Unknown Author',
+      url: `${metadata.siteUrl}/news/author/${authorId}`,
     },
   };
 

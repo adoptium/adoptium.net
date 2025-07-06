@@ -12,6 +12,15 @@ vi.mock('@/components/CustomMDX', () => ({
 vi.mock('@/utils/markdown');
 vi.mock('@/utils/date');
 vi.mock('next/navigation', () => ({ notFound: vi.fn() }));
+vi.mock('@/data/authors.json', () => ({
+  default: {
+    'jdoe': {
+      name: 'Jane Doe',
+      bio: 'Author bio',
+      avatar: '/path/to/avatar.jpg'
+    }
+  }
+}));
 
 const mockGetBlogPosts = markdownUtils.getBlogPosts as unknown as ReturnType<typeof vi.fn>;
 const mockFormatDate = dateUtils.formatDate as unknown as ReturnType<typeof vi.fn>;
@@ -29,7 +38,7 @@ describe('NewsArticlePage', () => {
           title: 'Test Article',
           description: 'desc',
           date: '2025-06-18',
-          author: 'Jane Doe',
+          author: 'jdoe',
           tags: ['temurin']
         },
         year: '2025',
