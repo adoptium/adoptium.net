@@ -3,6 +3,8 @@ import { redirect, notFound } from 'next/navigation';
 import { getNews } from '@/utils/news'
 import PageHeader from '@/components/Common/PageHeader';
 import NewsCardList from '@/components/News/NewsCardList';
+import { sanitizeObject } from '@/utils/sanitize';
+import { metadata as siteMetadata } from '@/utils/metadata';
 
 export async function generateMetadata(
     { params }: {
@@ -37,8 +39,35 @@ export default async function NewsPage(
     if (!posts || posts.length === 0) {
         notFound();
     }
+
+    const jsonLdSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': `${siteMetadata.siteUrl}/news/page/${pageNumber}`,
+        name: 'Eclipse Adoptium News & Updates',
+        url: `${siteMetadata.siteUrl}/news/page/${pageNumber}`,
+        isPartOf: {
+            '@type': 'CollectionPage',
+            '@id': `${siteMetadata.siteUrl}/news`,
+        },
+        mainEntity: posts.map(post => ({
+            '@type': 'BlogPosting',
+            headline: post.metadata.title,
+            url: `${siteMetadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`,
+            datePublished: new Date(post.metadata.date).toISOString(),
+        })),
+    };
+
+    const sanitizedJsonLd = sanitizeObject(jsonLdSchema);
     return (
         <div>
+            <script
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(sanitizedJsonLd),
+                }}
+            />
             <PageHeader
                 subtitle="News"
                 title="News & Updates"

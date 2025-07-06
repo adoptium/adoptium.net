@@ -11,13 +11,7 @@ import ShareButton from '@/components/News/ShareButton'
 import Tags from '@/components/News/Tags'
 import RelatedArticles from '@/components/News/RelatedArticles'
 import SyntaxHighlighter from '@/components/SyntaxHighlighter'
-
-const metadata = {
-  social: {
-    twitter: "@adoptium"
-  },
-  siteUrl: "https://adoptium.net",
-}
+import { metadata } from '@/utils/metadata'
 
 export async function generateStaticParams() {
   const posts = getBlogPosts()
@@ -117,7 +111,6 @@ export default async function Blog(
   // Create a safe URL for this post
   const postURL = `${metadata.siteUrl}/news/${year || post.year || ''}/${month || post.month || ''}/${post.slug || ''}`
 
-  // Create JSON-LD schema with potentially unsafe user content
   const jsonLdSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -132,6 +125,14 @@ export default async function Blog(
       '@type': 'Person',
       name: author?.name || 'Unknown Author',
       url: `${metadata.siteUrl}/news/author/${authorId}`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Eclipse Adoptium',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${metadata.siteUrl}/images/adoptium-icon.png`,
+      },
     },
   };
 
