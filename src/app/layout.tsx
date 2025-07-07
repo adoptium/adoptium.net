@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     description: 'Eclipse Adoptium provides prebuilt OpenJDK binaries from a fully open source set of build scripts and infrastructure.',
     images: [
       {
-        url: '/images/adoptium-icon.png',
+        url: '/images/social-image.png',
         width: 1200,
         height: 630,
-        alt: 'Adoptium',
+        alt: 'Adoptium Social Banner',
       },
     ],
   },
