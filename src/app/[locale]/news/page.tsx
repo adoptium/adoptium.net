@@ -28,7 +28,9 @@ export default async function NewsPage() {
         mainEntity: posts.map(post => ({
             '@type': 'BlogPosting',
             headline: post.metadata.title,
-            url: `${siteMetadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`,
+            url: post.metadata.tags && post.metadata.tags.includes('eclipse-news')
+                ? post.slug
+                : `${siteMetadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`,
             datePublished: new Date(post.metadata.date).toISOString(),
         })),
     };
