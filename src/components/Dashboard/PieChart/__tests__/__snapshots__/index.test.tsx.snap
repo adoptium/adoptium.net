@@ -11,6 +11,7 @@ exports[`PieChart > matches snapshot 1`] = `
     <div
       class="highcharts-container "
       dir="ltr"
+      id="highcharts-21"
       style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none; padding: 0px; font-family: inherit;"
     >
       <svg
@@ -28,7 +29,9 @@ exports[`PieChart > matches snapshot 1`] = `
           Created with Highcharts 12.3.0
         </desc>
         <defs>
-          <filter>
+          <filter
+            id="highcharts-drop-shadow-3"
+          >
             <fedropshadow
               dx="1"
               dy="1"
@@ -194,6 +197,7 @@ exports[`PieChart > matches snapshot 1`] = `
         Data is from: 
         <a
           href="https://api.adoptium.net/v3/stats/downloads/total"
+          rel="noopener noreferrer"
           target="_blank"
         >
           api.adoptium.net/v3/stats/downloads/total

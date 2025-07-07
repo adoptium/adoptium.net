@@ -22,13 +22,6 @@ describe('LineChart', () => {
 
     it('matches snapshot', () => {
         const { container } = render(<LineChart series={mockSeries} categories={mockCategories} name={mockName} />);
-        // Strip dynamic Highcharts IDs
-        container.querySelectorAll("[id^='highcharts-']").forEach(el => {
-            el.removeAttribute("id");
-        });
-        container.querySelectorAll("[clip-path]").forEach(el => {
-            el.removeAttribute("clip-path");
-        });
         expect(container.firstChild).toMatchSnapshot();
     });
 });

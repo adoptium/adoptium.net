@@ -37,10 +37,6 @@ describe('PieChart', () => {
 
     it('matches snapshot', () => {
         const { container } = render(<PieChart data={mockData} name="Test Pie" />);
-        // Strip dynamic Highcharts IDs
-        container.querySelectorAll("[id^='highcharts-']").forEach(el => {
-            el.removeAttribute("id");
-        });
         expect(container.firstChild).toMatchSnapshot();
     });
 });
