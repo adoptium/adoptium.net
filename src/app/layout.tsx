@@ -6,6 +6,21 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { getLocale } from 'next-intl/server'
+import { Organization, WithContext } from 'schema-dts'
+import { sanitizeObject } from '@/utils/sanitize'
+
+const organizationSchema: WithContext<Organization> = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Eclipse Adoptium',
+  url: 'https://adoptium.net',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://adoptium.net/images/adoptium-icon.png',
+  }
+}
+
+const sanitizedOrganizationSchema = sanitizeObject(organizationSchema);
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -98,6 +113,13 @@ export default async function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(sanitizedOrganizationSchema),
+          }}
+        />
         {children}
       </body>
     </html>

@@ -4,6 +4,7 @@ import { getNews } from '@/utils/news'
 import PageHeader from '@/components/Common/PageHeader';
 import NewsCardList from '@/components/News/NewsCardList';
 import { sanitizeObject } from '@/utils/sanitize';
+import type { CollectionPage, WithContext } from 'schema-dts'
 import { metadata as siteMetadata } from '@/utils/metadata';
 
 export async function generateMetadata(
@@ -40,7 +41,7 @@ export default async function NewsPage(
         notFound();
     }
 
-    const jsonLdSchema = {
+    const jsonLdSchema: WithContext<CollectionPage> = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
         '@id': `${siteMetadata.siteUrl}/news/page/${pageNumber}`,
