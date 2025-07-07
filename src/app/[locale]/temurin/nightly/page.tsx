@@ -16,6 +16,13 @@ export default async function TemurinNightlyPage() {
             value: version.toString(),
         }
     })
+    // Add nightly EA version if not already present
+    if (!allVersions.some(v => v.value === availableReleases.most_recent_feature_version.toString())) {
+        allVersions.unshift({
+            name: `${availableReleases.most_recent_feature_version} - EA`,
+            value: availableReleases.most_recent_feature_version.toString(),
+        })
+    }
     const latestLTS = availableReleases.most_recent_lts
 
     return (
