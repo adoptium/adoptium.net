@@ -11,13 +11,8 @@ import ShareButton from '@/components/News/ShareButton'
 import Tags from '@/components/News/Tags'
 import RelatedArticles from '@/components/News/RelatedArticles'
 import SyntaxHighlighter from '@/components/SyntaxHighlighter'
-
-const metadata = {
-  social: {
-    twitter: "@adoptium"
-  },
-  siteUrl: "https://adoptium.net",
-}
+import type { BlogPosting, Person, Graph } from 'schema-dts'
+import { metadata } from '@/utils/metadata'
 
 export async function generateStaticParams() {
   const posts = getBlogPosts()
@@ -110,16 +105,30 @@ export default async function Blog(
     return null;
   }
 
-  // Get author data safely
-  const authorId = post.metadata.author || '';
-  const author = authorId ? (AuthorData[authorId as keyof typeof AuthorData] || { name: 'Unknown Author' }) : { name: 'Unknown Author' };
+  const authorId = post.metadata.author;
+  const author = AuthorData[authorId as keyof typeof AuthorData]
 
   // Create a safe URL for this post
   const postURL = `${metadata.siteUrl}/news/${year || post.year || ''}/${month || post.month || ''}/${post.slug || ''}`
 
-  // Create JSON-LD schema with potentially unsafe user content
-  const jsonLdSchema = {
-    '@context': 'https://schema.org',
+  const socialLinks = [];
+  if (author.twitter) socialLinks.push(`https://x.com/${author.twitter}`);
+  if (author.github) socialLinks.push(`https://github.com/${author.github}`);
+  if (author.linkedin) socialLinks.push(`https://www.linkedin.com/in/${author.linkedin}`);
+
+  const personSchema: Person = {
+    '@type': 'Person',
+    name: author.name || 'Unknown Author',
+    description: author.summary || 'No biography available',
+    affiliation: {
+      '@type': 'Organization',
+      name: 'Eclipse Adoptium',
+    },
+    url: `${metadata.siteUrl}/news/author/${authorId}`,
+    ...(socialLinks.length > 0 && { sameAs: socialLinks }),
+  };
+
+  const blogSchema: BlogPosting = {
     '@type': 'BlogPosting',
     headline: post.metadata.title,
     datePublished: new Date(post.metadata.date).toISOString(),
@@ -133,6 +142,19 @@ export default async function Blog(
       name: author?.name || 'Unknown Author',
       url: `${metadata.siteUrl}/news/author/${authorId}`,
     },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Eclipse Adoptium',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${metadata.siteUrl}/images/adoptium-icon.png`,
+      },
+    },
+  }
+
+  const jsonLdSchema: Graph = {
+    '@context': 'https://schema.org',
+    '@graph': [personSchema, blogSchema],
   };
 
   // Sanitize the schema to prevent XSS

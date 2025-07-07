@@ -3,6 +3,11 @@
 exports[`NewsPage (paginated) > renders news and header for page when posts exist 1`] = `
 <div>
   <div>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/page/2","name":"Eclipse Adoptium News &amp; Updates","url":"https://adoptium.net/news/page/2","isPartOf":{"@type":"CollectionPage","@id":"https://adoptium.net/news"},"mainEntity":[{"@type":"BlogPosting","headline":"Paged News","url":"https://adoptium.net/news/undefined/undefined/paged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
+    </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
     >

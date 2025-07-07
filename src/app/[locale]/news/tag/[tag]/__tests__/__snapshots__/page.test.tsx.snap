@@ -3,6 +3,11 @@
 exports[`TagsPage > renders news and header for tag when posts exist 1`] = `
 <div>
   <div>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin","name":"Posts tagged with &quot;temurin&quot;","url":"https://adoptium.net/news/tag/temurin","mainEntity":[{"@type":"BlogPosting","headline":"Tagged News","url":"https://adoptium.net/news/undefined/undefined/tagged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
+    </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
     >

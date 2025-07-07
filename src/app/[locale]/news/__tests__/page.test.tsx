@@ -24,7 +24,7 @@ describe('NewsPage', () => {
                         title: 'Test News',
                         description: 'desc',
                         date: '2025-06-18',
-                        author: 'author',
+                        author: 'jdoe',
                         tags: []
                     },
                     slug: 'test-news'

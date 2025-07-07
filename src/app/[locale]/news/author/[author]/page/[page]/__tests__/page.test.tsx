@@ -9,6 +9,15 @@ import { notFound, redirect } from 'next/navigation';
 vi.mock('@/utils/news');
 vi.mock('@/utils/authors');
 vi.mock('next/navigation', () => ({ notFound: vi.fn(), redirect: vi.fn() }));
+vi.mock('@/data/authors.json', () => ({
+  default: {
+    'jdoe': {
+      name: 'Jane Doe',
+      bio: 'Author bio',
+      avatar: '/path/to/avatar.jpg'
+    }
+  }
+}));
 
 const mockGetNewsByAuthor = newsUtils.getNewsByAuthor as unknown as ReturnType<typeof vi.fn>;
 const mockGetFormattedAuthorData = authorUtils.getFormattedAuthorData as unknown as ReturnType<typeof vi.fn>;
@@ -35,7 +44,7 @@ describe('AuthorNewsPagePaginated', () => {
             title: 'Author Paged News',
             description: 'desc',
             date: '2025-06-18',
-            author: 'Jane Doe',
+            author: 'jdoe',
             tags: []
           },
           slug: 'author-paged-news'
@@ -57,13 +66,13 @@ describe('AuthorNewsPagePaginated', () => {
   it('calls notFound if no posts for author and page', async () => {
     mockGetFormattedAuthorData.mockReturnValue({ name: 'Jane Doe' });
     mockGetNewsByAuthor.mockReturnValue({ posts: [], totalPages: 1 });
-    await AuthorNewsPagePaginated({ params: Promise.resolve({ author: 'jane-doe', page: '2' }) });
+    await AuthorNewsPagePaginated({ params: Promise.resolve({ author: 'jdoe', page: '2' }) });
     expect(notFound).toHaveBeenCalled();
   });
 
   it('generateMetadata returns correct metadata', async () => {
     mockGetFormattedAuthorData.mockReturnValue({ name: 'Jane Doe' });
-    const meta = await generateMetadata({ params: Promise.resolve({ author: 'jane-doe', page: '2' }) });
+    const meta = await generateMetadata({ params: Promise.resolve({ author: 'jdoe', page: '2' }) });
     expect(meta).toEqual({
       title: 'Jane Doe - Page 2',
       description: 'News and updates from Eclipse Adoptium Project authored by Jane Doe',

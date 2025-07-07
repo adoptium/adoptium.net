@@ -3,6 +3,9 @@ import { redirect, notFound } from 'next/navigation';
 import { getNewsByTag } from '@/utils/news'
 import PageHeader from '@/components/Common/PageHeader';
 import NewsCardList from '@/components/News/NewsCardList';
+import { sanitizeObject } from '@/utils/sanitize';
+import type { CollectionPage, WithContext } from 'schema-dts';
+import { metadata } from '@/utils/metadata';
 
 export async function generateMetadata(
     { params }: {
@@ -40,8 +43,35 @@ export default async function TaggedNewsPage(
         notFound();
     }
 
+    const jsonLdSchema: WithContext<CollectionPage> = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': `${metadata.siteUrl}/news/tag/${tag}/page/${pageNumber}`,
+        name: `Posts tagged with "${tag}" - Page ${pageNumber}`,
+        url: `${metadata.siteUrl}/news/tag/${tag}/page/${pageNumber}`,
+        isPartOf: {
+            '@type': 'CollectionPage',
+            '@id': `${metadata.siteUrl}/news/tag/${tag}`,
+        },
+        mainEntity: posts.map(post => ({
+            '@type': 'BlogPosting',
+            headline: post.metadata.title,
+            url: `${metadata.siteUrl}/news/${post.year}/${post.month}/${post.slug}`,
+            datePublished: new Date(post.metadata.date).toISOString(),
+        })),
+    };
+
+    const sanitizedJsonLd = sanitizeObject(jsonLdSchema);
+
     return (
         <div>
+            <script
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(sanitizedJsonLd),
+                }}
+            />
             <PageHeader
                 subtitle="News"
                 title={`News tagged with "${tag}"`}

@@ -3,6 +3,11 @@
 exports[`AuthorNewsPagePaginated > renders news and header for author and page when posts exist 1`] = `
 <div>
   <div>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jane-doe"},{"@type":"CollectionPage","@id":"https://adoptium.net/news/author/jane-doe/page/2","name":"Posts by Jane Doe - Page 2","url":"https://adoptium.net/news/author/jane-doe/page/2","isPartOf":{"@type":"CollectionPage","@id":"https://adoptium.net/news/author/jane-doe"},"mainEntity":[{"@type":"BlogPosting","headline":"Author Paged News","url":"https://adoptium.net/news/undefined/undefined/author-paged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}]}
+    </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
     >

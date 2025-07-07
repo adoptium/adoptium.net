@@ -6,7 +6,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"https://schema.org","@type":"BlogPosting","headline":"Test Article","datePublished":"2025-06-18T00:00:00.000Z","description":"desc","image":"https://adoptium.net/news/2025/06/test-article/opengraph-image","url":"https://adoptium.net/news/2025/06/test-article","author":{"@type":"Person","name":"Jane Doe","url":"https://adoptium.net/news/author/jdoe"}}
+      {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","description":"No biography available","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jdoe"},{"@type":"BlogPosting","headline":"Test Article","datePublished":"2025-06-18T00:00:00.000Z","description":"desc","image":"https://adoptium.net/news/2025/06/test-article/opengraph-image","url":"https://adoptium.net/news/2025/06/test-article","author":{"@type":"Person","name":"Jane Doe","url":"https://adoptium.net/news/author/jdoe"},"publisher":{"@type":"Organization","name":"Eclipse Adoptium","logo":{"@type":"ImageObject","url":"https://adoptium.net/images/adoptium-icon.png"}}}]}
     </script>
     <div
       class="pt-16 md:pt-24 pb-12"

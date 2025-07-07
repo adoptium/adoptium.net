@@ -3,6 +3,11 @@
 exports[`AuthorNewsPage > renders news and header for author when posts exist 1`] = `
 <div>
   <div>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","description":"No biography available","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jane-doe"},{"@type":"CollectionPage","@id":"https://adoptium.net/news/author/jane-doe","name":"Posts by Jane Doe","url":"https://adoptium.net/news/author/jane-doe","mainEntity":[{"@type":"BlogPosting","headline":"Author News","url":"https://adoptium.net/news/undefined/undefined/author-news","datePublished":"2025-06-18T00:00:00.000Z"}]}]}
+    </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
     >
