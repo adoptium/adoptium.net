@@ -24,7 +24,7 @@ const LineChart: React.FC<LineChartProps> = ({ series, categories, name }) => {
             style: { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' },
         },
         subtitle: {
-            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/tracking" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">api.adoptium.net/v3/stats/downloads/tracking</a>',
+            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/tracking" target="_blank" style="color:#fff;text-decoration:underline;">api.adoptium.net/v3/stats/downloads/tracking</a>',
             useHTML: true,
             style: { color: '#bdbdbd' },
         },
@@ -42,6 +42,7 @@ const LineChart: React.FC<LineChartProps> = ({ series, categories, name }) => {
             labels: { style: { color: '#fff', fontWeight: 'bold', fontSize: '1rem' } },
             gridLineColor: 'rgba(255,255,255,0.1)',
         },
+        accessibility: { enabled: false },
         tooltip: {
             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
             footerFormat: '</table>',

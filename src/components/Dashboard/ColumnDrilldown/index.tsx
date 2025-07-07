@@ -149,7 +149,7 @@ const ColumnDrilldown: React.FC<ColumnDrilldownProps> = ({ name, availableReleas
         chart: { type: 'column', backgroundColor: 'transparent', style: { fontFamily: 'inherit' } },
         title: { text: name, style: { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' } },
         subtitle: {
-            text: 'Click the columns to view the version specific data. Data is from: <a href="https://api.adoptium.net/" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">api.adoptium.net</a>',
+            text: 'Click the columns to view the version specific data. Data is from: <a href="https://api.adoptium.net/" target="_blank" style="color:#fff;text-decoration:underline;">api.adoptium.net</a>',
             useHTML: true,
             style: { color: '#bdbdbd' }
         },
@@ -161,7 +161,7 @@ const ColumnDrilldown: React.FC<ColumnDrilldownProps> = ({ name, availableReleas
                 useHTML: true,
                 formatter: function (this: Highcharts.AxisLabelsFormatterContextObject) {
                     if (typeof this.value === 'string' && this.value.startsWith('http')) {
-                        return `<a href="${this.value}" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">${this.value}</a>`;
+                        return `<a href="${this.value}" target="_blank" style="color:#fff;text-decoration:underline;">${this.value}</a>`;
                     }
                     return String(this.value);
                 }
@@ -177,6 +177,9 @@ const ColumnDrilldown: React.FC<ColumnDrilldownProps> = ({ name, availableReleas
         legend: {
             itemStyle: { color: '#fff', fontWeight: 'bold' },
             itemHoverStyle: { color: '#6ba4e7' },
+        },
+        accessibility: {
+            enabled: false,
         },
         tooltip: {
             backgroundColor: '#2c225a',

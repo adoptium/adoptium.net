@@ -26,10 +26,11 @@ const PieChart: React.FC<PieChartProps> = ({ data, name, showInLegend = false, d
             style: { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' }
         },
         subtitle: {
-            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/total" target="_blank" rel="noopener noreferrer">api.adoptium.net/v3/stats/downloads/total</a>',
+            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/total" target="_blank">api.adoptium.net/v3/stats/downloads/total</a>',
             useHTML: true,
             style: { color: '#bdbdbd' }
         },
+        accessibility: { enabled: false },
         tooltip: {
             backgroundColor: '#2c225a',
             borderColor: '#6ba4e7',

@@ -3,19 +3,12 @@
 import React from 'react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import startCase from 'lodash/startCase'
 
 interface BarChartProps {
     data?: { [key: string]: number };
     name: string;
     startCaseKeys?: boolean;
-}
-
-function startCase(str: string): string {
-    return str
-        .replace(/[_-]+/g, ' ')
-        .replace(/([a-z])([A-Z])/g, '$1 $2')
-        .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase())
-        .trim();
 }
 
 const BarChart: React.FC<BarChartProps> = ({ data, name, startCaseKeys }) => {
@@ -38,7 +31,7 @@ const BarChart: React.FC<BarChartProps> = ({ data, name, startCaseKeys }) => {
             style: { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' }
         },
         subtitle: {
-            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/total" target="_blank" rel="noopener noreferrer">api.adoptium.net/v3/stats/downloads/total</a>',
+            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/total" target="_blank">api.adoptium.net/v3/stats/downloads/total</a>',
             useHTML: true,
             style: { color: '#bdbdbd' }
         },
