@@ -31,7 +31,7 @@ const BarChart: React.FC<BarChartProps> = ({ data, name, startCaseKeys }) => {
             style: { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' }
         },
         subtitle: {
-            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/total" target="_blank">api.adoptium.net/v3/stats/downloads/total</a>',
+            text: 'Data is from: <a href="https://api.adoptium.net/v3/stats/downloads/total" target="_blank" rel="noopener noreferrer">api.adoptium.net/v3/stats/downloads/total</a>',
             useHTML: true,
             style: { color: '#bdbdbd' }
         },

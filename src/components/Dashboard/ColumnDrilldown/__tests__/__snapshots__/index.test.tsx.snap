@@ -30,6 +30,7 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
     <div
       class="highcharts-container "
       dir="ltr"
+      id="highcharts-0"
       style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none; padding: 0px; font-family: inherit;"
     >
       <svg
@@ -47,7 +48,9 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
           Created with Highcharts 12.3.0
         </desc>
         <defs>
-          <filter>
+          <filter
+            id="highcharts-drop-shadow-0"
+          >
             <fedropshadow
               dx="1"
               dy="1"
@@ -56,7 +59,9 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
               stdDeviation="2.5"
             />
           </filter>
-          <clippath>
+          <clippath
+            id="highcharts-6-"
+          >
             <rect
               fill="none"
               height="345"
@@ -241,12 +246,14 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
         >
           <g
             class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker"
+            clip-path="url(#highcharts-6-)"
             data-z-index="0.1"
             opacity="1"
             transform="translate(NaN,355) scale(1 0.001)"
           />
           <g
             class="highcharts-markers highcharts-series-0 highcharts-column-series highcharts-color-0"
+            clip-path="none"
             data-z-index="0.1"
             opacity="1"
             transform="translate(NaN,10) scale(1 1)"
@@ -447,6 +454,7 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
         Click the columns to view the version specific data. Data is from: 
         <a
           href="https://api.adoptium.net/"
+          rel="noopener noreferrer"
           style="color: rgb(255, 255, 255); text-decoration: underline;"
           target="_blank"
         >

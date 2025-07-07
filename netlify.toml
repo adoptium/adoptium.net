@@ -29,6 +29,12 @@
   force = true
 
 [[redirects]]
+  from = "https://dash.adoptium.net/:locale/:splat"
+  to = "https://adoptium.net/:locale/stats/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://dash.adoptium.net/*"
   to = "https://adoptium.net/stats/:splat"
   status = 301

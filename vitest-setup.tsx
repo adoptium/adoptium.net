@@ -1,7 +1,10 @@
 import React from 'react';
 import { vi, expect } from 'vitest';
 import * as matchers from 'vitest-axe/matchers';
+import * as Highcharts from 'highcharts';
 import * as jestDomMatchers from '@testing-library/jest-dom/matchers';
+Highcharts.useSerialIds(true);
+Highcharts.AST.allowedAttributes.push('rel');
 
 // This explicitly adds the accessibility matchers to Vitest
 expect.extend(matchers);
@@ -304,14 +307,6 @@ window.ResizeObserver = vi.fn().mockImplementation(() => ({
 // Mock slick-carousel CSS imports that might be required by components
 vi.mock('slick-carousel/slick/slick.css', () => ({}));
 vi.mock('slick-carousel/slick/slick-theme.css', () => ({}));
-
-// Fix tk.CSS?.supports is not a function
-// https://github.com/highcharts/highcharts/issues/22910
-vi.stubGlobal('CSS', {
-  supports: vi.fn().mockImplementation((property, value) => {
-    return true;
-  }),
-});
 
 // Export everything from testing-library/react
 export * from '@testing-library/react';

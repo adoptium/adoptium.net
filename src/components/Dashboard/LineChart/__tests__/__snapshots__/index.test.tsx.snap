@@ -11,6 +11,7 @@ exports[`LineChart > matches snapshot 1`] = `
     <div
       class="highcharts-container "
       dir="ltr"
+      id="highcharts-0"
       style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none; padding: 0px; font-family: inherit;"
     >
       <svg
@@ -28,7 +29,9 @@ exports[`LineChart > matches snapshot 1`] = `
           Created with Highcharts 12.3.0
         </desc>
         <defs>
-          <filter>
+          <filter
+            id="highcharts-drop-shadow-0"
+          >
             <fedropshadow
               dx="1"
               dy="1"
@@ -37,7 +40,9 @@ exports[`LineChart > matches snapshot 1`] = `
               stdDeviation="2.5"
             />
           </filter>
-          <clippath>
+          <clippath
+            id="highcharts-10-"
+          >
             <rect
               fill="none"
               height="NaNNaN"
@@ -46,7 +51,9 @@ exports[`LineChart > matches snapshot 1`] = `
               y="0"
             />
           </clippath>
-          <clippath>
+          <clippath
+            id="highcharts-11-"
+          >
             <rect
               class="highcharts-animating"
               fill="none"
@@ -56,7 +63,9 @@ exports[`LineChart > matches snapshot 1`] = `
               y="0"
             />
           </clippath>
-          <clippath>
+          <clippath
+            id="highcharts-12-"
+          >
             <rect
               fill="none"
               height="NaN"
@@ -190,24 +199,28 @@ exports[`LineChart > matches snapshot 1`] = `
         >
           <g
             class="highcharts-series highcharts-series-0 highcharts-line-series highcharts-color-0"
+            clip-path="url(#highcharts-11-)"
             data-z-index="0.1"
             opacity="1"
             transform="translate(NaN,10) scale(1 1)"
           />
           <g
             class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-color-0"
+            clip-path="url(#highcharts-12-)"
             data-z-index="0.1"
             opacity="1"
             transform="translate(NaN,10) scale(1 1)"
           />
           <g
             class="highcharts-series highcharts-series-1 highcharts-line-series highcharts-color-1"
+            clip-path="url(#highcharts-11-)"
             data-z-index="0.1"
             opacity="1"
             transform="translate(NaN,10) scale(1 1)"
           />
           <g
             class="highcharts-markers highcharts-series-1 highcharts-line-series highcharts-color-1"
+            clip-path="url(#highcharts-12-)"
             data-z-index="0.1"
             opacity="1"
             transform="translate(NaN,10) scale(1 1)"
@@ -497,6 +510,7 @@ exports[`LineChart > matches snapshot 1`] = `
         Data is from: 
         <a
           href="https://api.adoptium.net/v3/stats/downloads/tracking"
+          rel="noopener noreferrer"
           style="color: rgb(255, 255, 255); text-decoration: underline;"
           target="_blank"
         >
