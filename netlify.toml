@@ -29,6 +29,12 @@
   force = true
 
 [[redirects]]
+  from = "https://dash.adoptium.net/*"
+  to = "https://adoptium.net/stats/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/marketplace-policy"
   to = "/docs/marketplace-policy"
   status = 301

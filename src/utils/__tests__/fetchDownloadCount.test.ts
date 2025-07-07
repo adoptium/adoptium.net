@@ -1,6 +1,6 @@
 import { describe, afterEach, it, expect, vi } from "vitest";
 
-import { fetchDownloadCount } from "../fetchDownloadCount";
+import { fetchDownloadCount } from "../fetchDownloadStats";
 
 // Mock global fetch
 const mockFetch = vi.fn();
