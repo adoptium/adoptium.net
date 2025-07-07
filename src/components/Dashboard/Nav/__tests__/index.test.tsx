@@ -8,7 +8,7 @@ vi.mock('next/navigation', () => ({
     usePathname: () => '/stats/download',
 }));
 vi.mock('@/i18n/navigation', () => ({
-    Link: ({ href, className, children, ...props }: any) => <a href={href} className={className} {...props}>{children}</a>,
+    Link: ({ href, className, children, ...props }: { href: string; className?: string; children: React.ReactNode }) => <a href={href} className={className} {...props}>{children}</a>,
 }));
 
 describe('StatsNav', () => {
