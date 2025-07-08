@@ -35,8 +35,20 @@
   force = true
 
 [[redirects]]
+  from = "https://dash.adoptium.net/download"
+  to = "https://adoptium.net/stats/download"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://dash.adoptium.net/trends"
+  to = "https://adoptium.net/stats/trends"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://dash.adoptium.net/*"
-  to = "https://adoptium.net/stats/:splat"
+  to = "https://adoptium.net/stats"
   status = 301
   force = true
 
