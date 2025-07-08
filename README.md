@@ -3,7 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/17e64afa-e88c-45da-9367-db893a423b6f/deploy-status)](https://app.netlify.com/projects/adoptium-next/deploys)
 [![codecov](https://codecov.io/gh/adoptium/adoptium.net-next/branch/main/graph/badge.svg?token=XGJMJVT8BA)](https://codecov.io/gh/adoptium/adoptium.net-next) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net-next/badge)](https://api.securityscorecards.dev/projects/github.com/adoptium/adoptium.net-next)
 
-This repository contains the Next.js rewrite of the [adoptium.net](https://adoptium.net) site, originally hosted at [github.com/adoptium/adoptium.net](https://github.com/adoptium/adoptium.net).
+This repository contains the source code of the [adoptium.net](https://adoptium.net) site (written in Next.js).
 
 ## Getting Started
 
