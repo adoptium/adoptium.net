@@ -19,6 +19,7 @@ const BarChart: React.FC<BarChartProps> = ({ data, name, startCaseKeys }) => {
             type: 'column',
             backgroundColor: 'transparent',
             style: { fontFamily: 'inherit' },
+            animation: process.env.NODE_ENV !== "test"
         },
         colors: [
             "#2caffe", "#6c6de3", "#feae62", "#a259f7", "#f67280", "#43e97b"

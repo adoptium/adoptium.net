@@ -55,9 +55,9 @@ describe('i18n/routing', () => {
   });
 
   it('should call createNavigation with routing config', async () => {
-    const module = await import('../routing');
+    const routingModule = await import('../routing');
     
-    expect(mockCreateNavigation).toHaveBeenCalledWith(module.routing);
+    expect(mockCreateNavigation).toHaveBeenCalledWith(routingModule.routing);
   });
 
   it('should export navigation functions', async () => {

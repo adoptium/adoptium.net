@@ -1,7 +1,14 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import robots from '../robots';
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import robots from "../robots";
 
-describe('robots.ts', () => {
+// Type for the specific rules structure returned by our robots function
+type RobotsRules = {
+  userAgent: string;
+  allow: string;
+  disallow: string;
+};
+
+describe("robots.ts", () => {
   const originalEnv = process.env;
 
   beforeEach(() => {
@@ -13,11 +20,11 @@ describe('robots.ts', () => {
     process.env = originalEnv;
   });
 
-  it('returns robots configuration with default URL when NEXT_PUBLIC_SITE_URL is not set', () => {
+  it("returns robots configuration with default URL when NEXT_PUBLIC_SITE_URL is not set", () => {
     delete process.env.NEXT_PUBLIC_SITE_URL;
-    
+
     const result = robots();
-    
+
     expect(result).toEqual({
       rules: {
         userAgent: "*",
@@ -28,11 +35,11 @@ describe('robots.ts', () => {
     });
   });
 
-  it('returns robots configuration with custom URL when NEXT_PUBLIC_SITE_URL is set', () => {
+  it("returns robots configuration with custom URL when NEXT_PUBLIC_SITE_URL is set", () => {
     process.env.NEXT_PUBLIC_SITE_URL = "https://custom.example.com";
-    
+
     const result = robots();
-    
+
     expect(result).toEqual({
       rules: {
         userAgent: "*",
@@ -43,18 +50,21 @@ describe('robots.ts', () => {
     });
   });
 
-  it('allows all user agents', () => {
+  it("allows all user agents", () => {
     const result = robots();
-    expect((result.rules as any).userAgent).toBe("*");
+    const rules = result.rules as RobotsRules;
+    expect(rules.userAgent).toBe("*");
   });
 
-  it('allows root path', () => {
+  it("allows root path", () => {
     const result = robots();
-    expect((result.rules as any).allow).toBe("/");
+    const rules = result.rules as RobotsRules;
+    expect(rules.allow).toBe("/");
   });
 
-  it('disallows API routes', () => {
+  it("disallows API routes", () => {
     const result = robots();
-    expect((result.rules as any).disallow).toBe("/api/");
+    const rules = result.rules as RobotsRules;
+    expect(rules.disallow).toBe("/api/");
   });
 });

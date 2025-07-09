@@ -1,6 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { NextResponse } from 'next/server';
 
+// Type for mocked NextResponse
+type MockedNextResponse = {
+  status: number;
+  [key: string]: unknown;
+};
+
 // Mock NextResponse
 vi.mock('next/server', () => ({
   NextResponse: {
@@ -23,9 +29,9 @@ describe('middleware.asciidoc', () => {
 
     it('should call NextResponse.next() and return the response', async () => {
       const { middleware } = await import('../middleware.asciidoc');
-      const mockNextResponse = { status: 200 };
+      const mockNextResponse: MockedNextResponse = { status: 200 };
       
-      vi.mocked(NextResponse.next).mockReturnValue(mockNextResponse as any);
+      vi.mocked(NextResponse.next).mockReturnValue(mockNextResponse as unknown as NextResponse);
       
       const result = middleware();
       
@@ -43,12 +49,12 @@ describe('middleware.asciidoc', () => {
 
     it('should handle multiple calls independently', async () => {
       const { middleware } = await import('../middleware.asciidoc');
-      const mockResponse1 = { status: 200, id: 'response1' };
-      const mockResponse2 = { status: 200, id: 'response2' };
+      const mockResponse1: MockedNextResponse = { status: 200, id: 'response1' };
+      const mockResponse2: MockedNextResponse = { status: 200, id: 'response2' };
       
       vi.mocked(NextResponse.next)
-        .mockReturnValueOnce(mockResponse1 as any)
-        .mockReturnValueOnce(mockResponse2 as any);
+        .mockReturnValueOnce(mockResponse1 as unknown as NextResponse)
+        .mockReturnValueOnce(mockResponse2 as unknown as NextResponse);
       
       const result1 = middleware();
       const result2 = middleware();
@@ -288,9 +294,9 @@ describe('middleware.asciidoc', () => {
   describe('integration behavior', () => {
     it('should allow Next.js App Router to handle dynamic routes', async () => {
       const { middleware } = await import('../middleware.asciidoc');
-      const mockNextResponse = { type: 'next' };
+      const mockNextResponse: MockedNextResponse = { type: 'next', status: 200 };
       
-      vi.mocked(NextResponse.next).mockReturnValue(mockNextResponse as any);
+      vi.mocked(NextResponse.next).mockReturnValue(mockNextResponse as unknown as NextResponse);
       
       const result = middleware();
       
@@ -312,14 +318,14 @@ describe('middleware.asciidoc', () => {
 
     it('should work consistently across multiple requests', async () => {
       const { middleware } = await import('../middleware.asciidoc');
-      const responses = [
-        { id: 'req1' },
-        { id: 'req2' },
-        { id: 'req3' },
+      const responses: MockedNextResponse[] = [
+        { id: 'req1', status: 200 },
+        { id: 'req2', status: 200 },
+        { id: 'req3', status: 200 },
       ];
       
-      responses.forEach((response, index) => {
-        vi.mocked(NextResponse.next).mockReturnValueOnce(response as any);
+      responses.forEach((response) => {
+        vi.mocked(NextResponse.next).mockReturnValueOnce(response as unknown as NextResponse);
         
         const result = middleware();
         
@@ -356,15 +362,15 @@ describe('middleware.asciidoc', () => {
 
   describe('type safety', () => {
     it('should have correct TypeScript types', async () => {
-      const module = await import('../middleware.asciidoc');
+      const middlewareModule = await import('../middleware.asciidoc');
       
       // Check that exports have the expected structure
-      expect(typeof module.middleware).toBe('function');
-      expect(typeof module.config).toBe('object');
-      expect(Array.isArray(module.config.matcher)).toBe(true);
+      expect(typeof middlewareModule.middleware).toBe('function');
+      expect(typeof middlewareModule.config).toBe('object');
+      expect(Array.isArray(middlewareModule.config.matcher)).toBe(true);
       
       // Check that config.matcher contains strings
-      module.config.matcher.forEach(matcher => {
+      middlewareModule.config.matcher.forEach(matcher => {
         expect(typeof matcher).toBe('string');
       });
     });
@@ -373,9 +379,9 @@ describe('middleware.asciidoc', () => {
   describe('performance', () => {
     it('should be lightweight and fast', async () => {
       const { middleware } = await import('../middleware.asciidoc');
-      const mockResponse = { status: 200 };
+      const mockResponse: MockedNextResponse = { status: 200 };
       
-      vi.mocked(NextResponse.next).mockReturnValue(mockResponse as any);
+      vi.mocked(NextResponse.next).mockReturnValue(mockResponse as unknown as NextResponse);
       
       const start = performance.now();
       middleware();
@@ -387,9 +393,9 @@ describe('middleware.asciidoc', () => {
 
     it('should not create memory leaks with multiple calls', async () => {
       const { middleware } = await import('../middleware.asciidoc');
-      const mockResponse = { status: 200 };
+      const mockResponse: MockedNextResponse = { status: 200 };
       
-      vi.mocked(NextResponse.next).mockReturnValue(mockResponse as any);
+      vi.mocked(NextResponse.next).mockReturnValue(mockResponse as unknown as NextResponse);
       
       // Call middleware many times to test for memory leaks
       for (let i = 0; i < 1000; i++) {

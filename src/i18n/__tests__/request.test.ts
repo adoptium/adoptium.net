@@ -14,12 +14,18 @@ vi.mock('../routing', () => ({
   },
 }));
 
+// Define proper types for the request config function
+type RequestConfigFunction = (params: { requestLocale: Promise<string | null | undefined> }) => Promise<{
+  locale: string;
+  messages: Record<string, unknown>;
+}>;
+
 describe('i18n/request', () => {
-  let requestConfigFunction: any;
+  let requestConfigFunction: RequestConfigFunction;
 
   beforeEach(() => {
     vi.clearAllMocks();
-    mockGetRequestConfig.mockImplementation((fn) => {
+    mockGetRequestConfig.mockImplementation((fn: RequestConfigFunction) => {
       requestConfigFunction = fn;
       return fn;
     });
@@ -188,7 +194,6 @@ describe('i18n/request', () => {
       
       // Both should have similar top-level structure
       const defaultKeys = Object.keys(defaultResult.messages);
-      const localeKeys = Object.keys(localeResult.messages);
       
       // Locale should have all default keys (due to merge)
       defaultKeys.forEach(key => {
@@ -211,7 +216,7 @@ describe('i18n/request', () => {
       expect(typeof result.messages.HomePage).toBe('object');
       
       // Should have some properties from default even if not in locale file
-      const homePageKeys = Object.keys(result.messages.HomePage);
+      const homePageKeys = Object.keys(result.messages.HomePage as Record<string, unknown>);
       expect(homePageKeys.length).toBeGreaterThan(0);
     });
   });
@@ -230,7 +235,6 @@ describe('i18n/request', () => {
       
       // Both should have the same top-level keys from the default English
       const englishKeys = Object.keys(englishResult.messages);
-      const spanishKeys = Object.keys(spanishResult.messages);
       
       // Spanish should have at least all the English keys (may have more due to merge)
       englishKeys.forEach(key => {
@@ -242,7 +246,7 @@ describe('i18n/request', () => {
         expect(typeof spanishResult.messages.HomePage).toBe('object');
         
         // Check that nested properties are properly merged
-        const englishHomeKeys = Object.keys(englishResult.messages.HomePage);
+        const englishHomeKeys = Object.keys(englishResult.messages.HomePage as Record<string, unknown>);
         englishHomeKeys.forEach(key => {
           expect(spanishResult.messages.HomePage).toHaveProperty(key);
         });
@@ -278,16 +282,14 @@ describe('i18n/request', () => {
       const result = await requestConfigFunction({ requestLocale: Promise.resolve('es') });
       
       // Check if any arrays exist in the structure and verify they're preserved correctly
-      function checkArrays(obj: any, path = ''): void {
-        for (const [key, value] of Object.entries(obj)) {
-          const currentPath = path ? `${path}.${key}` : key;
-          
+      function checkArrays(obj: Record<string, unknown>): void {
+        for (const [, value] of Object.entries(obj)) {
           if (Array.isArray(value)) {
             // Arrays should be preserved as-is
             expect(Array.isArray(value)).toBe(true);
             expect(value.length).toBeGreaterThanOrEqual(0);
           } else if (value && typeof value === 'object') {
-            checkArrays(value, currentPath);
+            checkArrays(value as Record<string, unknown>);
           }
         }
       }
@@ -301,13 +303,13 @@ describe('i18n/request', () => {
       const result = await requestConfigFunction({ requestLocale: Promise.resolve('es') });
       
       // The deep merge should handle null values correctly
-      function checkNullHandling(obj: any): void {
-        for (const [key, value] of Object.entries(obj)) {
+      function checkNullHandling(obj: Record<string, unknown>): void {
+        for (const [, value] of Object.entries(obj)) {
           // null values should be preserved
           if (value === null) {
             expect(value).toBe(null);
           } else if (value && typeof value === 'object' && !Array.isArray(value)) {
-            checkNullHandling(value);
+            checkNullHandling(value as Record<string, unknown>);
           }
         }
       }
