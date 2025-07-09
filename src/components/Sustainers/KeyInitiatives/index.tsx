@@ -70,7 +70,9 @@ const KeyInitiatives: React.FC = () => {
                 How Your Support Fuels Key Initiatives
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]">
-                {keyInitiatives.map(({ image, header, description }, i) => (
+                {keyInitiatives.map(({ image, header, description }, i) => {
+                    const isNthValue = i >= 3
+                    return(
                     <div
                         className="relative max-w-[382px] w-full"
                         id={`card-container-${i}`}
@@ -83,7 +85,7 @@ const KeyInitiatives: React.FC = () => {
                         />
                         <div
                             role="button"
-                            className="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+                            className={`relative transform  ${ isNthValue && "lg:peer-checked:translate-y-[-236px]"}  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5`}
                         >
                             <label htmlFor={`toggle-${i}`}>
                                 <div className="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6">
@@ -103,13 +105,13 @@ const KeyInitiatives: React.FC = () => {
                                 </div>
                             </label>
                         </div>
-                        <div className="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10">
+                        <div className={`hidden transform ${ isNthValue && "lg:peer-checked:translate-y-[-236px]"} lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10`}>
                             <p className="text-white text-sm px-4 text-center leading-relaxed">
                                 {description}
                             </p>
                         </div>
                     </div>
-                ))}
+                )})}
             </div>
             <p className="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed">
                 Join the Eclipse Temurin Sustainer Program and play a crucial role
