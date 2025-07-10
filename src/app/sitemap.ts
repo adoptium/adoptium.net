@@ -3,6 +3,7 @@ import { getAppRoutes, getBlogRoutes } from "@/utils/getAppRoutes";
 import { routing } from "@/i18n/routing";
 import fs from "fs";
 import path from "path";
+import authorsData from "@/data/authors.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://adoptium.net";
@@ -146,7 +147,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Collect author routes from authors.json
   function getAuthorRoutes(): string[] {
     try {
-      const authorsData = require("@/data/authors.json");
       return Object.keys(authorsData).map(
         (authorId) => `/news/author/${authorId}/`
       );

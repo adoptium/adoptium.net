@@ -4,6 +4,13 @@ import * as getAppRoutesModule from "@/utils/getAppRoutes";
 import * as getBlogRoutesModule from "@/utils/getAppRoutes";
 
 vi.mock("@/utils/getAppRoutes");
+vi.mock("@/data/authors.json", () => ({
+  default: {
+    joeblogs: { name: "Joe Blogs" },
+    janedoe: { name: "Jane Doe" },
+    testauthor: { name: "Test Author" },
+  },
+}));
 vi.mock("next/navigation", () => ({}));
 vi.mock("next-intl/navigation", () => ({
   createNavigation: () => ({
@@ -24,7 +31,7 @@ describe("sitemap", () => {
   beforeAll(() => {
     // Mock Date constructor to ensure consistent timezone behavior
     const OriginalDate = Date;
-    const MockDate = function (this: any, ...args: any[]) {
+    const MockDate = function (this: Date, ...args: unknown[]) {
       if (
         args.length === 3 &&
         typeof args[0] === "number" &&
@@ -37,7 +44,7 @@ describe("sitemap", () => {
       if (args.length === 0) {
         return new OriginalDate();
       }
-      return new OriginalDate(args[0]);
+      return new OriginalDate(args[0] as string | number | Date);
     };
     MockDate.now = OriginalDate.now;
     MockDate.parse = OriginalDate.parse;

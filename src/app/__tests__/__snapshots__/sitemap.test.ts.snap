@@ -52,5 +52,47 @@ exports[`sitemap > generates the expected sitemap snapshot 1`] = `
     "lastModified": 2024-12-01T00:00:00.000Z,
     "url": "https://adoptium.net/news/2024/12/other-post/",
   },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/author/joeblogs/",
+        "en-GB": "https://adoptium.net/en-GB/news/author/joeblogs/",
+        "es": "https://adoptium.net/es/news/author/joeblogs/",
+        "fr": "https://adoptium.net/fr/news/author/joeblogs/",
+        "pt-BR": "https://adoptium.net/pt-BR/news/author/joeblogs/",
+        "zh-CN": "https://adoptium.net/zh-CN/news/author/joeblogs/",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/author/joeblogs/",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/author/janedoe/",
+        "en-GB": "https://adoptium.net/en-GB/news/author/janedoe/",
+        "es": "https://adoptium.net/es/news/author/janedoe/",
+        "fr": "https://adoptium.net/fr/news/author/janedoe/",
+        "pt-BR": "https://adoptium.net/pt-BR/news/author/janedoe/",
+        "zh-CN": "https://adoptium.net/zh-CN/news/author/janedoe/",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/author/janedoe/",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/author/testauthor/",
+        "en-GB": "https://adoptium.net/en-GB/news/author/testauthor/",
+        "es": "https://adoptium.net/es/news/author/testauthor/",
+        "fr": "https://adoptium.net/fr/news/author/testauthor/",
+        "pt-BR": "https://adoptium.net/pt-BR/news/author/testauthor/",
+        "zh-CN": "https://adoptium.net/zh-CN/news/author/testauthor/",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/author/testauthor/",
+  },
 ]
 `;
