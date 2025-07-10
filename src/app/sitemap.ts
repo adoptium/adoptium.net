@@ -3,6 +3,7 @@ import { getAppRoutes, getBlogRoutes } from "@/utils/getAppRoutes";
 import { routing } from "@/i18n/routing";
 import fs from "fs";
 import path from "path";
+import authorsData from "@/data/authors.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://adoptium.net";
@@ -63,6 +64,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? `${baseUrl}/${locale}`
         : `${baseUrl}/${locale}${route}`;
     }
+    // Add x-default hreflang pointing to the default locale
+    if (Object.keys(languages).length > 0) {
+      languages["x-default"] = defaultUrl;
+    }
     entries.push({
       url: defaultUrl,
       lastModified: undefined,
@@ -82,6 +87,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url,
       lastModified,
+    });
+  }
+
+  // Author pages (localized)
+  const authorRoutes = getAuthorRoutes();
+  for (const route of authorRoutes) {
+    const defaultUrl = `${baseUrl}${route}`;
+    const languages: Record<string, string> = {};
+    for (const locale of routing.locales) {
+      if (locale === routing.defaultLocale) continue;
+      languages[locale] = `${baseUrl}/${locale}${route}`;
+    }
+    // Add x-default hreflang pointing to the default locale
+    if (Object.keys(languages).length > 0) {
+      languages["x-default"] = defaultUrl;
+    }
+    entries.push({
+      url: defaultUrl,
+      lastModified: undefined,
+      alternates: Object.keys(languages).length > 0 ? { languages } : undefined,
     });
   }
 
@@ -120,11 +145,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages[locale] = `${baseUrl}/${locale}${normalizedBase}`;
       }
     }
+    // Add x-default hreflang pointing to the default locale
+    if (Object.keys(languages).length > 0) {
+      languages["x-default"] = defaultUrl;
+    }
     entries.push({
       url: defaultUrl,
       lastModified: undefined,
       alternates: Object.keys(languages).length > 0 ? { languages } : undefined,
     });
+  }
+
+  // Collect author routes from authors.json
+  function getAuthorRoutes(): string[] {
+    try {
+      return Object.keys(authorsData).map(
+        (authorId) => `/news/author/${authorId}/`
+      );
+    } catch {
+      return [];
+    }
   }
 
   return entries;
