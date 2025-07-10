@@ -146,7 +146,12 @@ const ColumnDrilldown: React.FC<ColumnDrilldownProps> = ({ name, availableReleas
         colors: [
             "#2caffe", "#6c6de3", "#feae62", "#a259f7", "#f67280", "#43e97b"
         ],
-        chart: { type: 'column', backgroundColor: 'transparent', style: { fontFamily: 'inherit' } },
+        chart: {
+            type: 'column',
+            backgroundColor: 'transparent',
+            style: { fontFamily: 'inherit' },
+            animation: process.env.NODE_ENV !== "test"
+        },
         title: { text: name, style: { color: '#fff', fontWeight: 'bold', fontSize: '1.25rem' } },
         subtitle: {
             text: 'Click the columns to view the version specific data. Data is from: <a href="https://api.adoptium.net/" target="_blank" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">api.adoptium.net</a>',

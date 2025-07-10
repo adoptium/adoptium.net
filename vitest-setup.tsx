@@ -76,6 +76,9 @@ vi.mock('next-intl', () => ({
 
 vi.mock("@/i18n/navigation", () => ({
   redirect: vi.fn(),
+  usePathname: vi.fn(() => "/en"),
+  useRouter: vi.fn(() => ({ push: vi.fn(), replace: vi.fn() })),
+  getPathname: vi.fn(() => "/docs"),
   Link: ({
     href,
     children,
