@@ -1,0 +1,223 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NewsPage > renders news and header when posts exist 1`] = `
+<div>
+  <div>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news","name":"Eclipse Adoptium News &amp; Updates","url":"https://adoptium.net/news","mainEntity":[{"@type":"BlogPosting","headline":"Test News","url":"https://adoptium.net/news/undefined/undefined/test-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
+    </script>
+    <div
+      class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+    >
+      <div
+        class="w-full relative"
+      >
+        <div
+          class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+        />
+        <div
+          class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+        />
+        <div
+          class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+        />
+      </div>
+      <div
+        class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-6 flex"
+        >
+          <div
+            class="self-stretch flex-col justify-center items-center gap-4 flex"
+          >
+            <div
+              class="justify-start items-center gap-3 inline-flex"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+              <div
+                class="text-rose-600 text-base font-bold leading-normal"
+              >
+                News
+              </div>
+            </div>
+            <div
+              class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+            >
+              News & Updates
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full"
+          >
+            Follow the latest updates from the Eclipse Adoptium Project
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-[1264px] mx-auto px-6 py-8 md:pt-12"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
+      >
+        <div
+          class="flex flex-col max-w-[385px] w-full sm:w-[385px] min-h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
+        >
+          <img
+            alt="blog banner image"
+            class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Ftest-news%2Fopengraph-image&w=828&q=75"
+            srcset="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Ftest-news%2Fopengraph-image&w=640&q=75 1x, /_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Ftest-news%2Fopengraph-image&w=828&q=75 2x"
+            style="color: transparent;"
+            width="385"
+          />
+          <div
+            class="p-8 flex flex-col h-[400px]"
+          >
+            <h3
+              class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+              title="Test News"
+            >
+              Test News
+            </h3>
+            <div
+              class="flex justify-between py-2"
+            >
+              <h3
+                class="flex flex-col gap-1 tab-button-text text-white"
+              >
+                <span>
+                  June 18, 2025
+                </span>
+              </h3>
+            </div>
+            <div
+              class="flex-grow overflow-hidden mb-4"
+            >
+              <p
+                class="line-clamp-4 text-base text-gray-200"
+              >
+                desc
+              </p>
+            </div>
+            <div
+              class="mt-auto"
+            >
+              <a
+                href="[object Object]"
+              >
+                <button
+                  class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block"
+                >
+                  Read More
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-center items-center gap-8 md:gap-14 my-8"
+      >
+        <div
+          class="flex items-center gap-5"
+        >
+          <div
+            class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+          >
+            <a
+              href="/news"
+            >
+              <p
+                class="tab-button-text mb-0 cursor-pointer font-bold text-pink"
+              >
+                1
+              </p>
+            </a>
+            <a
+              href="/news/page/2"
+            >
+              <p
+                class="tab-button-text mb-0 cursor-pointer "
+              >
+                2
+              </p>
+            </a>
+          </div>
+        </div>
+        <a
+          class="flex items-center gap-3"
+          href="/news/page/2"
+        >
+          <p
+            class="tab-button-text mb-0 hidden md:block"
+          >
+            Next
+          </p>
+          <span
+            class="cursor-pointer"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 320 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div
+        class="flex justify-center items-center gap-5 mt-8"
+      >
+        <a
+          class="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
+          href="https://newsroom.eclipse.org/node/add/news"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Submit News
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

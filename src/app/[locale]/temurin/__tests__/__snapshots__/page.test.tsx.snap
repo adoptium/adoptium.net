@@ -1,0 +1,717 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TemurinIndex page > renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
+    >
+      <div
+        class="relative isolate"
+      >
+        <div
+          class="absolute sm:hidden top-[80px] z-[-1] left-0 w-full flex justify-center"
+        >
+          <img
+            alt="Temurin Hero Mobile Background"
+            class="max-w-80 h-auto"
+            data-nimg="1"
+            decoding="async"
+            draggable="false"
+            height="0"
+            loading="lazy"
+            src="/images/backgrounds/temurin-hero-mobile.svg"
+            style="color: transparent;"
+            width="600"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        />
+        <div
+          class="max-w-[1264px] mx-auto flex justify-center items-center"
+        >
+          <div
+            class="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center"
+          >
+            <div
+              class="text-center w-full"
+            >
+              <h1
+                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
+              >
+                Text
+              </h1>
+              <p
+                class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
+              >
+                Text
+              </p>
+              <div
+                class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
+              >
+                <a
+                  class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
+                  href="/temurin/releases"
+                >
+                  Text
+                </a>
+                <a
+                  class="rounded-[80px] bg-[#FF1464] cursor-not-allowed hover:bg-transparent border transition duration-300 ease-in-out hover:text-[#FF1464] border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
+                  href="#"
+                >
+                  <span
+                    class="w-6 h-6 flex items-center justify-center"
+                  />
+                  Text
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
+  >
+    <h2
+      class="text-center text-xl font-normal leading-7 text-grey"
+    >
+      Text
+    </h2>
+    <div
+      class="mt-6"
+      data-testid="react-slick-mock"
+    >
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Arm"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-arm-white.svg"
+          style="color: transparent; padding: 1em;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Atlassian"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-atlassian-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Dynatrace"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Mercedes-Benz Tech Innovation GmbH"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Michelin"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-michelin-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Microsoft"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-microsoft-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="MongoDB"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-mongodb-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Red Hat"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="Societe Generale"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-societe-generale-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+      <span
+        class="px-4"
+      >
+        <img
+          alt="T-Systems"
+          class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/images/adopters/logo-t-systems-white.svg"
+          style="color: transparent; padding: 0px;"
+          width="200"
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    class="bg-purple py-16"
+  >
+    <div
+      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16"
+    >
+      <h2
+        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
+      >
+        Text
+      </h2>
+      <h3
+        class="text-center text-base leading-6 font-normal text-grey mt-6"
+      >
+        Text
+      </h3>
+      <a
+        href="/business-benefits"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Text
+        </button>
+      </a>
+    </div>
+    <div
+      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
+      <img
+        alt="Description"
+        class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
+        height="366"
+        loading="lazy"
+        src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
+        width="366"
+      />
+      <img
+        alt="scroll divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
+        width="16"
+      />
+      <div
+        class="flex flex-col flex-1 px-4"
+      >
+        <h1
+          class="text-xl my-5 font-bold"
+        >
+          Text
+        </h1>
+        <div
+          class="text-base text-grey"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+    <div
+      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
+      <img
+        alt="Description"
+        class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
+        height="366"
+        loading="lazy"
+        src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
+        width="366"
+      />
+      <img
+        alt="scroll divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
+        width="16"
+      />
+      <div
+        class="flex flex-col flex-1 px-4"
+      >
+        <h1
+          class="text-xl my-5 font-bold"
+        >
+          Text
+        </h1>
+        <div
+          class="text-base text-grey"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+    <div
+      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
+    >
+      <img
+        alt="Description"
+        class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
+        height="366"
+        loading="lazy"
+        src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
+        width="366"
+      />
+      <img
+        alt="scroll divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
+        width="16"
+      />
+      <div
+        class="flex flex-col flex-1 px-4"
+      >
+        <h1
+          class="text-xl my-5 font-bold"
+        >
+          Text
+        </h1>
+        <div
+          class="text-base text-grey"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+    <div
+      class="lg:block hidden open-animation-wrapper"
+    >
+      <div
+        class="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0"
+      >
+        <div
+          class="progress absolute top-0 bottom-4 left-0 right-0"
+        >
+          <div
+            class="progress-fill w-full h-full"
+            style="transform: scaleY(0);"
+          />
+        </div>
+        <div
+          class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
+          style="top: 0%;"
+        />
+        <div
+          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"
+        >
+          <div
+            class="w-[50%]"
+          >
+            <img
+              alt="Description"
+              class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
+              width="436"
+            />
+          </div>
+          <div
+            class="w-[50%]"
+          >
+            <div
+              class="max-w-[436px] ml-auto"
+            >
+              <h1
+                class="text-xl md-pt-6 my-5 font-bold"
+              >
+                Text
+              </h1>
+              <div
+                class="text-base text-grey"
+              >
+                Text
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-2"
+        >
+          <div
+            class="w-[50%]"
+          >
+            <img
+              alt="Description"
+              class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
+              width="436"
+            />
+          </div>
+          <div
+            class="w-[50%]"
+          >
+            <div
+              class="max-w-[436px] ml-auto"
+            >
+              <h1
+                class="text-xl md-pt-6 my-5 font-bold"
+              >
+                Text
+              </h1>
+              <div
+                class="text-base text-grey"
+              >
+                Text
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-3"
+        >
+          <div
+            class="w-[50%]"
+          >
+            <img
+              alt="Description"
+              class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
+              height="300"
+              loading="lazy"
+              src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
+              width="436"
+            />
+          </div>
+          <div
+            class="w-[50%]"
+          >
+            <div
+              class="max-w-[436px] ml-auto"
+            >
+              <h1
+                class="text-xl md-pt-6 my-5 font-bold"
+              >
+                Text
+              </h1>
+              <div
+                class="text-base text-grey"
+              >
+                Text
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2 flex flex-col items-center justify-center  xl:px-0 px-6"
+  >
+    <div
+      class="text-center"
+    >
+      <h2
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+      >
+        Become a Sponsor
+      </h2>
+      <p
+        class="text-grey mt-6 font-normal text-base"
+      >
+        Contributions from users like you help fund critical operations of the Adoptium working group. All money contributed through the Eclipse Foundation ensures the survivability, continuity, and responsiveness of Adoptium projects.
+      </p>
+    </div>
+    <a
+      href="/sustainers/"
+    >
+      <button
+        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+      >
+        Learn more
+      </button>
+    </a>
+    <div
+      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center"
+    >
+      <div
+        class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+      >
+        <div
+          class="grow"
+        >
+          <h3
+            class="text-white text-[30px] font-semibold  leading-[120%] md:text-[40px]"
+          >
+            Installation Guide
+          </h3>
+          <p
+            class="mt-6 text-xl text-lightgrey font-normal"
+          >
+            Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
+          </p>
+        </div>
+        <a
+          href="/installation"
+        >
+          <button
+            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-2xl gradient-border"
+          >
+            Installation Guide
+          </button>
+        </a>
+      </div>
+      <div
+        class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+      >
+        <div
+          class="grow"
+        >
+          <h3
+            class="text-white text-[30px] font-semibold  leading-[120%] md:text-[40px]"
+          >
+            Documentation
+          </h3>
+          <p
+            class="mt-6 text-xl text-lightgrey font-normal"
+          >
+            Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
+          </p>
+        </div>
+        <a
+          href="/docs"
+        >
+          <button
+            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-2xl gradient-border"
+          >
+            Documentation
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  >
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="400"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
+        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
+        style="color: transparent;"
+        width="400"
+      />
+    </div>
+    <div
+      class="lg:max-w-[560px] w-full  "
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        Want to discuss how Temurin can positively impact your company?
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        Whether you are looking for opportunities for cost-savings, or a selection of choices for commercial support, or if you want to bolster security around your software supply chain, we would love to discuss how using Temurin brings a variety of benefits to your enterprise.
+      </p>
+      <a
+        href="/slack"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
+        >
+          Contact Us
+        </button>
+         
+      </a>
+      <a
+        href="/slack"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+        >
+          Contact Us
+        </button>
+      </a>
+    </div>
+  </section>
+  <section
+    class="relative xl:px-0 px-6 md:py-32 py-16 "
+  >
+    <img
+      alt="gradient overlay"
+      class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <img
+      alt="gradient overlay mobile"
+      class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <div
+      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+    >
+      <img
+        alt="message icon"
+        class="!mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="120"
+        loading="lazy"
+        src="/images/icons/message.svg"
+        style="color: transparent;"
+        width="120"
+      />
+      <p
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
+      >
+        Speak to our team today
+      </p>
+      <span
+        class="text-gray-300 text-base leading-6"
+      >
+        Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
+      </span>
+      <a
+        href="/join"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Contact Us
+        </button>
+      </a>
+    </div>
+  </section>
+</div>
+`;

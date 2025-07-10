@@ -1,0 +1,654 @@
+{
+  "platforms": [
+    {
+      "category": "Windows (x64)",
+      "distros": [
+        {
+          "name": "Windows Server 2025",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Windows Server 2022",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Windows Server 2019",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Windows 11",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Windows 10",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Windows (aarch64)",
+      "distros": [
+        {
+          "name": "Windows Server 2025",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        },
+        {
+          "name": "Windows Server 2022",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        },
+        {
+          "name": "Windows 11",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Windows (x86)",
+      "footnotes": [
+        "Windows (x86) was deprecated in JDK21 and is no longer supported in newer versions: https://openjdk.org/jeps/449"
+      ],
+      "distros": [
+        {
+          "name": "Windows Server 2022",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        },
+        {
+          "name": "Windows Server 2019",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        },
+        {
+          "name": "Windows 10",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Linux (x64)",
+      "footnotes": [
+        "These builds should work on any distribution with glibc version 2.17 or higher. Versions up to 17 will work with glibc 2.12."
+      ],
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 9.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 8.x",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "SUSE Linux Enterprise Server (SLES) 12",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "SUSE Linux Enterprise Server (SLES) 15",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Ubuntu 24.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 22.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 20.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Linux (ARM 64-bit)",
+      "footnotes": [
+        "These builds should work on any distribution with glibc version 2.17 or higher."
+      ],
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 9.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 8.x",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "SUSE Linux Enterprise Server (SLES) 15",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Ubuntu 24.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 22.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 20.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Linux (ARM 32-bit Hard-Float)",
+      "footnotes": [
+        "These builds should work on any distribution with glibc version 2.23 or higher."
+      ],
+      "distros": [
+        {
+          "name": "Ubuntu 24.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 22.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        },
+        {
+          "name": "Ubuntu 20.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Linux (PowerPC 64-bit Little Endian)",
+      "footnotes": [
+        "These builds should work on any distribution with glibc version 2.17 or higher."
+      ],
+      "distros": [
+        {
+          "name": "RHEL / UBI 9.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 8.x",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "SUSE Linux Enterprise Server (SLES) 15",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Ubuntu 24.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 22.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 20.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Linux (s390x)",
+      "footnotes": [
+        "These builds should work on any distribution with glibc version 2.17 or higher.",
+        "JDK8 on s390x has no JIT so is unsupported."
+      ],
+      "distros": [
+        {
+          "name": "RHEL / UBI 9.x",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 8.x",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "SUSE Linux Enterprise Server (SLES) 12",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "SUSE Linux Enterprise Server (SLES) 15",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Ubuntu 24.04",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 22.04",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 20.04",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Linux (riscv64)",
+      "footnotes": [
+        "These builds should work on any distribution with glibc version 2.31 or higher."
+      ],
+      "distros": [
+        {
+          "name": "Ubuntu 24.04",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "Ubuntu 22.04",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "Ubuntu 20.04",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "macOS (x64)",
+      "distros": [
+        {
+          "name": "macOS 15",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "macOS 14",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "macOS 13",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "macOS 12",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "macOS (Apple Silicon)",
+      "distros": [
+        {
+          "name": "macOS 15",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "macOS 14",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "macOS 13",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        },
+        {
+          "name": "macOS 12",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": true, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Solaris (x64 and Sparc)",
+      "distros": [
+        {
+          "name": "Solaris 11",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        },
+        {
+          "name": "Solaris 10u11",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "AIX (PowerPC 64-bit)",
+      "footnotes": [
+        "AIX 7.1 is no longer supported. AIX 7.2 or later is required."
+      ],
+      "distros": [
+        {
+          "name": "AIX 7.2",
+          "versions": {
+            "8": { "supported": true, "docker": false },
+            "11": { "supported": true, "docker": false },
+            "17": { "supported": true, "docker": false },
+            "21": { "supported": true, "docker": false },
+            "24": { "supported": false, "docker": false }
+          }
+        }
+      ]
+    }
+  ]
+}

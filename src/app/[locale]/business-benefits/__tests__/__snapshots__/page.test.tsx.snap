@@ -1,0 +1,462 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Business Benefits page > renders correctly 1`] = `
+<div>
+  <div
+    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Business Benefits
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            How Temurin can benefit your business
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+        >
+          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto lg:flex justify-center lg:justify-between xl:px-0 px-6 "
+  >
+    <div
+      class="lg:max-w-[560px] w-full"
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        How other companies are using Temurin
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        Discover how industry leaders leverage Temurin to enhance performance and drive innovation in their development processes.
+      </p>
+    </div>
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="400"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
+        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
+        style="color: transparent;"
+        width="400"
+      />
+    </div>
+  </section>
+  <div />
+  <section
+    class="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 opacity-5"
+    >
+      <div
+        class="absolute inset-0 bg-repeat"
+      />
+    </div>
+    <div
+      class="relative max-w-7xl px-6 py-16 mx-auto text-center lg:py-24"
+    >
+      <div
+        class="relative max-w-5xl mx-auto"
+      >
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl"
+        >
+          <figure>
+            <div
+              class="mb-8"
+            >
+              <svg
+                class="h-12 w-12 mx-auto text-pink opacity-60"
+                fill="none"
+                viewBox="0 0 24 27"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <blockquote
+              class="animate-slideInRight mb-8"
+            >
+              <div
+                class="min-h-[200px] md:min-h-[180px] flex items-center justify-center"
+              >
+                <p
+                  class="text-xl md:text-2xl leading-relaxed font-medium text-white/90 italic"
+                >
+                  “
+                  Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
+                  ”
+                </p>
+              </div>
+            </blockquote>
+            <figcaption
+              class="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <img
+                alt="Martijn Verburg"
+                class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
+                data-nimg="1"
+                decoding="async"
+                height="64"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
+                width="64"
+              />
+              <div
+                class="text-center sm:text-left"
+              >
+                <div
+                  class="text-lg font-semibold text-white"
+                >
+                  Martijn Verburg
+                </div>
+                <div
+                  class="text-pink font-medium"
+                >
+                  Principal Group Manager - Java & Go @ Microsoft
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div
+        class="flex justify-center items-center mt-12 space-x-6"
+      >
+        <button
+          aria-label="Previous Testimonial"
+          class="group p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300"
+        >
+          <svg
+            class="w-5 h-5 text-white group-hover:text-pink transition-colors"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+            />
+          </svg>
+        </button>
+        <div
+          class="flex space-x-2"
+        >
+          <button
+            aria-label="Go to testimonial 1"
+            class="h-2 rounded-full transition-all duration-300 w-8 bg-pink-400"
+          />
+          <button
+            aria-label="Go to testimonial 2"
+            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+          />
+          <button
+            aria-label="Go to testimonial 3"
+            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+          />
+          <button
+            aria-label="Go to testimonial 4"
+            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+          />
+        </div>
+        <button
+          aria-label="Next Testimonial"
+          class="group relative p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300 overflow-hidden"
+        >
+          <svg
+            class="w-5 h-5 text-white group-hover:text-pink transition-colors relative z-10"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+            />
+          </svg>
+          <div
+            class="absolute inset-0 rounded-full border-2 border-transparent border-t-pink-400 animate-spin opacity-60"
+            style="animation-duration: 8s;"
+          />
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center mt-12 space-x-8"
+      >
+        <button
+          aria-label="Microsoft Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 opacity-100 scale-110"
+        >
+          <div
+            class="h-12 w-32 flex items-center justify-center"
+          >
+            <img
+              alt="Microsoft"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/images/members/microsoft.svg"
+              style="color: transparent;"
+              width="128"
+            />
+          </div>
+        </button>
+        <button
+          aria-label="Alibaba Cloud Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+        >
+          <div
+            class="h-12 w-32 flex items-center justify-center"
+          >
+            <img
+              alt="Alibaba Cloud"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="128"
+            />
+          </div>
+        </button>
+        <button
+          aria-label="Azul Systems Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+        >
+          <div
+            class="h-12 w-32 flex items-center justify-center"
+          >
+            <img
+              alt="Azul Systems"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/images/members/azul.svg"
+              style="color: transparent;"
+              width="128"
+            />
+          </div>
+        </button>
+        <button
+          aria-label="Red Hat Testimonial"
+          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+        >
+          <div
+            class="h-12 w-32 flex items-center justify-center"
+          >
+            <img
+              alt="Red Hat"
+              class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
+              height="48"
+              loading="lazy"
+              src="/images/members/redhat.svg"
+              style="color: transparent;"
+              width="128"
+            />
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section
+    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  >
+    <div
+      class="max-w-[400px] w-full hidden lg:block"
+    >
+      <img
+        alt="scroll-divider"
+        class="mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="400"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
+        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
+        style="color: transparent;"
+        width="400"
+      />
+    </div>
+    <div
+      class="lg:max-w-[560px] w-full  "
+    >
+      <h2
+        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      >
+        Need support with Temurin?
+      </h2>
+      <p
+        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+      >
+        Eclipse Temurin is supported by a vibrant community of developers and users. If you need help, please reach out to us.
+      </p>
+      <a
+        href="/support"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
+        >
+          Get Support
+        </button>
+         
+      </a>
+      <a
+        href="/support"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+        >
+          Get Support
+        </button>
+      </a>
+    </div>
+  </section>
+  <section
+    class="relative xl:px-0 px-6 md:py-32 py-16 "
+  >
+    <img
+      alt="gradient overlay"
+      class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <img
+      alt="gradient overlay mobile"
+      class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <div
+      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+    >
+      <img
+        alt="message icon"
+        class="!mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="120"
+        loading="lazy"
+        src="/images/icons/message.svg"
+        style="color: transparent;"
+        width="120"
+      />
+      <p
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
+      >
+        Contact us about how Temurin can help your business
+      </p>
+      <span
+        class="text-gray-300 text-base leading-6"
+      >
+        Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
+      </span>
+      <a
+        href="/join"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Contact Us
+        </button>
+      </a>
+    </div>
+  </section>
+</div>
+`;

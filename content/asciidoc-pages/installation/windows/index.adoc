@@ -1,0 +1,157 @@
+= Windows MSI installer packages
+:page-authors: gdams, karianna, SueChaplain, ParkerM, KalyanJoseph
+:toc:
+
+Eclipse Temurin Windows installer packages are available as standard
+.msi files, which can be run with an interactive user interface or run
+silently from the command line. The installer is designed for use on a
+per-machine basis, not per-user basis, so you can have only one
+installation of the MSI on a machine for all users.
+
+Note: Windows installer packages are supported only on Windows x64
+systems.
+
+== GUI installation
+
+Instructions for running an interactive installation using the Windows
+MSI installer:
+
+. link:/temurin/releases[Download] the `.msi` file. Open it to launch the
+installation program.
+. Read and accept the license if you are happy with the terms.
+. On the Custom Setup screen you can choose the features that you want
+to install and optionally change the default installation directory. By
+default, Temurin installs to `C:\Program Files\Eclipse Adoptium\<package>` with
+the following features, which you can deselect, if necessary:
+* Add the installation to the PATH environment variable
+* Associate `.jar` files with Java applications Additional features can
+be selected by clicking on the directory tree where you see a check mark
+(x). These features include:
+* Updating the `JAVA_HOME` environment variable
+. When you have chosen the features that you want to install, click
+Next.
+. Click Install to begin the installation.
+. When the installation is finished, click Finish to close the program.
+
+== Command-line installation
+
+A silent installation allows you to install the Windows package with
+pre-selected features without user interaction, which can be useful for
+wide scale deployment. Follow these steps:
+
+. link:/temurin/releases[Download] the `.msi` file.
+. Choose the features that you want to install, which are shown in the
+following table:
++
+[width="100%",cols="50%,50%",options="header",]
+|=======================================================================
+|Feature |Description
+|`FeatureMain` |Core Temurin installation (DEFAULT)
+
+|`FeatureEnvironment` |Update the PATH environment variable (DEFAULT)
+
+|`FeatureJarFileRunWith` |Associate .jar files with Java applications
+(DEFAULT)
+
+|`FeatureJavaHome` |Update the JAVA_HOME environment variable
+
+|`FeatureOracleJavaSoft` |Updates registry keys HKLM|
+|=======================================================================
++
+Note: `FeatureOracleJavaSoft` can be used to prevent Oracle Java
+launching from `PATH` when Temurin is uninstalled. Reinstall Oracle Java
+if you need to restore the Oracle registry keys.
++
+Optional parameters can be used that group some of the features
+together:
++
+[cols=",",options="header",]
+|======================================================================
+|Parameter |Features
+|`INSTALLLEVEL=1` |FeatureMain,FeatureEnvironment,FeatureJarFileRunWith
+|======================================================================
+. Run the command on the target workstation. The following example
+silently installs Temurin, updates the PATH, associates .jar files with
+Java applications and defines JAVA_HOME:
++
+[source,batch]
+----
+msiexec /i <package>.msi ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome INSTALLDIR="c:\Program Files\Temurin\" /quiet
+----
++
+Note: You must use `INSTALLDIR` with FeatureMain.
++
+The following example silently installs all the features for
+`INSTALLLEVEL=1`:
++
+[source,batch]
+----
+msiexec /i <package>.msi INSTALLLEVEL=1 /quiet
+----
++
+If you want to launch an interactive installation in another language
+you can use the Windows installer `TRANSFORMS` option to set your
+language choice. For example, to set the UI language to German, use code
+`1031`, which must be preceded by a `:`.
++
+[source,batch]
+----
+msiexec /i <package>.msi INSTALLLEVEL=1 TRANSFORMS=:1031
+----
++
+For a list of supported codes, see the
+https://github.com/adoptium/installer/blob/master/wix/Lang/LanguageList.config[Language
+list].
+
+== Reinstalling or upgrading
+
+To reinstall Temurin in silent mode with default features, run the
+following command:
+
+[source,batch]
+----
+msiexec /i <package>.msi REINSTALL=ALL /quiet
+----
+
+If you want to upgrade Temurin in silent mode, run the following
+command:
+
+[source,batch]
+----
+msiexec /i <package>.msi REINSTALL=ALL REINSTALLMODE=amus /quiet
+----
+
+`REINSTALLMODE` options: (from
+https://www.advancedinstaller.com/user-guide/control-events.html[Control
+Events])
+
+* `a`: Force all files to be installed regardless of checksum or version
+* `m`: Rewrite all required registry entries from the Registry Table
+that go to the `HKEY_LOCAL_MACHINE`
+* `o`: Reinstall if the file is missing or is an older version
+* `u`: Rewrite all required registry entries from the Registry Table
+that go to the `HKEY_CURRENT_USER` or `HKEY_USERS`
+* `s`: Reinstall all shortcuts and re-cache all icons overwriting any
+existing shortcuts or icons
+
+Note: `REINSTALL=ALL` automatically sets `REINSTALLMODE=omus`
+
+=== Upgrade limitation:
+
+Upgrading `.msi` files works only for the first 3 digits of the build
+number due to an
+https://docs.microsoft.com/windows/desktop/Msi/productversion[MSI
+limitation]:
+
+* Upgrading 8.0.2.1 to 8.0.3.1 works.
+* Upgrading 8.0.2.1 to 8.0.2.2 does not work. Uninstall the previous
+.msi and install the new one.
+* Upgrading 8.0.2.1 to 8.1.2.1 works.
+* Upgrading 8.0.2.1 to 11.0.2.1 does not work. Temurin does not provide
+upgrades for major versions. Either keep both installations or uninstall
+the older one.
+
+== Reference reading
+
+* https://www.advancedinstaller.com/user-guide/msiexec.html[Msiexec.exe
+Command Line]

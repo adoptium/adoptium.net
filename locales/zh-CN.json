@@ -1,0 +1,218 @@
+{
+  "HomePage": {
+    "the-power": "Eclipse Temurin® 的强大优势",
+    "download-temurin-for": "下载适用于 {userOSName} {arch} 的 Temurin {defaultVersion}",
+    "download-temurin-short": "下载 Temurin {defaultVersion}",
+    "other-downloads": "其他下载",
+    "download-temurin-button": "下载 Temurin®"
+  },
+  "NotFoundPage": {
+    "title": "很抱歉，无法找到此页面",
+    "back-to-home": "返回首页"
+  },
+  "Marketplace": {
+    "title": "Adoptium® 市场",
+    "subtitle": "市场",
+    "description": "Java™ 是全球领先的编程语言和平台。Adoptium 市场推广高质量、通过 TCK 认证且通过 AQAvit 验证的运行时，广泛用于 Java 生态系统。",
+    "VendorSelector": {
+      "vendors-selected": "已选择 {selected} 个，共 {total} 个供应商"
+    },
+    "Releases": {
+      "download": "下载",
+      "build-date": "构建日期",
+      "vendor": "供应商"
+    }
+  },
+  "PowerOfTemurin": {
+    "title": "Eclipse Temurin 的强大优势",
+    "description": "基于 OpenJDK：Eclipse Temurin 提供高性能、跨平台的开源 Java™ 运行时二进制文件，适用于企业环境，已通过 Java SE TCK 认证并经 AQAvit 验证，适用于 Java 生态系统中的广泛使用。",
+    "button": "商业优势",
+    "benefits": {
+      "performance": {
+        "title": "性能与可靠性",
+        "description": "使用 Eclipse Temurin 运行企业应用程序更加安心。该高性能 Java 运行时经过严格测试，确保稳定性，并在各种环境中实现最佳运行表现。"
+      },
+      "cost": {
+        "title": "低成本创新",
+        "description": "使用高质量的开源 Java，无需许可费用。降低成本的同时，享受可持续、企业级的运行时性能。"
+      },
+      "developers": {
+        "title": "赋能开发者",
+        "description": "通过 Eclipse Temurin 提供的一致性跨平台构建提升开发效率。专注创新，依靠全球数百万用户信赖的高质量运行时。"
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "免费预构建的 OpenJDK 二进制文件！",
+    "description": "Java™ 是世界领先的编程语言和平台。Adoptium 工作组致力于推广并支持高质量、TCK 认证的运行时及相关技术，服务整个 Java 生态系统。Eclipse Temurin 是 Adoptium 提供的 OpenJDK 发行版。",
+    "features": {
+      "secure-supply-chain": {
+        "title": "安全的供应链",
+        "description": "遵循严格的安全标准构建，确保供应链可信、透明且无已知漏洞。"
+      },
+      "aqavit-verification": {
+        "title": "AQAvit 验证",
+        "description": "通过 AQAvit 严格测试，确保每个构建在性能、可靠性和安全性方面都达到高标准。"
+      },
+      "performance-optimization": {
+        "title": "性能优化",
+        "description": "为卓越性能而设计，在各种环境下提供快速、高效和稳定的运行体验。"
+      },
+      "cross-platform": {
+        "title": "跨平台一致性",
+        "description": "在主流操作系统和硬件架构上实现一致的行为与构建。"
+      },
+      "community-driven": {
+        "title": "社区驱动开发",
+        "description": "Eclipse Adoptium 项目由一个充满活力的全球社区推动，不断改进和创新。"
+      },
+      "enterprise-ready": {
+        "title": "企业级支持",
+        "description": "由企业级商业支持方提供保障，确保系统集成顺利、可扩展性强并具有长期可持续性。"
+      }
+    }
+  },
+  "RandomContributors": {
+    "thank-you": "感谢我们的 <highlight>300+</highlight> 位贡献者",
+    "thank-you-mobile": "感谢 <linebreak></linebreak> 我们的 <highlight>300+</highlight> 位贡献者"
+  },
+  "RandomContributor": {
+    "thank-you": "感谢 <name></name> 为 <repo></repo> 提供了 <contributions></contributions>",
+    "contribution-singular": "次贡献",
+    "contribution-plural": "次贡献"
+  },
+  "DownloadCounter": {
+    "title": "Eclipse Temurin 服务全球数百万用户",
+    "total-download-docker-pulls-ever": "累计下载次数 / Docker 拉取次数",
+    "loading": "加载中..."
+  },
+  "WaysToSupport": {
+    "title": "支持我们的方式",
+    "description": "如果您重视 Eclipse 技术，请考虑通过 Eclipse 基金会成为赞助者。来自像您这样的用户的贡献帮助资助 Adoptium 工作组的运营。所有捐赠将用于通过 Adoptium 工作组支持 Eclipse 社区。",
+    "contribute": {
+      "how-to-contribute": "如何贡献",
+      "description": "通过技术或非技术方式参与我们的项目。加入我们的社区，共同塑造 Java 运行时的未来。"
+    },
+    "sustainers": {
+      "title": "成为支持者",
+      "description": "携手推动 Eclipse Temurin 的未来"
+    },
+    "member": {
+      "title": "成为成员",
+      "description": "加入我们，共同塑造 Eclipse Adoptium 的未来"
+    }
+  },
+  "AuthorList": {
+    "documentation-authors": "文档作者"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "帮助我们完善这些文档！",
+    "all-adoptium-docs-are-open-source": "所有 Adoptium 文档均为开源。发现错误或不清楚的内容？",
+    "edit-this-page": "编辑此页面"
+  },
+  "Asciidoc": {
+    "table-of-contents": "目录",
+    "warn-default-locale": "此页面为 <englishVersionLink>英文版本</englishVersionLink>，因为尚无中文版本。请协助我们将其翻译为中文。更多信息请参见 <translationGuideLink>翻译指南</translationGuideLink>。",
+    "warn-outdated": "此页面是基于 <previousEnglishVersionLink>旧版英文页面</previousEnglishVersionLink> 翻译的，可能已过时。请帮助我们将其更新为 <lastEnglishVersionLink>最新版英文页面</lastEnglishVersionLink>。更多信息请参见 <translationGuideLink>翻译指南</translationGuideLink>。"
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "最新新闻与更新",
+    "subtitle": "关注 Eclipse Adoptium 项目的最新动态",
+    "see-all-news": "查看所有新闻",
+    "read-more": "阅读更多"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "探索我们所有的项目",
+    "description": "Eclipse Adoptium 提供高性能、企业级、跨平台、开源许可的运行时二进制文件，这些文件已通过 Java SE TCK 测试并符合规范，可广泛应用于 Java 生态系统中。Eclipse Adoptium 还提供包括开源基础设施即代码、全面的持续集成构建和测试环境以及广泛的质量保障测试等制品。这些制品可供 Eclipse Adoptium 项目及其他运行时技术构建者使用，以提供安全、通过 Java SE TCK 测试并符合规范、可用于生产环境的运行时。"
+  },
+  "LogoCarousel": {
+    "title": "Temurin 深受数百万用户信赖，包括以下主要采用者："
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "请将下面的校验和与您下载的文件进行比对，以确保其完整且未被修改。",
+    "verify-using": "使用以下命令验证：",
+    "replace-file": "将 \"file\" 替换为您实际下载的文件名",
+    "close": "关闭",
+    "copied": "已复制",
+    "copy": "复制"
+  },
+  "ReleaseFilters": {
+    "reset-to-defaults": "重置为默认值",
+    "loading-versions": "正在加载版本...",
+    "filter-releases": "筛选版本",
+    "version": "版本",
+    "operating-system": "操作系统",
+    "architecture": "架构"
+  },
+  "TemurinReleases": {
+    "title": "下载 Temurin® JDK",
+    "latest-releases": "最新版本",
+    "description": "选择版本、软件包类型和 JDK/JRE，下载相应的二进制文件。"
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "重置为默认值",
+        "loading-versions": "正在加载版本...",
+        "filter-releases": "筛选版本",
+        "version": "版本",
+        "operating-system": "操作系统",
+        "architecture": "架构",
+        "package-type": "软件包类型",
+        "any-os": "任意操作系统",
+        "any-architecture": "任意架构",
+        "any-package-type": "任意软件包类型"
+      },
+      "ReleaseLinks": {
+        "release-notes": "发行说明",
+        "installation-guide": "安装指南",
+        "supported-platforms": "支持的平台",
+        "source-code": "源代码"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "此版本已通过 JCK 认证",
+        "this-build-is-aqavit-verified": "此版本已通过 AQAvit 验证",
+        "checksum": "校验和",
+        "no-releases-found": "未找到版本",
+        "no-releases-found-description": "没有符合当前筛选条件的版本。请尝试调整您的选择，或重置所有筛选器以查看可用版本。"
+      }
+    },
+    "Nightly": {
+      "title": "每晚构建",
+      "subtitle": "抢先体验",
+      "description": "获取用于测试和开发的最新每晚构建版本。",
+      "be-aware": "请注意，此归档包含作为通往<fullReleaseLink>完整版本</fullReleaseLink>的开发步骤创建的中间构建。中间构建是临时的，未来可能会被删除。",
+      "notice-title": "以下通知适用于中间构建：",
+      "quoted-notice": "这是一个中间构建，仅用于测试目的。代码未经测试，可能不符合 Java SE 规范。请不要部署或依赖此代码，而应使用经过测试和认证的 Java SE 兼容版本。重新分发此构建时必须保留此通知。",
+      "unsupported-in-production": "这些构建不受支持，不适用于生产环境。",
+      "latest-releases": "最新版本",
+      "download-not-available": "不可用",
+      "no-results": "所选版本暂无每晚构建。",
+      "checksum": "校验和",
+      "select-options-filter": "选择选项以筛选每晚构建列表",
+      "version": "版本",
+      "number-of-builds": "构建数量",
+      "builds-prior-to": "构建时间早于",
+      "platform": "平台",
+      "type": "类型",
+      "build-tag": "构建标签",
+      "date": "日期",
+      "binary": "二进制",
+      "installer": "安装程序",
+      "release-name": "版本名称"
+    },
+    "VersionSelector": {
+      "all-versions": "所有版本"
+    },
+    "DownloadMethods": {
+      "other-ways-to-download-temurin": "获取 Temurin 的其他方式",
+      "description": "除了直接下载外，还有多种方式可以获取 Eclipse Temurin。下面的精选列表展示了一些用于安装高性能、跨平台、开源 OpenJDK 运行时二进制文件的选项。"
+    }
+  },
+  "ReleaseNotes": {
+    "title": "版本说明",
+    "couldnt-find-release-notes": "哎呀……我们找不到这些版本说明",
+    "not-found-helper": "请确保您已使用版本 URL 参数指定了版本：",
+    "description": "本节根据每个问题所属的主要组件，整理了所选更新版本中的更改内容。"
+  }
+}

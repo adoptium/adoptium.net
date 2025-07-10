@@ -1,0 +1,130 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Marketplace page > renders correctly 1`] = `
+<div>
+  <div
+    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Text
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Text
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+        >
+          Text
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="about-aqavit flex justify-center items-center px-6 pt-10 pb-24 md:py-24"
+  >
+    <div
+      class="aqavit-card gap-4 md:gap-10 flex flex-col md:flex-row justify-between md:items-center max-w-[1000px] mx-auto p-[32px] md:p-[64px]"
+    >
+      <div
+        class="max-w-[110px] "
+      >
+        <img
+          alt="AQAvit Logo"
+          class="w-full"
+          data-nimg="1"
+          decoding="async"
+          height="110"
+          loading="lazy"
+          src="/images/projects/aqavit-project.svg"
+          style="color: transparent;"
+          width="110"
+        />
+      </div>
+      <div
+        class="flex flex-col md:gap-3"
+      >
+        <div
+          class="!mt-0"
+        >
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+          >
+            About Eclipse AQAvit
+          </h2>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            The AQAvit open source test suite (Adoptium Quality Assurance) can be found here. There is also a blog post and brief presentation that explains what testing is run and how it fits into the overall delivery pipeline.
+          </p>
+        </div>
+        <a
+          href="/aqavit"
+        >
+          <button
+            class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[146px] h-[48px] rounded-[80px] gradient-border mt-6"
+          >
+            Learn More
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

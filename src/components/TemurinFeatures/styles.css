@@ -1,0 +1,24 @@
+.temurin-features {
+  position: relative;
+  width: 100%;
+}
+
+.temurin-features::after {
+  content: "";
+  position: absolute;
+  bottom: -450px;
+  right: 0;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 200%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url("/images/backgrounds/linear-bg.png");
+}
+
+.mySwiperbase .swiper-slide {
+  display: flex !important;
+  flex-direction: column;
+  height: 400px !important; /* Force consistent height */
+}

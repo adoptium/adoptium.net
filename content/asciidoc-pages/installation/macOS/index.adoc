@@ -1,0 +1,41 @@
+= macOS PKG installer packages
+:page-authors: gdams, SueChaplain, karianna
+:toc:
+
+Eclipse Temurin macOS installer packages are available as standard .pkg
+files, which can be run with an interactive user interface or run
+silently from the Terminal command line.
+
+== GUI installation
+
+Instructions for running an interactive installation using the macOS PKG
+installer:
+
+. link:/temurin/releases[Download] the `.pkg` file.
+. Navigate to the folder that contains the file and open it to launch
+the installation program or drag the icon to your Application folder.
+. The Introduction screen indicates the target location for the
+installation, which you can change later in the install process. Click
+Continue.
+. Read the license, click Continue and accept the license if you are
+happy with the terms.
+. Change the target location for the installation. Click Install to
+complete the installation.
+
+== Command-line installation
+
+A silent installation allows you to install the macOS package without
+user interaction, which can be useful for widescale deployment. You must
+have administrator privileges. Follow these steps:
+
+. link:/temurin/releases[Download] the `.pkg` file.
+. Launch the Terminal app (`terminal.app`).
+. Run the following command:
++
+[source, bash]
+----
+installer -pkg <path_to_pkg>/<pkg_name>.pkg -target /
+----
+. Enter the Administrator password
+. Temurin installs to
+`/Library/Java/JavaVirtualMachines/temurin-<version>.<jdk|jre>/`

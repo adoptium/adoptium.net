@@ -1,0 +1,205 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TimeLine component > should render correctly with events 1`] = `
+<div>
+  <div
+    class="relative"
+  >
+    <div
+      class="relative my-4 flex justify-between items-start w-full flex-row"
+    >
+      <div
+        class="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2"
+      />
+      <div
+        class="w-5/12"
+      >
+        <div
+          class="text-right"
+        >
+          <span
+            class="text-base text-grey"
+          >
+            Oct 1, 2023
+          </span>
+          <a
+            href="https://example.com/a"
+            style="text-decoration: underline; text-underline-offset: 5px;"
+            target="_blank"
+          >
+            <h1
+              class="text-xl mt-5 mb-2 font-bold hover:transform hover:-translate-y-[2px] transition-transform duration-200"
+            >
+              Event A
+            </h1>
+          </a>
+          <p
+            class="text-base text-grey "
+          >
+            This is a description for Event A.
+          </p>
+        </div>
+      </div>
+      <div
+        class="relative z-10 flex justify-center"
+      >
+        <div
+          class="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full"
+        />
+      </div>
+      <div
+        class="w-5/12"
+      />
+    </div>
+    <div
+      class="relative my-4 flex justify-between items-start w-full flex-row-reverse"
+    >
+      <div
+        class="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2"
+      />
+      <div
+        class="w-5/12"
+      >
+        <div
+          class="text-left"
+        >
+          <span
+            class="text-base text-grey"
+          >
+            Oct 3, 2023
+          </span>
+          <a
+            href="https://example.com/b"
+            style="text-decoration: underline; text-underline-offset: 5px;"
+            target="_blank"
+          >
+            <h1
+              class="text-xl mt-5 mb-2 font-bold hover:transform hover:-translate-y-[2px] transition-transform duration-200"
+            >
+              Event B
+            </h1>
+          </a>
+          <p
+            class="text-base text-grey "
+          >
+            This is a description for Event B.
+          </p>
+        </div>
+      </div>
+      <div
+        class="relative z-10 flex justify-center"
+      >
+        <div
+          class="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full"
+        />
+      </div>
+      <div
+        class="w-5/12"
+      />
+    </div>
+    <div
+      class="flex justify-center items-center gap-8 md:gap-14 my-8"
+    >
+      <button
+        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
+        disabled=""
+      >
+        Previous
+      </button>
+      <div
+        class="flex items-center gap-5"
+      >
+        <div
+          class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+        >
+          <button
+            class="tab-button-text mb-0 px-2 font-bold text-pink"
+            disabled=""
+          >
+            1
+          </button>
+        </div>
+      </div>
+      <button
+        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
+        disabled=""
+      >
+        Next
+      </button>
+    </div>
+    <div
+      class="flex items-center gap-5 mb-15 justify-center"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="https://events.eclipse.org/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="https://newsroom.eclipse.org/node/add/events"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Submit an event
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TimeLine component > should render correctly with no events 1`] = `
+<div>
+  <div
+    class="relative"
+  >
+    <div
+      class="flex justify-center items-center gap-8 md:gap-14 my-8"
+    >
+      <button
+        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
+        disabled=""
+      >
+        Previous
+      </button>
+      <div
+        class="flex items-center gap-5"
+      >
+        <div
+          class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+        />
+      </div>
+      <button
+        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
+      >
+        Next
+      </button>
+    </div>
+    <div
+      class="flex items-center gap-5 mb-15 justify-center"
+    >
+      <a
+        class="flex items-center gap-3"
+        href="https://events.eclipse.org/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View all
+      </a>
+      |
+      <a
+        class="flex items-center gap-3"
+        href="https://newsroom.eclipse.org/node/add/events"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Submit an event
+      </a>
+    </div>
+  </div>
+</div>
+`;

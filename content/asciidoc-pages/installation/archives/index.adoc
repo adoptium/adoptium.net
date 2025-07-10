@@ -1,0 +1,183 @@
+= Archive Installation
+:page-authors: gdams, tellison
+:toc:
+
+== Linux
+
+. Make sure you have downloaded the latest link:/download[Linux binary]
+to a directory that will not move or be deleted, and use Terminal to cd
+into it.
+. Optional: use these checksum instructions to ensure the authenticity
+of your binary:
++
+[source, bash]
+----
+# The command must in the same directory as the downloaded binary file
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extract the `.tar.gz.` You can use the following command:
++
+[source, bash]
+----
+tar xzf <openjdk_binary>.tar.gz
+----
++
+. Add this version of Java to your `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+----
++
+. Check that Java has installed correctly:
++
+[source, bash]
+----
+java -version
+----
+
+== macOS
+
+. Make sure you have downloaded the latest link:/download[macOS binary]
+to a directory that will not move or be deleted, and use Terminal to cd
+into it.
+. Optional: use these checksum instructions to ensure the authenticity
+of your binary:
++
+[source, bash]
+----
+# The command must in the same directory as the downloaded binary file
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extract the `.tar.gz.` You can use the following command:
++
+[source, bash]
+----
+tar xzf <openjdk_binary>.tar.gz
+----
++
+. Add this version of Java to your `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/Contents/Home/bin:$PATH
+----
++
+. Check that Java has installed correctly:
++
+[source, bash]
+----
+java -version
+----
+
+== Windows
+
+. Make sure you have downloaded the latest link:/download[Windows binary] to a directory that will not move or be deleted, and use Command
+Prompt to cd into it.
+. Optional: use these checksum instructions to ensure the authenticity
+of your binary:
++
+[source, powershell]
+----
+certutil -hashfile <downloaded_file>.zip SHA256
+----
++
+. Extract the .zip. You can use the following command:
++
+[source, powershell]
+----
+Expand-Archive -Path .\<downloaded_file>.zip -DestinationPath .
+----
++
+. Add this version of Java to your `PATH`:
++
+[source, powershell]
+----
+set PATH=%cd%\<extracted_directory>\bin;%PATH%
+----
++
+. Check that Java has installed correctly:
++
+[source, powershell]
+----
+java -version
+----
+
+== AIX
+
+. The last versions of Eclipse Temurin able to run on AIX 7.1 were 8u362,
+11.0.18 and 17.0.8. Later versions require IBM XL C/C++ runtime package,
+available with the compiler or standalone, for
+link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[AIX 13.1]
+for JDK8, and
+link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[AIX 16.1]
+for JDK11+. 
+. Make sure you have downloaded the latest link:/download[AIX binary]
+to a directory that will not move or be deleted, and use Terminal to cd
+into it.
+. Optional: use these checksum instructions to ensure the authenticity
+of your binary:
++
+[source, bash]
+----
+# The command must in the same directory as the downloaded binary file
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extract the `.tar.gz.` You can use the following command:
++
+[source, bash]
+----
+gunzip -c <openjdk_binary>.tar.gz | tar xf -
+----
++
+. Add this version of Java to your `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+----
++
+. Check that Java has installed correctly:
++
+[source, bash]
+----
+java -version
+----
+
+== Solaris
+
+. Make sure you have downloaded the latest link:/download[Solaris
+binary] to a directory that will not move or be deleted, and use
+Terminal to cd into it.
+. Optional: use these checksum instructions to ensure the authenticity
+of your binary:
++
+[source, bash]
+----
+# The command must in the same directory as the downloaded binary file
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extract the `.tar.gz.` You can use the following command:
++
+[source, bash]
+----
+gunzip -c <openjdk_binary>.tar.gz | tar xf -
+----
++
+. Add this version of Java to your `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+----
++
+. Check that Java has installed correctly:
++
+[source, bash]
+----
+java -version
+----

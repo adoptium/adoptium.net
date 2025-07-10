@@ -1,0 +1,166 @@
+[
+  {
+    "name": "Alibaba",
+    "logo": "members/alibaba.png",
+    "logoPadding": "0.5em",
+    "url": "https://alibabacloud.com",
+    "tier": "strategic"
+  },
+  {
+    "name": "Azul",
+    "logo": "members/azul.svg",
+    "url": "https://www.azul.com",
+    "tier": "strategic"
+  },
+  {
+    "name": "Google",
+    "logo": "members/google.svg",
+    "url": "https://google.com",
+    "tier": "strategic"
+  },
+  {
+    "name": "Microsoft",
+    "logo": "members/microsoft.svg",
+    "url": "https://opensource.microsoft.com",
+    "tier": "strategic"
+  },
+  {
+    "name": "Red Hat",
+    "logo": "members/redhat.svg",
+    "url": "https://www.redhat.com",
+    "tier": "strategic"
+  },
+  {
+    "name": "Rivos",
+    "logo": "members/rivos.png",
+    "logoPadding": "1.8em",
+    "url": "https://www.rivosinc.com/",
+    "tier": "strategic"
+  },
+  {
+    "name": "Bloomberg",
+    "logo": "members/bloomberg.svg",
+    "url": "https://www.techatbloomberg.com/opensource",
+    "tier": "enterprise"
+  },
+  {
+    "name": "Canonical",
+    "logo": "members/canonical.png",
+    "url": "https://canonical.com/",
+    "tier": "enterprise"
+  },
+  {
+    "name": "Fujitsu",
+    "logo": "members/fujitsu-logo.png",
+    "url": "https://www.fujitsu.com",
+    "tier": "enterprise"
+  },
+  {
+    "name": "IBM",
+    "logo": "members/ibm-logo.png",
+    "url": "https://ibm.com",
+    "tier": "enterprise"
+  },
+  {
+    "name": "iJUG",
+    "logo": "members/ijug.png",
+    "url": "https://www.ijug.eu",
+    "tier": "participant"
+  },
+  {
+    "name": "Open Elements",
+    "logo": "members/openelements.svg",
+    "url": "https://open-elements.com",
+    "tier": "participant"
+  },
+  {
+    "name": "CarGurus",
+    "logo": "sustainers/cargurus.svg",
+    "url": "https://www.cargurus.com",
+    "tier": "sponsor"
+  },
+  {
+    "name": "Delphix",
+    "logo": "sustainers/delphix.svg",
+    "url": "https://www.delphix.com",
+    "tier": "sponsor"
+  },
+  {
+    "name": "Bedag",
+    "logo": "sustainers/bedag.png",
+    "url": "https://bedag.ch",
+    "tier": "sponsor"
+  },
+  {
+    "name": "Microsoft Azure",
+    "logo": "sustainers/azure.png",
+    "url": "https://azure.microsoft.com",
+    "tier": "infra"
+  },
+  {
+    "name": "Skytap",
+    "logo": "sustainers/skytap.png",
+    "url": "https://skytap.com",
+    "tier": "infra"
+  },
+  {
+    "name": "IBM",
+    "logo": "members/ibm-logo.png",
+    "url": "https://ibm.com",
+    "tier": "infra"
+  },
+  {
+    "name": "MacStadium",
+    "logo": "sustainers/macstadium.png",
+    "url": "https://www.macstadium.com",
+    "tier": "infra"
+  },
+  {
+    "name": "Equinix Metal",
+    "logo": "sustainers/equinix.png",
+    "url": "https://metal.equinix.com",
+    "tier": "infra"
+  },
+  {
+    "name": "OSUOSL",
+    "logo": "sustainers/osuosl.png",
+    "url": "https://osuosl.org",
+    "tier": "infra"
+  },
+  {
+    "name": "Marist College",
+    "logo": "sustainers/marist.png",
+    "url": "https://www.marist.edu",
+    "tier": "infra"
+  },
+  {
+    "name": "Macincloud",
+    "logo": "sustainers/macincloud.png",
+    "url": "https://macincloud.com",
+    "tier": "infra"
+  },
+  {
+    "name": "Netlify",
+    "logo": "sustainers/netlify-light.svg",
+    "url": "https://www.netlify.com",
+    "tier": "infra"
+  },
+  {
+    "name": "JFrog",
+    "logo": "sustainers/jfrog.svg",
+    "url": "https://jfrog.com",
+    "tier": "infra"
+  },
+  {
+    "name": "Fastly",
+    "logo": "sustainers/fastly.svg",
+    "url": "https://fastly.com",
+    "tier": "infra"
+  },
+  {
+    "name": "Rise",
+    "logo": "sustainers/rise.svg",
+    "url": "https://riseproject.dev",
+    "tier": "infra"
+  }
+]

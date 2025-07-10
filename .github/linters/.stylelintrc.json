@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "keyframes-name-pattern": null,
+    "at-rule-no-unknown": null,
+    "declaration-empty-line-before": null,
+    "number-leading-zero": null,
+    "color-function-notation": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "scss/at-rule-no-unknown": null
+  }
+}

@@ -1,0 +1,68 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#91499D;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#D31455;stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#91499D"/>
+      <stop offset="50%" style="stop-color:#D31455"/>
+      <stop offset="100%" style="stop-color:#FF1464"/>
+    </linearGradient>
+    <linearGradient id="terminalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D31455"/>
+      <stop offset="100%" style="stop-color:#FF1464"/>
+    </linearGradient>
+    <linearGradient id="ideaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF1464"/>
+      <stop offset="100%" style="stop-color:#91499D"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="24" cy="24" r="22" fill="url(#bgGradient)" stroke="#E4E8F3" stroke-width="0.5"/>
+  
+  <!-- Terminal/IDE Window -->
+  <rect x="8" y="14" width="32" height="20" rx="3" fill="url(#terminalGradient)" opacity="0.9"/>
+  <rect x="8" y="14" width="32" height="4" rx="3" fill="#91499D"/>
+  
+  <!-- Terminal dots -->
+  <circle cx="12" cy="16" r="1" fill="#E4E8F3"/>
+  <circle cx="15" cy="16" r="1" fill="#E4E8F3"/>
+  <circle cx="18" cy="16" r="1" fill="#E4E8F3"/>
+  
+  <!-- Code brackets -->
+  <path d="M14 22 L12 24 L14 26" stroke="#E4E8F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M34 22 L36 24 L34 26" stroke="#E4E8F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Code lines -->
+  <line x1="16" y1="22" x2="26" y2="22" stroke="#E4E8F3" stroke-width="1" stroke-linecap="round"/>
+  <line x1="18" y1="24" x2="28" y2="24" stroke="#E4E8F3" stroke-width="1" stroke-linecap="round"/>
+  <line x1="16" y1="26" x2="24" y2="26" stroke="#E4E8F3" stroke-width="1" stroke-linecap="round"/>
+  <line x1="18" y1="28" x2="30" y2="28" stroke="#E4E8F3" stroke-width="1" stroke-linecap="round"/>
+  <line x1="16" y1="30" x2="22" y2="30" stroke="#E4E8F3" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Innovation lightbulb -->
+  <circle cx="36" cy="12" r="6" fill="url(#ideaGradient)" opacity="0.8"/>
+  <path d="M33 12 C33 9.8 34.8 8 37 8 C39.2 8 41 9.8 41 12 C41 13.5 40.2 14.8 39 15.5 L39 17 L35 17 L35 15.5 C33.8 14.8 33 13.5 33 12 Z" fill="#E4E8F3"/>
+  <rect x="35.5" y="17" width="3" height="1" fill="#E4E8F3"/>
+  <rect x="36" y="18" width="2" height="0.5" fill="#E4E8F3"/>
+  
+  <!-- Collaboration/network nodes -->
+  <circle cx="12" cy="36" r="2" fill="url(#codeGradient)"/>
+  <circle cx="20" cy="38" r="2" fill="url(#codeGradient)"/>
+  <circle cx="28" cy="36" r="2" fill="url(#codeGradient)"/>
+  
+  <!-- Connection lines -->
+  <line x1="14" y1="36" x2="18" y2="38" stroke="url(#codeGradient)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="38" x2="26" y2="36" stroke="url(#codeGradient)" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Productivity arrows -->
+  <path d="M6 8 L10 8 L8 6 M10 8 L8 10" stroke="url(#codeGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M42 40 L38 40 L40 42 M38 40 L40 38" stroke="url(#codeGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Quality/check marks -->
+  <path d="M30 8 L32 10 L36 6" stroke="url(#ideaGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="33" cy="8" r="4" fill="none" stroke="url(#ideaGradient)" stroke-width="1" opacity="0.3"/>
+</svg>

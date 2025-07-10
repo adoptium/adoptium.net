@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShellBox component > renders correctly 1`] = `
+<div>
+  <pre
+    class="shell-box no-highlight"
+  >
+    <div
+      class="shell-box-top"
+    >
+      <button
+        aria-label="Copy to clipboard"
+      >
+        <i
+          class="fa fa-copy"
+        />
+      </button>
+    </div>
+    <code
+      class="shell-box-code"
+    >
+      mock-children-code
+    </code>
+  </pre>
+</div>
+`;

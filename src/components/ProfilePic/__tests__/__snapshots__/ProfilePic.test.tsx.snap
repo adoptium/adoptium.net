@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProfilePic component > should render correctly - no profile pic found 1`] = `
+<div>
+  <img
+    alt="Joe Bloggs"
+    class="ml-2 mb-0 rounded-full"
+    data-nimg="1"
+    decoding="async"
+    height="50"
+    loading="lazy"
+    src="/_next/image?url=%2Fimages%2Fauthors%2Ffoo.jpg&w=128&q=75"
+    srcset="/_next/image?url=%2Fimages%2Fauthors%2Ffoo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Ffoo.jpg&w=128&q=75 2x"
+    style="color: transparent;"
+    width="50"
+  />
+</div>
+`;
+
+exports[`ProfilePic component > should render correctly 1`] = `
+<div>
+  <img
+    alt="sample name"
+    class="ml-2 mb-0 rounded-full"
+    data-nimg="1"
+    decoding="async"
+    height="50"
+    loading="lazy"
+    src="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=128&q=75"
+    srcset="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=128&q=75 2x"
+    style="color: transparent;"
+    width="50"
+  />
+</div>
+`;

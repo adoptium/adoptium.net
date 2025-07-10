@@ -1,0 +1,246 @@
+[
+  {
+    "name": "AiP Safe",
+    "logo": "adopters/logo-aipsafe.png",
+    "url": "https://www.aipsafe.cz/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-aipsafe-white.png"
+  },
+  {
+    "name": "Apache SkyWalking",
+    "logo": "adopters/logo-apache-skywalking.svg",
+    "url": "https://skywalking.apache.org/",
+    "tier": "adopter"
+  },
+  {
+    "name": "Arm",
+    "logo": "adopters/logo-arm.svg",
+    "logoPadding": "1em",
+    "url": "https://www.arm.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-arm-white.svg"
+  },
+  {
+    "name": "Atlassian",
+    "logo": "adopters/logo-atlassian.svg",
+    "url": "https://www.atlassian.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-atlassian-white.svg"
+  },
+  {
+    "name": "Binero Group",
+    "logo": "adopters/logo-binero.png",
+    "url": "https://binero.com/en",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-binero-white.png"
+  },
+  {
+    "name": "Blockbax",
+    "logo": "adopters/logo-blockbax.svg",
+    "url": "https://blockbax.com/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-blockbax-white.svg"
+  },
+  {
+    "name": "CarGurus",
+    "logo": "adopters/logo-cargurus.png",
+    "url": "https://www.cargurus.com/",
+    "tier": "adopter"
+  },
+  {
+    "name": "cosmoONE",
+    "logo": "adopters/logo-cosmoone.png",
+    "url": "https://www.cosmo-one.gr/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-cosmoone-white.png"
+  },
+  {
+    "name": "Delphix",
+    "logo": "adopters/logo-delphix.svg",
+    "url": "https://www.delphix.com",
+    "tier": "adopter"
+  },
+  {
+    "name": "Doping Technology",
+    "logo": "adopters/logo-doping-tech.svg",
+    "url": "https://dopingtech.net",
+    "tier": "adopter"
+  },
+  {
+    "name": "Dynatrace",
+    "logo": "adopters/logo-dynatrace.png",
+    "url": "https://www.dynatrace.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-dynatrace-white.png"
+  },
+  {
+    "name": "Faktor Zehn GmbH",
+    "logo": "adopters/logo-faktorzehn.svg",
+    "url": "https://www.faktorzehn.com/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-faktorzehn-white.svg"
+  },
+  {
+    "name": "gematik GmbH",
+    "logo": "adopters/logo-gematik.png",
+    "url": "https://www.gematik.de/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-gematik-white.png"
+  },
+  {
+    "name": "GoCD",
+    "logo": "adopters/logo-gocd.svg",
+    "logoPadding": "1em",
+    "url": "https://www.gocd.org/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-gocd-white.svg"
+  },
+  {
+    "name": "Jenkins",
+    "logo": "adopters/logo-jenkins.svg",
+    "url": "https://jenkins.io/",
+    "tier": "adopter"
+  },
+  {
+    "name": "Kestra",
+    "logo": "adopters/logo-kestra.svg",
+    "url": "https://kestra.io/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-kestra-white.svg"
+  },
+  {
+    "name": "MediaMarktSaturn Technology",
+    "logo": "adopters/logo-mediamarktsaturn.png",
+    "url": "https://mms.tech/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-mediamarktsaturn-white.png"
+  },
+  {
+    "name": "Mercedes-Benz Tech Innovation GmbH",
+    "logo": "adopters/logo-mercedes-benz.png",
+    "url": "https://opensource.mercedes-benz.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-mercedes-benz-white.png"
+  },
+  {
+    "name": "Michelin",
+    "logo": "adopters/logo-michelin.svg",
+    "url": "https://opensource.michelin.io/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-michelin-white.svg"
+  },
+  {
+    "name": "Microsoft",
+    "logo": "adopters/logo-microsoft.svg",
+    "url": "https://microsoft.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-microsoft-white.svg"
+  },
+  {
+    "name": "Mindus SARL",
+    "logo": "adopters/logo-mindus.svg",
+    "url": "https://www.mindus.co/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-mindus-white.svg"
+  },
+  {
+    "name": "MongoDB",
+    "logo": "adopters/logo-mongodb.svg",
+    "url": "https://mongodb.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-mongodb-white.svg"
+  },
+  {
+    "name": "OpenElements",
+    "logo": "adopters/logo-open-elements.svg",
+    "url": "https://www.open-elements.com/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-open-elements-white.svg"
+  },
+  {
+    "name": "R3m Score",
+    "logo": "adopters/logo-r3m-score.png",
+    "logoPadding": "1em",
+    "url": "https://r3mscore.com/",
+    "tier": "adopter"
+  },
+  {
+    "name": "Radiant Logic",
+    "logo": "adopters/logo-radiant-logic.png",
+    "url": "https://www.radiantlogic.com/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-radiant-logic-white.png"
+  },
+  {
+    "name": "Red Hat",
+    "logo": "adopters/Logo-RedHat-A-Color-RGB.svg",
+    "url": "https://developers.redhat.com",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/Logo-RedHat-A-White-RGB.svg"
+  },
+  {
+    "name": "Scentbird",
+    "logo": "adopters/logo-scentbird.png",
+    "url": "https://www.scentbird.com",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-scentbird-white.png"
+  },
+  {
+    "name": "Societe Generale",
+    "logo": "adopters/logo-societe-generale.svg",
+    "url": "https://www.societegenerale.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-societe-generale-white.svg"
+  },
+  {
+    "name": "Starburst",
+    "logo": "adopters/logo-starburst.svg",
+    "url": "https://starburst.io/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-starburst-white.svg"
+  },
+  {
+    "name": "T-Systems",
+    "logo": "adopters/logo-t-systems.svg",
+    "url": "https://www.t-systems.com/",
+    "tier": "adopter",
+    "featured": true,
+    "logo_white": "adopters/logo-t-systems-white.svg"
+  },
+  {
+    "name": "Timefold",
+    "logo": "adopters/logo-timefold.png",
+    "url": "https://timefold.ai/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-timefold-white.png"
+  },
+  {
+    "name": "Tirasa",
+    "logo": "adopters/logo-tirasa.svg",
+    "url": "https://www.tirasa.net/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-tirasa-white.svg"
+  },
+  {
+    "name": "Total Validator",
+    "logo": "adopters/logo-total-validator.svg",
+    "url": "https://www.totalvalidator.com/",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-total-validator-white.svg"
+  },
+  {
+    "name": "Trend Micro",
+    "logo": "adopters/logo-trend-micro.png",
+    "url": "https://www.trendmicro.com/",
+    "tier": "adopter"
+  }
+]

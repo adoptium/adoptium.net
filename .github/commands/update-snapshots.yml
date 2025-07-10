@@ -1,0 +1,13 @@
+# Learn more about the syntax here:
+# https://docs.github.com/early-access/github/save-time-with-slash-commands/syntax-for-user-defined-slash-commands
+---
+trigger: update-snapshot
+title: Update Snapshots
+surfaces:
+  - pull_request
+description: Updates Vitest snapshots and commits the changes to the current PR
+
+steps:
+  # Trigger the GitHub Action workflow
+  - type: repository_dispatch
+    eventType: update-snapshot

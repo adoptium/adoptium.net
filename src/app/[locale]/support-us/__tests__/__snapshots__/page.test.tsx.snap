@@ -1,0 +1,504 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Support Us page > renders correctly 1`] = `
+<div>
+  <div
+    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+  >
+    <div
+      class="w-full relative"
+    >
+      <div
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
+      />
+      <div
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
+      >
+        <div
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
+        >
+          <div
+            class="justify-start items-center gap-3 inline-flex"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <div
+              class="text-rose-600 text-base font-bold leading-normal"
+            >
+              Support Us
+            </div>
+          </div>
+          <div
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            What we’re trying to achieve
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] max-w-[860px] mx-auto"
+        >
+          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+        </div>
+      </div>
+    </div>
+  </div>
+  <section
+    class="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-8"
+  >
+    <div
+      class="text-center"
+    >
+      <h2
+        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+      >
+        Ways to support us
+      </h2>
+      <p
+        class="text-grey mt-6 font-normal text-base"
+      >
+        If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group
+      </p>
+    </div>
+    <div
+      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center "
+    >
+      <div
+        class=""
+      >
+        <div
+          class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+          data-testid="common-card"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              How to contribute
+            </h3>
+            <p
+              class="mt-6 text-xl text-grey font-normal"
+            >
+              Contribute to our projects with technical and non-technical development
+            </p>
+          </div>
+          <a
+            href="/contributing/"
+          >
+            <button
+              class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
+            >
+              How to contribute
+            </button>
+          </a>
+        </div>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+          data-testid="common-card"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Become a sustainer
+            </h3>
+            <p
+              class="mt-6 text-xl text-grey font-normal"
+            >
+              Join us in strengthening the future of Eclipse Temurin
+            </p>
+          </div>
+          <a
+            href="/sustainers"
+          >
+            <button
+              class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
+            >
+              Become a sustainer
+            </button>
+          </a>
+        </div>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+          data-testid="common-card"
+        >
+          <div
+            class="grow"
+          >
+            <h3
+              class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
+            >
+              Become a member
+            </h3>
+            <p
+              class="mt-6 text-xl text-grey font-normal"
+            >
+              Join us shaping the future of Eclipse Adoptium
+            </p>
+          </div>
+          <a
+            href="/join"
+          >
+            <button
+              class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
+            >
+              Become a member
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="bg-[#0E002A] pt-16"
+  >
+    <div
+      class="pt-16   pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-8 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+    >
+      <div
+        class=" w-full lg:w-[55%] text-center lg:text-left"
+      >
+        <div>
+          <h2
+            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+          >
+            Help promote Temurin
+          </h2>
+          <p
+            class="text-grey mt-6 font-normal text-base"
+          >
+            If you are one of the millions who download and use Temurin and would like to promote our project and our work, there are several ways you can help.
+          </p>
+        </div>
+        <div>
+          <div
+            class="text-grey justify-start inline-flex pt-4"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-4"
+            >
+              List your company on our 
+              <a
+                class="text-pink"
+                href="/adopters"
+              >
+                Adopters page
+              </a>
+              , which helps other companies see how Temurin can be used for many workloads in a diverse set of industries.
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-4"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-4"
+            >
+              Write a blog post, article or 
+              <a
+                class="text-pink"
+                href="https://www.meetup.com/adoptium-summit-series/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                conference talk
+              </a>
+               about the story of your migration to or use of Temurin is helping your company.
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-4"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-4"
+            >
+              Participate in a 
+              <a
+                class="text-pink"
+                href="https://forms.gle/WyZeYW7SNXpVYpKHA"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                case study
+              </a>
+              , if you have a compelling use case that showcases one or more of the benefits of Temurin, such as a more secure supply chain or use of our early-access build to prepare your company to move to best-in-class newer versions of Java(TM).
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-4"
+          >
+            <div
+              class="pt-1"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 14 14"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="#FF1464"
+                  height="8"
+                  rx="2"
+                  width="8"
+                  x="3"
+                  y="3"
+                />
+                <rect
+                  height="11"
+                  rx="3.5"
+                  stroke="#FF1464"
+                  stroke-opacity="0.25"
+                  stroke-width="3"
+                  width="11"
+                  x="1.5"
+                  y="1.5"
+                />
+              </svg>
+            </div>
+            <div
+              class="pl-4"
+            >
+              Follow us in social media, and share the stories you find interesting.
+            </div>
+          </div>
+          <div
+            class="text-grey justify-start inline-flex pt-4"
+          >
+            <div>
+              We thank you for any of the creative ways you help promote Temurin.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class=""
+        >
+          <div
+            class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
+            data-testid="common-card"
+          >
+            <div
+              class="grow"
+            >
+              <h3
+                class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
+              >
+                Media & Promotion
+              </h3>
+              <p
+                class="mt-6 text-xl text-grey font-normal"
+              >
+                Follow and promote the latest updates from the Eclipse Adoptium Project
+              </p>
+            </div>
+            <a
+              href="/news/"
+            >
+              <button
+                class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
+              >
+                Learn More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="relative xl:px-0 px-6 md:py-32 py-16 "
+  >
+    <img
+      alt="gradient overlay"
+      class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <img
+      alt="gradient overlay mobile"
+      class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
+      sizes="100vw"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+    />
+    <div
+      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+    >
+      <img
+        alt="message icon"
+        class="!mb-0"
+        data-nimg="1"
+        decoding="async"
+        height="120"
+        loading="lazy"
+        src="/images/icons/message.svg"
+        style="color: transparent;"
+        width="120"
+      />
+      <p
+        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
+      >
+        Connect with the community
+      </p>
+      <span
+        class="text-gray-300 text-base leading-6"
+      >
+        Join our Slack channel to discuss work and reach out to project maintainers.
+      </span>
+      <a
+        href="/slack"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        >
+          Learn More
+        </button>
+      </a>
+    </div>
+  </section>
+</div>
+`;

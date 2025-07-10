@@ -1,0 +1,173 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TemurinNightlyTable component > renders correctly - no data 1`] = `
+<div>
+  <div
+    class="text-center text-gray-400 py-8"
+  >
+    Text
+  </div>
+</div>
+`;
+
+exports[`TemurinNightlyTable component > renders correctly 1`] = `
+<div>
+  <div
+    class="overflow-x-auto rounded-xl bg-[#1B1132]"
+  >
+    <table
+      class="min-w-full divide-y divide-[#3E3355]"
+    >
+      <thead
+        class="bg-[#26193F]"
+      >
+        <tr>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
+            SHA256
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="bg-[#1B1132] divide-y divide-[#3E3355]"
+      >
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Os_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Type_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+          >
+            release_name_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Jan 1, 2020
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <a
+              href="https://link_mock/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              extension_mock
+            </a>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <span
+              class="text-gray-500"
+            >
+              Text
+            </span>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            <button
+              class="text-pink"
+            >
+              Text
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Os_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Type_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+          >
+            release_name_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Jan 1, 2020
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <a
+              href="https://link_mock/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              extension_mock
+            </a>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <a
+              href="https://installer_link_mock/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              installer_extension_mock
+            </a>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            <button
+              class="text-pink"
+            >
+              Text
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

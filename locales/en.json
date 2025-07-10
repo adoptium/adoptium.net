@@ -1,0 +1,210 @@
+{
+  "HomePage": {
+    "the-power": "The Power of Eclipse Temurin®",
+    "download-temurin-for": "Download Temurin {defaultVersion} for {userOSName} {arch}",
+    "download-temurin-short": "Download Temurin {defaultVersion}",
+    "other-downloads": "Other Downloads",
+    "download-temurin-button": "Download Temurin®"
+  },
+  "NotFoundPage": {
+    "title": "Sorry, we couldn't find this page",
+    "back-to-home": "Back to Home"
+  },
+  "Marketplace": {
+    "title": "Adoptium® Marketplace",
+    "subtitle": "Marketplace",
+    "description": "Java™ is the world's leading programming language and platform. The Adoptium Marketplace promotes high-quality, TCK certified and AQAvit verified runtimes for use across the Java ecosystem.",
+    "VendorSelector": {
+      "vendors-selected": "{selected} of {total} vendors selected"
+    },
+    "Releases": {
+      "download": "Download",
+      "build-date": "Build Date",
+      "vendor": "Vendor"
+    }
+  },
+  "PowerOfTemurin": {
+    "title": "The Power of Eclipse Temurin",
+    "description": "OpenJDK Based: Eclipse Temurin offers high-performance, cross-platform, open source Java™ Runtimes binaries that are enterprise-ready and Java SE TCK certified and AQAvit verified for general use in the Java Ecosystem.",
+    "button": "Business Benefits",
+    "benefits": {
+      "performance": {
+        "title": "Performance & Reliability",
+        "description": "Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments."
+      },
+      "cost": {
+        "title": "Cost-Effective Innovation",
+        "description": "Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance."
+      },
+      "developers": {
+        "title": "Empowering Developers",
+        "description": "Boost developer productivity with Eclipse Temurin's consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide."
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "Prebuilt OpenJDK Binaries for Free!",
+    "description": "Java™ is the world's leading programming language and platform. The Adoptium Working Group promotes and supports high-quality, TCK certified runtimes and associated technology for use across the Java ecosystem. Eclipse Temurin is the name of the OpenJDK distribution from Adoptium.",
+    "features": {
+      "secure-supply-chain": {
+        "title": "Secure Supply Chain",
+        "description": "Built with robust security standards, ensuring a trusted, transparent, and vulnerability-free supply chain."
+      },
+      "aqavit-verification": {
+        "title": "AQAvit Verification",
+        "description": "Thoroughly tested using AQAvit to guarantee performance, reliability, and security in every build."
+      },
+      "performance-optimization": {
+        "title": "Performance Optimization",
+        "description": "Engineered for optimal performance, delivering speed, efficiency, and stability across diverse environments."
+      },
+      "cross-platform": {
+        "title": "Cross-Platform Consistency",
+        "description": "Consistent behavior and builds across all major operating systems and hardware architectures."
+      },
+      "community-driven": {
+        "title": "Community Driven Development",
+        "description": "Eclipse Adoptium projects are shaped by a vibrant, global community that is continuously improving and innovating."
+      },
+      "enterprise-ready": {
+        "title": "Enterprise Ready Support",
+        "description": "Backed by enterprise-grade commercial supporters, ensuring seamless integration, scalability, and long-term sustainability."
+      }
+    }
+  },
+  "RandomContributors": {
+    "thank-you": "Thank you to our <highlight>300+</highlight> contributors",
+    "thank-you-mobile": "Thank you <linebreak></linebreak> to our <highlight>300+</highlight> contributors"
+  },
+  "RandomContributor": {
+    "thank-you": "Thank you <name></name> for making <contributions></contributions> to <repo></repo>",
+    "contribution-singular": "contribution",
+    "contribution-plural": "contributions"
+  },
+  "DownloadCounter": {
+    "title": "Powering Millions Worldwide with Eclipse Temurin",
+    "total-download-docker-pulls-ever": "Total Downloads/Docker pulls ever",
+    "loading": "Loading..."
+  },
+  "WaysToSupport": {
+    "title": "Ways to support us",
+    "description": "If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group",
+    "contribute": {
+      "how-to-contribute": "How to Contribute",
+      "description": "Contribute to our projects with technical and non-technical development. Join our community to help shape the future of Java runtimes."
+    },
+    "sustainers": {
+      "title": "Become a Sustainer",
+      "description": "Join us in strengthening the future of Eclipse Temurin"
+    },
+    "member": {
+      "title": "Become a Member",
+      "description": "Join us shaping the future of Eclipse Adoptium"
+    }
+  },
+  "AuthorList": {
+    "documentation-authors": "Documentation Authors"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "Help us make these docs great!",
+    "all-adoptium-docs-are-open-source": "All Adoptium docs are open source. See something that's wrong or unclear?",
+    "edit-this-page": "Edit this page"
+  },
+  "Asciidoc": {
+    "table-of-contents": "Table of Contents",
+    "warn-default-locale": "This page is the <englishVersionLink>English version</englishVersionLink> because it is not available in your language. Please help us by translating this page into your language. See our <translationGuideLink>translation guide</translationGuideLink> for more information.",
+    "warn-outdated": "This localized page is based on a <previousEnglishVersionLink>previous version of the English page</previousEnglishVersionLink> and might be inaccurate. Please help us by updating this page to match the <lastEnglishVersionLink>latest version of the English page</lastEnglishVersionLink>. See our <translationGuideLink>translation guide</translationGuideLink> for more information."
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "Latest news and updates",
+    "subtitle": "Follow the latest updates from the Eclipse Adoptium Project",
+    "see-all-news": "See all news",
+    "read-more": "Read More"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "Discover all our projects",
+    "description": "Eclipse Adoptium provides runtime binaries that are high performance, enterprise-caliber, cross-platform, open-source licensed, Java SE TCK-tested and compliant for general use across the Java ecosystem. Eclipse Adoptium also provides artifacts including open-source infrastructure as code, a comprehensive continuous integration build and test farm, and extensive quality assurance tests. These artifacts may be used by Eclipse Adoptium projects and other runtime technology builders to ensure the provision of secure, Java SE TCK-tested and compliant, production-ready runtimes."
+  },
+  "LogoCarousel": {
+    "title": "Temurin is trusted by millions, including these leading adopters:"
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "Compare the checksum below with the file you downloaded to ensure it's complete and unmodified.",
+    "verify-using": "Verify using:",
+    "replace-file": "Replace \"file\" with the actual filename you downloaded",
+    "close": "Close",
+    "copied": "Copied",
+    "copy": "Copy"
+  },
+  "TemurinReleases": {
+    "title": "Download Temurin® JDK",
+    "latest-releases": "Latest Releases",
+    "description": "Pick a version, package type, JDK/JRE, and download the binaries."
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "Reset to Defaults",
+        "loading-versions": "Loading versions...",
+        "filter-releases": "Filter Releases",
+        "version": "Version",
+        "operating-system": "Operating System",
+        "architecture": "Architecture",
+        "package-type": "Package Type",
+        "any-os": "Any OS",
+        "any-architecture": "Any Architecture",
+        "any-package-type": "Any Package Type"
+      },
+      "ReleaseLinks": {
+        "release-notes": "Release notes",
+        "installation-guide": "Installation guide",
+        "supported-platforms": "Supported Platforms",
+        "source-code": "Source Code"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "This build is JCK certified",
+        "this-build-is-aqavit-verified": "This build is AQAvit Verified",
+        "checksum": "Checksum",
+        "no-releases-found": "No releases found",
+        "no-releases-found-description": "No releases match your current filter criteria. Try adjusting your selections or reset all filters to see available releases."
+      }
+    },
+    "Nightly": {
+      "title": "Nightly Builds",
+      "subtitle": "Early Access",
+      "description": "Get the latest nightly builds for testing and development purposes.",
+      "be-aware": "Please be aware that this archive contains intermediate builds created as a development step towards a <fullReleaseLink>full release</fullReleaseLink>. Intermediate builds are ephemeral, and may disappear in the future.",
+      "notice-title": "The following notice applies to intermediate builds:",
+      "quoted-notice": "This is an intermediate build made available for testing purposes only. The code is untested and presumed incompatible with the Java SE specification. You should not deploy or write to this code, but instead use the tested and certified Java SE compatible version of the code. Redistribution of this build must retain this notice.",
+      "unsupported-in-production": "These builds are unsupported and not for use in production.",
+      "latest-releases": "Latest Releases",
+      "download-not-available": "Not Available",
+      "no-results": "No nightly builds available for the selected version.",
+      "checksum": "Checksum",
+      "select-options-filter": "Select options to filter the list of nightly builds",
+      "version": "Version",
+      "number-of-builds": "Number of builds",
+      "builds-prior-to": "Builds prior to",
+      "platform": "Platform",
+      "type": "Type",
+      "build-tag": "Build/Tag",
+      "date": "Date",
+      "binary": "Binary",
+      "installer": "Installer",
+      "release-name": "Release Name"
+    },
+    "VersionSelector": {
+      "all-versions": "All Versions"
+    },
+    "DownloadMethods": {
+      "other-ways-to-download-temurin": "Other ways to download Temurin",
+      "description": "There are multiple different ways to get Eclipse Temurin beyond direct downloads. The curated list below shows some of these options for installing high-performance, cross-platform, open-source OpenJDK runtime binaries."
+    }
+  },
+  "ReleaseNotes": {
+    "title": "Release Notes",
+    "couldnt-find-release-notes": "Oops... We couldn't find those release notes",
+    "not-found-helper": "Please ensure that you have a specified a version using the version URL parameter:",
+    "description": "This section organizes the changes in the selected update release by the main component under which each issue is filed."
+  }
+}

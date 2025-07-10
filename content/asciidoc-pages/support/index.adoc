@@ -1,0 +1,67 @@
+= Temurin(TM) Support
+:page-authors: gdams, karianna, sxa, tellison, SueChaplain, sxa555, mvitz, ParkerM, M-Davies, Malax, lasombra, jeffalder, hendrikebbers, douph1, andrew-m-leonard, mr-david-owens, DanHeidinga, sophia-guo, zdtsw, adamfarley, garydgregory, mtughan, xavierfacq
+:toc:
+:partialDir: _partials
+
+== Community Support
+
+We are prepared to stand behind our release quality
+binaries, so each build that is identified as a release receives support
+via the Adoptium(R) community. Our support means that you can
+https://github.com/adoptium/adoptium-support/issues/new/choose[raise an
+issue] to describe a bug you have found in the build, and we will work
+with you and the appropriate development team to resolve it. Any fixes
+we identify will be delivered as part of the next Adoptium release.
+
+As a community of open source developers, our commitment is to triage
+any issues raised and champion them in the appropriate source code
+project. Of course, if the problem arises from the way we build and test
+the code we can fix that directly. For dedicated support with service
+level agreements, you should contact commercial companies offering
+support on Temurin binaries. Read
+https://medium.com/@javachampions/java-is-still-free-3-0-0-ocrt-2021-bca75c88d23b[Java Is Still Free (3.0.0)]
+for some background information about Java support options.
+
+== Commercial Support
+
+We understand that some users prefer commercial, paid-for support of Eclipse Temurin. Eclipse does not provide such services but please see our link:/temurin/commercial-support[Commercial Support] page where a list of companies offering contracted support is maintained.
+
+== Release Roadmap
+
+The frequency of Temurin releases is guided by the schedule of our
+dependencies.
+
+OpenJDK provide a new feature release every six months, and a
+maintenance/security update based upon each active release every three
+months. The release dates for those from the OpenJDK project are typically the
+https://www.oracle.com/security-alerts/[third Tuesday] of
+January, April, July and October. We will follow this schedule for
+publishing binary releases from Adoptium to ensure you get the latest,
+most secure builds.
+
+In addition, every two years since 2021 one feature release
+will be designated as a Long Term Supported (LTS) release. We will
+support LTS releases for at least four years. This assurance will allow
+you to stay on a well-defined code stream, and give you time to migrate
+to the next, new, stable, LTS release when it becomes available.
+
+Based upon this roadmap, here is the timetable showing the current release
+dates of the various OpenJDK releases used to build Eclipse Temurin.  Note
+that the dates below are from the
+https://www.java.com/releases[upstream OpenJDK project page] and should
+not be considered the date which the Adoptium project will have binaries
+available - there will be a short delay relative to these dates while we
+complete our extensive build and test cycles which can take up to three
+weeks.  Our
+https://calendar.google.com/calendar/embed?src=c_56d7263c0ceda87a1678f6144426f23fb53721480b5ff71b073afb51091e5492%40group.calendar.google.com[Google Calendar with our release cycles] shows the expected cycle lengths for each
+of our releases.  We always prioritise the most popular platforms which
+will typically appear within a few days of these dates.
+
+include::{partialDir}/support-table.adoc[]
+
+^[1]^ As a general philosophy, Adoptium will continue to build binaries
+for LTS releases as long as the corresponding upstream source is
+actively maintained.
+
+^[2]^ End of Service/Support Life - this code stream is no longer being
+maintained. No further builds of Eclipse Temurin are planned.

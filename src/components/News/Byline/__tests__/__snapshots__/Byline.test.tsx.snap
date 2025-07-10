@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Byline component > should render correctly 1`] = `
+<div>
+  <div
+    class="flex justify-center items-center gap-5"
+  >
+    <img
+      alt="Adoptium PMC"
+      class="ml-2 mb-0 rounded-full"
+      data-nimg="1"
+      decoding="async"
+      height="30"
+      loading="lazy"
+      src="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=64&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=64&q=75 2x"
+      style="color: transparent;"
+      width="30"
+    />
+    <span
+      class="text-[16px] font-bold leading-[150%] text-white"
+    >
+      <a
+        href="/news/author/pmc"
+      >
+        <span
+          class="text-primary pr-2"
+        >
+          Adoptium PMC
+          ,
+        </span>
+         
+        2021-07-01
+      </a>
+    </span>
+  </div>
+</div>
+`;

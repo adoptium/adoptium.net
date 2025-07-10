@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sitemap > generates the expected sitemap snapshot 1`] = `
+[
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de",
+        "en-GB": "https://adoptium.net/en-GB",
+        "es": "https://adoptium.net/es",
+        "fr": "https://adoptium.net/fr",
+        "pt-BR": "https://adoptium.net/pt-BR",
+        "zh-CN": "https://adoptium.net/zh-CN",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/page-1",
+        "en-GB": "https://adoptium.net/en-GB/page-1",
+        "es": "https://adoptium.net/es/page-1",
+        "fr": "https://adoptium.net/fr/page-1",
+        "pt-BR": "https://adoptium.net/pt-BR/page-1",
+        "zh-CN": "https://adoptium.net/zh-CN/page-1",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/page-1",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/page-2",
+        "en-GB": "https://adoptium.net/en-GB/page-2",
+        "es": "https://adoptium.net/es/page-2",
+        "fr": "https://adoptium.net/fr/page-2",
+        "pt-BR": "https://adoptium.net/pt-BR/page-2",
+        "zh-CN": "https://adoptium.net/zh-CN/page-2",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/page-2",
+  },
+  {
+    "lastModified": 2025-05-01T00:00:00.000Z,
+    "url": "https://adoptium.net/news/2025/05/post-1",
+  },
+  {
+    "lastModified": 2024-12-01T00:00:00.000Z,
+    "url": "https://adoptium.net/news/2024/12/other-post/",
+  },
+]
+`;

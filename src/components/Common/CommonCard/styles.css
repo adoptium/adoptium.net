@@ -1,0 +1,24 @@
+.common-card {
+  border-radius: 1.5rem;
+  background: var(--tones-white-5, rgba(255, 255, 255, 5%));
+  backdrop-filter: blur(12px);
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.common-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: linear-gradient(285deg, #30195edb 40.01%, #574974f7 63.36%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}

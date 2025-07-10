@@ -1,0 +1,22 @@
+{
+  "name": "Eclipse Adoptium",
+  "short_name": "Adoptium",
+  "description": "Eclipse Adoptium provides prebuilt OpenJDK binaries from a fully open source set of build scripts and infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#410170",
+  "theme_color": "#410170",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/images/adoptium-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/adoptium-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

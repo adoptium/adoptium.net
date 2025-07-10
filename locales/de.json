@@ -1,0 +1,218 @@
+{
+  "HomePage": {
+    "the-power": "Die Kraft von Eclipse Temurin®",
+    "download-temurin-for": "Temurin {defaultVersion} für {userOSName} {arch} herunterladen",
+    "download-temurin-short": "Temurin {defaultVersion} herunterladen",
+    "other-downloads": "Andere Downloads",
+    "download-temurin-button": "Temurin® herunterladen"
+  },
+  "NotFoundPage": {
+    "title": "Entschuldigung, wir konnten diese Seite nicht finden",
+    "back-to-home": "Zurück zur Startseite"
+  },
+  "Marketplace": {
+    "title": "Adoptium® Marktplatz",
+    "subtitle": "Marktplatz",
+    "description": "Java™ ist die führende Programmiersprache und Plattform der Welt. Der Adoptium-Marktplatz fördert hochwertige, TCK-zertifizierte und AQAvit-geprüfte Laufzeitumgebungen für den Einsatz im gesamten Java-Ökosystem.",
+    "VendorSelector": {
+      "vendors-selected": "{selected} von {total} Anbieter ausgewählt"
+    },
+    "Releases": {
+      "download": "Herunterladen",
+      "build-date": "Build-Datum",
+      "vendor": "Anbieter"
+    }
+  },
+  "PowerOfTemurin": {
+    "title": "Die Kraft von Eclipse Temurin",
+    "description": "OpenJDK-basiert: Eclipse Temurin bietet leistungsstarke, plattformübergreifende, quelloffene Java™-Runtimes-Binärdateien, die für den Unternehmenseinsatz bereit sind und die Java SE TCK-zertifiziert und AQAvit-überprüft sind für den allgemeinen Einsatz im Java-Ökosystem.",
+    "button": "Geschäftsvorteile",
+    "benefits": {
+      "performance": {
+        "title": "Leistung & Zuverlässigkeit",
+        "description": "Führen Sie Ihre Unternehmensanwendungen mit Vertrauen aus – mit Eclipse Temurin, einer sicheren, leistungsstarken Java-Laufzeitumgebung, die gründlich auf Stabilität getestet und für den nahtlosen Betrieb in verschiedensten Umgebungen optimiert wurde."
+      },
+      "cost": {
+        "title": "Kosteneffiziente Innovation",
+        "description": "Nutzen Sie hochwertige Open-Source-Java-Lösungen ohne Lizenzgebühren. Senken Sie Kosten und profitieren Sie von einem robusten Ökosystem mit langfristiger Nachhaltigkeit und unternehmensfähiger Leistung."
+      },
+      "developers": {
+        "title": "Entwickler stärken",
+        "description": "Steigern Sie die Produktivität Ihrer Entwickler mit den konsistenten, plattformübergreifenden Builds von Eclipse Temurin. Konzentrieren Sie sich auf Innovation mit einer zuverlässigen Laufzeit, der Millionen weltweit vertrauen."
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "Kostenlose vorgefertigte OpenJDK-Binärdateien!",
+    "description": "Java™ ist die führende Programmiersprache und Plattform der Welt. Die Adoptium Working Group fördert und unterstützt hochwertige, TCK-zertifizierte Laufzeiten und zugehörige Technologien für den Einsatz im gesamten Java-Ökosystem. Eclipse Temurin ist die OpenJDK-Distribution von Adoptium.",
+    "features": {
+      "secure-supply-chain": {
+        "title": "Sichere Lieferkette",
+        "description": "Erstellt nach strengen Sicherheitsstandards – für eine vertrauenswürdige, transparente und fehlerfreie Lieferkette."
+      },
+      "aqavit-verification": {
+        "title": "AQAvit-Verifizierung",
+        "description": "Gründlich getestet mit AQAvit, um Leistung, Zuverlässigkeit und Sicherheit in jedem Build zu gewährleisten."
+      },
+      "performance-optimization": {
+        "title": "Leistungsoptimierung",
+        "description": "Für optimale Leistung entwickelt – bietet Geschwindigkeit, Effizienz und Stabilität in verschiedenen Umgebungen."
+      },
+      "cross-platform": {
+        "title": "Plattformübergreifende Konsistenz",
+        "description": "Konsistentes Verhalten und konsistente Builds auf allen gängigen Betriebssystemen und Hardwarearchitekturen."
+      },
+      "community-driven": {
+        "title": "Community-getriebene Entwicklung",
+        "description": "Die Eclipse Adoptium-Projekte werden von einer lebendigen, globalen Community gestaltet, die ständig verbessert und innoviert."
+      },
+      "enterprise-ready": {
+        "title": "Unternehmensgerechter Support",
+        "description": "Unterstützt von kommerziellen Partnern auf Unternehmensniveau – für reibungslose Integration, Skalierbarkeit und langfristige Nachhaltigkeit."
+      }
+    }
+  },
+  "RandomContributors": {
+    "thank-you": "Danke an unsere <highlight>300+</highlight> Mitwirkenden",
+    "thank-you-mobile": "Danke <linebreak></linebreak> an unsere <highlight>300+</highlight> Mitwirkenden"
+  },
+  "RandomContributor": {
+    "thank-you": "Danke <name></name> für <contributions></contributions> zu <repo></repo>",
+    "contribution-singular": "Beitrag",
+    "contribution-plural": "Beiträge"
+  },
+  "DownloadCounter": {
+    "title": "Millionen weltweit vertrauen auf Eclipse Temurin",
+    "total-download-docker-pulls-ever": "Gesamte Downloads/Docker-Pulls",
+    "loading": "Lädt..."
+  },
+  "WaysToSupport": {
+    "title": "Unterstützungsmöglichkeiten",
+    "description": "Wenn Sie Eclipse-Technologien schätzen, ziehen Sie bitte in Betracht, Sponsor über die Eclipse Foundation zu werden. Beiträge von Nutzern wie Ihnen helfen dabei, die Arbeit der Adoptium Working Group zu finanzieren. Alle Gelder, die der Eclipse Foundation gespendet werden, unterstützen die Eclipse-Community über die Adoptium Working Group.",
+    "contribute": {
+      "how-to-contribute": "So können Sie beitragen",
+      "description": "Beteiligen Sie sich mit technischen und nicht-technischen Beiträgen. Treten Sie unserer Community bei und helfen Sie mit, die Zukunft der Java-Laufzeiten mitzugestalten."
+    },
+    "sustainers": {
+      "title": "Werden Sie Fördermitglied",
+      "description": "Unterstützen Sie uns dabei, die Zukunft von Eclipse Temurin zu stärken"
+    },
+    "member": {
+      "title": "Werden Sie Mitglied",
+      "description": "Gestalten Sie mit uns die Zukunft von Eclipse Adoptium"
+    }
+  },
+  "AuthorList": {
+    "documentation-authors": "Dokumentations-Autoren"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "Hilf uns, diese Dokumentation zu verbessern!",
+    "all-adoptium-docs-are-open-source": "Alle Adoptium-Dokumentationen sind Open Source. Etwas falsch oder unklar?",
+    "edit-this-page": "Diese Seite bearbeiten"
+  },
+  "Asciidoc": {
+    "table-of-contents": "Inhaltsverzeichnis",
+    "warn-default-locale": "Dies ist die <englishVersionLink>englische Version</englishVersionLink> der Seite, da aktuell noch keine deutsche Übersetzung verfügbar ist. Du kannst uns helfen, diese Seite auf Deutsch bereitzustellen. In unserem <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> findest du mehr Informationen.",
+    "warn-outdated": "Die deutsche Übersetzung dieser Seite basiert auf einem <previousEnglishVersionLink>nicht mehr aktuellen englischen Text</previousEnglishVersionLink> und könnte ungenau sein. Du kannst helfen, die Seite zu aktualisieren und eine überarbeitete Übersetzung der <lastEnglishVersionLink>aktuellen englischen Seite</lastEnglishVersionLink> bereitzustellen. Siehe unseren <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> für mehr Informationen."
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "Neueste Nachrichten und Updates",
+    "subtitle": "Verfolgen Sie die neuesten Updates des Eclipse Adoptium-Projekts",
+    "see-all-news": "Alle Nachrichten anzeigen",
+    "read-more": "Weiterlesen"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "Entdecken Sie all unsere Projekte",
+    "description": "Eclipse Adoptium bietet Laufzeit-Binärdateien, die leistungsstark, unternehmensgerecht, plattformübergreifend, Open-Source-lizenziert sowie durch den Java SE TCK getestet und konform für den allgemeinen Einsatz im Java-Ökosystem sind. Eclipse Adoptium stellt außerdem Artefakte bereit, darunter Open-Source-Infrastruktur als Code, eine umfassende Continuous-Integration-Build- und Testfarm sowie umfangreiche Qualitätssicherungstests. Diese Artefakte können von Eclipse Adoptium-Projekten und anderen Anbietern von Laufzeittechnologien genutzt werden, um sichere, Java SE TCK-konforme, produktionsreife Laufzeiten bereitzustellen."
+  },
+  "LogoCarousel": {
+    "title": "Temurin wird von Millionen Nutzern vertraut – darunter diese führenden Anwender:"
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "Vergleichen Sie die untenstehende Prüfsumme mit der heruntergeladenen Datei, um sicherzustellen, dass sie vollständig und unverändert ist.",
+    "verify-using": "Verifizieren mit:",
+    "replace-file": "Ersetzen Sie \"file\" durch den tatsächlichen Dateinamen, den Sie heruntergeladen haben",
+    "close": "Schließen",
+    "copied": "Kopiert",
+    "copy": "Kopieren"
+  },
+  "ReleaseFilters": {
+    "reset-to-defaults": "Zurücksetzen auf Standardwerte",
+    "loading-versions": "Versionen werden geladen...",
+    "filter-releases": "Versionen filtern",
+    "version": "Version",
+    "operating-system": "Betriebssystem",
+    "architecture": "Architektur"
+  },
+  "TemurinReleases": {
+    "title": "Temurin® JDK herunterladen",
+    "latest-releases": "Neueste Versionen",
+    "description": "Wählen Sie eine Version, ein Paketformat, JDK oder JRE und laden Sie die Binärdateien herunter."
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "Zurücksetzen auf Standardwerte",
+        "loading-versions": "Versionen werden geladen...",
+        "filter-releases": "Versionen filtern",
+        "version": "Version",
+        "operating-system": "Betriebssystem",
+        "architecture": "Architektur",
+        "package-type": "Pakettyp",
+        "any-os": "Beliebiges Betriebssystem",
+        "any-architecture": "Beliebige Architektur",
+        "any-package-type": "Beliebiger Pakettyp"
+      },
+      "ReleaseLinks": {
+        "release-notes": "Versionshinweise",
+        "installation-guide": "Installationsanleitung",
+        "supported-platforms": "Unterstützte Plattformen",
+        "source-code": "Quellcode"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "Dieser Build ist JCK-zertifiziert",
+        "this-build-is-aqavit-verified": "Dieser Build ist AQAvit-verifiziert",
+        "checksum": "Prüfsumme",
+        "no-releases-found": "Keine Versionen gefunden",
+        "no-releases-found-description": "Keine Versionen entsprechen Ihren aktuellen Filterkriterien. Versuchen Sie, Ihre Auswahl anzupassen oder setzen Sie alle Filter zurück, um verfügbare Versionen anzuzeigen."
+      }
+    },
+    "Nightly": {
+      "title": "Nightly-Builds",
+      "subtitle": "Früher Zugang",
+      "description": "Lade die neuesten Nightly-Builds für Test- und Entwicklungszwecke herunter.",
+      "be-aware": "Bitte beachte, dass dieses Archiv Zwischen-Builds enthält, die als Entwicklungsschritt zu einer <fullReleaseLink>vollständigen Version</fullReleaseLink> erstellt wurden. Zwischen-Builds sind vergänglich und könnten in Zukunft entfernt werden.",
+      "notice-title": "Folgende Hinweise gelten für Zwischen-Builds:",
+      "quoted-notice": "Dies ist ein Zwischen-Build, der nur zu Testzwecken bereitgestellt wird. Der Code ist ungetestet und vermutlich nicht mit der Java SE-Spezifikation kompatibel. Du solltest diesen Code nicht produktiv verwenden oder darauf aufbauen. Verwende stattdessen die getestete und zertifizierte Java SE-kompatible Version. Bei Weiterverteilung muss dieser Hinweis beibehalten werden.",
+      "unsupported-in-production": "Diese Builds sind nicht unterstützt und nicht für den produktiven Einsatz geeignet.",
+      "latest-releases": "Neueste Versionen",
+      "download-not-available": "Nicht verfügbar",
+      "no-results": "Keine Nightly-Builds für die ausgewählte Version verfügbar.",
+      "checksum": "Prüfsumme",
+      "select-options-filter": "Optionen auswählen, um die Nightly-Build-Liste zu filtern",
+      "version": "Version",
+      "number-of-builds": "Anzahl der Builds",
+      "builds-prior-to": "Builds vor",
+      "platform": "Plattform",
+      "type": "Typ",
+      "build-tag": "Build/Tag",
+      "date": "Datum",
+      "binary": "Binärdatei",
+      "installer": "Installer",
+      "release-name": "Release-Name"
+    },
+    "VersionSelector": {
+      "all-versions": "Alle Versionen"
+    },
+    "DownloadMethods": {
+      "other-ways-to-download-temurin": "Weitere Möglichkeiten, Temurin herunterzuladen",
+      "description": "Es gibt mehrere Möglichkeiten, Eclipse Temurin außer über direkte Downloads zu erhalten. Die kuratierte Liste unten zeigt einige dieser Optionen zum Installieren leistungsstarker, plattformübergreifender OpenJDK-Laufzeit-Binärdateien."
+    }
+  },
+  "ReleaseNotes": {
+    "title": "Versionshinweise",
+    "couldnt-find-release-notes": "Hoppla... Wir konnten diese Versionshinweise nicht finden",
+    "not-found-helper": "Bitte stellen Sie sicher, dass Sie eine Version mit dem URL-Parameter 'version' angegeben haben:",
+    "description": "Dieser Abschnitt ordnet die Änderungen der ausgewählten Update-Version nach Hauptkomponenten, unter denen die jeweiligen Probleme erfasst sind."
+  }
+}
