@@ -85,6 +85,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // Author pages (localized)
+  const authorRoutes = getAuthorRoutes();
+  for (const route of authorRoutes) {
+    const defaultUrl = `${baseUrl}${route}`;
+    const languages: Record<string, string> = {};
+    for (const locale of routing.locales) {
+      if (locale === routing.defaultLocale) continue;
+      languages[locale] = `${baseUrl}/${locale}${route}`;
+    }
+    entries.push({
+      url: defaultUrl,
+      lastModified: undefined,
+      alternates: Object.keys(languages).length > 0 ? { languages } : undefined,
+    });
+  }
+
   // Asciidoc pages (localized by file extension)
   // Group by canonical path (parent dir) and collect language variants
   const asciidocMap: Record<string, Record<string, string>> = {};
@@ -125,6 +141,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: undefined,
       alternates: Object.keys(languages).length > 0 ? { languages } : undefined,
     });
+  }
+
+  // Collect author routes from authors.json
+  function getAuthorRoutes(): string[] {
+    try {
+      const authorsData = require("@/data/authors.json");
+      return Object.keys(authorsData).map(
+        (authorId) => `/news/author/${authorId}/`
+      );
+    } catch {
+      return [];
+    }
   }
 
   return entries;

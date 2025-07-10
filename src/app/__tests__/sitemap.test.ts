@@ -22,6 +22,30 @@ const mockBlogRoutes = [
 
 describe("sitemap", () => {
   beforeAll(() => {
+    // Mock Date constructor to ensure consistent timezone behavior
+    const OriginalDate = Date;
+    const MockDate = function (this: any, ...args: any[]) {
+      if (
+        args.length === 3 &&
+        typeof args[0] === "number" &&
+        typeof args[1] === "number" &&
+        typeof args[2] === "number"
+      ) {
+        // For new Date(year, month, day) calls, use UTC to avoid timezone issues
+        return new OriginalDate(OriginalDate.UTC(args[0], args[1], args[2]));
+      }
+      if (args.length === 0) {
+        return new OriginalDate();
+      }
+      return new OriginalDate(args[0]);
+    };
+    MockDate.now = OriginalDate.now;
+    MockDate.parse = OriginalDate.parse;
+    MockDate.UTC = OriginalDate.UTC;
+    MockDate.prototype = OriginalDate.prototype;
+
+    vi.stubGlobal("Date", MockDate);
+
     (getAppRoutesModule.getAppRoutes as Mock).mockReturnValue(mockAppRoutes);
     (getBlogRoutesModule.getBlogRoutes as Mock).mockReturnValue(mockBlogRoutes);
 
