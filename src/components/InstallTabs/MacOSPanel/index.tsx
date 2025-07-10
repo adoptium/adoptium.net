@@ -14,7 +14,7 @@ export const PureMacOSPanel = (): React.ReactNode => {
         <br />
         <span className="install__text__no-select">$</span>
         <span className="install-text-command">brew install --cask </span>
-        temurin
+        temurin@{mostRecentLts}
       </ShellBox>
       <br />
       <ShellBox>
