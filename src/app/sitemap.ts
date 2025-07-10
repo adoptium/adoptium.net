@@ -64,6 +64,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? `${baseUrl}/${locale}`
         : `${baseUrl}/${locale}${route}`;
     }
+    // Add x-default hreflang pointing to the default locale
+    if (Object.keys(languages).length > 0) {
+      languages["x-default"] = defaultUrl;
+    }
     entries.push({
       url: defaultUrl,
       lastModified: undefined,
@@ -94,6 +98,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of routing.locales) {
       if (locale === routing.defaultLocale) continue;
       languages[locale] = `${baseUrl}/${locale}${route}`;
+    }
+    // Add x-default hreflang pointing to the default locale
+    if (Object.keys(languages).length > 0) {
+      languages["x-default"] = defaultUrl;
     }
     entries.push({
       url: defaultUrl,
@@ -136,6 +144,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (langs[locale]) {
         languages[locale] = `${baseUrl}/${locale}${normalizedBase}`;
       }
+    }
+    // Add x-default hreflang pointing to the default locale
+    if (Object.keys(languages).length > 0) {
+      languages["x-default"] = defaultUrl;
     }
     entries.push({
       url: defaultUrl,
