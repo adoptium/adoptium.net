@@ -279,8 +279,13 @@ exports[`Sustainers page > renders correctly 1`] = `
             id="toggle-0"
             type="checkbox"
           />
+          <span
+            class="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            +
+          </span>
           <div
-            class="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+            class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
             role="button"
           >
             <label
@@ -314,13 +319,18 @@ exports[`Sustainers page > renders correctly 1`] = `
             </label>
           </div>
           <div
-            class="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+            class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
             <p
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.
             </p>
+            <span
+              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+            >
+              _
+            </span>
           </div>
         </div>
         <div
@@ -332,8 +342,13 @@ exports[`Sustainers page > renders correctly 1`] = `
             id="toggle-1"
             type="checkbox"
           />
+          <span
+            class="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            +
+          </span>
           <div
-            class="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+            class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
             role="button"
           >
             <label
@@ -367,13 +382,18 @@ exports[`Sustainers page > renders correctly 1`] = `
             </label>
           </div>
           <div
-            class="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+            class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
             <p
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.
             </p>
+            <span
+              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+            >
+              _
+            </span>
           </div>
         </div>
         <div
@@ -385,8 +405,13 @@ exports[`Sustainers page > renders correctly 1`] = `
             id="toggle-2"
             type="checkbox"
           />
+          <span
+            class="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            +
+          </span>
           <div
-            class="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+            class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
             role="button"
           >
             <label
@@ -420,13 +445,18 @@ exports[`Sustainers page > renders correctly 1`] = `
             </label>
           </div>
           <div
-            class="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+            class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
             <p
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures
             </p>
+            <span
+              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+            >
+              _
+            </span>
           </div>
         </div>
         <div
@@ -438,8 +468,13 @@ exports[`Sustainers page > renders correctly 1`] = `
             id="toggle-3"
             type="checkbox"
           />
+          <span
+            class="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            +
+          </span>
           <div
-            class="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+            class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
             role="button"
           >
             <label
@@ -473,13 +508,18 @@ exports[`Sustainers page > renders correctly 1`] = `
             </label>
           </div>
           <div
-            class="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+            class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
             <p
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.
             </p>
+            <span
+              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+            >
+              _
+            </span>
           </div>
         </div>
         <div
@@ -491,8 +531,13 @@ exports[`Sustainers page > renders correctly 1`] = `
             id="toggle-4"
             type="checkbox"
           />
+          <span
+            class="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            +
+          </span>
           <div
-            class="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+            class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
             role="button"
           >
             <label
@@ -526,13 +571,18 @@ exports[`Sustainers page > renders correctly 1`] = `
             </label>
           </div>
           <div
-            class="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+            class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
             <p
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.
             </p>
+            <span
+              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+            >
+              _
+            </span>
           </div>
         </div>
         <div
@@ -544,8 +594,13 @@ exports[`Sustainers page > renders correctly 1`] = `
             id="toggle-5"
             type="checkbox"
           />
+          <span
+            class="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            +
+          </span>
           <div
-            class="relative group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+            class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
             role="button"
           >
             <label
@@ -579,13 +634,18 @@ exports[`Sustainers page > renders correctly 1`] = `
             </label>
           </div>
           <div
-            class="hidden lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+            class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
             <p
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.
             </p>
+            <span
+              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+            >
+              _
+            </span>
           </div>
         </div>
       </div>
