@@ -8,13 +8,18 @@ export function useOses(isVisible: boolean): OperatingSystem[] {
   const [oses, setOses] = useState<OperatingSystem[]>([]);
 
   useEffect(() => {
+    let isMounted = true;
+    const cancelToken = axios.CancelToken.source();
+
     if (isVisible) {
       (async () => {
         const url = `${baseUrl}/types/operating_systems`;
 
         axios
-          .get(url)
+          .get(url, { cancelToken: cancelToken.token })
           .then(function (response) {
+            if (!isMounted) return;
+
             const newOses = response.data
               .map((s: string) => {
                 const o: OperatingSystem = {
@@ -29,11 +34,17 @@ export function useOses(isVisible: boolean): OperatingSystem[] {
 
             setOses(newOses);
           })
-          .catch(function () {
+          .catch(function (error) {
+            if (!isMounted || axios.isCancel(error)) return;
             setOses([]);
           });
       })();
     }
+
+    return () => {
+      isMounted = false;
+      cancelToken.cancel("Component unmounted");
+    };
   }, [isVisible]);
 
   return oses;
@@ -43,13 +54,18 @@ export function useArches(isVisible: boolean): Architecture[] {
   const [arches, setArches] = useState<Architecture[]>([]);
 
   useEffect(() => {
+    let isMounted = true;
+    const cancelToken = axios.CancelToken.source();
+
     if (isVisible) {
       (async () => {
         const url = `${baseUrl}/types/architectures`;
 
         axios
-          .get(url)
+          .get(url, { cancelToken: cancelToken.token })
           .then(function (response) {
+            if (!isMounted) return;
+
             const newArches = response.data
               .map((s: string) => {
                 const a: Architecture = { name: s, value: s.toLowerCase() };
@@ -62,11 +78,17 @@ export function useArches(isVisible: boolean): Architecture[] {
 
             setArches(newArches);
           })
-          .catch(function () {
+          .catch(function (error) {
+            if (!isMounted || axios.isCancel(error)) return;
             setArches([]);
           });
       })();
     }
+
+    return () => {
+      isMounted = false;
+      cancelToken.cancel("Component unmounted");
+    };
   }, [isVisible]);
 
   return arches;

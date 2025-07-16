@@ -32,7 +32,10 @@ describe("useArches", () => {
     );
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith(
-      "https://api.adoptium.net/v3/types/architectures"
+      "https://api.adoptium.net/v3/types/architectures",
+      expect.objectContaining({
+        cancelToken: expect.any(Object)
+      })
     );
     expect(result.current).toMatchSnapshot();
   });
@@ -69,7 +72,10 @@ describe("useOses", () => {
     );
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith(
-      "https://api.adoptium.net/v3/types/operating_systems"
+      "https://api.adoptium.net/v3/types/operating_systems",
+      expect.objectContaining({
+        cancelToken: expect.any(Object)
+      })
     );
     expect(result.current).toMatchSnapshot();
   });
