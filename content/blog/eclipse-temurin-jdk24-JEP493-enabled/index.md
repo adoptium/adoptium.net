@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin JDK 24 enables JEP 493
-date: "2025-07-01"
+date: "2025-07-18"
 author: sgehwolf
 description: Eclipse Temurin enables JEP 493 for the JDK 24 general availability release (24.0.0+36) which significantly reduces the size of the JDK archive.
 tags:
