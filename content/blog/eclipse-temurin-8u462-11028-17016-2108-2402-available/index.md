@@ -27,6 +27,6 @@ This release contains the following fixes and updates.
 
 ## New and Noteworthy
 
-### Alpine default image now version 3.22
+### Alpine default container image now version 3.22
 
 Alpine 3.22 is now the default Alpine image when pulling `eclipse-temurin` Docker images. Previous Alpine versions are still available by specifying a suffix of "-3.21" in Dockerfiles, eg. `eclipse-temurin:21-alpine-3.21`
