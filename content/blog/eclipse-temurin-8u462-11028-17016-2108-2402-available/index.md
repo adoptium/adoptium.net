@@ -15,18 +15,18 @@ Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u46
 
 This release contains the following fixes and updates.
 
-* [Temurin 8u462 release notes](https://adoptium.net/temurin/release-notes/?version=jdk8u462-b08)
+- [Temurin 8u462 release notes](https://adoptium.net/temurin/release-notes/?version=jdk8u462-b08)
 
-* [Temurin 11.0.28 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-11.0.28+6)
+- [Temurin 11.0.28 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-11.0.28+6)
 
-* [Temurin 17.0.16 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-17.0.16+8)
+- [Temurin 17.0.16 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-17.0.16+8)
 
-* [Temurin 21.0.8 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-21.0.8+9)
+- [Temurin 21.0.8 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-21.0.8+9)
 
-* [Temurin 24.0.2 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-24.0.2+12)
+- [Temurin 24.0.2 release notes](https://adoptium.net/temurin/release-notes/?version=jdk-24.0.2+12)
 
 ## New and Noteworthy
 
-### Alpine default container image now version 3.22
+### Alpine default image now version 3.22
 
-Alpine 3.22 is now the default Alpine image when pulling `eclipse-temurin` Docker images. Previous Alpine versions are still available by specifying a suffix of "-3.21" in Dockerfiles, eg. `eclipse-temurin:21-alpine-3.21`
+Alpine 3.22 is now the default image when pulling eclipse-temurin Docker images. Previous Alpine versions are still available by specifying a suffix of "-3.21" in Dockerfiles, eg.eclipse-temurin:21-alpine-3.21
