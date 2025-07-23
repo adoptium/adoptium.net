@@ -158,22 +158,23 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
     }
 
     return (
-        <section className="py-10">
+        <section className="py-10" data-testid="release-filters-section">
             <div className="flex flex-col gap-6">
-                <h2 className="text-2xl font-bold text-white">{t('filter-releases')}</h2>
+                <h2 className="text-2xl font-bold text-white" data-testid="filter-title">{t('filter-releases')}</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-testid="filters-grid">
                     {/* Version selector */}
-                    <div className="filter-group">
+                    <div className="filter-group" data-testid="version-filter-group">
                         <label className="block text-sm font-medium text-gray-200 mb-2">{t('version')}</label>
                         {allVersions.length > 0 ? (
                             <CommonSelector
                                 list={allVersions}
                                 defaultValue={allVersions.find(v => v.value === version)}
                                 selectorUpdater={handleVersionChange}
+                                data-testid="version-selector"
                             />
                         ) : (
-                            <div className="relative w-full flex items-center justify-between rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
+                            <div className="relative w-full flex items-center justify-between rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]" data-testid="loading-versions">
                                 <span className="flex items-center justify-between text-nowrap">
                                     {t('loading-versions')}
                                 </span>
@@ -182,22 +183,24 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
                     </div>
 
                     {/* OS selector */}
-                    <div className="filter-group">
+                    <div className="filter-group" data-testid="os-filter-group">
                         <label className="block text-sm font-medium text-gray-200 mb-2">{t('operating-system')}</label>
                         <CommonSelector
                             list={[{ name: t('any-os'), value: "any" }, ...osOptions]}
                             defaultValue={os === "any" ? { name: t('any-os'), value: "any" } : osOptions.find(o => o.value === os)}
                             selectorUpdater={handleOSChange}
+                            data-testid="os-selector"
                         />
                     </div>
 
                     {/* Architecture selector */}
-                    <div className="filter-group">
+                    <div className="filter-group" data-testid="arch-filter-group">
                         <label className="block text-sm font-medium text-gray-200 mb-2">{t('architecture')}</label>
                         <CommonSelector
                             list={[{ name: t('any-architecture'), value: "any" }, ...architectureOptions]}
                             defaultValue={arch === "any" ? { name: t('any-architecture'), value: "any" } : architectureOptions.find(a => a.value === arch)}
                             selectorUpdater={handleArchChange}
+                            data-testid="arch-selector"
                         />
                     </div>
                 </div>
@@ -207,6 +210,7 @@ const ReleaseFilters: React.FC<ReleaseFiltersProps> = ({ onFiltersChange, initia
                     <button
                         onClick={handleReset}
                         className="flex items-center gap-2 px-4 py-2 bg-[#3E3355] hover:bg-[#554772] text-white rounded-md transition-colors"
+                        data-testid="reset-filters-button"
                     >
                         <FaUndo className="w-4 h-4" />
                         <span>{t('reset-to-defaults')}</span>
