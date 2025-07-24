@@ -2,7 +2,7 @@ import React from "react"
 import userEvent from "@testing-library/user-event"
 import { render, screen, act, cleanup } from "@testing-library/react"
 import { describe, expect, it, vi, afterEach } from "vitest"
-import ChecksumModal from ".." // Ensure this import path is correct
+import ChecksumModal from ".."
 
 // Mock next-intl's useTranslations to return the correct i18n values for ChecksumModal
 vi.mock("next-intl", () => ({
