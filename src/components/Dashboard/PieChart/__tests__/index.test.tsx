@@ -1,7 +1,11 @@
 import React from 'react';
-import { render, screen, cleanup } from '@testing-library/react';
+import { act, render, screen, cleanup } from '@testing-library/react';
 import { describe, it, expect, afterEach } from 'vitest';
 import PieChart from '../index';
+
+// NOTE: Use a delay to avoid diff with rendering animation
+// https://github.com/highcharts/highcharts/issues/14328
+const delay = 2000;
 
 afterEach(() => {
     cleanup();
@@ -35,8 +39,14 @@ describe('PieChart', () => {
         expect(screen.getByText('Test Pie')).toBeInTheDocument();
     });
 
-    it('matches snapshot', () => {
-        const { container } = render(<PieChart data={mockData} name="Test Pie" />);
+    it('matches snapshot', async () => {
+        let container!: HTMLElement;
+        await act(async () => {
+            ({ container } = render(
+                <PieChart data={mockData} name="Test Pie" />
+            ));
+            setTimeout(() => { }, delay)
+        });
         expect(container.firstChild).toMatchSnapshot();
     });
 });
