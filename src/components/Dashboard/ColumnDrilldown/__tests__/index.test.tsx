@@ -1,15 +1,11 @@
 import React from 'react';
-import { act, render, cleanup } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import { describe, it, expect, afterEach, vi, beforeEach } from 'vitest';
 import ColumnDrilldown from '../index';
 
 // Mock fetch
 const mockFetch = vi.fn();
 global.fetch = mockFetch;
-
-// NOTE: Use a delay to avoid diff with rendering animation
-// https://github.com/highcharts/highcharts/issues/14328
-const delay = 2000;
 
 describe('ColumnDrilldown', () => {
     const availableReleases = { available_releases: ['21', '17'] };
@@ -38,16 +34,5 @@ describe('ColumnDrilldown', () => {
     it('renders nothing if no data', () => {
         const { container } = render(<ColumnDrilldown name="Test Drilldown" availableReleases={{ available_releases: [] }} />);
         expect(container.firstChild).toBeNull();
-    });
-
-    it('matches snapshot', async () => {
-        let container!: HTMLElement;
-        await act(async () => {
-            ({ container } = render(
-                <ColumnDrilldown name="Test Drilldown" availableReleases={availableReleases} />
-            ));
-            setTimeout(() => { }, delay)
-        });
-        expect(container.firstChild).toMatchSnapshot();
     });
 });

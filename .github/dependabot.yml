@@ -5,6 +5,11 @@ updates:
     schedule:
       interval: daily
     groups:
+      nextjs:
+        patterns:
+          - "next"
+          - "eslint-config-next"
+          - "@next/third-parties"
       mui-dependencies:
         patterns:
           - "@mui/*"

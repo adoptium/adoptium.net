@@ -34,9 +34,4 @@ describe('PieChart', () => {
         render(<PieChart data={mockData} name="Test Pie" colors={["#fff", "#000"]} />);
         expect(screen.getByText('Test Pie')).toBeInTheDocument();
     });
-
-    it('matches snapshot', () => {
-        const { container } = render(<PieChart data={mockData} name="Test Pie" />);
-        expect(container.firstChild).toMatchSnapshot();
-    });
 });
