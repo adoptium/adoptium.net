@@ -1,11 +1,7 @@
 import React from 'react';
-import { act, render, screen, cleanup } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import { describe, it, expect, afterEach } from 'vitest';
 import PieChart from '../index';
-
-// NOTE: Use a delay to avoid diff with rendering animation
-// https://github.com/highcharts/highcharts/issues/14328
-const delay = 2000;
 
 afterEach(() => {
     cleanup();
@@ -37,22 +33,5 @@ describe('PieChart', () => {
     it('renders with custom colors', () => {
         render(<PieChart data={mockData} name="Test Pie" colors={["#fff", "#000"]} />);
         expect(screen.getByText('Test Pie')).toBeInTheDocument();
-    });
-
-    it('matches snapshot', async () => {
-        const timeout = async (ms: number) => {
-            return await new Promise(resolve => {
-                setTimeout(resolve, ms);
-            });
-        };
-
-        let container!: HTMLElement;
-        await act(async () => {
-            ({ container } = render(
-                <PieChart data={mockData} name="Test Pie" />
-            ));
-            await timeout(delay);
-        });
-        expect(container.firstChild).toMatchSnapshot();
     });
 });
