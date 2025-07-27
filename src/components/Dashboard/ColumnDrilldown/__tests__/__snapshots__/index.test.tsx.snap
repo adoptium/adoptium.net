@@ -294,15 +294,16 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
             transform="translate(NaN,10) scale(1 1)"
           >
             <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
+              class="highcharts-label highcharts-data-label highcharts-data-label-color-0 highcharts-drilldown-data-label"
               data-z-index="1"
               filter="none"
+              style="cursor: pointer;"
               transform="translate(0,0)"
               visibility="hidden"
             >
               <text
                 data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+                style="font-size: 0.7em; font-weight: bold; fill: #0022ff; text-decoration: underline;"
                 x="NaN"
                 y="7"
               >
@@ -310,15 +311,16 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
               </text>
             </g>
             <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
+              class="highcharts-label highcharts-data-label highcharts-data-label-color-0 highcharts-drilldown-data-label"
               data-z-index="1"
               filter="none"
+              style="cursor: pointer;"
               transform="translate(0,0)"
               visibility="hidden"
             >
               <text
                 data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+                style="font-size: 0.7em; font-weight: bold; fill: #0022ff; text-decoration: underline;"
                 x="NaN"
                 y="7"
               >
@@ -466,12 +468,14 @@ exports[`ColumnDrilldown > matches snapshot 1`] = `
         style="position: absolute; left: 0px; top: 0px; opacity: 1;"
       >
         <span
-          style="position: absolute; font-family: inherit; font-size: 1rem; white-space: nowrap; margin-left: 0px; margin-top: 0px; text-align: center; transform-origin: NaNpx NaNpx; color: rgb(255, 255, 255); cursor: default; text-overflow: ellipsis; font-weight: bold; overflow: hidden; transform: rotate(0deg); line-clamp: 72; display: -webkit-box; -webkit-line-clamp: 72;"
+          class="highcharts-drilldown-axis-label"
+          style="position: absolute; font-family: inherit; font-size: 1rem; white-space: nowrap; margin-left: 0px; margin-top: 0px; text-align: center; transform-origin: NaNpx NaNpx; color: rgb(0, 34, 255); cursor: pointer; text-overflow: ellipsis; font-weight: bold; overflow: hidden; transform: rotate(0deg); line-clamp: 72; display: -webkit-box; -webkit-line-clamp: 72; text-decoration: underline;"
         >
           JDK21
         </span>
         <span
-          style="position: absolute; font-family: inherit; font-size: 1rem; white-space: nowrap; margin-left: 0px; margin-top: 0px; text-align: center; transform-origin: NaNpx NaNpx; color: rgb(255, 255, 255); cursor: default; text-overflow: ellipsis; font-weight: bold; overflow: hidden; transform: rotate(0deg); line-clamp: 72; display: -webkit-box; -webkit-line-clamp: 72;"
+          class="highcharts-drilldown-axis-label"
+          style="position: absolute; font-family: inherit; font-size: 1rem; white-space: nowrap; margin-left: 0px; margin-top: 0px; text-align: center; transform-origin: NaNpx NaNpx; color: rgb(0, 34, 255); cursor: pointer; text-overflow: ellipsis; font-weight: bold; overflow: hidden; transform: rotate(0deg); line-clamp: 72; display: -webkit-box; -webkit-line-clamp: 72; text-decoration: underline;"
         >
           JDK17
         </span>

@@ -40,12 +40,18 @@ describe('PieChart', () => {
     });
 
     it('matches snapshot', async () => {
+        const timeout = async (ms: number) => {
+            return await new Promise(resolve => {
+                setTimeout(resolve, ms);
+            });
+        };
+
         let container!: HTMLElement;
         await act(async () => {
             ({ container } = render(
                 <PieChart data={mockData} name="Test Pie" />
             ));
-            setTimeout(() => { }, delay)
+            await timeout(delay);
         });
         expect(container.firstChild).toMatchSnapshot();
     });

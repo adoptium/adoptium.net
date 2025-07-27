@@ -41,12 +41,18 @@ describe('ColumnDrilldown', () => {
     });
 
     it('matches snapshot', async () => {
+        const timeout = async (ms: number) => {
+            return await new Promise(resolve => {
+                setTimeout(resolve, ms);
+            });
+        };
+
         let container!: HTMLElement;
         await act(async () => {
             ({ container } = render(
                 <ColumnDrilldown name="Test Drilldown" availableReleases={availableReleases} />
             ));
-            setTimeout(() => { }, delay)
+            await timeout(delay);
         });
         expect(container.firstChild).toMatchSnapshot();
     });

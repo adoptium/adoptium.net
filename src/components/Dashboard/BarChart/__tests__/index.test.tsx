@@ -24,10 +24,16 @@ describe('BarChart', () => {
     });
 
     it('matches snapshot', async () => {
+        const timeout = async (ms: number) => {
+            return await new Promise(resolve => {
+                setTimeout(resolve, ms);
+            });
+        };
+
         let container!: HTMLElement;
         await act(async () => {
             ({ container } = render(<BarChart data={mockData} name="Test Chart" />));
-            setTimeout(() => { }, delay)
+            await timeout(delay);
         });
         expect(container.firstChild).toMatchSnapshot();
     });
