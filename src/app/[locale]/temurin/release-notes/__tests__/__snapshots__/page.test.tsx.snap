@@ -67,7 +67,6 @@ exports[`TemurinPage > renders the release notes page with header and content 1`
             </div>
             <div
               class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
-              data-testid="page-header-title"
             >
               Release Notes
             </div>

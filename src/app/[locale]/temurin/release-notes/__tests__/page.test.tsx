@@ -2,9 +2,13 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import TemurinPage, { metadata } from '../page';
 
-// Mock the server-side translations
-vi.mock('next-intl/server', () => ({ 
-  getTranslations: () => (key: string) => key === 'title' ? 'Release Notes' : key 
+vi.mock('next-intl/server', () => ({
+  getTranslations: vi.fn().mockImplementation(() =>
+    Promise.resolve((key: string) => {
+      if (key === 'title') return 'Release Notes';
+      return key;
+    })
+  ),
 }));
 
 // Mock the fetchAvailableReleases function
@@ -20,8 +24,8 @@ vi.mock('@/utils/fetchAvailableReleases', () => ({
 }));
 
 // Mock the ReleaseNotesPageClient component
-vi.mock('../ReleaseNotesPageClient', () => ({ 
-  default: () => <div data-testid="release-notes-content">Release Notes Content</div> 
+vi.mock('../ReleaseNotesPageClient', () => ({
+  default: () => <div data-testid="release-notes-content">Release Notes Content</div>
 }));
 
 
@@ -29,7 +33,8 @@ describe('TemurinPage', () => {
   it('renders the release notes page with header and content', async () => {
     const { container } = render(await TemurinPage());
     expect(screen.getByTestId('temurin-release-notes-page')).toBeInTheDocument();
-    expect(screen.getByTestId('page-header-title')).toBeInTheDocument();
+    expect(screen.getByText('Release Notes')).toBeInTheDocument();
+    expect(screen.getByText('Temurin')).toBeInTheDocument();
     expect(screen.getByTestId('release-notes-content')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
