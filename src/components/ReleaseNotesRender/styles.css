@@ -55,39 +55,6 @@
   }
 }
 
-.release-notes-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  background: linear-gradient(
-    90deg,
-    #fff 0%,
-    rgba(255, 255, 255, 80%) 70%,
-    var(--pink) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-  letter-spacing: -0.02em;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 20%);
-  position: relative;
-  z-index: 1;
-}
-
-.release-notes-title::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--pink), rgba(255, 75, 84, 70%));
-  border-radius: 2px;
-  z-index: -1;
-}
-
 .release-notes-description {
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 85%) !important;

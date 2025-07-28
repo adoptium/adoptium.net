@@ -108,6 +108,7 @@ export default ComponentName;
 
 - Uses `next-intl` for translations
 - Locale files in `locales/` directory
+- Only add en-GB translations when UK-specific spelling or wording is required
 - Route structure: `app/[locale]/...`
 - Access translations: `const t = useTranslations('namespace')`
 

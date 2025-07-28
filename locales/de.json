@@ -213,6 +213,9 @@
     "title": "Versionshinweise",
     "couldnt-find-release-notes": "Hoppla... Wir konnten diese Versionshinweise nicht finden",
     "not-found-helper": "Bitte stellen Sie sicher, dass Sie eine Version mit dem URL-Parameter 'version' angegeben haben:",
-    "description": "Dieser Abschnitt ordnet die Änderungen der ausgewählten Update-Version nach Hauptkomponenten, unter denen die jeweiligen Probleme erfasst sind."
+    "description": "Dieser Abschnitt ordnet die Änderungen der ausgewählten Update-Version nach Hauptkomponenten, unter denen die jeweiligen Probleme erfasst sind.",
+    "selectVersion": "Temurin-Version auswählen",
+    "selectVersionDescription": "Wählen Sie eine Temurin-Version aus, um die neuesten Versionshinweise anzuzeigen:",
+    "viewReleaseNotes": "Versionshinweise anzeigen →"
   }
 }
