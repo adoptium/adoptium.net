@@ -34,9 +34,10 @@ export default function PageHeader({ title, subtitle, description, className }: 
               <div
                 className={`self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
                 dangerouslySetInnerHTML={{ __html: title }}
+                data-testid="page-header-title"
               />
             ) : (
-              <h1 className="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold">
+              <h1 className="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold" data-testid="page-header-title">
                 {title}
               </h1>
             )}
