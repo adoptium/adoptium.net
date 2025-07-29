@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/v4-shims.min.css'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import { getLocale } from 'next-intl/server'
 import { Organization, WithContext } from 'schema-dts'
 import { sanitizeObject } from '@/utils/sanitize'
@@ -80,7 +80,6 @@ export default async function RootLayout({
         <link rel="sitemap" type="application/xml" href="/sitemap.xml"></link>
         <link rel="alternate" type="application/rss+xml" title="Adoptium Blog" href="/rss.xml"></link>
         <GoogleTagManager gtmId="GTM-5WLCZXC" />
-        <GoogleAnalytics gaId="G-9HHPS5RX9D" />
         {/* Eclipse Foundation Cookie Consent Banner */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
