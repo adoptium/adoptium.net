@@ -89,7 +89,7 @@ const KeyInitiatives: React.FC = () => {
                             id={`toggle-${i}`}
                             className="peer hidden"
                         />
-                        <span className="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]">+</span>
+                        <span className="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]">+</span>
                         <div
                             className={`relative transform  ${ isNthValue && "lg:peer-checked:translate-y-[-236px]"}  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5`}
                         >
