@@ -13,6 +13,12 @@ updates:
       mui-dependencies:
         patterns:
           - "@mui/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
     open-pull-requests-limit: 10
   - package-ecosystem: github-actions
     directory: "/"
