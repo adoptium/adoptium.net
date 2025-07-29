@@ -24,7 +24,7 @@ describe("GET /api/news/byTag", () => {
     const res = await GET(req);
     expect(res.status).toBe(200);
     expect(res.headers.get("Cache-Control")).toBe(
-      "public, max-age=3600, stale-while-revalidate=60"
+      "public, max-age=14400, stale-while-revalidate=60"
     );
     const data = await res.json();
     expect(data).toBeDefined();

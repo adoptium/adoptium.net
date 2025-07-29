@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     const news = await getNews({ numPosts, page, includeEF });
     return Response.json(news, {
       headers: {
-        "Cache-Control": "public, max-age=3600, stale-while-revalidate=60",
+        "Cache-Control": "public, max-age=14400, stale-while-revalidate=60",
       },
     });
   } catch {
