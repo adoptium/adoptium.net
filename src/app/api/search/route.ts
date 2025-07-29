@@ -7,7 +7,13 @@ import {
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url!);
   const query = searchParams.get("q") || "";
-  if (query.length < 2) return NextResponse.json([]);
+  if (query.length < 2) {
+    return NextResponse.json([], {
+      headers: {
+        "Cache-Control": "public, max-age=14400, stale-while-revalidate=60",
+      },
+    });
+  }
 
   const paths = await getAllAsciidocPaths();
   const results = [];
@@ -28,5 +34,9 @@ export async function GET(req: NextRequest) {
       });
     }
   }
-  return NextResponse.json(results);
+  return NextResponse.json(results, {
+    headers: {
+      "Cache-Control": "public, max-age=14400, stale-while-revalidate=60",
+    },
+  });
 }
