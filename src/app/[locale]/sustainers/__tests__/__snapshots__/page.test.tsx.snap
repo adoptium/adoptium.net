@@ -286,7 +286,6 @@ exports[`Sustainers page > renders correctly 1`] = `
           </span>
           <div
             class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-            role="button"
           >
             <label
               for="toggle-0"
@@ -349,7 +348,6 @@ exports[`Sustainers page > renders correctly 1`] = `
           </span>
           <div
             class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-            role="button"
           >
             <label
               for="toggle-1"
@@ -412,7 +410,6 @@ exports[`Sustainers page > renders correctly 1`] = `
           </span>
           <div
             class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-            role="button"
           >
             <label
               for="toggle-2"
@@ -475,7 +472,6 @@ exports[`Sustainers page > renders correctly 1`] = `
           </span>
           <div
             class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-            role="button"
           >
             <label
               for="toggle-3"
@@ -538,7 +534,6 @@ exports[`Sustainers page > renders correctly 1`] = `
           </span>
           <div
             class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-            role="button"
           >
             <label
               for="toggle-4"
@@ -601,7 +596,6 @@ exports[`Sustainers page > renders correctly 1`] = `
           </span>
           <div
             class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-            role="button"
           >
             <label
               for="toggle-5"
