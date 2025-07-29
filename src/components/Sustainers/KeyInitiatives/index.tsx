@@ -44,25 +44,31 @@ const keyInitiatives = [
 
 const KeyInitiatives: React.FC = () => {
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            keyInitiatives.forEach((_, i) => {
-                const container = document.getElementById(`card-container-${i}`)
-                const checkbox = document.getElementById(
-                    `toggle-${i}`,
-                ) as HTMLInputElement
-
-                if (container && !container.contains(event.target as Node)) {
-                    if (checkbox && checkbox.checked) checkbox.checked = false
-                }
-            })
-        }
-
-        document.addEventListener("click", handleClickOutside)
-
-        return () => {
-            document.removeEventListener("click", handleClickOutside)
-        }
-    }, [])
+        keyInitiatives.forEach((_, i) => {
+          const container = document.getElementById(`card-container-${i}`);
+          const checkbox = document.getElementById(`toggle-${i}`) as HTMLInputElement;
+      
+          if (!container || !checkbox) return;
+      
+          const handleMouseEnter = () => {
+            checkbox.checked = true;
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+          };
+      
+          const handleMouseLeave = () => {
+            checkbox.checked = false;
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+          };
+      
+          container.addEventListener('mouseenter', handleMouseEnter);
+          container.addEventListener('mouseleave', handleMouseLeave);
+      
+          return () => {
+            container.removeEventListener('mouseenter', handleMouseEnter);
+            container.removeEventListener('mouseleave', handleMouseLeave);
+          };
+        });
+      }, []);
 
     return (
         <div className="p-4 border-t border-[#39314a] mt-[60px] pt-[40px] md:pt-[80px] w-full">
@@ -85,7 +91,6 @@ const KeyInitiatives: React.FC = () => {
                         />
                         <span className="peer-checked:hidden absolute bottom-[10px] right-[20px] text-[#ff1464]">+</span>
                         <div
-                            role="button"
                             className={`relative transform  ${ isNthValue && "lg:peer-checked:translate-y-[-236px]"}  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5`}
                         >
                             <label htmlFor={`toggle-${i}`}>
