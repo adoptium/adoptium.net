@@ -91,7 +91,7 @@ exports[`Sustainers page > renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full z-10"
+      class="flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[72px] w-full z-10"
     >
       <a
         class="transform transition-transform duration-300 hover:scale-105"
@@ -1409,7 +1409,7 @@ exports[`Sustainers page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full z-10 md:mt-10 md:mx-auto"
+          class="flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[72px] w-full z-10 md:mt-10 md:mx-auto"
         >
           <a
             class="transform transition-transform duration-300 hover:scale-105"
