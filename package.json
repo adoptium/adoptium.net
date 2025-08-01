@@ -77,7 +77,7 @@
     "jsdom": "^26.1.0",
     "jsdom-testing-mocks": "^1.15.2",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "vitest-axe": "^0.1.0"
