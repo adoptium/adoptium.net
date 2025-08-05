@@ -55,10 +55,10 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
     }
 
     return (
-        <section className="w-full max-w-[1264px] mx-auto">
-            <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start w-full justify-start sm:justify-center sm:items-center my-8">
+        <section className="w-full max-w-[1264px] mx-auto" data-testid="release-links-section">
+            <ul className="flex md:flex-row flex-col gap-4 lg:gap-8 items-start w-full justify-start sm:justify-center sm:items-center my-8" data-testid="release-links-list">
                 <Link href={releaseNotesUrl}>
-                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer">
+                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer" data-testid="release-notes-link">
                         <span className="group">
                             <GrNotes />
                         </span>
@@ -67,7 +67,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                 </Link>
 
                 <Link href={installationGuideUrl}>
-                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer">
+                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer" data-testid="installation-guide-link">
                         <span className="group">
                             <GrInstall />
                         </span>
@@ -76,7 +76,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                 </Link>
 
                 <Link href={supportedPlatformsUrl}>
-                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer">
+                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer" data-testid="supported-platforms-link">
                         <span className="group">
                             <GiFlatPlatform />
                         </span>
@@ -85,7 +85,7 @@ const ReleaseLinks: React.FC<ReleaseLinksProps> = ({
                 </Link>
 
                 <Link href={sourceCodeUrl} target="_blank">
-                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer">
+                    <li className="flex gap-3 group items-center text-white hover:text-primary transition-all duration-300 ease-in-out text-xl font-normal cursor-pointer" data-testid="source-code-link">
                         <span className="group">
                             <FaRegFileCode />
                         </span>

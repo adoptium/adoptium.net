@@ -213,6 +213,9 @@
     "title": "Notas da versão",
     "couldnt-find-release-notes": "Ops... Não conseguimos encontrar essas notas da versão",
     "not-found-helper": "Certifique-se de que você especificou uma versão usando o parâmetro de URL 'version':",
-    "description": "Esta seção organiza as alterações da atualização selecionada pelo componente principal ao qual cada item está relacionado."
+    "description": "Esta seção organiza as alterações da atualização selecionada pelo componente principal ao qual cada item está relacionado.",
+    "selectVersion": "Selecionar uma versão do Temurin",
+    "selectVersionDescription": "Escolha uma versão do Temurin para ver suas últimas notas de versão:",
+    "viewReleaseNotes": "Ver notas da versão →"
   }
 }

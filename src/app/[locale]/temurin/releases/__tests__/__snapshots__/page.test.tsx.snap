@@ -154,12 +154,14 @@ exports[`TemurinReleases page > renders correctly 1`] = `
     </section>
     <section
       class="py-4"
+      data-testid="release-results-loading"
     >
       <div
         class="space-y-4"
       >
         <div
           class="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
+          data-testid="loading-skeleton-1"
         >
           <div
             class="w-full lg:w-[45%] flex flex-col"
@@ -217,6 +219,7 @@ exports[`TemurinReleases page > renders correctly 1`] = `
         </div>
         <div
           class="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
+          data-testid="loading-skeleton-2"
         >
           <div
             class="w-full lg:w-[45%] flex flex-col"
@@ -274,6 +277,7 @@ exports[`TemurinReleases page > renders correctly 1`] = `
         </div>
         <div
           class="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
+          data-testid="loading-skeleton-3"
         >
           <div
             class="w-full lg:w-[45%] flex flex-col"

@@ -30,11 +30,13 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
     let macOSLink = "#"
     let macOSDisplay = `Temurin ${versionFormatted}`
     let macOSIsInstaller = false
+    let macOSReleaseVersion = versionFormatted
 
     // Find Windows download link for the latest x64 MSI package
     let windowsLink = "#"
     let windowsDisplay = `Temurin ${versionFormatted}`
     let windowsIsInstaller = false
+    let windowsReleaseVersion = versionFormatted
 
     // Track what we've found to prioritize appropriately
     let foundMacOSArm = false;
@@ -56,7 +58,8 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                     // If we haven't found any macOS ARM build yet, or if this is a JDK and previous wasn't
                     if (!foundMacOSArm || (binary.type === "JDK" && !macOSArmJDK)) {
                         macOSLink = binary.installer_link
-                        macOSDisplay = `Temurin ${versionFormatted}, macOS aarch64 (M1) (.PKG)`
+                        macOSReleaseVersion = release.release_name
+                        macOSDisplay = `Temurin ${release.release_name}, macOS aarch64 (M1) (.PKG)`
                         foundMacOSArm = true
                         macOSArmJDK = binary.type === "JDK"
                         macOSIsInstaller = true
@@ -67,7 +70,8 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                     // If we haven't found any macOS ARM build yet, or if this is a JDK and previous wasn't
                     if (!foundMacOSArm || (binary.type === "JDK" && !macOSArmJDK)) {
                         macOSLink = binary.link
-                        macOSDisplay = `Temurin ${versionFormatted}, macOS aarch64 (M1) (.${binary.extension.toUpperCase()})`
+                        macOSReleaseVersion = release.release_name
+                        macOSDisplay = `Temurin ${release.release_name}, macOS aarch64 (M1) (.${binary.extension.toUpperCase()})`
                         foundMacOSArm = true
                         macOSArmJDK = binary.type === "JDK"
                     }
@@ -85,7 +89,8 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                         // Only set if we haven't found ARM or if this is a JDK and ARM isn't
                         if (!foundMacOSArm || (binary.type === "JDK" && !macOSArmJDK)) {
                             macOSLink = binary.installer_link
-                            macOSDisplay = `Temurin ${versionFormatted}, macOS x64 (.PKG)`
+                            macOSReleaseVersion = release.release_name
+                            macOSDisplay = `Temurin ${release.release_name}, macOS x64 (.PKG)`
                             foundMacOSX64 = true
                             macOSX64JDK = binary.type === "JDK"
                             macOSIsInstaller = true
@@ -99,7 +104,8 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                         // Only set if we haven't found ARM or if this is a JDK and ARM isn't
                         if (!foundMacOSArm || (binary.type === "JDK" && !macOSArmJDK)) {
                             macOSLink = binary.link
-                            macOSDisplay = `Temurin ${versionFormatted}, macOS x64 (.${binary.extension.toUpperCase()})`
+                            macOSReleaseVersion = release.release_name
+                            macOSDisplay = `Temurin ${release.release_name}, macOS x64 (.${binary.extension.toUpperCase()})`
                             foundMacOSX64 = true
                             macOSX64JDK = binary.type === "JDK"
                         }
@@ -116,7 +122,8 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                     // If we haven't found any Windows x64 build yet, or if this is a JDK and previous wasn't
                     if (!foundWindowsX64 || (binary.type === "JDK" && !windowsX64JDK)) {
                         windowsLink = binary.installer_link
-                        windowsDisplay = `Temurin ${versionFormatted}, Windows 64 bit (.MSI)`
+                        windowsReleaseVersion = release.release_name
+                        windowsDisplay = `Temurin ${release.release_name}, Windows 64 bit (.MSI)`
                         foundWindowsX64 = true
                         windowsX64JDK = binary.type === "JDK"
                         windowsIsInstaller = true
@@ -127,7 +134,8 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                     // If we haven't found any Windows x64 build yet, or if this is a JDK and previous wasn't
                     if (!foundWindowsX64 || (binary.type === "JDK" && !windowsX64JDK)) {
                         windowsLink = binary.link
-                        windowsDisplay = `Temurin ${versionFormatted}, Windows 64 bit (.${binary.extension.toUpperCase()})`
+                        windowsReleaseVersion = release.release_name
+                        windowsDisplay = `Temurin ${release.release_name}, Windows 64 bit (.${binary.extension.toUpperCase()})`
                         foundWindowsX64 = true
                         windowsX64JDK = binary.type === "JDK"
                     }
@@ -163,7 +171,7 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                                 os: "mac",
                                 arch: foundMacOSArm ? "aarch64" : "x64",
                                 pkg_type: "jdk",
-                                version: versionFormatted,
+                                version: macOSReleaseVersion,
                                 vendor: "Adoptium"
                             })}
                         >
@@ -198,7 +206,7 @@ const OneClickDownload: React.FC<OneClickDownloadProps> = ({
                                 os: "windows",
                                 arch: "x64",
                                 pkg_type: "jdk",
-                                version: versionFormatted,
+                                version: windowsReleaseVersion,
                                 vendor: "Adoptium"
                             })}
                         >
