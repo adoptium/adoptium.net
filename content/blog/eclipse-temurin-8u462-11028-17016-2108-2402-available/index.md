@@ -37,4 +37,4 @@ With Ubuntu 20.04 now out of regular support, we are no longer maintaining conta
 
 ### UBI 10 minimal images are now available
 
-In addition to the ubi9-minimal images which were previously available, we are also publishing images based on ubi10-minimal
+In addition to the ubi9-minimal images which were previously available, we are also publishing images based on ubi10-minimal.
