@@ -113,7 +113,7 @@ const TimeLine = ({ data }: TimeLineProps) => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3"
                 >
-                    View all
+                    View all Eclipse Foundation events
                 </a>
                 |
                 <a
