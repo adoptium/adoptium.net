@@ -17,7 +17,7 @@ const bannerInfo = {
 
 const Banner = () => {
 
-  var now = new Date();
+  const now = new Date();
   if (now < new Date(bannerInfo.startDate) || now > new Date(bannerInfo.endDate)) {
     return null;
   }
