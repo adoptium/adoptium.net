@@ -116,12 +116,6 @@
     "tier": "infra"
   },
   {
-    "name": "Equinix Metal",
-    "logo": "sustainers/equinix.png",
-    "url": "https://metal.equinix.com",
-    "tier": "infra"
-  },
-  {
     "name": "OSUOSL",
     "logo": "sustainers/osuosl.png",
     "url": "https://osuosl.org",
