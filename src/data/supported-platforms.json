@@ -306,8 +306,8 @@
             "8": { "supported": true, "docker": true },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "21": { "supported": false, "docker": false },
+            "24": { "supported": false, "docker": false }
           }
         },
         {
