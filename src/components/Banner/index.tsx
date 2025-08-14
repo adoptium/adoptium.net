@@ -17,11 +17,6 @@ const bannerInfo = {
 
 const Banner = () => {
 
-  const now = new Date();
-  if (now < new Date(bannerInfo.startDate) || now > new Date(bannerInfo.endDate)) {
-    return null;
-  }
-
   const [isVisible, setIsVisible] = useState(true);
   const [isDismissed, setIsDismissed] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -42,6 +37,11 @@ const Banner = () => {
 
   // Don't render if dismissed
   if (isDismissed) {
+    return null;
+  }
+
+  const now = new Date();
+  if (now < new Date(bannerInfo.startDate) || now > new Date(bannerInfo.endDate)) {
     return null;
   }
 
