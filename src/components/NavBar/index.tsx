@@ -172,17 +172,32 @@ const NavBar = ({ locale }: { locale: string }) => {
 useEffect(() => {
   const fetchUnreadCount = async () => {
     try {
+      const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+      const now = Date.now();
+
       const postsResponse = await fetch("/api/news?numPosts=4");
       const postsData = await postsResponse.json();
 
-      const postUpdate = await fetch("/api/news/byTag?tag=release-notes&numPosts=4")
-      const postRelease = await postUpdate.json()
+      const releasesResponse = await fetch("/api/news/byTag?tag=release-notes&numPosts=4");
+      const releasesData = await releasesResponse.json();
 
       const eventsData = await fetchLatestEvents();
       const slicedEvents = eventsData.slice(0, 6);
-      
-      const totalCount = (postsData.posts?.length || 0) + (postRelease.posts?.length || 0) + (slicedEvents.length || 0);
-      
+
+      const recentPosts = (postsData.posts || []).filter(
+        (p: { date: string }) => now - new Date(p.date).getTime() <= ONE_WEEK_MS
+      );
+
+      const recentReleases = (releasesData.posts || []).filter(
+        (p: { date: string }) => now - new Date(p.date).getTime() <= ONE_WEEK_MS
+      );
+
+      const recentEvents = (slicedEvents || []).filter(
+        (e: { date: string }) => now - new Date(e.date).getTime() <= ONE_WEEK_MS
+      );
+
+      const totalCount = recentPosts.length + recentReleases.length + recentEvents.length;
+
       setUnreadCount(totalCount);
     } catch (error) {
       console.error("Error fetching announcement count:", error);
@@ -196,6 +211,7 @@ useEffect(() => {
 const handleNotificationRead = () => {
   setUnreadCount(prev => Math.max(0, prev - 1));
 };
+
 
 
   useEffect(() => {
