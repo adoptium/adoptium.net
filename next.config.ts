@@ -21,7 +21,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
   async redirects() {
     return [
       {
