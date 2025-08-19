@@ -21,6 +21,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:locale/sponsors",
+        destination: "/:locale/sustainers",
+        permanent: true,
+      }
+    ];
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();
