@@ -122,7 +122,7 @@ exports[`Events page > renders correctly 1`] = `
           rel="noopener noreferrer"
           target="_blank"
         >
-          View all
+          View all Eclipse Foundation events
         </a>
         |
         <a
