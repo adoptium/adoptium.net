@@ -12,7 +12,7 @@ interface BecomeSustainerProps {
 const BecomeSustainer: React.FC<BecomeSustainerProps> = ({ classes = "" }) => (
   <div
     className={classNames(
-      "flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[98px] w-full z-10",
+      "flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[72px] w-full z-10",
       classes,
     )}
   >

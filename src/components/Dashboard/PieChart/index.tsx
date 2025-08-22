@@ -20,6 +20,7 @@ const PieChart: React.FC<PieChartProps> = ({ data, name, showInLegend = false, d
             type: 'pie',
             backgroundColor: 'transparent',
             style: { fontFamily: 'inherit' },
+            animation: process.env.NODE_ENV !== "test"
         },
         title: {
             text: name,

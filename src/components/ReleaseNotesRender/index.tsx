@@ -228,14 +228,16 @@ const ReleaseNotesRender = () => {
   return (
     <div ref={ref} className="release-notes-container mx-auto max-w-4xl p-6 lg:px-0 items-center text-center justify-center">
       <div className="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full mb-4">
-        <h2 className="release-notes-title">{releaseNotesVersion}</h2>
+        <h2 className="text-4xl font-bold text-pink mb-2 tracking-tight drop-shadow-sm">
+          {releaseNotesVersion}
+        </h2>
       </div>
       <div className="pt-3" style={{ display: "flex", justifyContent: "center", height: "100%" }}>
         {!releaseNoteDataBag ? <div style={{ flexGrow: 1 }}><CircularProgress aria-label='loading spinner' /></div> :
           (<div className="max-w-6xl" style={{ flexGrow: 1 }}>
             {!releaseNotesVersion || releaseNoteDataBag?.isValid === false ? (
               <div className="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg p-8 text-center">
-                <h2 className="release-notes-title mb-4">{t('couldnt-find-release-notes')}</h2>
+                <h2 className="text-3xl font-bold text-pink tracking-tight drop-shadow-sm mb-4">{t('couldnt-find-release-notes')}</h2>
                 <span className="text-white/80 text-lg">
                   {t('not-found-helper')} <code className="bg-[#14003c] px-2 py-1 rounded text-pink">?version=x.x.x</code>
                 </span>

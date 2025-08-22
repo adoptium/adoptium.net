@@ -3,8 +3,8 @@ name: Contributor Updater
 on:
   workflow_dispatch:
   push:
-    paths: [ content/asciidoc-pages/** ]
-    branches: [ main ]
+    paths: [content/asciidoc-pages/**]
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -20,66 +20,65 @@ jobs:
     name: Check Contributors
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
-    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      with:
-        persist-credentials: false
-        fetch-depth: 0
+      - name: Get changed files
+        if: github.event_name == 'push'
+        id: files
+        run: |
+          changed_files=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}")
+          echo "all=$changed_files" >> "$GITHUB_OUTPUT"
 
-    - name: Get changed files
-      if: github.event_name == 'push'
-      id: files
-      run: |
-        changed_files=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}")
-        echo "all=$changed_files" >> "$GITHUB_OUTPUT"
-      
-    - run: pip3 install bs4
+      - run: pip3 install bs4
 
-    - run: |
-        # This function takes one argument, which is the path to a file.
-        # The function first checks if the file path matches a regular expression pattern for AsciiDoc files located in the "content/asciidoc" directory
-        # If the file path matches the pattern, the function extracts the current authors from the file using grep and sed. It then uses a Python script to determine the contributors to the file and loops through each contributor.
-        # For each contributor, the function checks if they are already listed as an author in the file. If not, it adds the contributor to the list of authors and updates the file using sed.
-        update_authors() {
-          local file=$1
-          if [[ ${file} =~ ^content/asciidoc.*.adoc ]]; then
-            # If page is in a _partials directory, skip it
-            if [[ ${file} =~ ^content/asciidoc.*_partials.*.adoc ]]; then
-              return
-            fi
-            current_authors=$(grep ':page-authors:' "${file}" | sed -n -e 's/^.*page-authors: //p')
-            contibutors=$(python3 .github/workflows/github-file-contributors.py --file "${file}")
-            for contibutor in ${contibutors}; do
-              if ! echo "${current_authors}" | grep "${contibutor}"; then
-                echo "adding ${contibutor}"
-                current_authors_replacement="${current_authors}, ${contibutor}"
-                echo "${current_authors_replacement}"
-                sed -i "s/${current_authors}/${current_authors_replacement}/g" "${file}"
+      - run: |
+          # This function takes one argument, which is the path to a file.
+          # The function first checks if the file path matches a regular expression pattern for AsciiDoc files located in the "content/asciidoc" directory
+          # If the file path matches the pattern, the function extracts the current authors from the file using grep and sed. It then uses a Python script to determine the contributors to the file and loops through each contributor.
+          # For each contributor, the function checks if they are already listed as an author in the file. If not, it adds the contributor to the list of authors and updates the file using sed.
+          update_authors() {
+            local file=$1
+            if [[ ${file} =~ ^content/asciidoc.*.adoc ]]; then
+              # If page is in a _partials directory, skip it
+              if [[ ${file} =~ ^content/asciidoc.*_partials.*.adoc ]]; then
+                return
               fi
+              current_authors=$(grep ':page-authors:' "${file}" | sed -n -e 's/^.*page-authors: //p')
+              contibutors=$(python3 .github/workflows/github-file-contributors.py --file "${file}")
+              for contibutor in ${contibutors}; do
+                if ! echo "${current_authors}" | grep "${contibutor}"; then
+                  echo "adding ${contibutor}"
+                  current_authors_replacement="${current_authors}, ${contibutor}"
+                  echo "${current_authors_replacement}"
+                  sed -i "s/${current_authors}/${current_authors_replacement}/g" "${file}"
+                fi
+              done
+            fi
+          }
+
+          # if workflow_dispatch, then we need to get all asciidoc files
+          if [[ -z "${{ steps.files.outputs.all }}" ]]; then
+            find content/asciidoc-pages -name '*.adoc' -type f | while read -r changed_file; do
+              update_authors "${changed_file}"
+            done
+          else
+            # shellcheck disable=2043
+            for changed_file in ${{ steps.files.outputs.all }}; do
+              update_authors "${changed_file}"
             done
           fi
-        }
 
-        # if workflow_dispatch, then we need to get all asciidoc files
-        if [[ -z "${{ steps.files.outputs.all }}" ]]; then
-          find content/asciidoc-pages -name '*.adoc' -type f | while read -r changed_file; do
-            update_authors "${changed_file}"
-          done
-        else
-          # shellcheck disable=2043
-          for changed_file in ${{ steps.files.outputs.all }}; do
-            update_authors "${changed_file}"
-          done
-        fi
-
-    - uses: gr2m/create-or-update-pull-request-action@b65137ca591da0b9f43bad7b24df13050ea45d1b # v1.10.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.ADOPTIUM_BOT_TOKEN }}
-      with:
-        title: "Update Asciidoc Contributors"
-        body: "This is an automatically generated pull request, it will be automatically merged if all the CI tests pass."
-        path: "content/asciidoc-pages/"
-        branch: "contributor_bot"
-        commit-message: "contributors: update asciidoc contributors"
-        labels: automerge
-        author: "adoptium-bot <adoptium-bot@eclipse.org>"
+      - uses: gr2m/create-or-update-pull-request-action@b65137ca591da0b9f43bad7b24df13050ea45d1b # v1.10.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADOPTIUM_BOT_TOKEN }}
+        with:
+          title: "Update Asciidoc Contributors"
+          body: "This is an automatically generated pull request, it will be automatically merged if all the CI tests pass."
+          path: "content/asciidoc-pages/"
+          branch: "contributor_bot"
+          commit-message: "contributors: update asciidoc contributors"
+          labels: automerge
+          author: "adoptium-bot <adoptium-bot@eclipse.org>"

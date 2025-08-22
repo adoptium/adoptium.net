@@ -5,9 +5,20 @@ updates:
     schedule:
       interval: daily
     groups:
+      nextjs:
+        patterns:
+          - "next"
+          - "eslint-config-next"
+          - "@next/third-parties"
       mui-dependencies:
         patterns:
           - "@mui/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
     open-pull-requests-limit: 10
   - package-ecosystem: github-actions
     directory: "/"

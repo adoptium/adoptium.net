@@ -2,12 +2,20 @@
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState, useEffect } from "react"
+import { PinkIcon } from "../Common/Icon";
+
+// The following is the content of the last banner alert
+const bannerInfo = {
+  title: "Register for the Adoptium Summit 2025",
+  description: "Be a part of the second edition of the Adoptium Summit on October 01. Connect with peers to exchange knowledge on Temurin, AQAvit, Migration toolkit, Secure Work and other Adoptium's projects.",
+  cta: "Register today!",
+  ctaLink: "https://hubs.la/Q03C6qBW0",
+  startDate: "2025-08-11T00:00:00Z",
+  endDate: "2025-09-30T23:59:59Z",
+}
+
 
 const Banner = () => {
-  // return null
-
-  // The following is an example that can be used for future banner alert
-  // Comment Out The Above Line ( return null ; ) and uncomment the below
 
   const [isVisible, setIsVisible] = useState(true);
   const [isDismissed, setIsDismissed] = useState(false);
@@ -29,6 +37,11 @@ const Banner = () => {
 
   // Don't render if dismissed
   if (isDismissed) {
+    return null;
+  }
+
+  const now = new Date();
+  if (now < new Date(bannerInfo.startDate) || now > new Date(bannerInfo.endDate)) {
     return null;
   }
 
@@ -57,25 +70,23 @@ const Banner = () => {
 
           <div className={`flex items-center gap-4 mb-3 md:mb-0 ${isMounted ? 'pr-8' : ''}`}>{/* Only add padding after mount */}
             <div className="transform hover:scale-110 transition-transform duration-300">
-              {/* <PinkIcon /> */}
+              <PinkIcon />
             </div>
             <div>
               <h2 className="text-[16px] md:text-[18px] font-extrabold text-white leading-tight">
-                <span className="text-primary">July 2025 PSU Binaries</span> - In Progress
+                <span className="text-primary">{bannerInfo.title}</span>
               </h2>
               <p className="text-[14px] text-gray-200 mt-1 max-w-2xl">
-                We are creating the July 2025 PSU binaries for Eclipse Temurin 8u462, 11.0.28 and 17.0.16 and 21.0.8 and 24.0.2
+                {bannerInfo.description}
               </p>
             </div>
           </div>
           <div className="mt-2 md:mt-0">
             <a
-              href="https://github.com/adoptium/temurin/issues/89"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={bannerInfo.ctaLink}
               className="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center group"
             >
-              View Progress by Platform
+              {bannerInfo.cta}
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

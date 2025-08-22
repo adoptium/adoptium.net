@@ -213,6 +213,9 @@
     "title": "版本说明",
     "couldnt-find-release-notes": "哎呀……我们找不到这些版本说明",
     "not-found-helper": "请确保您已使用版本 URL 参数指定了版本：",
-    "description": "本节根据每个问题所属的主要组件，整理了所选更新版本中的更改内容。"
+    "description": "本节根据每个问题所属的主要组件，整理了所选更新版本中的更改内容。",
+    "selectVersion": "选择 Temurin 版本",
+    "selectVersionDescription": "选择一个 Temurin 版本以查看其最新的版本说明：",
+    "viewReleaseNotes": "查看版本说明 →"
   }
 }
