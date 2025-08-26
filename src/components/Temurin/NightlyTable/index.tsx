@@ -16,6 +16,7 @@ const TemurinNightlyTable = ({ results, openModalWithChecksum }: { results: { re
         <thead className="bg-[#26193F]">
           <tr>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">{t("platform")}</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">{t("architecture")}</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">{t("type")}</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">{t("build-tag")}</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">{t("date")}</th>
@@ -33,6 +34,7 @@ const TemurinNightlyTable = ({ results, openModalWithChecksum }: { results: { re
                   (asset, idx) => (
                     <tr key={release.release_name + key + asset.type + idx}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{capitalize(asset.os)}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{capitalize(asset.architecture)}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{capitalize(asset.type)}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-200">{release.release_name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{release.timestamp instanceof Date ? release.timestamp.toLocaleDateString(locale, { year: "numeric", month: "short", day: "numeric" }) : new Date(release.timestamp).toLocaleDateString(locale, { year: "numeric", month: "short", day: "numeric" })}</td>

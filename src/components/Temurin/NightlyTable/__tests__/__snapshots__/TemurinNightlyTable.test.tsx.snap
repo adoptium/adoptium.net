@@ -55,6 +55,11 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
           <th
             class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
           >
+            Text
+          </th>
+          <th
+            class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider"
+          >
             SHA256
           </th>
         </tr>
@@ -67,6 +72,11 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
             class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
           >
             Os_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Architecture_mock
           </td>
           <td
             class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
@@ -118,6 +128,11 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
             class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
           >
             Os_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Architecture_mock
           </td>
           <td
             class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
