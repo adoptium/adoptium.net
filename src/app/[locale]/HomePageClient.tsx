@@ -20,14 +20,7 @@ export default function HomePageClient({
         <div>
             <HeroSection latestLTS={latestLTS} />
             <LogoCarousel />
-            <div className='relative w-full'>
-                <div className="w-full h-[1px] my-32 lg:my-16 bg-[#3E3355]"></div>
-                <div className='absolute w-full top-[-64px]'>
-                    <div className="border border-[#3E3355] md:rounded-lg mx-auto  w-full md:max-w-[800px] bg-purple">
-                        <BlockAnnouncement />
-                    </div>
-                </div>
-            </div>
+            <BlockAnnouncement />
             <PowerOfTemurin />
             <DownloadCounter total={total_downloads} />
             <TemurinFeatures />
