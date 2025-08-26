@@ -246,13 +246,13 @@ exports[`Index page > renders correctly 1`] = `
       class="w-full h-[1px] my-32 lg:my-16 bg-[#3E3355]"
     />
     <div
-      class="absolute w-full top-[-64px]"
+      class="absolute w-full top-[-72px]"
     >
       <div
-        class="border border-[#3E3355] md:rounded-lg mx-auto  w-full md:max-w-[800px] bg-purple"
+        class="relative border border-[#3E3355] md:rounded-lg container mx-auto px-4 bg-purple"
       >
         <div
-          class="from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg transition-opacity duration-700 opacity-100"
+          class="from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg"
         >
           <div
             class="container mx-auto px-4"
@@ -263,12 +263,9 @@ exports[`Index page > renders correctly 1`] = `
               <div
                 class="flex items-center gap-4 mb-3 md:mb-0 pr-8"
               >
-                <div
-                  class="transform hover:scale-110 transition-transform duration-300"
-                />
                 <div>
                   <h2
-                    class="text-[16px] md:text-[18px] font-extrabold text-white leading-tight"
+                    class="text-[16px] md:text-2xl font-extrabold text-white leading-tight"
                   >
                     <span
                       class="text-primary"
