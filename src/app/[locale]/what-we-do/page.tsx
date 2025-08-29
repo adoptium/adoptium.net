@@ -5,7 +5,8 @@ import WGProjects from "@/components/WGProjects"
 import ContactUs from "@/components/ContactUs"
 import WaysToSupport from "@/components/WaysToSupport"
 import Testimonials from "@/components/Testimonials"
-import LatestNews from '@/components/News/LatestNews';
+import LatestNews from '@/components/News/LatestNews'
+import License from "@/components/License"
 
 export const metadata: Metadata = {
   title: "What We Do",
@@ -50,6 +51,7 @@ export default function WhatWeDoPage() {
         }
       />
       <WGProjects />
+      <License />
       <WaysToSupport />
       <ContactUs
         title="Connect with the community"
