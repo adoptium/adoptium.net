@@ -194,6 +194,7 @@
       "number-of-builds": "Número de compilaciones",
       "builds-prior-to": "Compilaciones anteriores a",
       "platform": "Plataforma",
+      "architecture": "Arquitectura",
       "type": "Tipo",
       "build-tag": "Build/Tag",
       "date": "Fecha",
