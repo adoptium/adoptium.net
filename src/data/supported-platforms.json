@@ -450,7 +450,7 @@
         {
           "name": "Ubuntu 24.04",
           "versions": {
-            "8": { "supported": true, "docker": true },
+            "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
