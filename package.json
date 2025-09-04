@@ -15,7 +15,7 @@
     "@asciidoctor/core": "^3.0.4",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^7.0.1",
     "@headlessui/react": "^2.2.7",
     "@mui/material": "^7.3.1",
     "@mui/x-data-grid": "^8.10.2",
