@@ -26,7 +26,7 @@ exports[`LineChart > matches snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <desc>
-          Created with Highcharts 12.3.0
+          Created with Highcharts 12.4.0
         </desc>
         <defs>
           <filter
