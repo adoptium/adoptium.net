@@ -145,6 +145,16 @@
           }
         },
         {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
           "name": "RHEL / UBI 9.x",
           "versions": {
             "8": { "supported": true, "docker": true },
@@ -203,16 +213,6 @@
             "21": { "supported": true, "docker": true },
             "24": { "supported": true, "docker": true }
           }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
         }
       ]
     },
@@ -228,6 +228,16 @@
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
             "24": { "supported": true, "docker": true }
           }
@@ -274,16 +284,6 @@
         },
         {
           "name": "Ubuntu 22.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
           "versions": {
             "8": { "supported": true, "docker": true },
             "11": { "supported": true, "docker": true },
@@ -319,16 +319,6 @@
             "21": { "supported": false, "docker": false },
             "24": { "supported": false, "docker": false }
           }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
-          }
         }
       ]
     },
@@ -338,6 +328,16 @@
         "These builds should work on any distribution with glibc version 2.17 or higher."
       ],
       "distros": [
+        {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
         {
           "name": "RHEL / UBI 9.x",
           "versions": {
@@ -387,16 +387,6 @@
             "21": { "supported": true, "docker": true },
             "24": { "supported": true, "docker": true }
           }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
         }
       ]
     },
@@ -407,6 +397,16 @@
         "JDK8 on s390x has no JIT so is unsupported."
       ],
       "distros": [
+        {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "24": { "supported": true, "docker": true }
+          }
+        },
         {
           "name": "RHEL / UBI 9.x",
           "versions": {
@@ -450,16 +450,6 @@
         {
           "name": "Ubuntu 24.04",
           "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 22.04",
-          "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
@@ -468,7 +458,7 @@
           }
         },
         {
-          "name": "Ubuntu 20.04",
+          "name": "Ubuntu 22.04",
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
