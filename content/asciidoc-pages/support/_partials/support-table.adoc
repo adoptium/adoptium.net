@@ -88,6 +88,6 @@
 [.small]#jdk8u462+8#
 | Oct 2025 +
 [.small]#jdk8u472#
-| At least Nov 2026
+| At least Dec 2030
 
 |===
