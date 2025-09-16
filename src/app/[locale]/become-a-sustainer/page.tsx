@@ -13,7 +13,7 @@ export default function BecomeSustainerPage() {
             <PageHeader
                 subtitle="Sustainer"
                 title="Become a Sustainer"
-                description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+                description="Thank you for supporting the long-term sustainment of Eclipse Temurin and other Adoptium projects. By becoming a Sustainer, your company ensures that Temurin remains the industry's leading community-driven open source JDK for mission-critical Java workloads"
             />
             <section className="mx-auto max-w-4xl w-full p-6 lg:px-0 items-center justify-center">
                 <HubspotForm
