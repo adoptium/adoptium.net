@@ -5,13 +5,18 @@ import { fetchLatestEvents } from "@/hooks"
 
 interface AnnouncementsProps {
     handleClose: () => void;
+    onNotificationRead: () => void; 
 }
 
-const Announcements = ({ handleClose }: AnnouncementsProps) => {
+const Announcements = ({ handleClose , onNotificationRead }: AnnouncementsProps) => {
     const [latestPosts, setLatestPosts] = useState([])
     const [latestReleases, setLatestReleases] = useState([])
     const [latestEvents, setLatestEvents] = useState([])
     const [active, setActive] = useState("Updates")
+    const handleNotificationClick = () => {
+    onNotificationRead(); 
+  };
+
 
     useEffect(() => {
         // Fetch latest news posts
@@ -65,9 +70,9 @@ const Announcements = ({ handleClose }: AnnouncementsProps) => {
             </div>
             <div className="mt-6 grow overflow-hidden h-full pb-28">
                 <div className="overflow-auto h-[88%] scroll-sidebar">
-                    {active === "Updates" && <TabContent posts={latestPosts} />}
-                    {active === "Events" && <TabContent posts={latestEvents} isEvents={true} />}
-                    {active === "Releases" && <TabContent posts={latestReleases} />}
+                    {active === "Updates" && <TabContent posts={latestPosts} onItemClick={handleNotificationClick}/>}
+                    {active === "Events" && <TabContent posts={latestEvents} isEvents={true} onItemClick={handleNotificationClick}/>}
+                    {active === "Releases" && <TabContent posts={latestReleases} onItemClick={handleNotificationClick}/>}
                 </div>
             </div>
         </Sidebar>
