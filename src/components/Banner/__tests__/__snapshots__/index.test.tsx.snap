@@ -70,13 +70,13 @@ exports[`Banner > matches snapshot 1`] = `
               <span
                 class="text-primary"
               >
-                Register for the Adoptium Summit 2025
+                JDK 25 Release - In Progress
               </span>
             </h2>
             <p
               class="text-[14px] text-gray-200 mt-1 max-w-2xl"
             >
-              Be a part of the second edition of the Adoptium Summit on October 01. Connect with peers to exchange knowledge on Temurin, AQAvit, Migration toolkit, Secure Work and other Adoptium's projects.
+              We are creating the JDK 25 GA binaries for Eclipse Temurin 25+36
             </p>
           </div>
         </div>
@@ -85,9 +85,9 @@ exports[`Banner > matches snapshot 1`] = `
         >
           <a
             class="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center group"
-            href="https://hubs.la/Q03C6qBW0"
+            href="https://github.com/adoptium/temurin/issues/96"
           >
-            Register today!
+            View Progress by Platform
             <svg
               class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"
               fill="none"
