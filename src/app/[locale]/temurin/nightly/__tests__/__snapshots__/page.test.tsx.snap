@@ -192,9 +192,9 @@ exports[`TemurinNightly page > renders correctly 1`] = `
                     23
                   </option>
                   <option
-                    value="24"
+                    value="25"
                   >
-                    24
+                    25 - LTS
                   </option>
                 </select>
               </div>
