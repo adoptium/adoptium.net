@@ -12,7 +12,7 @@ exports[`LineChart > matches snapshot 1`] = `
       class="highcharts-container "
       dir="ltr"
       id="highcharts-0"
-      style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; outline: none; padding: 0px; font-family: inherit;"
+      style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; outline: none; padding: 0px; font-family: inherit;"
     >
       <svg
         aria-label="Test Line Chart"
@@ -503,7 +503,7 @@ exports[`LineChart > matches snapshot 1`] = `
       <span
         class="highcharts-subtitle"
         data-z-index="4"
-        style="position: absolute; font-family: inherit; font-size: 0.8em; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; margin-left: 0px; margin-top: 0px; left: 300px; top: 8px; text-align: center; transform-origin: 0px 2px; color: rgb(189, 189, 189); transform: scale(1,1);"
+        style="position: absolute; font-family: inherit; font-size: 0.8em; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; left: 300px; top: 8px; text-align: center; transform-origin: 0px 2px; color: rgb(189, 189, 189); margin-left: 0px; margin-top: 0px; transform: scale(1,1);"
         text-align="center"
         transform-origin="10 3"
       >
