@@ -5,6 +5,9 @@ import React, { useState, useEffect } from "react"
 import { PinkIcon } from "../Common/Icon";
 
 // The following is the content of the last banner alert
+//
+// Re-instate once the JDK 25 release is done
+/*
 const bannerInfo = {
   title: "Register for the Adoptium Summit 2025",
   description: "Be a part of the second edition of the Adoptium Summit on October 01. Connect with peers to exchange knowledge on Temurin, AQAvit, Migration toolkit, Secure Work and other Adoptium's projects.",
@@ -12,6 +15,15 @@ const bannerInfo = {
   ctaLink: "https://hubs.la/Q03C6qBW0",
   startDate: "2025-08-11T00:00:00Z",
   endDate: "2025-09-30T23:59:59Z",
+}
+*/
+const bannerInfo = {
+  title: "JDK 25 Release - In Progress",
+  description: "We are creating the JDK 25 GA binaries for Eclipse Temurin 25+36",
+  cta: "View Progress by Platform",
+  ctaLink: "https://github.com/adoptium/temurin/issues/96",
+  startDate: "2025-09-16T00:00:00Z",
+  endDate: "2025-09-23T23:59:59Z",
 }
 
 
