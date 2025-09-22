@@ -30,7 +30,7 @@ export default function CommonSelector({
     return { name: "Select an option", value: "" }
   }, [defaultValue, list])
 
-  const [selected, setSelected] = useState<ListItem | null>(initialSelected)
+  const [selected, setSelected] = useState<ListItem | undefined>(initialSelected)
 
   // Update selected when defaultValue changes (controlled from parent)
   useEffect(() => {
