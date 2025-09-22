@@ -4,10 +4,10 @@
 | Java Version  | First Availability | Latest Release | Next Release Due | End of Availability ^[1]^
 
 | Java 25 (LTS)
-| Expected Sep 2025
-| Not available
-| Expected Sep 2025
-| Expected at least Sep 2031
+| Sep 2025
+| Sep 2025
+| Oct 2025
+| At least Sep 2031
 
 | Java 24
 | Mar 2025
@@ -88,6 +88,6 @@
 [.small]#jdk8u462+8#
 | Oct 2025 +
 [.small]#jdk8u472#
-| At least Nov 2026
+| At least Dec 2030
 
 |===
