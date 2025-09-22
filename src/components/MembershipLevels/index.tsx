@@ -128,8 +128,8 @@ export default function MembershipLevels({
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="text-grey mb-6">
-            Questions about membership levels? We're here to help you choose the
-            right tier.
+            Questions about membership levels? We&apos;re here to help you
+            choose the right tier.
           </p>
           <Link href="https://www.eclipse.org/org/workinggroups/adoptium-charter.php">
             <CommonButton>Learn More</CommonButton>

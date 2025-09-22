@@ -145,9 +145,6 @@ describe("MembershipLevels", () => {
   it("has proper accessibility structure", () => {
     const { container } = render(<MembershipLevels />);
 
-    // Check for proper heading hierarchy - get all headings and verify
-    const allHeadings = container.querySelectorAll("h1, h2, h3, h4, h5, h6");
-
     // Should have 1 h2 (main title) and 3 h3 (tier titles)
     const h2Headings = container.querySelectorAll("h2");
     const h3Headings = container.querySelectorAll("h3");
