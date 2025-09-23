@@ -60,7 +60,7 @@ const KeyInitiatives: React.FC<KeyInitiativesProps> = ({
   }, [initiatives]);
 
   return (
-    <div className="p-4 border-t border-[#39314a] mt-[60px] pt-[40px] md:pt-[80px] w-full">
+    <div className="p-4 mt-[60px] w-full">
       <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
         {title}
       </h2>

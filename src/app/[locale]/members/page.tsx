@@ -172,9 +172,9 @@ export default function MembersPage() {
             <CommonButton>Contact Us</CommonButton>
           </Link>
           {/* TODO add a real link */}
-          <Link href="">
+          {/* <Link href="">
             <CommonButton>Download Prospectus</CommonButton>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
