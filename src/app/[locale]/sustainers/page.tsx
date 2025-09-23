@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import { Link } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
 import Program from "@/components/Sustainers/Program";
 import KeyInitiatives from "@/components/Sustainers/KeyInitiatives";
 import SavingsCalculator from "@/components/Sustainers/SavingsCalculator";
