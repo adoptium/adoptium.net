@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import React from "react";
-import HeroSection from "@/components/Sustainers/HeroSection";
+import { Link } from "@/i18n/routing";
 import Program from "@/components/Sustainers/Program";
 import KeyInitiatives from "@/components/Sustainers/KeyInitiatives";
 import SavingsCalculator from "@/components/Sustainers/SavingsCalculator";
 import SustainerLevels from "@/components/Sustainers/Levels";
 import Logos, { LogoType } from "@/components/Logos";
+import PageHeader from "@/components/Common/PageHeader";
 
 export const metadata: Metadata = {
   title: "Sustainers",
@@ -52,9 +53,33 @@ const initiatives = [
 ];
 
 export default function SustainersPage() {
+  const headerButtons = (
+    <>
+      <Link
+        href="https://github.com/sponsors/adoptium"
+        className="w-full sm:w-auto"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+          Become an individual Sustainer
+        </button>
+      </Link>
+      <Link href="/become-a-sustainer" className="w-full sm:w-auto">
+        <button className="w-full px-8 py-4 rounded-full border-2 border-white text-white hover:bg-pink-500 hover:text-white font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2">
+          Become a corporate Sustainer
+        </button>
+      </Link>
+    </>
+  );
+
   return (
     <div>
-      <HeroSection />
+      <PageHeader
+        title="Join us in strengthening the future of Eclipse Temurin"
+        subtitle="Become a Corporate Sustainer"
+        buttons={headerButtons}
+      />
 
       <div className="w-full flex flex-col justify-center items-center pt-[240px] md:pt-[120px]">
         <Program />
