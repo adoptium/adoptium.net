@@ -200,7 +200,7 @@ exports[`Supported Platforms page > renders correctly 1`] = `
           class="text-lg font-semibold text-white/90 text-center"
         >
           JDK 
-          24
+          25
         </div>
       </div>
       <div
