@@ -1,15 +1,22 @@
-import { PinkIcon } from "@/components/Common/Icon"
+import { PinkIcon } from "@/components/Common/Icon";
 
 interface PageHeaderProps {
-  title: string | React.ReactNode
-  subtitle: string | React.ReactNode
-  description?: string | React.ReactNode
-  className?: string
+  title: string | React.ReactNode;
+  subtitle: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  className?: string;
+  buttons?: React.ReactNode;
 }
 
-export default function PageHeader({ title, subtitle, description, className }: PageHeaderProps) {
+export default function PageHeader({
+  title,
+  subtitle,
+  description,
+  className,
+  buttons,
+}: PageHeaderProps) {
   if (!title || !subtitle) {
-    return null
+    return null;
   }
 
   return (
@@ -30,7 +37,7 @@ export default function PageHeader({ title, subtitle, description, className }: 
               </div>
             </div>
             {/* if title is a string else React.ReactNode */}
-            {typeof title === 'string' ? (
+            {typeof title === "string" ? (
               <div
                 className={`self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold`}
                 dangerouslySetInnerHTML={{ __html: title }}
@@ -46,8 +53,13 @@ export default function PageHeader({ title, subtitle, description, className }: 
           >
             {description}
           </div>
+          {buttons && (
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+              {buttons}
+            </div>
+          )}
         </div>
       </div>
     </div>
-  )
+  );
 }
