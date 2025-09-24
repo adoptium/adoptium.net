@@ -92,14 +92,22 @@ exports[`Adopters page > renders correctly 1`] = `
     <img
       alt="gradient overlay"
       class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
       sizes="100vw"
-      src="/images/backgrounds/gradient-overlay.png"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
     />
     <img
       alt="gradient overlay mobile"
       class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
       sizes="100vw"
-      src="/images/backgrounds/gradient-overlay-mobile.png"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
     />
     <div
       class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
@@ -107,8 +115,12 @@ exports[`Adopters page > renders correctly 1`] = `
       <img
         alt="message icon"
         class="!mb-0"
+        data-nimg="1"
+        decoding="async"
         height="120"
+        loading="lazy"
         src="/images/icons/message.svg"
+        style="color: transparent;"
         width="120"
       />
       <p

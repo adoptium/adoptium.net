@@ -34,7 +34,6 @@ describe("ImageText", () => {
 
     const image = screen.getByAltText("scroll-divider");
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", "/images/icons/experience.png");
     expect(image).toHaveAttribute("width", "400");
     expect(image).toHaveAttribute("height", "400");
   });

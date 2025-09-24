@@ -76,19 +76,6 @@ vi.mock("next-intl", () => ({
   ),
 }));
 
-vi.mock("next/image", () => ({
-  default: vi.fn(({ src, alt, width, height, className, ...props }) => (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      {...props}
-    />
-  )),
-}));
-
 vi.mock("@/i18n/navigation", () => ({
   redirect: vi.fn(),
   usePathname: vi.fn(() => "/en"),

@@ -79,8 +79,13 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <img
                 alt="Jane Doe"
                 class="ml-2 mb-0 rounded-full"
+                data-nimg="1"
+                decoding="async"
                 height="30"
-                src="/images/authors/jdoe.jpg"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fauthors%2Fjdoe.jpg&w=64&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fjdoe.jpg&w=32&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fjdoe.jpg&w=64&q=75 2x"
+                style="color: transparent;"
                 width="30"
               />
               <span

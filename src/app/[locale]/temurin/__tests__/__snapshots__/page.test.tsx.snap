@@ -15,9 +15,13 @@ exports[`TemurinIndex page > renders correctly 1`] = `
           <img
             alt="Temurin Hero Mobile Background"
             class="max-w-80 h-auto"
+            data-nimg="1"
+            decoding="async"
             draggable="false"
             height="0"
+            loading="lazy"
             src="/images/backgrounds/temurin-hero-mobile.svg"
+            style="color: transparent;"
             width="600"
           />
         </div>
@@ -87,9 +91,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Arm"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-arm-white.svg"
-          style="padding: 1em;"
+          style="color: transparent; padding: 1em;"
           width="200"
         />
       </span>
@@ -99,9 +106,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Atlassian"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-atlassian-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -111,9 +121,13 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Dynatrace"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
-          src="/images/adopters/logo-dynatrace-white.png"
-          style="padding: 0px;"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -123,9 +137,13 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Mercedes-Benz Tech Innovation GmbH"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
-          src="/images/adopters/logo-mercedes-benz-white.png"
-          style="padding: 0px;"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -135,9 +153,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Michelin"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-michelin-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -147,9 +168,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Microsoft"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-microsoft-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -159,9 +183,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="MongoDB"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-mongodb-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -171,9 +198,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Red Hat"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -183,9 +213,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Societe Generale"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-societe-generale-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -195,9 +228,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="T-Systems"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-t-systems-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -235,15 +271,23 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
         height="366"
+        loading="lazy"
         src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="80"
+        loading="lazy"
         src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
         width="16"
       />
       <div
@@ -267,15 +311,23 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
         height="366"
+        loading="lazy"
         src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="80"
+        loading="lazy"
         src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
         width="16"
       />
       <div
@@ -299,15 +351,23 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
         height="366"
+        loading="lazy"
         src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="80"
+        loading="lazy"
         src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
         width="16"
       />
       <div
@@ -352,8 +412,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
               height="300"
+              loading="lazy"
               src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
               width="436"
             />
           </div>
@@ -385,8 +449,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
               height="300"
+              loading="lazy"
               src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
               width="436"
             />
           </div>
@@ -418,8 +486,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
               height="300"
+              loading="lazy"
               src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
               width="436"
             />
           </div>
@@ -539,8 +611,13 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       <img
         alt="scroll-divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="400"
-        src="/images/icons/experience.png"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
+        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
+        style="color: transparent;"
         width="400"
       />
     </div>
@@ -584,14 +661,22 @@ exports[`TemurinIndex page > renders correctly 1`] = `
     <img
       alt="gradient overlay"
       class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
       sizes="100vw"
-      src="/images/backgrounds/gradient-overlay.png"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
     />
     <img
       alt="gradient overlay mobile"
       class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
+      data-nimg="fill"
+      decoding="async"
       sizes="100vw"
-      src="/images/backgrounds/gradient-overlay-mobile.png"
+      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
     />
     <div
       class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
@@ -599,8 +684,12 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       <img
         alt="message icon"
         class="!mb-0"
+        data-nimg="1"
+        decoding="async"
         height="120"
+        loading="lazy"
         src="/images/icons/message.svg"
+        style="color: transparent;"
         width="120"
       />
       <p

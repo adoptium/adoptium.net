@@ -15,9 +15,13 @@ exports[`Index page > renders correctly 1`] = `
           <img
             alt="Temurin Hero Mobile Background"
             class="max-w-80 h-auto"
+            data-nimg="1"
+            decoding="async"
             draggable="false"
             height="0"
+            loading="lazy"
             src="/images/backgrounds/temurin-hero-mobile.svg"
+            style="color: transparent;"
             width="600"
           />
         </div>
@@ -87,9 +91,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Arm"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-arm-white.svg"
-          style="padding: 1em;"
+          style="color: transparent; padding: 1em;"
           width="200"
         />
       </span>
@@ -99,9 +106,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Atlassian"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-atlassian-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -111,9 +121,13 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Dynatrace"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
-          src="/images/adopters/logo-dynatrace-white.png"
-          style="padding: 0px;"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -123,9 +137,13 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Mercedes-Benz Tech Innovation GmbH"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
-          src="/images/adopters/logo-mercedes-benz-white.png"
-          style="padding: 0px;"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -135,9 +153,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Michelin"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-michelin-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -147,9 +168,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Microsoft"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-microsoft-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -159,9 +183,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="MongoDB"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-mongodb-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -171,9 +198,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Red Hat"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -183,9 +213,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Societe Generale"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-societe-generale-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -195,9 +228,12 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="T-Systems"
           class="h-[100px] w-auto object-contain mx-auto"
+          data-nimg="1"
+          decoding="async"
           height="100"
+          loading="lazy"
           src="/images/adopters/logo-t-systems-white.svg"
-          style="padding: 0px;"
+          style="color: transparent; padding: 0px;"
           width="200"
         />
       </span>
@@ -290,15 +326,23 @@ exports[`Index page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
         height="366"
+        loading="lazy"
         src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="80"
+        loading="lazy"
         src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
         width="16"
       />
       <div
@@ -322,15 +366,23 @@ exports[`Index page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
         height="366"
+        loading="lazy"
         src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="80"
+        loading="lazy"
         src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
         width="16"
       />
       <div
@@ -354,15 +406,23 @@ exports[`Index page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
+        data-nimg="1"
+        decoding="async"
         height="366"
+        loading="lazy"
         src="/images/icons/feature-layers.svg"
+        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
+        data-nimg="1"
+        decoding="async"
         height="80"
+        loading="lazy"
         src="/images/icons/scroll-divider.svg"
+        style="color: transparent;"
         width="16"
       />
       <div
@@ -407,8 +467,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
               height="300"
+              loading="lazy"
               src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
               width="436"
             />
           </div>
@@ -440,8 +504,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
               height="300"
+              loading="lazy"
               src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
               width="436"
             />
           </div>
@@ -473,8 +541,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
+              data-nimg="1"
+              decoding="async"
               height="300"
+              loading="lazy"
               src="/images/icons/feature-layers.svg"
+              style="color: transparent;"
               width="436"
             />
           </div>
@@ -656,8 +728,12 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Text"
                 class="h-[64px] w-auto"
+                data-nimg="1"
+                decoding="async"
                 height="64"
+                loading="lazy"
                 src="/images/icons/lock.svg"
+                style="color: transparent;"
                 width="64"
               />
             </div>
@@ -687,8 +763,12 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Text"
                 class="h-[64px] w-auto"
+                data-nimg="1"
+                decoding="async"
                 height="64"
+                loading="lazy"
                 src="/images/initiatives/testing.svg"
+                style="color: transparent;"
                 width="64"
               />
             </div>
@@ -718,8 +798,12 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Text"
                 class="h-[64px] w-auto"
+                data-nimg="1"
+                decoding="async"
                 height="64"
+                loading="lazy"
                 src="/images/initiatives/deploy.svg"
+                style="color: transparent;"
                 width="64"
               />
             </div>
@@ -749,8 +833,12 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Text"
                 class="h-[64px] w-auto"
+                data-nimg="1"
+                decoding="async"
                 height="64"
+                loading="lazy"
                 src="/images/initiatives/release.svg"
+                style="color: transparent;"
                 width="64"
               />
             </div>
@@ -780,8 +868,12 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Text"
                 class="h-[64px] w-auto"
+                data-nimg="1"
+                decoding="async"
                 height="64"
+                loading="lazy"
                 src="/images/initiatives/community.svg"
+                style="color: transparent;"
                 width="64"
               />
             </div>
@@ -811,8 +903,12 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Text"
                 class="h-[64px] w-auto"
+                data-nimg="1"
+                decoding="async"
                 height="64"
+                loading="lazy"
                 src="/images/initiatives/security.svg"
+                style="color: transparent;"
                 width="64"
               />
             </div>
@@ -940,8 +1036,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Eclipse Temurin® logo"
               class="w-[140px]"
+              data-nimg="1"
+              decoding="async"
               height="70"
+              loading="lazy"
               src="/images/projects/temurin-project.svg"
+              style="color: transparent;"
               width="140"
             />
             <div
@@ -1008,8 +1108,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Eclipse AQAvit logo"
               class="w-[140px]"
+              data-nimg="1"
+              decoding="async"
               height="70"
+              loading="lazy"
               src="/images/projects/aqavit-project.svg"
+              style="color: transparent;"
               width="140"
             />
             <div
@@ -1076,8 +1180,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Eclipse Mission Control logo"
               class="w-[140px]"
+              data-nimg="1"
+              decoding="async"
               height="70"
+              loading="lazy"
               src="/images/projects/mc-project.svg"
+              style="color: transparent;"
               width="140"
             />
             <div
@@ -1194,8 +1302,13 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Martijn Verburg"
                 class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
+                data-nimg="1"
+                decoding="async"
                 height="64"
-                src="/images/authors/martijnverburg.jpg"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75 2x"
+                style="color: transparent;"
                 width="64"
               />
               <div
@@ -1295,8 +1408,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Microsoft"
               class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
               height="48"
+              loading="lazy"
               src="/images/members/microsoft.svg"
+              style="color: transparent;"
               width="128"
             />
           </div>
@@ -1311,8 +1428,13 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Alibaba Cloud"
               class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
               height="48"
-              src="/images/members/alibaba.png"
+              loading="lazy"
+              src="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75 2x"
+              style="color: transparent;"
               width="128"
             />
           </div>
@@ -1327,8 +1449,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Azul Systems"
               class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
               height="48"
+              loading="lazy"
               src="/images/members/azul.svg"
+              style="color: transparent;"
               width="128"
             />
           </div>
@@ -1343,8 +1469,12 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Red Hat"
               class="max-h-full max-w-full object-contain brightness-0 invert"
+              data-nimg="1"
+              decoding="async"
               height="48"
+              loading="lazy"
               src="/images/members/redhat.svg"
+              style="color: transparent;"
               width="128"
             />
           </div>

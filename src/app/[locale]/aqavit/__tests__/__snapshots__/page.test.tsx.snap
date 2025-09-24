@@ -30,8 +30,12 @@ exports[`AQAvit page > renders correctly 1`] = `
           <img
             alt="background-image"
             class="sm:w-full sm:max-w-3xl"
+            data-nimg="1"
+            decoding="async"
             height="415"
+            loading="lazy"
             src="/images/backgrounds/aqavit-hero-bg.svg"
+            style="color: transparent;"
             width="317"
           />
         </div>
