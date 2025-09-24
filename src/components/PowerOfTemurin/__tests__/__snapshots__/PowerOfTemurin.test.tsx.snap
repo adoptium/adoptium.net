@@ -34,23 +34,15 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -74,23 +66,15 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -114,23 +98,15 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -175,12 +151,8 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="300"
-              loading="lazy"
               src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
               width="436"
             />
           </div>
@@ -212,12 +184,8 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="300"
-              loading="lazy"
               src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
               width="436"
             />
           </div>
@@ -249,12 +217,8 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
             <img
               alt="Description"
               class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="300"
-              loading="lazy"
               src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
               width="436"
             />
           </div>

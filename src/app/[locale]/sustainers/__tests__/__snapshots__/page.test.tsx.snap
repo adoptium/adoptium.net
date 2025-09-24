@@ -152,13 +152,8 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="project logo"
               class="w-[110px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="110"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Fprojects%2Ftemurin-light.png&w=256&q=75"
-              srcset="/_next/image?url=%2Fimages%2Fprojects%2Ftemurin-light.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fprojects%2Ftemurin-light.png&w=256&q=75 2x"
-              style="color: transparent;"
+              src="/images/projects/temurin-light.png"
               width="110"
             />
           </div>
@@ -177,13 +172,8 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="project logo"
               class="w-[110px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="110"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Fprojects%2Faqavit-light.png&w=256&q=75"
-              srcset="/_next/image?url=%2Fimages%2Fprojects%2Faqavit-light.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fprojects%2Faqavit-light.png&w=256&q=75 2x"
-              style="color: transparent;"
+              src="/images/projects/aqavit-light.png"
               width="110"
             />
           </div>
@@ -202,12 +192,8 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="project logo"
               class="w-[110px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="110"
-              loading="lazy"
               src="/images/projects/emt4j.svg"
-              style="color: transparent;"
               width="110"
             />
           </div>
@@ -226,12 +212,8 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="project logo"
               class="w-[110px] mb-0"
-              data-nimg="1"
-              decoding="async"
               height="110"
-              loading="lazy"
               src="/images/projects/mission-control.svg"
-              style="color: transparent;"
               width="110"
             />
           </div>
@@ -284,12 +266,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     alt=""
                     aria-hidden="true"
                     class="mb-0 w-16 h-16"
-                    data-nimg="1"
-                    decoding="async"
                     height="64"
-                    loading="lazy"
                     src="/images/initiatives/security.svg"
-                    style="color: transparent;"
                     width="64"
                   />
                 </div>
@@ -346,12 +324,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     alt=""
                     aria-hidden="true"
                     class="mb-0 w-16 h-16"
-                    data-nimg="1"
-                    decoding="async"
                     height="64"
-                    loading="lazy"
                     src="/images/initiatives/release.svg"
-                    style="color: transparent;"
                     width="64"
                   />
                 </div>
@@ -408,12 +382,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     alt=""
                     aria-hidden="true"
                     class="mb-0 w-16 h-16"
-                    data-nimg="1"
-                    decoding="async"
                     height="64"
-                    loading="lazy"
                     src="/images/initiatives/deploy.svg"
-                    style="color: transparent;"
                     width="64"
                   />
                 </div>
@@ -470,12 +440,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     alt=""
                     aria-hidden="true"
                     class="mb-0 w-16 h-16"
-                    data-nimg="1"
-                    decoding="async"
                     height="64"
-                    loading="lazy"
                     src="/images/initiatives/innovation.svg"
-                    style="color: transparent;"
                     width="64"
                   />
                 </div>
@@ -532,12 +498,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     alt=""
                     aria-hidden="true"
                     class="mb-0 w-16 h-16"
-                    data-nimg="1"
-                    decoding="async"
                     height="64"
-                    loading="lazy"
                     src="/images/initiatives/testing.svg"
-                    style="color: transparent;"
                     width="64"
                   />
                 </div>
@@ -594,12 +556,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     alt=""
                     aria-hidden="true"
                     class="mb-0 w-16 h-16"
-                    data-nimg="1"
-                    decoding="async"
                     height="64"
-                    loading="lazy"
                     src="/images/initiatives/community.svg"
-                    style="color: transparent;"
                     width="64"
                   />
                 </div>
@@ -706,23 +664,15 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="Description"
               class="w-full mb-0 max-w-[366px] object-cover"
-              data-nimg="1"
-              decoding="async"
               height="366"
-              loading="lazy"
               src="/images/icons/diamond-layers.svg"
-              style="color: transparent;"
               width="366"
             />
             <img
               alt="scroll divider"
               class="mb-0"
-              data-nimg="1"
-              decoding="async"
               height="80"
-              loading="lazy"
               src="/images/icons/scroll-divider.svg"
-              style="color: transparent;"
               width="16"
             />
             <div
@@ -776,23 +726,15 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="Description"
               class="w-full mb-0 max-w-[366px] object-cover"
-              data-nimg="1"
-              decoding="async"
               height="366"
-              loading="lazy"
               src="/images/icons/platinum-layers.svg"
-              style="color: transparent;"
               width="366"
             />
             <img
               alt="scroll divider"
               class="mb-0"
-              data-nimg="1"
-              decoding="async"
               height="80"
-              loading="lazy"
               src="/images/icons/scroll-divider.svg"
-              style="color: transparent;"
               width="16"
             />
             <div
@@ -840,23 +782,15 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="Description"
               class="w-full mb-0 max-w-[366px] object-cover"
-              data-nimg="1"
-              decoding="async"
               height="366"
-              loading="lazy"
               src="/images/icons/gold-layers.svg"
-              style="color: transparent;"
               width="366"
             />
             <img
               alt="scroll divider"
               class="mb-0"
-              data-nimg="1"
-              decoding="async"
               height="80"
-              loading="lazy"
               src="/images/icons/scroll-divider.svg"
-              style="color: transparent;"
               width="16"
             />
             <div
@@ -901,23 +835,15 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="Description"
               class="w-full mb-0 max-w-[366px] object-cover"
-              data-nimg="1"
-              decoding="async"
               height="366"
-              loading="lazy"
               src="/images/icons/silver-layers.svg"
-              style="color: transparent;"
               width="366"
             />
             <img
               alt="scroll divider"
               class="mb-0"
-              data-nimg="1"
-              decoding="async"
               height="80"
-              loading="lazy"
               src="/images/icons/scroll-divider.svg"
-              style="color: transparent;"
               width="16"
             />
             <div
@@ -959,23 +885,15 @@ exports[`Sustainers page > renders correctly 1`] = `
             <img
               alt="Description"
               class="w-full mb-0 max-w-[366px] object-cover"
-              data-nimg="1"
-              decoding="async"
               height="366"
-              loading="lazy"
               src="/images/icons/bronze-layers.svg"
-              style="color: transparent;"
               width="366"
             />
             <img
               alt="scroll divider"
               class="mb-0"
-              data-nimg="1"
-              decoding="async"
               height="80"
-              loading="lazy"
               src="/images/icons/scroll-divider.svg"
-              style="color: transparent;"
               width="16"
             />
             <div
@@ -1038,12 +956,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     <img
                       alt="Description"
                       class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
                       height="300"
-                      loading="lazy"
                       src="/images/icons/diamond-layers.svg"
-                      style="color: transparent;"
                       width="436"
                     />
                     <h2
@@ -1119,12 +1033,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     <img
                       alt="Description"
                       class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
                       height="300"
-                      loading="lazy"
                       src="/images/icons/platinum-layers.svg"
-                      style="color: transparent;"
                       width="436"
                     />
                     <h2
@@ -1194,12 +1104,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     <img
                       alt="Description"
                       class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
                       height="300"
-                      loading="lazy"
                       src="/images/icons/gold-layers.svg"
-                      style="color: transparent;"
                       width="436"
                     />
                     <h2
@@ -1266,12 +1172,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     <img
                       alt="Description"
                       class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
                       height="300"
-                      loading="lazy"
                       src="/images/icons/silver-layers.svg"
-                      style="color: transparent;"
                       width="436"
                     />
                     <h2
@@ -1335,12 +1237,8 @@ exports[`Sustainers page > renders correctly 1`] = `
                     <img
                       alt="Description"
                       class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
                       height="300"
-                      loading="lazy"
                       src="/images/icons/bronze-layers.svg"
-                      style="color: transparent;"
                       width="436"
                     />
                     <h2

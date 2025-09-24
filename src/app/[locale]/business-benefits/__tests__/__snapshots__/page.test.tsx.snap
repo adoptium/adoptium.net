@@ -99,13 +99,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
       <img
         alt="scroll-divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="400"
-        loading="lazy"
-        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
-        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
-        style="color: transparent;"
+        src="/images/icons/experience.png"
         width="400"
       />
     </div>
@@ -167,13 +162,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
               <img
                 alt="Martijn Verburg"
                 class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
-                data-nimg="1"
-                decoding="async"
                 height="64"
-                loading="lazy"
-                src="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75 2x"
-                style="color: transparent;"
+                src="/images/authors/martijnverburg.jpg"
                 width="64"
               />
               <div
@@ -273,12 +263,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
             <img
               alt="Microsoft"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
               src="/images/members/microsoft.svg"
-              style="color: transparent;"
               width="128"
             />
           </div>
@@ -293,13 +279,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
             <img
               alt="Alibaba Cloud"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75"
-              srcset="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75 2x"
-              style="color: transparent;"
+              src="/images/members/alibaba.png"
               width="128"
             />
           </div>
@@ -314,12 +295,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
             <img
               alt="Azul Systems"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
               src="/images/members/azul.svg"
-              style="color: transparent;"
               width="128"
             />
           </div>
@@ -334,12 +311,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
             <img
               alt="Red Hat"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
               src="/images/members/redhat.svg"
-              style="color: transparent;"
               width="128"
             />
           </div>
@@ -356,13 +329,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
       <img
         alt="scroll-divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="400"
-        loading="lazy"
-        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
-        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
-        style="color: transparent;"
+        src="/images/icons/experience.png"
         width="400"
       />
     </div>
@@ -406,22 +374,14 @@ exports[`Business Benefits page > renders correctly 1`] = `
     <img
       alt="gradient overlay"
       class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-      data-nimg="fill"
-      decoding="async"
       sizes="100vw"
-      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
-      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
-      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      src="/images/backgrounds/gradient-overlay.png"
     />
     <img
       alt="gradient overlay mobile"
       class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-      data-nimg="fill"
-      decoding="async"
       sizes="100vw"
-      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
-      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
-      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      src="/images/backgrounds/gradient-overlay-mobile.png"
     />
     <div
       class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
@@ -429,12 +389,8 @@ exports[`Business Benefits page > renders correctly 1`] = `
       <img
         alt="message icon"
         class="!mb-0"
-        data-nimg="1"
-        decoding="async"
         height="120"
-        loading="lazy"
         src="/images/icons/message.svg"
-        style="color: transparent;"
         width="120"
       />
       <p

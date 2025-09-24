@@ -3,20 +3,6 @@ import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import ImageText from "../index";
 
-// Mock next/image
-vi.mock("next/image", () => ({
-  default: vi.fn(({ src, alt, width, height, className }) => (
-    <img src={src} alt={alt} width={width} height={height} className={className} />
-  )),
-}));
-
-// Mock the Link component from i18n/navigation
-vi.mock("@/i18n/navigation", () => ({
-  Link: vi.fn(({ href, children }) => (
-    <a href={href}>{children}</a>
-  )),
-}));
-
 // Clean up after each test
 afterEach(() => {
   cleanup();
@@ -32,10 +18,12 @@ describe("ImageText", () => {
 
   it("renders correctly with all props", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     expect(screen.getByText("Test Title")).toBeInTheDocument();
-    expect(screen.getByText("Test description for the component")).toBeInTheDocument();
-    
+    expect(
+      screen.getByText("Test description for the component")
+    ).toBeInTheDocument();
+
     // Check for button text (there should be 2 buttons with same text)
     const buttons = screen.getAllByText("Test Link");
     expect(buttons).toHaveLength(2);
@@ -43,7 +31,7 @@ describe("ImageText", () => {
 
   it("renders the image with correct attributes", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const image = screen.getByAltText("scroll-divider");
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute("src", "/images/icons/experience.png");
@@ -53,26 +41,39 @@ describe("ImageText", () => {
 
   it("renders title with correct styling classes", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const title = screen.getByText("Test Title");
-    expect(title).toHaveClass("md:text-5xl", "text-[40px]", "font-normal", "leading-[48px]", "md:leading-[56px]");
+    expect(title).toHaveClass(
+      "md:text-5xl",
+      "text-[40px]",
+      "font-normal",
+      "leading-[48px]",
+      "md:leading-[56px]"
+    );
   });
 
   it("renders description with correct styling classes", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const description = screen.getByText("Test description for the component");
-    expect(description).toHaveClass("md:mt-6", "my-10", "text-grey", "text-base", "leading-6", "font-normal");
+    expect(description).toHaveClass(
+      "md:mt-6",
+      "my-10",
+      "text-grey",
+      "text-base",
+      "leading-6",
+      "font-normal"
+    );
   });
 
   it("renders two buttons with correct styling", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const buttons = screen.getAllByText("Test Link");
     expect(buttons).toHaveLength(2);
-    
+
     // Check that both buttons have the gradient-border class
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       expect(button).toHaveClass("gradient-border");
       expect(button).toHaveClass("bg-transparent");
       expect(button).toHaveClass("text-white");
@@ -82,52 +83,57 @@ describe("ImageText", () => {
 
   it("renders desktop button with correct responsive classes", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const buttons = screen.getAllByText("Test Link");
     const desktopButton = buttons[0];
-    
+
     expect(desktopButton).toHaveClass("lg:block", "hidden");
     expect(desktopButton).toHaveClass("w-[150px]", "h-[48px]");
   });
 
   it("renders mobile button with correct responsive classes", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const buttons = screen.getAllByText("Test Link");
     const mobileButton = buttons[1];
-    
+
     expect(mobileButton).toHaveClass("block", "lg:hidden");
     expect(mobileButton).toHaveClass("w-[151px]", "h-[48px]");
   });
 
   it("creates links with correct href", () => {
     const { container } = render(<ImageText {...defaultProps} />);
-    
+
     const links = container.querySelectorAll("a");
     expect(links).toHaveLength(2);
-    
-    links.forEach(link => {
+
+    links.forEach((link) => {
       expect(link).toHaveAttribute("href", "/test-link");
     });
   });
 
   it("renders image container with correct responsive classes", () => {
     render(<ImageText {...defaultProps} />);
-    
+
     const imageContainer = screen.getByAltText("scroll-divider").parentElement;
-    expect(imageContainer).toHaveClass("max-w-[400px]", "w-full", "hidden", "lg:block");
+    expect(imageContainer).toHaveClass(
+      "max-w-[400px]",
+      "w-full",
+      "hidden",
+      "lg:block"
+    );
   });
 
   it("renders text content container with correct responsive classes", () => {
     const { container } = render(<ImageText {...defaultProps} />);
-    
+
     const textContainer = container.querySelector(".lg\\:max-w-\\[560px\\]");
     expect(textContainer).toHaveClass("lg:max-w-[560px]", "w-full");
   });
 
   it("renders main section with correct layout classes", () => {
     const { container } = render(<ImageText {...defaultProps} />);
-    
+
     const section = container.querySelector("section");
     expect(section).toHaveClass(
       "py-16",
@@ -151,14 +157,18 @@ describe("ImageText", () => {
     };
 
     render(<ImageText {...specialProps} />);
-    
-    expect(screen.getByText("Title with & special characters < >")).toBeInTheDocument();
-    expect(screen.getByText("Description with \"quotes\" and 'apostrophes'")).toBeInTheDocument();
-    
+
+    expect(
+      screen.getByText("Title with & special characters < >")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Description with \"quotes\" and 'apostrophes'")
+    ).toBeInTheDocument();
+
     // Use getAllByText since there are two buttons with the same text (desktop and mobile)
     const linkButtons = screen.getAllByText("Link & Text");
     expect(linkButtons).toHaveLength(2);
-    linkButtons.forEach(button => {
+    linkButtons.forEach((button) => {
       expect(button).toBeInTheDocument();
     });
   });
@@ -166,20 +176,21 @@ describe("ImageText", () => {
   it("handles long text content appropriately", () => {
     const longTextProps = {
       title: "This is a very long title that should still render correctly",
-      description: "This is a very long description that contains multiple sentences and should wrap appropriately.",
+      description:
+        "This is a very long description that contains multiple sentences and should wrap appropriately.",
       link: "/long-link-path/with/multiple/segments",
       linkText: "Very Long Link Text",
     };
 
     render(<ImageText {...longTextProps} />);
-    
+
     expect(screen.getByText(longTextProps.title)).toBeInTheDocument();
     expect(screen.getByText(longTextProps.description)).toBeInTheDocument();
-    
+
     // Use getAllByText since there are two buttons with the same text (desktop and mobile)
     const linkButtons = screen.getAllByText(longTextProps.linkText);
     expect(linkButtons).toHaveLength(2);
-    linkButtons.forEach(button => {
+    linkButtons.forEach((button) => {
       expect(button).toBeInTheDocument();
     });
   });

@@ -182,8 +182,15 @@ export default ComponentName;
 - Use Vitest for unit testing
 - **Test file structure**: Place test files in `__tests__` directories within component folders: `components/ComponentName/__tests__/ComponentName.test.tsx`
 - **Import Vitest dependencies explicitly**: Always import test functions from vitest: `import { describe, it, expect } from 'vitest';`
+- **Check existing mocks first**: Before adding `vi.mock()` statements to individual test files, check `vitest-setup.tsx` for existing global mocks. Common mocks already available include:
+  - `@/i18n/navigation` (Link component, useRouter, etc.)
+  - `next-intl` (useTranslations, useLocale, etc.)
+  - `gsap` and `gsap/ScrollTrigger`
+  - `swiper/react`
+  - `@/hooks/useAdoptiumContributorsApi`
+  - `react-slick` and slick CSS files
+- Only add component-specific mocks when they're not already covered globally
 - Focus on component behavior and integration
-- Mock external dependencies appropriately (next/image, i18n components, etc.)
 - **UI changes require snapshot updates only for components with existing snapshot tests**: After making such UI changes, run `npm test -- -u` to update snapshots
 
 ## Build & Deployment
