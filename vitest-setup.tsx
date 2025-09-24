@@ -1,10 +1,10 @@
-import React from 'react';
-import { vi, expect } from 'vitest';
-import * as matchers from 'vitest-axe/matchers';
-import * as Highcharts from 'highcharts';
-import * as jestDomMatchers from '@testing-library/jest-dom/matchers';
+import React from "react";
+import { vi, expect } from "vitest";
+import * as matchers from "vitest-axe/matchers";
+import * as Highcharts from "highcharts";
+import * as jestDomMatchers from "@testing-library/jest-dom/matchers";
 Highcharts.useSerialIds(true);
-Highcharts.AST.allowedAttributes.push('rel');
+Highcharts.AST.allowedAttributes.push("rel");
 
 // This explicitly adds the accessibility matchers to Vitest
 expect.extend(matchers);
@@ -12,7 +12,7 @@ expect.extend(matchers);
 expect.extend(jestDomMatchers);
 
 // Mock GSAP and ScrollTrigger
-vi.mock('gsap', () => {
+vi.mock("gsap", () => {
   const mockGsap = {
     registerPlugin: vi.fn(),
     to: vi.fn(),
@@ -47,14 +47,14 @@ const mockScrollTrigger = {
   removeEventListener: vi.fn(),
 };
 
-vi.mock('gsap/ScrollTrigger', () => {
+vi.mock("gsap/ScrollTrigger", () => {
   return {
     ScrollTrigger: mockScrollTrigger,
   };
 });
 
 // Mock the useTranslations hook to return a simple text value with rich formatting support
-vi.mock('next-intl', () => ({
+vi.mock("next-intl", () => ({
   useTranslations: () => {
     // Create a translator function with rich text support
     const translator = (key: string) => "Text";
@@ -71,7 +71,9 @@ vi.mock('next-intl', () => ({
   },
   useLocale: () => "en",
   // Add other exports that might be used in your app
-  NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => (
+    <>{children}</>
+  ),
 }));
 
 vi.mock("@/i18n/navigation", () => ({
@@ -96,12 +98,12 @@ vi.mock("@/i18n/navigation", () => ({
 
 // Mock the useAdoptiumContributorsApi hook
 vi.mock("@/hooks/useAdoptiumContributorsApi", () => ({
-  useAdoptiumContributorsApi: () => null
-}))
+  useAdoptiumContributorsApi: () => null,
+}));
 
 type SwiperProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 vi.mock("swiper/react", () => ({
   Swiper: React.forwardRef<HTMLDivElement, SwiperProps>(({ children }, ref) => {
@@ -111,31 +113,31 @@ vi.mock("swiper/react", () => ({
       update: () => vi.fn(),
       slideNext: () => vi.fn(),
       slidePrev: () => vi.fn(),
-    }
+    };
 
     // Use a callback ref to assign the mock swiper object to the ref
     React.useEffect(() => {
       if (ref && typeof ref !== "function") {
-        ; (ref as React.RefObject<any>).current = { swiper: mockSwiper }
+        (ref as React.RefObject<any>).current = { swiper: mockSwiper };
       }
-    }, [ref])
+    }, [ref]);
 
-    return <div data-testid="Swiper">{children}</div>
+    return <div data-testid="Swiper">{children}</div>;
   }),
   SwiperSlide: ({ children }: { children: React.ReactNode }) => (
     <div data-testid="SwiperSlide">{children}</div>
   ),
-}))
+}));
 
 class IntersectionObserverMock implements IntersectionObserver {
   root: Element | Document | null = null;
-  rootMargin: string = '0px';
+  rootMargin: string = "0px";
   thresholds: ReadonlyArray<number> = [0];
 
-  disconnect = vi.fn()
+  disconnect = vi.fn();
   observe = vi.fn(() => {
     // When observe is called, trigger the callback with a mock entry
-    if (typeof this.callback === 'function') {
+    if (typeof this.callback === "function") {
       // Create a DOMRect
       const rect = {
         bottom: 0,
@@ -146,7 +148,7 @@ class IntersectionObserverMock implements IntersectionObserver {
         width: 0,
         x: 0,
         y: 0,
-        toJSON: () => { }
+        toJSON: () => {},
       } as DOMRectReadOnly;
 
       const mockEntry = {
@@ -155,36 +157,39 @@ class IntersectionObserverMock implements IntersectionObserver {
         intersectionRatio: 1,
         intersectionRect: rect,
         rootBounds: null,
-        target: document.createElement('div'),
+        target: document.createElement("div"),
         time: Date.now(),
       } as IntersectionObserverEntry;
 
       this.callback([mockEntry], this as unknown as IntersectionObserver);
     }
-  })
-  unobserve = vi.fn()
-  takeRecords = vi.fn()
-  callback: IntersectionObserverCallback
+  });
+  unobserve = vi.fn();
+  takeRecords = vi.fn();
+  callback: IntersectionObserverCallback;
 
   constructor(callback: IntersectionObserverCallback) {
-    this.callback = callback
+    this.callback = callback;
   }
 }
 
-vi.stubGlobal("IntersectionObserver", IntersectionObserverMock)
+vi.stubGlobal("IntersectionObserver", IntersectionObserverMock);
 
 // Mock fetch API to handle network requests
 global.fetch = vi.fn().mockImplementation((url) => {
   // Mock response for download stats API
-  if (url === 'https://api.adoptium.net/v3/stats/downloads/total' ||
-    url.toString().includes('api.adoptium.net/v3/stats/downloads/total')) {
+  if (
+    url === "https://api.adoptium.net/v3/stats/downloads/total" ||
+    url.toString().includes("api.adoptium.net/v3/stats/downloads/total")
+  ) {
     return Promise.resolve({
       ok: true,
-      json: () => Promise.resolve({
-        total_downloads: {
-          total: 1234567890
-        }
-      }),
+      json: () =>
+        Promise.resolve({
+          total_downloads: {
+            total: 1234567890,
+          },
+        }),
     });
   }
 
@@ -206,16 +211,16 @@ global.matchMedia =
       media: query,
       onchange: null,
       // Legacy API
-      addListener: function () { },
-      removeListener: function () { },
+      addListener: function () {},
+      removeListener: function () {},
       // Modern API used by MUI v6
-      addEventListener: function () { },
-      removeEventListener: function () { },
+      addEventListener: function () {},
+      removeEventListener: function () {},
       dispatchEvent: function () {
         return false;
       },
     };
-  }
+  };
 
 /**
  * Mock localStorage
@@ -234,19 +239,19 @@ const localStorageMock = (() => {
     },
     clear: () => {
       store = {};
-    }
+    },
   };
 })();
 
-Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock
+Object.defineProperty(window, "localStorage", {
+  value: localStorageMock,
 });
 
 /**
  * Mock canvas getContext for accessibility tests
  * This prevents the "Not implemented: HTMLCanvasElement.prototype.getContext" error
  */
-if (typeof HTMLCanvasElement !== 'undefined') {
+if (typeof HTMLCanvasElement !== "undefined") {
   // @ts-expect-error - We are mocking getContext
   HTMLCanvasElement.prototype.getContext = vi.fn(() => ({
     fillRect: vi.fn(),
@@ -281,9 +286,19 @@ if (typeof HTMLCanvasElement !== 'undefined') {
 /**
  * Mock for react-slick to avoid "window is not defined" errors in tests
  */
-vi.mock('react-slick', () => {
-  const Slider = ({ children, className }: { children: React.ReactNode, className?: string }) => {
-    return <div data-testid="react-slick-mock" className={className || ''}>{children}</div>
+vi.mock("react-slick", () => {
+  const Slider = ({
+    children,
+    className,
+  }: {
+    children: React.ReactNode;
+    className?: string;
+  }) => {
+    return (
+      <div data-testid="react-slick-mock" className={className || ""}>
+        {children}
+      </div>
+    );
   };
 
   Slider.defaultProps = {
@@ -291,12 +306,12 @@ vi.mock('react-slick', () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
 
   return {
     __esModule: true,
-    default: Slider
+    default: Slider,
   };
 });
 
@@ -308,8 +323,8 @@ window.ResizeObserver = vi.fn().mockImplementation(() => ({
 }));
 
 // Mock slick-carousel CSS imports that might be required by components
-vi.mock('slick-carousel/slick/slick.css', () => ({}));
-vi.mock('slick-carousel/slick/slick-theme.css', () => ({}));
+vi.mock("slick-carousel/slick/slick.css", () => ({}));
+vi.mock("slick-carousel/slick/slick-theme.css", () => ({}));
 
 // Export everything from testing-library/react
-export * from '@testing-library/react';
+export * from "@testing-library/react";
