@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 declare global {
     interface Window {
@@ -9,6 +9,7 @@ declare global {
                     portalId: string;
                     formId: string;
                     target: string;
+                    onFormSubmit?: ($form: any) => void;
                 }) => void;
             };
         };
@@ -18,24 +19,41 @@ declare global {
 interface HubspotFormProps {
     portalId: string
     formId: string
+    onFormSubmit?: () => void;
 }
 
-export default function HubspotForm({ portalId, formId }: HubspotFormProps) {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://js.hsforms.net/forms/v2.js';
-        document.body.appendChild(script);
+export default function HubspotForm({ portalId, formId, onFormSubmit }: HubspotFormProps) {
+    const [formLoaded, setFormLoaded] = useState(false);
 
-        script.addEventListener('load', () => {
-            if (window.hbspt) {
-                window.hbspt.forms.create({
-                    portalId: portalId,
-                    formId: formId,
-                    target: '#hubspotForm'
-                });
-            }
-        });
-    }, [formId, portalId]);
+    useEffect(() => {
+        if (!formLoaded) {
+            const script = document.createElement('script');
+            script.src = 'https://js.hsforms.net/forms/v2.js';
+            document.body.appendChild(script);
+
+            script.addEventListener('load', () => {
+                if (window.hbspt) {
+                    window.hbspt.forms.create({
+                        portalId: portalId,
+                        formId: formId,
+                        target: '#hubspotForm',
+                        onFormSubmit: function($form: any) {
+                            setFormLoaded(true); 
+                            if (onFormSubmit) {
+                                onFormSubmit();
+                            }
+                        }
+                    });
+                }
+            });
+
+            return () => {
+                if (document.body.contains(script)) {
+                    document.body.removeChild(script);
+                }
+            };
+        }
+    }, [formId, portalId, onFormSubmit, formLoaded]);
 
     return (
         <div id="hubspotForm" className="hubspotForm"></div>
