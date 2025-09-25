@@ -9,7 +9,7 @@ declare global {
                     portalId: string;
                     formId: string;
                     target: string;
-                    onFormSubmit?: ($form: any) => void;
+                    onFormSubmit?: ($form: unknown) => void;
                 }) => void;
             };
         };
@@ -17,8 +17,8 @@ declare global {
 }
 
 interface HubspotFormProps {
-    portalId: string
-    formId: string
+    portalId: string;
+    formId: string;
     onFormSubmit?: () => void;
 }
 
@@ -37,11 +37,9 @@ export default function HubspotForm({ portalId, formId, onFormSubmit }: HubspotF
                         portalId: portalId,
                         formId: formId,
                         target: '#hubspotForm',
-                        onFormSubmit: function($form: any) {
+                        onFormSubmit: function($form: unknown) {
                             setFormLoaded(true); 
-                            if (onFormSubmit) {
-                                onFormSubmit();
-                            }
+                            onFormSubmit?.();
                         }
                     });
                 }
