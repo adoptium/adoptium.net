@@ -4,7 +4,7 @@ import PlatformMatrix from "@/components/Support/PlatformMatrix"
 import ContactUs from "@/components/ContactUs"
 
 export const metadata: Metadata = {
-    title: 'Temurin&trade; Supported Platforms',
+    title: 'Temurin™ Supported Platforms',
     description: 'View the supported platforms for Eclipse Temurin, the high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested.',
 }
 
