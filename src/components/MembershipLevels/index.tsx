@@ -18,10 +18,7 @@ const membershipTiers: MembershipTier[] = [
     pricing: "$10,000 - $50,000",
     pricingNote: "(Based on corporate revenue)",
     benefits: [
-      "Critical to their organization's future",
-      "Invest significant resources",
-      "Committees participation",
-      "Voting rights, high-level governance, influence roadmap",
+      "For organisations that view Adoptium as critical to their future and are looking to play a leading role in shaping its direction.",
     ],
     featured: true,
   },
@@ -31,8 +28,7 @@ const membershipTiers: MembershipTier[] = [
     pricing: "$12,000 - $32,000",
     pricingNote: "(Based on corporate revenue)",
     benefits: [
-      "Critical to business operations",
-      "Influence the direction of the ecosystem",
+      "For organisations that rely on Adoptium in their business operations and are seeking to influence the ecosystem's direction.",
     ],
   },
   {
@@ -41,8 +37,7 @@ const membershipTiers: MembershipTier[] = [
     pricing: "$0 - $15,000",
     pricingNote: "(Based on corporate revenue)",
     benefits: [
-      "Adopts or builds on Adoptium technology",
-      "Ensures alignment with their needs",
+      "For organisations that use or build on Adoptium technology and are looking to stay engaged as it evolves.",
     ],
   },
 ];
