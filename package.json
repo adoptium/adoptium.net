@@ -21,7 +21,7 @@
     "@mui/x-data-grid": "^8.12.1",
     "@next/third-parties": "^15.5.4",
     "axios": "^1.12.2",
-    "framer-motion": "^12.23.21",
+    "framer-motion": "^12.23.22",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "highcharts": "^12.4.0",
