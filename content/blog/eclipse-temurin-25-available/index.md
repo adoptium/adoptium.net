@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin 25 Available
-date: "2025-09-29"
+date: "2025-09-30"
 author: pmc
 description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 25. As always, all of our binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 tags:
