@@ -31,6 +31,6 @@ Since we enable JEP 493 for builds later than JDK 24, it's enabled for JDK 25 as
 
 Aarch64 Windows will not be published as part of the release activities. There are many openjdk testcase failures that need further investigation, explanation, and potentially exclusion if they are to be considered non-blocking. See [this issue](https://github.com/adoptium/aqa-tests/issues/6623) for investigation details.
 
-### Changes in tooling used in Windows builds
+### Changes to Windows build toolchain
 
-VS2022 build MS-SDK linker version 14.37 causes zGC OOM failures, so we moved to 14.29. See [this issue](https://github.com/adoptium/aqa-tests/issues/6592) for details.
+The Microsoft VS2022 toolchain used for the Windows builds has been upgraded to the latest Visual Studio 2022 version 17.12.12 (C/C++ Compiler version 19.42.34444, MSVC toolset version 14.42.34433).
