@@ -29,7 +29,7 @@ Since we enable JEP 493 for builds later than JDK 24, it's enabled for JDK 25 as
 
 ### JDK25+36 release does not include aarch64 Windows
 
-Aarch64 Windows will not be published as part of the release activities. There are many openjdk testcase failures that need further investigation, explanation, and potentially exclusion if they are to be considered non-blocking.
+Aarch64 Windows will not be published as part of the release activities. There are many openjdk testcase failures that need further investigation, explanation, and potentially exclusion if they are to be considered non-blocking. See [this issue](https://github.com/adoptium/aqa-tests/issues/6623) for investigation details.
 
 ### Changes in tooling used in Windows builds
 
