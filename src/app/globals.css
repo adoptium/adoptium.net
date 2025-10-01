@@ -34,6 +34,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Fix for anchor link scroll offset - ensures section titles are visible */
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
 /* Inline code blocks (not processed by Prism) */
 :not(pre) > code {
   background: var(--color-code-bg);

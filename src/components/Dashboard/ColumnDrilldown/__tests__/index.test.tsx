@@ -8,7 +8,6 @@ const mockFetch = vi.fn();
 global.fetch = mockFetch;
 
 describe('ColumnDrilldown', () => {
-    const availableReleases = { available_releases: ['21', '17'] };
     const mockApiData = {
         '21': { linux: 100, windows: 200 },
         '17': { linux: 50, windows: 75 },

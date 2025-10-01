@@ -125,7 +125,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on X (Twitter)"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
               >
                 <svg
                   fill="currentColor"
@@ -144,7 +144,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Linkedin"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
               >
                 <svg
                   fill="currentColor"
@@ -163,7 +163,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Facebook"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
               >
                 <svg
                   fill="currentColor"
@@ -182,7 +182,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Reddit"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
               >
                 <svg
                   fill="currentColor"
@@ -201,7 +201,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Bluesky"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
               >
                 <svg
                   fill="currentColor"
@@ -220,7 +220,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share via Email"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; padding: 0px; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
               >
                 <svg
                   fill="currentColor"

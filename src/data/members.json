@@ -25,9 +25,9 @@
     "tier": "strategic"
   },
   {
-    "name": "Red Hat",
-    "logo": "members/redhat.svg",
-    "url": "https://www.redhat.com",
+    "name": "IBM",
+    "logo": "members/ibm-logo.png",
+    "url": "https://ibm.com",
     "tier": "strategic"
   },
   {
@@ -56,9 +56,9 @@
     "tier": "enterprise"
   },
   {
-    "name": "IBM",
-    "logo": "members/ibm-logo.png",
-    "url": "https://ibm.com",
+    "name": "Red Hat",
+    "logo": "members/redhat.svg",
+    "url": "https://www.redhat.com",
     "tier": "enterprise"
   },
   {
@@ -113,12 +113,6 @@
     "name": "MacStadium",
     "logo": "sustainers/macstadium.png",
     "url": "https://www.macstadium.com",
-    "tier": "infra"
-  },
-  {
-    "name": "Equinix Metal",
-    "logo": "sustainers/equinix.png",
-    "url": "https://metal.equinix.com",
     "tier": "infra"
   },
   {
