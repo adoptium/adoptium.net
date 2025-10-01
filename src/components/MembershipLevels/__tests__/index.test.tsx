@@ -66,15 +66,8 @@ describe("MembershipLevels", () => {
     render(<MembershipLevels />);
 
     expect(
-      screen.getByText("Critical to their organization's future")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Invest significant resources")
-    ).toBeInTheDocument();
-    expect(screen.getByText("Committees participation")).toBeInTheDocument();
-    expect(
       screen.getByText(
-        "Voting rights, high-level governance, influence roadmap"
+        "For organisations that view Adoptium as critical to their future and are looking to play a leading role in shaping its direction."
       )
     ).toBeInTheDocument();
   });
@@ -83,10 +76,9 @@ describe("MembershipLevels", () => {
     render(<MembershipLevels />);
 
     expect(
-      screen.getByText("Critical to business operations")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Influence the direction of the ecosystem")
+      screen.getByText(
+        "For organisations that rely on Adoptium in their business operations and are seeking to influence the ecosystem's direction."
+      )
     ).toBeInTheDocument();
   });
 
@@ -94,10 +86,9 @@ describe("MembershipLevels", () => {
     render(<MembershipLevels />);
 
     expect(
-      screen.getByText("Adopts or builds on Adoptium technology")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Ensures alignment with their needs")
+      screen.getByText(
+        "For organisations that use or build on Adoptium technology and are looking to stay engaged as it evolves."
+      )
     ).toBeInTheDocument();
   });
 
