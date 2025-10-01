@@ -42,8 +42,10 @@ const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
 
     // Internal Next.js route
     if (hrefValue.startsWith('/')) {
+      // Filter out props that might not be compatible with the Link component
+      const { popover, ...filteredProps } = props;
       return (
-        <Link href={hrefValue} ref={ref} {...props}>
+        <Link href={hrefValue} ref={ref} {...filteredProps}>
           {children}
         </Link>
       )
