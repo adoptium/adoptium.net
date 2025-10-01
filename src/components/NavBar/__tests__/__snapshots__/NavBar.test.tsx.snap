@@ -1,0 +1,286 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavBar > should match the snapshot 1`] = `
+<header
+  class="sticky inset-x-0 top-0 z-50 "
+>
+  <div
+    class="max-w-[1288px] w-full mx-auto px-3"
+  >
+    <nav
+      aria-label="Global"
+      class="flex items-center gap-5 justify-between py-6"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="Adoptium Logo"
+          class="h-10 w-auto"
+          data-nimg="1"
+          decoding="async"
+          height="0"
+          loading="lazy"
+          src="/images/adoptium-logo-dark.svg"
+          style="color: transparent;"
+          width="0"
+        />
+      </a>
+      <div
+        class="flex items-center gap-4"
+      >
+        <div
+          class="hidden lg:flex lg:gap-6 xl:gap-x-12"
+        >
+          <div
+            class="relative inline-block text-left"
+            data-headlessui-state=""
+          >
+            <div>
+              <button
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+                data-headlessui-state=""
+                id="headlessui-menu-button-«r2»"
+                type="button"
+              >
+                About Us
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 mt-1"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <a
+            class="text-sm font-semibold leading-6 text-white-900"
+            href="/temurin/releases"
+          >
+            Latest Releases
+          </a>
+          <a
+            class="text-sm font-semibold leading-6 text-white-900"
+            href="/marketplace"
+          >
+            Marketplace
+          </a>
+          <div
+            class="relative inline-block text-left"
+            data-headlessui-state=""
+          >
+            <div>
+              <button
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+                data-headlessui-state=""
+                id="headlessui-menu-button-«r5»"
+                type="button"
+              >
+                Projects
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 mt-1"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative inline-block text-left"
+            data-headlessui-state=""
+          >
+            <div>
+              <button
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+                data-headlessui-state=""
+                id="headlessui-menu-button-«r8»"
+                type="button"
+              >
+                Resources
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 mt-1"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative inline-block text-left"
+            data-headlessui-state=""
+          >
+            <div>
+              <button
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50"
+                data-headlessui-state=""
+                id="headlessui-menu-button-«rb»"
+                type="button"
+              >
+                Community
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 mt-1"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex space-x-3 h-12"
+        >
+          <div
+            class="hidden sm:block"
+          >
+            <div
+              class="relative inline-block text-left"
+              data-headlessui-state=""
+            >
+              <div>
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-«re»"
+                  type="button"
+                >
+                  <img
+                    class="mb-0 h-5"
+                    src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 7410 3900'%3e%3cpath fill='%23b22234' d='M0 0h7410v3900H0z'/%3e%3cpath stroke='%23fff' stroke-width='300' d='M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0'/%3e%3cpath fill='%233c3b6e' d='M0 0h2964v2100H0z'/%3e%3cg fill='%23fff'%3e%3cg id='d'%3e%3cg id='c'%3e%3cg id='e'%3e%3cg id='b'%3e%3cpath id='a' d='m247 90 70.534 217.082-184.66-134.164h228.253L176.466 307.082z'/%3e%3cuse xlink:href='%23a' y='420'/%3e%3cuse xlink:href='%23a' y='840'/%3e%3cuse xlink:href='%23a' y='1260'/%3e%3c/g%3e%3cuse xlink:href='%23a' y='1680'/%3e%3c/g%3e%3cuse xlink:href='%23b' x='247' y='210'/%3e%3c/g%3e%3cuse xlink:href='%23c' x='494'/%3e%3c/g%3e%3cuse xlink:href='%23d' x='988'/%3e%3cuse xlink:href='%23c' x='1976'/%3e%3cuse xlink:href='%23e' x='2470'/%3e%3c/g%3e%3c/svg%3e"
+                  />
+                  <span>
+                    English
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="-mr-1 h-5 w-5 text-white"
+                    fill="currentColor"
+                    height="15"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer"
+          >
+            <div
+              aria-label="notifications"
+              class="relative"
+            >
+              <svg
+                fill="currentColor"
+                height="20"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z"
+                />
+              </svg>
+              <span
+                class="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center"
+              >
+                1
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex lg:hidden ml-3"
+        >
+          <button
+            class="-m-2.5 inline-flex items-center justify-center rounded-md text-white-700"
+            type="button"
+          >
+            <span
+              class="sr-only"
+            >
+              Open main menu
+            </span>
+            <div
+              class="border-2 border-[#3e3355] p-3 rounded-full"
+            >
+              <svg
+                class="text-2xl"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+`;
