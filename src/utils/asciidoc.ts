@@ -21,6 +21,15 @@ interface AsciidoctorAttributes {
   [key: string]: unknown;
 }
 
+// Determine base URL based on environment
+// can be used in AsciiDoc files as {baseurl}
+// e.g. link:{baseurl}/docs/logo-styleguide/adoptium-logo.zip[here]
+// to avoid hardcoding the full URL in the files
+// and avoid localization issues with relative paths
+const baseUrl = process.env.NODE_ENV === 'production'
+    ? 'https://adoptium.net'
+    : 'http://localhost:3000'
+
 // Initialize Asciidoctor processor
 const asciidoctor = Asciidoctor();
 
@@ -117,6 +126,7 @@ export function processAsciiDoc(
       sectanchors: "",
       idprefix: "",
       idseparator: "-",
+      baseurl: baseUrl
     },
   };
 
