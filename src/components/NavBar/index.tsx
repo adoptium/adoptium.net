@@ -263,6 +263,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                   href={child.href}
                                   name={child.name}
                                   activePaths={activePaths}
+                                  onClick={() => setMobileMenuOpen(true)}
                                 />
                               )}
                             </MenuItem>
@@ -279,6 +280,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                       "text-sm font-semibold leading-6 text-white-900",
                       item.href && activePaths.has(item.href) ? "text-rose-600" : ""
                     )}
+                    onClick={() => setMobileMenuOpen(true)}
                   >
                     {item.name}
                   </Link>
@@ -290,6 +292,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                       "text-sm font-semibold leading-6 text-white-900",
                       item.href && activePaths.has(item.href) ? "text-rose-600" : ""
                     )}
+                    onClick={() => setMobileMenuOpen(true)}
                   >
                     {item.name}
                   </a>
