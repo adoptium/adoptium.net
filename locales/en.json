@@ -188,6 +188,7 @@
       "number-of-builds": "Number of builds",
       "builds-prior-to": "Builds prior to",
       "platform": "Platform",
+      "architecture": "Architecture",
       "type": "Type",
       "build-tag": "Build/Tag",
       "date": "Date",

@@ -2,8 +2,8 @@ name: Blog Validator
 
 on:
   pull_request:
-    paths: [ content/blog/** ]
-    branches: [ main ]
+    paths: [content/blog/**]
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,56 +18,55 @@ jobs:
     name: Check Date and Tags
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
-    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      with:
-        persist-credentials: false
+      - id: files
+        uses: jitterbit/get-changed-files@b17fbb00bdc0c0f63fcf166580804b4d2cdc2a42 # v1
 
-    - id: files
-      uses: jitterbit/get-changed-files@b17fbb00bdc0c0f63fcf166580804b4d2cdc2a42 # v1
-
-    - run: |
-        # shellcheck disable=2043
-        for added_file in ${{ steps.files.outputs.added }}; do
-          if [[ ${added_file} =~ ^content/blog.*.md ]]; then
-            blog_date=$(grep '^date:' "${added_file}" | sed -n -e 's/^.*date: //p' | tr -d '"')
-            # Return difference in days between today and blog date
-            diff=$(( ($(date +%s) - $(date --date "${blog_date}" +%s)) / (60*60*24) ))
-            if [[ ${diff} -gt 0 ]]; then
-              line_number=$(grep -n 'date:' "${added_file}" | cut -d : -f 1)
-              echo "Blog date is in the past, please update the date to today's date"
-              echo "::error file=${added_file},line=${line_number}::Blog date is in the past, please update the date to today's date"
-              exit 1
-            fi
-
-            # Validate tags
-            tags=$(grep 'tags:' "${added_file}" | sed -n -e 's/^.*tags: //p' | tr -d '[]"')
-            valid_tags=(
-              "temurin"
-              "aqavit"
-              "emt4j"
-              "adoptium"
-              "java"
-              "openjdk"
-              "infrastructure"
-              "security"
-              "announcement"
-              "release-notes"
-            )
-            invalid_tags=()
-            IFS=", " read -r -a tag_array <<< "$tags"
-            for tag in "${tag_array[@]}"; do
-              lowercase_tag=$(echo "$tag" | tr '[:upper:]' '[:lower:]')
-              if ! [[ $lowercase_tag =~ ^[a-z0-9-]+$ ]] || ! [[  ${valid_tags[*]}  =~  $lowercase_tag  ]]; then
-                invalid_tags+=("$tag")
+      - run: |
+          # shellcheck disable=2043
+          for added_file in ${{ steps.files.outputs.added }}; do
+            if [[ ${added_file} =~ ^content/blog.*.md ]]; then
+              blog_date=$(grep '^date:' "${added_file}" | sed -n -e 's/^.*date: //p' | tr -d '"')
+              # Return difference in days between today and blog date
+              diff=$(( ($(date +%s) - $(date --date "${blog_date}" +%s)) / (60*60*24) ))
+              if [[ ${diff} -gt 0 ]]; then
+                line_number=$(grep -n 'date:' "${added_file}" | cut -d : -f 1)
+                echo "Blog date is in the past, please update the date to today's date"
+                echo "::error file=${added_file},line=${line_number}::Blog date is in the past, please update the date to today's date"
+                exit 1
               fi
-            done
 
-            if [ ${#invalid_tags[@]} -gt 0 ]; then
-              line_number=$(grep -n 'tags:' "${added_file}" | cut -d : -f 1)
-              echo "Invalid tags found: ${invalid_tags[*]}"
-              echo "::error file=${added_file},line=${line_number}::Invalid tags found: ${invalid_tags[*]}"
-              exit 1
+              # Validate tags
+              tags=$(grep 'tags:' "${added_file}" | sed -n -e 's/^.*tags: //p' | tr -d '[]"')
+              valid_tags=(
+                "temurin"
+                "aqavit"
+                "emt4j"
+                "adoptium"
+                "java"
+                "openjdk"
+                "infrastructure"
+                "security"
+                "announcement"
+                "release-notes"
+              )
+              invalid_tags=()
+              IFS=", " read -r -a tag_array <<< "$tags"
+              for tag in "${tag_array[@]}"; do
+                lowercase_tag=$(echo "$tag" | tr '[:upper:]' '[:lower:]')
+                if ! [[ $lowercase_tag =~ ^[a-z0-9-]+$ ]] || ! [[  ${valid_tags[*]}  =~  $lowercase_tag  ]]; then
+                  invalid_tags+=("$tag")
+                fi
+              done
+
+              if [ ${#invalid_tags[@]} -gt 0 ]; then
+                line_number=$(grep -n 'tags:' "${added_file}" | cut -d : -f 1)
+                echo "Invalid tags found: ${invalid_tags[*]}"
+                echo "::error file=${added_file},line=${line_number}::Invalid tags found: ${invalid_tags[*]}"
+                exit 1
+              fi
             fi
-          fi
-        done
+          done

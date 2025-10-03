@@ -196,6 +196,7 @@
       "number-of-builds": "Nombre de versions",
       "builds-prior-to": "Versions antérieures à",
       "platform": "Plateforme",
+      "architecture": "Architecture",
       "type": "Type",
       "build-tag": "Build/Tag",
       "date": "Date",

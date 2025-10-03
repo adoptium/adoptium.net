@@ -196,6 +196,7 @@
       "number-of-builds": "构建数量",
       "builds-prior-to": "构建时间早于",
       "platform": "平台",
+      "architecture": "架构",
       "type": "类型",
       "build-tag": "构建标签",
       "date": "日期",

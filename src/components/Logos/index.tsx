@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from "react";
 
-import MemberList from "../../data/members.json"
-import Adopters from "../../data/adopters.json"
-import LogosGrid from "../LogosGrid"
+import MemberList from "../../data/members.json";
+import Adopters from "../../data/adopters.json";
+import LogosGrid from "../LogosGrid";
 
-import { shuffle } from "../../utils/shuffle"
+import { shuffle } from "../../utils/shuffle";
 
 export enum LogoType {
   STRATEGIC = "strategic",
@@ -16,35 +16,35 @@ export enum LogoType {
 }
 
 interface LogosGridProps {
-  members: LogoType
-  title: string
-  description: string
-  sectionId?: string
+  members: LogoType;
+  title: string;
+  description?: string;
+  sectionId?: string;
 }
 
 export interface MembersProps {
-  name: string
-  logo: string
-  url: string
-  tier: string
+  name: string;
+  logo: string;
+  url: string;
+  tier: string;
 }
 
 const Logos = ({ members, title, description, sectionId }: LogosGridProps) => {
   // filter MemberList to show only type of members
-  let filteredMembers: MembersProps[] = []
+  let filteredMembers: MembersProps[] = [];
 
   if (members === LogoType.ADOPTERS) {
-    filteredMembers.push(...Adopters)
+    filteredMembers.push(...Adopters);
   } else {
-    MemberList.forEach(member => {
+    MemberList.forEach((member) => {
       if (member.tier === members) {
-        filteredMembers.push(member)
+        filteredMembers.push(member);
       }
-    })
+    });
   }
 
   // Randomly mix up logos
-  filteredMembers = shuffle(filteredMembers)
+  filteredMembers = shuffle(filteredMembers);
 
   return (
     <section
@@ -55,15 +55,17 @@ const Logos = ({ members, title, description, sectionId }: LogosGridProps) => {
         <h3 className="text-[36px] sm:text-[42px] leading-[56px] text-center text-white">
           {title}
         </h3>
-        <p className="text-[16px] leading-[24px] text-gray-300 text-center mt-3">
-          {description}
-        </p>
+        {description && (
+          <p className="text-[16px] leading-[24px] text-gray-300 text-center mt-3">
+            {description}
+          </p>
+        )}
       </div>
       <div className="w-full flex flex-col items-center justify-center mt-3">
         <LogosGrid logos={filteredMembers} type={members} />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Logos
+export default Logos;

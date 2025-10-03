@@ -10,7 +10,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -20,7 +20,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -30,7 +30,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -40,7 +40,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -50,7 +50,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -65,7 +65,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -75,7 +75,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -85,7 +85,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -103,7 +103,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -113,7 +113,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -123,7 +123,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -141,7 +141,17 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -151,7 +161,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -161,7 +171,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -171,7 +181,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -181,7 +191,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -191,7 +201,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -201,17 +211,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -229,7 +229,17 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
+          }
+        },
+        {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -239,7 +249,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -249,7 +259,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -259,7 +269,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -269,7 +279,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -279,17 +289,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -306,8 +306,8 @@
             "8": { "supported": true, "docker": true },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "21": { "supported": false, "docker": false },
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -317,17 +317,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -339,13 +329,23 @@
       ],
       "distros": [
         {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        },
+        {
           "name": "RHEL / UBI 9.x",
           "versions": {
             "8": { "supported": true, "docker": true },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -355,7 +355,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -365,7 +365,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -375,7 +375,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -385,17 +385,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -408,13 +398,23 @@
       ],
       "distros": [
         {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        },
+        {
           "name": "RHEL / UBI 9.x",
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -424,7 +424,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -434,7 +434,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -444,17 +444,17 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
           "name": "Ubuntu 24.04",
           "versions": {
-            "8": { "supported": true, "docker": true },
+            "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -464,17 +464,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": false, "docker": false },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -492,7 +482,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -502,7 +492,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -512,7 +502,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -527,7 +517,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -537,7 +527,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -547,7 +537,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -557,7 +547,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -572,7 +562,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -582,7 +572,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -592,7 +582,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -602,7 +592,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -617,7 +607,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -627,7 +617,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -645,7 +635,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
