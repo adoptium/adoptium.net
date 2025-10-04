@@ -19,8 +19,8 @@ export default function HomePageClient({
     return (
         <div>
             <HeroSection latestLTS={latestLTS} />
-            <DownloadCounter total={total_downloads} />
             <LogoCarousel />
+            <DownloadCounter total={total_downloads} />
             <BlockAnnouncement />
             <PowerOfTemurin />
             <TemurinFeatures />
