@@ -189,7 +189,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                               aria-label="Priority column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«r15»"
+                              id="_r_15_"
                               tabindex="-1"
                               type="button"
                             >
@@ -265,7 +265,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                               aria-label="Type column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«r1b»"
+                              id="_r_1b_"
                               tabindex="-1"
                               type="button"
                             >
@@ -341,7 +341,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                               aria-label="Component column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«r1g»"
+                              id="_r_1g_"
                               tabindex="-1"
                               type="button"
                             >
@@ -417,7 +417,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                               aria-label="Issue column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«r1l»"
+                              id="_r_1l_"
                               tabindex="-1"
                               type="button"
                             >
@@ -493,7 +493,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                               aria-label="Title column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«r1q»"
+                              id="_r_1q_"
                               tabindex="-1"
                               type="button"
                             >
@@ -782,7 +782,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                   />
                   <p
                     class="MuiTablePagination-selectLabel css-s09cke-MuiTablePagination-selectLabel"
-                    id="«r10»"
+                    id="_r_10_"
                   >
                     Rows per page:
                   </p>
@@ -792,9 +792,9 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="«r10» «rv»"
+                      aria-labelledby="_r_10_ _r_v_"
                       class="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-18zjd9i-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
-                      id="«rv»"
+                      id="_r_v_"
                       role="combobox"
                       tabindex="0"
                     >
@@ -1025,7 +1025,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                               aria-label="Priority column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«r6»"
+                              id="_r_6_"
                               tabindex="-1"
                               type="button"
                             >
@@ -1101,7 +1101,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                               aria-label="Type column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«rc»"
+                              id="_r_c_"
                               tabindex="-1"
                               type="button"
                             >
@@ -1177,7 +1177,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                               aria-label="Component column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«rh»"
+                              id="_r_h_"
                               tabindex="-1"
                               type="button"
                             >
@@ -1253,7 +1253,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                               aria-label="Issue column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«rm»"
+                              id="_r_m_"
                               tabindex="-1"
                               type="button"
                             >
@@ -1329,7 +1329,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                               aria-label="Title column menu"
                               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiDataGrid-menuIconButton css-155wbr6-MuiButtonBase-root-MuiIconButton-root"
                               data-mui-internal-clone-element="true"
-                              id="«rr»"
+                              id="_r_r_"
                               tabindex="-1"
                               type="button"
                             >
@@ -1618,7 +1618,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                   />
                   <p
                     class="MuiTablePagination-selectLabel css-s09cke-MuiTablePagination-selectLabel"
-                    id="«r1»"
+                    id="_r_1_"
                   >
                     Rows per page:
                   </p>
@@ -1628,9 +1628,9 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="«r1» «r0»"
+                      aria-labelledby="_r_1_ _r_0_"
                       class="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-18zjd9i-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input"
-                      id="«r0»"
+                      id="_r_0_"
                       role="combobox"
                       tabindex="0"
                     >
