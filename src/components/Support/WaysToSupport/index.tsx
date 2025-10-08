@@ -20,7 +20,7 @@ const WaysToSupport = () => {
             title: "Become a member",
             description: "Join us shaping the future of Eclipse Adoptium",
             button: "Become a member",
-            href: "/join",
+            href: "/members",
         },
     ]
     return (

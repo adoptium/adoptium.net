@@ -69,3 +69,15 @@
   to = "/docs/qvs-policy"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/:locale/support-us"
+  to = "/:locale/join-us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/support-us"
+  to = "/join-us"
+  status = 301
+  force = true
