@@ -34,11 +34,11 @@ const navigation: NavItem[] = [
   {
     name: "Join Us",
     children: [
+      { name: "Join Us", href: "/join-us" },
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Members", href: "/members" },
       { name: "Our Sustainers", href: "/sustainers" },
       { name: "Our Adopters", href: "/adopters" },
-      { name: "Join Us", href: "/join-us" },
     ],
   },
   { name: "Latest Releases", href: "/temurin/releases" },
@@ -46,11 +46,11 @@ const navigation: NavItem[] = [
   {
     name: "Projects",
     children: [
+      { name: "What We Do", href: "/what-we-do" },
       { name: "Eclipse Temurin", href: "/temurin" },
       { name: "Eclipse AQAvit", href: "/aqavit" },
       { name: "Eclipse Mission Control", href: "/jmc" },
       { name: "Eclipse Migration Toolkit", href: "/emt" },
-      { name: "What We Do", href: "/what-we-do" },
     ],
   },
   {
