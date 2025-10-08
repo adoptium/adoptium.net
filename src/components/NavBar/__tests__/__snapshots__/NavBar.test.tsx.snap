@@ -45,7 +45,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 id="headlessui-menu-button-_r_2_"
                 type="button"
               >
-                About Us
+                Join Us
                 <svg
                   aria-hidden="true"
                   class="-mr-1 mt-1"

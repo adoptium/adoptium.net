@@ -32,14 +32,13 @@ function classNames(...classes: string[]) {
 
 const navigation: NavItem[] = [
   {
-    name: "About Us",
+    name: "Join Us",
     children: [
-      { name: "What We do", href: "/what-we-do" },
+      { name: "Join Us", href: "/join-us" },
       { name: "Business Benefits", href: "/business-benefits" },
       { name: "Our Members", href: "/members" },
       { name: "Our Sustainers", href: "/sustainers" },
       { name: "Our Adopters", href: "/adopters" },
-      { name: "Support Us", href: "/support-us" },
     ],
   },
   { name: "Latest Releases", href: "/temurin/releases" },
@@ -47,6 +46,7 @@ const navigation: NavItem[] = [
   {
     name: "Projects",
     children: [
+      { name: "What We do", href: "/what-we-do" },
       { name: "Eclipse Temurin", href: "/temurin" },
       { name: "Eclipse AQAvit", href: "/aqavit" },
       { name: "Eclipse Mission Control", href: "/jmc" },

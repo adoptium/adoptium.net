@@ -59,7 +59,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <div
               class="text-rose-600 text-base font-bold leading-normal"
             >
-              Support Us
+              Join Us
             </div>
           </div>
           <div
@@ -182,7 +182,7 @@ exports[`Support Us page > renders correctly 1`] = `
             </p>
           </div>
           <a
-            href="/join"
+            href="/members"
           >
             <button
               class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"

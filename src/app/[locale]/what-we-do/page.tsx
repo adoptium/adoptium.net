@@ -55,7 +55,7 @@ export default function WhatWeDoPage() {
       <WGProjects />
       <GetOtherPlatformsAndVersions />
       <License />
-      <WaysToSupport />
+      {/* <WaysToSupport />
       <MediaAndPromotion />
       <ContactUs
         title="Connect with the community"
@@ -64,7 +64,7 @@ export default function WhatWeDoPage() {
         linkTo="/slack"
       />
       <Testimonials />
-      <LatestNews />
+      <LatestNews /> */}
     </>
   )
 }
