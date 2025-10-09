@@ -3,7 +3,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import '@fortawesome/fontawesome-free/css/v4-shims.min.css'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
-import Script from 'next/script'
 import { GoogleTagManager } from '@next/third-parties/google'
 import { getLocale } from 'next-intl/server'
 import { Organization, WithContext } from 'schema-dts'
@@ -81,7 +80,7 @@ export default async function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="Adoptium Blog" href="/rss.xml"></link>
         <GoogleTagManager gtmId="GTM-5WLCZXC" />
         {/* Eclipse Foundation Cookie Consent Banner */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <script>
           {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -89,16 +88,15 @@ export default async function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-5WLCZXC');
           `}
-        </Script>
+        </script>
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link
           rel="stylesheet"
           type="text/css"
           href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css"
         />
-        <Script
+        <script
           src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js"
-          strategy="afterInteractive"
         />
         {/* End of Eclipse Foundation Cookie Consent Banner */}
       </head>
