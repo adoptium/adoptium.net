@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     description: "Learn how you can support the Eclipse Adoptium community.",
 }
 
-export default function SupportUsPage() {
+export default function JoinUsPage() {
     return (
         <div>
             <PageHeader
                 title="What we’re trying to achieve"
-                subtitle="Support Us"
+                subtitle="Join Us"
                 description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
                 className={"max-w-[860px] mx-auto"}
             />

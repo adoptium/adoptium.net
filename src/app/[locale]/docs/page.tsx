@@ -224,8 +224,8 @@ export default function DocumentationPage() {
                                         link: "/news",
                                     },
                                     {
-                                        name: "Support Us",
-                                        link: "/support-us",
+                                        name: "Join Us",
+                                        link: "/join-us",
                                     },
                                 ]}
                             />
