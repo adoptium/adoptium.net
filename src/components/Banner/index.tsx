@@ -10,8 +10,8 @@ type BannerProps = {
   description: string;
   cta: string;
   ctaLink: string;
-  startDate: string;
-  endDate: string;
+  startDate?: string;
+  endDate?: string;
 };
 
 // ------------------------------------------------------- 
@@ -41,7 +41,7 @@ const Banner = () => {
 
     // Filter banners based on current date and validity
     const filteredBanners = currentBanners
-      .filter(banner => (now >= new Date(banner.startDate) && now <= new Date(banner.endDate)));
+      .filter(banner => ((banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true)));
 
     // randomly select one banner if multiple are valid
     setBanner(filteredBanners.length > 0 ? shuffle(filteredBanners)[0] : null);

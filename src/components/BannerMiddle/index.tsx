@@ -8,8 +8,8 @@ type BannerMiddleProps = {
   description: string;
   cta: string;
   ctaLink: string;
-  startDate: string;
-  endDate: string;
+  startDate?: string;
+  endDate?: string;
 };
 
 // ------------------------------------------------------- 
@@ -21,8 +21,6 @@ const currentAnnouncements: BannerMiddleProps[] = [
     description: "Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.",
     cta: "Learn more!",
     ctaLink: "/sustainers/",
-    startDate: "2025-09-30T23:59:59Z",
-    endDate: "2025-11-15T23:59:59Z"
   },
   {
     title: "Case Study: Bloomberg’s shift to Open Source Java",
@@ -45,7 +43,7 @@ const BannerMiddle = () => {
 
     // Filter announcements based on current date and validity
     const filteredAnnouncements = currentAnnouncements
-      .filter(announcement => (now >= new Date(announcement.startDate) && now <= new Date(announcement.endDate)));
+      .filter(announcement => ((announcement.startDate ? now >= new Date(announcement.startDate) : true) && (announcement.endDate ? now <= new Date(announcement.endDate) : true)));
 
     // randomly select one announcement if multiple are valid
     setAnnouncement(filteredAnnouncements.length > 0 ? shuffle(filteredAnnouncements)[0] : null);
