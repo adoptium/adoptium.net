@@ -18,7 +18,7 @@ type BannerMiddleProps = {
 const currentAnnouncements: BannerMiddleProps[] = [
   {
     title: "Become a sustainer!",
-    description: "Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development. ",
+    description: "Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.",
     cta: "Learn more!",
     ctaLink: "/sustainers/",
     startDate: "2025-09-30T23:59:59Z",
