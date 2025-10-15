@@ -11,19 +11,25 @@
     preload'''
 
 [[redirects]]
+  from = "https://blog.adoptium.net/:locale/*"
+  to = "https://adoptium.net/:locale/news/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://blog.adoptium.net/*"
   to = "https://adoptium.net/news/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/*"
-  to = "/news/:splat"
+  from = "/:locale/blog/*"
+  to = "/:locale/news/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/:locale/blog/*"
+  from = "/blog/*"
   to = "/news/:splat"
   status = 301
   force = true
