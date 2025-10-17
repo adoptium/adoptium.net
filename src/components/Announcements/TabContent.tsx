@@ -24,10 +24,13 @@ type Events = {
 interface TabContentProps {
     posts: NewsPost[] | Events[];
     isEvents?: boolean;
-}
+    onItemClick?: () => void; }
 
-const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false }) => {
+const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false, onItemClick }) => {
     const locale = useLocale();
+        const handleClick = () => {
+        onItemClick?.(); 
+    };
 
     const formatTimeAgo = (date: string): string => {
         const daysAgo = Math.floor((new Date().getTime() - new Date(date).getTime()) / (1000 * 60 * 60 * 24));
@@ -52,7 +55,7 @@ const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false }) => {
                 {posts.map((event, index) => {
                     const eventItem = event as Events;
                     return (
-                        <div key={index}>
+                        <div key={index} onClick={handleClick}>
                             <a href={eventItem.infoLink} target="_blank" rel="noreferrer">
                                 <div className="text-[#c4bfce]">
                                     <p className="text-[12px] leading-[133.333%] text-lightgrey mb-0">
@@ -93,7 +96,7 @@ const TabContent: React.FC<TabContentProps> = ({ posts, isEvents = false }) => {
                 const description = isEF ? post.metadata.description : post.metadata.description;
                 const date = isEF ? post.metadata.date : post.metadata.date;
                 return (
-                    <div key={index}>
+                    <div key={index} onClick={handleClick}> 
                         {isEF ? (
                             <a href={link} target="_blank" rel="noopener noreferrer">
                                 <div className="text-[#c4bfce]">
