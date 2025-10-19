@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAppRoutes, getBlogRoutes } from "@/utils/getAppRoutes";
 import { routing } from "@/i18n/routing";
+import { getAllSitemapUrls } from "@/utils/sitemapData";
 import fs from "fs";
 import path from "path";
 import authorsData from "@/data/authors.json";
@@ -11,6 +12,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = getAppRoutes().filter(
     (route) => !route.includes("[...slug]") && !route.startsWith("/news")
   );
+
+  // Getting additional routes from sitemap data to ensure all proposal URLs are included
+  const sitemapUrls = getAllSitemapUrls();
+  const additionalRoutes = sitemapUrls
+    .map(url => url.replace(/\/$/, '')) // Removing trailing slashes for consistency
+    .filter(url => !staticRoutes.includes(url)); // Adding routes not already added in static routes
+
+  const allStaticRoutes = [...staticRoutes, ...additionalRoutes];
 
   const blogRoutes = getBlogRoutes();
 
@@ -52,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Static pages (localized), but skip those handled by asciidoc index pages
-  for (const route of staticRoutes) {
+  for (const route of allStaticRoutes) {
     const isRoot = route === "/";
     const canonical = isRoot ? "/" : route.endsWith("/") ? route : `${route}/`;
     if (!isRoot && asciidocCanonicalSet.has(canonical)) continue;

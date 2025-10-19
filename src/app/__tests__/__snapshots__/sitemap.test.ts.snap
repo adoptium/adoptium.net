@@ -48,12 +48,687 @@ exports[`sitemap > generates the expected sitemap snapshot 1`] = `
     "url": "https://adoptium.net/page-2",
   },
   {
-    "lastModified": 2025-05-01T00:00:00.000Z,
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de",
+        "en-GB": "https://adoptium.net/en-GB",
+        "es": "https://adoptium.net/es",
+        "fr": "https://adoptium.net/fr",
+        "pt-BR": "https://adoptium.net/pt-BR",
+        "x-default": "https://adoptium.net",
+        "zh-CN": "https://adoptium.net/zh-CN",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/what-we-do",
+        "en-GB": "https://adoptium.net/en-GB/what-we-do",
+        "es": "https://adoptium.net/es/what-we-do",
+        "fr": "https://adoptium.net/fr/what-we-do",
+        "pt-BR": "https://adoptium.net/pt-BR/what-we-do",
+        "x-default": "https://adoptium.net/what-we-do",
+        "zh-CN": "https://adoptium.net/zh-CN/what-we-do",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/what-we-do",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/about",
+        "en-GB": "https://adoptium.net/en-GB/about",
+        "es": "https://adoptium.net/es/about",
+        "fr": "https://adoptium.net/fr/about",
+        "pt-BR": "https://adoptium.net/pt-BR/about",
+        "x-default": "https://adoptium.net/about",
+        "zh-CN": "https://adoptium.net/zh-CN/about",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/about",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/members",
+        "en-GB": "https://adoptium.net/en-GB/members",
+        "es": "https://adoptium.net/es/members",
+        "fr": "https://adoptium.net/fr/members",
+        "pt-BR": "https://adoptium.net/pt-BR/members",
+        "x-default": "https://adoptium.net/members",
+        "zh-CN": "https://adoptium.net/zh-CN/members",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/members",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/adopters",
+        "en-GB": "https://adoptium.net/en-GB/adopters",
+        "es": "https://adoptium.net/es/adopters",
+        "fr": "https://adoptium.net/fr/adopters",
+        "pt-BR": "https://adoptium.net/pt-BR/adopters",
+        "x-default": "https://adoptium.net/adopters",
+        "zh-CN": "https://adoptium.net/zh-CN/adopters",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/adopters",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/business-benefits",
+        "en-GB": "https://adoptium.net/en-GB/business-benefits",
+        "es": "https://adoptium.net/es/business-benefits",
+        "fr": "https://adoptium.net/fr/business-benefits",
+        "pt-BR": "https://adoptium.net/pt-BR/business-benefits",
+        "x-default": "https://adoptium.net/business-benefits",
+        "zh-CN": "https://adoptium.net/zh-CN/business-benefits",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/business-benefits",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/slack",
+        "en-GB": "https://adoptium.net/en-GB/slack",
+        "es": "https://adoptium.net/es/slack",
+        "fr": "https://adoptium.net/fr/slack",
+        "pt-BR": "https://adoptium.net/pt-BR/slack",
+        "x-default": "https://adoptium.net/slack",
+        "zh-CN": "https://adoptium.net/zh-CN/slack",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/slack",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news",
+        "en-GB": "https://adoptium.net/en-GB/news",
+        "es": "https://adoptium.net/es/news",
+        "fr": "https://adoptium.net/fr/news",
+        "pt-BR": "https://adoptium.net/pt-BR/news",
+        "x-default": "https://adoptium.net/news",
+        "zh-CN": "https://adoptium.net/zh-CN/news",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin",
+        "en-GB": "https://adoptium.net/en-GB/temurin",
+        "es": "https://adoptium.net/es/temurin",
+        "fr": "https://adoptium.net/fr/temurin",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin",
+        "x-default": "https://adoptium.net/temurin",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin/releases",
+        "en-GB": "https://adoptium.net/en-GB/temurin/releases",
+        "es": "https://adoptium.net/es/temurin/releases",
+        "fr": "https://adoptium.net/fr/temurin/releases",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/releases",
+        "x-default": "https://adoptium.net/temurin/releases",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/releases",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin/releases",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin/release-notes",
+        "en-GB": "https://adoptium.net/en-GB/temurin/release-notes",
+        "es": "https://adoptium.net/es/temurin/release-notes",
+        "fr": "https://adoptium.net/fr/temurin/release-notes",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/release-notes",
+        "x-default": "https://adoptium.net/temurin/release-notes",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/release-notes",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin/release-notes",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/supported-platforms",
+        "en-GB": "https://adoptium.net/en-GB/supported-platforms",
+        "es": "https://adoptium.net/es/supported-platforms",
+        "fr": "https://adoptium.net/fr/supported-platforms",
+        "pt-BR": "https://adoptium.net/pt-BR/supported-platforms",
+        "x-default": "https://adoptium.net/supported-platforms",
+        "zh-CN": "https://adoptium.net/zh-CN/supported-platforms",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/supported-platforms",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin/buttons",
+        "en-GB": "https://adoptium.net/en-GB/temurin/buttons",
+        "es": "https://adoptium.net/es/temurin/buttons",
+        "fr": "https://adoptium.net/fr/temurin/buttons",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/buttons",
+        "x-default": "https://adoptium.net/temurin/buttons",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/buttons",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin/buttons",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin/nightly",
+        "en-GB": "https://adoptium.net/en-GB/temurin/nightly",
+        "es": "https://adoptium.net/es/temurin/nightly",
+        "fr": "https://adoptium.net/fr/temurin/nightly",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/nightly",
+        "x-default": "https://adoptium.net/temurin/nightly",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/nightly",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin/nightly",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/installation",
+        "en-GB": "https://adoptium.net/en-GB/installation",
+        "es": "https://adoptium.net/es/installation",
+        "fr": "https://adoptium.net/fr/installation",
+        "pt-BR": "https://adoptium.net/pt-BR/installation",
+        "x-default": "https://adoptium.net/installation",
+        "zh-CN": "https://adoptium.net/zh-CN/installation",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/installation",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/installation/windows",
+        "en-GB": "https://adoptium.net/en-GB/installation/windows",
+        "es": "https://adoptium.net/es/installation/windows",
+        "fr": "https://adoptium.net/fr/installation/windows",
+        "pt-BR": "https://adoptium.net/pt-BR/installation/windows",
+        "x-default": "https://adoptium.net/installation/windows",
+        "zh-CN": "https://adoptium.net/zh-CN/installation/windows",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/installation/windows",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/installation/macOS",
+        "en-GB": "https://adoptium.net/en-GB/installation/macOS",
+        "es": "https://adoptium.net/es/installation/macOS",
+        "fr": "https://adoptium.net/fr/installation/macOS",
+        "pt-BR": "https://adoptium.net/pt-BR/installation/macOS",
+        "x-default": "https://adoptium.net/installation/macOS",
+        "zh-CN": "https://adoptium.net/zh-CN/installation/macOS",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/installation/macOS",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/installation/linux",
+        "en-GB": "https://adoptium.net/en-GB/installation/linux",
+        "es": "https://adoptium.net/es/installation/linux",
+        "fr": "https://adoptium.net/fr/installation/linux",
+        "pt-BR": "https://adoptium.net/pt-BR/installation/linux",
+        "x-default": "https://adoptium.net/installation/linux",
+        "zh-CN": "https://adoptium.net/zh-CN/installation/linux",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/installation/linux",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/installation/archives",
+        "en-GB": "https://adoptium.net/en-GB/installation/archives",
+        "es": "https://adoptium.net/es/installation/archives",
+        "fr": "https://adoptium.net/fr/installation/archives",
+        "pt-BR": "https://adoptium.net/pt-BR/installation/archives",
+        "x-default": "https://adoptium.net/installation/archives",
+        "zh-CN": "https://adoptium.net/zh-CN/installation/archives",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/installation/archives",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/marketplace",
+        "en-GB": "https://adoptium.net/en-GB/marketplace",
+        "es": "https://adoptium.net/es/marketplace",
+        "fr": "https://adoptium.net/fr/marketplace",
+        "pt-BR": "https://adoptium.net/pt-BR/marketplace",
+        "x-default": "https://adoptium.net/marketplace",
+        "zh-CN": "https://adoptium.net/zh-CN/marketplace",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/marketplace",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs",
+        "en-GB": "https://adoptium.net/en-GB/docs",
+        "es": "https://adoptium.net/es/docs",
+        "fr": "https://adoptium.net/fr/docs",
+        "pt-BR": "https://adoptium.net/pt-BR/docs",
+        "x-default": "https://adoptium.net/docs",
+        "zh-CN": "https://adoptium.net/zh-CN/docs",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/faq",
+        "en-GB": "https://adoptium.net/en-GB/docs/faq",
+        "es": "https://adoptium.net/es/docs/faq",
+        "fr": "https://adoptium.net/fr/docs/faq",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/faq",
+        "x-default": "https://adoptium.net/docs/faq",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/faq",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/faq",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/migration",
+        "en-GB": "https://adoptium.net/en-GB/docs/migration",
+        "es": "https://adoptium.net/es/docs/migration",
+        "fr": "https://adoptium.net/fr/docs/migration",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/migration",
+        "x-default": "https://adoptium.net/docs/migration",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/migration",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/migration",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/support",
+        "en-GB": "https://adoptium.net/en-GB/support",
+        "es": "https://adoptium.net/es/support",
+        "fr": "https://adoptium.net/fr/support",
+        "pt-BR": "https://adoptium.net/pt-BR/support",
+        "x-default": "https://adoptium.net/support",
+        "zh-CN": "https://adoptium.net/zh-CN/support",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/support",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/aqavit",
+        "en-GB": "https://adoptium.net/en-GB/aqavit",
+        "es": "https://adoptium.net/es/aqavit",
+        "fr": "https://adoptium.net/fr/aqavit",
+        "pt-BR": "https://adoptium.net/pt-BR/aqavit",
+        "x-default": "https://adoptium.net/aqavit",
+        "zh-CN": "https://adoptium.net/zh-CN/aqavit",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/aqavit",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/aqavit-verification",
+        "en-GB": "https://adoptium.net/en-GB/docs/aqavit-verification",
+        "es": "https://adoptium.net/es/docs/aqavit-verification",
+        "fr": "https://adoptium.net/fr/docs/aqavit-verification",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/aqavit-verification",
+        "x-default": "https://adoptium.net/docs/aqavit-verification",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/aqavit-verification",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/aqavit-verification",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/qvs-policy",
+        "en-GB": "https://adoptium.net/en-GB/docs/qvs-policy",
+        "es": "https://adoptium.net/es/docs/qvs-policy",
+        "fr": "https://adoptium.net/fr/docs/qvs-policy",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/qvs-policy",
+        "x-default": "https://adoptium.net/docs/qvs-policy",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/qvs-policy",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/qvs-policy",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/secure-software",
+        "en-GB": "https://adoptium.net/en-GB/docs/secure-software",
+        "es": "https://adoptium.net/es/docs/secure-software",
+        "fr": "https://adoptium.net/fr/docs/secure-software",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/secure-software",
+        "x-default": "https://adoptium.net/docs/secure-software",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/secure-software",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/secure-software",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/slsa",
+        "en-GB": "https://adoptium.net/en-GB/docs/slsa",
+        "es": "https://adoptium.net/es/docs/slsa",
+        "fr": "https://adoptium.net/fr/docs/slsa",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/slsa",
+        "x-default": "https://adoptium.net/docs/slsa",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/slsa",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/slsa",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/reproducible-verification-builds",
+        "en-GB": "https://adoptium.net/en-GB/docs/reproducible-verification-builds",
+        "es": "https://adoptium.net/es/docs/reproducible-verification-builds",
+        "fr": "https://adoptium.net/fr/docs/reproducible-verification-builds",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/reproducible-verification-builds",
+        "x-default": "https://adoptium.net/docs/reproducible-verification-builds",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/reproducible-verification-builds",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/reproducible-verification-builds",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/contributing",
+        "en-GB": "https://adoptium.net/en-GB/contributing",
+        "es": "https://adoptium.net/es/contributing",
+        "fr": "https://adoptium.net/fr/contributing",
+        "pt-BR": "https://adoptium.net/pt-BR/contributing",
+        "x-default": "https://adoptium.net/contributing",
+        "zh-CN": "https://adoptium.net/zh-CN/contributing",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/contributing",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/first-timer-support",
+        "en-GB": "https://adoptium.net/en-GB/docs/first-timer-support",
+        "es": "https://adoptium.net/es/docs/first-timer-support",
+        "fr": "https://adoptium.net/fr/docs/first-timer-support",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/first-timer-support",
+        "x-default": "https://adoptium.net/docs/first-timer-support",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/first-timer-support",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/first-timer-support",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin/nightly",
+        "en-GB": "https://adoptium.net/en-GB/temurin/nightly",
+        "es": "https://adoptium.net/es/temurin/nightly",
+        "fr": "https://adoptium.net/fr/temurin/nightly",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/nightly",
+        "x-default": "https://adoptium.net/temurin/nightly",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/nightly",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin/nightly",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/slack",
+        "en-GB": "https://adoptium.net/en-GB/slack",
+        "es": "https://adoptium.net/es/slack",
+        "fr": "https://adoptium.net/fr/slack",
+        "pt-BR": "https://adoptium.net/pt-BR/slack",
+        "x-default": "https://adoptium.net/slack",
+        "zh-CN": "https://adoptium.net/zh-CN/slack",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/slack",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/logo-styleguide",
+        "en-GB": "https://adoptium.net/en-GB/docs/logo-styleguide",
+        "es": "https://adoptium.net/es/docs/logo-styleguide",
+        "fr": "https://adoptium.net/fr/docs/logo-styleguide",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/logo-styleguide",
+        "x-default": "https://adoptium.net/docs/logo-styleguide",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/logo-styleguide",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/logo-styleguide",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/docs/marketing-criteria",
+        "en-GB": "https://adoptium.net/en-GB/docs/marketing-criteria",
+        "es": "https://adoptium.net/es/docs/marketing-criteria",
+        "fr": "https://adoptium.net/fr/docs/marketing-criteria",
+        "pt-BR": "https://adoptium.net/pt-BR/docs/marketing-criteria",
+        "x-default": "https://adoptium.net/docs/marketing-criteria",
+        "zh-CN": "https://adoptium.net/zh-CN/docs/marketing-criteria",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/docs/marketing-criteria",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/temurin/buttons",
+        "en-GB": "https://adoptium.net/en-GB/temurin/buttons",
+        "es": "https://adoptium.net/es/temurin/buttons",
+        "fr": "https://adoptium.net/fr/temurin/buttons",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/buttons",
+        "x-default": "https://adoptium.net/temurin/buttons",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/buttons",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/temurin/buttons",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/support-us",
+        "en-GB": "https://adoptium.net/en-GB/support-us",
+        "es": "https://adoptium.net/es/support-us",
+        "fr": "https://adoptium.net/fr/support-us",
+        "pt-BR": "https://adoptium.net/pt-BR/support-us",
+        "x-default": "https://adoptium.net/support-us",
+        "zh-CN": "https://adoptium.net/zh-CN/support-us",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/support-us",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/become-a-sustainer",
+        "en-GB": "https://adoptium.net/en-GB/become-a-sustainer",
+        "es": "https://adoptium.net/es/become-a-sustainer",
+        "fr": "https://adoptium.net/fr/become-a-sustainer",
+        "pt-BR": "https://adoptium.net/pt-BR/become-a-sustainer",
+        "x-default": "https://adoptium.net/become-a-sustainer",
+        "zh-CN": "https://adoptium.net/zh-CN/become-a-sustainer",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/become-a-sustainer",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/sustainers",
+        "en-GB": "https://adoptium.net/en-GB/sustainers",
+        "es": "https://adoptium.net/es/sustainers",
+        "fr": "https://adoptium.net/fr/sustainers",
+        "pt-BR": "https://adoptium.net/pt-BR/sustainers",
+        "x-default": "https://adoptium.net/sustainers",
+        "zh-CN": "https://adoptium.net/zh-CN/sustainers",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/sustainers",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/2024/12/other-post",
+        "en-GB": "https://adoptium.net/en-GB/news/2024/12/other-post",
+        "es": "https://adoptium.net/es/news/2024/12/other-post",
+        "fr": "https://adoptium.net/fr/news/2024/12/other-post",
+        "pt-BR": "https://adoptium.net/pt-BR/news/2024/12/other-post",
+        "x-default": "https://adoptium.net/news/2024/12/other-post",
+        "zh-CN": "https://adoptium.net/zh-CN/news/2024/12/other-post",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/2024/12/other-post",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/2025/05/post-1",
+        "en-GB": "https://adoptium.net/en-GB/news/2025/05/post-1",
+        "es": "https://adoptium.net/es/news/2025/05/post-1",
+        "fr": "https://adoptium.net/fr/news/2025/05/post-1",
+        "pt-BR": "https://adoptium.net/pt-BR/news/2025/05/post-1",
+        "x-default": "https://adoptium.net/news/2025/05/post-1",
+        "zh-CN": "https://adoptium.net/zh-CN/news/2025/05/post-1",
+      },
+    },
+    "lastModified": undefined,
     "url": "https://adoptium.net/news/2025/05/post-1",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/author/joeblogs",
+        "en-GB": "https://adoptium.net/en-GB/news/author/joeblogs",
+        "es": "https://adoptium.net/es/news/author/joeblogs",
+        "fr": "https://adoptium.net/fr/news/author/joeblogs",
+        "pt-BR": "https://adoptium.net/pt-BR/news/author/joeblogs",
+        "x-default": "https://adoptium.net/news/author/joeblogs",
+        "zh-CN": "https://adoptium.net/zh-CN/news/author/joeblogs",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/author/joeblogs",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/author/janedoe",
+        "en-GB": "https://adoptium.net/en-GB/news/author/janedoe",
+        "es": "https://adoptium.net/es/news/author/janedoe",
+        "fr": "https://adoptium.net/fr/news/author/janedoe",
+        "pt-BR": "https://adoptium.net/pt-BR/news/author/janedoe",
+        "x-default": "https://adoptium.net/news/author/janedoe",
+        "zh-CN": "https://adoptium.net/zh-CN/news/author/janedoe",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/author/janedoe",
+  },
+  {
+    "alternates": {
+      "languages": {
+        "de": "https://adoptium.net/de/news/author/testauthor",
+        "en-GB": "https://adoptium.net/en-GB/news/author/testauthor",
+        "es": "https://adoptium.net/es/news/author/testauthor",
+        "fr": "https://adoptium.net/fr/news/author/testauthor",
+        "pt-BR": "https://adoptium.net/pt-BR/news/author/testauthor",
+        "x-default": "https://adoptium.net/news/author/testauthor",
+        "zh-CN": "https://adoptium.net/zh-CN/news/author/testauthor",
+      },
+    },
+    "lastModified": undefined,
+    "url": "https://adoptium.net/news/author/testauthor",
   },
   {
     "lastModified": 2024-12-01T00:00:00.000Z,
     "url": "https://adoptium.net/news/2024/12/other-post/",
+  },
+  {
+    "lastModified": 2025-05-01T00:00:00.000Z,
+    "url": "https://adoptium.net/news/2025/05/post-1",
   },
   {
     "alternates": {

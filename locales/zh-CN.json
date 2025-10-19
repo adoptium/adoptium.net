@@ -218,5 +218,10 @@
     "selectVersion": "选择 Temurin 版本",
     "selectVersionDescription": "选择一个 Temurin 版本以查看其最新的版本说明：",
     "viewReleaseNotes": "查看版本说明 →"
+  },
+  "Sitemap": {
+    "title": "网站地图",
+    "subtitle": "浏览 Adoptium",
+    "description": "Adoptium 网站上所有页面、文档和资源的完整概览。快速轻松地找到您要查找的内容。"
   }
 }

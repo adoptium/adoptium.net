@@ -1,0 +1,139 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SitemapClient > renders correctly 1`] = `
+<div>
+  <div
+    class="min-h-screen bg-purple"
+  >
+    <div
+      class="container mx-auto px-4 py-8"
+    >
+      <div
+        class="max-w-2xl mx-auto mb-8"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            data-testid="icon-search"
+          >
+            🔍
+          </div>
+          <input
+            class="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+            placeholder="Search pages..."
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="max-w-6xl mx-auto space-y-6"
+      >
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden"
+        >
+          <button
+            class="w-full px-6 py-4 text-left hover:bg-gray-700/50 transition-colors duration-200 flex items-center justify-between"
+          >
+            <div
+              class="flex items-center gap-4"
+            >
+              <div
+                data-testid="icon-home"
+              >
+                🏠
+              </div>
+              <div>
+                <h2
+                  class="text-xl font-semibold text-white"
+                >
+                  Top-level
+                </h2>
+                <p
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  Main pages and navigation
+                </p>
+              </div>
+            </div>
+            <div
+              data-testid="icon-chevron-right"
+            >
+              ➡️
+            </div>
+          </button>
+        </div>
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden"
+        >
+          <button
+            class="w-full px-6 py-4 text-left hover:bg-gray-700/50 transition-colors duration-200 flex items-center justify-between"
+          >
+            <div
+              class="flex items-center gap-4"
+            >
+              <div
+                data-testid="icon-newspaper"
+              >
+                📰
+              </div>
+              <div>
+                <h2
+                  class="text-xl font-semibold text-white"
+                >
+                  Latest News
+                </h2>
+                <p
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  Recent blog posts and announcements
+                </p>
+              </div>
+            </div>
+            <div
+              data-testid="icon-chevron-right"
+            >
+              ➡️
+            </div>
+          </button>
+        </div>
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden"
+        >
+          <button
+            class="w-full px-6 py-4 text-left hover:bg-gray-700/50 transition-colors duration-200 flex items-center justify-between"
+          >
+            <div
+              class="flex items-center gap-4"
+            >
+              <div
+                data-testid="icon-users"
+              >
+                👥
+              </div>
+              <div>
+                <h2
+                  class="text-xl font-semibold text-white"
+                >
+                  Authors
+                </h2>
+                <p
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  Blog authors and contributors
+                </p>
+              </div>
+            </div>
+            <div
+              data-testid="icon-chevron-right"
+            >
+              ➡️
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
