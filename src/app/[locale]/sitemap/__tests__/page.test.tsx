@@ -34,9 +34,6 @@ describe('SitemapClient', () => {
         recentBlogs: [
           { title: 'Java 21 Release', url: '/news/2024/01/java-21-release' },
         ],
-        authorPages: [
-          { title: 'Author: John Doe', url: '/news/author/john-doe' },
-        ],
       },
     };
 
@@ -59,7 +56,6 @@ describe('SitemapClient', () => {
 
     // Checking that dynamic content sections are rendered
     expect(screen.getByText('Latest News')).toBeInTheDocument();
-    expect(screen.getByText('Authors')).toBeInTheDocument();
   });
 
   it('has clickable section buttons', () => {
@@ -78,7 +74,6 @@ describe('SitemapClient', () => {
     // Check that sections are rendered with proper content
     expect(screen.getByText('Top-level')).toBeInTheDocument();
     expect(screen.getByText('Latest News')).toBeInTheDocument();
-    expect(screen.getByText('Authors')).toBeInTheDocument();
   });
 
   it('handles empty dynamic content gracefully', () => {
@@ -97,7 +92,6 @@ describe('SitemapClient', () => {
     renderSitemapClient(dataWithoutDynamicContent);
 
     expect(screen.queryByText('Latest News')).not.toBeInTheDocument();
-    expect(screen.queryByText('Authors')).not.toBeInTheDocument();
   });
 
   it('handles empty sections gracefully', () => {
@@ -134,7 +128,6 @@ describe('SitemapClient', () => {
     expect(screen.getByPlaceholderText('Search pages...')).toBeInTheDocument();
     expect(screen.getByText('Top-level')).toBeInTheDocument();
     expect(screen.getByText('Latest News')).toBeInTheDocument();
-    expect(screen.getByText('Authors')).toBeInTheDocument();
     expect(screen.getByText('Top-level')).toBeInTheDocument();
   });
 

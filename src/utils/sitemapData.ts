@@ -1,6 +1,5 @@
 import { SitemapData, SitemapSection, SitemapPage, Sections } from '@/types/sitemap';
 import { getBlogRoutes } from './getAppRoutes';
-import authorsData from '@/data/authors.json';
 
 function formatBlogTitle(loc: string | undefined): string {
   if (!loc) return 'Blog Post';
@@ -137,16 +136,10 @@ const recentBlogs: SitemapPage[] = blogRoutes
       url: blog.loc,
     }));
 
-  const authorPages: SitemapPage[] = Object.keys(authorsData).map(authorId => ({
-    title: `Author: ${authorId}`,
-    url: `/news/author/${authorId}`,
-  }));
-
   return {
     sections,
     dynamicContent: {
       recentBlogs,
-      authorPages,
     },
   };
 }

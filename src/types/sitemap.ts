@@ -14,7 +14,6 @@ export interface SitemapData {
   sections: SitemapSection[];
   dynamicContent?: {
     recentBlogs?: SitemapPage[];
-    authorPages?: SitemapPage[];
   };
 }
 

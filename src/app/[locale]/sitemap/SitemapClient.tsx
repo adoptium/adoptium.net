@@ -140,9 +140,6 @@ export default function SitemapClient({ sitemapData }: SitemapClientProps) {
       recentBlogs: sitemapData.dynamicContent.recentBlogs?.filter(blog =>
         blog.title.toLowerCase().includes(searchLower)
       ),
-      authorPages: sitemapData.dynamicContent.authorPages?.filter(author =>
-        author.title.toLowerCase().includes(searchLower)
-      ),
     };
   }, [sitemapData.dynamicContent, debouncedSearchTerm]);
 
@@ -253,25 +250,6 @@ export default function SitemapClient({ sitemapData }: SitemapClientProps) {
                     {filteredDynamicContent.recentBlogs.map((blog) => (
                       <div key={blog.url} className="group">
                         {renderPageLink(blog)}
-                      </div>
-                    ))}
-                  </div>
-                </SectionWrapper>
-              )}
-
-              {/* Author Pages */}
-              {filteredDynamicContent.authorPages && filteredDynamicContent.authorPages.length > 0 && (
-                <SectionWrapper
-                  icon={FaUsers}
-                  title="Authors"
-                  description="Blog authors and contributors"
-                  isExpanded={expandedDynamicSections.has('authors')}
-                  onToggle={() => toggleDynamicSection('authors')}
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                    {filteredDynamicContent.authorPages.map((author) => (
-                      <div key={author.url} className="group">
-                        {renderPageLink(author)}
                       </div>
                     ))}
                   </div>
