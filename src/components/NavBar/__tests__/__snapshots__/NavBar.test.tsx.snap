@@ -42,7 +42,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-«r2»"
+                id="headlessui-menu-button-_r_2_"
                 type="button"
               >
                 About Us
@@ -86,7 +86,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-«r5»"
+                id="headlessui-menu-button-_r_5_"
                 type="button"
               >
                 Projects
@@ -118,7 +118,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-«r8»"
+                id="headlessui-menu-button-_r_8_"
                 type="button"
               >
                 Resources
@@ -150,7 +150,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-«rb»"
+                id="headlessui-menu-button-_r_b_"
                 type="button"
               >
                 Community
@@ -189,7 +189,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                   aria-haspopup="menu"
                   class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-«re»"
+                  id="headlessui-menu-button-_r_e_"
                   type="button"
                 >
                   <img
