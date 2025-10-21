@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAppRoutes, getBlogRoutes } from "@/utils/getAppRoutes";
 import { routing } from "@/i18n/routing";
-import { getAllSitemapUrls } from "@/utils/sitemapData";
+import { getAllStaticSitemapUrls } from "@/utils/sitemapData";
 import fs from "fs";
 import path from "path";
 import authorsData from "@/data/authors.json";
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   // Getting additional routes from sitemap data to ensure all proposal URLs are included
-  const sitemapUrls = getAllSitemapUrls();
+  const sitemapUrls = getAllStaticSitemapUrls();
   const additionalRoutes = sitemapUrls
     .map(url => url.replace(/\/$/, '')) // Removing trailing slashes for consistency
     .filter(url => !staticRoutes.includes(url)); // Adding routes not already added in static routes

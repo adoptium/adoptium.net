@@ -171,7 +171,7 @@ export default function SitemapClient({ sitemapData }: SitemapClientProps) {
   };
 
   const renderPageLink = (page: SitemapPage) => {
-    const isExternal = page.url.startsWith('http');
+    const isExternal = /^https?:\/\//.test(page.url);
     const linkClasses = `block py-2 px-4 text-white hover:text-rose-600 transition-colors duration-200`;
 
     if (isExternal) {
@@ -227,8 +227,8 @@ export default function SitemapClient({ sitemapData }: SitemapClientProps) {
                 onToggle={() => toggleSection(section.id)}
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                  {section.pages.map((page, index) => (
-                    <div key={index} className="group">
+                  {section.pages.map((page) => (
+                    <div key={page.url} className="group">
                       {renderPageLink(page)}
                     </div>
                   ))}
@@ -250,8 +250,8 @@ export default function SitemapClient({ sitemapData }: SitemapClientProps) {
                   onToggle={() => toggleDynamicSection('recentBlogs')}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {filteredDynamicContent.recentBlogs.map((blog, index) => (
-                      <div key={index} className="group">
+                    {filteredDynamicContent.recentBlogs.map((blog) => (
+                      <div key={blog.url} className="group">
                         {renderPageLink(blog)}
                       </div>
                     ))}
@@ -269,8 +269,8 @@ export default function SitemapClient({ sitemapData }: SitemapClientProps) {
                   onToggle={() => toggleDynamicSection('authors')}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                    {filteredDynamicContent.authorPages.map((author, index) => (
-                      <div key={index} className="group">
+                    {filteredDynamicContent.authorPages.map((author) => (
+                      <div key={author.url} className="group">
                         {renderPageLink(author)}
                       </div>
                     ))}

@@ -1,6 +1,19 @@
 import { SitemapData, SitemapSection, SitemapPage, Sections } from '@/types/sitemap';
 import { getBlogRoutes } from './getAppRoutes';
 import authorsData from '@/data/authors.json';
+
+function formatBlogTitle(loc: string | undefined): string {
+  if (!loc) return 'Blog Post';
+  
+  return loc
+    .replace(/\/$/, '')
+    .split('/')
+    .pop()
+    ?.replace(/-/g, ' ')
+    ?.split(' ')
+    ?.map(word => word.charAt(0)?.toUpperCase() + word.slice(1))
+    ?.join(' ') || 'Blog Post';
+}
 export function generateSitemapData(): SitemapData {
   const sections: SitemapSection[] = [
     {
@@ -89,7 +102,6 @@ export function generateSitemapData(): SitemapData {
       pages: [
         { title: 'How to Contribute', url: '/contributing' },
         { title: 'First-Timer Support', url: '/docs/first-timer-support' },
-        { title: 'Developer Nightly Builds', url: '/temurin/nightly' },
         { title: 'Slack', url: '/slack' },
       ],
     },
@@ -115,15 +127,14 @@ export function generateSitemapData(): SitemapData {
     },
   ];
 
-  const blogRoutes = getBlogRoutes();
+const blogRoutes = getBlogRoutes();
   
-  const recentBlogs: SitemapPage[] = blogRoutes
-    .sort((a, b) => new Date(b.lastmod).getTime() < new Date(a.lastmod).getTime() ? 1 : -1)
-    .slice(0, 10) // Taking Top 10 Blogs for Sitemap
+const recentBlogs: SitemapPage[] = blogRoutes
+    .sort((a, b) => new Date(b.lastmod).getTime() - new Date(a.lastmod).getTime())
+    .slice(0, 10) // Taking Top 10 most recent Blogs for Sitemap
     .map(blog => ({
-      title: blog.loc?.replace(/\/$/, '').split('/').pop()?.replace(/-/g, ' ')?.split(' ').map(word => word.charAt(0)?.toUpperCase() + word.slice(1))?.join(' ') || 'Blog Post',
+      title: formatBlogTitle(blog.loc),
       url: blog.loc,
-      lastModified: new Date(blog.lastmod),
     }));
 
   const authorPages: SitemapPage[] = Object.keys(authorsData).map(authorId => ({
@@ -140,28 +151,13 @@ export function generateSitemapData(): SitemapData {
   };
 }
 
-export function getAllSitemapUrls(): string[] {
+export function getAllStaticSitemapUrls(): string[] {
   const data = generateSitemapData();
   const urls: string[] = [];
 
-  function extractUrls(pages: SitemapPage[]): void {
-    pages.forEach(page => {
-      urls.push(page.url);
-    });
-  }
-
   data.sections.forEach(section => {
-    extractUrls(section.pages);
+    urls.push(...section.pages.map(p => p.url));
   });
-
-  if (data.dynamicContent) {
-    if (data.dynamicContent.recentBlogs) {
-      extractUrls(data.dynamicContent.recentBlogs);
-    }
-    if (data.dynamicContent.authorPages) {
-      extractUrls(data.dynamicContent.authorPages);
-    }
-  }
 
   return urls;
 }

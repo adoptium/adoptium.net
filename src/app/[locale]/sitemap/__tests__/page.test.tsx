@@ -1,62 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import SitemapClient from '../SitemapClient';
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
-
-interface SitemapSection {
-  id: string;
-  title: string;
-  description?: string;
-  pages: Array<{ title: string; url: string }>;
-}
-
-interface SitemapDynamicContent {
-  recentBlogs?: Array<{ title: string; url: string }>;
-  authorPages?: Array<{ title: string; url: string }>;
-}
-
-interface SitemapData {
-  sections: SitemapSection[];
-  dynamicContent?: SitemapDynamicContent;
-}
-
-vi.mock('@/utils/sitemapData', () => ({
-  generateLocalizedSitemapData: vi.fn(() => ({
-    sections: [
-      {
-        id: 'top-level',
-        title: 'Top-level',
-        description: 'Main pages and navigation',
-        pages: [
-          { title: 'Home', url: '/' },
-          { title: 'About', url: '/about' },
-          { title: 'Installation Guide', url: '/installation' },
-        ],
-      },
-      {
-        id: 'temurin',
-        title: 'Temurin',
-        description: 'Eclipse Temurin downloads',
-        pages: [
-          { title: 'Temurin Overview', url: '/temurin' },
-          { title: 'Latest Releases', url: '/temurin/releases' },
-          { title: 'Release Notes', url: '/temurin/release-notes' },
-        ],
-      },
-    ],
-    dynamicContent: {
-      recentBlogs: [
-        { title: 'Java 21 Release', url: '/news/2024/01/java-21-release' },
-        { title: 'Performance Improvements', url: '/news/2024/02/performance-improvements' },
-        { title: 'Security Updates', url: '/news/2024/03/security-updates' },
-      ],
-      authorPages: [
-        { title: 'Author: John Doe', url: '/news/author/john-doe' },
-        { title: 'Author: Jane Smith', url: '/news/author/jane-smith' },
-        { title: 'Author: Bob Wilson', url: '/news/author/bob-wilson' },
-      ],
-    },
-  })),
-}));
+import { SitemapData } from '@/types/sitemap';
 
 
 describe('SitemapClient', () => {
