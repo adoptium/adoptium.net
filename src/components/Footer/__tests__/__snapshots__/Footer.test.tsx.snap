@@ -234,6 +234,14 @@ exports[`Footer component > renders correctly 1`] = `
               <li>
                 <a
                   class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
+                  href="/sitemap"
+                >
+                  Sitemap
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="#"
                 >
                   Swag Store
