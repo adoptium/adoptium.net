@@ -7,7 +7,7 @@ import WGProjects from '@/components/WGProjects';
 import Testimonials from '@/components/Testimonials';
 import LatestNews from '@/components/News/LatestNews';
 import ContributorsHome from '@/components/Contributors/home';
-import BlockAnnouncement from '@/components/BlockAnnouncement';
+import BannerMiddle from '@/components/BannerMiddle';
 
 export default function HomePageClient({
     latestLTS,
@@ -20,7 +20,7 @@ export default function HomePageClient({
         <div>
             <HeroSection latestLTS={latestLTS} />
             <LogoCarousel />
-            <BlockAnnouncement />
+            <BannerMiddle />
             <PowerOfTemurin />
             <DownloadCounter total={total_downloads} />
             <TemurinFeatures />

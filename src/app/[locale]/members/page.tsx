@@ -9,7 +9,7 @@ import MembershipLevels from "@/components/MembershipLevels";
 import CommonButton from "@/components/Common/CommonButton";
 
 export const metadata: Metadata = {
-  title: "Our Members",
+  title: "Become a Member",
   description:
     "View the members of the Eclipse Adoptium community, including strategic, enterprise, and participant members who use Eclipse Temurin in production.",
 };
@@ -140,14 +140,10 @@ export default function MembersPage() {
   const headerButtons = (
     <>
       <Link href="/join" className="w-full sm:w-auto">
-        <button className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-          Join us
-        </button>
+        <CommonButton>Join Us</CommonButton>
       </Link>
       <Link href="#strategic-sec" className="w-full sm:w-auto">
-        <button className="w-full px-8 py-4 rounded-full border-2 border-white text-white hover:bg-pink-500 hover:text-white font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2">
-          Our Members
-        </button>
+        <CommonButton>Our Members</CommonButton>
       </Link>
     </>
   );
@@ -155,9 +151,9 @@ export default function MembersPage() {
   return (
     <div>
       <PageHeader
-        title="Who we work with"
-        subtitle="Our Members"
-        description="Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem."
+        title="Join the Adoptium Working Group"
+        subtitle="Become a Member"
+        description="Support the future of open, secure, enterprise-ready Java runtimes."
         buttons={headerButtons}
       />
       <KeyInitiatives

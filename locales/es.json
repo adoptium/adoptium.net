@@ -220,5 +220,10 @@
     "selectVersion": "Seleccionar una versión de Temurin",
     "selectVersionDescription": "Elige una versión de Temurin para ver sus últimas notas de versión:",
     "viewReleaseNotes": "Ver notas de versión →"
+  },
+  "Sitemap": {
+    "title": "Mapa del sitio",
+    "subtitle": "Navegar Adoptium",
+    "description": "Descripción completa de todas las páginas, documentación y recursos disponibles en el sitio web de Adoptium. Encuentre rápidamente lo que busca."
   }
 }

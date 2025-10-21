@@ -276,7 +276,8 @@ exports[`Index page > renders correctly 1`] = `
                   <p
                     class="text-[14px] text-gray-200 mt-1 max-w-2xl"
                   >
-                    Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development. 
+                    Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.
+                     
                     <a
                       class="text-primary"
                       href="/sustainers/"
