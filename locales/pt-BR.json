@@ -4,7 +4,9 @@
     "download-temurin-for": "Baixe o Temurin {defaultVersion} para {userOSName} {arch}",
     "download-temurin-short": "Baixar Temurin {defaultVersion}",
     "other-downloads": "Outros Downloads",
-    "download-temurin-button": "Baixar Temurin®"
+    "download-temurin-button": "Baixar Temurin®",
+    "sustainer-cta-description": "Milhões confiam no Eclipse Temurin. Seu apoio o mantém funcionando",
+    "sustainer-cta-button": "Reinvestir no Eclipse Temurin"
   },
   "NotFoundPage": {
     "title": "Desculpe, não conseguimos encontrar esta página",
@@ -218,5 +220,10 @@
     "selectVersion": "Selecionar uma versão do Temurin",
     "selectVersionDescription": "Escolha uma versão do Temurin para ver suas últimas notas de versão:",
     "viewReleaseNotes": "Ver notas da versão →"
+  },
+  "Sitemap": {
+    "title": "Mapa do site",
+    "subtitle": "Navegar no Adoptium",
+    "description": "Visão geral completa de todas as páginas, documentação e recursos disponíveis no site Adoptium. Encontre rapidamente o que você está procurando."
   }
 }
