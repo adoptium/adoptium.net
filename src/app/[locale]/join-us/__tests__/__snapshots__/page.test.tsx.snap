@@ -65,13 +65,13 @@ exports[`Support Us page > renders correctly 1`] = `
           <div
             class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
           >
-            What we’re trying to achieve
+            Join us in shaping the future of open source Java
           </div>
         </div>
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] max-w-[860px] mx-auto"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Eclipse Adoptium is building the next generation of open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java developers worldwide.
         </div>
       </div>
     </div>
@@ -85,12 +85,12 @@ exports[`Support Us page > renders correctly 1`] = `
       <h2
         class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
-        Ways to support us
+        Power the evolution of open Java runtimes
       </h2>
       <p
         class="text-grey mt-6 font-normal text-base"
       >
-        If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group
+        Your involvement keeps Eclipse Temurin enterprise-ready, secure, and accessible for all. Whether through contributions, sponsorship, or membership, together we can drive the evolution of Adoptium and strengthen the Java ecosystem for years to come.
       </p>
     </div>
     <div
@@ -109,12 +109,12 @@ exports[`Support Us page > renders correctly 1`] = `
             <h3
               class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
             >
-              How to contribute
+              Contribute to Adoptium Projects
             </h3>
             <p
               class="mt-6 text-xl text-grey font-normal"
             >
-              Contribute to our projects with technical and non-technical development
+              Contribute to our projects with technical and non-technical development.
             </p>
           </div>
           <a
@@ -146,7 +146,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <p
               class="mt-6 text-xl text-grey font-normal"
             >
-              Join us in strengthening the future of Eclipse Temurin
+              Help ensure Temurin remains a trusted, high-performance runtime for developers everywhere.
             </p>
           </div>
           <a
@@ -178,7 +178,7 @@ exports[`Support Us page > renders correctly 1`] = `
             <p
               class="mt-6 text-xl text-grey font-normal"
             >
-              Join us shaping the future of Eclipse Adoptium
+              Membership connects you with industry leaders and the vibrant Adoptium ecosystem, shaping the future of Java. Take an active role in driving innovation, gaining access to strategic and technical resources, and raising your organisation’s visibility.
             </p>
           </div>
           <a
