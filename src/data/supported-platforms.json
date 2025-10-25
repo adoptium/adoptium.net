@@ -508,6 +508,21 @@
       ]
     },
     {
+      "category": "Alpine Linux (x64)",
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
       "category": "macOS (x64)",
       "distros": [
         {
