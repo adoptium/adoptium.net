@@ -1,45 +1,48 @@
-import React, { RefObject, useRef } from "react"
-import { render } from "@testing-library/react"
-import { afterEach, describe, expect, it, vi } from "vitest"
-import { useOnScreen } from "../useOnScreen"
+import React, { RefObject, useRef } from "react";
+import { render } from "@testing-library/react";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { useOnScreen } from "../useOnScreen";
 
 describe("useOnScreen", () => {
-  const intersectionObserverOriginal = window.IntersectionObserver
+  const intersectionObserverOriginal = window.IntersectionObserver;
   const OnScreenRenderer: React.FC<{ observeOnce?: boolean }> = ({
     observeOnce = false,
   }) => {
-    const ref = useRef<HTMLDivElement | null>(null)
-    const isVisible = useOnScreen(ref as RefObject<Element>, observeOnce)
+    const ref = useRef<HTMLDivElement | null>(null);
+    const isVisible = useOnScreen(ref as RefObject<Element>, observeOnce);
 
-    return <div ref={ref}>{isVisible ? <>true</> : <>false</>}</div>
-  }
+    return <div ref={ref}>{isVisible ? <>true</> : <>false</>}</div>;
+  };
 
   afterEach(() => {
-    window.IntersectionObserver = intersectionObserverOriginal
-  })
+    window.IntersectionObserver = intersectionObserverOriginal;
+  });
 
   it("should observe ref for appearing on screen", () => {
-    const observeMock = vi.fn()
+    const observeMock = vi.fn();
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    window.IntersectionObserver = vi.fn(() => {
+    window.IntersectionObserver = vi.fn(function () {
       return {
-        disconnect: vi.fn,
+        disconnect: vi.fn(),
         observe: observeMock,
-      }
-    })
+      };
+    });
 
-    render(<OnScreenRenderer />)
-    expect(observeMock).toHaveBeenCalledTimes(1)
-  })
+    render(<OnScreenRenderer />);
+    expect(observeMock).toHaveBeenCalledTimes(1);
+  });
 
   it("should disconnect on first intersection with observeOnce option", () => {
-    const disconnectMock = vi.fn()
+    const disconnectMock = vi.fn();
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    window.IntersectionObserver = vi.fn(cb => {
+    window.IntersectionObserver = vi.fn(function (
+      this: any,
+      cb: IntersectionObserverCallback
+    ) {
       return {
         disconnect: disconnectMock,
         observe: () => {
@@ -51,25 +54,28 @@ describe("useOnScreen", () => {
                 isIntersecting: true,
               },
             ],
-            vi.fn() as unknown as IntersectionObserver,
-          )
+            this as unknown as IntersectionObserver
+          );
         },
-      }
-    })
+      };
+    });
 
-    const { unmount } = render(<OnScreenRenderer observeOnce />)
+    const { unmount } = render(<OnScreenRenderer observeOnce />);
     // unmount component in order to fire useEffect return function
-    unmount()
+    unmount();
 
-    expect(disconnectMock).toHaveBeenCalledTimes(2)
-  })
+    expect(disconnectMock).toHaveBeenCalledTimes(2);
+  });
 
   it("should not disconnect on first intersection with observeOnce=false option", () => {
-    const disconnectMock = vi.fn()
+    const disconnectMock = vi.fn();
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    window.IntersectionObserver = vi.fn(cb => {
+    window.IntersectionObserver = vi.fn(function (
+      this: any,
+      cb: IntersectionObserverCallback
+    ) {
       return {
         disconnect: disconnectMock,
         observe: () => {
@@ -81,13 +87,13 @@ describe("useOnScreen", () => {
                 isIntersecting: true,
               },
             ],
-            vi.fn() as unknown as IntersectionObserver,
-          )
+            this as unknown as IntersectionObserver
+          );
         },
-      }
-    })
+      };
+    });
 
-    render(<OnScreenRenderer observeOnce={false} />)
-    expect(disconnectMock).toHaveBeenCalledTimes(0)
-  })
-})
+    render(<OnScreenRenderer observeOnce={false} />);
+    expect(disconnectMock).toHaveBeenCalledTimes(0);
+  });
+});
