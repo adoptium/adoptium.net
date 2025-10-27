@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState, useEffect } from "react";
@@ -15,9 +15,9 @@ type BannerProps = {
   releaseBanner?: boolean;
 };
 
-// ------------------------------------------------------- 
+// -------------------------------------------------------
 // NOTE: Add your list of current banners here
-// ------------------------------------------------------- 
+// -------------------------------------------------------
 const currentBanners: BannerProps[] = [
   {
     title: "October 2025 PSU Binaries - In Progress",
@@ -30,16 +30,17 @@ const currentBanners: BannerProps[] = [
   },
   {
     title: "Case Study: Bloomberg’s shift to Open Source Java",
-    description: "Discover how Eclipse Temurin helps power global financial infrastructure.",
+    description:
+      "Discover how Eclipse Temurin helps power global financial infrastructure.",
     cta: "Read the Case Study",
-    ctaLink: "https://outreach.eclipse.foundation/bloomberg-temurin-case-study?utm_campaign=22235449-Bloomberg%20Adoptium%20Case%20Study&utm_source=banner&utm_medium=adoptium%20website",
+    ctaLink:
+      "https://outreach.eclipse.foundation/bloomberg-temurin-case-study?utm_campaign=22235449-Bloomberg%20Adoptium%20Case%20Study&utm_source=banner&utm_medium=adoptium%20website",
     startDate: "2025-09-30T23:59:59Z",
     endDate: "2025-11-15T23:59:59Z",
-  }
+  },
 ];
 
 const Banner = () => {
-
   const [isVisible, setIsVisible] = useState(true);
   const [isDismissed, setIsDismissed] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -51,7 +52,7 @@ const Banner = () => {
 
     // Filter banners based on current date and validity
     const filteredBanners = currentBanners
-      .filter(banner => ((banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true)));
+      .filter((banner) => (banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true));
     const releaseBanners = currentBanners
       .filter(banner => ((banner.releaseBanner ? banner.releaseBanner : false) && (banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true)));
 
@@ -86,7 +87,11 @@ const Banner = () => {
   }
 
   return (
-    <div className={`bg-gradient-to-r from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div
+      className={`bg-gradient-to-r from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg transition-opacity duration-700 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center relative">
           {/* Close button - only show after mount to prevent hydration issues */}
@@ -103,12 +108,22 @@ const Banner = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           )}
 
-          <div className={`flex items-center gap-4 mb-3 md:mb-0 ${isMounted ? 'pr-8' : ''}`}>{/* Only add padding after mount */}
+          <div
+            className={`flex items-center gap-4 mb-3 md:mb-0 ${
+              isMounted ? "pr-8" : ""
+            }`}
+          >
+            {/* Only add padding after mount */}
             <div className="transform hover:scale-110 transition-transform duration-300">
               <PinkIcon />
             </div>
@@ -127,8 +142,19 @@ const Banner = () => {
               className="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center group"
             >
               {banner.cta}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
               </svg>
             </a>
           </div>
