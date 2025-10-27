@@ -12,12 +12,22 @@ type BannerProps = {
   ctaLink: string;
   startDate?: string;
   endDate?: string;
+  releaseBanner?: boolean;
 };
 
 // ------------------------------------------------------- 
 // NOTE: Add your list of current banners here
 // ------------------------------------------------------- 
 const currentBanners: BannerProps[] = [
+  {
+    title: "October 2025 PSU Binaries - In Progress",
+    description: "We are creating the October 2025 PSU binaries for Eclipse Temurin 8u472, 11.0.29 and 17.0.17 and 21.0.9 and 25.0.1",
+    cta: "View Progress by Platform",
+    ctaLink: "https://github.com/adoptium/temurin/issues/100",
+    startDate: "2025-10-21T00:00:00Z", // Release banner 2 week period
+    endDate:   "2025-11-04T23:59:59Z",
+    releaseBanner: true,
+  },
   {
     title: "Case Study: Bloomberg’s shift to Open Source Java",
     description: "Discover how Eclipse Temurin helps power global financial infrastructure.",
@@ -42,9 +52,17 @@ const Banner = () => {
     // Filter banners based on current date and validity
     const filteredBanners = currentBanners
       .filter(banner => ((banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true)));
+    const releaseBanners = currentBanners
+      .filter(banner => ((banner.releaseBanner ? banner.releaseBanner : false) && (banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true)));
 
-    // randomly select one banner if multiple are valid
-    setBanner(filteredBanners.length > 0 ? shuffle(filteredBanners)[0] : null);
+    // Prioritize a Release banner
+    if (releaseBanners.length > 0) {
+      // There is a Release banner within the current date
+      setBanner(releaseBanners[0]);
+    } else {
+      // randomly select one banner if multiple are valid
+      setBanner(filteredBanners.length > 0 ? shuffle(filteredBanners)[0] : null);
+    }
     setIsMounted(true);
   }, []);
 
