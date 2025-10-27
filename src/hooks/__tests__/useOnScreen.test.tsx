@@ -40,6 +40,7 @@ describe("useOnScreen", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     window.IntersectionObserver = vi.fn(function (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       this: any,
       cb: IntersectionObserverCallback
     ) {
@@ -73,6 +74,7 @@ describe("useOnScreen", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     window.IntersectionObserver = vi.fn(function (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       this: any,
       cb: IntersectionObserverCallback
     ) {

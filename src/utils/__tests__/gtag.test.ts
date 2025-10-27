@@ -37,6 +37,7 @@ describe("getAppRoutes", () => {
   });
 
   it("returns correct routes ignoring __tests__ folders", () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mockedFs.readdirSync.mockImplementation((dir: string, opts: any) => {
       if (opts?.withFileTypes) {
         if (dir.endsWith("[locale]")) {
@@ -61,6 +62,7 @@ describe("getBlogRoutes", () => {
   beforeEach(() => {
     vi.clearAllMocks();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mockedFs.readdirSync.mockImplementation((dir: string, opts: any) => {
       if (opts?.withFileTypes) {
         if (
