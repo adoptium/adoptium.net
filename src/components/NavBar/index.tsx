@@ -31,16 +31,7 @@ function classNames(...classes: string[]) {
 }
 
 const navigation: NavItem[] = [
-  {
-    name: "Join Us",
-    children: [
-      { name: "Join Us", href: "/join-us" },
-      { name: "Business Benefits", href: "/business-benefits" },
-      { name: "Our Members", href: "/members" },
-      { name: "Our Sustainers", href: "/sustainers" },
-      { name: "Our Adopters", href: "/adopters" },
-    ],
-  },
+  { name: "Join Us", href: "/join-us" },
   { name: "Latest Releases", href: "/temurin/releases" },
   { name: "Marketplace", href: "/marketplace" },
   {
