@@ -135,16 +135,6 @@
       ],
       "distros": [
         {
-          "name": "Alpine Linux 3.5 or later (Headless)",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "25": { "supported": true, "docker": true }
-          }
-        },
-        {
           "name": "RHEL / UBI 10.x",
           "versions": {
             "8": { "supported": true, "docker": true },
@@ -161,7 +151,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "25": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -222,16 +212,6 @@
         "These builds should work on any distribution with glibc version 2.17 or higher."
       ],
       "distros": [
-        {
-          "name": "Alpine Linux 3.5 or later (Headless)",
-          "versions": {
-            "8": { "supported": false, "docker": false },
-            "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
-            "21": { "supported": true, "docker": true },
-            "25": { "supported": true, "docker": true }
-          }
-        },
         {
           "name": "RHEL / UBI 10.x",
           "versions": {
@@ -503,6 +483,36 @@
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
             "25": { "supported": true, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Alpine Linux (x64)",
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Alpine Linux (ARM 64-bit)",
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
           }
         }
       ]

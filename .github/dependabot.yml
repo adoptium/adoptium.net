@@ -13,6 +13,10 @@ updates:
       mui-dependencies:
         patterns:
           - "@mui/*"
+      vitest:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
       react:
         patterns:
           - "react"
