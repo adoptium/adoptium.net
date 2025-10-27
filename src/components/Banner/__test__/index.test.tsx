@@ -12,7 +12,7 @@ describe("Banner", () => {
 
   it("renders the banner with heading", () => {
     render(<Banner />);
-    expect(screen.getByText(/Dismiss banner/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Dismiss banner/i)).toBeInTheDocument();
   });
 
 });
