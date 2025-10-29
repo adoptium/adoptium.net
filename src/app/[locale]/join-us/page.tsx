@@ -16,7 +16,7 @@ export default function JoinUsPage() {
             <PageHeader
                 title="Join us in ensuring the future of open source Java"
                 subtitle="Join Us"
-                description="Eclipse Adoptium is building the next generation of open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java developers worldwide."
+                description="Eclipse Adoptium is building world-class, open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java users worldwide."
                 className={"max-w-[860px] mx-auto"}
             />
             <WaysToSupport />
