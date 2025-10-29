@@ -12,7 +12,7 @@ const WaysToSupport = () => {
         },
         {
             title: "Become a sustainer",
-            description: "Help ensure Temurin remains a trusted, high-performance runtime for developers everywhere.",
+            description: "Help ensure Temurin remains a trusted, high-performance runtime for users everywhere.",
             button: "Become a sustainer",
             href: "/sustainers",
         },
