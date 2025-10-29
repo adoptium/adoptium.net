@@ -18,7 +18,7 @@ const WaysToSupport = () => {
         },
         {
             title: "Become a member",
-            description: "Membership connects you with industry leaders and the vibrant Adoptium ecosystem, shaping the future of Java. Take an active role in driving innovation, gaining access to strategic and technical resources, and raising your organisation’s visibility.",
+            description: "Membership connects you with industry leaders and the vibrant Adoptium ecosystem, shaping the future of our projects. Take an active role in driving innovation, gaining access to strategic and technical resources, and raising your organisation’s visibility.",
             button: "Become a member",
             href: "/members",
         },
