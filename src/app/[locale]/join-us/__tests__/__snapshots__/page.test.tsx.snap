@@ -65,7 +65,7 @@ exports[`Support Us page > renders correctly 1`] = `
           <div
             class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
           >
-            Join us in shaping the future of open source Java
+            Join us in ensuring the future of open source Java
           </div>
         </div>
         <div
