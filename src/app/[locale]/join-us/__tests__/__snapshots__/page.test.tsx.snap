@@ -85,7 +85,7 @@ exports[`Support Us page > renders correctly 1`] = `
       <h2
         class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
-        Power the evolution of open Java runtimes
+        Power the evolution of our open Java runtimes
       </h2>
       <p
         class="text-grey mt-6 font-normal text-base"
