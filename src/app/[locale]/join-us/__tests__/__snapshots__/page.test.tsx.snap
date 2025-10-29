@@ -71,7 +71,7 @@ exports[`Support Us page > renders correctly 1`] = `
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] max-w-[860px] mx-auto"
         >
-          Eclipse Adoptium is building the next generation of open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java developers worldwide.
+          Eclipse Adoptium is building world-class, open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java users worldwide.
         </div>
       </div>
     </div>
