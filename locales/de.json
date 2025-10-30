@@ -89,7 +89,7 @@
     "loading": "Lädt..."
   },
   "WaysToSupport": {
-    "title": "Unterstützungsmöglichkeiten",
+    "title": "Treibe die Weiterentwicklung unserer offenen Java-Laufzeitumgebungen voran.",
     "description": "Wenn Sie Eclipse-Technologien schätzen, ziehen Sie bitte in Betracht, Sponsor über die Eclipse Foundation zu werden. Beiträge von Nutzern wie Ihnen helfen dabei, die Arbeit der Adoptium Working Group zu finanzieren. Alle Gelder, die der Eclipse Foundation gespendet werden, unterstützen die Eclipse-Community über die Adoptium Working Group.",
     "contribute": {
       "how-to-contribute": "So können Sie beitragen",

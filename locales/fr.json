@@ -89,7 +89,7 @@
     "loading": "Chargement..."
   },
   "WaysToSupport": {
-    "title": "Comment nous soutenir",
+    "title": "Accélérez l'évolution de nos environnements d'exécution Java ouverts",
     "description": "Si vous appréciez les technologies Eclipse, envisagez de devenir sponsor via la Fondation Eclipse. Les contributions d'utilisateurs comme vous aident à financer les opérations du groupe de travail Adoptium. Tous les fonds versés à la Fondation Eclipse serviront à soutenir la communauté Eclipse via le groupe de travail Adoptium.",
     "contribute": {
       "how-to-contribute": "Comment contribuer",
