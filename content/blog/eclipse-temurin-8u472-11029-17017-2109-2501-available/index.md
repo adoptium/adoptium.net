@@ -34,3 +34,8 @@ The Microsoft VS2022 toolchain used for the Windows builds of jdk17, jdk21 and j
 ### UBI container images for JDK25 are UBI10 only, which removes x86-64-v2 support
 
 JDK25 UBI container images are exclusively published with UBI10 and not UBI9. This will impact anyone who is running on an x86-64-v2 system which is [no longer supported by UBI10/RHEL10/CentOS Stream 10](https://access.redhat.com/solutions/7066628). JDK21 and earlier versions will continue to be published with UBI9 images for the foreseeable future.
+
+### Windows aarch64 unavailable for JDK25
+
+Temurin jdk-25.0.1 for the Windows on Aarch64 platform is currently unavailable. A small number of test failures indicated that there is need to investigate and correct before release. We hope that these issues will be rectified upstream and a release completed in a future cycle.
+
