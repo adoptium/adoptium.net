@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.14.1",
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@headlessui/react": "^2.2.9",
-    "@mui/material": "^7.3.4",
+    "@mui/material": "^7.3.5",
     "@mui/x-data-grid": "^8.16.0",
     "@next/third-parties": "16.0.1",
     "axios": "^1.13.1",
