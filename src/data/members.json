@@ -156,5 +156,11 @@
     "logo": "sustainers/rise.svg",
     "url": "https://riseproject.dev",
     "tier": "infra"
+  },
+  {
+    "name": "Cloudflare",
+    "logo": "sustainers/cloudflare.png",
+    "url": "https://www.cloudflare.com",
+    "tier": "infra"
   }
 ]
