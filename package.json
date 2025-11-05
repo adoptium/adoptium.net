@@ -70,7 +70,7 @@
     "@types/react-world-flags": "^1.6.0",
     "@types/rss": "^0.0.32",
     "@vitejs/plugin-react": "^5.1.0",
-    "@vitest/coverage-v8": "^4.0.6",
+    "@vitest/coverage-v8": "^4.0.7",
     "axios-mock-adapter": "^2.1.0",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.1",
