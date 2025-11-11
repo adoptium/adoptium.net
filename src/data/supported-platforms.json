@@ -452,7 +452,7 @@
     {
       "category": "Linux (riscv64)",
       "footnotes": [
-        "These builds should work on any distribution with glibc version 2.31 or higher."
+        "These builds should work on any distribution with glibc version 2.27 or higher."
       ],
       "distros": [
         {
@@ -460,7 +460,7 @@
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
             "25": { "supported": true, "docker": true }
           }
@@ -470,7 +470,7 @@
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
             "25": { "supported": true, "docker": false }
           }
@@ -480,7 +480,7 @@
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
             "25": { "supported": true, "docker": false }
           }
