@@ -635,7 +635,7 @@
     {
       "category": "AIX (PowerPC 64-bit)",
       "footnotes": [
-        "Versions 22 and above require the OpenXL17 runtime to be available. LTS versions 11 through 21 requires the XLC16 runtime and jdk8u requires the XLC13 runtime."
+        "Temurin versions 22 and above require the OpenXL17 runtime to be available. LTS versions 11 through 21 requires the XLC16 runtime and jdk8u requires the XLC13 runtime."
       ],
       "distros": [
         {
