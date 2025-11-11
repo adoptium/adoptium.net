@@ -635,7 +635,7 @@
     {
       "category": "AIX (PowerPC 64-bit)",
       "footnotes": [
-        "AIX 7.1 is no longer supported. AIX 7.2 or later is required."
+        "Versions 22 and above require the OpenXL17 runtime to be available. LTS versions 11 through 21 requires the XLC16 runtime and jdk8u requires the XLC13 runtime."
       ],
       "distros": [
         {
@@ -645,7 +645,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "25": { "supported": false, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
