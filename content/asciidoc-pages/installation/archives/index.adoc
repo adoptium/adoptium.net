@@ -113,10 +113,8 @@ available with the compiler or standalone, for
 link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[XLC 13.1]
 for JDK8, and
 link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[XLC 16.1]
-for JDK11, 17 and 21, and 
+for JDK11, 17 and 21, and
 link:https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.2?topic=reference-open-xl-cc-runtime-environment-filesets[OpenXL 17] (which also requires AIX 7.2 TL5 SP3 or later).
-
-. 
 . Make sure you have downloaded the latest link:/download[AIX binary]
 to a directory that will not move or be deleted, and use Terminal to cd
 into it.
