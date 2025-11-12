@@ -38,3 +38,7 @@ JDK25 UBI container images are exclusively published with UBI10 and not UBI9. Th
 ### Windows aarch64 unavailable for JDK25
 
 Temurin jdk-25.0.1 for the Windows on Aarch64 platform is currently unavailable. A small number of test failures indicated that there is need to investigate and correct before release. We hope that these issues will be rectified upstream and a release completed in a future cycle.
+
+### Windows x32 unavailable for JDK17
+
+Temurin jdk-17.0.17 for the Windows on x32 platform will be unavailable due to a blocking test issue.
