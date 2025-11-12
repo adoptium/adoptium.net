@@ -74,7 +74,7 @@
     "axios-mock-adapter": "^2.1.0",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.1",
-    "jsdom": "^27.1.0",
+    "jsdom": "^27.2.0",
     "jsdom-testing-mocks": "^1.16.0",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
