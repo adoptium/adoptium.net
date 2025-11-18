@@ -65,7 +65,7 @@ exports[`Support Us page > renders correctly 1`] = `
           <div
             class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
           >
-            Join us in ensuring the future of open source Java
+            Join us in securing the future of your critical technologies
           </div>
         </div>
         <div
@@ -85,7 +85,7 @@ exports[`Support Us page > renders correctly 1`] = `
       <h2
         class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
       >
-        Power the evolution of our open Java runtimes
+        Ways to support us
       </h2>
       <p
         class="text-grey mt-6 font-normal text-base"

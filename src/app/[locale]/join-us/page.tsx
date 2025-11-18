@@ -14,7 +14,7 @@ export default function JoinUsPage() {
     return (
         <div>
             <PageHeader
-                title="Join us in ensuring the future of open source Java"
+                title="Join us in securing the future of your critical technologies"
                 subtitle="Join Us"
                 description="Eclipse Adoptium is building world-class, open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java users worldwide."
                 className={"max-w-[860px] mx-auto"}

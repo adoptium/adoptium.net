@@ -27,7 +27,7 @@ const WaysToSupport = () => {
         <section className="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-8">
             <CommonHeading
                 className="text-center"
-                title={"Power the evolution of our open Java runtimes"}
+                title={"Ways to support us"}
                 description={
                     "Your involvement keeps Eclipse Temurin enterprise-ready, secure, and accessible for all. Whether through contributions, sponsorship, or membership, together we can drive the evolution of Adoptium and strengthen the Java ecosystem for years to come."
                 }
