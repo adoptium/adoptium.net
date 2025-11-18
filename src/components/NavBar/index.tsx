@@ -18,6 +18,7 @@ import { BsXLg, BsList } from "react-icons/bs"
 import IconSocial from "@/components/IconSocial"
 import LanguageSelector from "@/components/LanguageSelector"
 import Announcements from "@/components/Announcements"
+import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 interface NavItem {
   name: string
@@ -149,6 +150,8 @@ function calculateActivePaths(currentPath: string): Set<string> {
 }
 
 const NavBar = ({ locale }: { locale: string }) => {
+
+  const [openedMenu, setOpenedMenu] = useState(undefined as undefined | string)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [showAnnouncement, setShowAnnouncement] = useState(false)
@@ -224,7 +227,10 @@ const NavBar = ({ locale }: { locale: string }) => {
                     className="relative inline-block text-left"
                   >
                     <div>
-                      <MenuButton className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50">
+                      <MenuButton 
+                        className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                        onClick={() => setOpenedMenu(openedMenu === item.name ? undefined : item.name)}
+                      >
                         {item.name}
                         <FaChevronDown
                           className="-mr-1 mt-1"
@@ -240,24 +246,28 @@ const NavBar = ({ locale }: { locale: string }) => {
                       leave="transition ease-in duration-75"
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
+                      show={openedMenu === item.name}
                     >
                       <MenuItems
                         className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black/5 focus:outline-hidden"
                         style={{ minWidth: "max-content" }}
                       >
-                        <div className="py-6 px-4">
-                          {item.children.map(child => (
-                            <MenuItem key={`mobile-${child.name}`} as="div">
-                              {() => (
-                                <MobileLink
-                                  href={child.href}
-                                  name={child.name}
-                                  activePaths={activePaths}
-                                />
-                              )}
-                            </MenuItem>
-                          ))}
-                        </div>
+                        <ClickAwayListener onClickAway={() => setOpenedMenu(undefined)}>
+                          <div className="py-6 px-4">
+                            {item.children.map(child => (
+                              <MenuItem key={`mobile-${child.name}`} as="div">
+                                {() => (
+                                  <MobileLink
+                                    href={child.href}
+                                    name={child.name}
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                )}
+                              </MenuItem>
+                            ))}
+                          </div>
+                        </ClickAwayListener>
                       </MenuItems>
                     </Transition>
                   </Menu>

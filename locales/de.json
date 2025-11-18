@@ -4,7 +4,9 @@
     "download-temurin-for": "Temurin {defaultVersion} für {userOSName} {arch} herunterladen",
     "download-temurin-short": "Temurin {defaultVersion} herunterladen",
     "other-downloads": "Andere Downloads",
-    "download-temurin-button": "Temurin® herunterladen"
+    "download-temurin-button": "Temurin® herunterladen",
+    "sustainer-cta-description": "Millionen vertrauen auf Eclipse Temurin. Ihre Unterstützung hält es am Laufen",
+    "sustainer-cta-button": "In Eclipse Temurin reinvestieren"
   },
   "NotFoundPage": {
     "title": "Entschuldigung, wir konnten diese Seite nicht finden",
@@ -194,6 +196,7 @@
       "number-of-builds": "Anzahl der Builds",
       "builds-prior-to": "Builds vor",
       "platform": "Plattform",
+      "architecture": "Architektur",
       "type": "Typ",
       "build-tag": "Build/Tag",
       "date": "Datum",
@@ -217,5 +220,10 @@
     "selectVersion": "Temurin-Version auswählen",
     "selectVersionDescription": "Wählen Sie eine Temurin-Version aus, um die neuesten Versionshinweise anzuzeigen:",
     "viewReleaseNotes": "Versionshinweise anzeigen →"
+  },
+  "Sitemap": {
+    "title": "Sitemap",
+    "subtitle": "Adoptium navigieren",
+    "description": "Vollständiger Überblick über alle Seiten, Dokumentation und Ressourcen auf der Adoptium-Website. Finden Sie schnell und einfach, was Sie suchen."
   }
 }

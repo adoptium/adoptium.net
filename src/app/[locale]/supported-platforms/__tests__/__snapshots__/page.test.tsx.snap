@@ -200,7 +200,7 @@ exports[`Supported Platforms page > renders correctly 1`] = `
           class="text-lg font-semibold text-white/90 text-center"
         >
           JDK 
-          24
+          25
         </div>
       </div>
       <div
@@ -525,6 +525,80 @@ exports[`Supported Platforms page > renders correctly 1`] = `
               class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
             >
               Linux (riscv64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Alpine Linux (x64)
+            </h3>
+            <div
+              class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"
+            >
+              <svg
+                aria-hidden="true"
+                class="text-white/70 transition-all duration-300 md:w-5 md:h-5 rotate-0"
+                fill="currentColor"
+                height="18"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0"
+          />
+        </div>
+        <div
+          class="group"
+        >
+          <button
+            class="w-full flex items-center justify-between p-4 md:p-6 lg:p-8 bg-gradient-to-r from-transparent to-transparent hover:from-white/5 hover:to-transparent transition-all duration-300 focus:outline-none focus:from-white/10 focus:to-white/5 min-h-[60px] md:min-h-auto"
+          >
+            <h3
+              class="text-lg md:text-xl lg:text-2xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300 text-left"
+            >
+              Alpine Linux (ARM 64-bit)
             </h3>
             <div
               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 flex-shrink-0"

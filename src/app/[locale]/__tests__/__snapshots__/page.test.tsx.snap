@@ -240,8 +240,61 @@ exports[`Index page > renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="w-full h-[1px] my-8 lg:my-16 bg-[#3E3355]"
-  />
+    class="relative w-full"
+  >
+    <div
+      class="w-full h-[1px] my-32 lg:my-16 bg-[#3E3355]"
+    />
+    <div
+      class="absolute w-full top-[-72px]"
+    >
+      <div
+        class="relative border border-[#3E3355] md:rounded-lg container mx-auto px-4 bg-purple"
+      >
+        <div
+          class="from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg"
+        >
+          <div
+            class="container mx-auto px-4"
+          >
+            <div
+              class="flex flex-col md:flex-row justify-between items-center relative"
+            >
+              <div
+                class="flex items-center gap-4 mb-3 md:mb-0 pr-8"
+              >
+                <div>
+                  <h2
+                    class="text-[16px] md:text-2xl font-extrabold text-white leading-tight"
+                  >
+                    <span
+                      class="text-primary"
+                    >
+                      Become a sustainer!
+                    </span>
+                  </h2>
+                  <p
+                    class="text-[14px] text-gray-200 mt-1 max-w-2xl"
+                  >
+                    Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.
+                     
+                    <a
+                      class="text-primary"
+                      href="/sustainers/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Learn more!
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div
     class="bg-purple py-16"
   >
@@ -1202,6 +1255,7 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="absolute inset-0 bg-repeat"
+        style="background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");"
       />
     </div>
     <div
@@ -1471,7 +1525,7 @@ exports[`Index page > renders correctly 1`] = `
       </div>
       <div
         class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-        style="width: 305px;"
+        style="height: fit-content; width: 305px;"
       >
         <div
           class="_animatedPlaceholder_283780"
@@ -1585,6 +1639,7 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
+        style="height: fit-content;"
       >
         <div
           class="_animatedPlaceholder_283780"

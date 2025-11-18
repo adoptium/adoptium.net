@@ -131,6 +131,10 @@ const footerData: FooterData[] = [
         url: "https://marketplace.eclipse.org/",
       },
       {
+        text: { key: "footer.sitemap", defaultText: "Sitemap" },
+        url: "/sitemap",
+      },
+      {
         text: { key: "footer.swag.store", defaultText: "Swag Store" },
         url: "https://eclipse-foundation.store/collections/eclipse-adoptium",
         disclaimerMessage: {

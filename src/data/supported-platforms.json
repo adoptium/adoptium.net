@@ -10,7 +10,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -20,7 +20,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -30,7 +30,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -40,7 +40,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -50,7 +50,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -65,7 +65,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -75,7 +75,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -85,7 +85,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -103,7 +103,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -113,7 +113,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -123,7 +123,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -135,13 +135,13 @@
       ],
       "distros": [
         {
-          "name": "Alpine Linux 3.5 or later (Headless)",
+          "name": "RHEL / UBI 10.x",
           "versions": {
             "8": { "supported": true, "docker": true },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -151,7 +151,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -161,7 +161,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -171,7 +171,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -181,7 +181,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -191,7 +191,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -201,17 +201,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -223,13 +213,13 @@
       ],
       "distros": [
         {
-          "name": "Alpine Linux 3.5 or later (Headless)",
+          "name": "RHEL / UBI 10.x",
           "versions": {
-            "8": { "supported": false, "docker": false },
-            "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -239,7 +229,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -249,7 +239,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -259,7 +249,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -269,7 +259,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -279,17 +269,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -307,7 +287,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -317,17 +297,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -339,13 +309,23 @@
       ],
       "distros": [
         {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        },
+        {
           "name": "RHEL / UBI 9.x",
           "versions": {
             "8": { "supported": true, "docker": true },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -355,7 +335,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -365,7 +345,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -375,7 +355,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -385,17 +365,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": true, "docker": true },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -408,13 +378,23 @@
       ],
       "distros": [
         {
+          "name": "RHEL / UBI 10.x",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        },
+        {
           "name": "RHEL / UBI 9.x",
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -424,7 +404,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -434,7 +414,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -444,17 +424,17 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
           "name": "Ubuntu 24.04",
           "versions": {
-            "8": { "supported": true, "docker": true },
+            "8": { "supported": false, "docker": false },
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -464,17 +444,7 @@
             "11": { "supported": true, "docker": true },
             "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
-          }
-        },
-        {
-          "name": "Ubuntu 20.04",
-          "versions": {
-            "8": { "supported": false, "docker": false },
-            "11": { "supported": true, "docker": true },
-            "17": { "supported": true, "docker": true },
-            "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -482,7 +452,7 @@
     {
       "category": "Linux (riscv64)",
       "footnotes": [
-        "These builds should work on any distribution with glibc version 2.31 or higher."
+        "These builds should work on any distribution with glibc version 2.27 or higher."
       ],
       "distros": [
         {
@@ -490,9 +460,9 @@
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "17": { "supported": true, "docker": true },
             "21": { "supported": true, "docker": true },
-            "24": { "supported": true, "docker": true }
+            "25": { "supported": true, "docker": true }
           }
         },
         {
@@ -500,9 +470,9 @@
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -510,9 +480,39 @@
           "versions": {
             "8": { "supported": false, "docker": false },
             "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
+            "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Alpine Linux (x64)",
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": true, "docker": true },
+            "11": { "supported": true, "docker": true },
+            "17": { "supported": true, "docker": true },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
+          }
+        }
+      ]
+    },
+    {
+      "category": "Alpine Linux (ARM 64-bit)",
+      "distros": [
+        {
+          "name": "Alpine Linux 3.5 or later (Headless)",
+          "versions": {
+            "8": { "supported": false, "docker": false },
+            "11": { "supported": false, "docker": false },
+            "17": { "supported": false, "docker": false },
+            "21": { "supported": true, "docker": true },
+            "25": { "supported": true, "docker": true }
           }
         }
       ]
@@ -527,7 +527,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -537,7 +537,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -547,7 +547,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -557,7 +557,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -572,7 +572,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -582,7 +582,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -592,7 +592,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         },
         {
@@ -602,7 +602,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]
@@ -617,7 +617,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         },
         {
@@ -627,7 +627,7 @@
             "11": { "supported": false, "docker": false },
             "17": { "supported": false, "docker": false },
             "21": { "supported": false, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": false, "docker": false }
           }
         }
       ]
@@ -635,7 +635,7 @@
     {
       "category": "AIX (PowerPC 64-bit)",
       "footnotes": [
-        "AIX 7.1 is no longer supported. AIX 7.2 or later is required."
+        "Temurin versions 22 and above require the OpenXL17 runtime to be available. LTS versions 11 through 21 requires the XLC16 runtime and jdk8u requires the XLC13 runtime."
       ],
       "distros": [
         {
@@ -645,7 +645,7 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "24": { "supported": false, "docker": false }
+            "25": { "supported": true, "docker": false }
           }
         }
       ]

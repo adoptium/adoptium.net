@@ -3,117 +3,101 @@
 exports[`Sustainers page > renders correctly 1`] = `
 <div>
   <div
-    class="relative w-full overflow-hidden"
+    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
   >
     <div
-      class="absolute inset-0 z-0"
+      class="w-full relative"
     >
       <div
-        class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#0d0129]/80 via-[#410170]/60 to-[#0d0129]/80"
+        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
       />
       <div
-        class="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-[#ff1464]/10 filter blur-[100px]"
+        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
       />
       <div
-        class="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-[#410170]/20 filter blur-[120px]"
+        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
       />
     </div>
     <div
-      class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="w-full relative"
+        class="self-stretch flex-col justify-center items-center gap-6 flex"
       >
         <div
-          class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-        />
-        <div
-          class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-        />
-        <div
-          class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-        />
-      </div>
-      <div
-        class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-      >
-        <div
-          class="self-stretch flex-col justify-center items-center gap-6 flex"
+          class="self-stretch flex-col justify-center items-center gap-4 flex"
         >
           <div
-            class="self-stretch flex-col justify-center items-center gap-4 flex"
+            class="justify-start items-center gap-3 inline-flex"
           >
-            <div
-              class="justify-start items-center gap-3 inline-flex"
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-              <div
-                class="text-rose-600 text-base font-bold leading-normal"
-              >
-                Become a Corporate Sustainer
-              </div>
-            </div>
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
             <div
-              class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+              class="text-rose-600 text-base font-bold leading-normal"
             >
-              Join us in strengthening the future of Eclipse Temurin
+              Become a Corporate Sustainer
             </div>
           </div>
           <div
-            class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] max-w-[1016px] mx-auto relative z-10"
-          />
+            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          >
+            Join us in strengthening the future of Eclipse Temurin
+          </div>
+        </div>
+        <div
+          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+        />
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6"
+        >
+          <a
+            class="w-full sm:w-auto"
+            href="https://github.com/sponsors/adoptium"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <button
+              class="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Become an individual Sustainer
+            </button>
+          </a>
+          <a
+            class="w-full sm:w-auto"
+            href="/become-a-sustainer"
+          >
+            <button
+              class="w-full px-8 py-4 rounded-full border-2 border-white text-white hover:bg-pink-500 hover:text-white font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Become a corporate Sustainer
+            </button>
+          </a>
         </div>
       </div>
-    </div>
-    <div
-      class="flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[72px] w-full z-10"
-    >
-      <a
-        class="transform transition-transform duration-300 hover:scale-105"
-        href="https://github.com/sponsors/adoptium"
-        target="_blank"
-      >
-        <button
-          class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
-        >
-          Become an Individual Sustainer
-        </button>
-      </a>
-      <a
-        class="transform transition-transform duration-300 hover:scale-105"
-        href="/become-a-sustainer"
-      >
-        <button
-          class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
-        >
-          Become a Corporate Sustainer
-        </button>
-      </a>
     </div>
   </div>
   <div
@@ -260,7 +244,7 @@ exports[`Sustainers page > renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="p-4 border-t border-[#39314a] mt-[60px] pt-[40px] md:pt-[80px] w-full"
+      class="p-4 mt-[60px] w-full"
     >
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
@@ -320,11 +304,11 @@ exports[`Sustainers page > renders correctly 1`] = `
           <div
             class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
-            <p
+            <div
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.
-            </p>
+            </div>
             <span
               class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
             >
@@ -382,11 +366,11 @@ exports[`Sustainers page > renders correctly 1`] = `
           <div
             class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
-            <p
+            <div
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.
-            </p>
+            </div>
             <span
               class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
             >
@@ -444,11 +428,11 @@ exports[`Sustainers page > renders correctly 1`] = `
           <div
             class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
-            <p
+            <div
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures
-            </p>
+            </div>
             <span
               class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
             >
@@ -506,11 +490,11 @@ exports[`Sustainers page > renders correctly 1`] = `
           <div
             class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
-            <p
+            <div
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.
-            </p>
+            </div>
             <span
               class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
             >
@@ -568,11 +552,11 @@ exports[`Sustainers page > renders correctly 1`] = `
           <div
             class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
-            <p
+            <div
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.
-            </p>
+            </div>
             <span
               class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
             >
@@ -630,11 +614,11 @@ exports[`Sustainers page > renders correctly 1`] = `
           <div
             class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
           >
-            <p
+            <div
               class="text-white text-sm px-4 text-center leading-relaxed"
             >
               Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.
-            </p>
+            </div>
             <span
               class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
             >
@@ -643,12 +627,12 @@ exports[`Sustainers page > renders correctly 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
-      >
-        Join the Eclipse Temurin Sustainer Program and play a crucial role in maintaining the vitality and reliability of the world's fastest-growing open source Java SE runtime. Your support accelerates our initiatives, driving greater impact and innovation within the Java ecosystem.
-      </p>
     </div>
+    <p
+      class="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
+    >
+      Join the Eclipse Temurin Sustainer Program and play a crucial role in maintaining the vitality and reliability of the world's fastest-growing open source Java SE runtime. Your support accelerates our initiatives, driving greater impact and innovation within the Java ecosystem.
+    </p>
     <div
       class="bg-[#0d0129] w-full py-[95px] relative overflow-hidden"
     >

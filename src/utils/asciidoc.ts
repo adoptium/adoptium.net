@@ -1,4 +1,3 @@
-import Asciidoctor from "@asciidoctor/core";
 import fs from "fs";
 import path from "path";
 import { decode } from "html-entities";
@@ -21,8 +20,28 @@ interface AsciidoctorAttributes {
   [key: string]: unknown;
 }
 
-// Initialize Asciidoctor processor
-const asciidoctor = Asciidoctor();
+// Determine base URL based on environment
+// can be used in AsciiDoc files as {baseurl}
+// e.g. link:{baseurl}/docs/logo-styleguide/adoptium-logo.zip[here]
+// to avoid hardcoding the full URL in the files
+// and avoid localization issues with relative paths
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://adoptium.net"
+    : "http://localhost:3000";
+
+// Lazy-load Asciidoctor to avoid issues with dynamic requires in Next.js
+let asciidoctorInstance: ReturnType<typeof require> | null = null;
+
+function getAsciidoctor() {
+  if (!asciidoctorInstance) {
+    // Dynamic require to avoid module resolution issues in Next.js
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const Asciidoctor = require("@asciidoctor/core");
+    asciidoctorInstance = Asciidoctor();
+  }
+  return asciidoctorInstance;
+}
 
 /**
  * Custom Asciidoctor include processor that resolves partials
@@ -71,14 +90,12 @@ class CustomIncludeProcessor {
   }
 }
 
-/**
- * Process AsciiDoc content with proper include resolution
- */
 export function processAsciiDoc(
   filePath: string,
   content: string,
   options: Record<string, unknown> = {}
 ) {
+  const asciidoctor = getAsciidoctor();
   const basePath = path.dirname(filePath);
   const registry = asciidoctor.Extensions.create();
 
@@ -117,6 +134,7 @@ export function processAsciiDoc(
       sectanchors: "",
       idprefix: "",
       idseparator: "-",
+      baseurl: baseUrl,
     },
   };
 
@@ -174,6 +192,7 @@ export function extractMetadata(
   authors: string[];
   attributes: Record<string, unknown>;
 } {
+  const asciidoctor = getAsciidoctor();
   const doc = asciidoctor.load(content, { safe: "server" });
 
   // Get the title and ensure it's a string

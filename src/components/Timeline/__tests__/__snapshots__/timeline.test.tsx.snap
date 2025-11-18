@@ -136,7 +136,7 @@ exports[`TimeLine component > should render correctly with events 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        View all
+        View all Eclipse Foundation events
       </a>
       |
       <a
@@ -188,7 +188,7 @@ exports[`TimeLine component > should render correctly with no events 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        View all
+        View all Eclipse Foundation events
       </a>
       |
       <a

@@ -59,42 +59,741 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="text-rose-600 text-base font-bold leading-normal"
             >
-              Our Members
+              Become a Member
             </div>
           </div>
           <div
             class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
           >
-            Who we work with
+            Join the Adoptium Working Group
           </div>
         </div>
         <div
           class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
         >
-          Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
+          Support the future of open, secure, enterprise-ready Java runtimes.
+        </div>
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6"
+        >
+          <a
+            class="w-full sm:w-auto"
+            href="/join"
+          >
+            <button
+              class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Join Us
+            </button>
+          </a>
+          <a
+            class="w-full sm:w-auto"
+            href="#strategic-sec"
+          >
+            <button
+              class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
+            >
+              Our Members
+            </button>
+          </a>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full py-6 md:py-8 px-4"
+    class="p-4 mt-[60px] w-full"
   >
-    <a
-      class="w-full sm:w-auto"
-      href="/join"
+    <h2
+      class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
     >
-      <button
-        class="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+      Why Join Adoptium?
+    </h2>
+    <p
+      class="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
+    >
+      The Adoptium Working Group brings together organizations to shape the future of Java by collaborating on the delivery of high-quality, TCK-certified OpenJDK binaries through Eclipse Temurin. As a member, your organization gains strategic influence, community leadership opportunities, and a voice in driving long-term innovation across the Java ecosystem.
+    </p>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]"
+    >
+      <div
+        class="relative max-w-[382px] w-full"
+        id="card-container-0"
       >
-        Become a Member
-      </button>
-    </a>
-    <button
-      class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
-    >
-      Our Members
-    </button>
+        <input
+          class="peer hidden"
+          id="toggle-0"
+          type="checkbox"
+        />
+        <span
+          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
+        >
+          +
+        </span>
+        <div
+          class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+        >
+          <label
+            for="toggle-0"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
+            >
+              <div
+                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  class="mb-0 w-16 h-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/images/initiatives/lead.svg"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="text-2xl font-medium text-center px-4 text-white"
+              >
+                Lead the Future of Java
+              </h3>
+            </div>
+          </label>
+        </div>
+        <div
+          class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+        >
+          <div
+            class="text-white text-sm px-4 text-center leading-relaxed"
+          >
+            <ul
+              class="list-disc list-inside space-y-2 text-left"
+            >
+              <li>
+                Define the technical vision and shape the roadmap of the most widely adopted OpenJDK builds.
+              </li>
+              <li>
+                Influence strategic decisions on default settings, security responses, and platform configurations.
+              </li>
+              <li>
+                Align project priorities with your own by contributing to test suites, developer engagement, version support, and key metrics.
+              </li>
+            </ul>
+          </div>
+          <span
+            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            _
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative max-w-[382px] w-full"
+        id="card-container-1"
+      >
+        <input
+          class="peer hidden"
+          id="toggle-1"
+          type="checkbox"
+        />
+        <span
+          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
+        >
+          +
+        </span>
+        <div
+          class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+        >
+          <label
+            for="toggle-1"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
+            >
+              <div
+                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  class="mb-0 w-16 h-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/images/initiatives/strengthen.svg"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="text-2xl font-medium text-center px-4 text-white"
+              >
+                Strengthen Your Open Source Strategy
+              </h3>
+            </div>
+          </label>
+        </div>
+        <div
+          class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+        >
+          <div
+            class="text-white text-sm px-4 text-center leading-relaxed"
+          >
+            <ul
+              class="list-disc list-inside space-y-2 text-left"
+            >
+              <li>
+                Join a global, innovative open source ecosystem committed to improving Java for enterprise use.
+              </li>
+              <li>
+                Benefit from stable licensing, predictable development frameworks, and open collaboration.
+              </li>
+              <li>
+                Gain the support of a thriving community to evolve your open source practices.
+              </li>
+            </ul>
+          </div>
+          <span
+            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            _
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative max-w-[382px] w-full"
+        id="card-container-2"
+      >
+        <input
+          class="peer hidden"
+          id="toggle-2"
+          type="checkbox"
+        />
+        <span
+          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
+        >
+          +
+        </span>
+        <div
+          class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+        >
+          <label
+            for="toggle-2"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
+            >
+              <div
+                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  class="mb-0 w-16 h-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/images/initiatives/governance.svg"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="text-2xl font-medium text-center px-4 text-white"
+              >
+                Rely on Open, Vendor-Neutral Governance
+              </h3>
+            </div>
+          </label>
+        </div>
+        <div
+          class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+        >
+          <div
+            class="text-white text-sm px-4 text-center leading-relaxed"
+          >
+            <ul
+              class="list-disc list-inside space-y-2 text-left"
+            >
+              <li>
+                Trust in transparent, community-led governance under the Eclipse Foundation.
+              </li>
+              <li>
+                Ensure long-term stability and vendor neutrality to avoid lock-in and reduce operational risk.
+              </li>
+            </ul>
+          </div>
+          <span
+            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            _
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative max-w-[382px] w-full"
+        id="card-container-3"
+      >
+        <input
+          class="peer hidden"
+          id="toggle-3"
+          type="checkbox"
+        />
+        <span
+          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
+        >
+          +
+        </span>
+        <div
+          class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+        >
+          <label
+            for="toggle-3"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
+            >
+              <div
+                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  class="mb-0 w-16 h-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/images/initiatives/community.svg"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="text-2xl font-medium text-center px-4 text-white"
+              >
+                Join the Leaders Driving Java Forward
+              </h3>
+            </div>
+          </label>
+        </div>
+        <div
+          class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+        >
+          <div
+            class="text-white text-sm px-4 text-center leading-relaxed"
+          >
+            <ul
+              class="list-disc list-inside space-y-2 text-left"
+            >
+              <li>
+                Collaborate with leading Java vendors like Microsoft, Red Hat, IBM, Google, Alibaba, and Rivos.
+              </li>
+              <li>
+                Ensure your enterprise use cases shape the future quality standards of Java.
+              </li>
+              <li>
+                Engage directly with OpenJDK distributors to guide development and distribution.
+              </li>
+            </ul>
+          </div>
+          <span
+            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            _
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative max-w-[382px] w-full"
+        id="card-container-4"
+      >
+        <input
+          class="peer hidden"
+          id="toggle-4"
+          type="checkbox"
+        />
+        <span
+          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
+        >
+          +
+        </span>
+        <div
+          class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+        >
+          <label
+            for="toggle-4"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
+            >
+              <div
+                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  class="mb-0 w-16 h-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/images/initiatives/cut.svg"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="text-2xl font-medium text-center px-4 text-white"
+              >
+                Cut Costs and Share Infrastructure
+              </h3>
+            </div>
+          </label>
+        </div>
+        <div
+          class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+        >
+          <div
+            class="text-white text-sm px-4 text-center leading-relaxed"
+          >
+            <ul
+              class="list-disc list-inside space-y-2 text-left"
+            >
+              <li>
+                Share infrastructure costs and reduce duplication across build, test, and release pipelines.
+              </li>
+              <li>
+                Improve delivery speed and operational efficiency through shared systems and practices.
+              </li>
+            </ul>
+          </div>
+          <span
+            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            _
+          </span>
+        </div>
+      </div>
+      <div
+        class="relative max-w-[382px] w-full"
+        id="card-container-5"
+      >
+        <input
+          class="peer hidden"
+          id="toggle-5"
+          type="checkbox"
+        />
+        <span
+          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
+        >
+          +
+        </span>
+        <div
+          class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
+        >
+          <label
+            for="toggle-5"
+          >
+            <div
+              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
+            >
+              <div
+                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  class="mb-0 w-16 h-16"
+                  data-nimg="1"
+                  decoding="async"
+                  height="64"
+                  loading="lazy"
+                  src="/images/initiatives/narrative.svg"
+                  style="color: transparent;"
+                  width="64"
+                />
+              </div>
+              <h3
+                class="text-2xl font-medium text-center px-4 text-white"
+              >
+                Define the Narrative for Open Java
+              </h3>
+            </div>
+          </label>
+        </div>
+        <div
+          class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
+        >
+          <div
+            class="text-white text-sm px-4 text-center leading-relaxed"
+          >
+            <ul
+              class="list-disc list-inside space-y-2 text-left"
+            >
+              <li>
+                Shape the messaging, content, and marketing of Adoptium projects.
+              </li>
+              <li>
+                Contribute to how Java is positioned for global enterprises and developer communities.
+              </li>
+            </ul>
+          </div>
+          <span
+            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
+          >
+            _
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
+  <div
+    class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4"
+  >
+    <div
+      class="flex flex-col sm:flex-row gap-4"
+    >
+      <a
+        href="/join"
+      >
+        <button
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
+        >
+          Contact Us
+        </button>
+      </a>
+    </div>
+  </div>
+  <section
+    class="py-16 px-4"
+  >
+    <div
+      class="max-w-7xl mx-auto"
+    >
+      <div
+        class="text-center mb-12"
+      >
+        <h2
+          class="text-4xl md:text-5xl font-bold text-white mb-4"
+        >
+          Membership Levels
+        </h2>
+        <p
+          class="text-lg text-grey max-w-3xl mx-auto leading-relaxed"
+        >
+          Choose the membership level that best fits your organization's needs and engagement with the Adoptium community.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      >
+        <div
+          class="relative bg-gradient-to-b from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl border-rose-600 shadow-lg shadow-rose-600/20"
+        >
+          <div
+            class="text-center mb-6"
+          >
+            <h3
+              class="text-2xl font-bold text-white mb-1"
+            >
+              Strategic
+            </h3>
+            <p
+              class="text-lg text-rose-600 font-medium"
+            >
+              Member
+            </p>
+          </div>
+          <div
+            class="text-center mb-8"
+          >
+            <div
+              class="text-3xl font-bold text-white mb-2"
+            >
+              $10,000 - $50,000
+            </div>
+            <p
+              class="text-sm text-grey"
+            >
+              (Based on corporate revenue)
+            </p>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <div
+              class="flex items-start gap-3"
+            >
+              <div
+                class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full flex items-center justify-center mt-0.5"
+              >
+                <svg
+                  class="w-3 h-3 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <p
+                class="text-white text-sm leading-relaxed"
+              >
+                For organisations that view Adoptium as critical to their future and are looking to play a leading role in shaping its direction.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative bg-gradient-to-b from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl border-purple-600/30 hover:border-rose-600/50"
+        >
+          <div
+            class="text-center mb-6"
+          >
+            <h3
+              class="text-2xl font-bold text-white mb-1"
+            >
+              Enterprise
+            </h3>
+            <p
+              class="text-lg text-rose-600 font-medium"
+            >
+              Member
+            </p>
+          </div>
+          <div
+            class="text-center mb-8"
+          >
+            <div
+              class="text-3xl font-bold text-white mb-2"
+            >
+              $12,000 - $32,000
+            </div>
+            <p
+              class="text-sm text-grey"
+            >
+              (Based on corporate revenue)
+            </p>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <div
+              class="flex items-start gap-3"
+            >
+              <div
+                class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full flex items-center justify-center mt-0.5"
+              >
+                <svg
+                  class="w-3 h-3 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <p
+                class="text-white text-sm leading-relaxed"
+              >
+                For organisations that rely on Adoptium in their business operations and are seeking to influence the ecosystem's direction.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative bg-gradient-to-b from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl border-purple-600/30 hover:border-rose-600/50"
+        >
+          <div
+            class="text-center mb-6"
+          >
+            <h3
+              class="text-2xl font-bold text-white mb-1"
+            >
+              Participant
+            </h3>
+            <p
+              class="text-lg text-rose-600 font-medium"
+            >
+              Member
+            </p>
+          </div>
+          <div
+            class="text-center mb-8"
+          >
+            <div
+              class="text-3xl font-bold text-white mb-2"
+            >
+              $0 - $15,000
+            </div>
+            <p
+              class="text-sm text-grey"
+            >
+              (Based on corporate revenue)
+            </p>
+          </div>
+          <div
+            class="space-y-4"
+          >
+            <div
+              class="flex items-start gap-3"
+            >
+              <div
+                class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full flex items-center justify-center mt-0.5"
+              >
+                <svg
+                  class="w-3 h-3 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <p
+                class="text-white text-sm leading-relaxed"
+              >
+                For organisations that use or build on Adoptium technology and are looking to stay engaged as it evolves.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-center mt-12"
+      >
+        <p
+          class="text-grey mb-6"
+        >
+          Questions about membership levels? We're here to help you choose the right tier.
+        </p>
+        <a
+          href="https://www.eclipse.org/org/workinggroups/adoptium-charter.php"
+        >
+          <button
+            class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
+          >
+            Learn More
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
   <div
     class="w-full px-3 pt-2 pb-4 mb-4"
   >
