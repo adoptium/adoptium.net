@@ -54,17 +54,17 @@ const DownloadCounter = ({ total }: DownloadCounterProps) => {
   }, [animate, endValue, startValue, duration])
 
   return (
-    <div className="bg-purple py-8 lg:py-16" ref={counterRef}>
+    <div className="bg-purple py-8 lg:py-6" ref={counterRef}>
       <div className="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
-        <h2 className="text-center text-[36px] sm:text-5xl font-semibold leading-[44px] sm:leading-[56px] text-white">
+        <h2 className="text-center text-[24px] sm:text-3xl font-semibold leading-[32px] sm:leading-[40px] text-white">
           {t('title')}
         </h2>
-        <h3 className="text-center text-[64px] lg:text-[104px] leading-[72px] lg:leading-[120px] font-semibold my-8" style={{ color: '#FF1365' }}>
+        <h3 className="text-center text-[40px] lg:text-[64px] leading-[48px] lg:leading-[72px] font-semibold my-4" style={{ color: '#FF1365' }}>
           {count.toLocaleString()}
         </h3>
         <div className="flex items-center gap-4 flex-wrap sm:gap-6 justify-center">
           <span>
-            <DiGithubFull size={70} />
+            <DiGithubFull size={50} />
           </span>
           <p className="text-[16px] font-normal leading-6 text-white mb-0">
             {t('total-download-docker-pulls-ever')}
