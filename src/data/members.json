@@ -156,5 +156,11 @@
     "logo": "sustainers/rise.svg",
     "url": "https://riseproject.dev",
     "tier": "infra"
+  },
+  {
+    "name": "Heroku",
+    "logo": "sustainers/heroku.svg",
+    "url": "https://heroku.com",
+    "tier": "infra"
   }
 ]

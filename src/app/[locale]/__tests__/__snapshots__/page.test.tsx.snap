@@ -270,21 +270,21 @@ exports[`Index page > renders correctly 1`] = `
                     <span
                       class="text-primary"
                     >
-                      Become a sustainer!
+                      Case Study: Bloomberg’s shift to Open Source Java
                     </span>
                   </h2>
                   <p
                     class="text-[14px] text-gray-200 mt-1 max-w-2xl"
                   >
-                    Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.
+                    Discover how Eclipse Temurin helps power global financial infrastructure.
                      
                     <a
                       class="text-primary"
-                      href="/sustainers/"
+                      href="https://outreach.eclipse.foundation/bloomberg-temurin-case-study?utm_campaign=22235449-Bloomberg%20Adoptium%20Case%20Study&utm_source=banner&utm_medium=adoptium%20website"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Learn more!
+                      Read the Case Study
                     </a>
                   </p>
                 </div>
