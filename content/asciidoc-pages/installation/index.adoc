@@ -24,3 +24,17 @@ packages. Installation steps are covered in the following sections:
 * link:/installation/windows[Windows MSI installers packages]
 * link:/installation/macOS[macOS PKG installer packages]
 * link:/installation/linux[Linux (RPM/DEB/APK) installer packages]
+
+__________________________________________________________________________________________________________________________
+
+# The commit needs to come from the adoptium team, as I'm not a coder, but I figured some installation instructions out...
+# For Ubuntu/Linux Mint, Ubuntu 24.04 LTS "Noble"
+
+apt install -y wget apt-transport-https gpg
+wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
+echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
+sudo apt-get update
+sudo apt-get install temurin-21-jdk
+
+# In line 33, sudo had to be in front of the tee command
+# In line 34, sudo had to be in front of the tee command
