@@ -80,12 +80,6 @@
     "tier": "sponsor"
   },
   {
-    "name": "Delphix",
-    "logo": "sustainers/delphix.svg",
-    "url": "https://www.delphix.com",
-    "tier": "sponsor"
-  },
-  {
     "name": "Bedag",
     "logo": "sustainers/bedag.png",
     "url": "https://bedag.ch",
@@ -161,6 +155,12 @@
     "name": "Cloudflare",
     "logo": "sustainers/cloudflare.png",
     "url": "https://www.cloudflare.com",
+    "tier": "infra"
+  },
+  {
+    "name": "Heroku",
+    "logo": "sustainers/heroku.svg",
+    "url": "https://heroku.com",
     "tier": "infra"
   }
 ]

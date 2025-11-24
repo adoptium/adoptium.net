@@ -20,11 +20,20 @@ type BannerProps = {
 // -------------------------------------------------------
 const currentBanners: BannerProps[] = [
   {
+    title: "Help sustain Adoptium this Giving Tuesday",
+    description: "Your support helps us maintain the open infrastructure that powers reliable release cycles and secure builds across the Adoptium ecosystem — including Eclipse Temurin.",
+    cta: "Become a sponsor today",
+    ctaLink: "https://www.eclipse.org/sponsor/adoptium/?scope=banner-1&campaign=giving-tuesday",
+    startDate: "2025-11-13T00:00:00Z",
+    endDate:   "2025-12-03T23:59:59Z",
+    releaseBanner: true,
+  },
+  {
     title: "October 2025 PSU Binaries - In Progress",
     description: "We are creating the October 2025 PSU binaries for Eclipse Temurin 8u472, 11.0.29 and 17.0.17 and 21.0.9 and 25.0.1",
     cta: "View Progress by Platform",
     ctaLink: "https://github.com/adoptium/temurin/issues/100",
-    startDate: "2025-10-21T00:00:00Z", // Release banner 2 week period
+    startDate: "2025-10-21T00:00:00Z",
     endDate:   "2025-11-04T23:59:59Z",
     releaseBanner: true,
   },
@@ -38,6 +47,14 @@ const currentBanners: BannerProps[] = [
     startDate: "2025-09-30T23:59:59Z",
     endDate: "2025-11-15T23:59:59Z",
   },
+  {
+    title: "Fake Banner for Testing",
+    description: "This is a fake banner used for testing purposes only.",
+    cta: "Read the Case Study",
+    ctaLink: "https://example.com",
+    startDate: "2012-12-21T00:00:00Z",
+    endDate: "2012-12-21T23:59:59Z",
+  }
 ];
 
 const Banner = () => {

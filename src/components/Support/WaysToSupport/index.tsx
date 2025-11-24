@@ -4,23 +4,23 @@ import CommonCard from "@/components/Common/CommonCard"
 const WaysToSupport = () => {
     const data = [
         {
-            title: "How to contribute",
+            title: "Contribute to Adoptium Projects",
             description:
-                "Contribute to our projects with technical and non-technical development",
+                "Contribute to our projects with technical and non-technical development.",
             button: "How to contribute",
             href: "/contributing/",
         },
         {
             title: "Become a sustainer",
-            description: "Join us in strengthening the future of Eclipse Temurin",
+            description: "Help ensure Temurin remains a trusted, high-performance runtime for users everywhere.",
             button: "Become a sustainer",
             href: "/sustainers",
         },
         {
             title: "Become a member",
-            description: "Join us shaping the future of Eclipse Adoptium",
+            description: "Membership connects you with industry leaders and the vibrant Adoptium ecosystem, shaping the future of our projects. Take an active role in driving innovation, gaining access to strategic and technical resources, and raising your organisation’s visibility.",
             button: "Become a member",
-            href: "/join",
+            href: "/members",
         },
     ]
     return (
@@ -29,7 +29,7 @@ const WaysToSupport = () => {
                 className="text-center"
                 title={"Ways to support us"}
                 description={
-                    "If you value Eclipse technologies, please consider becoming a sponsor through the Eclipse Foundation. Contributions from users like you help fund the operations of the Adoptium working group. All money contributed to the Eclipse Foundation will be used to support the Eclipse community through the Adoptium working group"
+                    "Your involvement keeps Eclipse Temurin enterprise-ready, secure, and accessible for all. Whether through contributions, sponsorship, or membership, together we can drive the evolution of Adoptium and strengthen the Java ecosystem for years to come."
                 }
             />
 
