@@ -152,6 +152,12 @@
     "tier": "infra"
   },
   {
+    "name": "Cloudflare",
+    "logo": "sustainers/cloudflare.png",
+    "url": "https://www.cloudflare.com",
+    "tier": "infra"
+  },
+  {
     "name": "Heroku",
     "logo": "sustainers/heroku.svg",
     "url": "https://heroku.com",
