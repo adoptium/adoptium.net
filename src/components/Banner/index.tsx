@@ -47,6 +47,14 @@ const currentBanners: BannerProps[] = [
     startDate: "2025-09-30T23:59:59Z",
     endDate: "2025-11-15T23:59:59Z",
   },
+  {
+    title: "Fake Banner for Testing",
+    description: "This is a fake banner used for testing purposes only.",
+    cta: "Read the Case Study",
+    ctaLink: "https://example.com",
+    startDate: "2012-12-21T00:00:00Z",
+    endDate: "2012-12-21T23:59:59Z",
+  }
 ];
 
 const Banner = () => {
