@@ -141,14 +141,6 @@ const currentBanners: BannerProps[] = [
     releaseBanner: true,
   },
   {
-    title: "Case Study: Bloomberg’s shift to Open Source Java",
-    description: "Discover how Eclipse Temurin helps power global financial infrastructure.",
-    cta: "Read the Case Study",
-    ctaLink: "https://outreach.eclipse.foundation/bloomberg-temurin-case-study?utm_campaign=22235449-Bloomberg%20Adoptium%20Case%20Study&utm_source=banner&utm_medium=adoptium%20website",
-    startDate: "2025-09-30T23:59:59Z",
-    endDate: "2025-11-15T23:59:59Z",
-  },
-  {
     title: "DO NOT REMOVE - Fake Banner for Testing",
     description: "This is a fake banner used for testing purposes only.",
     cta: "Read the Case Study",
