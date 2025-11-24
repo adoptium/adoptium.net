@@ -12,11 +12,16 @@ type BannerProps = {
   ctaLink: string;
   startDate?: string;
   endDate?: string;
-  releaseBanner?: boolean;
+  releaseBanner?: boolean;  // Indicates if this is a Release banner (priority banner)
 };
 
 // -------------------------------------------------------
 // NOTE: Add your list of current banners here
+// - Each banner can have optional startDate and endDate in ISO format
+// - Banners with dates are only valid within that range
+// - Banners are always displayed randomly
+// - Banners marked as releaseBanner will be prioritized if within date range
+// - Do not set releaseBanner to true for non-release banners
 // -------------------------------------------------------
 const currentBanners: BannerProps[] = [
   {
@@ -25,8 +30,7 @@ const currentBanners: BannerProps[] = [
     cta: "Become a sponsor today",
     ctaLink: "https://www.eclipse.org/sponsor/adoptium/?scope=banner-1&campaign=giving-tuesday",
     startDate: "2025-11-13T00:00:00Z",
-    endDate:   "2025-12-03T23:59:59Z",
-    releaseBanner: true,
+    endDate: "2025-12-03T23:59:59Z",
   },
   {
     title: "October 2025 PSU Binaries - In Progress",
@@ -34,21 +38,19 @@ const currentBanners: BannerProps[] = [
     cta: "View Progress by Platform",
     ctaLink: "https://github.com/adoptium/temurin/issues/100",
     startDate: "2025-10-21T00:00:00Z",
-    endDate:   "2025-11-04T23:59:59Z",
+    endDate: "2025-11-04T23:59:59Z",
     releaseBanner: true,
   },
   {
     title: "Case Study: Bloomberg’s shift to Open Source Java",
-    description:
-      "Discover how Eclipse Temurin helps power global financial infrastructure.",
+    description: "Discover how Eclipse Temurin helps power global financial infrastructure.",
     cta: "Read the Case Study",
-    ctaLink:
-      "https://outreach.eclipse.foundation/bloomberg-temurin-case-study?utm_campaign=22235449-Bloomberg%20Adoptium%20Case%20Study&utm_source=banner&utm_medium=adoptium%20website",
+    ctaLink: "https://outreach.eclipse.foundation/bloomberg-temurin-case-study?utm_campaign=22235449-Bloomberg%20Adoptium%20Case%20Study&utm_source=banner&utm_medium=adoptium%20website",
     startDate: "2025-09-30T23:59:59Z",
     endDate: "2025-11-15T23:59:59Z",
   },
   {
-    title: "Fake Banner for Testing",
+    title: "DO NOT REMOVE - Fake Banner for Testing",
     description: "This is a fake banner used for testing purposes only.",
     cta: "Read the Case Study",
     ctaLink: "https://example.com",
@@ -70,13 +72,21 @@ const Banner = () => {
     // Filter banners based on current date and validity
     const filteredBanners = currentBanners
       .filter((banner) => (banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true));
+
     const releaseBanners = currentBanners
       .filter(banner => ((banner.releaseBanner ? banner.releaseBanner : false) && (banner.startDate ? now >= new Date(banner.startDate) : true) && (banner.endDate ? now <= new Date(banner.endDate) : true)));
 
     // Prioritize a Release banner
     if (releaseBanners.length > 0) {
       // There is a Release banner within the current date
-      setBanner(releaseBanners[0]);
+      const mostRecentReleaseBanner = releaseBanners.sort((a, b) => {
+          // Sort by startDate descending (most recent first)
+          const dateA = a.startDate ? new Date(a.startDate).getTime() : 0;
+          const dateB = b.startDate ? new Date(b.startDate).getTime() : 0;
+          return dateB - dateA;
+        })[0];
+
+      setBanner(mostRecentReleaseBanner);
     } else {
       // randomly select one banner if multiple are valid
       setBanner(filteredBanners.length > 0 ? shuffle(filteredBanners)[0] : null);
