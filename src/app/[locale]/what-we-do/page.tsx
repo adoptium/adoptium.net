@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials"
 import LatestNews from '@/components/News/LatestNews'
 import License from "@/components/License"
 import GetOtherPlatformsAndVersions from "@/components/GetOtherPlatformsAndVersions"
+import MediaAndPromotion from "@/components/Support/MediaAndPromotion"
 
 export const metadata: Metadata = {
   title: "What We Do",
@@ -54,7 +55,8 @@ export default function WhatWeDoPage() {
       <WGProjects />
       <GetOtherPlatformsAndVersions />
       <License />
-      <WaysToSupport />
+      {/* <WaysToSupport />
+      <MediaAndPromotion />
       <ContactUs
         title="Connect with the community"
         buttontitle="Learn More"
@@ -62,7 +64,7 @@ export default function WhatWeDoPage() {
         linkTo="/slack"
       />
       <Testimonials />
-      <LatestNews />
+      <LatestNews /> */}
     </>
   )
 }
