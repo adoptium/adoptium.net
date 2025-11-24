@@ -32,38 +32,12 @@ exports[`NavBar > should match the snapshot 1`] = `
         <div
           class="hidden lg:flex lg:gap-6 xl:gap-x-12"
         >
-          <div
-            class="relative inline-block text-left"
-            data-headlessui-state=""
+          <a
+            class="text-sm font-semibold leading-6 text-white-900"
+            href="/join-us"
           >
-            <div>
-              <button
-                aria-expanded="false"
-                aria-haspopup="menu"
-                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
-                data-headlessui-state=""
-                id="headlessui-menu-button-_r_2_"
-                type="button"
-              >
-                About Us
-                <svg
-                  aria-hidden="true"
-                  class="-mr-1 mt-1"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 448 512"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+            Join Us
+          </a>
           <a
             class="text-sm font-semibold leading-6 text-white-900"
             href="/temurin/releases"
@@ -86,7 +60,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-_r_5_"
+                id="headlessui-menu-button-_r_2_"
                 type="button"
               >
                 Projects
@@ -118,7 +92,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-_r_8_"
+                id="headlessui-menu-button-_r_5_"
                 type="button"
               >
                 Resources
@@ -150,7 +124,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                 data-headlessui-state=""
-                id="headlessui-menu-button-_r_b_"
+                id="headlessui-menu-button-_r_8_"
                 type="button"
               >
                 Community
@@ -189,7 +163,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                   aria-haspopup="menu"
                   class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_e_"
+                  id="headlessui-menu-button-_r_b_"
                   type="button"
                 >
                   <img
