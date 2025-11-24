@@ -30,3 +30,7 @@ Since we enable JEP 493 for builds later than JDK 24, it's enabled for JDK 25 as
 ### Changes to Windows build toolchain
 
 The Microsoft VS2022 toolchain used for the Windows builds has been upgraded to the latest Visual Studio 2022 version 17.12.12 (C/C++ Compiler version 19.42.34444, MSVC toolset version 14.42.34433).
+
+### UBI container images are now UBI10 only, which removes x86-64-v2 support
+
+JDK25 is the first LTS where the UBI container images are exclusively published with UBI10 and not UBI9. This will impact anyone who is running on an x86-64-v2 system which is [no longer supported by UBI10/RHEL10/CentOS Stream 10](https://access.redhat.com/solutions/7066628). jdk21 and earlier versions will continue to be published with UBI9 images for the foreseeable future.

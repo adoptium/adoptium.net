@@ -1,15 +1,15 @@
-import { Link } from '@/i18n/navigation'
-import Image from 'next/image'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import { highlight } from 'sugar-high'
-import React from 'react'
-import { mdxOptions } from '@/utils/markdown'
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { highlight } from "sugar-high";
+import React from "react";
+import { mdxOptions } from "@/utils/markdown";
 
 interface TableProps {
   data: {
-    headers: string[]
-    rows: (string | number)[][]
-  }
+    headers: string[];
+    rows: (string | number)[][];
+  };
 }
 const Table: React.FC<TableProps> = ({ data }) => {
   return (
@@ -31,31 +31,33 @@ const Table: React.FC<TableProps> = ({ data }) => {
         ))}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-type CustomLinkProps = React.ComponentProps<'a'>
+type CustomLinkProps = React.ComponentProps<"a">;
 
 const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
   ({ href, children, ...props }, ref) => {
-    const hrefValue = href ?? ''
+    const hrefValue = href ?? "";
 
     // Internal Next.js route
-    if (hrefValue.startsWith('/')) {
+    if (hrefValue.startsWith("/")) {
+      // Filter out props that might not be compatible with the Link component
+      const { popover, ...filteredProps } = props;
       return (
-        <Link href={hrefValue} ref={ref} {...props}>
+        <Link href={hrefValue} ref={ref} {...filteredProps}>
           {children}
         </Link>
-      )
+      );
     }
 
     // In-page anchor or no href
-    if (hrefValue.startsWith('#') || hrefValue === '') {
+    if (hrefValue.startsWith("#") || hrefValue === "") {
       return (
         <a ref={ref} {...props}>
           {children}
         </a>
-      )
+      );
     }
 
     // External link
@@ -69,10 +71,10 @@ const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
       >
         {children}
       </a>
-    )
+    );
   }
-)
-CustomLink.displayName = 'CustomLink'
+);
+CustomLink.displayName = "CustomLink";
 
 interface ImageProps {
   src: string;
@@ -85,7 +87,15 @@ interface ImageProps {
 function RoundedImage(props: ImageProps) {
   const width = props.width || 800;
   const height = props.height || 400;
-  return <Image className="rounded-lg" {...props} alt={props.alt || 'blog image'} width={width} height={height} />;
+  return (
+    <Image
+      className="rounded-lg"
+      {...props}
+      alt={props.alt || "blog image"}
+      width={width}
+      height={height}
+    />
+  );
 }
 
 interface CodeProps {
@@ -94,8 +104,8 @@ interface CodeProps {
 }
 
 function Code({ children, ...props }: CodeProps) {
-  const codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+  const codeHTML = highlight(children);
+  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
 function slugify(str: string): string {
@@ -103,10 +113,10 @@ function slugify(str: string): string {
     .toString()
     .toLowerCase()
     .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/&/g, '-and-') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/&/g, "-and-") // Replace & with 'and'
+    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
+    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
 function createHeading(level: number) {
@@ -115,24 +125,24 @@ function createHeading(level: number) {
   }
 
   const Heading = ({ children }: HeadingProps) => {
-    const slug = slugify(children)
+    const slug = slugify(children);
     return React.createElement(
       `h${level}`,
       { id: slug },
       [
-        React.createElement('a', {
+        React.createElement("a", {
           href: `#${slug}`,
           key: `link-${slug}`,
-          className: 'anchor',
+          className: "anchor",
         }),
       ],
       children
-    )
-  }
+    );
+  };
 
-  Heading.displayName = `Heading${level}`
+  Heading.displayName = `Heading${level}`;
 
-  return Heading
+  return Heading;
 }
 
 const components = {

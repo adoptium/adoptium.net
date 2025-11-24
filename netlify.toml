@@ -11,19 +11,25 @@
     preload'''
 
 [[redirects]]
+  from = "https://blog.adoptium.net/:locale/*"
+  to = "https://adoptium.net/:locale/news/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://blog.adoptium.net/*"
   to = "https://adoptium.net/news/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/*"
-  to = "/news/:splat"
+  from = "/:locale/blog/*"
+  to = "/:locale/news/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/:locale/blog/*"
+  from = "/blog/*"
   to = "/news/:splat"
   status = 301
   force = true
@@ -61,5 +67,17 @@
 [[redirects]]
   from = "/qvs-policy"
   to = "/docs/qvs-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/support-us"
+  to = "/:locale/join-us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/support-us"
+  to = "/join-us"
   status = 301
   force = true

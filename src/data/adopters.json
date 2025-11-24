@@ -1,5 +1,12 @@
 [
   {
+    "name": "Accenture",
+    "logo": "adopters/logo-accenture.svg",
+    "url": "https://www.accenture.com",
+    "tier": "adopter",
+    "logo_white": "adopters/logo-accenture-white.png"
+  },
+  {
     "name": "AiP Safe",
     "logo": "adopters/logo-aipsafe.png",
     "url": "https://www.aipsafe.cz/",

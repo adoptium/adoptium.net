@@ -4,7 +4,9 @@
     "download-temurin-for": "下载适用于 {userOSName} {arch} 的 Temurin {defaultVersion}",
     "download-temurin-short": "下载 Temurin {defaultVersion}",
     "other-downloads": "其他下载",
-    "download-temurin-button": "下载 Temurin®"
+    "download-temurin-button": "下载 Temurin®",
+    "sustainer-cta-description": "数百万用户信赖 Eclipse Temurin。您的支持让它持续发展",
+    "sustainer-cta-button": "投资 Eclipse Temurin"
   },
   "NotFoundPage": {
     "title": "很抱歉，无法找到此页面",
@@ -218,5 +220,10 @@
     "selectVersion": "选择 Temurin 版本",
     "selectVersionDescription": "选择一个 Temurin 版本以查看其最新的版本说明：",
     "viewReleaseNotes": "查看版本说明 →"
+  },
+  "Sitemap": {
+    "title": "网站地图",
+    "subtitle": "浏览 Adoptium",
+    "description": "Adoptium 网站上所有页面、文档和资源的完整概览。快速轻松地找到您要查找的内容。"
   }
 }
