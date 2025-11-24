@@ -18,7 +18,7 @@
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@headlessui/react": "^2.2.9",
     "@mui/material": "^7.3.5",
-    "@mui/x-data-grid": "^8.18.0",
+    "@mui/x-data-grid": "^8.19.0",
     "@next/third-parties": "16.0.3",
     "axios": "^1.13.2",
     "framer-motion": "^12.23.24",
