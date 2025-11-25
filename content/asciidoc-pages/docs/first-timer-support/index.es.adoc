@@ -1,0 +1,61 @@
+= Soporte para Primeros Pasos en Eclipse Adoptium(R)
+:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid
+:description: Ayuda con las primeras contribuciones
+:keywords: adoptium documentación contribuir primera-vez
+:icons: font
+
+
+En Adoptium queremos ayudar a la gente a adentrarse en el OpenSource, Java y la Comunidad Java.
+Por lo tanto, es muy importante para nosotros proporcionar ayuda a las personas que quieren empezar a trabajar en código abierto.
+
+[NOTE]
+====
+Esta documentación es todavía un trabajo en progreso y algunos puntos mencionados son ideas para el futuro que aún no se han establecido.
+====
+
+Adoptium proporciona varios problemas (issues) que están etiquetados como https://github.com/orgs/adoptium/projects/[good first issue].
+Todos estos problemas son perfectos para empezar a trabajar en un proyecto de código abierto.
+Los problemas proporcionan descripciones amigables para el usuario y muchos enlaces útiles a documentación y tutoriales para empezar a trabajar directamente en dicho problema.
+Incluso si no estás muy familiarizado con GitHub en general, los problemas enlazan a tutoriales amigables que ayudarán a los usuarios a
+entender los flujos de trabajo de forks y pull requests.
+
+Puedes encontrar https://github.com/AdoptOpenJDK/IcedTea-Web/issues/706[un ejemplo de un **`good first issue`** en el repositorio IcedTea-Web].
+
+En GitHub puedes encontrar https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue%22+is%3Aopen[una lista de todos los problemas etiquetados como **`good first issue`**].
+
+== Plantillas
+
+Actualmente estamos trabajando en una plantilla para problemas que están etiquetados como https://github.com/orgs/adoptium/projects/[good first issue].
+https://gist.github.com/hendrikebbers/8e4dec9ddea5e2a420080d1314af025f[La versión actual de la plantilla de problema] y
+https://gist.github.com/hendrikebbers/0f9cdd18076343b3bbe5f2d162733b6e[una sección sobre "Soporte para primeros pasos" para archivos contributing.md]
+están actualmente en desarrollo.
+
+== Flujo de trabajo para crear "good first issues"
+
+Siempre que asumas que un problema podría ser un https://github.com/orgs/adoptium/projects/[good first issue], deberías etiquetarlo con la etiqueta **`good first issue - candidate`**.
+Al hacerlo, puede ser revisado y modificado para convertirse en un https://github.com/orgs/adoptium/projects/[good first issue].
+
+En GitHub puedes encontrar https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue+-+candidate%22+is%3Aopen[una lista de todos los problemas etiquetados como **`good first issue - candidate`**].
+
+Todos los problemas etiquetados como **`good first issue - candidate`** deben ser revisados y tal vez refactorizados para convertirse en problemas etiquetados como https://github.com/orgs/adoptium/projects/[good first issue].
+Aquí se deben aplicar las siguientes reglas:
+
+- El título del problema debe especificar el problema.
+- La descripción del problema debe basarse en https://gist.github.com/hendrikebbers/0f9cdd18076343b3bbe5f2d162733b6e[nuestra plantilla **`good first issue`**].
+- El problema no debe contener ningún comentario. Los comentarios hacen que sea más difícil de entender para un novato.
+Toda la información relevante que esté en los comentarios debe añadirse a la descripción del problema.
+Los comentarios deben eliminarse después.
+Si esto no es posible, la mejor solución es crear un nuevo problema para el https://github.com/orgs/adoptium/projects/[good first issue], enlazarlo al original y cerrar el original.
+- Al definir la descripción del problema, siempre tiene sentido enlazar a documentación o archivos útiles (tal vez incluso directamente al código)
+para ayudar a un recién llegado a encontrar el punto de partida correcto para trabajar en el problema.
+
+Una vez que el problema es refactorizado y revisado, debe etiquetarse como https://github.com/orgs/adoptium/projects/[good first issue] y la etiqueta **`good first issue - candidate`** debe eliminarse.
+Además de esto, deberíamos etiquetar todos estos problemas con **`help wanted`** y **`Hacktoberfest`**.
+
+== Enlaces y Recursos
+
+- https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue%22+is%3Aopen[Lista de todos los problemas etiquetados como **`good first issue`**]
+- https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue+-+candidate%22+is%3Aopen[Lista de todos los problemas etiquetados como **`good first issue - candidate`**]
+- https://gist.github.com/hendrikebbers/8e4dec9ddea5e2a420080d1314af025f[Versión actual de la plantilla de problema]
+- https://gist.github.com/hendrikebbers/0f9cdd18076343b3bbe5f2d162733b6e[Versión actual de una sección sobre "Soporte para primeros pasos" para archivos contributing.md]
+- https://github.com/AdoptOpenJDK/IcedTea-Web/issues/706[Un ejemplo de un **`good first issue`**]

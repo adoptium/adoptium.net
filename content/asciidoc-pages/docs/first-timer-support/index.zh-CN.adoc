@@ -1,0 +1,61 @@
+= Eclipse Adoptium(R) 新手支持
+:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid
+:description: 首次贡献支持
+:keywords: adoptium 文档 贡献 首次
+:icons: font
+
+
+在 Adoptium，我们要帮助人们进入开源、Java 和 Java 社区。
+因此，为想要开始从事开源工作的人提供帮助对我们来说非常重要。
+
+[NOTE]
+====
+本文档仍在进行中，提到的一些点是未来的想法，尚未建立。
+====
+
+Adoptium 提供了一些标记为 https://github.com/orgs/adoptium/projects/[good first issue] 的问题（issues）。
+所有这些问题都非常适合开始在一个开源项目上工作。
+这些问题提供了用户友好的描述，以及许多指向文档和教程的有用链接，以便直接开始处理此类问题。
+即使你不太熟悉 GitHub，这些问题也会链接到用户友好的教程，帮助用户
+理解 fork 和 pull request 的工作流程。
+
+你可以找到 https://github.com/AdoptOpenJDK/IcedTea-Web/issues/706[IcedTea-Web 仓库中 **`good first issue`** 的一个例子]。
+
+在 GitHub 上，你可以找到 https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue%22+is%3Aopen[所有标记为 **`good first issue`** 的问题列表]。
+
+== 模板
+
+我们目前正在为标记为 https://github.com/orgs/adoptium/projects/[good first issue] 的问题制定问题模板。
+https://gist.github.com/hendrikebbers/8e4dec9ddea5e2a420080d1314af025f[问题模板的当前版本] 和
+https://gist.github.com/hendrikebbers/0f9cdd18076343b3bbe5f2d162733b6e[关于 contributing.md 文件中“新手支持”的一节]
+目前正在开发中。
+
+== 创建 good first issues 的工作流程
+
+每当你认为一个问题可能是一个 https://github.com/orgs/adoptium/projects/[good first issue] 时，你应该给它加上 **`good first issue - candidate`** 标签。
+这样做可以对其进行审查和修改，使其成为一个 https://github.com/orgs/adoptium/projects/[good first issue]。
+
+在 GitHub 上，你可以找到 https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue+-+candidate%22+is%3Aopen[所有标记为 **`good first issue - candidate`** 的问题列表]。
+
+所有标记为 **`good first issue - candidate`** 的问题都应该被审查，也许还需要重构，以成为标记为 https://github.com/orgs/adoptium/projects/[good first issue] 的问题。
+这里应适用以下规则：
+
+- 问题的标题必须说明问题
+- 问题的描述必须基于 https://gist.github.com/hendrikebbers/0f9cdd18076343b3bbe5f2d162733b6e[我们的 **`good first issue`** 模板]
+- 问题不应包含任何评论。评论会让新手更难理解。
+评论中的所有相关信息都应添加到问题的描述中。
+评论应随后删除。
+如果这不可能，最好的解决方案是为 https://github.com/orgs/adoptium/projects/[good first issue] 创建一个新问题，将其链接到原始问题，并关闭原始问题。
+- 在定义问题的描述时，链接到文档或有用的文件（甚至可能直接链接到代码）总是有意义的，
+以帮助新人找到处理问题的正确起点。
+
+一旦问题被重构和审查，它应该被标记为 https://github.com/orgs/adoptium/projects/[good first issue]，并且 **`good first issue - candidate`** 标签应该被移除。
+除此之外，我们应该用 **`help wanted`** 和 **`Hacktoberfest`** 标记所有这些问题。
+
+== 链接和资源
+
+- https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue%22+is%3Aopen[所有标记为 **`good first issue`** 的问题列表]
+- https://github.com/issues?q=org%3AAdoptium+label%3A%22good+first+issue+-+candidate%22+is%3Aopen[所有标记为 **`good first issue - candidate`** 的问题列表]
+- https://gist.github.com/hendrikebbers/8e4dec9ddea5e2a420080d1314af025f[问题模板的当前版本]
+- https://gist.github.com/hendrikebbers/0f9cdd18076343b3bbe5f2d162733b6e[关于 contributing.md 文件中“新手支持”一节的当前版本]
+- https://github.com/AdoptOpenJDK/IcedTea-Web/issues/706[**`good first issue`** 的一个例子]
