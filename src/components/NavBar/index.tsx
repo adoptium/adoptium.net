@@ -14,6 +14,7 @@ import {
 } from "@headlessui/react"
 import { FaChevronDown, FaRegBell } from "react-icons/fa"
 import { BsXLg, BsList } from "react-icons/bs"
+import { fetchLatestEvents } from "@/hooks";
 
 import IconSocial from "@/components/IconSocial"
 import LanguageSelector from "@/components/LanguageSelector"
@@ -157,9 +158,55 @@ const NavBar = ({ locale }: { locale: string }) => {
   const [showLastSlide, setShowLastSlide] = useState(false)
   const [showAnnouncement, setShowAnnouncement] = useState(false)
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
+  const [unreadCount, setUnreadCount] = useState(0);
   // To prevent hydration mismatch, we'll start with no active paths
   const [activePaths, setActivePaths] = useState<Set<string>>(new Set())
   const pathname = usePathname();
+
+useEffect(() => {
+  const fetchUnreadCount = async () => {
+    try {
+      const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+      const now = Date.now();
+
+      const postsResponse = await fetch("/api/news?numPosts=4");
+      const postsData = await postsResponse.json();
+
+      const releasesResponse = await fetch("/api/news/byTag?tag=release-notes&numPosts=4");
+      const releasesData = await releasesResponse.json();
+
+      const eventsData = await fetchLatestEvents();
+      const slicedEvents = eventsData.slice(0, 6);
+
+      const recentPosts = (postsData.posts || []).filter(
+        (p: { date: string }) => now - new Date(p.date).getTime() <= ONE_WEEK_MS
+      );
+
+      const recentReleases = (releasesData.posts || []).filter(
+        (p: { date: string }) => now - new Date(p.date).getTime() <= ONE_WEEK_MS
+      );
+
+      const recentEvents = (slicedEvents || []).filter(
+        (e: { date: string }) => now - new Date(e.date).getTime() <= ONE_WEEK_MS
+      );
+
+      const totalCount = recentPosts.length + recentReleases.length + recentEvents.length;
+
+      setUnreadCount(totalCount);
+    } catch (error) {
+      console.error("Error fetching announcement count:", error);
+      setUnreadCount(0);
+    }
+  };
+
+  fetchUnreadCount();
+}, []);
+
+const handleNotificationRead = () => {
+  setUnreadCount(prev => Math.max(0, prev - 1));
+};
+
+
 
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -201,7 +248,7 @@ const NavBar = ({ locale }: { locale: string }) => {
         }`}
     >
       {showAnnouncement && (
-        <Announcements handleClose={() => setShowAnnouncement(false)} />
+        <Announcements handleClose={() => setShowAnnouncement(false)} onNotificationRead={handleNotificationRead} />
       )}
       {/* Container div to center the nav content */}
       <div className="max-w-[1288px] w-full mx-auto px-3">
@@ -302,16 +349,17 @@ const NavBar = ({ locale }: { locale: string }) => {
                 <LanguageSelector locale={locale} />
               </div>
               <div className="p-3 h-full rounded-3xl border-2 border-gray-700 justify-start items-center gap-3 inline-flex cursor-pointer">
-                <div
-                  aria-label="notifications"
-                  onClick={() => setShowAnnouncement(!showAnnouncement)}
-                  className="relative"
-                >
-                  <FaRegBell size={20} />
-                  <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
-                    1
-                  </span>
-                </div>
+               <div
+                 aria-label="notifications"
+                 onClick={() => {setShowAnnouncement(!showAnnouncement);}}
+                 className="relative">
+                 <FaRegBell size={20} />
+                  {unreadCount > 0 && (
+                <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white font-bold flex items-center justify-center">
+                  {unreadCount}
+                </span>
+              )}
+              </div>
               </div>
             </div>
             <div className="flex lg:hidden ml-3">
