@@ -1,0 +1,30 @@
+= Soporte de Temurin(TM)
+:page-authors: gdams, karianna, sxa, tellison, SueChaplain, sxa555, mvitz, ParkerM, M-Davies, Malax, lasombra, jeffalder, hendrikebbers, douph1, andrew-m-leonard, mr-david-owens, DanHeidinga, sophia-guo, zdtsw, adamfarley, garydgregory, mtughan, xavierfacq, NickJavaDev88
+:toc:
+:partialDir: _partials
+
+== Soporte de la Comunidad
+
+Estamos preparados para respaldar la calidad de nuestros binarios de lanzamiento, por lo que cada compilación identificada como un lanzamiento recibe soporte a través de la comunidad Adoptium(R). Nuestro soporte significa que puedes https://github.com/adoptium/adoptium-support/issues/new/choose[plantear un problema] para describir un error que hayas encontrado en la compilación, y trabajaremos contigo y el equipo de desarrollo apropiado para resolverlo. Cualquier corrección que identifiquemos se entregará como parte del próximo lanzamiento de Adoptium.
+
+Como comunidad de desarrolladores de código abierto, nuestro compromiso es clasificar cualquier problema planteado y defenderlo en el proyecto de código fuente apropiado. Por supuesto, si el problema surge de la forma en que construimos y probamos el código, podemos solucionarlo directamente. Para soporte dedicado con acuerdos de nivel de servicio, debes contactar a empresas comerciales que ofrezcan soporte en binarios Temurin. Lee https://medium.com/@javachampions/java-is-still-free-3-0-0-ocrt-2021-bca75c88d23b[Java Is Still Free (3.0.0)] para obtener información general sobre las opciones de soporte de Java.
+
+== Soporte Comercial
+
+Entendemos que algunos usuarios prefieren soporte comercial y pagado para Eclipse Temurin. Eclipse no proporciona tales servicios, pero por favor consulta nuestra página de link:/temurin/commercial-support[Soporte Comercial] donde se mantiene una lista de empresas que ofrecen soporte contratado.
+
+== Hoja de Ruta de Lanzamientos
+
+La frecuencia de los lanzamientos de Temurin se guía por el calendario de nuestras dependencias.
+
+OpenJDK proporciona una nueva versión de características cada seis meses, y una actualización de mantenimiento/seguridad basada en cada versión activa cada tres meses. Las fechas de lanzamiento para aquellos del proyecto OpenJDK son típicamente el https://www.oracle.com/security-alerts/[tercer martes] de enero, abril, julio y octubre. Seguiremos este calendario para publicar lanzamientos binarios de Adoptium para asegurar que obtengas las compilaciones más recientes y seguras.
+
+Además, cada dos años desde 2021, una versión de características será designada como una versión de Soporte a Largo Plazo (LTS). Daremos soporte a las versiones LTS durante al menos cuatro años. Esta garantía te permitirá permanecer en un flujo de código bien definido y te dará tiempo para migrar a la siguiente versión nueva, estable y LTS cuando esté disponible.
+
+Basado en esta hoja de ruta, aquí está el calendario que muestra las fechas de lanzamiento actuales de las diversas versiones de OpenJDK utilizadas para construir Eclipse Temurin. Ten en cuenta que las fechas a continuación son de la https://www.java.com/releases[página del proyecto OpenJDK upstream] y no deben considerarse la fecha en la que el proyecto Adoptium tendrá binarios disponibles - habrá un breve retraso relativo a estas fechas mientras completamos nuestros extensos ciclos de construcción y prueba que pueden tomar hasta tres semanas. Nuestro https://calendar.google.com/calendar/embed?src=c_56d7263c0ceda87a1678f6144426f23fb53721480b5ff71b073afb51091e5492%40group.calendar.google.com[Calendario de Google con nuestros ciclos de lanzamiento] muestra la duración esperada de los ciclos para cada uno de nuestros lanzamientos. Siempre priorizamos las plataformas más populares que típicamente aparecerán dentro de unos pocos días de estas fechas.
+
+include::{partialDir}/support-table.adoc[]
+
+^[1]^ Como filosofía general, Adoptium continuará construyendo binarios para versiones LTS siempre que la fuente upstream correspondiente se mantenga activamente.
+
+^[2]^ Fin de la Vida de Servicio/Soporte - este flujo de código ya no se mantiene. No se planean más compilaciones de Eclipse Temurin.
