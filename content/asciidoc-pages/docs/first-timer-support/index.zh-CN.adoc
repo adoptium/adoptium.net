@@ -1,5 +1,5 @@
 = Eclipse Adoptium(R) 新手支持
-:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid
+:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid, NickJavaDev88
 :description: 首次贡献支持
 :keywords: adoptium 文档 贡献 首次
 :icons: font
