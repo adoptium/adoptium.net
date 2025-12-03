@@ -9,7 +9,7 @@ tags:
   - end-of-service
 ---
 
-The Adoptium community is dedicated to providing high-quality, open-source builds of the Temurin JDK for the most actively maintained and widely used platforms in the industry. As part of our commitment to focus our resources effectively, we are announcing the end of service for two platform releases.
+The Adoptium community is dedicated to providing high-quality, open-source builds of the Temurin JDK for the most actively maintained and widely used platforms in the industry. As part of our commitment to focus our resources effectively, we are announcing the end of service for the following platform releases.
 
 ## Solaris/x64 and Solaris/SPARC
 
