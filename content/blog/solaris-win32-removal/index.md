@@ -31,3 +31,11 @@ We have created two issues to gather your feedback specifically for these platfo
 
 - Solaris: https://github.com/adoptium/temurin-build/issues/4318
 - Win32: https://github.com/adoptium/temurin-build/issues/4319
+
+## Looking Ahead
+
+The Adoptium project remains dedicated to providing reliable, secure, and performant Java builds. We continue to focus our efforts on primary and well-used platforms and Java versions to ensure the highest quality for the vast majority of our community.
+
+We encourage all users on the affected platforms to transition to a supported configuration.
+
+Thank you for being a part of the Adoptium community.
