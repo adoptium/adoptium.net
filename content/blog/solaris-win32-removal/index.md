@@ -25,7 +25,7 @@ Based on this it is our intention to also stop shipping the 32-bit Windows build
 
 ## Your feedback and support are crucial
 
-We have created issues to gather your feedback on the dropping of these platforms.If you have a need for these and are able to provide the support required to continue to release it then please add a comment to the following issues:
+We have created two issues to gather your feedback specifically for these platforms. We'd especially like to hear from you if you are able to provide additional support by adding a comment to the following issues:
 
 - Solaris: https://github.com/adoptium/temurin-build/issues/4318
 - Win32: https://github.com/adoptium/temurin-build/issues/4319
