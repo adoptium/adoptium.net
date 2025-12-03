@@ -19,7 +19,7 @@ In addition to the funding, supporting Solaris has become increasingly complex f
 
 ## Windows 32-bit builds (JDK8, 11, and 17)
 
-Temurin is currently built and released on the oldest three LTS JDKs but has not been shipped for JDK21 and later where [JEP 449](https://openjdk.org/jeps/449) deprecates the platform. This reflects the fact that all currently supported Windows operating systems are 64-bit and capable of running a 64-bit version of Temurin.
+On Windows 32-bit, Temurin is currently built and released for JDK 8, 11, and 17 but has not been shipped for JDK21 and later where [JEP 449](https://openjdk.org/jeps/449) deprecates the platform. This reflects the fact that all currently supported Windows operating systems are 64-bit and capable of running a 64-bit version of Temurin.
 
 Based on this it is our intention to also stop shipping the 32-bit Windows builds of Temurin in 2026. It is likely that typical end user scenarios on in-support operating systems will be able to use a 64-bit Temurin build.
 
