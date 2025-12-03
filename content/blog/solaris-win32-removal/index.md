@@ -1,0 +1,31 @@
+---
+title: Adoptium's Plan to End Support for Solaris and Windows 32-bit Platforms
+date: "2025-12-04T12:00:00+00:00"
+author: pmc
+description: Adoptium intends to stop publishing Eclipse Temurin on the Solaris and Win32 platforms in 2026
+tags:
+  - temurin
+  - announcement
+  - end-of-service
+---
+
+The Adoptium community is dedicated to providing high-quality, open-source builds of the Temurin JDK for the most actively maintained and widely used platforms in the industry. As part of our commitment to focus our resources effectively, we are announcing the end of service for two platform releases.
+
+## Solaris/x64 and Solaris/SPARC
+
+In recent times we have been fortunate to have had additional [sponsorship](https://adoptium.net/sustainers) given to the project to cover the costs of the hardware and to build, test and distribute on the two architectures which Solaris is available for. This financial sponsor no longer has a requirement for Temurin on Solaris and therefore we have taken the decision that we will no longer ship Solaris builds of Temurin in 2026. Without funding for the hardware and people stepping up to perform the work required for our test and release process it is not viable to continue to ship on the Solaris platforms.
+
+In addition to the funding, supporting Solaris has become increasingly complex from a technical perspective. We can no longer connect Solaris agents directly to our Jenkins CI due to Jenkins’ requirement for agents to support Java 17 at a minimum and we had to implement a separate build and test process to continue to produce those builds (see [this issue](https://github.com/adoptium/infrastructure/issues/3742)). In addition to this, the Solaris platforms are not automated through the Arctic framework which means that some of the compliance testing is significantly more time consuming than on most of our other platforms.
+
+## Windows 32-bit builds (JDK8, 11, and 17)
+
+Temurin is currently built and released on the oldest three LTS JDKs but has not been shipped for JDK21 and later where [JEP 449](https://openjdk.org/jeps/449) deprecates the platform. This reflects the fact that all currently supported Windows operating systems are 64-bit and capable of running a 64-bit version of Temurin.
+
+Based on this it is our intention to also stop shipping the 32-bit Windows builds of Temurin in 2026. It is likely that typical end-user scenarios on in-support operating systems will be able to use a 64-bit Temurin build.
+
+## Your feedback and support are crucial
+
+We have created issues to gather your feedback on the dropping of these platforms.If you have a need for these and are able to provide the support required to continue to release it then please add a comment to the following issues:
+
+- Solaris: https://github.com/adoptium/temurin-build/issues/4318
+- Win32: https://github.com/adoptium/temurin-build/issues/4319
