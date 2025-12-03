@@ -12,6 +12,14 @@ expect.extend(matchers);
 // This extends Vitest's expect with Jest-DOM matchers
 expect.extend(jestDomMatchers);
 
+// Add snapshot serializer to remove dynamic MUI class hashes
+expect.addSnapshotSerializer({
+  test: (val) => typeof val === "string" && /css-[a-zA-Z0-9]+-Mui/.test(val),
+  print: (val) => {
+    return `"${(val as string).replace(/css-[a-zA-Z0-9]+-Mui/g, "css-Mui")}"`;
+  },
+});
+
 // Mock GSAP and ScrollTrigger
 vi.mock("gsap", () => {
   const mockGsap = {
