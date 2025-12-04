@@ -18,9 +18,13 @@ type BannerProps = {
 // -------------------------------------------------------
 // NOTE: Add your list of current banners here
 // - Each banner can have optional startDate and endDate in ISO format
+//     > an undefined start date is displayed immediately
+//     > an undefined end date is displayed indefinitely
 // - Banners with dates are only valid within that range
 // - Banners are always displayed randomly
 // - Banners marked as releaseBanner will be prioritized if within date range
+//     > only one releaseBanner will be shown at a time, the most recent one
+//     > undefined release banner flag is equivalent to 'false' behavior
 // - Do not set releaseBanner to true for non-release banners
 // -------------------------------------------------------
 const currentBanners: BannerProps[] = [
