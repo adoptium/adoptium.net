@@ -7,6 +7,7 @@ import SavingsCalculator from "@/components/Sustainers/SavingsCalculator";
 import SustainerLevels from "@/components/Sustainers/Levels";
 import Logos, { LogoType } from "@/components/Logos";
 import PageHeader from "@/components/Common/PageHeader";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "Sustainers",
@@ -115,6 +116,10 @@ export default function SustainersPage() {
               title=""
               description="The Adoptium Working Group collaborates with the following companies who contribute various kinds of cloud and physical hardware."
             />
+          </div>
+          {/* ✅ Add Testimonials component here */}
+          <div className="mt-16">
+            <Testimonials type="sustainer" />
           </div>
         </div>
       </div>

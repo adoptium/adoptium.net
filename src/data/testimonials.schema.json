@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "quote": { "type": "string" },
+      "name": { "type": "string" },
+      "role": { "type": "string" },
+      "image": { "type": "string" },
+      "companyLogo": { "type": "string" },
+      "companyName": { "type": "string" },
+      "type": { "type": "string", "enum": ["member", "sustainer"] }
+    },
+    "required": [
+      "quote",
+      "name",
+      "role",
+      "image",
+      "companyLogo",
+      "companyName",
+      "type"
+    ],
+    "additionalProperties": false
+  }
+}

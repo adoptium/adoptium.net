@@ -28,4 +28,18 @@ export default function HomePageClient({
       <ContributorsHome />
     </div>
   );
+  return (
+    <div>
+      <HeroSection latestLTS={latestLTS} />
+      <LogoCarousel />
+      <BannerMiddle />
+      <PowerOfTemurin />
+      <DownloadCounter total={total_downloads} />
+      <TemurinFeatures />
+      <WGProjects />
+      <Testimonials type="member" />
+      <LatestNews />
+      <ContributorsHome />
+    </div>
+  );
 }
