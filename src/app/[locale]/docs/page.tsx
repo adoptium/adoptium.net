@@ -39,10 +39,6 @@ export default function DocumentationPage() {
                                         name: "Container Images",
                                         link: "https://hub.docker.com/_/eclipse-temurin",
                                     },
-                                    {
-                                        name: "Release Archive",
-                                        link: "/temurin/archive",
-                                    },
                                 ]}
                             />
                             <DocumentationCard
