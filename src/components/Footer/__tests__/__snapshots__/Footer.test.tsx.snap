@@ -214,16 +214,6 @@ exports[`Footer component > renders correctly 1`] = `
               <li>
                 <a
                   class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                  href="https://www.eclipse.org/forums/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Forums
-                </a>
-              </li>
-              <li>
-                <a
-                  class="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
                   href="https://marketplace.eclipse.org/"
                   rel="noopener noreferrer"
                   target="_blank"

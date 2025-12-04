@@ -5,7 +5,7 @@ We have gathered together a few frequently asked questions (FAQs) into
 this document.
 If you want to talk to us about these topics, or ask additional questions
 the best place is via
-https://adoptium.net/slack.html[Slack] or by raising an issue in the
+https://adoptium.net/slack[Slack] or by raising an issue in the
 https://github.com/adoptium/adoptium-support[support channel].
 
 == Where are the latest Adoptium(R) JDKs?
