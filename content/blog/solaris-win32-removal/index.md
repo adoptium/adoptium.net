@@ -17,7 +17,7 @@ Although Temurin has never had a significant user base on Solaris, we have been 
 
 In addition to the funding, supporting Solaris has become increasingly complex from a technical perspective. We can no longer connect Solaris agents directly to our Jenkins CI due to Jenkins’ requirement for agents to support Java 17 at a minimum and we had to implement a separate build and test process to continue to produce those builds (see [this issue](https://github.com/adoptium/infrastructure/issues/3742)). In addition to this, the Solaris platforms are not automated through the [Arctic framework](https://github.com/adoptium/aqa-tests/wiki/Arctic-Project-Guide) which means that some of the compliance testing is significantly more time consuming than on most of our other platforms.
 
-## Windows 32-bit builds (JDK8, 11, and 17)
+## Windows 32-bit builds (JDK 8, 11, and 17)
 
 On Windows 32-bit, Temurin is currently built and released for JDK 8, 11, and 17 but has not been shipped for JDK21 and later where [JEP 449](https://openjdk.org/jeps/449) deprecates the platform. This reflects the fact that all currently supported Windows operating systems are 64-bit and capable of running a 64-bit version of Temurin.
 
