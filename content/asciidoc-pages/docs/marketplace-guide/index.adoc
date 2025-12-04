@@ -11,7 +11,7 @@ This document provides guidance for publishers that are eligible to market and p
 link:/marketplace[Adoptium Marketplace].
 
 Publishers may be vendors, not-for-profit entities, user groups, and others who share the values embodied in the 
-link:/marketplace-policy[Adoptium marketplace policy^].
+link:/docs/marketplace-policy[Adoptium marketplace policy^].
 Publishers may offer open source or commercially licensed offerings, each usable at no cost or at a fee to the end user. The marketplace does not require specific version, platform, usage or license terms, and the binaries available through the marketplace may also be available elsewhere. All binaires offered through the Adoptium marketplace must meet the compatibility and quality criteria defined in the marketplace policy.
 
 The marketplace is available to end users as both a

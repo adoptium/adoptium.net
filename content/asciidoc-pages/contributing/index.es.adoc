@@ -1,0 +1,122 @@
+= Contribuir a Adoptium(R)
+:page-authors: Ndacyayisenga-droid, NickJavaDev88
+
+Gracias por tu interés en este proyecto.
+
+== Descripción del proyecto
+
+Adoptium es un proyecto de código abierto que se centra en proporcionar distribuciones de alta calidad y listas para producción del Kit de Desarrollo de Java (JDK) y tecnologías asociadas. El objetivo principal del proyecto es crear una distribución de OpenJDK neutral respecto al proveedor y dirigida por la comunidad, que es la implementación de código abierto de la Plataforma Java, Edición Estándar (Java SE).
+
+Adoptium tiene como objetivo proporcionar a los usuarios compilaciones fiables y bien probadas de OpenJDK en diferentes plataformas, incluidas Windows, macOS, Linux y más. El proyecto colabora estrechamente con la comunidad OpenJDK y se beneficia de la experiencia de un grupo diverso de contribuyentes, incluidos desarrolladores, organizaciones y entusiastas de Java.
+
+Uno de los objetivos clave de Adoptium es facilitar a los desarrolladores y organizaciones el acceso y consumo de compilaciones de OpenJDK. Proporciona binarios precompilados que se prueban exhaustivamente, garantizando estabilidad y compatibilidad. Estos binarios están disponibles de forma gratuita, lo que hace conveniente para los desarrolladores adoptar y usar OpenJDK en sus proyectos sin restricciones de licencia.
+
+Adoptium también ofrece compilaciones de soporte a largo plazo (LTS), que están diseñadas específicamente para empresas y organizaciones que requieren un entorno de ejecución Java estable y fiable. Las compilaciones LTS reciben actualizaciones periódicas y parches de seguridad, garantizando la longevidad y el mantenimiento de la plataforma Java.
+
+En general, Adoptium tiene como objetivo proporcionar una distribución fiable y accesible de OpenJDK, promoviendo la transparencia, la colaboración y la innovación impulsada por la comunidad dentro del ecosistema Java.
+
+- https://github.com/adoptium
+
+== Recursos para desarrolladores
+
+El proyecto Adoptium mantiene los siguientes repositorios de código fuente:
+
+- https://github.com/adoptium/temurin-build
+- https://github.com/adoptium/aqa-tests
+- https://github.com/adoptium/installer
+- https://github.com/adoptium/adoptium-support
+- https://github.com/adoptium/containers
+- https://github.com/adoptium/adoptium.net
+- Y muchos https://github.com/adoptium/[otros]
+
+== Acuerdo de Contribuyente de Eclipse
+
+Antes de que tu contribución pueda ser aceptada por el equipo del proyecto, los contribuyentes deben firmar electrónicamente el Acuerdo de Contribuyente de Eclipse (ECA).
+
+- http://www.eclipse.org/legal/ECA.php
+
+Los commits proporcionados por no-committers deben tener un campo Signed-off-by en el pie de página indicando que el autor es consciente de los términos bajo los cuales se ha proporcionado la contribución al proyecto. El no-committer debe tener adicionalmente una cuenta en la Fundación Eclipse y debe tener un https://adoptium.net/docs/eca-sign-off[Acuerdo de Contribuyente de Eclipse] (ECA) firmado en el archivo.
+
+Para más información, por favor consulta el https://www.eclipse.org/projects/handbook/#resources-commit[Manual del Committer de Eclipse] y la documentación de Adoptium:
+
+== Enviar una contribución a Adoptium
+
+Después de firmar el ECA, puedes proponer contribuciones enviando pull requests (PRs) a través de GitHub.
+
+**Nota:** Asumamos que estamos contribuyendo al repositorio `aqa-tests`
+
+Si es tu primera vez contribuyendo al proyecto, haz un fork del repositorio haciendo clic en el botón Fork en la esquina superior derecha de la página del repositorio git. Esto crea una copia del repositorio bajo tu cuenta de GitHub: https://github.com/<TuNombreDeUsuarioGit>/aqa-tests.git
+
+Clona tu repositorio con Git:
+
+[source, bash]
+----
+git clone https://github.com/<TuNombreDeUsuarioGit>/aqa-tests.git
+----
+
+Crea una nueva rama para trabajar:
+
+[source, bash]
+----
+cd aqa-tests
+git checkout -b mi_nueva_rama
+----
+
+- Añade https://github.com/adoptium/aqa-tests.git como tu upstream:
+
+[source, bash]
+----
+git remote add upstream https://github.com/adoptium/aqa-tests.git
+----
+
+Antes de comenzar a trabajar en el problema, por favor asegúrate de que la rama local esté actualizada:
+
+[source, bash]
+----
+git fetch upstream
+git rebase upstream/master
+----
+
+Una vez que hayas terminado con tu trabajo, rastrea tus cambios y haz commit.
+
+[source, bash]
+----
+git add .
+git commit -s -m "mensaje sobre este PR"
+----
+
+- Ejemplo de mensaje de commit:
+
+[source]
+----
+Update jtreg in openjdk test
+This patch updates jtreg version from 5.1 to 6.1.
+Fixes: #1234
+Signed-off-by: Nombre Completo <email>
+----
+
+- La primera línea es el título del PR. Debe describir el cambio realizado. Por favor, mantenlo corto y simple.
+- El cuerpo debe incluir información detallada sobre tu PR. Es posible que desees incluir diseños, justificación y una breve explicación de lo que has cambiado. Por favor, mantenlo conciso.
+- Cuando un commit tiene problemas relacionados, por favor usa las palabras clave de Git para cerrar o relacionar automáticamente los problemas. https://help.github.com/articles/closing-issues-using-keywords/
+- Por favor, firma tu commit en el pie de página. Esto se puede añadir automáticamente a tu commit pasando -s a git commit (ver ejemplo anterior).
+
+Empuja el cambio a tu repositorio Git:
+
+[source, bash]
+----
+git push origin mi_nueva_rama
+----
+
+- Puedes usar -f en git push si necesitas sobrescribir tu historial de git. Por favor, usa esta bandera con precaución.
+
+Nos gustaría animarte a abrir un pull request temprano y usar la opción `Create draft pull request` (Crear borrador de pull request). Esto permite a otros verificar el PR, obtener comentarios tempranos y ayuda a crear un mejor producto final.
+
+Si se te ha dado acceso para ejecutar trabajos de prueba en nuestro servidor Jenkins, ejecuta https://ci.adoptium.net/job/Grinder/[Grinder] para validar tu PR. Si no tienes acceso, los revisores de tu PR ejecutarán algunas pruebas. Los revisores pueden pedirte que ejecutes pruebas adicionales dependiendo de los cambios que hayas realizado en tu PR.
+
+Asegúrate de que todos los trabajos de Grinder relacionados pasen y proporciona los enlaces de Grinder en el comentario del PR. Tus cambios también deben pasar las compilaciones automáticas de PR que se aplicarán a tu pull request.
+
+Convierte el PR a `Ready for review` (Listo para revisión) una vez que el PR esté listo.
+
+== Contacto
+
+Contacta al equipo de desarrollo web de la Fundación Eclipse a través de webdev@eclipse-foundation.org.

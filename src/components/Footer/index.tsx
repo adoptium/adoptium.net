@@ -123,10 +123,6 @@ const footerData: FooterData[] = [
         url: "https://www.eclipse.org/mail/",
       },
       {
-        text: { key: "footer.forums", defaultText: "Forums" },
-        url: "https://www.eclipse.org/forums/",
-      },
-      {
         text: { key: "footer.marketplace", defaultText: "Marketplace" },
         url: "https://marketplace.eclipse.org/",
       },

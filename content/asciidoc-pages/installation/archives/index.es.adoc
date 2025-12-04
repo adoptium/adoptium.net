@@ -1,0 +1,163 @@
+= Instalación de Archivo
+:page-authors: gdams, tellison, NickJavaDev88
+:toc:
+
+== Linux
+
+. Asegúrate de haber descargado el último link:/download[binario de Linux] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
+. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
++
+[source, bash]
+----
+# El comando debe estar en el mismo directorio que el archivo binario descargado
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
++
+[source, bash]
+----
+tar xzf <openjdk_binary>.tar.gz
+----
++
+. Añade esta versión de Java a tu `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+----
++
+. Comprueba que Java se ha instalado correctamente:
++
+[source, bash]
+----
+java -version
+----
+
+== macOS
+
+. Asegúrate de haber descargado el último link:/download[binario de macOS] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
+. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
++
+[source, bash]
+----
+# El comando debe estar en el mismo directorio que el archivo binario descargado
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
++
+[source, bash]
+----
+tar xzf <openjdk_binary>.tar.gz
+----
++
+. Añade esta versión de Java a tu `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/Contents/Home/bin:$PATH
+----
++
+. Comprueba que Java se ha instalado correctamente:
++
+[source, bash]
+----
+java -version
+----
+
+== Windows
+
+. Asegúrate de haber descargado el último link:/download[binario de Windows] a un directorio que no se moverá ni eliminará, y usa el Símbolo del sistema para acceder a él (cd).
+. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
++
+[source, powershell]
+----
+certutil -hashfile <downloaded_file>.zip SHA256
+----
++
+. Extrae el .zip. Puedes usar el siguiente comando:
++
+[source, powershell]
+----
+Expand-Archive -Path .\<downloaded_file>.zip -DestinationPath .
+----
++
+. Añade esta versión de Java a tu `PATH`:
++
+[source, powershell]
+----
+set PATH=%cd%\<extracted_directory>\bin;%PATH%
+----
++
+. Comprueba que Java se ha instalado correctamente:
++
+[source, powershell]
+----
+java -version
+----
+
+== AIX
+
+. Las últimas versiones de Eclipse Temurin capaces de ejecutarse en AIX 7.1 fueron 8u362, 11.0.18 y 17.0.8. Las versiones posteriores requieren el paquete de tiempo de ejecución IBM XL C/C++, disponible con el compilador o de forma independiente, para link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[XLC 13.1] para JDK8, y link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[XLC 16.1] para JDK11, 17 y 21, y link:https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.2?topic=reference-open-xl-cc-runtime-environment-filesets[OpenXL 17] (que también requiere AIX 7.2 TL5 SP3 o posterior).
+. Asegúrate de haber descargado el último link:/download[binario de AIX] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
+. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
++
+[source, bash]
+----
+# El comando debe estar en el mismo directorio que el archivo binario descargado
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
++
+[source, bash]
+----
+gunzip -c <openjdk_binary>.tar.gz | tar xf -
+----
++
+. Añade esta versión de Java a tu `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+----
++
+. Comprueba que Java se ha instalado correctamente:
++
+[source, bash]
+----
+java -version
+----
+
+== Solaris
+
+. Asegúrate de haber descargado el último link:/download[binario de Solaris] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
+. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
++
+[source, bash]
+----
+# El comando debe estar en el mismo directorio que el archivo binario descargado
+wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
+----
++
+. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
++
+[source, bash]
+----
+gunzip -c <openjdk_binary>.tar.gz | tar xf -
+----
++
+. Añade esta versión de Java a tu `PATH`
++
+[source, bash]
+----
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+----
++
+. Comprueba que Java se ha instalado correctamente:
++
+[source, bash]
+----
+java -version
+----
