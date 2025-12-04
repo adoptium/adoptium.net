@@ -25,9 +25,9 @@ All our testing of these binaries has been conducted on Windows 64-bit machines,
 
 Based on this it is our intention to also stop shipping the 32-bit Windows builds of Temurin in 2026. It is likely that typical end user scenarios on in-support operating systems will be able to use a 64-bit Temurin build.
 
-## Your feedback and support are crucial
+## Your feedback and support are essential, and support means real, ongoing commitment.
 
-We have created two issues to gather your feedback specifically for these platforms. We'd especially like to hear from you if you are able to provide additional support by adding a comment to the following issues:
+Keeping Solaris and Win32 alive requires dedicated infrastructure, continuous build and test maintenance, regular updates to stay aligned with OpenJDK, and people willing to triage, fix, and follow up on platform specific issues. If your organisation depends on these platforms, please consider contributing time, expertise, or financial resources so this work remains feasible, and let us know by adding a comment to the following issues:
 
 - Solaris: https://github.com/adoptium/temurin-build/issues/4318
 - Win32: https://github.com/adoptium/temurin-build/issues/4319
