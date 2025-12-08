@@ -1012,379 +1012,353 @@ exports[`Sustainers page > renders correctly 1`] = `
             class="lg:block hidden open-animation-wrapper"
           >
             <div
-              class="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0"
+              class="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             >
               <div
-                class="progress absolute top-0 bottom-4 left-0 right-0"
+                class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
               >
                 <div
-                  class="progress-fill w-full h-full"
-                  style="transform: scaleY(0);"
-                />
-              </div>
-              <div
-                class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
-                style="top: 0%;"
-              />
-              <div
-                class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"
-              >
-                <div
-                  class="w-[50%]"
+                  class="relative w-full h-full flex items-center justify-between"
                 >
                   <div
-                    class="flex flex-col justify-center items-center"
+                    class="w-1/2 h-full flex items-center justify-center relative"
                   >
-                    <img
-                      alt="Description"
-                      class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
-                      height="300"
-                      loading="lazy"
-                      src="/images/icons/diamond-layers.svg"
-                      style="color: transparent;"
-                      width="436"
-                    />
-                    <h2
-                      class="text-5xl font-medium"
-                    >
-                      Diamond
-                    </h2>
-                    <p
-                      class="text-2xl text-[#ff1464]"
-                    >
-                      €100k/year
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="max-w-[436px] ml-auto"
-                  >
-                    <h1
-                      class="text-xl md-pt-6 my-5 font-bold"
-                    >
-                      Diamond Benefits
-                    </h1>
                     <div
-                      class="text-base text-grey"
+                      class="absolute inset-0 flex items-center justify-center"
+                      style="opacity: 1; transform: none;"
                     >
-                      <ul
-                        class="text-left lg:list-disc lg:ml-4"
+                      <div
+                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
                       >
-                        <li>
-                          Logo (max size: 400x179) on our Sustainers page
-                        </li>
-                        <li>
-                          Logo location: top section, rotating placement in a row
-                        </li>
-                        <li>
-                          Use of the Diamond Sustainer logo for your site
-                        </li>
-                        <li>
-                          Joint press release with the Eclipse Foundation
-                        </li>
-                        <li>
-                          Listed in Eclipse Foundation Annual Reports
-                        </li>
-                        <li>
-                          Listed in all Adoptium Working Group press releases
-                        </li>
-                        <li>
-                          Sponsor a co-authored case study
-                        </li>
-                        <li>
-                          Media testimonial placement, spokesperson opportunities
-                        </li>
-                        <li>
-                          Speaking Opportunity at the Virtual Adoptium Summit
-                        </li>
-                      </ul>
+                        <img
+                          alt="Diamond Benefits"
+                          class="mb-6 drop-shadow-2xl"
+                          data-nimg="1"
+                          decoding="async"
+                          height="300"
+                          loading="lazy"
+                          src="/images/icons/diamond-layers.svg"
+                          style="color: transparent;"
+                          width="300"
+                        />
+                        <h2
+                          class="text-5xl font-bold text-white mb-2"
+                        >
+                          Diamond
+                        </h2>
+                        <p
+                          class="text-3xl text-[#ff1365] font-mono"
+                        >
+                          €100k/year
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center"
+                      style="opacity: 0; transform: scale(0.8);"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
+                      >
+                        <img
+                          alt="Platinum Benefits"
+                          class="mb-6 drop-shadow-2xl"
+                          data-nimg="1"
+                          decoding="async"
+                          height="300"
+                          loading="lazy"
+                          src="/images/icons/platinum-layers.svg"
+                          style="color: transparent;"
+                          width="300"
+                        />
+                        <h2
+                          class="text-5xl font-bold text-white mb-2"
+                        >
+                          Platinum
+                        </h2>
+                        <p
+                          class="text-3xl text-[#ff1365] font-mono"
+                        >
+                          €75k/year
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center"
+                      style="opacity: 0; transform: scale(0.8);"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
+                      >
+                        <img
+                          alt="Gold Benefits"
+                          class="mb-6 drop-shadow-2xl"
+                          data-nimg="1"
+                          decoding="async"
+                          height="300"
+                          loading="lazy"
+                          src="/images/icons/gold-layers.svg"
+                          style="color: transparent;"
+                          width="300"
+                        />
+                        <h2
+                          class="text-5xl font-bold text-white mb-2"
+                        >
+                          Gold
+                        </h2>
+                        <p
+                          class="text-3xl text-[#ff1365] font-mono"
+                        >
+                          €50k/year
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center"
+                      style="opacity: 0; transform: scale(0.8);"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
+                      >
+                        <img
+                          alt="Silver Benefits"
+                          class="mb-6 drop-shadow-2xl"
+                          data-nimg="1"
+                          decoding="async"
+                          height="300"
+                          loading="lazy"
+                          src="/images/icons/silver-layers.svg"
+                          style="color: transparent;"
+                          width="300"
+                        />
+                        <h2
+                          class="text-5xl font-bold text-white mb-2"
+                        >
+                          Silver
+                        </h2>
+                        <p
+                          class="text-3xl text-[#ff1365] font-mono"
+                        >
+                          €30k/year
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute inset-0 flex items-center justify-center"
+                      style="opacity: 0; transform: scale(0.8);"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
+                      >
+                        <img
+                          alt="Bronze Benefits"
+                          class="mb-6 drop-shadow-2xl"
+                          data-nimg="1"
+                          decoding="async"
+                          height="300"
+                          loading="lazy"
+                          src="/images/icons/bronze-layers.svg"
+                          style="color: transparent;"
+                          width="300"
+                        />
+                        <h2
+                          class="text-5xl font-bold text-white mb-2"
+                        >
+                          Bronze
+                        </h2>
+                        <p
+                          class="text-3xl text-[#ff1365] font-mono"
+                        >
+                          €10k/year
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-2"
-              >
-                <div
-                  class="w-[50%]"
-                >
                   <div
-                    class="flex flex-col justify-center items-center"
+                    class="w-1/2 h-full flex items-center justify-center relative pl-12"
                   >
-                    <img
-                      alt="Description"
-                      class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
-                      height="300"
-                      loading="lazy"
-                      src="/images/icons/platinum-layers.svg"
-                      style="color: transparent;"
-                      width="436"
-                    />
-                    <h2
-                      class="text-5xl font-medium"
-                    >
-                      Platinum
-                    </h2>
-                    <p
-                      class="text-2xl text-[#ff1464]"
-                    >
-                      €75k/year
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="max-w-[436px] ml-auto"
-                  >
-                    <h1
-                      class="text-xl md-pt-6 my-5 font-bold"
-                    >
-                      Platinum Benefits
-                    </h1>
                     <div
-                      class="text-base text-grey"
+                      class="absolute w-full max-w-lg"
+                      style="opacity: 1; transform: none;"
                     >
-                      <ul
-                        class="text-left lg:list-disc lg:ml-4"
+                      <h2
+                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
                       >
-                        <li>
-                          Logo (max size: 300x134) on our Sustainers page
-                        </li>
-                        <li>
-                          Logo location: upper-middle section, rotating placement in row
-                        </li>
-                        <li>
-                          Use of the Platinum Sustainer logo for your site
-                        </li>
-                        <li>
-                          Joint press release with the Eclipse Foundation
-                        </li>
-                        <li>
-                          Listed in Eclipse Foundation Annual Reports
-                        </li>
-                        <li>
-                          Listed in all Adoptium Working Group press releases
-                        </li>
-                        <li>
-                          Media testimonial placement, spokesperson opportunities
-                        </li>
-                      </ul>
+                        Diamond Benefits
+                      </h2>
+                      <div
+                        class="text-xl text-gray-300 leading-relaxed font-light"
+                      >
+                        <ul
+                          class="text-left lg:list-disc lg:ml-4"
+                        >
+                          <li>
+                            Logo (max size: 400x179) on our Sustainers page
+                          </li>
+                          <li>
+                            Logo location: top section, rotating placement in a row
+                          </li>
+                          <li>
+                            Use of the Diamond Sustainer logo for your site
+                          </li>
+                          <li>
+                            Joint press release with the Eclipse Foundation
+                          </li>
+                          <li>
+                            Listed in Eclipse Foundation Annual Reports
+                          </li>
+                          <li>
+                            Listed in all Adoptium Working Group press releases
+                          </li>
+                          <li>
+                            Sponsor a co-authored case study
+                          </li>
+                          <li>
+                            Media testimonial placement, spokesperson opportunities
+                          </li>
+                          <li>
+                            Speaking Opportunity at the Virtual Adoptium Summit
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-3"
-              >
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="flex flex-col justify-center items-center"
-                  >
-                    <img
-                      alt="Description"
-                      class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
-                      height="300"
-                      loading="lazy"
-                      src="/images/icons/gold-layers.svg"
-                      style="color: transparent;"
-                      width="436"
-                    />
-                    <h2
-                      class="text-5xl font-medium"
-                    >
-                      Gold
-                    </h2>
-                    <p
-                      class="text-2xl text-[#ff1464]"
-                    >
-                      €50k/year
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="max-w-[436px] ml-auto"
-                  >
-                    <h1
-                      class="text-xl md-pt-6 my-5 font-bold"
-                    >
-                      Gold Benefits
-                    </h1>
                     <div
-                      class="text-base text-grey"
+                      class="absolute w-full max-w-lg"
+                      style="opacity: 0; transform: translateY(50px);"
                     >
-                      <ul
-                        class="text-left lg:list-disc lg:ml-4"
+                      <h2
+                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
                       >
-                        <li>
-                          Logo (max size: 223x100) on our Sustainers page 
-                        </li>
-                        <li>
-                          Logo location: middle section, rotating placement in a row
-                        </li>
-                        <li>
-                          Use of the Gold Sustainer logo for your site
-                        </li>
-                        <li>
-                          Personal quote for your press release
-                        </li>
-                        <li>
-                          Listed in all Adoptium Working Group press releases
-                        </li>
-                        <li>
-                          Media testimonial placement, spokesperson opportunities
-                        </li>
-                      </ul>
+                        Platinum Benefits
+                      </h2>
+                      <div
+                        class="text-xl text-gray-300 leading-relaxed font-light"
+                      >
+                        <ul
+                          class="text-left lg:list-disc lg:ml-4"
+                        >
+                          <li>
+                            Logo (max size: 300x134) on our Sustainers page
+                          </li>
+                          <li>
+                            Logo location: upper-middle section, rotating placement in row
+                          </li>
+                          <li>
+                            Use of the Platinum Sustainer logo for your site
+                          </li>
+                          <li>
+                            Joint press release with the Eclipse Foundation
+                          </li>
+                          <li>
+                            Listed in Eclipse Foundation Annual Reports
+                          </li>
+                          <li>
+                            Listed in all Adoptium Working Group press releases
+                          </li>
+                          <li>
+                            Media testimonial placement, spokesperson opportunities
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-4"
-              >
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="flex flex-col justify-center items-center"
-                  >
-                    <img
-                      alt="Description"
-                      class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
-                      height="300"
-                      loading="lazy"
-                      src="/images/icons/silver-layers.svg"
-                      style="color: transparent;"
-                      width="436"
-                    />
-                    <h2
-                      class="text-5xl font-medium"
-                    >
-                      Silver
-                    </h2>
-                    <p
-                      class="text-2xl text-[#ff1464]"
-                    >
-                      €30k/year
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="max-w-[436px] ml-auto"
-                  >
-                    <h1
-                      class="text-xl md-pt-6 my-5 font-bold"
-                    >
-                      Silver Benefits
-                    </h1>
                     <div
-                      class="text-base text-grey"
+                      class="absolute w-full max-w-lg"
+                      style="opacity: 0; transform: translateY(50px);"
                     >
-                      <ul
-                        class="text-left lg:list-disc lg:ml-4"
+                      <h2
+                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
                       >
-                        <li>
-                          Logo (max size: 150x67) on our Sustainers page
-                        </li>
-                        <li>
-                          Logo location: lower-middle section, rotating placement in a row
-                        </li>
-                        <li>
-                          Use of the Silver Sustainer logo for your site
-                        </li>
-                        <li>
-                          Media testimonial placement, spokesperson opportunities
-                        </li>
-                        <li>
-                          Listed in all Adoptium Working Group press releases
-                        </li>
-                      </ul>
+                        Gold Benefits
+                      </h2>
+                      <div
+                        class="text-xl text-gray-300 leading-relaxed font-light"
+                      >
+                        <ul
+                          class="text-left lg:list-disc lg:ml-4"
+                        >
+                          <li>
+                            Logo (max size: 223x100) on our Sustainers page 
+                          </li>
+                          <li>
+                            Logo location: middle section, rotating placement in a row
+                          </li>
+                          <li>
+                            Use of the Gold Sustainer logo for your site
+                          </li>
+                          <li>
+                            Personal quote for your press release
+                          </li>
+                          <li>
+                            Listed in all Adoptium Working Group press releases
+                          </li>
+                          <li>
+                            Media testimonial placement, spokesperson opportunities
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-5"
-              >
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="flex flex-col justify-center items-center"
-                  >
-                    <img
-                      alt="Description"
-                      class="max-w-[436px] mb-0"
-                      data-nimg="1"
-                      decoding="async"
-                      height="300"
-                      loading="lazy"
-                      src="/images/icons/bronze-layers.svg"
-                      style="color: transparent;"
-                      width="436"
-                    />
-                    <h2
-                      class="text-5xl font-medium"
-                    >
-                      Bronze
-                    </h2>
-                    <p
-                      class="text-2xl text-[#ff1464]"
-                    >
-                      €10k/year
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="w-[50%]"
-                >
-                  <div
-                    class="max-w-[436px] ml-auto"
-                  >
-                    <h1
-                      class="text-xl md-pt-6 my-5 font-bold"
-                    >
-                      Bronze Benefits
-                    </h1>
                     <div
-                      class="text-base text-grey"
+                      class="absolute w-full max-w-lg"
+                      style="opacity: 0; transform: translateY(50px);"
                     >
-                      <ul
-                        class="text-left lg:list-disc lg:ml-4"
+                      <h2
+                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
                       >
-                        <li>
-                          Logo (max size: 150x67) on our Sustainers page
-                        </li>
-                        <li>
-                          Logo location: lower section, rotating placement in a row
-                        </li>
-                        <li>
-                          Use of the Bronze Sustainer logo for your site
-                        </li>
-                        <li>
-                          Listed in all Adoptium Working Group press releases
-                        </li>
-                      </ul>
+                        Silver Benefits
+                      </h2>
+                      <div
+                        class="text-xl text-gray-300 leading-relaxed font-light"
+                      >
+                        <ul
+                          class="text-left lg:list-disc lg:ml-4"
+                        >
+                          <li>
+                            Logo (max size: 150x67) on our Sustainers page
+                          </li>
+                          <li>
+                            Logo location: lower-middle section, rotating placement in a row
+                          </li>
+                          <li>
+                            Use of the Silver Sustainer logo for your site
+                          </li>
+                          <li>
+                            Media testimonial placement, spokesperson opportunities
+                          </li>
+                          <li>
+                            Listed in all Adoptium Working Group press releases
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute w-full max-w-lg"
+                      style="opacity: 0; transform: translateY(50px);"
+                    >
+                      <h2
+                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                      >
+                        Bronze Benefits
+                      </h2>
+                      <div
+                        class="text-xl text-gray-300 leading-relaxed font-light"
+                      >
+                        <ul
+                          class="text-left lg:list-disc lg:ml-4"
+                        >
+                          <li>
+                            Logo (max size: 150x67) on our Sustainers page
+                          </li>
+                          <li>
+                            Logo location: lower section, rotating placement in a row
+                          </li>
+                          <li>
+                            Use of the Bronze Sustainer logo for your site
+                          </li>
+                          <li>
+                            Listed in all Adoptium Working Group press releases
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

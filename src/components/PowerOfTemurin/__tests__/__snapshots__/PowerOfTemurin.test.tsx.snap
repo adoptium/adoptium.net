@@ -3,10 +3,11 @@
 exports[`PowerOfTemurin component > should render correctly 1`] = `
 <div>
   <div
-    class="bg-purple py-16"
+    class="bg-purple pt-16 pb-0"
   >
     <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16"
+      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
+      style="opacity: 0; transform: translateY(50px);"
     >
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
@@ -22,7 +23,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
         href="/business-benefits"
       >
         <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border hover:scale-105 transition-transform duration-300"
         >
           Text
         </button>
@@ -152,127 +153,119 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       class="lg:block hidden open-animation-wrapper"
     >
       <div
-        class="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0"
+        class="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div
-          class="progress absolute top-0 bottom-4 left-0 right-0"
+          class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
         >
           <div
-            class="progress-fill w-full h-full"
-            style="transform: scaleY(0);"
-          />
-        </div>
-        <div
-          class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
-          style="top: 0%;"
-        />
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"
-        >
-          <div
-            class="w-[50%]"
-          >
-            <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
-              width="436"
-            />
-          </div>
-          <div
-            class="w-[50%]"
+            class="relative w-full h-full flex items-center justify-between"
           >
             <div
-              class="max-w-[436px] ml-auto"
+              class="w-1/2 h-full flex items-center justify-center relative"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
-              >
-                Text
-              </h1>
               <div
-                class="text-base text-grey"
+                class="absolute inset-0 flex items-center justify-center"
+                style="opacity: 1; transform: none;"
               >
-                Text
+                <div
+                  class="relative w-full max-w-[500px] aspect-square"
+                >
+                  <img
+                    alt="Text"
+                    class="object-contain drop-shadow-2xl"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/images/icons/feature-layers.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+                style="opacity: 0; transform: scale(0.8);"
+              >
+                <div
+                  class="relative w-full max-w-[500px] aspect-square"
+                >
+                  <img
+                    alt="Text"
+                    class="object-contain drop-shadow-2xl"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/images/icons/feature-layers.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+                style="opacity: 0; transform: scale(0.8);"
+              >
+                <div
+                  class="relative w-full max-w-[500px] aspect-square"
+                >
+                  <img
+                    alt="Text"
+                    class="object-contain drop-shadow-2xl"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/images/icons/feature-layers.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-2"
-        >
-          <div
-            class="w-[50%]"
-          >
-            <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
-              width="436"
-            />
-          </div>
-          <div
-            class="w-[50%]"
-          >
             <div
-              class="max-w-[436px] ml-auto"
+              class="w-1/2 h-full flex items-center justify-center relative pl-12"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
-              >
-                Text
-              </h1>
               <div
-                class="text-base text-grey"
+                class="absolute w-full max-w-lg"
+                style="opacity: 1; transform: none;"
               >
-                Text
+                <h2
+                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Text
+                </h2>
+                <div
+                  class="text-xl text-gray-300 leading-relaxed font-light"
+                >
+                  Text
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-3"
-        >
-          <div
-            class="w-[50%]"
-          >
-            <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
-              width="436"
-            />
-          </div>
-          <div
-            class="w-[50%]"
-          >
-            <div
-              class="max-w-[436px] ml-auto"
-            >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
-              >
-                Text
-              </h1>
               <div
-                class="text-base text-grey"
+                class="absolute w-full max-w-lg"
+                style="opacity: 0; transform: translateY(50px);"
               >
-                Text
+                <h2
+                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Text
+                </h2>
+                <div
+                  class="text-xl text-gray-300 leading-relaxed font-light"
+                >
+                  Text
+                </div>
+              </div>
+              <div
+                class="absolute w-full max-w-lg"
+                style="opacity: 0; transform: translateY(50px);"
+              >
+                <h2
+                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Text
+                </h2>
+                <div
+                  class="text-xl text-gray-300 leading-relaxed font-light"
+                >
+                  Text
+                </div>
               </div>
             </div>
           </div>
