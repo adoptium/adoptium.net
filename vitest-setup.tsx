@@ -85,6 +85,24 @@ vi.mock("next-intl", () => ({
   ),
 }));
 
+// Mock framer-motion
+vi.mock("framer-motion", () => ({
+  motion: {
+    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+    h3: ({ children, ...props }: any) => <h3 {...props}>{children}</h3>,
+    p: ({ children, ...props }: any) => <p {...props}>{children}</p>,
+  },
+  useScroll: () => ({ scrollYProgress: { get: () => 0 } }),
+  useTransform: () => 0,
+}));
+
+// Mock next/image
+vi.mock("next/image", () => ({
+  default: ({ src, alt, fill, ...props }: any) => (
+    <img src={src} alt={alt} {...props} />
+  ),
+}));
+
 vi.mock("@/i18n/navigation", () => ({
   redirect: vi.fn(),
   usePathname: vi.fn(() => "/en"),
