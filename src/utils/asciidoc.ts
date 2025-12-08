@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { decode } from "html-entities";
+import asciidoctor from "asciidoctor";
+
+const Asciidoctor = asciidoctor();
 
 interface AsciidoctorDocument {
   getSourceLocation(): { getPath(): string };
@@ -29,19 +32,6 @@ const baseUrl =
   process.env.NODE_ENV === "production"
     ? "https://adoptium.net"
     : "http://localhost:3000";
-
-// Lazy-load Asciidoctor to avoid issues with dynamic requires in Next.js
-let asciidoctorInstance: ReturnType<typeof require> | null = null;
-
-function getAsciidoctor() {
-  if (!asciidoctorInstance) {
-    // Dynamic require to avoid module resolution issues in Next.js
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const Asciidoctor = require("@asciidoctor/core");
-    asciidoctorInstance = Asciidoctor();
-  }
-  return asciidoctorInstance;
-}
 
 /**
  * Custom Asciidoctor include processor that resolves partials
@@ -95,9 +85,8 @@ export function processAsciiDoc(
   content: string,
   options: Record<string, unknown> = {}
 ) {
-  const asciidoctor = getAsciidoctor();
   const basePath = path.dirname(filePath);
-  const registry = asciidoctor.Extensions.create();
+  const registry = Asciidoctor.Extensions.create();
 
   // Create an instance of our custom processor
   const customProcessor = new CustomIncludeProcessor(basePath);
@@ -149,7 +138,7 @@ export function processAsciiDoc(
   // Convert AsciiDoc to HTML - use the processor without extension registration
   // if we're having issues with extensions
   try {
-    let html = asciidoctor.convert(content, mergedOptions) as string;
+    let html = Asciidoctor.convert(content, mergedOptions) as string;
     // Post-process image src paths: replace src="filename.png" with src="/docs/filename.png" if not already absolute or external
     html = html.replace(
       /<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi,
@@ -164,7 +153,7 @@ export function processAsciiDoc(
     // Use object destructuring with "rest" syntax to remove the property
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { extension_registry, ...fallbackOptions } = defaultOptions;
-    let html = asciidoctor.convert(content, fallbackOptions) as string;
+    let html = Asciidoctor.convert(content, fallbackOptions) as string;
     html = html.replace(
       /<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi,
       '<img$1src="/docs/$2"'
@@ -192,8 +181,7 @@ export function extractMetadata(
   authors: string[];
   attributes: Record<string, unknown>;
 } {
-  const asciidoctor = getAsciidoctor();
-  const doc = asciidoctor.load(content, { safe: "server" });
+  const doc = Asciidoctor.load(content, { safe: "server" });
 
   // Get the title and ensure it's a string
   const docTitle = doc.getDocumentTitle();

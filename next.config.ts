@@ -21,14 +21,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  webpack: (config, { isServer }) => {
-    // Configure webpack to handle @asciidoctor/core's dynamic requires
-    // This is necessary for Next.js 16 compatibility
-    if (isServer) {
-      config.externals.push("@asciidoctor/core");
-    }
-    return config;
-  },
   async redirects() {
     return [
       {
