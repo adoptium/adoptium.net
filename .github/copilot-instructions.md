@@ -20,7 +20,7 @@ This is the official site for Eclipse Adoptium, built with **Next.js 15** using 
 
 ### Key Dependencies
 
-- `@asciidoctor/core` - AsciiDoc processing
+- `asciidoctor` - AsciiDoc processing
 - `next-mdx-remote` - MDX content rendering
 - `framer-motion` - Animations
 - `@mui/x-data-grid` - Data tables
@@ -131,7 +131,7 @@ export default ComponentName;
 - **Blog posts**: MDX files in `content/blog/`
 - **Documentation**: AsciiDoc files in `content/asciidoc-pages/`
 - Custom MDX components in `components/CustomMDX/`
-- AsciiDoc processing via `@asciidoctor/core`
+- AsciiDoc processing via `asciidoctor`
 
 ### Styling System
 

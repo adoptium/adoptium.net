@@ -12,7 +12,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@asciidoctor/core": "^3.0.4",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@fortawesome/fontawesome-free": "^7.1.0",
@@ -20,6 +19,7 @@
     "@mui/material": "^7.3.6",
     "@mui/x-data-grid": "^8.21.0",
     "@next/third-parties": "16.0.7",
+    "asciidoctor": "^3.0.4",
     "axios": "^1.13.2",
     "framer-motion": "^12.23.25",
     "gray-matter": "^4.0.3",
