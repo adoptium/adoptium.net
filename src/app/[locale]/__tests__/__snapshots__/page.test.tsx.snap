@@ -1,305 +1,349 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Index page > renders correctly 1`] = `
-<div>
-  <div>
+<div
+  class="bg-[#14003c]"
+>
+  <section
+    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#14003c] pt-20 pb-10"
+  >
     <div
-      class="-mt-24 sm:bg-contain bg-temurin-hero bg-center bg-no-repeat relative"
+      class="absolute inset-0 z-0"
     >
       <div
-        class="relative isolate"
+        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#ff1365] rounded-full blur-[120px] opacity-10 animate-pulse"
+      />
+      <div
+        class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#7026b9] rounded-full blur-[120px] opacity-10 animate-pulse delay-1000"
+      />
+    </div>
+    <div
+      class="absolute inset-0 z-0 hidden md:flex items-start justify-center pointer-events-none"
+      style="opacity: 0.4; transform: none;"
+    >
+      <div
+        class="relative w-[1000px] h-[1000px] -mt-32"
+      >
+        <img
+          alt="Temurin Logo Background"
+          class="object-contain"
+          data-nimg="fill"
+          decoding="async"
+          sizes="100vw"
+          src="/_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+      </div>
+    </div>
+     
+    <div
+      class="container mx-auto px-4 z-10 flex flex-col items-center text-center justify-center"
+    >
+      <div
+        style="opacity: 0; transform: translateY(20px);"
+      >
+        <h1
+          class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-[20ch] mx-auto leading-tight"
+          style="text-wrap: balance;"
+        >
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70"
+          >
+            Text
+          </span>
+          <span
+            class="text-[#ff1365]"
+          >
+            .
+          </span>
+        </h1>
+      </div>
+      <p
+        class="text-2xl md:text-3xl text-gray-300 max-w-3xl mb-12 font-normal leading-relaxed"
+        style="opacity: 0; transform: translateY(20px);"
+      >
+        Text
+      </p>
+      <div
+        class="relative z-10 mb-12"
+        style="opacity: 0; transform: scale(0.9);"
       >
         <div
-          class="absolute sm:hidden top-[80px] z-[-1] left-0 w-full flex justify-center"
-        >
-          <img
-            alt="Temurin Hero Mobile Background"
-            class="max-w-80 h-auto"
-            data-nimg="1"
-            decoding="async"
-            draggable="false"
-            height="0"
-            loading="lazy"
-            src="/images/backgrounds/temurin-hero-mobile.svg"
-            style="color: transparent;"
-            width="600"
-          />
-        </div>
-        <div
-          aria-hidden="true"
-          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        />
-        <div
-          class="max-w-[1264px] mx-auto flex justify-center items-center"
+          class="flex flex-col items-center gap-6"
         >
           <div
-            class="mx-auto max-w-[832px] w-full h-[680px] sm:h-[720px] px-8 lg:px-0 flex items-center"
+            class="relative"
           >
-            <div
-              class="text-center w-full"
+            <a
+              class="relative flex items-center justify-center gap-4 bg-gray-800/50 text-gray-500 px-10 py-5 rounded-full ring-1 ring-white/5 cursor-not-allowed"
+              href="#"
             >
-              <h1
-                class="font-semibold leading-[72px] lg:leading-[120px] text-white-900 text-[64px] lg:text-[104px] mb-8"
+              <span
+                class="w-8 h-8 flex items-center justify-center opacity-50"
+              />
+              <span
+                class="text-xl font-bold leading-none"
               >
                 Text
-              </h1>
-              <p
-                class="lg:my-10 mt-6 mb-10 text-2xl leading-8 text-white-600 font-semibold"
-              >
-                Text
-              </p>
-              <div
-                class="mt-10 flex items-center sm:flex-row flex-col-reverse justify-center gap-6"
-              >
-                <a
-                  class="text-base underline transition duration-300 ease-in-out font-bold leading-6 text-white-900"
-                  href="/temurin/releases"
-                >
-                  Text
-                </a>
-                <a
-                  class="rounded-[80px] bg-[#FF1464] cursor-not-allowed hover:bg-transparent border transition duration-300 ease-in-out hover:text-[#FF1464] border-[#FF1464] flex items-center justify-center gap-3 w-[244px] h-[56px] text-white font-bold leading-6 text-base"
-                  href="#"
-                >
-                  <span
-                    class="w-6 h-6 flex items-center justify-center"
-                  />
-                  Text
-                </a>
-              </div>
-            </div>
+              </span>
+            </a>
+          </div>
+          <a
+            class="text-sm text-gray-400 hover:text-[#ff1365] transition-colors duration-300 flex items-center gap-2 group"
+            href="/temurin/releases"
+          >
+            Text
+            <span
+              aria-hidden="true"
+              class="group-hover:translate-x-0.5 transition-transform"
+            >
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="w-full max-w-7xl mx-auto"
+        style="opacity: 0; transform: translateY(20px);"
+      >
+        <div
+          class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
+        >
+          <h2
+            class="text-center text-xl font-normal leading-7 text-grey"
+          >
+            Text
+          </h2>
+          <div
+            class="mt-6"
+            data-testid="react-slick-mock"
+          >
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Arm"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-arm-white.svg"
+                style="color: transparent; padding: 1em;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Atlassian"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-atlassian-white.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Dynatrace"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Mercedes-Benz Tech Innovation GmbH"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Michelin"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-michelin-white.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Microsoft"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-microsoft-white.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="MongoDB"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-mongodb-white.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Red Hat"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="Societe Generale"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-societe-generale-white.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
+            <span
+              class="px-4"
+            >
+              <img
+                alt="T-Systems"
+                class="h-[100px] w-auto object-contain mx-auto"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/images/adopters/logo-t-systems-white.svg"
+                style="color: transparent; padding: 0px;"
+                width="200"
+              />
+            </span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
-  >
-    <h2
-      class="text-center text-xl font-normal leading-7 text-grey"
-    >
-      Text
-    </h2>
-    <div
-      class="mt-6"
-      data-testid="react-slick-mock"
-    >
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Arm"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-arm-white.svg"
-          style="color: transparent; padding: 1em;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Atlassian"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-atlassian-white.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Dynatrace"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Mercedes-Benz Tech Innovation GmbH"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Michelin"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-michelin-white.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Microsoft"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-microsoft-white.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="MongoDB"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-mongodb-white.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Red Hat"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="Societe Generale"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-societe-generale-white.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-      <span
-        class="px-4"
-      >
-        <img
-          alt="T-Systems"
-          class="h-[100px] w-auto object-contain mx-auto"
-          data-nimg="1"
-          decoding="async"
-          height="100"
-          loading="lazy"
-          src="/images/adopters/logo-t-systems-white.svg"
-          style="color: transparent; padding: 0px;"
-          width="200"
-        />
-      </span>
-    </div>
-  </div>
-  <div
-    class="relative w-full"
+  </section>
+  <section
+    class="w-full bg-[#14003c] py-12 relative z-20"
   >
     <div
-      class="w-full h-[1px] my-32 lg:my-16 bg-[#3E3355]"
-    />
-    <div
-      class="absolute w-full top-[-72px]"
+      class="container mx-auto px-4"
     >
       <div
-        class="relative border border-[#3E3355] md:rounded-lg container mx-auto px-4 bg-purple"
+        class="relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 md:p-12 shadow-2xl backdrop-blur-sm"
+        style="opacity: 0; transform: translateY(50px);"
       >
         <div
-          class="from-[#0E002A] via-[#240b50] to-[#9a227a] py-5 w-full shadow-lg"
+          class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-10"
+        />
+        <div
+          class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-[#7026b9] rounded-full blur-[100px] opacity-10"
+        />
+        <div
+          class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
         >
           <div
-            class="container mx-auto px-4"
+            class="max-w-3xl"
           >
-            <div
-              class="flex flex-col md:flex-row justify-between items-center relative"
+            <h2
+              class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight"
             >
-              <div
-                class="flex items-center gap-4 mb-3 md:mb-0 pr-8"
+              Become a sustainer!
+            </h2>
+            <p
+              class="text-lg text-gray-300 leading-relaxed font-light"
+            >
+              Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.
+            </p>
+          </div>
+          <div
+            class="flex-shrink-0 pt-2 md:pt-0"
+          >
+            <a
+              class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-300 bg-[#ff1365] rounded-full hover:bg-[#ff1365]/90 hover:scale-105 shadow-lg hover:shadow-[#ff1365]/25 group"
+              href="/sustainers/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Learn more!
+              <svg
+                class="w-5 h-5 ml-2 -mr-1 transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                <div>
-                  <h2
-                    class="text-[16px] md:text-2xl font-extrabold text-white leading-tight"
-                  >
-                    <span
-                      class="text-primary"
-                    >
-                      Become a sustainer!
-                    </span>
-                  </h2>
-                  <p
-                    class="text-[14px] text-gray-200 mt-1 max-w-2xl"
-                  >
-                    Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.
-                     
-                    <a
-                      class="text-primary"
-                      href="/sustainers/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Learn more!
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
+                <path
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div
-    class="bg-purple py-16"
+    class="bg-purple pt-16 pb-0"
   >
     <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16"
+      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
+      style="opacity: 0; transform: translateY(50px);"
     >
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
@@ -315,7 +359,7 @@ exports[`Index page > renders correctly 1`] = `
         href="/business-benefits"
       >
         <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border hover:scale-105 transition-transform duration-300"
         >
           Text
         </button>
@@ -445,127 +489,119 @@ exports[`Index page > renders correctly 1`] = `
       class="lg:block hidden open-animation-wrapper"
     >
       <div
-        class="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0"
+        class="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div
-          class="progress absolute top-0 bottom-4 left-0 right-0"
+          class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
         >
           <div
-            class="progress-fill w-full h-full"
-            style="transform: scaleY(0);"
-          />
-        </div>
-        <div
-          class="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
-          style="top: 0%;"
-        />
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-1"
-        >
-          <div
-            class="w-[50%]"
-          >
-            <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
-              width="436"
-            />
-          </div>
-          <div
-            class="w-[50%]"
+            class="relative w-full h-full flex items-center justify-between"
           >
             <div
-              class="max-w-[436px] ml-auto"
+              class="w-1/2 h-full flex items-center justify-center relative"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
-              >
-                Text
-              </h1>
               <div
-                class="text-base text-grey"
+                class="absolute inset-0 flex items-center justify-center"
+                style="opacity: 1; transform: none;"
               >
-                Text
+                <div
+                  class="relative w-full max-w-[500px] aspect-square"
+                >
+                  <img
+                    alt="Text"
+                    class="object-contain drop-shadow-2xl"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/images/icons/feature-layers.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+                style="opacity: 0; transform: scale(0.8);"
+              >
+                <div
+                  class="relative w-full max-w-[500px] aspect-square"
+                >
+                  <img
+                    alt="Text"
+                    class="object-contain drop-shadow-2xl"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/images/icons/feature-layers.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center"
+                style="opacity: 0; transform: scale(0.8);"
+              >
+                <div
+                  class="relative w-full max-w-[500px] aspect-square"
+                >
+                  <img
+                    alt="Text"
+                    class="object-contain drop-shadow-2xl"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    src="/images/icons/feature-layers.svg"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-2"
-        >
-          <div
-            class="w-[50%]"
-          >
-            <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
-              width="436"
-            />
-          </div>
-          <div
-            class="w-[50%]"
-          >
             <div
-              class="max-w-[436px] ml-auto"
+              class="w-1/2 h-full flex items-center justify-center relative pl-12"
             >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
-              >
-                Text
-              </h1>
               <div
-                class="text-base text-grey"
+                class="absolute w-full max-w-lg"
+                style="opacity: 1; transform: none;"
               >
-                Text
+                <h2
+                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Text
+                </h2>
+                <div
+                  class="text-xl text-gray-300 leading-relaxed font-light"
+                >
+                  Text
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-3"
-        >
-          <div
-            class="w-[50%]"
-          >
-            <img
-              alt="Description"
-              class="max-w-[436px] mb-0"
-              data-nimg="1"
-              decoding="async"
-              height="300"
-              loading="lazy"
-              src="/images/icons/feature-layers.svg"
-              style="color: transparent;"
-              width="436"
-            />
-          </div>
-          <div
-            class="w-[50%]"
-          >
-            <div
-              class="max-w-[436px] ml-auto"
-            >
-              <h1
-                class="text-xl md-pt-6 my-5 font-bold"
-              >
-                Text
-              </h1>
               <div
-                class="text-base text-grey"
+                class="absolute w-full max-w-lg"
+                style="opacity: 0; transform: translateY(50px);"
               >
-                Text
+                <h2
+                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Text
+                </h2>
+                <div
+                  class="text-xl text-gray-300 leading-relaxed font-light"
+                >
+                  Text
+                </div>
+              </div>
+              <div
+                class="absolute w-full max-w-lg"
+                style="opacity: 0; transform: translateY(50px);"
+              >
+                <h2
+                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                  Text
+                </h2>
+                <div
+                  class="text-xl text-gray-300 leading-relaxed font-light"
+                >
+                  Text
+                </div>
               </div>
             </div>
           </div>
@@ -575,6 +611,7 @@ exports[`Index page > renders correctly 1`] = `
   </div>
   <div
     class="bg-purple py-8 lg:py-16"
+    style="opacity: 0; transform: scale(0.9);"
   >
     <div
       class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
@@ -617,390 +654,279 @@ exports[`Index page > renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <div
-    class="temurin-features"
+  <section
+    class="py-24 bg-[#14003c] text-white"
   >
     <div
-      class=" lg:py-14 sm:py-18  mx-auto w-full"
+      class="container mx-auto px-4"
     >
       <div
-        class="mx-auto lg:pl-[88px] pl-6 w-full flex lg:flex-row flex-col items-start lg:items-end justify-center lg:space-x-8 xl:space-x-16 relative overflow-hidden"
+        class="text-center mb-16"
+        style="opacity: 0; transform: translateY(50px);"
+      >
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-6"
+        >
+          Text
+        </h2>
+        <p
+          class="text-xl text-gray-400 max-w-2xl mx-auto"
+        >
+          Text
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
       >
         <div
-          class="max-w-[600px] w-full flex flex-col justify-between mb-16 lg:mb-0"
+          class="md:col-span-2 bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          style="opacity: 0; transform: translateY(50px) scale(0.95);"
         >
-          <div>
-            <h2
-              class="text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div
+              class="mb-6"
             >
-              Text
-            </h2>
-            <h3
-              class="text-xl font-normal leading-7 text-grey mt-6 mb-8"
-            >
-              Text
-            </h3>
-            <a
-              href="/temurin/releases"
-            >
-              <button
-                class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+              <div
+                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
               >
-                Download Temurin®
-              </button>
-            </a>
+                <img
+                  alt="Text"
+                  class="w-6 h-6"
+                  data-nimg="1"
+                  decoding="async"
+                  height="24"
+                  loading="lazy"
+                  src="/images/icons/lock.svg"
+                  style="color: transparent;"
+                  width="24"
+                />
+              </div>
+              <h3
+                class="text-2xl font-bold mb-2"
+              >
+                Text
+              </h3>
+              <p
+                class="text-gray-400 leading-relaxed"
+              >
+                Text
+              </p>
+            </div>
           </div>
           <div
-            class="lg:flex gap-4 items-center mt-16 hidden"
-          >
-            <button
-              aria-label="Previous Feature"
-              class="text-white"
-            >
-              <svg
-                fill="none"
-                height="50"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                viewBox="0 0 24 24"
-                width="50"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-                <polyline
-                  points="12 8 8 12 12 16"
-                />
-                <line
-                  x1="16"
-                  x2="8"
-                  y1="12"
-                  y2="12"
-                />
-              </svg>
-            </button>
-            <button
-              aria-label="Next Feature"
-              class="text-white"
-            >
-              <svg
-                fill="none"
-                height="50"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                viewBox="0 0 24 24"
-                width="50"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-                <polyline
-                  points="12 16 16 12 12 8"
-                />
-                <line
-                  x1="8"
-                  x2="16"
-                  y1="12"
-                  y2="12"
-                />
-              </svg>
-            </button>
-          </div>
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+          />
         </div>
         <div
-          data-testid="Swiper"
+          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          style="opacity: 0; transform: translateY(50px) scale(0.95);"
         >
           <div
-            data-testid="SwiperSlide"
+            class="relative z-10 h-full flex flex-col justify-between"
           >
             <div
-              class="flex-shrink-0"
+              class="mb-6"
             >
-              <img
-                alt="Text"
-                class="h-[64px] w-auto"
-                data-nimg="1"
-                decoding="async"
-                height="64"
-                loading="lazy"
-                src="/images/icons/lock.svg"
-                style="color: transparent;"
-                width="64"
-              />
-            </div>
-            <div
-              class="flex flex-col justify-between flex-grow mt-10"
-            >
-              <div>
-                <h2
-                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-                >
-                  Text
-                </h2>
-                <p
-                  class="text-grey text-l font-normal leading-7 mt-6"
-                >
-                  Text
-                </p>
+              <div
+                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
+              >
+                <img
+                  alt="Text"
+                  class="w-6 h-6"
+                  data-nimg="1"
+                  decoding="async"
+                  height="24"
+                  loading="lazy"
+                  src="/images/initiatives/testing.svg"
+                  style="color: transparent;"
+                  width="24"
+                />
               </div>
+              <h3
+                class="text-2xl font-bold mb-2"
+              >
+                Text
+              </h3>
+              <p
+                class="text-gray-400 leading-relaxed"
+              >
+                Text
+              </p>
             </div>
           </div>
           <div
-            data-testid="SwiperSlide"
-          >
-            <div
-              class="flex-shrink-0"
-            >
-              <img
-                alt="Text"
-                class="h-[64px] w-auto"
-                data-nimg="1"
-                decoding="async"
-                height="64"
-                loading="lazy"
-                src="/images/initiatives/testing.svg"
-                style="color: transparent;"
-                width="64"
-              />
-            </div>
-            <div
-              class="flex flex-col justify-between flex-grow mt-10"
-            >
-              <div>
-                <h2
-                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-                >
-                  Text
-                </h2>
-                <p
-                  class="text-grey text-l font-normal leading-7 mt-6"
-                >
-                  Text
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="SwiperSlide"
-          >
-            <div
-              class="flex-shrink-0"
-            >
-              <img
-                alt="Text"
-                class="h-[64px] w-auto"
-                data-nimg="1"
-                decoding="async"
-                height="64"
-                loading="lazy"
-                src="/images/initiatives/deploy.svg"
-                style="color: transparent;"
-                width="64"
-              />
-            </div>
-            <div
-              class="flex flex-col justify-between flex-grow mt-10"
-            >
-              <div>
-                <h2
-                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-                >
-                  Text
-                </h2>
-                <p
-                  class="text-grey text-l font-normal leading-7 mt-6"
-                >
-                  Text
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="SwiperSlide"
-          >
-            <div
-              class="flex-shrink-0"
-            >
-              <img
-                alt="Text"
-                class="h-[64px] w-auto"
-                data-nimg="1"
-                decoding="async"
-                height="64"
-                loading="lazy"
-                src="/images/initiatives/release.svg"
-                style="color: transparent;"
-                width="64"
-              />
-            </div>
-            <div
-              class="flex flex-col justify-between flex-grow mt-10"
-            >
-              <div>
-                <h2
-                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-                >
-                  Text
-                </h2>
-                <p
-                  class="text-grey text-l font-normal leading-7 mt-6"
-                >
-                  Text
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="SwiperSlide"
-          >
-            <div
-              class="flex-shrink-0"
-            >
-              <img
-                alt="Text"
-                class="h-[64px] w-auto"
-                data-nimg="1"
-                decoding="async"
-                height="64"
-                loading="lazy"
-                src="/images/initiatives/community.svg"
-                style="color: transparent;"
-                width="64"
-              />
-            </div>
-            <div
-              class="flex flex-col justify-between flex-grow mt-10"
-            >
-              <div>
-                <h2
-                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-                >
-                  Text
-                </h2>
-                <p
-                  class="text-grey text-l font-normal leading-7 mt-6"
-                >
-                  Text
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="SwiperSlide"
-          >
-            <div
-              class="flex-shrink-0"
-            >
-              <img
-                alt="Text"
-                class="h-[64px] w-auto"
-                data-nimg="1"
-                decoding="async"
-                height="64"
-                loading="lazy"
-                src="/images/initiatives/security.svg"
-                style="color: transparent;"
-                width="64"
-              />
-            </div>
-            <div
-              class="flex flex-col justify-between flex-grow mt-10"
-            >
-              <div>
-                <h2
-                  class="text-white text-2xl leading-6 font-bold m-0 flex items-center gap-x-3 mb-4"
-                >
-                  Text
-                </h2>
-                <p
-                  class="text-grey text-l font-normal leading-7 mt-6"
-                >
-                  Text
-                </p>
-              </div>
-            </div>
-          </div>
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+          />
         </div>
-         
         <div
-          class="flex gap-4 items-center my-8  w-full justify-center lg:hidden"
+          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          style="opacity: 0; transform: translateY(50px) scale(0.95);"
         >
-          <button
-            class="text-white"
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
           >
-            <svg
-              aria-label="Previous Feature"
-              fill="none"
-              height="50"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1"
-              viewBox="0 0 24 24"
-              width="50"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="mb-6"
             >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <polyline
-                points="12 8 8 12 12 16"
-              />
-              <line
-                x1="16"
-                x2="8"
-                y1="12"
-                y2="12"
-              />
-            </svg>
-          </button>
-          <button
-            class="text-white"
+              <div
+                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
+              >
+                <img
+                  alt="Text"
+                  class="w-6 h-6"
+                  data-nimg="1"
+                  decoding="async"
+                  height="24"
+                  loading="lazy"
+                  src="/images/initiatives/deploy.svg"
+                  style="color: transparent;"
+                  width="24"
+                />
+              </div>
+              <h3
+                class="text-2xl font-bold mb-2"
+              >
+                Text
+              </h3>
+              <p
+                class="text-gray-400 leading-relaxed"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+          />
+        </div>
+        <div
+          class="md:col-span-2 bg-gradient-to-bl from-[#2d1b4e] to-[#1a0b2e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
           >
-            <svg
-              aria-label="Next Feature"
-              fill="none"
-              height="50"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1"
-              viewBox="0 0 24 24"
-              width="50"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="mb-6"
             >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-              />
-              <polyline
-                points="12 16 16 12 12 8"
-              />
-              <line
-                x1="8"
-                x2="16"
-                y1="12"
-                y2="12"
-              />
-            </svg>
-          </button>
+              <div
+                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
+              >
+                <img
+                  alt="Text"
+                  class="w-6 h-6"
+                  data-nimg="1"
+                  decoding="async"
+                  height="24"
+                  loading="lazy"
+                  src="/images/initiatives/release.svg"
+                  style="color: transparent;"
+                  width="24"
+                />
+              </div>
+              <h3
+                class="text-2xl font-bold mb-2"
+              >
+                Text
+              </h3>
+              <p
+                class="text-gray-400 leading-relaxed"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+          />
+        </div>
+        <div
+          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div
+              class="mb-6"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
+              >
+                <img
+                  alt="Text"
+                  class="w-6 h-6"
+                  data-nimg="1"
+                  decoding="async"
+                  height="24"
+                  loading="lazy"
+                  src="/images/initiatives/community.svg"
+                  style="color: transparent;"
+                  width="24"
+                />
+              </div>
+              <h3
+                class="text-2xl font-bold mb-2"
+              >
+                Text
+              </h3>
+              <p
+                class="text-gray-400 leading-relaxed"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+          />
+        </div>
+        <div
+          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div
+              class="mb-6"
+            >
+              <div
+                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
+              >
+                <img
+                  alt="Text"
+                  class="w-6 h-6"
+                  data-nimg="1"
+                  decoding="async"
+                  height="24"
+                  loading="lazy"
+                  src="/images/initiatives/security.svg"
+                  style="color: transparent;"
+                  width="24"
+                />
+              </div>
+              <h3
+                class="text-2xl font-bold mb-2"
+              >
+                Text
+              </h3>
+              <p
+                class="text-gray-400 leading-relaxed"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+          />
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div
     class="bg-[#0d002a] py-24 sm:py-28"
   >
@@ -1009,6 +935,7 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="mx-auto max-w-4xl sm:text-center"
+        style="opacity: 0; transform: translateY(50px);"
       >
         <h2
           class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
@@ -1018,6 +945,7 @@ exports[`Index page > renders correctly 1`] = `
       </div>
       <div
         class="flex flex-col justify-center items-center"
+        style="opacity: 0; transform: translateY(30px);"
       >
         <p
           class="mt-6 max-w-2xl mb-0 text-base leading-6 text-lightgrey text-center md:text-justify md:[text-align-last:center]"
@@ -1030,9 +958,10 @@ exports[`Index page > renders correctly 1`] = `
       >
         <div
           class="max-w-xl w-full h-full"
+          style="opacity: 0; transform: translateY(50px) scale(0.9);"
         >
           <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
           >
             <img
               alt="Eclipse Temurin® logo"
@@ -1102,9 +1031,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="max-w-xl w-full h-full"
+          style="opacity: 0; transform: translateY(50px) scale(0.9);"
         >
           <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
           >
             <img
               alt="Eclipse AQAvit logo"
@@ -1174,9 +1104,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="max-w-xl w-full h-full"
+          style="opacity: 0; transform: translateY(50px) scale(0.9);"
         >
           <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50"
+            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
           >
             <img
               alt="Eclipse Mission Control logo"
@@ -1489,211 +1420,284 @@ exports[`Index page > renders correctly 1`] = `
   >
     Latest News Content
   </div>
-  <div
-    class="xl:px-0 lg:px-8 px-0 w-full overflow-hidden flex flex-col items-center justify-cente contributors mx-auto"
+  <section
+    class="relative py-24 lg:py-40 overflow-hidden contributors min-h-[1000px] flex items-center justify-center"
   >
     <div
-      class="flex w-fit space-x-4 sm:space-x-[210px] md:mx-auto justify-between items-end mt-[81px] xl:ml-[461px] overflow-hidden"
+      class="absolute inset-0 pointer-events-none"
     >
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-        style="margin-bottom: 100px; width: 305px;"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-900/10 rounded-full blur-[120px]"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-900/5 rounded-full blur-[100px]"
+      />
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-8 relative w-full h-full"
+    >
+      <div
+        class="relative z-20 flex flex-col items-center justify-center text-center max-w-3xl mx-auto h-full min-h-[400px]"
       >
         <div
-          class="_animatedPlaceholder_283780"
+          style="opacity: 0; transform: scale(0.9);"
         >
-          <div
-            class="_animatedPlaceholderImage_283780"
-          />
-          <div
-            class="_animatedPlaceholderText_283780"
+          <h2
+            class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8 tracking-tight"
           >
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
+            Text
+          </h2>
+          <div
+            style="opacity: 0; transform: translateY(20px);"
+          >
+            <a
+              class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:scale-105 hover:border-pink-500/50 backdrop-blur-md shadow-lg hover:shadow-pink-500/20 group"
+              href="https://github.com/adoptium"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Become a Contributor
+              <svg
+                class="w-5 h-5 ml-2 -mr-1 transition-transform duration-300 group-hover:translate-x-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
       <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-        style="height: fit-content; width: 305px;"
+        class="lg:absolute lg:inset-0 w-full h-full pointer-events-none"
       >
         <div
-          class="_animatedPlaceholder_283780"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:block lg:h-full"
         >
           <div
-            class="_animatedPlaceholderImage_283780"
-          />
-          <div
-            class="_animatedPlaceholderText_283780"
+            class="pointer-events-auto lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-full w-full lg:w-auto flex justify-center"
+            style="opacity: 0; transform: scale(0.8);"
           >
             <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="mx-auto max-w-[848px] w-full lg:space-x-8 xl:space-x-16 xl:hidden flex flex-col justify-center items-center text-center z-10 "
-    >
-      <h2
-        class="font-semibold text-white text-[64px] leading-[72px]"
-      >
-        Text
-      </h2>
-    </div>
-    <div
-      class="xl:flex hidden w-full justify-center items-center relative"
-    >
-      <div
-        class="mx-auto max-w-[848px] w-full lg:space-x-8 xl:space-x-16 flex flex-col justify-center items-center text-center z-10"
-      >
-        <h2
-          class="font-semibold text-white text-[104px] leading-[120px]"
-        >
-          Text
-        </h2>
-      </div>
-      <div
-        class="absolute flex justify-between h-full w-full"
-      >
-        <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-          style="left: -80px; top: 0px; position: absolute;"
-        >
-          <div
-            class="_animatedPlaceholder_283780"
-          >
-            <div
-              class="_animatedPlaceholderImage_283780"
-            />
-            <div
-              class="_animatedPlaceholderText_283780"
+              class="w-full max-w-[320px]"
             >
               <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
+                class="flex items-center p-5 gap-4 w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 group"
+              >
+                <div
+                  class="_animatedPlaceholder_283780"
+                >
+                  <div
+                    class="_animatedPlaceholderImage_283780"
+                  />
+                  <div
+                    class="_animatedPlaceholderText_283780"
+                  >
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-auto lg:absolute lg:top-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
+            style="opacity: 0; transform: scale(0.8);"
+          >
+            <div
+              class="w-full max-w-[320px]"
+            >
               <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
+                class="flex items-center p-5 gap-4 w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 group"
+              >
+                <div
+                  class="_animatedPlaceholder_283780"
+                >
+                  <div
+                    class="_animatedPlaceholderImage_283780"
+                  />
+                  <div
+                    class="_animatedPlaceholderText_283780"
+                  >
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
+            style="opacity: 0; transform: scale(0.8);"
+          >
+            <div
+              class="w-full max-w-[320px]"
+            >
               <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
+                class="flex items-center p-5 gap-4 w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 group"
+              >
+                <div
+                  class="_animatedPlaceholder_283780"
+                >
+                  <div
+                    class="_animatedPlaceholderImage_283780"
+                  />
+                  <div
+                    class="_animatedPlaceholderText_283780"
+                  >
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-full w-full lg:w-auto flex justify-center"
+            style="opacity: 0; transform: scale(0.8);"
+          >
+            <div
+              class="w-full max-w-[320px]"
+            >
               <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
+                class="flex items-center p-5 gap-4 w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 group"
+              >
+                <div
+                  class="_animatedPlaceholder_283780"
+                >
+                  <div
+                    class="_animatedPlaceholderImage_283780"
+                  />
+                  <div
+                    class="_animatedPlaceholderText_283780"
+                  >
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
+            style="opacity: 0; transform: scale(0.8);"
+          >
+            <div
+              class="w-full max-w-[320px]"
+            >
+              <div
+                class="flex items-center p-5 gap-4 w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 group"
+              >
+                <div
+                  class="_animatedPlaceholder_283780"
+                >
+                  <div
+                    class="_animatedPlaceholderImage_283780"
+                  />
+                  <div
+                    class="_animatedPlaceholderText_283780"
+                  >
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-auto lg:absolute lg:top-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
+            style="opacity: 0; transform: scale(0.8);"
+          >
+            <div
+              class="w-full max-w-[320px]"
+            >
+              <div
+                class="flex items-center p-5 gap-4 w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-pink-500/10 group"
+              >
+                <div
+                  class="_animatedPlaceholder_283780"
+                >
+                  <div
+                    class="_animatedPlaceholderImage_283780"
+                  />
+                  <div
+                    class="_animatedPlaceholderText_283780"
+                  >
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                    <div
+                      class="_animatedPlaceholderTextLine_283780"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-          style="right: -80px; bottom: 0px; position: absolute;"
-        >
-          <div
-            class="_animatedPlaceholder_283780"
-          >
-            <div
-              class="_animatedPlaceholderImage_283780"
-            />
-            <div
-              class="_animatedPlaceholderText_283780"
-            >
-              <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
-              <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
-              <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
-              <div
-                class="_animatedPlaceholderTextLine_283780"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    <div
-      class="flex w-fit xl:ml-[244px] justify-between mt-10 mb-[87px] sm:space-x-[233px] space-x-10 md:mx-auto overflow-hidden sm:ml-0"
-    >
-      <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-        style="height: fit-content;"
-      >
-        <div
-          class="_animatedPlaceholder_283780"
-        >
-          <div
-            class="_animatedPlaceholderImage_283780"
-          />
-          <div
-            class="_animatedPlaceholderText_283780"
-          >
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex items-center justify-center p-4 space-x-4 w-[325px] rounded-3xl border border-white/50"
-        style="margin-top: 40px;"
-      >
-        <div
-          class="_animatedPlaceholder_283780"
-        >
-          <div
-            class="_animatedPlaceholderImage_283780"
-          />
-          <div
-            class="_animatedPlaceholderText_283780"
-          >
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-            <div
-              class="_animatedPlaceholderTextLine_283780"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 </div>
 `;

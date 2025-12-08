@@ -1,11 +1,9 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState, useCallback, ReactElement } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Image from "next/image"
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
-// Define types for our data
 interface SubText {
   title: string;
   amount: string;
@@ -13,106 +11,172 @@ interface SubText {
 
 interface DataItem {
   title: string;
-  description: ReactElement | string;
+  description: React.ReactElement | string;
   image: string;
   subtext?: SubText;
 }
 
-// Type for ScrollTrigger self object
-interface ScrollTriggerInstance {
-  progress: number;
-}
-
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger)
-
 const UiVirtualContent = ({ data }: { data: DataItem[] }) => {
-  const [scaleY, setScaleY] = useState(0)
-
-  const onProgressHandler = useCallback((self: ScrollTriggerInstance) => {
-    setScaleY(parseFloat(self.progress.toFixed(4)))
-    const progress = parseFloat(self.progress.toFixed(4)) * 100
-
-    // Dynamic step calculation
-    const step = 100 / data.length
-
-    data.forEach((_, index) => {
-      const lowerBound = step * index
-      const upperBound = step * (index + 1) - 0.01
-
-      const element = document.querySelector(`.ui-virtual-box-${index + 1}`)
-      if (element) {
-        if (progress > lowerBound && progress <= upperBound) {
-          element.classList.add("active")
-        } else {
-          element.classList.remove("active")
-        }
-      }
-    })
-  }, [data])
-
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: ".ui-virtual-wrapper",
-      start: "top center",
-      end: "bottom center",
-      onUpdate: (self: ScrollTriggerInstance) => onProgressHandler(self),
-      scrub: true,
-      markers: false,
-    })
-  }, [onProgressHandler])
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
 
   return (
-    <div className="max-w-[1048px] ui-virtual-wrapper mt-10 relative mx-auto px-4 sm:px-0">
-      <div className="progress absolute top-0 bottom-4 left-0 right-0">
-        <div
-          style={{ transform: `scaleY(${scaleY})` }}
-          className="progress-fill w-full h-full"
-        ></div>
-      </div>
-      <div
-        style={{ top: `${scaleY * 100}%` }}
-        className="absolute left-[50%] translate-x-[-6px] w-[16px] rounded-full bg-[#FF1464] h-[16px] top-0 bottom-4 right-0"
-      ></div>
-      {data.map((item, index) => (
-        <div
-          key={index}
-          className={`flex h-[400px] opacity-50 ui-virtual-common items-center justify-between ui-virtual-box-${index + 1
-            }`}
-        >
-          <div className="w-[50%]">
-            {item.subtext !== undefined ? (
-              <div className="flex flex-col justify-center items-center">
-                <Image
-                  src={`/images/icons/${item.image}`}
-                  alt="Description"
-                  width={436}
-                  height={300}
-                  className={`max-w-[436px] mb-0`}
-                />
-                <h2 className="text-5xl font-medium">{item.subtext.title}</h2>
-                <p className="text-2xl text-[#ff1464]">{item.subtext.amount}</p>
-              </div>
-            ) : (
-              <Image
-                src={`/images/icons/${item.image}`}
-                alt="Description"
-                width={436}
-                height={300}
-                className={`max-w-[436px] mb-0`}
+    <div
+      ref={containerRef}
+      className="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16">
+        <div className="relative w-full h-full flex items-center justify-between">
+          {/* Left Side - Images (Stacked/Fading) */}
+          <div className="w-1/2 h-full flex items-center justify-center relative">
+            {data.map((item, index) => (
+              <FeatureImage
+                key={index}
+                item={item}
+                index={index}
+                total={data.length}
+                scrollYProgress={scrollYProgress}
               />
-            )}
+            ))}
           </div>
-          <div className="w-[50%]">
-            <div className="max-w-[436px] ml-auto">
-              <h1 className="text-xl md-pt-6 my-5 font-bold">{item.title}</h1>
-              <div className="text-base text-grey">{item.description}</div>
-            </div>
+
+          {/* Right Side - Text (Scrolling/Fading) */}
+          <div className="w-1/2 h-full flex items-center justify-center relative pl-12">
+            {data.map((item, index) => (
+              <FeatureText
+                key={index}
+                item={item}
+                index={index}
+                total={data.length}
+                scrollYProgress={scrollYProgress}
+              />
+            ))}
           </div>
         </div>
-      ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default UiVirtualContent
+const FeatureImage = ({
+  item,
+  index,
+  total,
+  scrollYProgress,
+}: {
+  item: DataItem;
+  index: number;
+  total: number;
+  scrollYProgress: any;
+}) => {
+  const step = 1 / total;
+  const start = index * step;
+  const end = (index + 1) * step;
+
+  const isLast = index === total - 1;
+
+  const opacity = useTransform(
+    scrollYProgress,
+    index === 0
+      ? [start, end - step * 0.2, end]
+      : isLast
+      ? [start, start + step * 0.2, end]
+      : [start, start + step * 0.2, end - step * 0.2, end],
+    index === 0 ? [1, 1, 0] : isLast ? [0, 1, 1] : [0, 1, 1, 0]
+  );
+
+  // Slight scale effect
+  const scale = useTransform(
+    scrollYProgress,
+    index === 0
+      ? [start, end]
+      : isLast
+      ? [start, start + step * 0.5, end]
+      : [start, start + step * 0.5, end],
+    index === 0 ? [1, 0.8] : isLast ? [0.8, 1, 1] : [0.8, 1, 0.8]
+  );
+
+  return (
+    <motion.div
+      style={{ opacity, scale }}
+      className="absolute inset-0 flex items-center justify-center"
+    >
+      {item.subtext ? (
+        <div className="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10">
+          <Image
+            src={`/images/icons/${item.image}`}
+            alt={item.title}
+            width={300}
+            height={300}
+            className="mb-6 drop-shadow-2xl"
+          />
+          <h2 className="text-5xl font-bold text-white mb-2">
+            {item.subtext.title}
+          </h2>
+          <p className="text-3xl text-[#ff1365] font-mono">
+            {item.subtext.amount}
+          </p>
+        </div>
+      ) : (
+        <div className="relative w-full max-w-[500px] aspect-square">
+          <Image
+            src={`/images/icons/${item.image}`}
+            alt={item.title}
+            fill
+            className="object-contain drop-shadow-2xl"
+          />
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
+const FeatureText = ({
+  item,
+  index,
+  total,
+  scrollYProgress,
+}: {
+  item: DataItem;
+  index: number;
+  total: number;
+  scrollYProgress: any;
+}) => {
+  const step = 1 / total;
+  const start = index * step;
+  const end = (index + 1) * step;
+
+  const isLast = index === total - 1;
+
+  const opacity = useTransform(
+    scrollYProgress,
+    index === 0
+      ? [start, end - step * 0.2, end]
+      : isLast
+      ? [start, start + step * 0.2, end]
+      : [start, start + step * 0.2, end - step * 0.2, end],
+    index === 0 ? [1, 1, 0] : isLast ? [0, 1, 1] : [0, 1, 1, 0]
+  );
+
+  const y = useTransform(
+    scrollYProgress,
+    index === 0 ? [start, end] : isLast ? [start, end] : [start, end],
+    index === 0 ? [0, -50] : isLast ? [50, 0] : [50, -50]
+  );
+
+  return (
+    <motion.div style={{ opacity, y }} className="absolute w-full max-w-lg">
+      <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        {item.title}
+      </h2>
+      <div className="text-xl text-gray-300 leading-relaxed font-light">
+        {item.description}
+      </div>
+    </motion.div>
+  );
+};
+
+export default UiVirtualContent;
