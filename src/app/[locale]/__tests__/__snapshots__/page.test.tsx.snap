@@ -19,7 +19,7 @@ exports[`Index page > renders correctly 1`] = `
     </div>
     <div
       class="absolute inset-0 z-0 hidden md:flex items-start justify-center pointer-events-none"
-      style="opacity: 0.4; transform: none;"
+      style="opacity: 0; scale: 0;"
     >
       <div
         class="relative w-[1000px] h-[1000px] -mt-32"
@@ -27,12 +27,7 @@ exports[`Index page > renders correctly 1`] = `
         <img
           alt="Temurin Logo Background"
           class="object-contain"
-          data-nimg="fill"
-          decoding="async"
-          sizes="100vw"
-          src="/_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=3840&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Ftemurin-hero-img.png&w=3840&q=75 3840w"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          src="/images/backgrounds/temurin-hero-img.png"
         />
       </div>
     </div>
@@ -41,7 +36,9 @@ exports[`Index page > renders correctly 1`] = `
       class="container mx-auto px-4 z-10 flex flex-col items-center text-center justify-center"
     >
       <div
-        style="opacity: 0; transform: translateY(20px);"
+        animate="[object Object]"
+        initial="[object Object]"
+        transition="[object Object]"
       >
         <h1
           class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-[20ch] mx-auto leading-tight"
@@ -60,14 +57,18 @@ exports[`Index page > renders correctly 1`] = `
         </h1>
       </div>
       <p
+        animate="[object Object]"
         class="text-2xl md:text-3xl text-gray-300 max-w-3xl mb-12 font-normal leading-relaxed"
-        style="opacity: 0; transform: translateY(20px);"
+        initial="[object Object]"
+        transition="[object Object]"
       >
         Text
       </p>
       <div
+        animate="[object Object]"
         class="relative z-10 mb-12"
-        style="opacity: 0; transform: scale(0.9);"
+        initial="[object Object]"
+        transition="[object Object]"
       >
         <div
           class="flex flex-col items-center gap-6"
@@ -104,8 +105,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
       </div>
       <div
+        animate="[object Object]"
         class="w-full max-w-7xl mx-auto"
-        style="opacity: 0; transform: translateY(20px);"
+        initial="[object Object]"
+        transition="[object Object]"
       >
         <div
           class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
@@ -125,12 +128,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Arm"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-arm-white.svg"
-                style="color: transparent; padding: 1em;"
+                style="padding: 1em;"
                 width="200"
               />
             </span>
@@ -140,12 +140,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Atlassian"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-atlassian-white.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -155,13 +152,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Dynatrace"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
-                src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-dynatrace-white.png&w=640&q=75 2x"
-                style="color: transparent; padding: 0px;"
+                src="/images/adopters/logo-dynatrace-white.png"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -171,13 +164,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Mercedes-Benz Tech Innovation GmbH"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
-                src="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Fadopters%2Flogo-mercedes-benz-white.png&w=640&q=75 2x"
-                style="color: transparent; padding: 0px;"
+                src="/images/adopters/logo-mercedes-benz-white.png"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -187,12 +176,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Michelin"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-michelin-white.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -202,12 +188,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Microsoft"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-microsoft-white.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -217,12 +200,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="MongoDB"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-mongodb-white.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -232,12 +212,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Red Hat"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -247,12 +224,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Societe Generale"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-societe-generale-white.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -262,12 +236,9 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="T-Systems"
                 class="h-[100px] w-auto object-contain mx-auto"
-                data-nimg="1"
-                decoding="async"
                 height="100"
-                loading="lazy"
                 src="/images/adopters/logo-t-systems-white.svg"
-                style="color: transparent; padding: 0px;"
+                style="padding: 0px;"
                 width="200"
               />
             </span>
@@ -284,7 +255,10 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 md:p-12 shadow-2xl backdrop-blur-sm"
-        style="opacity: 0; transform: translateY(50px);"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
       >
         <div
           class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-10"
@@ -343,7 +317,10 @@ exports[`Index page > renders correctly 1`] = `
   >
     <div
       class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
-      style="opacity: 0; transform: translateY(50px);"
+      initial="[object Object]"
+      transition="[object Object]"
+      viewport="[object Object]"
+      whileinview="[object Object]"
     >
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
@@ -371,23 +348,15 @@ exports[`Index page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -411,23 +380,15 @@ exports[`Index page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -451,23 +412,15 @@ exports[`Index page > renders correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -489,7 +442,8 @@ exports[`Index page > renders correctly 1`] = `
       class="lg:block hidden open-animation-wrapper"
     >
       <div
-        class="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        style="height: 400vh;"
       >
         <div
           class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
@@ -502,7 +456,7 @@ exports[`Index page > renders correctly 1`] = `
             >
               <div
                 class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 1; transform: none;"
+                style="opacity: 0; scale: 0;"
               >
                 <div
                   class="relative w-full max-w-[500px] aspect-square"
@@ -510,17 +464,13 @@ exports[`Index page > renders correctly 1`] = `
                   <img
                     alt="Text"
                     class="object-contain drop-shadow-2xl"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
                     src="/images/icons/feature-layers.svg"
-                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; transform: scale(0.8);"
+                style="opacity: 0; scale: 0;"
               >
                 <div
                   class="relative w-full max-w-[500px] aspect-square"
@@ -528,17 +478,13 @@ exports[`Index page > renders correctly 1`] = `
                   <img
                     alt="Text"
                     class="object-contain drop-shadow-2xl"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
                     src="/images/icons/feature-layers.svg"
-                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; transform: scale(0.8);"
+                style="opacity: 0; scale: 0;"
               >
                 <div
                   class="relative w-full max-w-[500px] aspect-square"
@@ -546,11 +492,7 @@ exports[`Index page > renders correctly 1`] = `
                   <img
                     alt="Text"
                     class="object-contain drop-shadow-2xl"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
                     src="/images/icons/feature-layers.svg"
-                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
@@ -560,7 +502,7 @@ exports[`Index page > renders correctly 1`] = `
             >
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 1; transform: none;"
+                style="opacity: 0;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -575,7 +517,7 @@ exports[`Index page > renders correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0; transform: translateY(50px);"
+                style="opacity: 0;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -590,7 +532,7 @@ exports[`Index page > renders correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0; transform: translateY(50px);"
+                style="opacity: 0;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -611,7 +553,10 @@ exports[`Index page > renders correctly 1`] = `
   </div>
   <div
     class="bg-purple py-8 lg:py-16"
-    style="opacity: 0; transform: scale(0.9);"
+    initial="[object Object]"
+    transition="[object Object]"
+    viewport="[object Object]"
+    whileinview="[object Object]"
   >
     <div
       class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
@@ -662,7 +607,10 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="text-center mb-16"
-        style="opacity: 0; transform: translateY(50px);"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
       >
         <h2
           class="text-4xl md:text-5xl font-bold mb-6"
@@ -680,7 +628,10 @@ exports[`Index page > renders correctly 1`] = `
       >
         <div
           class="md:col-span-2 bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -694,12 +645,8 @@ exports[`Index page > renders correctly 1`] = `
                 <img
                   alt="Text"
                   class="w-6 h-6"
-                  data-nimg="1"
-                  decoding="async"
                   height="24"
-                  loading="lazy"
                   src="/images/icons/lock.svg"
-                  style="color: transparent;"
                   width="24"
                 />
               </div>
@@ -721,7 +668,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -735,12 +685,8 @@ exports[`Index page > renders correctly 1`] = `
                 <img
                   alt="Text"
                   class="w-6 h-6"
-                  data-nimg="1"
-                  decoding="async"
                   height="24"
-                  loading="lazy"
                   src="/images/initiatives/testing.svg"
-                  style="color: transparent;"
                   width="24"
                 />
               </div>
@@ -762,7 +708,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -776,12 +725,8 @@ exports[`Index page > renders correctly 1`] = `
                 <img
                   alt="Text"
                   class="w-6 h-6"
-                  data-nimg="1"
-                  decoding="async"
                   height="24"
-                  loading="lazy"
                   src="/images/initiatives/deploy.svg"
-                  style="color: transparent;"
                   width="24"
                 />
               </div>
@@ -803,7 +748,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-2 bg-gradient-to-bl from-[#2d1b4e] to-[#1a0b2e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -817,12 +765,8 @@ exports[`Index page > renders correctly 1`] = `
                 <img
                   alt="Text"
                   class="w-6 h-6"
-                  data-nimg="1"
-                  decoding="async"
                   height="24"
-                  loading="lazy"
                   src="/images/initiatives/release.svg"
-                  style="color: transparent;"
                   width="24"
                 />
               </div>
@@ -844,7 +788,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -858,12 +805,8 @@ exports[`Index page > renders correctly 1`] = `
                 <img
                   alt="Text"
                   class="w-6 h-6"
-                  data-nimg="1"
-                  decoding="async"
                   height="24"
-                  loading="lazy"
                   src="/images/initiatives/community.svg"
-                  style="color: transparent;"
                   width="24"
                 />
               </div>
@@ -885,7 +828,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          style="opacity: 0; transform: translateY(50px) scale(0.95);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -899,12 +845,8 @@ exports[`Index page > renders correctly 1`] = `
                 <img
                   alt="Text"
                   class="w-6 h-6"
-                  data-nimg="1"
-                  decoding="async"
                   height="24"
-                  loading="lazy"
                   src="/images/initiatives/security.svg"
-                  style="color: transparent;"
                   width="24"
                 />
               </div>
@@ -935,7 +877,10 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="mx-auto max-w-4xl sm:text-center"
-        style="opacity: 0; transform: translateY(50px);"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
       >
         <h2
           class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
@@ -945,7 +890,10 @@ exports[`Index page > renders correctly 1`] = `
       </div>
       <div
         class="flex flex-col justify-center items-center"
-        style="opacity: 0; transform: translateY(30px);"
+        initial="[object Object]"
+        transition="[object Object]"
+        viewport="[object Object]"
+        whileinview="[object Object]"
       >
         <p
           class="mt-6 max-w-2xl mb-0 text-base leading-6 text-lightgrey text-center md:text-justify md:[text-align-last:center]"
@@ -958,7 +906,10 @@ exports[`Index page > renders correctly 1`] = `
       >
         <div
           class="max-w-xl w-full h-full"
-          style="opacity: 0; transform: translateY(50px) scale(0.9);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
@@ -966,12 +917,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Eclipse Temurin® logo"
               class="w-[140px]"
-              data-nimg="1"
-              decoding="async"
               height="70"
-              loading="lazy"
               src="/images/projects/temurin-project.svg"
-              style="color: transparent;"
               width="140"
             />
             <div
@@ -1031,7 +978,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="max-w-xl w-full h-full"
-          style="opacity: 0; transform: translateY(50px) scale(0.9);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
@@ -1039,12 +989,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Eclipse AQAvit logo"
               class="w-[140px]"
-              data-nimg="1"
-              decoding="async"
               height="70"
-              loading="lazy"
               src="/images/projects/aqavit-project.svg"
-              style="color: transparent;"
               width="140"
             />
             <div
@@ -1104,7 +1050,10 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="max-w-xl w-full h-full"
-          style="opacity: 0; transform: translateY(50px) scale(0.9);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <div
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
@@ -1112,12 +1061,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Eclipse Mission Control logo"
               class="w-[140px]"
-              data-nimg="1"
-              decoding="async"
               height="70"
-              loading="lazy"
               src="/images/projects/mc-project.svg"
-              style="color: transparent;"
               width="140"
             />
             <div
@@ -1235,13 +1180,8 @@ exports[`Index page > renders correctly 1`] = `
               <img
                 alt="Martijn Verburg"
                 class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
-                data-nimg="1"
-                decoding="async"
                 height="64"
-                loading="lazy"
-                src="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fmartijnverburg.jpg&w=128&q=75 2x"
-                style="color: transparent;"
+                src="/images/authors/martijnverburg.jpg"
                 width="64"
               />
               <div
@@ -1341,12 +1281,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Microsoft"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
               src="/images/members/microsoft.svg"
-              style="color: transparent;"
               width="128"
             />
           </div>
@@ -1361,13 +1297,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Alibaba Cloud"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75"
-              srcset="/_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Fmembers%2Falibaba.png&w=256&q=75 2x"
-              style="color: transparent;"
+              src="/images/members/alibaba.png"
               width="128"
             />
           </div>
@@ -1382,12 +1313,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Azul Systems"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
               src="/images/members/azul.svg"
-              style="color: transparent;"
               width="128"
             />
           </div>
@@ -1402,12 +1329,8 @@ exports[`Index page > renders correctly 1`] = `
             <img
               alt="Red Hat"
               class="max-h-full max-w-full object-contain brightness-0 invert"
-              data-nimg="1"
-              decoding="async"
               height="48"
-              loading="lazy"
               src="/images/members/redhat.svg"
-              style="color: transparent;"
               width="128"
             />
           </div>
@@ -1440,7 +1363,10 @@ exports[`Index page > renders correctly 1`] = `
         class="relative z-20 flex flex-col items-center justify-center text-center max-w-3xl mx-auto h-full min-h-[400px]"
       >
         <div
-          style="opacity: 0; transform: scale(0.9);"
+          initial="[object Object]"
+          transition="[object Object]"
+          viewport="[object Object]"
+          whileinview="[object Object]"
         >
           <h2
             class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8 tracking-tight"
@@ -1448,7 +1374,10 @@ exports[`Index page > renders correctly 1`] = `
             Text
           </h2>
           <div
-            style="opacity: 0; transform: translateY(20px);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <a
               class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:scale-105 hover:border-pink-500/50 backdrop-blur-md shadow-lg hover:shadow-pink-500/20 group"
@@ -1481,7 +1410,10 @@ exports[`Index page > renders correctly 1`] = `
         >
           <div
             class="pointer-events-auto lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-full w-full lg:w-auto flex justify-center"
-            style="opacity: 0; transform: scale(0.8);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1517,7 +1449,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:top-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
-            style="opacity: 0; transform: scale(0.8);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1553,7 +1488,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
-            style="opacity: 0; transform: scale(0.8);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1589,7 +1527,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-full w-full lg:w-auto flex justify-center"
-            style="opacity: 0; transform: scale(0.8);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1625,7 +1566,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
-            style="opacity: 0; transform: scale(0.8);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1661,7 +1605,10 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:top-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
-            style="opacity: 0; transform: scale(0.8);"
+            initial="[object Object]"
+            transition="[object Object]"
+            viewport="[object Object]"
+            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"

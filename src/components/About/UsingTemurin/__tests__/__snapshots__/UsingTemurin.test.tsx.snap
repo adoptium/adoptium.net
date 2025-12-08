@@ -25,13 +25,8 @@ exports[`UsingTemurin component > should render correctly 1`] = `
       <img
         alt="scroll-divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="400"
-        loading="lazy"
-        src="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75"
-        srcset="/_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Ficons%2Fexperience.png&w=828&q=75 2x"
-        style="color: transparent;"
+        src="/images/icons/experience.png"
         width="400"
       />
     </div>

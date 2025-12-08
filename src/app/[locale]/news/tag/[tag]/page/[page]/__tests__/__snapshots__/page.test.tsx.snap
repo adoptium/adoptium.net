@@ -94,13 +94,8 @@ exports[`TaggedNewsPage > renders news and header for tag and page when posts ex
           <img
             alt="blog banner image"
             class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-            data-nimg="1"
-            decoding="async"
             height="200"
-            loading="lazy"
-            src="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Ftagged-news%2Fopengraph-image&w=828&q=75"
-            srcset="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Ftagged-news%2Fopengraph-image&w=640&q=75 1x, /_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Ftagged-news%2Fopengraph-image&w=828&q=75 2x"
-            style="color: transparent;"
+            src="/news/undefined/undefined/tagged-news/opengraph-image"
             width="385"
           />
           <div
