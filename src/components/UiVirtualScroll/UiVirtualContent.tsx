@@ -26,7 +26,8 @@ const UiVirtualContent = ({ data }: { data: DataItem[] }) => {
   return (
     <div
       ref={containerRef}
-      className="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      style={{ height: `${(data.length + 1) * 100}vh` }}
     >
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16">
         <div className="relative w-full h-full flex items-center justify-between">
@@ -75,28 +76,27 @@ const FeatureImage = ({
   const step = 1 / total;
   const start = index * step;
   const end = (index + 1) * step;
-
-  const isLast = index === total - 1;
+  const overlap = step * 0.3;
 
   const opacity = useTransform(
     scrollYProgress,
     index === 0
-      ? [start, end - step * 0.2, end]
-      : isLast
-      ? [start, start + step * 0.2, end]
-      : [start, start + step * 0.2, end - step * 0.2, end],
-    index === 0 ? [1, 1, 0] : isLast ? [0, 1, 1] : [0, 1, 1, 0]
+      ? [start, end - overlap, end + overlap]
+      : index === total - 1
+      ? [start - overlap, start + overlap, end]
+      : [start - overlap, start + overlap, end - overlap, end + overlap],
+    index === 0 ? [1, 1, 0] : index === total - 1 ? [0, 1, 1] : [0, 1, 1, 0]
   );
 
   // Slight scale effect
   const scale = useTransform(
     scrollYProgress,
     index === 0
-      ? [start, end]
-      : isLast
-      ? [start, start + step * 0.5, end]
-      : [start, start + step * 0.5, end],
-    index === 0 ? [1, 0.8] : isLast ? [0.8, 1, 1] : [0.8, 1, 0.8]
+      ? [start, end + overlap]
+      : index === total - 1
+      ? [start - overlap, end]
+      : [start - overlap, start + step * 0.5, end + overlap],
+    index === 0 ? [1, 0.8] : index === total - 1 ? [0.8, 1] : [0.8, 1, 0.8]
   );
 
   return (
@@ -148,23 +148,26 @@ const FeatureText = ({
   const step = 1 / total;
   const start = index * step;
   const end = (index + 1) * step;
-
-  const isLast = index === total - 1;
+  const overlap = step * 0.3;
 
   const opacity = useTransform(
     scrollYProgress,
     index === 0
-      ? [start, end - step * 0.2, end]
-      : isLast
-      ? [start, start + step * 0.2, end]
-      : [start, start + step * 0.2, end - step * 0.2, end],
-    index === 0 ? [1, 1, 0] : isLast ? [0, 1, 1] : [0, 1, 1, 0]
+      ? [start, end - overlap, end + overlap]
+      : index === total - 1
+      ? [start - overlap, start + overlap, end]
+      : [start - overlap, start + overlap, end - overlap, end + overlap],
+    index === 0 ? [1, 1, 0] : index === total - 1 ? [0, 1, 1] : [0, 1, 1, 0]
   );
 
   const y = useTransform(
     scrollYProgress,
-    index === 0 ? [start, end] : isLast ? [start, end] : [start, end],
-    index === 0 ? [0, -50] : isLast ? [50, 0] : [50, -50]
+    index === 0
+      ? [start, end + overlap]
+      : index === total - 1
+      ? [start - overlap, end]
+      : [start - overlap, end + overlap],
+    index === 0 ? [0, -100] : index === total - 1 ? [100, 0] : [100, -100]
   );
 
   return (

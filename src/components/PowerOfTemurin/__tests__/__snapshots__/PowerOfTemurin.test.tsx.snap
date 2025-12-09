@@ -7,7 +7,10 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
   >
     <div
       class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
-      style="opacity: 0; transform: translateY(50px);"
+      initial="[object Object]"
+      transition="[object Object]"
+      viewport="[object Object]"
+      whileinview="[object Object]"
     >
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
@@ -35,23 +38,15 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -75,23 +70,15 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -115,23 +102,15 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       <img
         alt="Description"
         class="w-full mb-0 max-w-[366px] object-cover"
-        data-nimg="1"
-        decoding="async"
         height="366"
-        loading="lazy"
         src="/images/icons/feature-layers.svg"
-        style="color: transparent;"
         width="366"
       />
       <img
         alt="scroll divider"
         class="mb-0"
-        data-nimg="1"
-        decoding="async"
         height="80"
-        loading="lazy"
         src="/images/icons/scroll-divider.svg"
-        style="color: transparent;"
         width="16"
       />
       <div
@@ -153,7 +132,8 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
       class="lg:block hidden open-animation-wrapper"
     >
       <div
-        class="relative h-[150vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        style="height: 400vh;"
       >
         <div
           class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
@@ -166,7 +146,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
             >
               <div
                 class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 1; transform: none;"
+                style="opacity: 0; scale: 0;"
               >
                 <div
                   class="relative w-full max-w-[500px] aspect-square"
@@ -174,17 +154,13 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
                   <img
                     alt="Text"
                     class="object-contain drop-shadow-2xl"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
                     src="/images/icons/feature-layers.svg"
-                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; transform: scale(0.8);"
+                style="opacity: 0; scale: 0;"
               >
                 <div
                   class="relative w-full max-w-[500px] aspect-square"
@@ -192,17 +168,13 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
                   <img
                     alt="Text"
                     class="object-contain drop-shadow-2xl"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
                     src="/images/icons/feature-layers.svg"
-                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; transform: scale(0.8);"
+                style="opacity: 0; scale: 0;"
               >
                 <div
                   class="relative w-full max-w-[500px] aspect-square"
@@ -210,11 +182,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
                   <img
                     alt="Text"
                     class="object-contain drop-shadow-2xl"
-                    data-nimg="fill"
-                    decoding="async"
-                    loading="lazy"
                     src="/images/icons/feature-layers.svg"
-                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                   />
                 </div>
               </div>
@@ -224,7 +192,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
             >
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 1; transform: none;"
+                style="opacity: 0;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -239,7 +207,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0; transform: translateY(50px);"
+                style="opacity: 0;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -254,7 +222,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0; transform: translateY(50px);"
+                style="opacity: 0;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"

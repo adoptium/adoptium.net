@@ -83,13 +83,8 @@ exports[`AuthorNewsPage > renders news and header for author when posts exist 1`
               <img
                 alt="Jane Doe"
                 class="ml-2 mb-0 rounded-full"
-                data-nimg="1"
-                decoding="async"
                 height="50"
-                loading="lazy"
-                src="/_next/image?url=%2Fimages%2Fauthors%2Fjane-doe.jpg&w=128&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fjane-doe.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fjane-doe.jpg&w=128&q=75 2x"
-                style="color: transparent;"
+                src="/images/authors/jane-doe.jpg"
                 width="50"
               />
             </div>
@@ -120,13 +115,8 @@ exports[`AuthorNewsPage > renders news and header for author when posts exist 1`
           <img
             alt="blog banner image"
             class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-            data-nimg="1"
-            decoding="async"
             height="200"
-            loading="lazy"
-            src="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Fauthor-news%2Fopengraph-image&w=828&q=75"
-            srcset="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Fauthor-news%2Fopengraph-image&w=640&q=75 1x, /_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Fauthor-news%2Fopengraph-image&w=828&q=75 2x"
-            style="color: transparent;"
+            src="/news/undefined/undefined/author-news/opengraph-image"
             width="385"
           />
           <div

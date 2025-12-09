@@ -439,12 +439,8 @@ exports[`Footer component > renders correctly 1`] = `
               >
                 <img
                   alt="Deploys by Netlify"
-                  data-nimg="1"
-                  decoding="async"
                   height="10"
-                  loading="lazy"
                   src="/images/netlify-light.svg"
-                  style="color: transparent;"
                   width="60"
                 />
               </a>
