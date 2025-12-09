@@ -977,6 +977,12 @@ exports[`Docs page > renders correctly 1`] = `
                     >
                       Join Us
                     </a>
+                    <a
+                      class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
+                      href="/stats/download"
+                    >
+                      Temurin Download Statistics
+                    </a>
                   </div>
                 </div>
               </div>

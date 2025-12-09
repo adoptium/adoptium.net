@@ -223,6 +223,10 @@ export default function DocumentationPage() {
                                         name: "Join Us",
                                         link: "/join-us",
                                     },
+                                    {
+                                        name: "Temurin Download Statistics",
+                                        link: "/stats/download",
+                                    },
                                 ]}
                             />
                             <DocumentationCard
