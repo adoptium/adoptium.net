@@ -1,0 +1,129 @@
+= 迁移指南
+:page-authors: gdams, karianna, SueChaplain, hendrikebbers, sxa555, ParkerM, jiekang, HanSolo, MBoegers, ojuschugh1, NickJavaDev88
+:page-description: 从 Oracle JDK 迁移到 Eclipse Temurin 的综合指南。
+:page-keywords: java, jdk, 迁移, oracle, temurin, openjdk, eclipse
+:icons: font
+
+== 迁移到 Eclipse Temurin
+
+如果您正从 Oracle JDK 迁移到 Adoptium 项目的 OpenJDK，
+您可能有一些关键问题。首先，您会想知道
+Oracle JDK 和 Temurin 之间的区别是什么，以及
+您是否需要采取任何步骤进行迁移。以下部分涵盖了
+围绕这些选择的常见问题解答。
+
+== 从 Oracle JDK 迁移
+
+下表说明了 Oracle JDK 8 中可能存在的专有组件
+以及计划或可用以替换它们的替代技术。点击链接了解更多
+关于每个组件的信息，以及采用它们可能需要的任何步骤。
+
+icon:check[] - 支持, icon:times[] - 不支持
+[cols="35%,25%,20%,20%",options="header",]
+|=======================================================================
+|Oracle JDK 8 专有组件 |替代组件 |OpenJDK 8 |OpenJDK 11 及更高版本
+|Java Web Start |link:#_icedtea_web[IcedTea-Web] | icon:check[] |  icon:times[]
+|JavaFX |link:#_openjfx[OpenJFX] |  icon:times[]    |  icon:check[]
+|T2K 字体渲染引擎
+|link:#_freetype_font_rendering_library[Freetype] |  icon:check[]   |  icon:check[]
+|Monotype Lucida 字体 |link:#_relicensed_lucida_fonts[重新授权的 Lucida 字体] |  icon:times[]    (即将推出) |  icon:times[]    (即将推出)
+|Ductus 2D 渲染器 |link:#_pisces_and_marlin[Pisces/Marlin] |  icon:check[]   (Pisces)
+|  icon:check[]   (Marlin)
+|Kodac 颜色匹配系统 (KCMS) 库 |link:#_lcms[LCMS] |  icon:check[]   |  icon:check[]
+|SNMP |使用 link:#_jmx[JMX] (或 SNMP4J) |  icon:check[]   (未捆绑) |  icon:check[]   (未
+捆绑)
+|声音驱动程序 |使用 link:#_windows_sound_drivers[Windows 声音驱动程序]
+|  icon:check[]   (未捆绑) |  icon:check[]   (未捆绑)
+|Java Flight Recorder (JFR) |link:#_java_flight_recorder[Java Flight
+Recorder] |  icon:check[]   |  icon:check[]
+|Java Mission Control (JMC) |使用 link:#_eclipse_mission_control[Eclipse
+Mission Control] |  icon:check[]   |  icon:check[]
+|=======================================================================
+
+=== IcedTea-Web
+
+Java Web Start 已被 Oracle 在 Java SE 8 中弃用，并在 Java
+SE 9 中移除。IcedTea-Web 可以为 Temurin 8 用户提供同等功能。
+
+IcedTea-Web 可从
+https://adoptopenjdk.net/icedtea-web.html[Iced-Tea Web 项目页面]下载，
+提供 Linux, Windows, macOS 和便携式安装包格式。
+
+以与 Java Web Start 相同的方式使用 IcedTea-Web。有关更多信息，
+请参阅
+https://docs.oracle.com/javase/tutorial/deployment/webstart/developing.html[开发
+Java Web Start 应用程序] 和
+https://docs.oracle.com/javase/tutorial/deployment/webstart/deploying.html[部署
+Java Web Start 应用程序]。虽然 IcedTea-Web 旨在以与
+Java Web Start 相同的方式运行，但也存在一些已知差异，
+这些问题在
+https://github.com/AdoptOpenJDK/icedtea-web[GitHub 项目]中提出。
+正在努力减少或消除这些差异。
+
+IcedTea-Web 1.8.x 和 2.0.x 与 Temurin 8 构建版本兼容。我们
+知道基于 IcedTea-Web 的软件支持执行
+基于 OpenJDK 11 及更高版本的 JNLP 应用程序，但 IcedTea-Web 不包含
+任何检查 OpenJDK 11 及更高版本支持的测试，我们也不将其与
+Temurin 11 构建版本捆绑。
+
+=== OpenJFX
+
+早在 2017 年，JavaFX 就从 Oracle JDK 中解耦并贡献
+给了 OpenJDK 社区。OpenJFX 社区专注于 OpenJFX
+11+ 并提供可与 Temurin 一起使用的二进制文件。
+
+OpenJFX 8 不再积极维护。如果您需要此
+功能，建议升级到 OpenJFX 11。
+
+[#_freetype_font_rendering_library]
+=== Freetype 字体渲染库
+
+OpenJDK 使用开源的 FreeType 字体渲染库代替
+专有的 T2K 字体库。
+
+[#_relicensed_lucida_fonts]
+=== 重新授权的 Lucida 字体
+
+Oracle JDK 8 中可用的 Lucida 字体具有专有的
+第三方许可。Adoptium 打算提供重新授权的 Lucida 字体。
+正在努力在 Freetype 渲染这些字体时最大程度地减少任何显示问题。
+
+[#_pisces_and_marlin]
+=== Pisces 和 Marlin
+
+Oracle JDK 8 使用名为 Ductus 的专有 2D 图形渲染器，
+而 OpenJDK 使用名为 Pisces 的开源渲染器。从 OpenJDK
+9 开始，使用了 Marlin 渲染器。Adoptium 计划将 Marlin
+向后移植到 OpenJDK 8 和/或最大程度地减少两者之间的任何显示问题。
+
+=== LCMS
+
+OpenJDK 使用 Little Color Matching System (LCMS) 开源
+库代替专有的 Kodac CMS 库。
+
+=== JMX
+
+Oracle JDK 8 附带的专有 SNMP 包在
+OpenJDK 中不存在。使用 JMX 或 SNMP4J 作为替代方案。这些包未
+与 Temurin 二进制文件捆绑。
+
+[#_windows_sound_drivers]
+=== Windows 声音驱动程序
+
+Oracle JDK 为 Windows 上的 Java 8 提供了原生声音驱动程序，
+这些驱动程序在 OpenJDK 中不存在。请改用 Microsoft Windows
+提供的声音驱动程序。
+
+[#_java_flight_recorder]
+=== Java Flight Recorder
+
+Java Flight Recorder (JFR) 已从 Oracle JDK 中解耦并
+贡献给了 OpenJDK 社区。JFR 包含在所有版本的
+Temurin 中。
+
+[#_eclipse_mission_control]
+=== Eclipse Mission Control
+
+https://projects.eclipse.org/projects/adoptium.mc[Eclipse Mission
+Control] 项目通过
+link:/jmc[下载页面]提供了可用的 JMC 下载。
