@@ -72,7 +72,7 @@
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/coverage-v8": "^4.0.15",
     "axios-mock-adapter": "^2.1.0",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "eslint-config-next": "16.0.10",
     "jsdom": "^27.3.0",
     "jsdom-testing-mocks": "^1.16.0",
