@@ -29,12 +29,12 @@ type BannerProps = {
 // -------------------------------------------------------
 const currentBanners: BannerProps[] = [
   {
-    title: "Become an Adoptium member",
-    description: "Join the Adoptium Working Group and support the future of open source Java. Explore our membership options and benefits.",
-    cta: "Learn more",
-    ctaLink: "https://adoptium.net/members",
-    startDate: "2025-12-03T00:00:00Z",
-    endDate: "2026-01-11T23:59:59Z",
+    title: "End of Support: Solaris & Windows 32-bit for Eclipse Temurin in 2026",
+    description: "Temurin builds for Solaris and Windows 32-bit will be discontinued in 2026. Review the upcoming changes and share your feedback to help us plan the transition.",
+    cta: "Read the full announcement",
+    ctaLink: "https://adoptium.net/news/2025/12/solaris-win32-removal",
+    startDate: "2025-12-11T00:00:00Z",
+    endDate: "2026-01-06T23:59:59Z",
   },
   {
     title: "Help sustain Adoptium this Giving Tuesday",
