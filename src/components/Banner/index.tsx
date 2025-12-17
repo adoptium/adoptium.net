@@ -30,7 +30,7 @@ type BannerProps = {
 const currentBanners: BannerProps[] = [
   {
     title: "End of Support: Solaris & Windows 32-bit for Eclipse Temurin in 2026",
-    description: "Temurin builds for Solaris and Windows 32-bit will be discontinued in 2026. Review the upcoming changes and share your feedback to help us plan the transition.",
+    description: "Temurin builds for Solaris and Windows 32-bit will be discontinued in 2026. Review the upcoming changes and share your feedback.",
     cta: "Read the full announcement",
     ctaLink: "https://adoptium.net/news/2025/12/solaris-win32-removal",
     startDate: "2025-12-11T00:00:00Z",
