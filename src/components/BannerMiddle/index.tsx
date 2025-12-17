@@ -18,6 +18,14 @@ type BannerMiddleProps = {
 // -------------------------------------------------------
 const currentAnnouncements: BannerMiddleProps[] = [
   {
+    title: "Become an Adoptium member",
+    description: "Join the Adoptium Working Group and support the future of open source Java. Explore our membership options and benefits.",
+    cta: "Learn more",
+    ctaLink: "https://adoptium.net/members",
+    startDate: "2025-12-03T00:00:00Z",
+    endDate: "2026-01-11T23:59:59Z",
+  },
+  {
     title: "Become a sustainer!",
     description:
       "Join the Eclipse Temurin Sustainer Program to support Eclipse Temurin, the fastest-growing open source JDK. Your support fuels stronger security, faster releases, ready-to-deploy builds, quality testing and community development.",
