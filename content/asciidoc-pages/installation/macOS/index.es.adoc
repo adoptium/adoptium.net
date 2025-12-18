@@ -1,0 +1,32 @@
+= Paquetes de instalación PKG para macOS
+:page-authors: gdams, SueChaplain, karianna, NickJavaDev88
+:toc:
+:page-description: Descargue e instale Eclipse Temurin en macOS utilizando archivos PKG.
+:keywords: java, macos, pkg, instalador, temurin, eclipse, jdk, jre, instalación
+
+Los paquetes de instalación de Eclipse Temurin para macOS están disponibles como archivos `.pkg` estándar, los cuales pueden ejecutarse con una interfaz de usuario interactiva o de forma silenciosa desde la línea de comandos del Terminal.
+
+== Instalación con GUI
+
+Instrucciones para ejecutar una instalación interactiva utilizando el instalador PKG de macOS:
+
+. link:/temurin/releases[Descargue] el archivo `.pkg`.
+. Navegue a la carpeta que contiene el archivo y ábralo para iniciar el programa de instalación o arrastre el icono a su carpeta de Aplicaciones.
+. La pantalla de Introducción indica la ubicación de destino para la instalación, la cual puede cambiar más adelante en el proceso de instalación. Haga clic en Continuar (Continue).
+. Lea la licencia, haga clic en Continuar (Continue) y acepte la licencia si está de acuerdo con los términos.
+. Cambie la ubicación de destino para la instalación. Haga clic en Instalar (Install) para completar la instalación.
+
+== Instalación por línea de comandos
+
+Una instalación silenciosa le permite instalar el paquete de macOS sin interacción del usuario, lo cual puede ser útil para un despliegue a gran escala. Debe tener privilegios de administrador. Siga estos pasos:
+
+. link:/temurin/releases[Descargue] el archivo `.pkg`.
+. Inicie la aplicación Terminal (`terminal.app`).
+. Ejecute el siguiente comando:
++
+[source, bash]
+----
+installer -pkg <ruta_al_pkg>/<nombre_del_pkg>.pkg -target /
+----
+. Introduzca la contraseña de Administrador
+. Temurin se instala en `/Library/Java/JavaVirtualMachines/temurin-<versión>.<jdk|jre>/`
