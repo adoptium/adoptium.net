@@ -13,6 +13,7 @@ Consulte link:/supported-platforms[Plataformas Compatibles] para consultar la li
 [TIP]
 ====
 Tenga en cuenta que, en la mayoría de los sistemas Linux, se requieren privilegios de superusuario para instalar paquetes como Temurin. Para garantizar la ejecución exitosa de los comandos a continuación, es posible que deba anteponerles `sudo`. Además, al agregar el repositorio, considere usar `sudo tee` para evitar posibles problemas de permisos. Por ejemplo:
+====
 [source, bash]
 ----
 echo "deb [arch=amd64] https://some.repository.url focal main" | sudo tee /etc/apt/sources.list.d/adoptium.list > /dev/null

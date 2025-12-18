@@ -1,0 +1,118 @@
+= Windows MSI 安装包
+:page-authors: gdams, karianna, SueChaplain, ParkerM, KalyanJoseph, NickJavaDev88
+:toc:
+:page-description: 在 Windows 上下载并安装 Eclipse Temurin MSI 文件。
+:keywords: java, windows, msi,  installer, temurin, eclipse, jdk, jre, 安装, 下载
+
+Eclipse Temurin Windows 安装包以标准的 `.msi` 文件形式提供，可以通过交互式用户界面运行，也可以从命令行静默运行。安装程序设计为基于机器而非基于用户，因此在一台机器上只能为所有用户保留一个 MSI 安装版本。
+
+注意：Windows 安装包仅支持 Windows x64 系统。
+
+== GUI 安装
+
+使用 Windows MSI 安装程序运行交互式安装的说明：
+
+. link:/temurin/releases[下载] `.msi` 文件。打开它以启动安装程序。
+. 如果您同意这些条款，请阅读并接受许可协议。
+. 在自定义设置（Custom Setup）屏幕上，您可以选择要安装的功能，还可以更改默认安装目录。默认情况下，Temurin 安装在 `C:\Program Files\Eclipse Adoptium\<package>`，并包含以下功能（如果需要，您可以取消选择）：
+* 将安装添加到 PATH 环境变量
+* 将 `.jar` 文件与 Java 应用程序关联
+可以通过单击目录树中看到复选标记 (x) 的位置来选择其他功能。这些功能包括：
+* 更新 `JAVA_HOME` 环境变量
+. 当您选择了要安装的功能后，单击下一步（Next）。
+. 单击安装（Install）开始安装。
+. 安装完成后，单击完成（Finish）关闭程序。
+
+== 命令行安装
+
+静默安装允许您在无需用户交互的情况下安装带有预选功能的 Windows 包，这对于大规模部署非常有用。请按照以下步骤操作：
+
+. link:/temurin/releases[下载] `.msi` 文件。
+. 选择您要安装的功能，如下表所示：
++
+[width="100%",cols="50%,50%",options="header",]
+|=======================================================================
+|功能 |描述
+|`FeatureMain` |Temurin 核心安装（默认）
+
+|`FeatureEnvironment` |更新 PATH 环境变量（默认）
+
+|`FeatureJarFileRunWith` |将 .jar 文件与 Java 应用程序关联（默认）
+
+|`FeatureJavaHome` |更新 JAVA_HOME 环境变量
+
+|`FeatureOracleJavaSoft` |更新注册表项 HKLM
+|=======================================================================
++
+注意：`FeatureOracleJavaSoft` 可用于防止卸载 Temurin 时从 `PATH` 启动 Oracle Java。如果需要恢复 Oracle 注册表项，请重新安装 Oracle Java。
++
+可以使用将某些功能组合在一起的可选参数：
++
+[cols=",",options="header",]
+|======================================================================
+|参数 |功能
+|`INSTALLLEVEL=1` |FeatureMain,FeatureEnvironment,FeatureJarFileRunWith
+|======================================================================
+. 在目标工作站上运行命令。以下示例静默安装 Temurin，更新 PATH，将 .jar 文件与 Java 应用程序关联并定义 JAVA_HOME：
++
+[source,batch]
+----
+msiexec /i <package>.msi ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome INSTALLDIR="c:\Program Files\Temurin\" /quiet
+----
++
+注意：您必须将 `INSTALLDIR` 与 FeatureMain 一起使用。
++
+以下示例静默安装 `INSTALLLEVEL=1` 的所有功能：
++
+[source,batch]
+----
+msiexec /i <package>.msi INSTALLLEVEL=1 /quiet
+----
++
+如果您想用另一种语言启动交互式安装，可以使用 Windows 安装程序 `TRANSFORMS` 选项来设置您的语言选择。例如，要将 UI 语言设置为德语，请使用代码 `1031`，其前必须加一个冒号 `:`。
++
+[source,batch]
+----
+msiexec /i <package>.msi INSTALLLEVEL=1 TRANSFORMS=:1031
+----
++
+有关支持的代码列表，请参阅 https://github.com/adoptium/installer/blob/master/wix/Lang/LanguageList.config[语言列表]。
+
+== 重新安装或升级
+
+要在静默模式下使用默认功能重新安装 Temurin，请运行以下命令：
+
+[source,batch]
+----
+msiexec /i <package>.msi REINSTALL=ALL /quiet
+----
+
+如果您想在静默模式下升级 Temurin，请运行以下命令：
+
+[source,batch]
+----
+msiexec /i <package>.msi REINSTALL=ALL REINSTALLMODE=amus /quiet
+----
+
+`REINSTALLMODE` 选项：（来自 https://www.advancedinstaller.com/user-guide/control-events.html[控制事件]）
+
+* `a`：无论校验和或版本如何，都强制安装所有文件
+* `m`：重写从注册表表到 `HKEY_LOCAL_MACHINE` 的所有必需注册表项
+* `o`：如果文件丢失或是旧版本，则重新安装
+* `u`：重写从注册表表到 `HKEY_CURRENT_USER` 或 `HKEY_USERS` 的所有必需注册表项
+* `s`：重新安装所有快捷方式并重新缓存所有图标，覆盖任何现有的快捷方式或图标
+
+注意：`REINSTALL=ALL` 自动设置 `REINSTALLMODE=omus`
+
+=== 升级限制：
+
+由于 https://docs.microsoft.com/windows/desktop/Msi/productversion[MSI 限制]，升级 `.msi` 文件仅适用于版本号的前 3 位数字：
+
+* 从 8.0.2.1 升级到 8.0.3.1 有效。
+* 从 8.0.2.1 升级到 8.0.2.2 无效。卸载旧的 .msi 并安装新的。
+* 从 8.0.2.1 升级到 8.1.2.1 有效。
+* 从 8.0.2.1 升级到 11.0.2.1 无效。Temurin 不提供主要版本的升级。要么保留两个安装，要么卸载旧版本。
+
+== 参考阅读
+
+* https://www.advancedinstaller.com/user-guide/msiexec.html[Msiexec.exe 命令行]
