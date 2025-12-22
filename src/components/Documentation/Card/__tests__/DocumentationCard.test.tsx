@@ -10,6 +10,7 @@ describe("DocumentationCard component", () => {
       <DocumentationCard
         title="Test Title"
         Icon={FaDownload}
+        link="/test-link"
         links={[
           { name: "Link1", link: "/link1" },
           { name: "Link2", link: "https://external-link" },
@@ -24,6 +25,7 @@ describe("DocumentationCard component", () => {
       <DocumentationCard
         title=""
         Icon={FaDownload}
+        link="/test-link"
         links={[
           { name: "Link1", link: "/link1" },
           { name: "Link2", link: "https://external-link" },
@@ -39,6 +41,7 @@ describe("DocumentationCard component", () => {
         title="Test Title"
         // @ts-expect-error Testing with invalid Icon prop
         Icon=""
+        link="/test-link"
         links={[
           { name: "Link1", link: "/link1" },
           { name: "Link2", link: "https://external-link" },
@@ -53,6 +56,7 @@ describe("DocumentationCard component", () => {
       <DocumentationCard
         title="Test Title"
         Icon={FaDownload}
+        link="/test-link"
         // @ts-expect-error Testing with invalid links prop
         links="Bad Links"
       />,
