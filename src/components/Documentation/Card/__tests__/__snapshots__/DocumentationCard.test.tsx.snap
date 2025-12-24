@@ -8,10 +8,11 @@ exports[`DocumentationCard component > does not render without a title 1`] = `<d
 
 exports[`DocumentationCard component > renders correctly 1`] = `
 <div>
-  <div
+  <a
     class="w-full lg:w-1/3 p-3 group"
+    href="/test-link"
   >
-    <a
+    <div
       class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
     >
       <div
@@ -85,7 +86,7 @@ exports[`DocumentationCard component > renders correctly 1`] = `
           </div>
         </div>
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
 </div>
 `;
