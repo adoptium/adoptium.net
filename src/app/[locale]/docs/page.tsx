@@ -26,7 +26,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Get Temurin"
                                 Icon={FaDownload}
-                                link="/docs#get-temurin"
+                                anchorId="get-temurin"
                                 links={[
                                     {
                                         name: "Install Temurin",
@@ -45,7 +45,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Temurin Support"
                                 Icon={FaQuestion}
-                                link="/docs#temurin-support"
+                                anchorId="temurin-support"
                                 links={[
                                     {
                                         name: "Support Guide",
@@ -72,7 +72,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="AQAvit Quality"
                                 Icon={FaGem}
-                                link="/docs#aqavit"
+                                anchorId="aqavit"
                                 links={[
                                     {
                                         name: "About Eclipse AQAvit",
@@ -91,7 +91,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Marketplace"
                                 Icon={FaBox}
-                                link="/docs#marketplace"
+                                anchorId="marketplace"
                                 links={[
                                     {
                                         name: "Marketplace Downloads",
@@ -110,7 +110,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Contributing"
                                 Icon={FaUserFriends}
-                                link="/docs#contributing"
+                                anchorId="contributing"
                                 links={[
                                     {
                                         name: "How To Contribute",
@@ -137,7 +137,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Secure Software"
                                 Icon={FaLock}
-                                link="/docs#secure-software"
+                                anchorId="secure-software"
                                 links={[
                                     {
                                         name: "Secure Software Practices",
@@ -164,7 +164,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Governance"
                                 Icon={FaGlobe}
-                                link="/docs#governance"
+                                anchorId="governance"
                                 links={[
                                     {
                                         name: "About Eclipse Adoptium",
@@ -187,7 +187,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Source Code"
                                 Icon={FaGithub}
-                                link="/docs#source-code"
+                                anchorId="source-code"
                                 links={[
                                     {
                                         name: "Adoptium on GitHub",
@@ -214,7 +214,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Other Resources"
                                 Icon={FaInfoCircle}
-                                link="/docs#other-resources"
+                                anchorId="other-resources"
                                 links={[
                                     {
                                         name: "Frequently Asked Questions",
@@ -241,7 +241,7 @@ export default function DocumentationPage() {
                             <DocumentationCard
                                 title="Branding"
                                 Icon={FaRocket}
-                                link="/docs#branding"
+                                anchorId="branding"
                                 links={[
                                     {
                                         name: "Brand Guidelines",

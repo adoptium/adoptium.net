@@ -106,12 +106,13 @@ exports[`Docs page > renders correctly 1`] = `
         <div
           class="flex flex-wrap justify-center"
         >
-          <div
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#get-temurin"
+            id="get-temurin"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#get-temurin"
             >
               <div
                 class="relative p-6"
@@ -190,14 +191,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#temurin-support"
+            id="temurin-support"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#temurin-support"
             >
               <div
                 class="relative p-6"
@@ -288,14 +290,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#aqavit"
+            id="aqavit"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#aqavit"
             >
               <div
                 class="relative p-6"
@@ -357,14 +360,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#marketplace"
+            id="marketplace"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#marketplace"
             >
               <div
                 class="relative p-6"
@@ -426,14 +430,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#contributing"
+            id="contributing"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#contributing"
             >
               <div
                 class="relative p-6"
@@ -524,14 +529,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#secure-software"
+            id="secure-software"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#secure-software"
             >
               <div
                 class="relative p-6"
@@ -639,14 +645,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#governance"
+            id="governance"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#governance"
             >
               <div
                 class="relative p-6"
@@ -731,14 +738,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#source-code"
+            id="source-code"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#source-code"
             >
               <div
                 class="relative p-6"
@@ -897,14 +905,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#other-resources"
+            id="other-resources"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#other-resources"
             >
               <div
                 class="relative p-6"
@@ -995,14 +1004,15 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
-          <div
+            </div>
+          </a>
+          <a
             class="w-full lg:w-1/3 p-3 group"
+            href="/docs#branding"
+            id="branding"
           >
-            <a
+            <div
               class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
-              href="/docs#branding"
             >
               <div
                 class="relative p-6"
@@ -1110,8 +1120,8 @@ exports[`Docs page > renders correctly 1`] = `
                   </div>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

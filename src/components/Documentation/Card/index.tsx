@@ -11,16 +11,16 @@ interface Props {
   links: LinkItem[]
   title: string
   Icon: React.ComponentType<{ className?: string }>
-  link: string
+  anchorId: string
 }
 
-const DocumentationCard: React.FC<Props> = ({ links, title, Icon, link }) => {
+const DocumentationCard: React.FC<Props> = ({ links, title, Icon, anchorId }) => {
   if (!title || !Icon || !links || typeof links !== "object") {
     return null
   }
 
   return (
-    <Link href={link} className="w-full lg:w-1/3 p-3 group">
+    <Link href={`/docs#${anchorId}`} id={anchorId} className="w-full lg:w-1/3 p-3 group">
       <div className="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1">
         <div className="relative p-6">
           {/* Decorative element */}
