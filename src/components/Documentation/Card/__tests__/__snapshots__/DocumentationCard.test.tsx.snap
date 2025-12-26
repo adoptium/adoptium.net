@@ -9,7 +9,7 @@ exports[`DocumentationCard component > does not render without a title 1`] = `<d
 exports[`DocumentationCard component > renders correctly 1`] = `
 <div>
   <a
-    class="w-full lg:w-1/3 p-3 group"
+    class="w-full lg:w-1/3 p-3 group scroll-mt-25"
     href="/docs#undefined"
   >
     <div
