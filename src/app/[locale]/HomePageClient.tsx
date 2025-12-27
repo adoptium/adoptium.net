@@ -23,20 +23,6 @@ export default function HomePageClient({
       <DownloadCounter total={total_downloads} />
       <BentoGrid />
       <WGProjects />
-      <Testimonials />
-      <LatestNews />
-      <ContributorsHome />
-    </div>
-  );
-  return (
-    <div>
-      <HeroSection latestLTS={latestLTS} />
-      <LogoCarousel />
-      <BannerMiddle />
-      <PowerOfTemurin />
-      <DownloadCounter total={total_downloads} />
-      <TemurinFeatures />
-      <WGProjects />
       <Testimonials type="member" />
       <LatestNews />
       <ContributorsHome />
