@@ -1309,6 +1309,205 @@ exports[`Sustainers page > renders correctly 1`] = `
         <div />
         <div />
       </div>
+      <div
+        class="mt-16"
+      >
+        <section
+          class="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 opacity-5"
+          >
+            <div
+              class="absolute inset-0 bg-repeat"
+              style="background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");"
+            />
+          </div>
+          <div
+            class="relative max-w-7xl px-6 py-16 mx-auto text-center lg:py-24"
+          >
+            <div
+              class="relative max-w-5xl mx-auto"
+            >
+              <div
+                class="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl"
+              >
+                <figure>
+                  <div
+                    class="mb-8"
+                  >
+                    <svg
+                      class="h-12 w-12 mx-auto text-pink opacity-60"
+                      fill="none"
+                      viewBox="0 0 24 27"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <blockquote
+                    class="animate-slideInRight mb-8"
+                  >
+                    <div
+                      class="min-h-[200px] md:min-h-[180px] flex items-center justify-center"
+                    >
+                      <p
+                        class="text-xl md:text-2xl leading-relaxed font-medium text-white/90 italic"
+                      >
+                        “
+                        We are a software company base in Lyon, France. We use open source software, components and libraries to create and operate reliable, durable and fancy web-based applications when no software editor provides a solution matching our custom requirements. As our activity focuses on providing long-lived (10 years), highly specialized applications, built and operated by small teams (1-5 persons), we need to find the good options to maintain our application up-to-date and allow regular releases despite constrained roadmap. Software strategy (tools, libraries) is essential to ensure the quality and productivity level needed to keep the rhythm without burning developers. As we commit, as individuals and as a company, to common interest, we choose to dedicate a significant part of our profit to the environment and to the open-source projects that support our activity. Beyond our own activity, we consider open source as a key part for computer science education and software innovation.
+                        ”
+                      </p>
+                    </div>
+                  </blockquote>
+                  <figcaption
+                    class="flex flex-col sm:flex-row items-center justify-center gap-4"
+                  >
+                    <img
+                      alt="Laurent Almeras"
+                      class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
+                      height="64"
+                      src="/images/quotes/laurentalmeras.jpeg"
+                      width="64"
+                    />
+                    <div
+                      class="text-center sm:text-left"
+                    >
+                      <div
+                        class="text-lg font-semibold text-white"
+                      >
+                        Laurent Almeras
+                      </div>
+                      <div
+                        class="text-pink font-medium"
+                      >
+                        CTO, Kobalt
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center mt-12 space-x-6"
+            >
+              <button
+                aria-label="Previous Testimonial"
+                class="group p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300"
+              >
+                <svg
+                  class="w-5 h-5 text-white group-hover:text-pink transition-colors"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                  />
+                </svg>
+              </button>
+              <div
+                class="flex space-x-2"
+              >
+                <button
+                  aria-label="Go to testimonial 1"
+                  class="h-2 rounded-full transition-all duration-300 w-8 bg-pink-400"
+                />
+                <button
+                  aria-label="Go to testimonial 2"
+                  class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+                />
+                <button
+                  aria-label="Go to testimonial 3"
+                  class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
+                />
+              </div>
+              <button
+                aria-label="Next Testimonial"
+                class="group relative p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300 overflow-hidden"
+              >
+                <svg
+                  class="w-5 h-5 text-white group-hover:text-pink transition-colors relative z-10"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                  />
+                </svg>
+                <div
+                  class="absolute inset-0 rounded-full border-2 border-transparent border-t-pink-400 animate-spin opacity-60"
+                  style="animation-duration: 8s;"
+                />
+              </button>
+            </div>
+            <div
+              class="flex justify-center items-center mt-12 space-x-8"
+            >
+              <button
+                aria-label="Kobalt Testimonial"
+                class="transition-all duration-300 opacity-60 hover:opacity-100 opacity-100 scale-110"
+              >
+                <div
+                  class="h-12 w-32 flex items-center justify-center"
+                >
+                  <img
+                    alt="Kobalt"
+                    class="max-h-full max-w-full object-contain brightness-0 invert"
+                    height="48"
+                    src="/images/members/kobalt.png"
+                    width="128"
+                  />
+                </div>
+              </button>
+              <button
+                aria-label="MacStadium Testimonial"
+                class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+              >
+                <div
+                  class="h-12 w-32 flex items-center justify-center"
+                >
+                  <img
+                    alt="MacStadium"
+                    class="max-h-full max-w-full object-contain brightness-0 invert"
+                    height="48"
+                    src="/images/members/macstadium.svg"
+                    width="128"
+                  />
+                </div>
+              </button>
+              <button
+                aria-label="Open-Elements Testimonial"
+                class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+              >
+                <div
+                  class="h-12 w-32 flex items-center justify-center"
+                >
+                  <img
+                    alt="Open-Elements"
+                    class="max-h-full max-w-full object-contain brightness-0 invert"
+                    height="48"
+                    src="/images/members/openelements.svg"
+                    width="128"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </div>

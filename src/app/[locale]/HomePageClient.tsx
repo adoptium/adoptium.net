@@ -23,7 +23,7 @@ export default function HomePageClient({
       <DownloadCounter total={total_downloads} />
       <BentoGrid />
       <WGProjects />
-      <Testimonials />
+      <Testimonials type="member" />
       <LatestNews />
       <ContributorsHome />
     </div>
