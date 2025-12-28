@@ -117,7 +117,6 @@ export default function SustainersPage() {
               description="The Adoptium Working Group collaborates with the following companies who contribute various kinds of cloud and physical hardware."
             />
           </div>
-          {/* ✅ Add Testimonials component here */}
           <div className="mt-16">
             <Testimonials type="sustainer" />
           </div>
