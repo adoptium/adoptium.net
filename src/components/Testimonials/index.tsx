@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
 import "./styles.css";
@@ -11,17 +11,26 @@ interface TestimonialsProps {
 }
 const Testimonials: React.FC<TestimonialsProps> = ({ type }) => {
   // Filter the testimonials based on type
-  const filteredTestimonials = testimonialData.filter((t) => t.type === type);
+  const filteredTestimonials = useMemo(() => {
+    return testimonialData.filter((t) => t.type === type);
+  }, [type]);
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [slideDirection, setSlideDirection] = useState("right");
 
+  // prevents stale index bugs for edge cases when type changes
   useEffect(() => {
+    setCurrentTestimonial(0);
+  }, [type]);
+
+  useEffect(() => {
+    if (filteredTestimonials.length === 0) return;
+
     const timer = setTimeout(() => {
       setCurrentTestimonial(
         (currentTestimonial + 1) % filteredTestimonials.length
       );
-    }, 8000); // Changes every 8 seconds
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, [currentTestimonial, filteredTestimonials]);
@@ -58,6 +67,11 @@ const Testimonials: React.FC<TestimonialsProps> = ({ type }) => {
       }
     }
   };
+
+  // Safely handle cases where no testimonials match the selected type
+  if (filteredTestimonials.length === 0) {
+    return null;
+  }
 
   return (
     <>
