@@ -1,0 +1,65 @@
+[
+  {
+    "quote": "Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.",
+    "name": "Martijn Verburg",
+    "role": "Principal Group Manager - Java & Go @ Microsoft",
+    "image": "/images/authors/martijnverburg.jpg",
+    "companyLogo": "/images/members/microsoft.svg",
+    "companyName": "Microsoft",
+    "type": "member"
+  },
+  {
+    "quote": "As a member of the Adoptium Working Group, Alibaba Cloud is committed to fostering a vendor-neutral environment that drives the growth of Java Runtime on our global cloud platform. We contribute Alibaba Dragonwell to the Adoptium marketplace, a trusted source for production-ready OpenJDK builds, and actively participate in the EMT4J sub-project within Adoptium to help developers seamlessly upgrade their applications.",
+    "name": "Sanhong Li",
+    "role": "Director of Compiler & Runtime, Alibaba Cloud Intelligence",
+    "image": "/images/quotes/sanhongli.jpg",
+    "companyLogo": "/images/members/alibaba.png",
+    "companyName": "Alibaba Cloud",
+    "type": "member"
+  },
+  {
+    "quote": "Azul has been a member of the Eclipse Adoptium Working Group since its formation. As a provider of free and supported OpenJDK builds—including Azul Platform Core (Zulu) and Azul Platform Prime (Zing)—Azul is a passionate contributor and steward for open-source Java. The company is committed to enhancing users' ability to access and utilize high-quality Java runtimes effectively, while also providing real-time, actionable Java intelligence such as JVM inventory, vulnerability detection, and identification of dead and unused code.",
+    "name": "Simon Ritter",
+    "role": "Deputy CTO at Azul Systems",
+    "image": "/images/quotes/simonritter.jpeg",
+    "companyLogo": "/images/members/azul.svg",
+    "companyName": "Azul Systems",
+    "type": "member"
+  },
+  {
+    "quote": "As a leading provider of enterprise open source software solutions, Red Hat supports the Eclipse Adoptium Working Group. We contribute to Eclipse Temurin and AQAvit to deliver high-performance, enterprise-ready OpenJDK builds backed by a secure supply chain, suitable for production deployment. This aligns with our mission to foster secure, stable, and innovative technologies.",
+    "name": "Mark Little",
+    "role": "VP Middleware Engineering, Red Hat",
+    "image": "/images/quotes/marklittle.jpeg",
+    "companyLogo": "/images/members/redhat.svg",
+    "companyName": "Red Hat",
+    "type": "member"
+  },
+  {
+    "quote": "We are a software company based in Lyon, France. We use open source software, components and libraries to create and operate reliable, durable and fancy web-based applications when no software editor provides a solution matching our custom requirements. As our activity focuses on providing long-lived (10 years), highly specialized applications, built and operated by small teams (1-5 persons), we need to find the good options to maintain our application up-to-date and allow regular releases despite constrained roadmap. Software strategy (tools, libraries) is essential to ensure the quality and productivity level needed to keep the rhythm without burning developers. As we commit, as individuals and as a company, to common interest, we choose to dedicate a significant part of our profit to the environment and to the open-source projects that support our activity. Beyond our own activity, we consider open source as a key part for computer science education and software innovation.",
+    "name": "Laurent Almeras",
+    "role": "CTO, Kobalt",
+    "image": "/images/quotes/laurentalmeras.jpeg",
+    "companyLogo": "/images/members/kobalt.png",
+    "companyName": "Kobalt",
+    "type": "sustainer"
+  },
+  {
+    "quote": "By supporting projects like Adoptium, we are ensuring the long-term health and sustainability of critical developer tools and supporting innovation that benefits the entire industry.",
+    "name": "Rin Oliver",
+    "role": "Product Manager, DevOps and Integrations, MacStadium",
+    "image": "/images/quotes/rinoliver.jpeg",
+    "companyLogo": "/images/members/macstadium.svg",
+    "companyName": "MacStadium",
+    "type": "sustainer"
+  },
+  {
+    "quote": "Companies that build on open source have a responsibility to help maintain it because without open source, many of their products wouldn’t exist.",
+    "name": "Hendrik Ebbers",
+    "role": "CEO, Open-Elements",
+    "image": "/images/quotes/hendrikebbers.jpeg",
+    "companyLogo": "/images/members/openelements.svg",
+    "companyName": "Open-Elements",
+    "type": "sustainer"
+  }
+]
