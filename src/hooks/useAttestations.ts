@@ -47,11 +47,6 @@ export function useAttestations(
       return;
     }
 
-    /**
-     * Determine which checksums we have not yet resolved.
-     * A checksum explicitly cached as `undefined` means:
-     * "fetched and no attestation exists".
-     */
     const unresolvedChecksums = uniqueChecksums.filter(
       (checksum) => !(checksum in cacheRef.current)
     );
@@ -62,7 +57,7 @@ export function useAttestations(
 
     let cancelled = false;
 
-    async function fetchAttestations() {
+    async function fetchAttestations(releaseName: string) {
       setIsLoading(true);
       setError(undefined);
 
@@ -71,32 +66,23 @@ export function useAttestations(
           `${BASE_URL}/attestations/release_name/${encodeURIComponent(
             releaseName
           )}`,
-          {
-            params: { project: "jdk" },
-          }
+          { params: { project: "jdk" } }
         );
 
         if (cancelled) return;
 
         const attestationMap: AttestationLookup = {};
 
-        // Normalize response by checksum
         for (const attestation of response.data) {
           attestationMap[attestation.target_checksum] = attestation;
         }
 
-        // Populate cache for requested checksums
         unresolvedChecksums.forEach((checksum) => {
           cacheRef.current[checksum] = attestationMap[checksum] ?? undefined;
         });
       } catch (err: any) {
         if (cancelled) return;
 
-        /**
-         * 404 means:
-         * - No attestations for this release
-         * - This is a VALID state, not an error
-         */
         if (axios.isAxiosError(err) && err.response?.status === 404) {
           unresolvedChecksums.forEach((checksum) => {
             cacheRef.current[checksum] = undefined;
@@ -111,7 +97,7 @@ export function useAttestations(
       }
     }
 
-    fetchAttestations();
+    fetchAttestations(releaseName);
 
     return () => {
       cancelled = true;
