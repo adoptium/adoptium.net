@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { Link } from "@/i18n/navigation"
-import Image from "next/image"
-import { FooterIcon } from "@/components/Common/Icon"
-import IconSocial from "@/components/IconSocial"
-import { useState } from "react"
-import { CiCirclePlus, CiCircleMinus } from "react-icons/ci"
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
+import { FooterIcon } from "@/components/Common/Icon";
+import IconSocial from "@/components/IconSocial";
+import { useState } from "react";
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 
 interface FooterData {
   title: {
-    key: string
-    defaultText: string
-  }
+    key: string;
+    defaultText: string;
+  };
   links: Array<{
     text: {
-      key: string
-      defaultText: string
-    }
-    url: string
+      key: string;
+      defaultText: string;
+    };
+    url: string;
     disclaimerMessage?: {
-      key: string
-      defaultText: string
-    }
-  }>
+      key: string;
+      defaultText: string;
+    };
+  }>;
 }
 
 const footerData: FooterData[] = [
@@ -134,9 +134,10 @@ const footerData: FooterData[] = [
         text: { key: "footer.swag.store", defaultText: "Swag Store" },
         url: "https://eclipse-foundation.store/collections/eclipse-adoptium",
         disclaimerMessage: {
-          key: 'swag.store.disclaimer',
-          defaultText: 'By clicking the continue button, you will leave our website. Please be aware that new terms of use will apply to the Eclipse Foundation store, powered by Fourthwall: https://eclipse-foundation.store/.'
-        }
+          key: "swag.store.disclaimer",
+          defaultText:
+            "By clicking the continue button, you will leave our website. Please be aware that new terms of use will apply to the Eclipse Foundation store, powered by Fourthwall: https://eclipse-foundation.store/.",
+        },
       },
     ],
   },
@@ -175,61 +176,83 @@ const footerData: FooterData[] = [
       },
     ],
   },
-]
+];
 
 // Plus/Minus icon component
 const ToggleIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
-  isOpen ? (
-    <CiCircleMinus size={45} className="text-white" />
-  ) : (
-    <CiCirclePlus size={45} className="text-white" />
-  )
-)
+  <div
+    className={`transition-transform duration-300 ${
+      isOpen ? "rotate-180" : ""
+    }`}
+  >
+    {isOpen ? (
+      <CiCircleMinus size={32} className="text-pink" />
+    ) : (
+      <CiCirclePlus
+        size={32}
+        className="text-gray-400 group-hover:text-white transition-colors"
+      />
+    )}
+  </div>
+);
 
 // Mobile footer section component
-const MobileFooterSection: React.FC<{ section: FooterData }> = ({ section }) => {
-  const [isOpen, setIsOpen] = useState(false)
+const MobileFooterSection: React.FC<{ section: FooterData }> = ({
+  section,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="border-b border-white/5 last:border-0">
       <button
-        className="flex justify-between w-full items-center"
+        className="flex justify-between w-full items-center py-4 group"
         onClick={() => setIsOpen(!isOpen)}
         type="button"
         aria-expanded={isOpen}
       >
-        <span className="text-white text-xl font-semibold leading-7">
+        <span
+          className={`text-lg font-bold transition-colors duration-200 ${
+            isOpen ? "text-pink" : "text-white group-hover:text-pink"
+          }`}
+        >
           {section.title.defaultText}
         </span>
-        <span className="text-white">
-          <ToggleIcon isOpen={isOpen} />
-        </span>
+        <ToggleIcon isOpen={isOpen} />
       </button>
 
-      {isOpen && (
-        <div className="mt-4 mb-4">
-          <ul className="space-y-2 text-sm">
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100 mb-6"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <ul className="space-y-3 pl-2 border-l-2 border-white/10 ml-1">
             {section.links.map((link, linkIndex) => {
-              const isInternalLink = !/^https?:\/\//.test(link.url)
+              const isInternalLink = !/^https?:\/\//.test(link.url);
+              const linkClasses =
+                "text-gray-400 text-base hover:text-white transition-colors duration-200 block py-1";
+
               return (
                 <li key={linkIndex}>
                   {isInternalLink ? (
-                    <Link
-                      href={link.url}
-                      className="text-white text-base font-normal leading-6 transition hover:opacity-75"
-                    >
+                    <Link href={link.url} className={linkClasses}>
                       {link.text.defaultText}
                     </Link>
                   ) : link.disclaimerMessage ? (
                     <a
                       href="#"
-                      onClick={e => {
-                        e.preventDefault()
-                        if (link.disclaimerMessage && window.confirm(link.disclaimerMessage.defaultText)) {
-                          window.open(link.url, '_blank')
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (
+                          link.disclaimerMessage &&
+                          window.confirm(link.disclaimerMessage.defaultText)
+                        ) {
+                          window.open(link.url, "_blank");
                         }
                       }}
-                      className="text-white text-base font-normal leading-6 transition hover:opacity-75"
+                      className={linkClasses}
                     >
                       {link.text.defaultText}
                     </a>
@@ -238,56 +261,64 @@ const MobileFooterSection: React.FC<{ section: FooterData }> = ({ section }) => 
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white text-base font-normal leading-6 transition hover:opacity-75"
+                      className={linkClasses}
                     >
                       {link.text.defaultText}
                     </a>
                   )}
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
-      )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-blue">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-8 md:py-16 sm:px-6 lg:space-y-16 lg:px-8">
+    <footer className="bg-[#0b0024] border-t border-white/10 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink via-purple to-blue opacity-50"></div>
+      <div className="absolute -top-[400px] -right-[400px] w-[800px] h-[800px] bg-purple/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="mx-auto max-w-screen-xl px-4 py-12 md:py-20 sm:px-6 lg:px-8 relative z-10">
         <div className="hidden md:block">
-          <div className="grid grid-cols-1 gap-8 border-b border-gray-800 mb-3 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16 pb-6">
+          <div className="grid grid-cols-1 gap-12 border-b border-white/10 pb-16 sm:grid-cols-2 lg:grid-cols-4">
             {footerData.map((section, index) => (
-              <div key={index}>
-                <p className="font-medium text-pink">
+              <div key={index} className="group">
+                <h3 className="font-bold text-lg text-white mb-6 relative inline-block">
                   {section.title.defaultText}
-                </p>
-                <ul className="mt-6 space-y-2 text-sm">
+                  <span className="absolute -bottom-2 left-0 w-12 h-1 bg-pink rounded-full transition-all duration-300 group-hover:w-full opacity-50 group-hover:opacity-100"></span>
+                </h3>
+                <ul className="space-y-3">
                   {section.links.map((link, linkIndex) => {
-                    const isInternalLink = !/^https?:\/\//.test(link.url)
+                    const isInternalLink = !/^https?:\/\//.test(link.url);
+                    const linkClasses =
+                      "text-gray-400 text-sm hover:text-white hover:translate-x-1 transition-all duration-200 inline-block";
 
                     return (
                       <li key={linkIndex}>
                         {isInternalLink ? (
-                          <Link
-                            href={link.url}
-                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
-                          >
+                          <Link href={link.url} className={linkClasses}>
                             {link.text.defaultText}
                           </Link>
                         ) : link.disclaimerMessage ? (
                           <a
                             href="#"
-                            onClick={e => {
-                              e.preventDefault()
-                              // TODO: Implement leaving site disclaimer modal
-                              if (link.disclaimerMessage && window.confirm(link.disclaimerMessage.defaultText)) {
-                                window.open(link.url, '_blank')
+                            onClick={(e) => {
+                              e.preventDefault();
+                              if (
+                                link.disclaimerMessage &&
+                                window.confirm(
+                                  link.disclaimerMessage.defaultText
+                                )
+                              ) {
+                                window.open(link.url, "_blank");
                               }
                             }}
-                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
+                            className={linkClasses}
                           >
                             {link.text.defaultText}
                           </a>
@@ -296,75 +327,103 @@ const Footer: React.FC = () => {
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white text-base font-normal leading-6 transition hover:opacity-75 dark:text-gray-200"
+                            className={linkClasses}
                           >
                             {link.text.defaultText}
                           </a>
                         )}
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="sm:flex sm:items-center sm:justify-between pt-4">
-            <div className="flex">
-              <FooterIcon />
-              <div className="ml-3">
-                <p className="text-xs flex items-center gap-4 text-white font-normal leading-5">
+
+          <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-start gap-6 max-w-2xl">
+              <div className="shrink-0 opacity-80 hover:opacity-100 transition-opacity">
+                <FooterIcon />
+              </div>
+              <div>
+                <p className="text-sm text-gray-300 leading-relaxed">
                   Copyright © Eclipse Foundation. All Rights Reserved.
                 </p>
-                <p className="text-xs text-white font-normal leading-4 mt-1">
-                  Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Java and OpenJDK are trademarks or registered trademarks of
+                  Oracle and/or its affiliates. Other names may be trademarks of
+                  their respective owners.
                 </p>
               </div>
             </div>
 
-            <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
-              <li>
-                <a
-                  href="https://www.netlify.com"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="leading-6 transition hover:opacity-75 dark:text-gray-200"
-                >
-                  <Image
-                    src="/images/netlify-light.svg"
-                    alt="Deploys by Netlify"
-                    width={60}
-                    height={10}
-                  />
-                </a>
-              </li>
-
-              <IconSocial />
-            </ul>
+            <div className="flex flex-col items-end gap-6">
+              <ul className="flex gap-5">
+                <IconSocial />
+              </ul>
+              <a
+                href="https://www.netlify.com"
+                rel="noreferrer"
+                target="_blank"
+                className="opacity-50 hover:opacity-100 transition-opacity duration-300"
+              >
+                <Image
+                  src="/images/netlify-light.svg"
+                  alt="Deploys by Netlify"
+                  width={80}
+                  height={25}
+                />
+              </a>
+            </div>
           </div>
         </div>
+
         {/* Mobile footer with accordion */}
-        <div className="w-full px-4 md:hidden block">
-          <div className="flex flex-col space-y-4 p-4">
+        <div className="md:hidden block">
+          <div className="flex flex-col space-y-2">
             {footerData.map((section, index) => (
               <MobileFooterSection key={index} section={section} />
             ))}
-            <div className="pt-4">
-              <div className="flex mb-4">
-                <div className="ml-3">
-                  <p className="text-xs flex items-center gap-4 text-white font-normal leading-5">
-                    Copyright © Eclipse Foundation. All Rights Reserved.
-                  </p>
-                  <p className="text-xs text-white font-normal leading-4 mt-1">
-                    Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.
-                  </p>
-                </div>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <div className="flex flex-col gap-8 items-center text-center">
+              <div className="flex justify-center">
+                <ul className="flex gap-5">
+                  <IconSocial />
+                </ul>
               </div>
+
+              <div className="space-y-4">
+                <p className="text-sm text-gray-300">
+                  Copyright © Eclipse Foundation. All Rights Reserved.
+                </p>
+                <p className="text-xs text-gray-500 px-4">
+                  Java and OpenJDK are trademarks or registered trademarks of
+                  Oracle and/or its affiliates. Other names may be trademarks of
+                  their respective owners.
+                </p>
+              </div>
+
+              <a
+                href="https://www.netlify.com"
+                rel="noreferrer"
+                target="_blank"
+                className="opacity-50 hover:opacity-100 transition-opacity duration-300 mt-4"
+              >
+                <Image
+                  src="/images/netlify-light.svg"
+                  alt="Deploys by Netlify"
+                  width={80}
+                  height={25}
+                />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

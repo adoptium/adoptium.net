@@ -35,11 +35,7 @@ exports[`Index page > renders correctly 1`] = `
     <div
       class="container mx-auto px-4 z-10 flex flex-col items-center text-center justify-center"
     >
-      <div
-        animate="[object Object]"
-        initial="[object Object]"
-        transition="[object Object]"
-      >
+      <div>
         <h1
           class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-[20ch] mx-auto leading-tight"
           style="text-wrap: balance;"
@@ -57,18 +53,12 @@ exports[`Index page > renders correctly 1`] = `
         </h1>
       </div>
       <p
-        animate="[object Object]"
         class="text-2xl md:text-3xl text-gray-300 max-w-3xl mb-12 font-normal leading-relaxed"
-        initial="[object Object]"
-        transition="[object Object]"
       >
         Text
       </p>
       <div
-        animate="[object Object]"
         class="relative z-10 mb-12"
-        initial="[object Object]"
-        transition="[object Object]"
       >
         <div
           class="flex flex-col items-center gap-6"
@@ -105,10 +95,7 @@ exports[`Index page > renders correctly 1`] = `
         </div>
       </div>
       <div
-        animate="[object Object]"
         class="w-full max-w-7xl mx-auto"
-        initial="[object Object]"
-        transition="[object Object]"
       >
         <div
           class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
@@ -255,10 +242,6 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 md:p-12 shadow-2xl backdrop-blur-sm"
-        initial="[object Object]"
-        transition="[object Object]"
-        viewport="[object Object]"
-        whileinview="[object Object]"
       >
         <div
           class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-10"
@@ -317,10 +300,6 @@ exports[`Index page > renders correctly 1`] = `
   >
     <div
       class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
-      initial="[object Object]"
-      transition="[object Object]"
-      viewport="[object Object]"
-      whileinview="[object Object]"
     >
       <h2
         class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
@@ -553,10 +532,6 @@ exports[`Index page > renders correctly 1`] = `
   </div>
   <div
     class="bg-purple py-8 lg:py-16"
-    initial="[object Object]"
-    transition="[object Object]"
-    viewport="[object Object]"
-    whileinview="[object Object]"
   >
     <div
       class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
@@ -607,10 +582,6 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="text-center mb-16"
-        initial="[object Object]"
-        transition="[object Object]"
-        viewport="[object Object]"
-        whileinview="[object Object]"
       >
         <h2
           class="text-4xl md:text-5xl font-bold mb-6"
@@ -628,10 +599,6 @@ exports[`Index page > renders correctly 1`] = `
       >
         <div
           class="md:col-span-2 bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -668,10 +635,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -708,10 +671,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -748,10 +707,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-2 bg-gradient-to-bl from-[#2d1b4e] to-[#1a0b2e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -788,10 +743,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -828,10 +779,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -877,10 +824,6 @@ exports[`Index page > renders correctly 1`] = `
     >
       <div
         class="mx-auto max-w-4xl sm:text-center"
-        initial="[object Object]"
-        transition="[object Object]"
-        viewport="[object Object]"
-        whileinview="[object Object]"
       >
         <h2
           class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
@@ -890,10 +833,6 @@ exports[`Index page > renders correctly 1`] = `
       </div>
       <div
         class="flex flex-col justify-center items-center"
-        initial="[object Object]"
-        transition="[object Object]"
-        viewport="[object Object]"
-        whileinview="[object Object]"
       >
         <p
           class="mt-6 max-w-2xl mb-0 text-base leading-6 text-lightgrey text-center md:text-justify md:[text-align-last:center]"
@@ -906,10 +845,6 @@ exports[`Index page > renders correctly 1`] = `
       >
         <div
           class="max-w-xl w-full h-full"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
@@ -978,10 +913,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="max-w-xl w-full h-full"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
@@ -1050,10 +981,6 @@ exports[`Index page > renders correctly 1`] = `
         </div>
         <div
           class="max-w-xl w-full h-full"
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
         >
           <div
             class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
@@ -1344,7 +1271,7 @@ exports[`Index page > renders correctly 1`] = `
     Latest News Content
   </div>
   <section
-    class="relative py-24 lg:py-40 overflow-hidden contributors min-h-[1000px] flex items-center justify-center"
+    class="relative py-8 lg:py-40 overflow-hidden contributors min-h-[1000px] flex items-center justify-center"
   >
     <div
       class="absolute inset-0 pointer-events-none"
@@ -1362,23 +1289,13 @@ exports[`Index page > renders correctly 1`] = `
       <div
         class="relative z-20 flex flex-col items-center justify-center text-center max-w-3xl mx-auto h-full min-h-[400px]"
       >
-        <div
-          initial="[object Object]"
-          transition="[object Object]"
-          viewport="[object Object]"
-          whileinview="[object Object]"
-        >
+        <div>
           <h2
             class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8 tracking-tight"
           >
             Text
           </h2>
-          <div
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
-          >
+          <div>
             <a
               class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:scale-105 hover:border-pink-500/50 backdrop-blur-md shadow-lg hover:shadow-pink-500/20 group"
               href="https://github.com/adoptium"
@@ -1410,10 +1327,6 @@ exports[`Index page > renders correctly 1`] = `
         >
           <div
             class="pointer-events-auto lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-full w-full lg:w-auto flex justify-center"
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1449,10 +1362,6 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:top-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1488,10 +1397,6 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1527,10 +1432,6 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-full w-full lg:w-auto flex justify-center"
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1566,10 +1467,6 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1605,10 +1502,6 @@ exports[`Index page > renders correctly 1`] = `
           </div>
           <div
             class="pointer-events-auto lg:absolute lg:top-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
-            initial="[object Object]"
-            transition="[object Object]"
-            viewport="[object Object]"
-            whileinview="[object Object]"
           >
             <div
               class="w-full max-w-[320px]"
