@@ -518,16 +518,16 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                 title="This build is AQAvit Verified"
                                 className="img-fluid mb-0"
                               />
-                              {hasAttestation(binary.installer_checksum) && (
-                                <Image
-                                  src="/images/icons/reproduced-verified.svg"
-                                  width={30}
-                                  height={30}
-                                  alt="Reproducibility Verified"
-                                  title="This build is reproduced by a 3rd party"
-                                />
-                              )}
                             </Link>
+                            {hasAttestation(binary.installer_checksum) && (
+                              <Image
+                                src="/images/icons/reproduced-verified.svg"
+                                width={30}
+                                height={30}
+                                alt="Reproducibility Verified"
+                                title="This build is reproduced by a 3rd party"
+                              />
+                            )}
                           </div>
 
                           <div className="flex items-center gap-2">
