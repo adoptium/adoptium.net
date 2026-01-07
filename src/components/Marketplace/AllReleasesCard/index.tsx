@@ -10,7 +10,7 @@ import { FaRedo } from "react-icons/fa";
 import ChecksumModal from "@/components/ChecksumModal";
 import AnimatedPlaceholder from "@/components/AnimatedPlaceholder";
 import type { MarketplaceRelease } from "@/hooks";
-import { useAttestations } from "@/hooks/useAttestations";
+
 import { sendDownloadEvent } from "@/utils/gtag";
 import { capitalize } from "@/utils/capitalize";
 import { getImageForDistribution } from "@/hooks";
@@ -38,16 +38,6 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({
     setCurrentChecksum(checksum);
     setModalOpen(true);
   };
-
-  const allChecksums = React.useMemo(() => {
-    if (!results) return [];
-    return results.map((r) => r.binary.package.sha256sum);
-  }, [results]);
-
-  const { attestations } = useAttestations(
-    results?.[0]?.release_name ?? "",
-    allChecksums
-  );
 
   // Loading state with sleek animated placeholders
   if (results === null) {
@@ -90,11 +80,6 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({
                     <div className="flex items-center gap-3 flex-shrink-0 ml-4">
                       <div className="h-10 bg-[#200E46]/60 rounded-lg w-24 animate-pulse"></div>
                       <div className="h-10 bg-[#200E46]/60 rounded-lg w-32 animate-pulse"></div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="h-4 bg-[#200E46]/60 rounded w-24 animate-pulse"></div>
-                      <div className="h-4 bg-[#200E46]/60 rounded w-4 animate-pulse"></div>{" "}
-                      {/* icon placeholder */}
                     </div>
                   </div>
 
@@ -194,10 +179,10 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF1464]/5 to-[#FF1464]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Mobile Layout */}
-            <div className="block md:hidden">
-              <div className="relative p-5 flex flex-col gap-5">
+            <div className="block md:hidden space-y-4">
+              <div className="relative p-6">
                 {/* Header with version and vendor logo */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between min-h-[4.5rem]">
                   {" "}
                   {/* min-h for vertical centering */}
                   <div className="flex flex-col justify-center">
@@ -263,7 +248,7 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({
                 </div>
 
                 {/* Action Buttons - Grouped Design */}
-                <div className="bg-[#200E46]/60 backdrop-blur-sm rounded-xl p-2.5 border border-[#200E46]/40">
+                <div className="bg-[#200E46]/60 backdrop-blur-sm rounded-xl p-3 border border-[#200E46]/40">
                   <div className="flex gap-2">
                     <button
                       onClick={() =>
@@ -296,23 +281,8 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({
                       }
                     >
                       <FiDownload className="w-4 h-4" />
-
-                      {/* Binary name + attestation */}
-                      <span className="flex items-center gap-1">
-                        {t("Marketplace.Releases.download")} (
-                        {fetchExtension(release.binary.package.name)}
-                        {/* Render icon only if attestation exists */}
-                        {attestations[release.binary.package.sha256sum] && (
-                          <Image
-                            src="/images/icons/verified-reproduced.svg"
-                            alt="Verified build"
-                            className="w-4 h-4"
-                            width={16}
-                            height={16}
-                          />
-                        )}
-                        )
-                      </span>
+                      {t("Marketplace.Releases.download")} (
+                      {fetchExtension(release.binary.package.name)})
                     </Link>
                   </div>
                 </div>
@@ -419,22 +389,8 @@ const AllReleaseCard: React.FC<AllReleaseCardProps> = ({
                     }
                   >
                     <FiDownload className="w-4 h-4" />
-
-                    {/* Binary name */}
-                    <span className="flex items-center gap-1">
-                      {fetchExtension(release.binary.package.name)}
-
-                      {/* Attestation icon */}
-                      {attestations[release.binary.package.sha256sum] && (
-                        <Image
-                          src="/images/icons/verified-reproduced.svg"
-                          alt="Verified build"
-                          className="w-4 h-4"
-                          width={16}
-                          height={16}
-                        />
-                      )}
-                    </span>
+                    {t("Marketplace.Releases.download")} (
+                    {fetchExtension(release.binary.package.name)})
                   </Link>
                 </div>
               </div>
