@@ -111,7 +111,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="get-temurin"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -143,14 +143,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#get-temurin"
                     >
                       Get Temurin
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -197,7 +198,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="temurin-support"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -229,14 +230,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#temurin-support"
                     >
                       Temurin Support
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -295,7 +297,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="aqavit"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -327,14 +329,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#aqavit"
                     >
                       AQAvit Quality
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -364,7 +367,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="marketplace"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -396,14 +399,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#marketplace"
                     >
                       Marketplace
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -433,7 +437,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="contributing"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -465,14 +469,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#contributing"
                     >
                       Contributing
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -531,7 +536,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="secure-software"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -563,14 +568,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#secure-software"
                     >
                       Secure Software
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -646,7 +652,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="governance"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -678,14 +684,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#governance"
                     >
                       Governance
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -738,7 +745,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="source-code"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -770,14 +777,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#source-code"
                     >
                       Source Code
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="px-4 py-3 flex justify-between items-center text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -904,7 +912,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="other-resources"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -936,14 +944,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#other-resources"
                     >
                       Other Resources
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
@@ -1002,7 +1011,7 @@ exports[`Docs page > renders correctly 1`] = `
             id="branding"
           >
             <div
-              class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+              class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
             >
               <div
                 class="relative p-6"
@@ -1034,14 +1043,15 @@ exports[`Docs page > renders correctly 1`] = `
                         />
                       </svg>
                     </span>
-                    <span
-                      class="text-white/90"
+                    <a
+                      class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+                      href="/docs#branding"
                     >
                       Branding
-                    </span>
+                    </a>
                   </p>
                   <div
-                    class="divide-y divide-white/10"
+                    class="relative z-10 divide-y divide-white/10"
                   >
                     <a
                       class="px-4 py-3 flex justify-between items-center text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
