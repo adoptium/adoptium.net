@@ -13,7 +13,7 @@ exports[`DocumentationCard component > renders correctly 1`] = `
     id="test-anchorId"
   >
     <div
-      class="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
+      class="relative bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#FF1464]/10 hover:border-[#FF1464]/30 h-full transform hover:-translate-y-1"
     >
       <div
         class="relative p-6"
@@ -45,14 +45,15 @@ exports[`DocumentationCard component > renders correctly 1`] = `
                 />
               </svg>
             </span>
-            <span
-              class="text-white/90"
+            <a
+              class="text-white/90 after:absolute after:inset-0 after:content-[''] after:z-0"
+              href="/docs#test-anchorId"
             >
               Test Title
-            </span>
+            </a>
           </p>
           <div
-            class="divide-y divide-white/10"
+            class="relative z-10 divide-y divide-white/10"
           >
             <a
               class="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg my-1 transition-all duration-200"
