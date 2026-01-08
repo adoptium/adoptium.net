@@ -24,7 +24,7 @@ describe('TabContent', () => {
         expect(screen.getByText('A test news item')).toBeInTheDocument();
     });
 
-    it('renders events with truncated description', () => {
+    it('renders events with long description', () => {
         const posts = [
             {
                 title: 'Test Event',
@@ -35,7 +35,7 @@ describe('TabContent', () => {
         ];
         render(<TabContent posts={posts} isEvents />);
         expect(screen.getByText('Test Event')).toBeInTheDocument();
-        expect(screen.getByText(/A{150}\.{3}/)).toBeTruthy();
+        expect(screen.getByText('A'.repeat(200))).toBeInTheDocument();
     });
 
     it('renders events with short description', () => {
