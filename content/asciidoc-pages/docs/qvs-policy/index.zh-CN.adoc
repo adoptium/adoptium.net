@@ -1,0 +1,27 @@
+= AQAvit(TM) 质量验证套件策略
+:description: Adoptium QVS 策略，确保 Java 运行时符合生产使用标准。
+:keywords: adoptium, AQAvit, 质量, 策略, 验证, java, qvs
+:page-description: 阅读 Adoptium AQAvit(TM) 质量验证套件策略，了解生产级 Java 运行时的评估标准。
+:orgname: Eclipse Adoptium
+:lang: zh-CN
+:page-authors: tellison, gdams, HanSolo
+
+== 概览
+
+https://projects.eclipse.org/projects/adoptium.aqavit[AQAvit^] 是针对 Java SE 运行时及相关技术的质量评估项目。AQAvit 采用功能完整的 Java 运行时，并确保其具备适合生产使用的所有额外品质。这些质量标准包括良好的性能、卓越的安全性、弹性和耐用性，以及通过各种应用程序测试套件的能力。
+
+== AQAvit 软件产品验证
+
+Eclipse AQAvit 测试作为开源许可软件https://projects.eclipse.org/projects/adoptium.aqavit/developer[免费向公众开放^]。您可以根据软件许可条款对 AQAvit 软件进行 fork、复制或修改。
+
+指定的 https://github.com/adoptium/aqa-tests/releases[AQAvit 质量验证套件 (QVS) 版本^]根据 https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证套件许可证 (QVSL)^]提供。如果软件产品完全符合并满足 QVSL 中描述的 AQAvit QVS 的所有要求，则该软件产品将被视为通过了 AQAvit QVS “验证”。
+
+无需成为 Adoptium 工作组成员即可生产通过 AQAvit 验证的软件产品。
+
+== 关于 AQAvit 测试的事实陈述
+
+任何人都可以运行 AQAvit 测试套件并对结果做出事实正确的陈述。
+
+“AQAvit”是 Eclipse 基金会的注册商标，根据 https://www.eclipse.org/legal/logo_guidelines.php[Eclipse 基金会徽标和商标指南策略^]进行管理。因此，不允许在任何软件或相关服务中使用 Eclipse 的标记或任何类似的描述。只有在获得 Eclipse 基金会许可的情况下，您才能使用“AQAvit”术语和 AQAvit 项目徽标。
+
+本策略的修改由 link:/members[Adoptium 工作组指导委员会]进行。
