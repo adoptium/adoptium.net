@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import React from "react"
 import PageHeader from "@/components/Common/PageHeader"
 import Timeline from "@/components/Timeline"
-import Calender from "@/components/Calender"
+import Calendar from "@/components/Calendar"
 
 export const metadata: Metadata = {
     title: "Events",
@@ -24,7 +24,7 @@ export default function EventsPage() {
                         Upcoming Events
                     </h2>
                 </div>
-                <Calender />
+                <Calendar />
                 <Timeline />
             </div>
         </div>

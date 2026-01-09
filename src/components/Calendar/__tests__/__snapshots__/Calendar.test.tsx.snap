@@ -28,7 +28,7 @@ exports[`Calendar > matches snapshot 1`] = `
     <p
       class="text-grey mb-6 leading-relaxed"
     >
-      Stay up to date with the Adoptium Community meeting, catch up with community members, and share your ideas and work-in-progress.
+      Stay up to date with the Adoptium Community meetings, catch up with community members, and share your ideas and work-in-progress.
     </p>
     <div
       class="flex flex-col sm:flex-row gap-4"

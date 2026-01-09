@@ -21,7 +21,7 @@ const Calendar: React.FC = () => {
           Adoptium Community Calendar
         </h3>
         <p className="text-grey mb-6 leading-relaxed">
-          Stay up to date with the Adoptium Community meeting, catch up with
+          Stay up to date with the Adoptium Community meetings, catch up with
           community members, and share your ideas and work-in-progress.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
