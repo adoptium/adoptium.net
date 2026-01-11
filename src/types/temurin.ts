@@ -35,3 +35,31 @@ export interface ReleaseAsset {
   version: VersionMetaData;
   binaries: Array<Binary>;
 }
+
+export interface Attestation {
+  id: string;
+  filename: string;
+  featureVersion: number;
+  release_name: string | null;
+  os: string;
+  architecture: string;
+  image_type: string;
+  jvm_impl: string;
+  vendor: string;
+  committedDate: string | null;
+
+  /**
+   * SHA256 checksum of the binary this attestation applies to.
+   * This is the JOIN KEY between Binary and Attestation.
+   */
+  target_checksum: string;
+
+  assessor_org: string | null;
+  assessor_affirmation: string | null;
+  assessor_claim_predicate: string | null;
+
+  attestation_link: string | null;
+  attestation_public_signing_key_link: string | null;
+}
+
+export type AttestationLookup = Record<string, Attestation | undefined>;
