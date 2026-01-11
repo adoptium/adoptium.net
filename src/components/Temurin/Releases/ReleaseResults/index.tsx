@@ -70,7 +70,6 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
     releaseName,
     allChecksums
   );
-
   const hasAttestation = (checksum?: string) => {
     if (attestationsLoading) return false;
     if (!attestations) return false;
@@ -417,8 +416,8 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                             {hasAttestation(binary.checksum) && (
                               <Image
                                 src="/images/icons/reproduced-verified.svg"
-                                width={30}
-                                height={30}
+                                width={25}
+                                height={25}
                                 alt="Reproducibility Verified"
                                 data-toggle="tooltip"
                                 data-placement="bottom"
@@ -522,8 +521,8 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                             {hasAttestation(binary.installer_checksum) && (
                               <Image
                                 src="/images/icons/reproduced-verified.svg"
-                                width={30}
-                                height={30}
+                                width={25}
+                                height={25}
                                 alt="Reproducibility Verified"
                                 title="This build is reproduced by a 3rd party"
                               />
