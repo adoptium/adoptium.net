@@ -29,6 +29,14 @@ type BannerProps = {
 // -------------------------------------------------------
 const currentBanners: BannerProps[] = [
   {
+    title: "Upcoming Adoptium Webinar: GPU-Accelerated Java with TornadoVM and Temurin JDK 21",
+    description: "January 22 at 15:00 CET",
+    cta: "Register now",
+    ctaLink: "https://www.crowdcast.io/c/22jan-26-adoptiumsummit",
+    startDate: "2026-01-10T00:00:00Z",
+    endDate: "2026-01-22T14:30:00Z",
+  },
+  {
     title:
       "End of Support: Solaris & Windows 32-bit for Eclipse Temurin in 2026",
     description:
