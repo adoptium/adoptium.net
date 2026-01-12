@@ -1,0 +1,163 @@
+= AQAvit(TM) 验证
+:page-authors: gdams, smlambert, llxia, tellison
+:aqavit-branch: v0.9.6-release
+:page-description: 关于如何运行 AQAvit 验证测试并收集发布结果的指南。
+:keywords: AQAvit, 验证, 测试, java, 质量, adoptium, marketplace, qvsl
+:lang: zh-CN
+版本 0.2, 2022.03.02
+
+AQAvit 项目的创建是为了“确保质量的发生”。AQAvit 验证是通过在 AQAvit 测试套件中运行并通过一组规定的、版本化的测试流程来实现的。https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证软件许可证 (QVSL)^] 要求那些希望验证其产品的人分享实现验证的测试结果摘要。本文档描述了如何运行 AQAvit 验证测试、检查验证是否通过，以及收集所需的测试结果以供发布。
+
+AQAvit 验证是列入 link:/marketplace[Adoptium Marketplace^] 的标准之一。利用 AQAvit 测试套件来确保 Adoptium Marketplace 中列出的二进制文件的质量，不仅能向消费者传达我们对质量的重视，还能将 Adoptium 工作组成员的良好验证实践整合到集中努力中。AQAvit 的测试套件标准与用户群不断变化的要求保持一致。
+
+== 概览
+AQAvit 测试套件是一组庞大的测试，许多测试是由 AQAvit 项目贡献的，还有一些是从各种开源项目中提取的，用于验证 OpenJDK 二进制文件的质量。该套件适用于在所有 link:/supported-platforms[支持的平台^] 上测试 Java SE 8 或更高版本。为了验证二进制文件，测试人员克隆 aqa-tests github 仓库的特定发行版（aqa-tests 仓库的 https://github.com/adoptium/aqa-tests/releases[最新稳定发行版^]），配置其测试环境，针对他们计划验证的每个二进制文件执行并通过所需的测试目标，并根据 QVSL 规定提供这些测试运行的结果。
+
+== 要运行的 AQAvit 测试目标
+测试被分为不同的组，这些组又被分为 3 个级别。这种逻辑分类提供了灵活性和粒度，并可以通过网格进行可视化展示。
+
+image::gridview.png["网格视图",350,182]
+
+对于当前版本的 AQAvit，需要运行的顶级测试目标集为 [sanity.functional, extended.functional, special.functional, sanity.openjdk, extended.openjdk, sanity.system, extended.system, sanity.perf, extended.perf]。在随后的 AQAvit 版本中，将增加目标以进一步提高质量标准。
+
+== 关于测试执行的详细信息
+AQAvit 可以在各种 CI/CD 环境中运行，也可以直接在容器中或在安装了 https://github.com/adoptium/aqa-tests/blob/master/doc/Prerequisites.md[测试先决条件^] 的测试机上通过命令行运行。在任何环境下的基本步骤都是相同的。
+
+.通过命令行运行 AQAvit
+[%collapsible]
+====
+[source, bash, subs="attributes"]
+----
+git clone --depth 1 --branch {aqavit-branch} https://github.com/adoptium/aqa-tests.git 
+
+export TEST_JDK_HOME=<二进制文件路径> 
+export USE_TESTENV_PROPERTIES=true 
+export JDK_VERSION=17 
+export JDK_IMPL=hotspot
+export BUILD_LIST=functional 
+
+cd aqa-tests
+./get.sh
+./compile.sh
+cd TKG
+make _sanity.functional 
+… 
+make _extended.system 
+
+收集 *.tap 文件和元数据文件 
+归档 <results>.zip 
+发布 <results>.zip
+----
+====
+
+.通过 Github Workflow 运行 AQAvit
+[%collapsible]
+====
+AQAvit 项目创建了一个 Github Action，允许从工作流文件运行 AQAvit 测试套件。https://github.com/adoptium/run-aqa[run-aqa 仓库^]中的 `run-aqa` action 允许用户传入自定义的 OpenJDK 二进制文件进行验证。以下是一个示例工作流文件，可以在作为 Github runner 提供的 3 个受支持平台上运行 sanity 级别目标：
+[source, yaml, subs="attributes"]
+----
+name: Run AQAvit
+
+on:
+  workflow_dispatch: # 允许手动触发作业
+
+env:  # 链接到受测 JDK 构建和原生测试库
+  USE_TESTENV_PROPERTIES: true
+  BINARY_SDK: https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.14.1_1.tar.gz
+  NATIVE_LIBS: https://ci.adoptium.net/job/build-scripts/job/jobs/job/jdk11u/job/jdk11u-linux-x64-hotspot/lastSuccessfulBuild/artifact/workspace/target/OpenJDK11U-testimage_x64_linux_hotspot_2022-02-12-17-06.tar.gz
+
+jobs:
+  run_aqa:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [sanity, extended]
+        suite: [functional, openjdk, system, perf]
+        include:
+          - target: special
+            suite: functional
+
+    steps:
+
+    - name: Run AQA Tests - ${{ matrix.target }}.${{ matrix.suite }}
+      uses: adoptium/run-aqa@v2
+      with: 
+        version: '11'
+        jdksource: 'customized'
+        customizedSdkUrl: ${{ env.BINARY_SDK }} ${{ env.NATIVE_LIBS }}
+        aqa-testsRepo: 'adoptium/aqa-tests:{aqavit-branch}' # 确保此分支设置为最新的发行版分支
+        build_list: ${{ matrix.suite }}
+        target: _${{ matrix.target }}.${{ matrix.suite }}
+
+    - uses: actions/upload-artifact@v2
+      if: always() # 始终运行此步骤（即使测试失败）
+      with:
+        name: test_output
+        path: ./**/output_*/*.tap
+----
+====
+
+.通过 Jenkins 运行 AQAvit
+[%collapsible]
+====
+如果您使用的是 aqa-tests 仓库中提供的 AQAvit Jenkins 测试流水线代码，并且在文档的 https://github.com/adoptium/aqa-tests/blob/master/doc/userGuide.md#jenkins-setup-and-running[Jenkins 设置和运行^] 部分有相关描述，那么这些是您为了运行所需测试目标而需要设置的额外参数。
+[source, subs="attributes"]
+----
+# 设置 Jenkins 作业参数
+ADOPTOPENJDK_REPO=https://github.com/adoptium/aqa-tests.git
+ADOPTOPENJDK_BRANCH={aqavit-branch}
+USE_TESTENV_PROPERTIES=true
+
+# 执行测试目标
+TARGET=sanity.functional 以及随后的 [extended.functional|special.functional|sanity.openjdk|extended.openjdk|sanity.system|extended.system|sanity.perf|extended.perf]
+
+# 收集并发布结果
+收集 *.tap 文件和元数据文件
+归档 <results>.zip
+
+发布 <results>.zip
+----
+====
+
+`.tap` 文件和元数据文件包含有关受测二进制文件的时间戳和信息。这些信息是从 `java -version` 输出、发行文件信息以及在测试运行期间查询一些系统属性中收集的。在适用的情况下，这些信息应与 Marketplace 中列出的二进制文件匹配。
+
+== 验证结果
+AQAvit 测试套件在测试执行结束时生成测试结果文件和元数据文件。在运行并通过九个必需的测试目标中的每一个后，将收集并共享结果文件和元数据文件。对于包含失败的目标，应解决失败的根本原因，并可以重新运行目标并生成并共享更新后的测试结果文件。
+
+生成的测试结果文件遵循一定的命名约定并使用简单的 TAP (Test Anything Protocol)。当顶级目标串行运行时，会生成一个 .tap 文件，例如：
+
+*Test_openjdk11_hs_sanity.system_aarch64_linux.tap*
+
+在名称中包含版本、实现/发行版、测试目标和平台信息，其内容如下所示：
+
+```
+# Timestamp: Wed Mar  2 10:51:55 2022 UTC 
+1..168
+ok 1 - MachineInfo_0
+  ---
+    duration_ms: 581
+  ...
+ok 2 - ClassLoadingTest_5m_0
+  ---
+    duration_ms: 304339
+  ...
+ok 3 - ClassLoadingTest_5m_1  
+  ---
+    duration_ms: 303883
+  ...
+etc.
+  ...
+ok 168 - MauveMultiThrdLoad_5m_1
+  ---
+    duration_ms: 304296
+  ...
+```
+
+从这个示例中可以看出，顶级目标 sanity.system 包含 168 个子目标。在预期的子目标集中，有些可能因为不适用于特定版本或平台而被“跳过”，但绝不能有失败的目标。在 tap 文件中，如果失败，它们将显示为“not ok”。失败的子目标可以单独重新运行，并且为该单独运行生成的 tap 文件可以包含在 <results>.zip 文件中，以指示受测二进制文件能够通过所有预期的目标。
+
+.AQAvit 验证演示
+[%collapsible]
+====
+video::1EUi3iTZSzg[youtube]
+====
