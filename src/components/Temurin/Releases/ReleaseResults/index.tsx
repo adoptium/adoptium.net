@@ -70,10 +70,14 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
     releaseName,
     allChecksums
   );
-  const hasAttestation = (checksum?: string) => {
-    if (attestationsLoading) return false;
-    if (!attestations) return false;
-    return Boolean(checksum && attestations[checksum]);
+
+  const hasAttestation = (checksum?: string): boolean => {
+    if (attestationsLoading || !checksum) return false;
+
+    // Cache invariant:
+    // - defined value  => attestation exists
+    // - undefined      => confirmed absent
+    return attestations[checksum] !== undefined;
   };
 
   // Show loading state

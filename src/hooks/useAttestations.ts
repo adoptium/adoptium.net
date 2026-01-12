@@ -11,14 +11,27 @@ interface UseAttestationsResult {
 }
 
 /**
- * Fetches attestations for a given release and exposes them
- * as a normalized lookup keyed by target_checksum.
+ * Fetches attestations for a given release and exposes them as a normalized
+ * lookup keyed by `target_checksum`.
  *
  * IMPORTANT:
  * - Does NOT mutate Binary or ReleaseAsset
  * - Uses checksum as the join key
  * - Caches results for the hook lifecycle
+ *
+ * CACHE INVARIANT:
+ * - Every checksum passed to this hook is eventually written to the cache.
+ * - If no attestation exists, the checksum is intentionally stored with
+ *   value `undefined` to cache negative lookups.
+ *
+ * This design:
+ * - avoids refetching the same checksum multiple times
+ * - distinguishes "not yet resolved" from "resolved but not attested"
+ *
+ * Consumers must therefore check VALUE presence (not just key presence)
+ * when determining whether an attestation exists.
  */
+
 export function useAttestations(
   releaseName: string | undefined,
   checksums: string[]

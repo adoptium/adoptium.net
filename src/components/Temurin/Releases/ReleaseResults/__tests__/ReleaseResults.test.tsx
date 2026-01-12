@@ -686,4 +686,28 @@ describe("ReleaseResults component", () => {
 
     expect(screen.getByAltText("Reproducibility Verified")).toBeInTheDocument();
   });
+
+  it("should NOT render attestation icon when attestation is explicitly absent", () => {
+    vi.mocked(useAttestations).mockReturnValue({
+      attestations: {
+        abc123: undefined, // resolved, but no attestation
+      },
+      isLoading: false,
+      error: undefined,
+    });
+
+    const releases = [createMockRelease("linux", "x64", "11.0.28+6")];
+
+    render(
+      <ReleaseResults
+        releases={releases}
+        isLoading={false}
+        openModalWithChecksum={mockOpenModalWithChecksum}
+      />
+    );
+
+    expect(
+      screen.queryByAltText("Reproducibility Verified")
+    ).not.toBeInTheDocument();
+  });
 });
