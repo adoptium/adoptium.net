@@ -29,6 +29,12 @@ type BannerProps = {
 // -------------------------------------------------------
 const currentBanners: BannerProps[] = [
   {
+    title: "Become an Adoptium member!",
+    description: "Join the Adoptium Working Group and support the future of open source Java. Explore our membership options and benefits.",
+    cta: "Learn more!",
+    ctaLink: "https://adoptium.net/members",
+  },
+  {
     title: "Upcoming Adoptium Webinar: GPU-Accelerated Java with TornadoVM and Temurin JDK 21",
     description: "January 22 at 15:00 CET",
     cta: "Register now",
