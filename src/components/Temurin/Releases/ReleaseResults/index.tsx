@@ -13,6 +13,7 @@ import { AixIcon, SolarisIcon } from "@/components/Common/Icon";
 import { BsCopy, BsDownload } from "react-icons/bs";
 import AnimatedPlaceholder from "@/components/AnimatedPlaceholder";
 import { MdVerifiedUser } from "react-icons/md";
+import { useAttestations } from "@/hooks/useAttestations";
 
 interface ReleaseResultsProps {
   releases: ReleaseAsset[];
@@ -45,6 +46,39 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
   const [selectedPackageTypes, setSelectedPackageTypes] = useState<
     Record<string, string>
   >({});
+
+  const allChecksums = React.useMemo(() => {
+    const checksums: string[] = [];
+
+    releases.forEach((release) => {
+      release.binaries.forEach((binary) => {
+        if (binary.checksum) {
+          checksums.push(binary.checksum);
+        }
+        if (binary.installer_checksum) {
+          checksums.push(binary.installer_checksum);
+        }
+      });
+    });
+
+    return checksums;
+  }, [releases]);
+
+  const releaseName = releases[0]?.release_name;
+
+  const { attestations, isLoading: attestationsLoading } = useAttestations(
+    releaseName,
+    allChecksums
+  );
+
+  const hasAttestation = (checksum?: string): boolean => {
+    if (attestationsLoading || !checksum) return false;
+
+    // Cache invariant:
+    // - defined value  => attestation exists
+    // - undefined      => confirmed absent
+    return attestations[checksum] !== undefined;
+  };
 
   // Show loading state
   if (isLoading) {
@@ -383,6 +417,18 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                 className="img-fluid mb-0"
                               />
                             </Link>
+                            {hasAttestation(binary.checksum) && (
+                              <Image
+                                src="/images/icons/reproduced-verified.svg"
+                                width={25}
+                                height={25}
+                                alt="Reproducibility Verified"
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                                title="This build is reproduced by a 3rd party"
+                                className="img-fluid mb-0"
+                              />
+                            )}
                           </div>
 
                           <div className="flex items-center gap-2">
@@ -476,6 +522,15 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                                 className="img-fluid mb-0"
                               />
                             </Link>
+                            {hasAttestation(binary.installer_checksum) && (
+                              <Image
+                                src="/images/icons/reproduced-verified.svg"
+                                width={25}
+                                height={25}
+                                alt="Reproducibility Verified"
+                                title="This build is reproduced by a 3rd party"
+                              />
+                            )}
                           </div>
 
                           <div className="flex items-center gap-2">
