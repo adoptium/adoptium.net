@@ -1,0 +1,161 @@
+= Verificación AQAvit(TM)
+:page-authors: gdams, smlambert, llxia, tellison, NickJavaDev88
+:aqavit-branch: v0.9.6-release
+:lang: es
+Versión 0.2, 02.03.2022
+
+El proyecto AQAvit fue creado para "hacer que la calidad sea una certeza". La verificación AQAvit se logra a través del proceso de ejecutar y superar un conjunto prescrito y versionado de pruebas en la suite de pruebas AQAvit. La https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Licencia de Software de Verificación de Calidad de la Fundación Eclipse (QVSL)^] requiere que aquellos que deseen verificar su producto compartan un resumen de los resultados de las pruebas mediante los cuales se logró la verificación. Este documento describe cómo ejecutar las pruebas de verificación AQAvit, comprobar que la verificación se ha superado y recopilar los resultados de las pruebas requeridas para su publicación.
+
+La verificación AQAvit es uno de los criterios para figurar en el link:/marketplace[Marketplace de Adoptium^]. Aprovechar la suite de pruebas AQAvit para asegurar la calidad de los binarios listados en el Marketplace de Adoptium no solo comunica a los consumidores lo seriamente que nos tomamos la calidad, sino que también consolida las buenas prácticas de verificación de los miembros del Grupo de Trabajo de Adoptium bajo un esfuerzo centralizado. AQAvit alinea sus estándares de la suite de pruebas con los requisitos en constante cambio de la base de usuarios.
+
+== Descripción general
+La suite de pruebas AQAvit es un gran conjunto de pruebas, muchas de ellas aportadas al proyecto AQAvit y algunas extraídas de diversos proyectos de código abierto, que sirven para verificar la calidad de los binarios OpenJDK. La suite es adecuada para probar versiones de Java SE 8 o superiores en todas las link:/supported-platforms[plataformas compatibles^]. Para verificar los binarios, los evaluadores clonan una versión específica del repositorio de GitHub aqa-tests (la https://github.com/adoptium/aqa-tests/releases[última versión estable^] del repositorio aqa-tests), configuran su entorno de prueba, ejecutan y superan los objetivos de prueba requeridos contra cada binario que planean verificar y ponen a disposición los resultados de esas ejecuciones de prueba según lo establecido en la QVSL.
+
+== Objetivos de prueba de AQAvit a ejecutar
+Las pruebas se dividen en diferentes grupos y esos grupos se dividen en 3 niveles. Esta categorización lógica de las pruebas proporciona flexibilidad y granularidad y puede representarse visualmente en una cuadrícula.
+
+image::gridview.png["vista de cuadrícula",350,182]
+
+Para la versión actual de AQAvit, el conjunto de objetivos de prueba de nivel superior requeridos para ejecutar son [sanity.functional, extended.functional, special.functional, sanity.openjdk, extended.openjdk, sanity.system, extended.system, sanity.perf, extended.perf]. En versiones posteriores de AQAvit, se añadirán objetivos para elevar aún más el listón de calidad.
+
+== Detalles sobre la ejecución de las pruebas
+AQAvit se puede ejecutar en varios entornos de CI/CD, así como directamente a través de la línea de comandos en un contenedor o en una máquina de prueba que tenga instalados los https://github.com/adoptium/aqa-tests/blob/master/doc/Prerequisites.md[prerrequisitos de prueba^]. Los pasos básicos son los mismos en cualquier entorno.
+
+.Ejecutar AQAvit a través de la línea de comandos
+[%collapsible]
+====
+[source, bash, subs="attributes"]
+----
+git clone --depth 1 --branch {aqavit-branch} https://github.com/adoptium/aqa-tests.git 
+
+export TEST_JDK_HOME=<ruta al binario> 
+export USE_TESTENV_PROPERTIES=true 
+export JDK_VERSION=17 
+export JDK_IMPL=hotspot
+export BUILD_LIST=functional 
+
+cd aqa-tests
+./get.sh
+./compile.sh
+cd TKG
+make _sanity.functional 
+… 
+make _extended.system 
+
+Recopilar el archivo *.tap y el archivo de metadatos 
+Archivar <resultados>.zip 
+Publicar <resultados>.zip
+----
+====
+
+.Ejecutar AQAvit a través de un flujo de trabajo de GitHub
+[%collapsible]
+====
+El proyecto AQAvit creó una acción de GitHub que permite ejecutar la suite de pruebas AQAvit desde archivos de flujo de trabajo. La acción `run-aqa` en el https://github.com/adoptium/run-aqa[repositorio run-aqa^] permite a los usuarios pasar binarios personalizados de OpenJDK para su verificación. Aquí hay un ejemplo de archivo de flujo de trabajo que puede ejecutar objetivos de nivel de cordura (sanity) en las 3 plataformas compatibles disponibles como ejecutores de GitHub:
+[source, yaml, subs="attributes"]
+----
+name: Run AQAvit
+
+on:
+  workflow_dispatch: # Permite que el trabajo se active manualmente
+
+env:  # Enlaces a la compilación de JDK bajo prueba y las librerías de prueba nativas
+  USE_TESTENV_PROPERTIES: true
+  BINARY_SDK: https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.14.1_1.tar.gz
+  NATIVE_LIBS: https://ci.adoptium.net/job/build-scripts/job/jobs/job/jdk11u/job/jdk11u-linux-x64-hotspot/lastSuccessfulBuild/artifact/workspace/target/OpenJDK11U-testimage_x64_linux_hotspot_2022-02-12-17-06.tar.gz
+
+jobs:
+  run_aqa:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [sanity, extended]
+        suite: [functional, openjdk, system, perf]
+        include:
+          - target: special
+            suite: functional
+
+    steps:
+
+    - name: Run AQA Tests - ${{ matrix.target }}.${{ matrix.suite }}
+      uses: adoptium/run-aqa@v2
+      with: 
+        version: '11'
+        jdksource: 'customized'
+        customizedSdkUrl: ${{ env.BINARY_SDK }} ${{ env.NATIVE_LIBS }}
+        aqa-testsRepo: 'adoptium/aqa-tests:{aqavit-branch}' # Asegúrese de que esta rama esté configurada como la última rama de lanzamiento
+        build_list: ${{ matrix.suite }}
+        target: _${{ matrix.target }}.${{ matrix.suite }}
+
+    - uses: actions/upload-artifact@v2
+      if: always() # Ejecutar siempre este paso (incluso si las pruebas fallaron)
+      with:
+        name: test_output
+        path: ./**/output_*/*.tap
+----
+====
+
+.Ejecutar AQAvit a través de Jenkins
+[%collapsible]
+====
+Si está utilizando el código de canalización de pruebas Jenkins de AQAvit disponible en el repositorio aqa-tests y descrito en la documentación bajo la sección https://github.com/adoptium/aqa-tests/blob/master/doc/userGuide.md#jenkins-setup-and-running[Configuración y ejecución de Jenkins^], estos son los parámetros adicionales que deberá configurar para ejecutar los objetivos de prueba requeridos.
+[source, subs="attributes"]
+----
+# Configurar parámetros del trabajo de Jenkins
+ADOPTOPENJDK_REPO=https://github.com/adoptium/aqa-tests.git
+ADOPTOPENJDK_BRANCH={aqavit-branch}
+USE_TESTENV_PROPERTIES=true
+
+# Ejecutar objetivos de prueba
+TARGET=sanity.functional y posteriormente [extended.functional|special.functional|sanity.openjdk|extended.openjdk|sanity.system|extended.system|sanity.perf|extended.perf]
+
+# Recopilar y publicar resultados
+Recopilar el archivo *.tap y el archivo de metadatos
+Archivar <resultados>.zip
+
+Publicar <resultados>.zip
+----
+====
+
+Los archivos `.tap` y los archivos de metadatos contienen marcas de tiempo e información sobre el binario bajo prueba. Esta información se recopila de la salida de `java -version`, la información del archivo de lanzamiento y la consulta de algunas propiedades del sistema durante la ejecución de la prueba. Cuando sea aplicable, la información debe coincidir con el binario listado en el marketplace.
+
+== Verificación de resultados
+La suite de pruebas AQAvit produce archivos de resultados de prueba y archivos de metadatos al final de la ejecución de la prueba. Al ejecutar y superar cada uno de los nueve objetivos de prueba requeridos, los archivos de resultados y los archivos de metadatos deben recopilarse y compartirse. Para los objetivos de prueba que contienen fallos, se debe abordar la causa raíz del fallo y se puede volver a ejecutar el objetivo y producir y compartir un archivo de resultados de prueba actualizado.
+
+Los archivos de resultados de prueba que se producen siguen una cierta convención de nomenclatura y utilizan un protocolo simple TAP (Test Anything Protocol). Cuando los objetivos de nivel superior se ejecutan en serie, se produce un único archivo .tap, por ejemplo:
+
+*Test_openjdk11_hs_sanity.system_aarch64_linux.tap*
+
+contiene la versión, impl/distribución, objetivo de prueba e información de la plataforma en el nombre, y su contenido se ve así:
+
+```
+# Timestamp: Wed Mar  2 10:51:55 2022 UTC 
+1..168
+ok 1 - MachineInfo_0
+  ---
+    duration_ms: 581
+  ...
+ok 2 - ClassLoadingTest_5m_0
+  ---
+    duration_ms: 304339
+  ...
+ok 3 - ClassLoadingTest_5m_1  
+  ---
+    duration_ms: 303883
+  ...
+etc.
+  ...
+ok 168 - MauveMultiThrdLoad_5m_1
+  ---
+    duration_ms: 304296
+  ...
+```
+
+Se puede ver en este ejemplo que el objetivo de nivel superior sanity.system contiene 168 subobjetivos. Del conjunto de subobjetivos esperados, algunos pueden ser 'omitidos' debido a que se filtran por no ser aplicables para una versión o plataforma en particular, pero no debe haber ninguno que haya fallado. Dentro del archivo tap, se mostrarán como 'not ok' si han fallado. Los subobjetivos fallidos se pueden volver a ejecutar individualmente y el archivo tap producido para esa ejecución individual se puede incluir en el archivo <resultados>.zip para indicar que el binario bajo prueba pudo superar todos los objetivos esperados.
+
+.Demostración de la verificación de AQAvit 
+[%collapsible]
+====
+video::1EUi3iTZSzg[youtube]
+====

@@ -1,0 +1,26 @@
+= Política de la Suite de Verificación de Calidad AQAvit(TM)
+:description: Política de la Suite de Verificación de Calidad (QVS) de Adoptium AQAvit, que garantiza la idoneidad de los tiempos de ejecución de Java para la producción.
+:keywords: adoptium, AQAvit, calidad, política, verificación, java, qvs
+:orgname: Eclipse Adoptium
+:lang: es
+:page-authors: tellison, gdams, HanSolo, NickJavaDev88
+
+== Descripción general
+
+https://projects.eclipse.org/projects/adoptium.aqavit[AQAvit^] es el proyecto de evaluación de calidad para los entornos de ejecución de Java SE y tecnologías asociadas. AQAvit toma un entorno de ejecución de Java funcionalmente completo y garantiza que estén presentes todas las cualidades adicionales que lo hacen adecuado para su uso en producción. Estos criterios de calidad incluyen un buen rendimiento, una seguridad excepcional, resiliencia y resistencia, y la capacidad de superar una amplia variedad de suites de pruebas de aplicaciones.
+
+== Verificación de productos de software AQAvit
+
+Las pruebas de Eclipse AQAvit se ponen a https://projects.eclipse.org/projects/adoptium.aqavit/developer[disposición del público^] sin cargo alguno como software con licencia de código abierto. Puede realizar un fork, copiar o modificar el software AQAvit de acuerdo con los términos de la licencia del software.
+
+Las https://github.com/adoptium/aqa-tests/releases[versiones nominadas de la suite de verificación de calidad AQAvit^] (QVS) están disponibles bajo la https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Licencia de la Suite de Verificación de Calidad de la Fundación Eclipse^] (QVSL). Se considerará que un producto de software está "verificado" por la QVS de AQAvit si cumple total y completamente todos los requisitos de la QVS de AQAvit descritos en la QVSL.
+
+No es necesario ser miembro del grupo de trabajo de Adoptium para producir un producto de software verificado por AQAvit.
+
+== Declaraciones objetivas sobre las pruebas AQAvit
+
+Cualquier persona puede ejecutar las suites de pruebas AQAvit y realizar declaraciones objetivamente correctas sobre los resultados.
+
+"AQAvit" es una marca registrada de la Fundación Eclipse y se gestiona bajo la https://www.eclipse.org/legal/logo_guidelines.php[Política de Directrices de la Fundación Eclipse para Logotipos y Marcas de Eclipse^]. Como tal, no se permite el uso de las marcas de Eclipse ni ninguna descripción similar en conjunto con cualquier software o servicios relacionados. Solo puede utilizar el término "AQAvit" y el logotipo del proyecto AQAvit con el permiso de la Fundación Eclipse.
+
+Los cambios en esta política son realizados por el link:/members[Comité Directivo del Grupo de Trabajo de Adoptium].
