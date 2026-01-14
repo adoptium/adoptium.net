@@ -26,7 +26,7 @@ exports[`LineChart > matches snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <desc>
-          Created with Highcharts 12.4.0
+          Created with Highcharts 12.5.0
         </desc>
         <defs>
           <filter
@@ -251,118 +251,113 @@ exports[`LineChart > matches snapshot 1`] = `
           y="387"
         />
         <g
-          class="highcharts-datalabels-group"
+          class="highcharts-data-labels highcharts-series-0 highcharts-line-series highcharts-color-0"
           data-z-index="6"
+          opacity="0"
+          transform="translate(NaN,10) scale(1 1)"
         >
           <g
-            class="highcharts-data-labels highcharts-series-0 highcharts-line-series highcharts-color-0"
-            data-z-index="6"
-            opacity="0"
-            transform="translate(NaN,10) scale(1 1)"
+            class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
+            data-z-index="1"
+            filter="none"
+            transform="translate(0,0)"
+            visibility="hidden"
           >
-            <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
+            <text
               data-z-index="1"
-              filter="none"
-              transform="translate(0,0)"
-              visibility="hidden"
+              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              x="NaN"
+              y="7"
             >
-              <text
-                data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
-                x="NaN"
-                y="7"
-              >
-                1
-              </text>
-            </g>
-            <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
-              data-z-index="1"
-              filter="none"
-              transform="translate(0,0)"
-              visibility="hidden"
-            >
-              <text
-                data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
-                x="NaN"
-                y="7"
-              >
-                2
-              </text>
-            </g>
-            <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
-              data-z-index="1"
-              filter="none"
-              transform="translate(0,0)"
-              visibility="hidden"
-            >
-              <text
-                data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
-                x="NaN"
-                y="7"
-              >
-                3
-              </text>
-            </g>
+              1
+            </text>
           </g>
           <g
-            class="highcharts-data-labels highcharts-series-1 highcharts-line-series highcharts-color-1"
-            data-z-index="6"
-            opacity="0"
-            transform="translate(NaN,10) scale(1 1)"
+            class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
+            data-z-index="1"
+            filter="none"
+            transform="translate(0,0)"
+            visibility="hidden"
           >
-            <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-1"
+            <text
               data-z-index="1"
-              filter="none"
-              transform="translate(0,0)"
-              visibility="hidden"
+              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              x="NaN"
+              y="7"
             >
-              <text
-                data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
-                x="NaN"
-                y="7"
-              >
-                4
-              </text>
-            </g>
-            <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-1"
+              2
+            </text>
+          </g>
+          <g
+            class="highcharts-label highcharts-data-label highcharts-data-label-color-0"
+            data-z-index="1"
+            filter="none"
+            transform="translate(0,0)"
+            visibility="hidden"
+          >
+            <text
               data-z-index="1"
-              filter="none"
-              transform="translate(0,0)"
-              visibility="hidden"
+              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              x="NaN"
+              y="7"
             >
-              <text
-                data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
-                x="NaN"
-                y="7"
-              >
-                5
-              </text>
-            </g>
-            <g
-              class="highcharts-label highcharts-data-label highcharts-data-label-color-1"
+              3
+            </text>
+          </g>
+        </g>
+        <g
+          class="highcharts-data-labels highcharts-series-1 highcharts-line-series highcharts-color-1"
+          data-z-index="6"
+          opacity="0"
+          transform="translate(NaN,10) scale(1 1)"
+        >
+          <g
+            class="highcharts-label highcharts-data-label highcharts-data-label-color-1"
+            data-z-index="1"
+            filter="none"
+            transform="translate(0,0)"
+            visibility="hidden"
+          >
+            <text
               data-z-index="1"
-              filter="none"
-              transform="translate(0,0)"
-              visibility="hidden"
+              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              x="NaN"
+              y="7"
             >
-              <text
-                data-z-index="1"
-                style="font-size: 0.7em; font-weight: bold; fill: #fff;"
-                x="NaN"
-                y="7"
-              >
-                6
-              </text>
-            </g>
+              4
+            </text>
+          </g>
+          <g
+            class="highcharts-label highcharts-data-label highcharts-data-label-color-1"
+            data-z-index="1"
+            filter="none"
+            transform="translate(0,0)"
+            visibility="hidden"
+          >
+            <text
+              data-z-index="1"
+              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              x="NaN"
+              y="7"
+            >
+              5
+            </text>
+          </g>
+          <g
+            class="highcharts-label highcharts-data-label highcharts-data-label-color-1"
+            data-z-index="1"
+            filter="none"
+            transform="translate(0,0)"
+            visibility="hidden"
+          >
+            <text
+              data-z-index="1"
+              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              x="NaN"
+              y="7"
+            >
+              6
+            </text>
           </g>
         </g>
         <g
