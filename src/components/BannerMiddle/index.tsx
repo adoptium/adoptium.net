@@ -40,7 +40,21 @@ const currentAnnouncements: BannerMiddleProps[] = [
     startDate: "2025-11-16T00:00:00Z",
     endDate: "2025-12-31T23:59:59Z",
   },
+  {
+    title: "DO NOT REMOVE - Fake Banner for Testing",
+    description: "This is a fake banner used for testing purposes only.",
+    cta: "Read the Case Study",
+    ctaLink: "https://example.com",
+    startDate: "2012-12-21T00:00:00Z",
+    endDate: "2012-12-21T23:59:59Z",
+  },
 ];
+
+if(process.env.NODE_ENV === "test") {
+  currentAnnouncements.splice(0, currentAnnouncements.length, 
+    currentAnnouncements.find(announcement => announcement.title === "DO NOT REMOVE - Fake Banner for Testing") || currentAnnouncements[0]
+  );
+}
 
 const BannerMiddle = () => {
   const [isMounted, setIsMounted] = useState(false);

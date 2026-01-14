@@ -21,7 +21,7 @@ describe("BannerMiddle", () => {
 
   it("renders the banner with heading", () => {
     render(<BannerMiddle />);
-    expect(screen.getByText(/become a sustainer!/i)).toBeInTheDocument();
+    expect(screen.getByText(/DO NOT REMOVE - Fake Banner for Testing/i)).toBeInTheDocument();
   });
 
 });
