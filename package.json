@@ -21,7 +21,7 @@
     "@next/third-parties": "16.1.2",
     "asciidoctor": "^3.0.4",
     "axios": "^1.13.2",
-    "framer-motion": "^12.26.2",
+    "framer-motion": "^12.27.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.14.2",
     "highcharts": "^12.5.0",
