@@ -1,0 +1,58 @@
+= Prácticas de Desarrollo de Software Seguro de Adoptium(R)
+:description: Prácticas de Ingeniería de Software Seguro y Gestión de la Cadena de Suministro de Adoptium
+:keywords: Seguridad SSDF SLSA Cadena de Suministro
+:orgname: Eclipse Adoptium
+:lang: es
+:page-authors: tellison, gdams, NickJavaDev88
+
+El proyecto Adoptium produce entornos de ejecución de Java de alta calidad para su uso en entornos críticos. Es importante para el proyecto y para nuestros usuarios que el software que entregamos sea seguro y confiable. Adoptium sigue un conjunto de prácticas de desarrollo de software fundamentales, sólidas y seguras, basadas en prácticas establecidas de desarrollo de software seguro que pueden ser verificadas para establecer la integridad de nuestros productos finales.
+
+== Prácticas de Desarrollo Seguro
+
+Nuestros objetivos de desarrollo seguro son:
+
+* Garantizar que nuestra comunidad, procesos y tecnología estén diseñados para el desarrollo de software seguro.
+* Proteger todos los componentes del proceso y del software contra manipulaciones y accesos no autorizados.
+* Producir software bien asegurado con mínimas vulnerabilidades de seguridad en todo momento.
+* Responder adecuadamente a las vulnerabilidades y prevenir la aparición de vulnerabilidades similares en el futuro.
+
+Adoptium cumple estos objetivos de ingeniería segura adhiriéndose a las siguientes prácticas:
+
+Procedencia y Fuentes de Confianza::
++
+Adoptium construye código fuente desde repositorios de confianza y obtiene dependencias y herramientas desde ubicaciones seguras. El proyecto de construcción de Temurin contiene los programas de código abierto o "recetas" para construir nuestras versiones. Estos scripts de construcción se ejecutan en máquinas virtuales y sistemas operativos obtenidos por el proyecto de proveedores de confianza, y utilizan herramientas como compiladores e instaladores desde ubicaciones seguras. El entorno de ejecución en sí se construye a partir de código fuente mantenido por OpenJDK y otros proyectos destacados de terceros con una sólida historia de gobernanza y supervisión para garantizar que el binario resultante solo contenga el código y el comportamiento esperados.
++
+Adoptium recopila, protege, mantiene y comparte datos de procedencia para todos los componentes de cada versión de software en una lista de materiales de software (SBOM). Verificamos regularmente la integridad y comprobamos la procedencia de cada dependencia para identificar posibles problemas.
+
+Control de Versiones y Etiquetado::
+Todo el código mantenido por los proyectos de Adoptium se encuentra en repositorios con control de versiones en GitHub bajo la organización Adoptium y es administrado por la Fundación Eclipse. Nuestro código es de código abierto y está disponible para el escrutinio de la comunidad, pero el acceso para cambiar el código se limita a los colaboradores (committers) elegidos y fuertemente autenticados. Utilizamos las funciones de control de versiones del repositorio para rastrear todos los cambios realizados en el código con responsabilidad ante la cuenta del colaborador individual, y requerimos revisiones secundarias, comprobaciones automáticas adicionales y supervisión de la comunidad para asegurar que los cambios sean seguros.
++
+Las versiones de Eclipse Temurin se construyen a partir de fuentes con control de versiones que están etiquetadas como calidad de lanzamiento en OpenJDK, y los binarios resultantes se publican como lanzamientos etiquetados en nuestro repositorio de GitHub. Estos artefactos de lanzamiento se ponen a disposición directamente de los usuarios finales y redistribuidores a través de la API de Adoptium, el sitio web y el repositorio.
+
+Infraestructura como Código::
++
+Para garantizar que nuestra infraestructura se gestione de forma segura, definimos y aprovisionamos máquinas utilizando los principios de Infraestructura como Código (IaC). La mayor parte de la infraestructura de construcción y prueba de Adoptium se ejecuta en máquinas virtuales operadas por grandes proveedores de servicios en la nube. Adoptium define los requisitos y la configuración de esas máquinas utilizando definiciones de IaC que se mantienen bajo control de versiones en el proyecto de infraestructura de Adoptium. Esto permite a la comunidad verificar los detalles de la infraestructura utilizada para producir los artefactos de Adoptium y reutilizar esas mismas definiciones para configurar máquinas en las que confían para ejecutar el mismo software de construcción y prueba que el proyecto.
++
+La IaC proporciona resiliencia para configurar e implementar medidas para asegurar las infraestructuras de alojamiento de los entornos siguiendo una arquitectura de confianza cero que define los cambios en el aprovisionamiento de hardware y la disponibilidad para ejecutar nuestra infraestructura en diferentes proveedores, asegurando así que tengamos la capacidad de verificar los resultados diariamente.
+
+Construcciones Reproducibles::
++
+Una parte importante de la práctica de ingeniería segura de Adoptium es que los miembros de la comunidad puedan verificar las construcciones que producimos. Esto es posible gracias a las construcciones reproducibles verificadas binariamente, lo que significa que con las mismas fuentes, herramientas y configuración de máquina, cualquier persona puede producir un resultado idéntico byte por byte. Nos aseguramos de que nuestro código fuente, scripts de construcción e infraestructura estén bien definidos y bajo control de versiones. Publicamos información sobre cómo reproducir los binarios de Adoptium y animamos a otros a verificar esas construcciones comprobando que sus resultados coincidan con los mismos elementos de entrada y procesos.
++
+Adoptium proporciona atestaciones de Lista de Materiales de Software (SBOM) para la procedencia de las construcciones de Eclipse Temurin. El SBOM está disponible junto con cada uno de nuestros artefactos de lanzamiento de Temurin.
+
+Pruebas y Firma de Código::
++
+Adoptium valida y verifica las versiones de Eclipse Temurin utilizando una extensa serie de pruebas de software. Estas pruebas son mantenidas por el proyecto Adoptium AQAvit. Estas pruebas están diseñadas para garantizar que los binarios estén listos para su uso en producción en misiones críticas. Las pruebas de AQAvit comprueban la corrección funcional, la posición de seguridad, las características de rendimiento y la durabilidad de cada binario antes de su lanzamiento.
++
+Las pruebas de AQAvit incluyen tanto las desarrolladas internamente en el proyecto como suites de pruebas y aplicaciones de terceros para garantizar que el binario se comporte como se espera. La garantía de calidad se organiza por etapas a lo largo del proceso de lanzamiento, con pruebas nocturnas del trabajo de desarrollo para asegurar que las anomalías se identifiquen y aborden rápidamente, además de rigurosas pruebas de lanzamiento.
++
+Las pruebas de cumplimiento de la especificación Java y las pruebas de garantía de calidad de AQAvit deben superarse antes de que un binario de Eclipse Temurin esté listo para su lanzamiento. Solo cuando se han completado todas las pruebas de lanzamiento se publica el binario, junto con los metadatos de apoyo y la lista de materiales de software. Adoptium proporciona una firma de código criptográficamente segura que garantiza que el binario de lanzamiento sea identificable de forma exclusiva como el lanzamiento oficial de Adoptium.
+
+Auditorías y Verificación::
++
+Todos los aspectos de un lanzamiento de Adoptium se llevan a cabo de forma abierta, más allá de las pruebas de compatibilidad de Java utilizando el Oracle Technology Compatibility Kit (TCK). El TCK no es código abierto y nuestra licencia con Oracle no permite que las pruebas de compatibilidad se realicen en público. Sin embargo, las pruebas de AQAvit son todas código de código abierto y los resultados se ponen a disposición para el escrutinio público. El código fuente se mantiene en repositorios de código abierto y las herramientas utilizadas se describen en nuestros archivos de infraestructura. Agradecemos las auditorías y la verificación de las actividades de construcción, prueba y publicación del proyecto.
++
+Todos los binarios de lanzamiento de Temurin tienen un hash criptográfico correspondiente disponible para los usuarios finales a través de la API, el sitio web y el repositorio de lanzamientos de GitHub. Los binarios están firmados con el certificado de firma de código de Eclipse emitido por una autoridad de certificación establecida para que los sistemas operativos de nuestros usuarios u otras herramientas y servicios puedan confirmar la validez de las firmas antes de su uso.
++
+Adoptium se toma muy en serio todas las vulnerabilidades de seguridad y se adhiere a la Política de Notificación de Vulnerabilidades de la Fundación Eclipse. La notificación de vulnerabilidades potenciales o reales en los productos o en las prácticas de desarrollo de software seguro debe seguir esa política de notificación.

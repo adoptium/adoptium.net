@@ -1,0 +1,119 @@
+= Adoptium(R) 安全供应链管理
+:description: Adoptium 安全供应链管理
+:keywords: 安全性 SSDF SLSA 供应链
+:orgname: Eclipse Adoptium
+:lang: zh-CN
+:page-authors: tellison, sxa, gdams, NickJavaDev88
+
+
+https://slsa.dev/[软件产物的供应链级别 (SLSA)^] 是一个安全框架，旨在帮助人们确信源码、库和软件包等一系列输入能产生诸如二进制文件和软件物料清单等定义明确的输出。它是一套结构化的技术要求，旨在帮助生产者信任其直接控制的供应链部分，并增强对构建过程的信心，以捕获任何上游供应链攻击。
+
+Adoptium 已经对
+link:/docs/secure-software[我们项目的安全工程实践^]
+进行了评估，以确定适当的 SLSA 证明级别。下面给出了 SLSA 级别要求的详细信息以及 Adoptium 如何满足这些要求。请注意，SLSA 仍处于“Alpha”状态，其要求可能会发生变化，特别是对于 SLSA 级别 3 和 4。
+
+== SLSA 一级
+
+Adoptium 构建的 Eclipse Temurin 已经实现了以下要求，这些要求满足了达到 SLSA 1 级的必要条件。
+
+这一级别意味着 Adoptium 的构建过程是完全脚本化和自动化的，并发布正式结构化的软件物料清单 (SBOM) 证明，列出构建每个二进制文件所需的组件、库和模块。
+
+构建 - https://slsa.dev/spec/v0.1/requirements#scripted-build[脚本化构建^]::
++
+生产 Eclipse Temurin 的所有步骤都通过受版本控制的 
+https://github.com/adoptium/ci-jenkins-pipelines[Jenkins 流水线 (pipelines)^] 定义，这些流水线调用存储在 
+https://github.com/adoptium/temurin-build[adoptium/temurin-build^]
+代码库中的构建脚本。流水线和构建脚本可供任何人查看和验证，并且 
+https://ci.adoptium.net/[Jenkins 系统^] 
+的运行情况也公开接受审查。使用构建脚本的文档可在构建代码库的 
+https://github.com/adoptium/temurin-build#readme[README 文件^] 中找到。
+
+出处 - https://slsa.dev/spec/v0.1/requirements#available[可用^]::
++
+Adoptium 为 Eclipse Temurin 构建的出处提供 SBOM 证明。SBOM 采用 
+https://cyclonedx.org/[OWASP CycloneDX^] 
+格式，并与我们的每个 Temurin 发布产物一起提供。
++
+SBOM 包含了重现构建所需的必要信息，包括构建过程使用的源码库标签、使用的全套参数、配置步骤的输出以及各种其他信息。我们正在
+https://github.com/adoptium/temurin-build/issues/3013[不断完善^] SBOM 中包含的具体细节。
+
+== SLSA 二级
+
+Adoptium 构建的 Eclipse Temurin 已经实现了以下额外要求，这些要求满足了达到 SLSA 2 级的必要条件。
+
+这一级别增加了额外的要求，以提供构建过程的一定防篡改能力，主要体现在将所有代码进行版本控制，并使用构建服务来生产和分发构建版本。
+
+源码 - https://slsa.dev/spec/v0.1/requirements#version-controlled[受版本控制^]::
++
+Adoptium 将 
+https://openjdk.org/[OpenJDK^] Java SE 参考实现的源代码镜像到我们的本地 GitHub 代码库中（例如 https://github.com/adoptium/jdk17u[adoptium/jdk17u^]）。
+我们构建的源码和使用的脚本的每一次变更都由 GitHub 的版本控制系统跟踪。这确保了每次修订中包含的变更历史记录。每次变更都包含上传者和评审者的身份、评审和提交的时间戳、变更描述/理由、变更内容以及父修订版本。所有提交者和评审者都经过强身份验证，并且所有贡献者都必须签署并遵守 
+https://www.eclipse.org/legal/ECA.php[Eclipse 贡献者协议^]。
++
+我们控制下的每一份不可变代码修订在 GitHub 上都有一个无限期寿命的唯一引用（代码库 URL + 分支/标签/引用 + 提交 ID）。Eclipse Temurin 是从我们镜像的标记修订版本中构建的，并且我们为每个版本提供源码归档文件。
+
+构建 - https://slsa.dev/spec/v0.1/requirements#build-service[构建服务^]::
++
+Adoptium 的所有构建步骤都在 
+https://ci.adoptium.net/[我们自己管理的 Jenkins 构建服务^] 和 Eclipse 基金会的代码签名服务上运行。这些服务执行构建、生成 SBOM，并在适用的情况下构建安装程序。构建输出由 Jenkins CI 系统上传到 GitHub 发布库。该过程的任何部分都不在开发者的工作站上运行。
++
+构建服务的访问由项目精细管理。构建系统尽可能保持开放，以便社区审查，同时不损害安全性。
+
+出处 - https://slsa.dev/spec/v0.1/requirements#authenticated[经过身份验证^]::
++
+待办事项 (TODO)：出处的真实性和完整性可以由消费者验证。这应该通过数字签名实现，该签名来自仅生成出处的服务可访问的私钥。
+
+出处 - https://slsa.dev/spec/v0.1/requirements#service-generated[由服务生成^]::
++
+Adoptium 的所有出处数据都直接由项目的持续构建和测试系统生成。服务用户无法注入或篡改出处内容。Eclipse Temurin 的 GNU Privacy Guard (GPG) 代码签名由 Eclipse 代码签名服务生成，其他出处数据（包括软件物料清单、加密哈希、构建元数据等）直接由项目构建系统发出。
+
+
+== SLSA 三级 - **进行中**
+
+Adoptium 构建的 Eclipse Temurin 已经实现了以下部分额外要求。在我们努力实现 SLSA 3 级的过程中，其他项目的工作仍在继续。
+
+源码 - https://slsa.dev/spec/v0.1/requirements#retained-indefinitely[保留 18 个月^]::
++
+源代码及其变更历史的所有修订都会无限期保留，不得删除，除非遵循既定且透明的清除政策，如法律或 Eclipse 基金会的政策要求。这种更改或删除历史的超级用户控制权直接且排他地由 
+https://eclipse.org[Eclipse 基金会^] 代表项目持有。
++
+由于我们将所有代码存储在 GitHub 中，任何人（即使获得多方批准）都无法删除或修改历史记录，除非是由受信任的 Eclipse 基金会平台管理员根据基金会的清除政策并获得双方批准。有关此政策的问题应
+https://www.eclipse.org/org/foundation/contact.php[咨询 Eclipse 基金会]。
+
+构建 - https://slsa.dev/spec/v0.1/requirements#build-as-code[构建即代码^]::
++
+由 
+https://ci.adoptium.net/[构建服务^] 执行的 Adoptium 构建定义和配置可验证地源于存储在我们版本控制系统中的文本文件定义。
+
+构建 - https://slsa.dev/spec/v0.1/requirements#ephemeral-environment[临时环境^]::
++
+诸如容器或虚拟机之类的临时环境构建（仅为此构建而配置，且不从之前的构建中重用）已在 Linux x86、ARM32 和 aarch64 构建中实施。其他平台的此项工作仍在项目中进行中。
+
+构建 - https://slsa.dev/spec/v0.1/requirements#isolated[隔离^]::
++
+Adoptium 构建服务确保每个构建步骤都在隔离环境中运行，不受其他构建实例（无论是之前的还是并发的）的影响。
++
+构建无法访问构建服务的任何秘密（如出处签名密钥），因为这些秘密存储在构建系统之外，并通过对单独系统的远程调用进行访问。两个在时间上重叠的构建不可能相互影响。每个构建步骤都在由 Jenkins CI 系统编排的隔离机器环境中运行，每个构建的步骤通过使用管理流水线进行组装。在使用的构建缓存中，纯粹是内容可寻址的，以防止篡改。
++
+我们继续致力于确保一个构建不可能持久存在或影响后续构建的构建环境。环境的每个部分都在构建脚本中指定。这将通过在所有地方运行临时机器上的构建并检查结果是否相同来确保。
+
+出处 - https://slsa.dev/spec/v0.1/requirements#non-falsifiable[不可伪造^]::
++
+SBOM 出处信息无法被服务用户伪造，因为它是由构建过程机器生成的，并由 Eclipse 基金会代码签名服务进行加密签名以防止篡改。代码签名服务无法由普通项目提交者或 Jenkins 用户访问。
+
+
+== SLSA 四级 - **进行中**
+
+Adoptium 正在努力满足 SLSA 4 级的要求。这些工作正在通过我们的 
+https://github.com/adoptium/adoptium/issues/160[问题跟踪系统^] 进行跟踪，欢迎对这些任务做出贡献。
+
+////
+* 源码 - 两人审核
+* 构建 - 无参数
+* 构建 - 密封
+* [x] 构建 - 可重复
+* [x] 出处 - 依赖项完整
+* 常用 - 安全
+* 常用 - 访问
+* 常用 - 超级用户
+////
