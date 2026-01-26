@@ -8,6 +8,33 @@
     "sustainer-cta-description": "Millones confían en Eclipse Temurin. Su apoyo lo mantiene funcionando",
     "sustainer-cta-button": "Reinvertir en Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "Gracias por descargar",
+    "vendor-build": "Compilación de {vendor}",
+    "auto-start-p1": "Su descarga del tiempo de ejecución OpenJDK debería comenzar automáticamente en unos segundos.",
+    "auto-start-p2": "Si no es así, ",
+    "click-here": "haga clic aquí para reiniciarla manualmente",
+    "community-action": "Acción Comunitaria Requerida",
+    "free-to-use": "Gratis de usar,",
+    "not-free-to-build": "no gratis de construir.",
+    "appeal-quote": "\"Sin donaciones, el proyecto dejará de existir.\"",
+    "appeal-text": "Eclipse Temurin cuenta con la confianza de millones de desarrolladores en todo el mundo. Para asegurar el futuro de estos binarios de código abierto de alta calidad, necesitamos su ayuda hoy.",
+    "become-sustainer-btn": "Convertirse en Patrocinador",
+    "corporate-sponsorship-btn": "Sustentador Corporativo",
+    "vendor-alert": "Está descargando una compilación de <vendorWrapper>{vendor}</vendorWrapper>, miembro del Grupo de Trabajo Eclipse Adoptium.",
+    "why-we-need-you": "Por qué su ayuda es importante",
+    "infra-costs-title": "Costos de Infraestructura",
+    "infra-costs-desc": "Probar en más de 50 plataformas requiere una potencia de cómputo masiva.",
+    "security-speed-title": "Seguridad y Velocidad",
+    "security-speed-desc": "Las actualizaciones rápidas y seguras requieren recursos dedicados.",
+    "open-source-title": "Código Abierto Verdadero",
+    "open-source-desc": "Mantener Java gratuito para siempre requiere financiarlo juntos.",
+    "resources-next-steps": "Recursos y Próximos Pasos",
+    "installation-guide-title": "Guía de Instalación",
+    "installation-guide-desc": "Instrucciones paso a paso para poner en marcha su nuevo tiempo de ejecución Java.",
+    "documentation-title": "Documentación",
+    "documentation-desc": "Documentación completa para Eclipse Temurin y el ecosistema Adoptium."
+  },
   "NotFoundPage": {
     "title": "Lo sentimos, no pudimos encontrar esta página",
     "back-to-home": "Volver a la página principal"

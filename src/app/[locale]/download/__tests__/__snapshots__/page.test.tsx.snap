@@ -1,480 +1,341 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Download page > renders correctly 1`] = `
-<div>
+<div
+  class="bg-[#14003c] min-h-screen text-white font-sans flex flex-col items-center"
+>
   <div
-    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+    class="w-full max-w-5xl px-6 py-12 md:py-16 text-center"
   >
     <div
-      class="w-full relative"
+      class="inline-flex items-center justify-center p-3 mb-6 bg-green-500/20 rounded-full ring-1 ring-green-500/50"
     >
-      <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
+      <svg
+        class="text-green-400 text-2xl"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+        />
+      </svg>
     </div>
+    <h1
+      class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight"
+    >
+      Text
+       
+      <br />
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff1365] to-[#ff6b9d]"
+      >
+        Eclipse Temurin
+      </span>
+    </h1>
+    <p
+      class="text-lg md:text-xl text-[#c4bfce] max-w-2xl mx-auto mb-8 leading-relaxed"
+    >
+      Text
+      <br
+        class="hidden md:block"
+      />
+      <span
+        class="text-sm mt-2 block opacity-70"
+      >
+        Text
+        <a
+          class="text-[#ff1365] hover:text-white underline decoration-[#ff1365] underline-offset-4 transition-colors"
+          href="https://github.com/adoptium/temurin-1-binaries/download"
+        >
+          Text
+        </a>
+        .
+      </span>
+    </p>
+  </div>
+  <div
+    class="w-full max-w-6xl px-4 md:px-6 mb-20 relative z-10"
+  >
     <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+      class="relative overflow-hidden rounded-[2.5rem] bg-[#0d002a] border border-[#ff1365]/30 shadow-[0_0_80px_-20px_rgba(255,19,101,0.4)] group hover:shadow-[0_0_100px_-10px_rgba(255,19,101,0.5)] transition-all duration-500"
     >
       <div
-        class="self-stretch flex-col justify-center items-center gap-6 flex"
+        class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-[#ff1365] opacity-[0.07] blur-[100px] rounded-full pointer-events-none"
+      />
+      <div
+        class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-purple-600 opacity-[0.07] blur-[100px] rounded-full pointer-events-none"
+      />
+      <div
+        class="relative z-10 flex flex-col lg:flex-row items-center p-8 md:p-14 gap-12"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-4 flex"
+          class="flex-1 text-center lg:text-left"
         >
           <div
-            class="justify-start items-center gap-3 inline-flex"
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff1365]/10 border border-[#ff1365]/20 text-[#ff1365] text-sm font-bold uppercase tracking-wider mb-6"
           >
             <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
+              class="text-sm"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
+              <path
+                d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
               />
             </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Download Success
-            </div>
+            Text
           </div>
-          <div
-            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          <h2
+            class="text-3xl md:text-5xl font-black text-white leading-[1.1] mb-6"
           >
-            Thank you for your download!
+            Text
+            <br />
+            <span
+              class="text-[#c4bfce]"
+            >
+              Text
+            </span>
+          </h2>
+          <p
+            class="text-xl md:text-2xl font-bold text-[#ff1365] mb-6 italic"
+          >
+            Text
+          </p>
+          <p
+            class="text-[#c4bfce] text-lg leading-relaxed mb-8 max-w-xl"
+          >
+            Text
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
+            <a
+              class="inline-flex items-center justify-center gap-3 bg-[#ff1365] hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-[#ff1365]/20"
+              href="https://github.com/sponsors/adoptium"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="text-2xl"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 496 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+              Text
+            </a>
+            <a
+              class="inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all backdrop-blur-sm"
+              href="/become-a-sustainer"
+            >
+              <svg
+                class="text-xl"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M436 480h-20V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v456H12c-6.627 0-12 5.373-12 12v20h448v-20c0-6.627-5.373-12-12-12zM128 76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76zm0 96c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40zm52 148h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12zm76 160h-64v-84c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v84zm64-172c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40zm0-96c0 6.627-5.373 12-12 12h-40c-6.627 0-12-5.373-12-12V76c0-6.627 5.373-12 12-12h40c6.627 0 12 5.373 12 12v40z"
+                />
+              </svg>
+              Text
+            </a>
           </div>
         </div>
         <div
-          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+          class="w-full lg:w-[400px] bg-[#14003c]/50 rounded-2xl p-8 border border-white/5 backdrop-blur-sm lg:self-stretch flex flex-col justify-center"
         >
-          You are downloading an Eclipse Temurin build, the open-source community build from the Eclipse Adoptium Working Group. If the download doesn't start in a few seconds, please
-           
-          <span
-            class="text-primary underline !underline-offset-[1px]"
+          <h3
+            class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4"
           >
-            <a
-              href="https://github.com/adoptium/temurin-1-binaries/download"
-            >
-              click here
-            </a>
-          </span>
-           
-          to start the download.
-          <section
-            class="py-16 max-w-[1048px] w-full mx-auto flex justify-center xl:px-0 px-6"
+            Text
+          </h3>
+          <ul
+            class="space-y-5"
           >
-            <div
-              class="lg:max-w-[560px] w-full mx-auto text-center"
+            <li
+              class="flex items-start gap-4"
             >
-              <p
-                class="md:mt-6 my-10 text-grey text-base leading-6 font-normal mb-0"
+              <div
+                class="mt-1 w-6 h-6 rounded-full bg-[#ff1365]/20 flex items-center justify-center shrink-0"
               >
-                Text
-              </p>
-              <a
-                class="inline-block"
-                href="https://adoptium.net/sustainers/"
-              >
-                <button
-                  class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[250px] h-[48px] rounded-2xl gradient-border transition-all duration-300 hover:border-pink-500/100 hover:text-pink"
-                  type="button"
+                <div
+                  class="w-2 h-2 rounded-full bg-[#ff1365]"
+                />
+              </div>
+              <div>
+                <strong
+                  class="block text-white"
                 >
                   Text
-                </button>
-              </a>
-            </div>
-          </section>
+                </strong>
+                <span
+                  class="text-sm text-[#c4bfce]"
+                >
+                  Text
+                </span>
+              </div>
+            </li>
+            <li
+              class="flex items-start gap-4"
+            >
+              <div
+                class="mt-1 w-6 h-6 rounded-full bg-[#ff1365]/20 flex items-center justify-center shrink-0"
+              >
+                <div
+                  class="w-2 h-2 rounded-full bg-[#ff1365]"
+                />
+              </div>
+              <div>
+                <strong
+                  class="block text-white"
+                >
+                  Text
+                </strong>
+                <span
+                  class="text-sm text-[#c4bfce]"
+                >
+                  Text
+                </span>
+              </div>
+            </li>
+            <li
+              class="flex items-start gap-4"
+            >
+              <div
+                class="mt-1 w-6 h-6 rounded-full bg-[#ff1365]/20 flex items-center justify-center shrink-0"
+              >
+                <div
+                  class="w-2 h-2 rounded-full bg-[#ff1365]"
+                />
+              </div>
+              <div>
+                <strong
+                  class="block text-white"
+                >
+                  Text
+                </strong>
+                <span
+                  class="text-sm text-[#c4bfce]"
+                >
+                  Text
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <section
-    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+  <div
+    class="w-full bg-[#0d002a] border-t border-white/5 py-16"
   >
     <div
-      class="max-w-[400px] w-full hidden lg:block"
+      class="max-w-5xl mx-auto px-6 text-center"
     >
-      <img
-        alt="scroll-divider"
-        class="mb-0"
-        height="400"
-        src="/images/icons/experience.png"
-        width="400"
-      />
-    </div>
-    <div
-      class="lg:max-w-[560px] w-full  "
-    >
-      <h2
-        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      <h3
+        class="text-2xl font-bold text-white mb-6"
       >
-        What to do now?
-      </h2>
-      <p
-        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
-      >
-        You have successfully downloaded Temurin. For more details on usage and configuration, please take a look at our Installation Guide.
-      </p>
-      <a
-        href="/installation"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
-        >
-          Installation Guide
-        </button>
-         
-      </a>
-      <a
-        href="/installation"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
-        >
-          Installation Guide
-        </button>
-      </a>
-    </div>
-  </section>
-  <section
-    class="pt-0 md:pt-14 md:pb-28"
-  >
-    <div
-      class="pt-12 pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-6 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
-    >
+        Text
+      </h3>
       <div
-        class=" w-full lg:w-[55%] text-center lg:text-left"
+        class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
       >
-        <div>
-          <h2
-            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
-          >
-            Support Temurin & Secure Open Source Java for Everyone!
-          </h2>
-          <p
-            class="text-grey mt-6 font-normal text-base"
-          >
-            Eclipse Temurin provides high-quality, open-source Java runtimes trusted by millions. By becoming a Temurin Sustainer, you are ensuring continued innovation, security, and accessibility for Java developers worldwide.
-          </p>
-        </div>
-        <h2
-          class="text-2xl leading-[122%] md:text-2xl md:[116%] text-white font-semibold pt-8"
-        >
-          Why Fund Temurin?
-        </h2>
-        <div>
-          <div
-            class="text-grey justify-start inline-flex pt-2"
-          >
-            <div
-              class="pt-1"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-2"
-            >
-              Help keep Eclipse Temurin free and accessible to all.
-            </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-2"
-          >
-            <div
-              class="pt-1"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-2"
-            >
-              Maintain and grow infrastructure, security updates, and testing for the Java community.
-            </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-2"
-          >
-            <div
-              class="pt-1"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-2"
-            >
-              Support open source contributors maintaining Temurin.
-            </div>
-          </div>
-        </div>
-        <h2
-          class="text-2xl leading-[122%] md:text-2xl md:[116%] text-white font-semibold pt-8"
-        >
-          How You Can Help
-        </h2>
-        <div>
-          <div
-            class="text-grey justify-start inline-flex pt-2"
-          >
-            <div
-              class="pt-1"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-2"
-            >
-              Monthly Sustainer: Contribute as an individual sustainer to ensure via 
-              <a
-                class="text-pink"
-                href="https://github.com/sponsors/adoptium"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                **GitHub**
-              </a>
-               Sponsorship Temurin’s long-term viability, enhance security, and accelerate faster releases for the Java community
-            </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-2"
-          >
-            <div
-              class="pt-1"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-2"
-            >
-              One-Time Contributions – Help us scale our testing and infrastructure.
-            </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-2"
-          >
-            <div
-              class="pt-1"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-2"
-            >
-              Corporate Sustainer – Looking to make a bigger impact? Join as a 
-              <a
-                class="text-pink"
-                href="/become-a-sustainer/"
-              >
-                Corporate Sustainer
-              </a>
-              .
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
-        data-testid="common-card"
-      >
-        <div
-          class="grow"
-        >
-          <h3
-            class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
-          >
-            Media & Promotion
-          </h3>
-          <p
-            class="mt-6 text-xl text-grey font-normal"
-          >
-            Follow and promote the latest updates from the Eclipse Adoptium Project
-          </p>
-        </div>
         <a
-          href="/news/"
+          class="group p-6 bg-[#14003c] rounded-2xl border border-white/5 hover:border-[#ff1365]/50 transition-all text-left"
+          href="/installation"
         >
-          <button
-            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
+          <div
+            class="flex items-center gap-4 mb-3"
           >
-            Learn More
-          </button>
+            <div
+              class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-300 group-hover:text-[#ff1365] transition-colors"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-lg font-bold text-white"
+            >
+              Text
+            </h4>
+          </div>
+          <p
+            class="text-[#c4bfce] text-sm"
+          >
+            Text
+          </p>
+        </a>
+        <a
+          class="group p-6 bg-[#14003c] rounded-2xl border border-white/5 hover:border-[#ff1365]/50 transition-all text-left"
+          href="/docs"
+        >
+          <div
+            class="flex items-center gap-4 mb-3"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-300 group-hover:text-[#ff1365] transition-colors"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-lg font-bold text-white"
+            >
+              Text
+            </h4>
+          </div>
+          <p
+            class="text-[#c4bfce] text-sm"
+          >
+            Text
+          </p>
         </a>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;

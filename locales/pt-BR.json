@@ -8,6 +8,33 @@
     "sustainer-cta-description": "Milhões confiam no Eclipse Temurin. Seu apoio o mantém funcionando",
     "sustainer-cta-button": "Reinvestir no Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "Obrigado por baixar",
+    "vendor-build": "Build da {vendor}",
+    "auto-start-p1": "O download do seu runtime OpenJDK deve começar automaticamente em alguns segundos.",
+    "auto-start-p2": "Se não começar, ",
+    "click-here": "clique aqui para reiniciar manualmente",
+    "community-action": "Ação da Comunidade Necessária",
+    "free-to-use": "Gratuito para usar,",
+    "not-free-to-build": "não gratuito para desenvolver.",
+    "appeal-quote": "\"Sem doações, o projeto deixará de existir.\"",
+    "appeal-text": "O Eclipse Temurin tem a confiança de milhões de desenvolvedores em todo o mundo. Para garantir o futuro desses binários de código aberto de alta qualidade, precisamos da sua ajuda hoje.",
+    "become-sustainer-btn": "Tornar-se um Patrocinador",
+    "corporate-sponsorship-btn": "Sustentador Corporativo",
+    "vendor-alert": "Você está baixando uma versão da <vendorWrapper>{vendor}</vendorWrapper>, um membro do Eclipse Adoptium Working Group.",
+    "why-we-need-you": "Por que precisamos de você",
+    "infra-costs-title": "Custos de Infraestrutura",
+    "infra-costs-desc": "Testar em mais de 50 plataformas requer enorme poder computacional.",
+    "security-speed-title": "Segurança e Velocidade",
+    "security-speed-desc": "Atualizações rápidas e seguras exigem recursos dedicados.",
+    "open-source-title": "Verdadeiro Open Source",
+    "open-source-desc": "Manter o Java gratuito para sempre significa financiá-lo juntos.",
+    "resources-next-steps": "Recursos e Próximos Passos",
+    "installation-guide-title": "Guia de Instalação",
+    "installation-guide-desc": "Instruções passo a passo para começar a usar seu novo runtime Java.",
+    "documentation-title": "Documentação",
+    "documentation-desc": "Documentação abrangente para o Eclipse Temurin e o ecossistema Adoptium."
+  },
   "NotFoundPage": {
     "title": "Desculpe, não conseguimos encontrar esta página",
     "back-to-home": "Voltar para a Página Inicial"
