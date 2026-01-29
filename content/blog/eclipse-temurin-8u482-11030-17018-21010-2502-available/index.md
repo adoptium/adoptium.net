@@ -37,6 +37,8 @@ To align with an upstream OpenJDK change which sets -mmacosx-version-min=11.00.0
 
 ### Linux installer updates
 
+Changes in our installer scripts reflect changes in the bundled libfreetype dependency.
+
 ### Introduction of new system and security property (com.sun.security.allowedAIALocations)
 
 The introduction of com.sun.security.allowedAIALocations allows users to apply filtering rules against URIs obtained from the authority info access extension on X.509 certificates. More details of this new and noteworthy change can be found in the upstream [OpenJDK release notes for JDK 25](https://jdk.java.net/25/release-notes#JDK-8368032). It may impact those using certificates that lack a proper SAN extension.
