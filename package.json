@@ -50,7 +50,7 @@
     "schema-dts": "^1.1.5",
     "slick-carousel": "^1.8.1",
     "sugar-high": "^0.9.5",
-    "swiper": "^12.0.3",
+    "swiper": "^12.1.0",
     "unified": "^11.0.5"
   },
   "devDependencies": {
