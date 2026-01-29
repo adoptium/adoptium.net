@@ -42,6 +42,7 @@ Recorder] |  icon:check[]   |  icon:check[]
 Mission Control] |  icon:check[]   |  icon:check[]  
 |=======================================================================
 
+[#_icedtea_web]
 === IcedTea-Web
 
 Java Web Start was deprecated by Oracle in Java SE 8 and removed in Java
@@ -69,6 +70,7 @@ of OpenJDK 11 and above based JNLP applications but IcedTea-Web does not contain
 any tests to check OpenJDK 11 and above support and we do not bundle it with
 Temurin 11 builds.
 
+[#_openjfx]
 === OpenJFX
 
 Back in 2017, JavaFX was decoupled from the Oracle JDK and contributed
@@ -78,11 +80,13 @@ to the OpenJDK community. The OpenJFX community is focused on OpenJFX
 OpenJFX 8 is no longer being actively maintained. If you need this
 capability, we recommend upgrading to OpenJFX 11.
 
+[#_freetype_font_rendering_library]
 === Freetype font rendering library
 
 OpenJDK uses the open source FreeType font rendering library instead of
 the proprietary T2K font library.
 
+[#_relicensed_lucida_fonts]
 === Relicensed Lucida fonts
 
 The Lucida fonts that are available in Oracle JDK 8 have a proprietary
@@ -90,6 +94,7 @@ The Lucida fonts that are available in Oracle JDK 8 have a proprietary
 Work is ongoing to minimize any display issues when these fonts are
 rendered by Freetype.
 
+[#_pisces_and_marlin]
 === Pisces and Marlin
 
 Oracle JDK 8 uses a proprietary 2D graphics renderer called Ductus,
@@ -98,29 +103,34 @@ whereas OpenJDK uses an open-source renderer called Pisces. From OpenJDK
 backport Marlin to OpenJDK 8 and/or minimize any display issues between
 the two.
 
+[#_lcms]
 === LCMS
 
 OpenJDK uses the Little Color Matching System (LCMS) open source open
 source library instead of the proprietary Kodac CMS library.
 
+[#_jmx]
 === JMX
 
 The proprietary SNMP package shipped with Oracle JDK 8 is not present in
 OpenJDK. Use JMX as an alternative, or SNMP4J. These packages are not
 bundled with the Temurin binaries.
 
+[#_windows_sound_drivers]
 === Windows sound drivers
 
 Oracle JDK provides native sound drivers for Java 8 on Windows, which
 are not present in OpenJDK. Use the sound drivers that are available
 with Microsoft Windows instead.
 
+[#_java_flight_recorder]
 === Java Flight Recorder
 
 Java Flight Recorder (JFR) was decoupled from the Oracle JDK and
 contributed to the OpenJDK community. JFR is included in all versions of
 Temurin.
 
+[#_eclipse_mission_control]
 === Eclipse Mission Control
 
 The https://projects.eclipse.org/projects/adoptium.mc[Eclipse Mission
