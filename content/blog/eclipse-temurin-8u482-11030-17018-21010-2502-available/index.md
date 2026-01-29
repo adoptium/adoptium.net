@@ -1,5 +1,5 @@
 ---
-title: Eclipse Temurin 8u482, 11.0.30, 17.0.18, 21.0..10 and 25.0..2 Available
+title: Eclipse Temurin 8u482, 11.0.30, 17.0.18, 21.0.10 and 25.0.2 Available
 date: "2026-01-30"
 author: pmc
 description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u482, 11.0.30, 17.0.18, 21.0.10 and 25.0.2. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
