@@ -8,6 +8,33 @@
     "sustainer-cta-description": "Millions Rely on Eclipse Temurin. Your Support Keeps It Going",
     "sustainer-cta-button": "Reinvest in Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "Thank you for downloading",
+    "vendor-build": "{vendor} Build",
+    "vendor-alert": "You are downloading a build from <vendorWrapper>{vendor}</vendorWrapper>, a member of the Eclipse Adoptium Working Group.",
+    "auto-start-p1": "Your OpenJDK runtime download should start automatically in a few seconds.",
+    "auto-start-p2": "If it doesn't, ",
+    "click-here": "click here to restart it manually",
+    "community-action": "Community Action Required",
+    "free-to-use": "Free to use,",
+    "not-free-to-build": "not free to build.",
+    "appeal-quote": "\"Without donations, the project will cease to exist.\"",
+    "appeal-text": "Eclipse Temurin is trusted by millions of developers worldwide. To ensure the future of these high-quality, open-source binaries, we need your help today.",
+    "become-sustainer-btn": "Become a Sponsor",
+    "corporate-sponsorship-btn": "Corporate Sustainer",
+    "why-we-need-you": "Why we need you",
+    "infra-costs-title": "Infrastructure Costs",
+    "infra-costs-desc": "Testing on 50+ platforms requires massive compute power.",
+    "security-speed-title": "Security & Speed",
+    "security-speed-desc": "Fast, secure updates require dedicated resources.",
+    "open-source-title": "True Open Source",
+    "open-source-desc": "Keeping Java free forever means funding it together.",
+    "resources-next-steps": "Resources & Next Steps",
+    "installation-guide-title": "Installation Guide",
+    "installation-guide-desc": "Step-by-step instructions for getting up and running with your new Java runtime.",
+    "documentation-title": "Documentation",
+    "documentation-desc": "Comprehensive documentation for Eclipse Temurin and the Adoptium ecosystem."
+  },
   "NotFoundPage": {
     "title": "Sorry, we couldn't find this page",
     "back-to-home": "Back to Home"
