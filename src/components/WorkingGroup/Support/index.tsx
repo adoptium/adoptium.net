@@ -35,7 +35,7 @@ const Support = () => {
                     </div>
                     <h2 className="text-2xl leading-[122%] md:text-2xl md:[116%] text-white font-semibold pt-8">How You Can Help</h2>
                     <div>
-                        <div className="text-grey justify-start inline-flex pt-2"><div className="pt-1"><PinkIcon /></div><div className="pl-2">Monthly Sustainer: Contribute as an individual sustainer to ensure via <a href="https://github.com/sponsors/adoptium" className="text-pink" rel="noopener noreferrer" target="_blank">**GitHub**</a> Sponsorship Temurin’s long-term viability, enhance security, and accelerate faster releases for the Java community</div></div>
+                        <div className="text-grey justify-start inline-flex pt-2"><div className="pt-1"><PinkIcon /></div><div className="pl-2">Monthly Sustainer: Contribute as an individual sustainer to ensure via <a href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=become-sustainer" className="text-pink" rel="noopener noreferrer" target="_blank">**Eclipse Foundation**</a> Sponsorship Temurin’s long-term viability, enhance security, and accelerate faster releases for the Java community</div></div>
                         <div className="text-grey justify-start inline-flex pt-2"><div className="pt-1"><PinkIcon /></div><div className="pl-2">One-Time Contributions – Help us scale our testing and infrastructure.</div></div>
                         <div className="text-grey justify-start inline-flex pt-2"><div className="pt-1"><PinkIcon /></div><div className="pl-2">Corporate Sustainer – Looking to make a bigger impact? Join as a <Link href="/become-a-sustainer/" className="text-pink">Corporate Sustainer</Link>.</div></div>
                     </div>
