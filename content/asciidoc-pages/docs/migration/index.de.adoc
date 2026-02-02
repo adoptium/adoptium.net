@@ -41,6 +41,7 @@ Recorder] |  icon:check[]   |  icon:check[]
 Mission Control] |  icon:check[]   |  icon:check[]  
 |=======================================================================
 
+[#_icedtea_web]
 === IcedTea-Web
 
 Java Web Start wurde von Oracle in Java SE 8 als deprecated markiert und in
@@ -66,6 +67,7 @@ IcedTea-Web 1.8.x und 2.0.x sind kompatibel mit Temurin 8 Builds. Wir wissen, da
 auf IcedTea-Web basiert, die Ausführung von OpenJDK 11 Und über basierten JNLP-Anwendungen unterstützt, aber IcedTea-Web
 enthält keine Tests, um die OpenJDK 11 Und über Unterstützung zu überprüfen und wir bündeln es daher nicht mit Temurin 11 Builds.
 
+[#_openjfx]
 === OpenJFX
 
 In 2017 wurde JavaFX vom Oracle JDK entkoppelt und in die OpenJDK-Community eingebracht. Die OpenJFX-Community konzentriert
@@ -73,10 +75,12 @@ sich auf OpenJFX 11+ und stellt Binaries zur Verfügung, die Sie mit Temurin ver
 
 OpenJFX 8 wird nicht mehr länger aktiv gepflegt. Wenn Sie dieses benötigen, empfehlen wir ein Upgrade auf OpenJFX 11.
 
+[#_freetype_font_rendering_library]
 === Freetype Font Rendering Bibliothek
 
 OpenJDK verwendet die quelloffene Freetype Font Rendering Bibliothek anstelle der proprietären T2K-Font Bibliothek.
 
+[#_relicensed_lucida_fonts]
 === Relizeniserte Lucida fonts
 
 Die Lucida Schriften, welche in Oracle JDK 8 verfügbar sind, haben eine
@@ -85,6 +89,7 @@ lizensierte Lucida Schriften anzubieten. Es wird daran gearbeitet,
 Darstellungsprobleme zu minimieren, wenn diese Schriftarten mit 
 Freetype gerendert werden.
 
+[#_pisces_and_marlin]
 === Pisces und Marlin
 
 Oracle JDK 8 verwendet einen proprietären 2D-Grafik Renderer namens Ductus,
@@ -93,30 +98,34 @@ OpenJDK 9 wird der Marlin-Renderer verwendet. Bei Adoptium sind Arbeiten
 geplant, um entweder Marlin auf OpenJDK 8 zurück zu portieren und/oder
 Darstellungsprobleme zwischen den beiden zu minimieren.
 
+[#_lcms]
 === LCMS
 
 OpenJDK verwendet die Open-Source-Bibliothek Little Color Matching System (LCMS)
 anstelle der proprietären Kodac CMS library.
 
+[#_jmx]
 === JMX
 
 Das proprietäre SNMP-Paket, das mit Oracle JDK 8 ausgeliefert wird, ist nicht im
 OpenJDK. Verwenden Sie JMX als Alternative oder SNMP4J. Diese Pakete sind nicht
 mit den Temurin Builds gebündelt.
-.
 
+[#_windows_sound_drivers]
 === Windows Sound Treiber
 
 Oracle JDK bietet native Sound-Treiber für Java 8 unter Windows an, welche nicht
 im OpenJDK vorhanden sind. Verwenden Sie stattdessen die Sound-Treiber, die unter
 Microsoft Windows verfügbar sind.
 
+[#_java_flight_recorder]
 === Java Flight Recorder
 
 Java Flight Recorder (JFR) wurde vom Oracle JDK entkoppelt und in die OpenJDK-Community eingebracht.
 Es wird daran gearbeitet, JFR zurück zu portieren von OpenJDK 11 auf OpenJDK 8. Wenn diese Arbeit
 abgeschlossen ist, wird Temurin JFR in die OpenJDK 8 Binaries mit aufnehmen.
 
+[#_eclipse_mission_control]
 === Eclipse Mission Control
 
 Das https://projects.eclipse.org/projects/adoptium.mc[Eclipse Mission
