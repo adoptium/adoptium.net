@@ -37,7 +37,7 @@ To align with an upstream OpenJDK change which sets -mmacosx-version-min=11.00.0
 
 ### Linux installer updates
 
-Changes in our installer scripts reflect changes in the bundled libfreetype dependency.
+In recent JDK releases, the project moved from relying on the systems own FreeType library to using a bundled, in-tree copy to improve consistency, security, and build reproducibility across all platforms and versions. By shipping a known, vetted FreeType version within the JDK avoids subtle rendering differences and breakages caused by distro-specific patches or version mismatches, while also allowing timely fixes for font-related vulnerabilities, This change helps ensure predictable text rendering and more reliable cross-platform behavior for Java applications. As such , the linux installer packages for RPM based distros have been updated to remove this dependency. Debian based packages will follow suit in future releases.
 
 ### Introduction of new system and security property (com.sun.security.allowedAIALocations)
 
