@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin 8u482, 11.0.30, 17.0.18, 21.0.10 and 25.0.2 Available
-date: "2026-02-03"
+date: "2026-02-05"
 author: pmc
 description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u482, 11.0.30, 17.0.18, 21.0.10 and 25.0.2. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 tags:
@@ -44,6 +44,10 @@ In recent JDK releases, the project moved from relying on the systems own FreeTy
 The introduction of com.sun.security.allowedAIALocations allows users to apply filtering rules against URIs obtained from the authority info access extension on X.509 certificates. More details of this new and noteworthy change can be found in the upstream [OpenJDK release notes for JDK 25](https://jdk.java.net/25/release-notes#JDK-8368032). It may impact those using certificates that lack a proper SAN extension.
 
 To address the java.lang.management system tests that were failing in our verification runs, we mitigated by adding a JVM option, -Djdk.rmi.ssl.client.enableEndpointIdentification=false to our test client. The correct fix going forward will be to reissue the certificates with the proper SAN extension.
+
+### Update GCC DevKits with --enable-linker-build-id option
+
+We have updated our GCC DevKits used to create our JDK 21 and up Linux builds with the `--enable-linker-build-id` option. This change enables additional debugging information because with that option GCC with ELF and Binutils supports generation of "build-id" sections when using separate debuginfo. More information is available in the [Separate Debug Files](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Separate-Debug-Files.html) gdb documentation.
 
 ### Windows aarch64 unavailable for JDK25
 
