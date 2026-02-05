@@ -3,12 +3,19 @@
 
 | Java Version  | First Availability | Latest Release | Next Release Due | End of Availability ^[1]^
 
+| Java 26
+| Mar 2026
+| upcoming
+| Mar 2026
+[.small]#jdk-26.0.1#
+| Sep 2026
+
 | Java 25 (LTS)
 | Sep 2025
-| Oct 2025 +
-[.small]#jdk-25.0.1+8#
 | Jan 2026 +
-[.small]#jdk-25.0.2#
+[.small]#jdk-25.0.2+10#
+| Apr 2026 +
+[.small]#jdk-25.0.3#
 | At least Sep 2031
 
 | Java 24
@@ -34,10 +41,10 @@
 
 | Java 21 (LTS)
 | Sep 2023
-| Oct 2025 +
-[.small]#jdk-21.0.9+10#
 | Jan 2026 +
-[.small]#jdk-21.0.10#
+[.small]#jdk-21.0.10+7#
+| Apr 2026 +
+[.small]#jdk-21.0.11#
 | At least Dec 2029
 
 | Java 20
@@ -63,10 +70,10 @@
 
 | Java 17 (LTS)
 | Sep 2021
-| Oct 2025 +
-[.small]#jdk-17.0.17+10#
 | Jan 2026 +
-[.small]#jdk-17.0.18#
+[.small]#jdk-17.0.18+8#
+| Apr 2026 +
+[.small]#jdk-17.0.19#
 | At least Oct 2027
 
 | Java 16
@@ -78,18 +85,18 @@
 
 | Java 11 (LTS)
 | Sep 2018
-| Oct 2025 +
-[.small]#jdk-11.0.29+7#
 | Jan 2026 +
-[.small]#jdk-11.0.30#
+[.small]#jdk-11.0.30+7#
+| Apr 2026 +
+[.small]#jdk-11.0.31#
 | At least Oct 2027
 
 | Java 8 (LTS)
 | Mar 2014
-| Oct 2025 +
-[.small]#jdk8u472-b08#
 | Jan 2026 +
-[.small]#jdk8u482#
+[.small]#jdk8u482-b08#
+| Apr 2026 +
+[.small]#jdk8u492#
 | At least Dec 2030
 
 |===
