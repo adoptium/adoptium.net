@@ -45,7 +45,7 @@ The introduction of com.sun.security.allowedAIALocations allows users to apply f
 
 To address the java.lang.management system tests that were failing in our verification runs, we mitigated by adding a JVM option, -Djdk.rmi.ssl.client.enableEndpointIdentification=false to our test client. The correct fix going forward will be to reissue the certificates with the proper SAN extension.
 
-### Update GCC DevKits with --enable-linker-build-id option
+### Update GCC DevKits with `--enable-linker-build-id` option
 
 We have updated our GCC DevKits used to create our JDK 21 and up Linux builds with the `--enable-linker-build-id` option. This change enables additional debugging information because with that option GCC with ELF and Binutils supports generation of "build-id" sections when using separate debuginfo.  By adding `build-id` to `libjvm.so` it's now possible to use perf probes on the JVM, including HotSpot SDT events. See the [tracking issue](https://github.com/adoptium/temurin-build/issues/4223) for details.
 
