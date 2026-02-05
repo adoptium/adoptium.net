@@ -5,8 +5,8 @@
 
 | Java 26
 | Mar 2026
-| upcoming
-| Mar 2026
+| Upcoming
+| Mar 2026 +
 [.small]#jdk-26.0.1#
 | Sep 2026
 
