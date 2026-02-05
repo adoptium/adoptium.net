@@ -47,7 +47,7 @@ To address the java.lang.management system tests that were failing in our verifi
 
 ### Update GCC DevKits with `--enable-linker-build-id` option
 
-We have updated our GCC DevKits used to create our JDK 21 and later JDK versions on Linux with the `--enable-linker-build-id` option. This change enables additional debugging information because with that option GCC with ELF and Binutils supports generation of "build-id" sections when using separate debuginfo.  By adding `build-id` to `libjvm.so` it's now possible to use perf probes on the JVM, including HotSpot SDT events. See the [tracking issue](https://github.com/adoptium/temurin-build/issues/4223) for details.
+We have updated our GCC DevKits used to create our JDK 21 and later JDK versions on Linux with the `--enable-linker-build-id` option. This change enables additional debugging information because with that option GCC with ELF and Binutils supports generation of "build-id" sections when using separate debuginfo. By adding `build-id` to `libjvm.so` it's now possible to use perf probes on the JVM, including HotSpot SDT events. See the [tracking issue](https://github.com/adoptium/temurin-build/issues/4223) for details.
 
 ### Windows aarch64 unavailable for JDK25
 
