@@ -27,7 +27,7 @@ export const currentBanners: BannerProps[] = [
       "Tell us how Adoptium should recognise your contribution and impact",
     cta: "Take the survey",
     ctaLink: "https://www.surveymonkey.com/r/featuredbanner",
-    startDate: "2026-02-09T00:00:00Z",
+    startDate: "2026-02-10T00:00:00Z",
     endDate: "2026-03-16T23:59:59Z",
   },
   {
