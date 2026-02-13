@@ -8,6 +8,33 @@
     "sustainer-cta-description": "数百万用户信赖 Eclipse Temurin。您的支持让它持续发展",
     "sustainer-cta-button": "投资 Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "感谢您的下载",
+    "vendor-build": "{vendor} 构建版",
+    "auto-start-p1": "您的 OpenJDK 运行时下载应在几秒钟内自动开始。",
+    "auto-start-p2": "如果没有，",
+    "click-here": "请点击此处手动重新开始",
+    "community-action": "需要社区行动",
+    "free-to-use": "免费使用，",
+    "not-free-to-build": "构建需成本。",
+    "appeal-quote": "“没有捐赠，此项目将不复存在。”",
+    "appeal-text": "Eclipse Temurin 受到全球数百万开发者的信赖。为了确保这些高质量开源二进制文件的未来，我们今天需要您的帮助。",
+    "become-sustainer-btn": "成为赞助商",
+    "corporate-sponsorship-btn": "企业支持者",
+    "vendor-alert": "您正在下载 <vendorWrapper>{vendor}</vendorWrapper> 的构建版，它是 Eclipse Adoptium 工作组的成员。",
+    "why-we-need-you": "为什么我们需要您",
+    "infra-costs-title": "基础设施成本",
+    "infra-costs-desc": "在 50+ 个平台上进行测试需要巨大的计算能力。",
+    "security-speed-title": "安全与速度",
+    "security-speed-desc": "快速、安全的更新需要专用资源。",
+    "open-source-title": "真正的开源",
+    "open-source-desc": "让 Java 永远免费意味着共同资助它。",
+    "resources-next-steps": "资源与后续步骤",
+    "installation-guide-title": "安装指南",
+    "installation-guide-desc": "您使用新 Java 运行时的分步说明。",
+    "documentation-title": "文档",
+    "documentation-desc": "Eclipse Temurin 和 Adoptium 生态系统的综合文档。"
+  },
   "NotFoundPage": {
     "title": "很抱歉，无法找到此页面",
     "back-to-home": "返回首页"
