@@ -25,13 +25,13 @@ With more than two decades experience implementing, delivering, and supporting J
 Visit https://www.ibm.com/products/support-for-runtimes[IBM Runtimes for Business] today for more information.
 
 ^.^|
-image:https://managecat.com/images/logos/Logo_ManageCatYellow_Wide-White.png[ManageCat,150]
+image:https://adoptium.net/images/members/managecat.png[ManageCat,150]
 |
 https://www.managecat.com[ManageCat] provides commercial support for Eclipse Temurin, helping organizations run and operate Java with confidence in production environments. ManageCat focuses on practical, enterprise-ready support for Eclipse Temurin deployments, offering timely security updates, expert troubleshooting, and guidance tailored to real-world operational needs.
 
 ManageCat’s support services are designed for teams that value flexibility and hands-on expertise, including assistance with JVM performance tuning, incident response, and long-term maintenance strategies for mission-critical Java workloads based on Eclipse Temurin.
 
-For more details, please visit the https://www.managecat.com[ManageCat website] or https://managecat.com/pages/contact-us[contact ManageCat] for additional information.
+For more details, please visit the https://managecat.com/services-and-support/eclipse-temurin-openjdk[ManageCat website] or https://managecat.com/pages/contact-us[contact ManageCat] for additional information.
 
 ^.^|
 image:https://adoptium.net/images/members/openelements.svg[Open Elements,150]
