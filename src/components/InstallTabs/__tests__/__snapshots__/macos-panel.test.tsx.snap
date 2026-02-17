@@ -29,7 +29,7 @@ exports[`Tests for MacOSPanel component > renders correctly 1`] = `
           brew install --cask 
         </span>
         temurin@
-        21
+        25
       </code>
     </pre>
     <br />
@@ -71,7 +71,7 @@ exports[`Tests for MacOSPanel component > renders correctly 1`] = `
           brew install --cask 
         </span>
         temurin@
-        21
+        25
       </code>
     </pre>
     <br />
@@ -103,7 +103,7 @@ exports[`Tests for MacOSPanel component > renders correctly 1`] = `
           brew uninstall --cask 
         </span>
         temurin@
-        21
+        25
       </code>
     </pre>
     <a

@@ -194,7 +194,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
                           winget install 
                         </span>
                         EclipseAdoptium.Temurin.
-                        21
+                        25
                         .JDK
                       </code>
                     </pre>
@@ -254,7 +254,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
                           winget upgrade 
                         </span>
                         EclipseAdoptium.Temurin.
-                        21
+                        25
                         .JDK
                       </code>
                     </pre>
@@ -285,7 +285,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
                           winget uninstall 
                         </span>
                         EclipseAdoptium.Temurin.
-                        21
+                        25
                         .JDK
                       </code>
                     </pre>
