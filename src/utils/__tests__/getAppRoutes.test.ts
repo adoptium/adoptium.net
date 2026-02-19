@@ -62,15 +62,13 @@ describe("getBlogRoutes", () => {
   beforeEach(() => {
     vi.clearAllMocks();
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mockedFs.readdirSync.mockImplementation((dir: string, opts: any) => {
+      // Normalize path for Windows/Linux consistency
+      const normalizedDir = dir.replace(/\\/g, "/");
+
       if (opts?.withFileTypes) {
-        if (
-          dir.includes("blog") &&
-          !dir.includes("blog1") &&
-          !dir.includes("blog2") &&
-          !dir.includes("blog3")
-        ) {
+        // Match the base blog directory
+        if (normalizedDir.endsWith("content/blog")) {
           return [
             createMockDirent("blog1", true),
             createMockDirent("blog2", true),
@@ -78,33 +76,41 @@ describe("getBlogRoutes", () => {
             createMockDirent("notafolder", false),
           ];
         }
-        if (dir.includes("blog1")) return [createMockDirent("index.md", false)];
-        if (dir.includes("blog2")) return [createMockDirent("index.md", false)];
-        if (dir.includes("blog3")) return [];
+        // Match specific blog subdirectories
+        if (normalizedDir.endsWith("blog/blog1"))
+          return [createMockDirent("index.md", false)];
+        if (normalizedDir.endsWith("blog/blog2"))
+          return [createMockDirent("index.md", false)];
+        if (normalizedDir.endsWith("blog/blog3")) return [];
       }
       return [];
     });
 
-    mockedFs.existsSync.mockImplementation(
-      (p: string) =>
-        p.includes("blog1/index.md") || p.includes("blog2/index.md")
-    );
+    mockedFs.existsSync.mockImplementation((p: string) => {
+      const normalizedP = p.replace(/\\/g, "/");
+      return (
+        normalizedP.endsWith("blog1/index.md") ||
+        normalizedP.endsWith("blog2/index.md")
+      );
+    });
 
     mockedFs.statSync.mockImplementation((p: string) => {
-      if (p.includes("blog1/index.md")) {
+      const normalizedP = p.replace(/\\/g, "/");
+      if (normalizedP.endsWith("blog1/index.md")) {
         return { mtime: new Date("2024-05-20") } as fs.Stats;
       }
-      if (p.includes("blog2/index.md")) {
+      if (normalizedP.endsWith("blog2/index.md")) {
         return { mtime: new Date("2024-06-26") } as fs.Stats;
       }
       throw new Error("File not found");
     });
 
     mockedFs.readFileSync.mockImplementation((p: string) => {
-      if (p.includes("blog1/index.md")) {
+      const normalizedP = p.replace(/\\/g, "/");
+      if (normalizedP.endsWith("blog1/index.md")) {
         return `---\ndate: 2025-05-09\n---\nBlog 1 content`;
       }
-      if (p.includes("blog2/index.md")) {
+      if (normalizedP.endsWith("blog2/index.md")) {
         return `---\ndate: 2024-06-26\n---\nBlog 2 content`;
       }
       return "";
@@ -120,9 +126,10 @@ describe("getBlogRoutes", () => {
   });
 
   it("returns blog routes with lastmod from index.md missing", () => {
-    mockedFs.existsSync.mockImplementation((p: string) =>
-      p.includes("blog2/index.md")
-    );
+    mockedFs.existsSync.mockImplementation((p: string) => {
+      const normalizedP = p.replace(/\\/g, "/");
+      return normalizedP.endsWith("blog2/index.md");
+    });
     const routes = getBlogRoutes();
     expect(routes).toEqual([
       { loc: "/news/2024/06/blog2/", lastmod: "2024-06-26" },
