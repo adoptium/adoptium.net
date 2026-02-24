@@ -65,7 +65,7 @@ describe("getBlogRoutes", () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mockedFs.readdirSync.mockImplementation((dir: string, opts: any) => {
       // Normalize the directory path
-      dir = dir.replace(/\\/g, "/"); // Minimal Change: Normalize input
+      dir = dir.replace(/\\/g, "/"); // Normalize input
       if (opts?.withFileTypes) {
         if (
           dir.includes("blog") &&

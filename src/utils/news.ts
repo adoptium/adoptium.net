@@ -18,16 +18,27 @@ interface EclipseNewsItem {
 export async function getNews({
   numPosts = 9,
   page = 1,
-  includeEF = false,
+  includeEF = true,
+  tag,
+  author,
+  source,
+}: {
+  numPosts?: number;
+  page?: number;
+  includeEF?: boolean;
+  tag?: string;
+  author?: string;
+  source?: "adoptium" | "eclipse";
 } = {}): Promise<NewsResult> {
-  const blogs = getBlogPosts();
+  let blogs = getBlogPosts();
+
   if (includeEF) {
     const efNews = await fetchLatestNews();
-    // structure efNews to match the blog posts format
+
     const efPosts = efNews.news
       .filter(
         (newsItem: EclipseNewsItem) =>
-          !newsItem.link.startsWith("https://adoptium.net")
+          !newsItem.link.startsWith("https://adoptium.net"),
       )
       .map((newsItem: EclipseNewsItem) => ({
         slug: newsItem.link,
@@ -44,20 +55,53 @@ export async function getNews({
               : "/images/backgrounds/ef-default-news.png",
         },
       }));
-    // Combine the blog posts with the EF news posts
-    blogs.push(...efPosts);
+
+    blogs = [...blogs, ...efPosts];
   }
 
+  // -------------------------
+  // FILTERING PIPELINE
+  // -------------------------
+
+  // 1️⃣ Source Filter
+  if (source === "adoptium") {
+    blogs = blogs.filter(
+      (post) => !post.metadata.tags?.includes("eclipse-news"),
+    );
+  }
+
+  if (source === "eclipse") {
+    blogs = blogs.filter((post) =>
+      post.metadata.tags?.includes("eclipse-news"),
+    );
+  }
+
+  // 2️⃣ Tag Filter
+  if (tag) {
+    blogs = blogs.filter((post) => post.metadata.tags?.includes(tag));
+  }
+
+  // 3️⃣ Author Filter
+  if (author) {
+    blogs = blogs.filter((post) => post.metadata.author === author);
+  }
+
+  // -------------------------
+  // SORTING
+  // -------------------------
   const sortedBlogs = blogs.sort((a, b) => {
     const dateA = new Date(a.metadata.date).getTime();
     const dateB = new Date(b.metadata.date).getTime();
-    return dateB - dateA; // Sort in descending order
+    return dateB - dateA;
   });
 
+  // -------------------------
+  // PAGINATION
+  // -------------------------
   const totalPages = Math.ceil(sortedBlogs.length / numPosts);
   const paginatedPosts = sortedBlogs.slice(
     (page - 1) * numPosts,
-    page * numPosts
+    page * numPosts,
   );
 
   return {
@@ -66,54 +110,55 @@ export async function getNews({
   };
 }
 
-export function getNewsByTag(
-  tag: string,
-  { numPosts = 6, page = 1 } = {}
-): NewsResult {
-  const blogs = getBlogPosts();
-  const filteredBlogs = blogs.filter((post) =>
-    post.metadata.tags?.includes(tag)
-  );
+export async function getNewsFilters({
+  includeEF = true,
+}: {
+  includeEF?: boolean;
+} = {}) {
+  let blogs = getBlogPosts();
 
-  const sortedBlogs = filteredBlogs.sort((a, b) => {
-    const dateA = new Date(a.metadata.date).getTime();
-    const dateB = new Date(b.metadata.date).getTime();
-    return dateB - dateA; // Sort in descending order
+  if (includeEF) {
+    const efNews = await fetchLatestNews();
+
+    const efPosts = efNews.news
+      .filter(
+        (newsItem: EclipseNewsItem) =>
+          !newsItem.link.startsWith("https://adoptium.net"),
+      )
+      .map((newsItem: EclipseNewsItem) => ({
+        slug: newsItem.link,
+        newsItem,
+        metadata: {
+          title: newsItem.title,
+          date: newsItem.date,
+          tags: ["eclipse-news"],
+          author: "Eclipse Foundation",
+          description: newsItem.body.substring(0, 150) + "...",
+          featuredImage:
+            newsItem.image && newsItem.image.trim() !== ""
+              ? newsItem.image
+              : "/images/backgrounds/ef-default-news.png",
+        },
+      }));
+
+    blogs = [...blogs, ...efPosts];
+  }
+
+  const tagSet = new Set<string>();
+  const authorSet = new Set<string>();
+
+  blogs.forEach((post) => {
+    post.metadata.tags?.forEach((tag: string) => {
+      if (tag) tagSet.add(tag);
+    });
+
+    if (post.metadata.author) {
+      authorSet.add(post.metadata.author);
+    }
   });
 
-  const totalPages = Math.ceil(sortedBlogs.length / numPosts);
-  const paginatedPosts = sortedBlogs.slice(
-    (page - 1) * numPosts,
-    page * numPosts
-  );
-
   return {
-    posts: paginatedPosts,
-    totalPages,
-  };
-}
-
-export function getNewsByAuthor(
-  author: string,
-  { numPosts = 6, page = 1 } = {}
-): NewsResult {
-  const blogs = getBlogPosts();
-  const filteredBlogs = blogs.filter((post) => post.metadata.author === author);
-
-  const sortedBlogs = filteredBlogs.sort((a, b) => {
-    const dateA = new Date(a.metadata.date).getTime();
-    const dateB = new Date(b.metadata.date).getTime();
-    return dateB - dateA; // Sort in descending order
-  });
-
-  const totalPages = Math.ceil(sortedBlogs.length / numPosts);
-  const paginatedPosts = sortedBlogs.slice(
-    (page - 1) * numPosts,
-    page * numPosts
-  );
-
-  return {
-    posts: paginatedPosts,
-    totalPages,
+    tags: Array.from(tagSet).sort(),
+    authors: Array.from(authorSet).sort(),
   };
 }
