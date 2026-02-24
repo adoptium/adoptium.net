@@ -84,7 +84,7 @@ const initiatives = [
       <>
         <ul className="list-disc list-inside space-y-2 text-left">
           <li>
-            Collaborate with leading Java vendors like Microsoft, Red Hat, IBM,
+            Collaborate with leading Java vendors like Microsoft, IBM,
             Google, Alibaba, and Rivos.
           </li>
           <li>

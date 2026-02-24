@@ -61,8 +61,6 @@ export function getImageForDistribution(distribution: string) {
     switch (distribution) {
         case "temurin":
             return "/images/vendors/adoptium-logo.png"
-        case "redhat":
-            return "/images/members/redhat.svg"
         case "zulu":
             return "/images/vendors/azul-logo.png"
         case "semeru":
