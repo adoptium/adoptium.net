@@ -19,7 +19,7 @@ exports[`Index page > renders correctly 1`] = `
     </div>
     <div
       class="absolute inset-0 z-0 hidden md:flex items-start justify-center pointer-events-none"
-      style="opacity: 0; scale: 0;"
+      style="y: 0px; opacity: 0; scale: 0;"
     >
       <div
         class="relative w-[1000px] h-[1000px] -mt-32"
@@ -481,7 +481,7 @@ exports[`Index page > renders correctly 1`] = `
             >
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0;"
+                style="opacity: 0; y: 0px;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -496,7 +496,7 @@ exports[`Index page > renders correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0;"
+                style="opacity: 0; y: 0px;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -511,7 +511,7 @@ exports[`Index page > renders correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0;"
+                style="opacity: 0; y: 0px;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
