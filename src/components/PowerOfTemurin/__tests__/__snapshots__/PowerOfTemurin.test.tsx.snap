@@ -188,7 +188,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
             >
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0;"
+                style="opacity: 0; y: 0px;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -203,7 +203,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0;"
+                style="opacity: 0; y: 0px;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
@@ -218,7 +218,7 @@ exports[`PowerOfTemurin component > should render correctly 1`] = `
               </div>
               <div
                 class="absolute w-full max-w-lg"
-                style="opacity: 0;"
+                style="opacity: 0; y: 0px;"
               >
                 <h2
                   class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
