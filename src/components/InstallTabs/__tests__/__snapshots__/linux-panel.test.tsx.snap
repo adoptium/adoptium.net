@@ -29,7 +29,7 @@ exports[`Tests for LinuxPanel component > renders correctly 1`] = `
           apt-get install 
         </span>
         temurin-
-        21
+        25
         -jdk
       </code>
     </pre>
@@ -60,7 +60,7 @@ exports[`Tests for LinuxPanel component > renders correctly 1`] = `
           yum install 
         </span>
         temurin-
-        21
+        25
         -jdk
       </code>
     </pre>
@@ -91,7 +91,7 @@ exports[`Tests for LinuxPanel component > renders correctly 1`] = `
           zypper install 
         </span>
         temurin-
-        21
+        25
         -jdk
       </code>
     </pre>
