@@ -1,9 +1,14 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
+
+export interface SelectOption {
+  value: string;
+  label: string;
+}
 
 interface FilterSelectProps {
   label: string;
   value: string;
-  options: string[];
+  options: SelectOption[];
   onChange: (value: string) => void;
   disabled?: boolean;
 }
@@ -19,41 +24,82 @@ export function FilterSelect({
   const [searchTerm, setSearchTerm] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Close on outside click
+  // Close on outside click and escape key
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      ) {
+    if (!open) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
         setOpen(false);
+        setSearchTerm("");
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    const handlePointerDown = (e: MouseEvent | PointerEvent) => {
+      if (!containerRef.current?.contains(e.target as Node)) {
+        setOpen(false);
+        setSearchTerm("");
+      }
+    };
 
-  const filteredOptions = options.filter((opt) =>
-    opt.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("pointerdown", handlePointerDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [open]);
+
+  const normalizedSearch = searchTerm.trim().toLowerCase();
+
+  const selectedOption = useMemo(() => {
+    if (!value) return undefined;
+    return options.find((opt) => opt.value === value);
+  }, [options, value]);
+
+  const filteredOptions = useMemo(() => {
+    if (!normalizedSearch) return options;
+
+    return options.filter((opt) =>
+      opt.label.toLowerCase().includes(normalizedSearch),
+    );
+  }, [options, normalizedSearch]);
 
   return (
-    <div ref={containerRef} className="relative inline-block">
-      <button
-        disabled={disabled}
-        onClick={() => setOpen((prev) => !prev)}
+    <div ref={containerRef} className="relative w-full">
+      {/* Trigger */}
+      <div
+        role="combobox"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        onClick={() => !disabled && setOpen(true)}
         className="w-full bg-white/5 backdrop-blur-md text-white
                  px-4 py-2.5 rounded-full
                  flex justify-between items-center
-                 border border-transparent
+                 border border-white/10
+hover:border-white/20
+focus-within:border-purple-400/40
                  hover:bg-purple-600/20
-                 hover:border-purple-400
-                 focus:outline-none focus:ring-2 focus:ring-purple-400
-                 transition-all duration-200
-                 disabled:opacity-50"
+                 transition-colors duration-200
+                 cursor-text"
       >
-        <span>{value || label}</span>
+        <div className="flex-1">
+          {open ? (
+            <input
+              autoFocus
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onClick={(e) => e.stopPropagation()}
+              placeholder={label}
+              className="w-full bg-transparent outline-none text-white placeholder-white/50"
+            />
+          ) : (
+            <span>{selectedOption?.label || label}</span>
+          )}
+        </div>
+
         <svg
           className={`w-4 h-4 transition-transform duration-200 ${
             open ? "rotate-180" : ""
@@ -69,11 +115,13 @@ export function FilterSelect({
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </button>
+      </div>
 
+      {/* Dropdown */}
       {open && (
         <div
-          className="absolute mt-2 min-w-full w-max
+          role="listbox"
+          className="absolute mt-2 w-full
                    bg-[#140c24]
                    border border-purple-500/30
                    rounded-2xl
@@ -82,44 +130,55 @@ export function FilterSelect({
                    z-50"
         >
           <div className="max-h-64 overflow-y-auto custom-scroll">
-            {/* Default Option */}
             <button
               onClick={() => {
                 onChange("");
+                setSearchTerm("");
                 setOpen(false);
               }}
-              className="text-left px-4 py-2.5 whitespace-nowrap
+              className="w-full text-left px-4 py-2.5
                        text-white/90
-                       transition-transform duration-150 ease-out
-                       transform
-                       hover:scale-[1.02]
-                       active:scale-[0.98]"
+                       hover:bg-purple-600/30
+                       transition-colors"
             >
               {label}
             </button>
 
-            {options.map((opt) => {
-              const isSelected = value === opt;
+            {filteredOptions.length === 0 ? (
+              <div className="px-4 py-2 text-white/60 text-sm">
+                No results found
+              </div>
+            ) : (
+              filteredOptions.map((opt) => {
+                const isSelected = value === opt.value;
 
-              return (
-                <button
-                  key={opt}
-                  onClick={() => {
-                    onChange(opt);
-                    setOpen(false);
-                  }}
-                  className={`text-left px-4 py-2.5 whitespace-nowrap
-                  transition-transform duration-150 ease-out
-                  transform
-                  hover:scale-[1.02]
-                  active:scale-[0.98]
-                  ${isSelected ? "text-white font-semibold" : "text-white/90"}
-                `}
-                >
-                  {opt}
-                </button>
-              );
-            })}
+                return (
+                  <button
+                    key={opt.value}
+                    onClick={() => {
+                      onChange(opt.value);
+                      setSearchTerm("");
+                      setOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2.5
+            transition-all duration-200
+            rounded-xl
+            border border-transparent
+            hover:bg-white/10
+hover:border-white/20
+
+
+            ${
+              isSelected
+                ? "bg-white/15 border-white/25 text-white font-medium"
+                : "text-white/90"
+            }`}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })
+            )}
           </div>
         </div>
       )}

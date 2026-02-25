@@ -47,7 +47,7 @@ export async function getNews({
           title: newsItem.title,
           date: newsItem.date,
           tags: ["eclipse-news"],
-          author: "Eclipse Foundation",
+          author: "eclipse-foundation",
           description: newsItem.body.substring(0, 150) + "...",
           featuredImage:
             newsItem.image && newsItem.image.trim() !== ""
@@ -132,7 +132,7 @@ export async function getNewsFilters({
           title: newsItem.title,
           date: newsItem.date,
           tags: ["eclipse-news"],
-          author: "Eclipse Foundation",
+          author: "eclipse-foundation",
           description: newsItem.body.substring(0, 150) + "...",
           featuredImage:
             newsItem.image && newsItem.image.trim() !== ""

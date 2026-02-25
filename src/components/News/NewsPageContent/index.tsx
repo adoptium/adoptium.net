@@ -8,6 +8,7 @@ import { sanitizeObject } from "@/utils/sanitize";
 import type { CollectionPage, WithContext } from "schema-dts";
 import { metadata as siteMetadata } from "@/utils/metadata";
 import { parseNewsFilters } from "@/utils/parseNewsFilters";
+import { getFormattedAuthorData } from "@/utils/authors";
 
 export const metadata: Metadata = {
   title: "News & Updates",
@@ -43,9 +44,6 @@ export default async function NewsPageContent({
   if (Number.isNaN(pageNumber) || pageNumber < 1) {
     notFound();
   }
-  console.log("RAW searchParams:", searchParams);
-  console.log("pageNumber:", pageNumber);
-  console.log("totalPages:", totalPages);
 
   const jsonLdSchema: WithContext<CollectionPage> = {
     "@context": "https://schema.org",
@@ -92,7 +90,19 @@ export default async function NewsPageContent({
       : "";
 
   const { tags, authors } = await getNewsFilters({ includeEF: true });
+  const tagOptions = tags.map((tag) => ({
+    value: tag,
+    label: tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+  }));
 
+  const authorOptions = authors.map((slug) => {
+    const authorData = getFormattedAuthorData(slug);
+
+    return {
+      value: slug,
+      label: authorData.name,
+    };
+  });
   return (
     <>
       <script
@@ -103,7 +113,7 @@ export default async function NewsPageContent({
         }}
       />
 
-      <NewsFilters tags={tags} authors={authors} />
+      <NewsFilters tags={tagOptions} authors={authorOptions} />
 
       {posts.length === 0 ? (
         <NewsEmptyState tag={tag} author={author} source={source} />

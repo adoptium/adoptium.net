@@ -2,11 +2,11 @@
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useTransition } from "react";
-import { FilterSelect } from "./FilterSelect";
+import { FilterSelect, SelectOption } from "./FilterSelect";
 
 interface NewsFiltersProps {
-  tags: string[];
-  authors: string[];
+  tags: SelectOption[];
+  authors: SelectOption[];
 }
 
 type FilterKey = "source" | "tag" | "author";
@@ -36,36 +36,43 @@ export default function NewsFilters({ tags, authors }: NewsFiltersProps) {
       router.replace(`${cleanPath}${newQuery ? `?${newQuery}` : ""}`);
     });
   };
+  const sourceOptions: SelectOption[] = [
+    { value: "adoptium", label: "Adoptium" },
+    { value: "eclipse", label: "Eclipse" },
+  ];
 
   return (
     <div className="w-full flex justify-center px-4 mt-8 mb-10">
-      <div className="flex flex-wrap justify-center gap-4 max-w-3xl w-full">
-        {/* SOURCE FILTER */}
-        <FilterSelect
-          label="All Sources"
-          value={searchParams.get("source") || ""}
-          options={["adoptium", "eclipse"]}
-          onChange={(value) => handleChange("source", value)}
-          disabled={isPending}
-        />
+      <div className="flex w-full max-w-4xl gap-4">
+        <div className="flex-1 min-w-0">
+          <FilterSelect
+            label="All Sources"
+            value={searchParams.get("source") || ""}
+            options={sourceOptions}
+            onChange={(value) => handleChange("source", value)}
+            disabled={isPending}
+          />
+        </div>
 
-        {/* TAG FILTER */}
-        <FilterSelect
-          label="All Tags"
-          value={searchParams.get("tag") || ""}
-          options={tags}
-          onChange={(value) => handleChange("tag", value)}
-          disabled={isPending}
-        />
+        <div className="flex-1 min-w-0">
+          <FilterSelect
+            label="All Tags"
+            value={searchParams.get("tag") || ""}
+            options={tags}
+            onChange={(value) => handleChange("tag", value)}
+            disabled={isPending}
+          />
+        </div>
 
-        {/* AUTHOR FILTER */}
-        <FilterSelect
-          label="All Authors"
-          value={searchParams.get("author") || ""}
-          options={authors}
-          onChange={(value) => handleChange("author", value)}
-          disabled={isPending}
-        />
+        <div className="flex-1 min-w-0">
+          <FilterSelect
+            label="All Authors"
+            value={searchParams.get("author") || ""}
+            options={authors}
+            onChange={(value) => handleChange("author", value)}
+            disabled={isPending}
+          />
+        </div>
       </div>
     </div>
   );
