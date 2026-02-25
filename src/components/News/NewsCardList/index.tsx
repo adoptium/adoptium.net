@@ -59,8 +59,10 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
             <EventCard
               key={`post-${rowIndex}-${index}`}
               post={post}
-              isEclipseNews={post.author === 'Eclipse Foundation' ||
-                (post.tags && post.tags.includes('eclipse-news'))}
+              isEclipseNews={
+                post.author === "Eclipse Foundation" ||
+                (post.tags && post.tags.includes("eclipse-news"))
+              }
             />
           ))}
         </div>
@@ -78,7 +80,10 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
           href="https://newsroom.eclipse.org/node/add/news"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium">Submit News</a>
+          className="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
+        >
+          Submit News
+        </a>
       </div>
     </div>
   );
