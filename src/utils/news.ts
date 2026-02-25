@@ -162,3 +162,24 @@ export async function getNewsFilters({
     authors: Array.from(authorSet).sort(),
   };
 }
+export async function getNewsByTag(
+  tag: string,
+  { numPosts = 6, page = 1 } = {},
+) {
+  return getNews({
+    tag,
+    numPosts,
+    page,
+  });
+}
+
+export async function getNewsByAuthor(
+  author: string,
+  { numPosts = 6, page = 1 } = {},
+) {
+  return getNews({
+    author,
+    numPosts,
+    page,
+  });
+}
