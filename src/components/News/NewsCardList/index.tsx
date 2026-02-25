@@ -25,6 +25,7 @@ interface NewsCardListProps {
   currentPage: number;
   totalPages: number;
   baseUrl: string;
+  queryString?: string;
 }
 
 const NewsCardList: React.FC<NewsCardListProps> = ({
@@ -35,6 +36,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
   currentPage,
   totalPages,
   baseUrl,
+  queryString,
 }) => {
   const allPosts = [...posts];
   const rowsNeeded = Math.ceil(allPosts.length / 3);
@@ -74,6 +76,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
         currentPage={currentPage}
         totalPages={totalPages}
         baseUrl={baseUrl}
+        queryString={queryString}
       />
       <div className="flex justify-center items-center gap-5 mt-8">
         <a

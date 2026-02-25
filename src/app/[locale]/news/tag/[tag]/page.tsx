@@ -29,7 +29,10 @@ export default async function TagsPage({
   }>;
 }) {
   const { tag } = await params;
-  const { posts, totalPages } = getNewsByTag(tag, { numPosts: 6, page: 1 });
+  const { posts, totalPages } = await getNewsByTag(tag, {
+    numPosts: 6,
+    page: 1,
+  });
   if (!posts || posts.length === 0) {
     notFound();
   }

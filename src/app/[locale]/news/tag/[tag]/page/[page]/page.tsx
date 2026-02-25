@@ -38,7 +38,7 @@ export default async function TaggedNewsPage({
   }
 
   const pageNumber = parseInt(page, 10);
-  const { posts, totalPages } = getNewsByTag(tag, {
+  const { posts, totalPages } = await getNewsByTag(tag, {
     numPosts: 6,
     page: pageNumber,
   });
