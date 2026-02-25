@@ -15,6 +15,15 @@ interface EclipseNewsItem {
   image?: string;
 }
 
+function isAdoptiumHost(urlString: string): boolean {
+  try {
+    const url = new URL(urlString);
+    return url.hostname === "adoptium.net";
+  } catch {
+    return false;
+  }
+}
+
 export async function getNews({
   numPosts = 9,
   page = 1,
@@ -36,10 +45,7 @@ export async function getNews({
     const efNews = await fetchLatestNews();
 
     const efPosts = efNews.news
-      .filter(
-        (newsItem: EclipseNewsItem) =>
-          !newsItem.link.startsWith("https://adoptium.net"),
-      )
+      .filter((newsItem: EclipseNewsItem) => !isAdoptiumHost(newsItem.link))
       .map((newsItem: EclipseNewsItem) => ({
         slug: newsItem.link,
         newsItem,
@@ -63,7 +69,7 @@ export async function getNews({
   // FILTERING PIPELINE
   // -------------------------
 
-  // 1️⃣ Source Filter
+  // Source Filter
   if (source === "adoptium") {
     blogs = blogs.filter(
       (post) => !post.metadata.tags?.includes("eclipse-news"),
@@ -76,12 +82,12 @@ export async function getNews({
     );
   }
 
-  // 2️⃣ Tag Filter
+  //  Tag Filter
   if (tag) {
     blogs = blogs.filter((post) => post.metadata.tags?.includes(tag));
   }
 
-  // 3️⃣ Author Filter
+  //  Author Filter
   if (author) {
     blogs = blogs.filter((post) => post.metadata.author === author);
   }
@@ -121,10 +127,7 @@ export async function getNewsFilters({
     const efNews = await fetchLatestNews();
 
     const efPosts = efNews.news
-      .filter(
-        (newsItem: EclipseNewsItem) =>
-          !newsItem.link.startsWith("https://adoptium.net"),
-      )
+      .filter((newsItem: EclipseNewsItem) => !isAdoptiumHost(newsItem.link))
       .map((newsItem: EclipseNewsItem) => ({
         slug: newsItem.link,
         newsItem,
@@ -162,6 +165,7 @@ export async function getNewsFilters({
     authors: Array.from(authorSet).sort(),
   };
 }
+
 export async function getNewsByTag(
   tag: string,
   { numPosts = 6, page = 1 } = {},
