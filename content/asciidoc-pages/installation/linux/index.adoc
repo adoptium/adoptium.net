@@ -95,6 +95,62 @@ Alternatively, if you are using `yum`:
 yum install temurin-17-jdk
 ----
 
+==== Installing the JRE
+
+If you only require the Java Runtime Environment (for running applications,
+not compiling them), install the JRE package:
+
+[source,bash]
+----
+sudo dnf install temurin-<version>-jre
+----
+
+Example:
+
+[source,bash]
+----
+sudo dnf install temurin-21-jre
+----
+
+==== Installing the Headless JRE
+
+For server environments where no graphical components are required, a
+headless JRE package is also available. This excludes GUI-related libraries
+such as AWT and reduces the overall installation footprint.
+
+[source,bash]
+----
+sudo dnf install temurin-<version>-jre-headless
+----
+
+Example:
+
+[source,bash]
+----
+sudo dnf install temurin-21-jre-headless
+----
+
+The `jre-headless` package is recommended for:
+
+- Container images
+- Minimal server installations
+- CI/CD build agents
+- Headless production workloads
+
+==== Verifying Installation
+
+[source,bash]
+----
+java -version
+----
+
+You can also confirm installed packages with:
+
+[source,bash]
+----
+rpm -qa | grep temurin
+----
+
 == openSUSE/SLES Instructions
 
 . Import the RPM repo as follows. RPM’s are also available for SLES 12 and 15. To check the full list of versions supported take a look at
