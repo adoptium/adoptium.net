@@ -61,10 +61,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
             <EventCard
               key={`post-${rowIndex}-${index}`}
               post={post}
-              isEclipseNews={
-                post.author === "Eclipse Foundation" ||
-                (post.tags && post.tags.includes("eclipse-news"))
-              }
+              isEclipseNews={post.metadata.tags?.includes("eclipse-news")}
             />
           ))}
         </div>
