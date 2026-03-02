@@ -10,11 +10,6 @@ import { metadata as siteMetadata } from "@/utils/metadata";
 import { parseNewsFilters } from "@/utils/parseNewsFilters";
 import { getFormattedAuthorData } from "@/utils/authors";
 
-export const metadata: Metadata = {
-  title: "News & Updates",
-  description: "Latest news and updates from the Eclipse Adoptium Project",
-};
-
 interface Props {
   pageNumber: number;
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -37,7 +32,7 @@ export default async function NewsPageContent({
     source,
   });
 
-  // 🔒 Pagination guard (real 404)
+  // Pagination guard (real 404)
   if (totalPages > 0 && pageNumber > totalPages) {
     notFound();
   }
