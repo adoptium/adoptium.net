@@ -56,12 +56,6 @@
     "tier": "enterprise"
   },
   {
-    "name": "Red Hat",
-    "logo": "members/redhat.svg",
-    "url": "https://www.redhat.com",
-    "tier": "enterprise"
-  },
-  {
     "name": "iJUG",
     "logo": "members/ijug.png",
     "url": "https://www.ijug.eu",
