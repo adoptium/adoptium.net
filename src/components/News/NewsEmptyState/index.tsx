@@ -1,3 +1,5 @@
+import { getFormattedAuthorData } from "@/utils/authors";
+
 interface NewsEmptyStateProps {
   tag?: string;
   author?: string;
@@ -9,6 +11,14 @@ export default function NewsEmptyState({
   author,
   source,
 }: NewsEmptyStateProps) {
+  const formattedAuthor = author
+    ? getFormattedAuthorData(author).name
+    : undefined;
+
+  const formattedSource = source
+    ? source.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+    : undefined;
+
   return (
     <div className="w-full flex flex-col items-center justify-center py-24 text-center">
       <h2 className="text-2xl font-semibold text-white mb-4">
@@ -25,14 +35,14 @@ export default function NewsEmptyState({
             Tag: {tag}
           </span>
         )}
-        {author && (
+        {formattedAuthor && (
           <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm">
-            Author: {author}
+            Author: {formattedAuthor}
           </span>
         )}
-        {source && (
+        {formattedSource && (
           <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm">
-            Source: {source}
+            Source: {formattedSource}
           </span>
         )}
       </div>
