@@ -24,7 +24,37 @@ function isAdoptiumHost(urlString: string): boolean {
   }
 }
 
-export async function getNews({
+async function getAllNewsData(includeEF: boolean) {
+  let blogs = getBlogPosts();
+
+  if (includeEF) {
+    const efNews = await fetchLatestNews();
+
+    const efPosts = efNews.news
+      .filter((newsItem: EclipseNewsItem) => !isAdoptiumHost(newsItem.link))
+      .map((newsItem: EclipseNewsItem) => ({
+        slug: newsItem.link,
+        newsItem,
+        metadata: {
+          title: newsItem.title,
+          date: newsItem.date,
+          tags: ["eclipse-news"],
+          author: "eclipse-foundation",
+          description: newsItem.body.substring(0, 150) + "...",
+          featuredImage:
+            newsItem.image && newsItem.image.trim() !== ""
+              ? newsItem.image
+              : "/images/backgrounds/ef-default-news.png",
+        },
+      }));
+
+    blogs = [...blogs, ...efPosts];
+  }
+
+  return blogs;
+}
+
+export async function getNewsPageData({
   numPosts = 9,
   page = 1,
   includeEF = true,
@@ -38,38 +68,35 @@ export async function getNews({
   tag?: string;
   author?: string;
   source?: "adoptium" | "eclipse";
-} = {}): Promise<NewsResult> {
-  let blogs = getBlogPosts();
-
-  if (includeEF) {
-    const efNews = await fetchLatestNews();
-
-    const efPosts = efNews.news
-      .filter((newsItem: EclipseNewsItem) => !isAdoptiumHost(newsItem.link))
-      .map((newsItem: EclipseNewsItem) => ({
-        slug: newsItem.link,
-        newsItem,
-        metadata: {
-          title: newsItem.title,
-          date: newsItem.date,
-          tags: ["eclipse-news"],
-          author: "eclipse-foundation",
-          description: newsItem.body.substring(0, 150) + "...",
-          featuredImage:
-            newsItem.image && newsItem.image.trim() !== ""
-              ? newsItem.image
-              : "/images/backgrounds/ef-default-news.png",
-        },
-      }));
-
-    blogs = [...blogs, ...efPosts];
-  }
+}) {
+  const allBlogs = await getAllNewsData(includeEF);
 
   // -------------------------
-  // FILTERING PIPELINE
+  // DERIVE FILTER OPTIONS FROM FULL DATASET
   // -------------------------
 
-  // Source Filter
+  const tagSet = new Set<string>();
+  const authorSet = new Set<string>();
+
+  allBlogs.forEach((post) => {
+    post.metadata.tags?.forEach((t) => {
+      if (t) tagSet.add(t);
+    });
+
+    if (post.metadata.author) {
+      authorSet.add(post.metadata.author);
+    }
+  });
+
+  const tags = Array.from(tagSet).sort();
+  const authors = Array.from(authorSet).sort();
+
+  // -------------------------
+  // APPLY FILTERING FOR DISPLAY
+  // -------------------------
+
+  let blogs = [...allBlogs];
+
   if (source === "adoptium") {
     blogs = blogs.filter(
       (post) => !post.metadata.tags?.includes("eclipse-news"),
@@ -82,19 +109,18 @@ export async function getNews({
     );
   }
 
-  //  Tag Filter
   if (tag) {
     blogs = blogs.filter((post) => post.metadata.tags?.includes(tag));
   }
 
-  //  Author Filter
   if (author) {
     blogs = blogs.filter((post) => post.metadata.author === author);
   }
 
   // -------------------------
-  // SORTING
+  //  SORTING
   // -------------------------
+
   const sortedBlogs = blogs.sort((a, b) => {
     const dateA = new Date(a.metadata.date).getTime();
     const dateB = new Date(b.metadata.date).getTime();
@@ -102,9 +128,11 @@ export async function getNews({
   });
 
   // -------------------------
-  // PAGINATION
+  //  PAGINATION
   // -------------------------
+
   const totalPages = Math.ceil(sortedBlogs.length / numPosts);
+
   const paginatedPosts = sortedBlogs.slice(
     (page - 1) * numPosts,
     page * numPosts,
@@ -113,77 +141,7 @@ export async function getNews({
   return {
     posts: paginatedPosts,
     totalPages,
+    tags,
+    authors,
   };
-}
-
-export async function getNewsFilters({
-  includeEF = true,
-}: {
-  includeEF?: boolean;
-} = {}) {
-  let blogs = getBlogPosts();
-
-  if (includeEF) {
-    const efNews = await fetchLatestNews();
-
-    const efPosts = efNews.news
-      .filter((newsItem: EclipseNewsItem) => !isAdoptiumHost(newsItem.link))
-      .map((newsItem: EclipseNewsItem) => ({
-        slug: newsItem.link,
-        newsItem,
-        metadata: {
-          title: newsItem.title,
-          date: newsItem.date,
-          tags: ["eclipse-news"],
-          author: "eclipse-foundation",
-          description: newsItem.body.substring(0, 150) + "...",
-          featuredImage:
-            newsItem.image && newsItem.image.trim() !== ""
-              ? newsItem.image
-              : "/images/backgrounds/ef-default-news.png",
-        },
-      }));
-
-    blogs = [...blogs, ...efPosts];
-  }
-
-  const tagSet = new Set<string>();
-  const authorSet = new Set<string>();
-
-  blogs.forEach((post) => {
-    post.metadata.tags?.forEach((tag: string) => {
-      if (tag) tagSet.add(tag);
-    });
-
-    if (post.metadata.author) {
-      authorSet.add(post.metadata.author);
-    }
-  });
-
-  return {
-    tags: Array.from(tagSet).sort(),
-    authors: Array.from(authorSet).sort(),
-  };
-}
-
-export async function getNewsByTag(
-  tag: string,
-  { numPosts = 6, page = 1 } = {},
-) {
-  return getNews({
-    tag,
-    numPosts,
-    page,
-  });
-}
-
-export async function getNewsByAuthor(
-  author: string,
-  { numPosts = 6, page = 1 } = {},
-) {
-  return getNews({
-    author,
-    numPosts,
-    page,
-  });
 }

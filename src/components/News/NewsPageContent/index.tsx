@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { getNews, getNewsFilters } from "@/utils/news";
+import { getNewsPageData } from "@/utils/news";
 import NewsFilters from "@/components/News/NewsFilters";
 import NewsCardList from "@/components/News/NewsCardList";
 import NewsEmptyState from "../NewsEmptyState";
@@ -22,8 +22,7 @@ export default async function NewsPageContent({
   basePath,
 }: Props) {
   const { tag, author, source } = parseNewsFilters(searchParams);
-
-  const { posts, totalPages } = await getNews({
+  const { posts, totalPages, tags, authors } = await getNewsPageData({
     numPosts: 9,
     page: pageNumber,
     includeEF: true,
@@ -84,7 +83,6 @@ export default async function NewsPageContent({
         }`
       : "";
 
-  const { tags, authors } = await getNewsFilters({ includeEF: true });
   const tagOptions = tags.map((tag) => ({
     value: tag,
     label: tag.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
@@ -92,6 +90,7 @@ export default async function NewsPageContent({
 
   const authorOptions = authors.map((slug) => {
     const authorData = getFormattedAuthorData(slug);
+    console.log("authorData", authorData);
 
     return {
       value: slug,
