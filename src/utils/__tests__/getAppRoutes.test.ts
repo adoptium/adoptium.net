@@ -62,29 +62,31 @@ describe("getBlogRoutes", () => {
   beforeEach(() => {
     vi.clearAllMocks();
 
-    mockedFs.readdirSync.mockImplementation((dir: string, opts: any) => {
-      // Normalize path for Windows/Linux consistency
-      const normalizedDir = dir.replace(/\\/g, "/");
+    mockedFs.readdirSync.mockImplementation(
+      (dir: string, opts?: { withFileTypes?: boolean }) => {
+        // Normalize path for Windows/Linux consistency
+        const normalizedDir = dir.replace(/\\/g, "/");
 
-      if (opts?.withFileTypes) {
-        // Match the base blog directory
-        if (normalizedDir.endsWith("content/blog")) {
-          return [
-            createMockDirent("blog1", true),
-            createMockDirent("blog2", true),
-            createMockDirent("blog3", true),
-            createMockDirent("notafolder", false),
-          ];
+        if (opts?.withFileTypes) {
+          // Match the base blog directory
+          if (normalizedDir.endsWith("content/blog")) {
+            return [
+              createMockDirent("blog1", true),
+              createMockDirent("blog2", true),
+              createMockDirent("blog3", true),
+              createMockDirent("notafolder", false),
+            ];
+          }
+          // Match specific blog subdirectories
+          if (normalizedDir.endsWith("blog/blog1"))
+            return [createMockDirent("index.md", false)];
+          if (normalizedDir.endsWith("blog/blog2"))
+            return [createMockDirent("index.md", false)];
+          if (normalizedDir.endsWith("blog/blog3")) return [];
         }
-        // Match specific blog subdirectories
-        if (normalizedDir.endsWith("blog/blog1"))
-          return [createMockDirent("index.md", false)];
-        if (normalizedDir.endsWith("blog/blog2"))
-          return [createMockDirent("index.md", false)];
-        if (normalizedDir.endsWith("blog/blog3")) return [];
-      }
-      return [];
-    });
+        return [];
+      },
+    );
 
     mockedFs.existsSync.mockImplementation((p: string) => {
       const normalizedP = p.replace(/\\/g, "/");
