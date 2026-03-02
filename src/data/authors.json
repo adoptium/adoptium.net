@@ -134,8 +134,8 @@
   },
   "eclipse-foundation": {
     "name": "Eclipse Foundation",
-    "summary": "",
-    "twitter": "",
+    "summary": null,
+    "twitter": null,
     "github": "eclipse-foundation",
     "linkedin": ""
   }

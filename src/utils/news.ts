@@ -24,6 +24,10 @@ function isAdoptiumHost(urlString: string): boolean {
   }
 }
 
+/**
+ * Fetches and merges local blog posts with Eclipse Foundation news.
+ * Single source of truth for news data.
+ */
 async function getAllNewsData(includeEF: boolean) {
   let blogs = getBlogPosts();
 
@@ -54,6 +58,10 @@ async function getAllNewsData(includeEF: boolean) {
   return blogs;
 }
 
+/**
+ * Unified data pipeline used by page-level rendering.
+ * Fetches once, derives filters, applies filtering, sorting, and pagination.
+ */
 export async function getNewsPageData({
   numPosts = 9,
   page = 1,
@@ -71,9 +79,9 @@ export async function getNewsPageData({
 }) {
   const allBlogs = await getAllNewsData(includeEF);
 
-  // -------------------------
-  // DERIVE FILTER OPTIONS FROM FULL DATASET
-  // -------------------------
+  // ---------------------------------
+  // DERIVE FILTER OPTIONS (FULL DATASET)
+  // ---------------------------------
 
   const tagSet = new Set<string>();
   const authorSet = new Set<string>();
@@ -91,9 +99,9 @@ export async function getNewsPageData({
   const tags = Array.from(tagSet).sort();
   const authors = Array.from(authorSet).sort();
 
-  // -------------------------
-  // APPLY FILTERING FOR DISPLAY
-  // -------------------------
+  // ---------------------------------
+  // APPLY FILTERING (DISPLAY DATASET)
+  // ---------------------------------
 
   let blogs = [...allBlogs];
 
@@ -117,9 +125,9 @@ export async function getNewsPageData({
     blogs = blogs.filter((post) => post.metadata.author === author);
   }
 
-  // -------------------------
-  //  SORTING
-  // -------------------------
+  // ---------------------------------
+  // SORTING
+  // ---------------------------------
 
   const sortedBlogs = blogs.sort((a, b) => {
     const dateA = new Date(a.metadata.date).getTime();
@@ -127,9 +135,9 @@ export async function getNewsPageData({
     return dateB - dateA;
   });
 
-  // -------------------------
-  //  PAGINATION
-  // -------------------------
+  // ---------------------------------
+  // PAGINATION
+  // ---------------------------------
 
   const totalPages = Math.ceil(sortedBlogs.length / numPosts);
 
@@ -144,4 +152,81 @@ export async function getNewsPageData({
     tags,
     authors,
   };
+}
+
+/* =========================================================
+   Backward-Compatible Wrappers (Preserve Original API)
+   ========================================================= */
+
+/**
+ * Original getNews API — now delegates to getNewsPageData
+ */
+export async function getNews({
+  numPosts = 9,
+  page = 1,
+  includeEF = true,
+  tag,
+  author,
+  source,
+}: {
+  numPosts?: number;
+  page?: number;
+  includeEF?: boolean;
+  tag?: string;
+  author?: string;
+  source?: "adoptium" | "eclipse";
+} = {}): Promise<NewsResult> {
+  const { posts, totalPages } = await getNewsPageData({
+    numPosts,
+    page,
+    includeEF,
+    tag,
+    author,
+    source,
+  });
+
+  return { posts, totalPages };
+}
+
+/**
+ * Original getNewsFilters API — returns full filter set
+ */
+export async function getNewsFilters({
+  includeEF = true,
+}: {
+  includeEF?: boolean;
+} = {}) {
+  const { tags, authors } = await getNewsPageData({
+    includeEF,
+  });
+
+  return { tags, authors };
+}
+
+/**
+ * Original getNewsByTag API
+ */
+export async function getNewsByTag(
+  tag: string,
+  { numPosts = 6, page = 1 } = {},
+) {
+  return getNews({
+    tag,
+    numPosts,
+    page,
+  });
+}
+
+/**
+ * Original getNewsByAuthor API
+ */
+export async function getNewsByAuthor(
+  author: string,
+  { numPosts = 6, page = 1 } = {},
+) {
+  return getNews({
+    author,
+    numPosts,
+    page,
+  });
 }
