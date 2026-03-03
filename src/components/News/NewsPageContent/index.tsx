@@ -90,7 +90,6 @@ export default async function NewsPageContent({
 
   const authorOptions = authors.map((slug) => {
     const authorData = getFormattedAuthorData(slug);
-    console.log("authorData", authorData);
 
     return {
       value: slug,

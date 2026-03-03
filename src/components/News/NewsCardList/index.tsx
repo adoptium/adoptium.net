@@ -12,9 +12,8 @@ type Post = {
     date: string;
     featuredImage?: string;
     tags?: string[];
+    author?: string;
   };
-  author?: string;
-  tags?: string[];
 };
 
 interface NewsCardListProps {
