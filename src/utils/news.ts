@@ -65,7 +65,7 @@ async function getAllNewsData(includeEF: boolean) {
 export async function getNewsPageData({
   numPosts = 9,
   page = 1,
-  includeEF = true,
+  includeEF = false,
   tag,
   author,
   source,
