@@ -46,6 +46,47 @@ const rows: Row[] = [
     ],
   },
   {
+    title: "Technical and infrastructure sharing",
+    items: [
+      {
+        label: {
+          bold: "",
+          rest: "Opportunity to list verified binaries on the high-visibility Adoptium marketplace",
+        },
+        strategic: true,
+        enterprise: true,
+        participant: true,
+      },
+      {
+        label: {
+          bold: "",
+          rest: "Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)",
+        },
+        strategic: true,
+        enterprise: true,
+        participant: false,
+      },
+      {
+        label: {
+          bold: "",
+          rest: "Access to public test results and shared triage efforts",
+        },
+        strategic: true,
+        enterprise: true,
+        participant: true,
+      },
+      {
+        label: {
+          bold: "",
+          rest: "Cross-enterprise collaboration via the Incubator projects",
+        },
+        strategic: true,
+        enterprise: true,
+        participant: true,
+      },
+    ],
+  },
+  {
     title: "Visibility",
     items: [
       {
@@ -165,47 +206,6 @@ const rows: Row[] = [
         label: {
           bold: "",
           rest: "Opportunity to host open community meetups or Adoptium Summit webinar series",
-        },
-        strategic: true,
-        enterprise: true,
-        participant: true,
-      },
-    ],
-  },
-  {
-    title: "Technical and infrastructure sharing",
-    items: [
-      {
-        label: {
-          bold: "",
-          rest: "Opportunity to list verified binaries on the high-visibility Adoptium marketplace",
-        },
-        strategic: true,
-        enterprise: true,
-        participant: true,
-      },
-      {
-        label: {
-          bold: "",
-          rest: "Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)",
-        },
-        strategic: true,
-        enterprise: true,
-        participant: false,
-      },
-      {
-        label: {
-          bold: "",
-          rest: "Access to public test results and shared triage efforts",
-        },
-        strategic: true,
-        enterprise: true,
-        participant: true,
-      },
-      {
-        label: {
-          bold: "",
-          rest: "Cross-enterprise collaboration via the Incubator projects",
         },
         strategic: true,
         enterprise: true,

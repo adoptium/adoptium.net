@@ -1058,6 +1058,262 @@ exports[`Members page > renders correctly 1`] = `
           <div
             class="text-white text-2xl font-semibold leading-8 col-span-4"
           >
+            Technical and infrastructure sharing
+          </div>
+          <div
+            class="flex justify-end"
+          >
+            <button
+              aria-label="Expand section"
+              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
+        >
+          <div
+            class="overflow-hidden"
+          >
+            <div
+              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
+            >
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Opportunity to list verified binaries on the high-visibility Adoptium marketplace
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Access to public test results and shared triage efforts
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Cross-enterprise collaboration via the Incubator projects
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="grid items-center px-8 py-8 cursor-pointer border-b border-[#3E3355]"
+          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+        >
+          <div
+            class="text-white text-2xl font-semibold leading-8 col-span-4"
+          >
             Visibility
           </div>
           <div
@@ -1242,7 +1498,7 @@ exports[`Members page > renders correctly 1`] = `
       </div>
       <div>
         <div
-          class="grid items-center px-8 py-8 cursor-pointer border-b border-[#3E3355]"
+          class="grid items-center px-8 py-8 cursor-pointer "
           style="grid-template-columns: 1fr 220px 220px 220px 48px;"
         >
           <div
@@ -1285,7 +1541,7 @@ exports[`Members page > renders correctly 1`] = `
             class="overflow-hidden"
           >
             <div
-              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
+              class="pb-6 flex flex-col gap-2 "
             >
               <div
                 class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
@@ -1872,262 +2128,6 @@ exports[`Members page > renders correctly 1`] = `
                     class="font-normal"
                   >
                     Opportunity to host open community meetups or Adoptium Summit webinar series
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="grid items-center px-8 py-8 cursor-pointer "
-          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-        >
-          <div
-            class="text-white text-2xl font-semibold leading-8 col-span-4"
-          >
-            Technical and infrastructure sharing
-          </div>
-          <div
-            class="flex justify-end"
-          >
-            <button
-              aria-label="Expand section"
-              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
-            >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
-        >
-          <div
-            class="overflow-hidden"
-          >
-            <div
-              class="pb-6 flex flex-col gap-2 "
-            >
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Opportunity to list verified binaries on the high-visibility Adoptium marketplace
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Access to public test results and shared triage efforts
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Cross-enterprise collaboration via the Incubator projects
                   </span>
                 </div>
                 <div
