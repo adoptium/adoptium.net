@@ -1,6 +1,6 @@
 "use client"
 
-import React, { Fragment, useMemo, useState, useEffect } from "react"
+import React, { Fragment, useMemo, useState, useEffect, useRef } from "react"
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Transition } from "@headlessui/react"
 import { FaChevronDown } from "react-icons/fa"
 
@@ -31,6 +31,8 @@ export default function CommonSelector({
   }, [defaultValue, list])
 
   const [selected, setSelected] = useState<ListItem | undefined>(initialSelected)
+  const [dropdownPosition, setDropdownPosition] = useState<'bottom' | 'top'>('bottom')
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   // Update selected when defaultValue changes (controlled from parent)
   useEffect(() => {
@@ -48,12 +50,41 @@ export default function CommonSelector({
     }
   }
 
+  const handleButtonClick = () => {
+    if (buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect()
+      const viewportHeight = window.innerHeight
+      const spaceBelow = viewportHeight - rect.bottom
+      const spaceAbove = rect.top
+      const dropdownHeight = 320 // max-h-80 = 320px
+
+      // Determine if dropdown should open upward or downward
+      if (spaceBelow < dropdownHeight && spaceAbove > spaceBelow) {
+        setDropdownPosition('top')
+      } else {
+        setDropdownPosition('bottom')
+      }
+
+      // Scroll the button into view with some padding
+      // Use 'center' to ensure there's space both above and below
+      buttonRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      })
+    }
+  }
+
   if (list.length === 0) return null
 
   return (
     <Listbox value={selected} onChange={handleChange}>
       <div className="relative mt-1">
-        <ListboxButton className="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]">
+        <ListboxButton 
+          ref={buttonRef}
+          onClick={handleButtonClick}
+          className="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
+        >
           <span className="flex items-center justify-between text-nowrap">
             {selected?.name || "Select an option"}
           </span>
@@ -67,7 +98,13 @@ export default function CommonSelector({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ListboxOptions className="origin-top-left absolute overflow-auto left-0 mt-2 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355]">
+          <ListboxOptions 
+            className={`absolute overflow-auto left-0 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355] ${
+              dropdownPosition === 'top' 
+                ? 'origin-bottom-left bottom-full mb-2' 
+                : 'origin-top-left top-full mt-2'
+            }`}
+          >
             {list.map((obj, index) => (
               <ListboxOption
                 key={index}
