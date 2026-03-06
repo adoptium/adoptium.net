@@ -349,12 +349,12 @@ exports[`Download page > renders correctly 1`] = `
             >
               Monthly Sustainer: Contribute as an individual sustainer to ensure via 
               <a
-                class="text-pink"
-                href="https://github.com/sponsors/adoptium"
+                class="text-pink cursor-pointer"
+                href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=become-sustainer"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                **GitHub**
+                **Eclipse Foundation**
               </a>
                Sponsorship Temurin’s long-term viability, enhance security, and accelerate faster releases for the Java community
             </div>
@@ -436,7 +436,7 @@ exports[`Download page > renders correctly 1`] = `
             >
               Corporate Sustainer – Looking to make a bigger impact? Join as a 
               <a
-                class="text-pink"
+                class="text-pink cursor-pointer"
                 href="/become-a-sustainer/"
               >
                 Corporate Sustainer
