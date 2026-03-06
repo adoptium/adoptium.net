@@ -8,6 +8,33 @@
     "sustainer-cta-description": "Millionen vertrauen auf Eclipse Temurin. Ihre Unterstützung hält es am Laufen",
     "sustainer-cta-button": "In Eclipse Temurin reinvestieren"
   },
+  "DownloadPage": {
+    "thank-you": "Danke für den Download",
+    "vendor-build": "{vendor} Build",
+    "auto-start-p1": "Ihr OpenJDK-Laufzeit-Download sollte in wenigen Sekunden automatisch starten.",
+    "auto-start-p2": "Falls nicht, ",
+    "click-here": "hier klicken, um ihn manuell neu zu starten",
+    "community-action": "Gemeinschaftsaktion erforderlich",
+    "free-to-use": "Kostenlos zu nutzen,",
+    "not-free-to-build": "nicht kostenlos zu erstellen.",
+    "appeal-quote": "\"Ohne Spenden wird das Projekt aufhören zu existieren.\"",
+    "appeal-text": "Eclipse Temurin wird von Millionen von Entwicklern weltweit vertraut. Um die Zukunft dieser hochwertigen Open-Source-Binärdateien zu sichern, brauchen wir heute Ihre Hilfe.",
+    "become-sustainer-btn": "Werde ein Sponsor",
+    "corporate-sponsorship-btn": "Unternehmensunterstützer",
+    "vendor-alert": "Sie laden einen Build von <vendorWrapper>{vendor}</vendorWrapper> herunter, einem Mitglied der Eclipse Adoptium Working Group.",
+    "why-we-need-you": "Warum wir Sie brauchen",
+    "infra-costs-title": "Infrastrukturkosten",
+    "infra-costs-desc": "Tests auf über 50 Plattformen erfordern massive Rechenleistung.",
+    "security-speed-title": "Sicherheit & Geschwindigkeit",
+    "security-speed-desc": "Schnelle, sichere Updates erfordern dedizierte Ressourcen.",
+    "open-source-title": "Echtes Open Source",
+    "open-source-desc": "Java für immer frei zu halten bedeutet, es gemeinsam zu finanzieren.",
+    "resources-next-steps": "Ressourcen & nächste Schritte",
+    "installation-guide-title": "Installationsanleitung",
+    "installation-guide-desc": "Schritt-für-Schritt-Anleitungen für die Inbetriebnahme Ihrer neuen Java-Laufzeitumgebung.",
+    "documentation-title": "Dokumentation",
+    "documentation-desc": "Umfassende Dokumentation für Eclipse Temurin und das Adoptium-Ökosystem."
+  },
   "NotFoundPage": {
     "title": "Entschuldigung, wir konnten diese Seite nicht finden",
     "back-to-home": "Zurück zur Startseite"
