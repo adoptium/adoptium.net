@@ -16,6 +16,7 @@ interface EventCardProps {
       date: string;
       featuredImage?: string;
       tags?: string[];
+      author?: string;
     };
   };
   isEclipseNews?: boolean;
@@ -69,8 +70,10 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
         <div className="flex justify-between py-2">
           <h3 className="flex flex-col gap-1 tab-button-text text-white">
             <span>{date}</span>
-            {post.metadata.tags?.includes("eclipse-news") && (
-              <span className="text-sm text-pink-500">Eclipse Foundation</span>
+            {post.metadata.author && (
+              <span className="text-sm text-pink-500">
+                {post.metadata.author}
+              </span>
             )}
           </h3>
         </div>
@@ -84,7 +87,9 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
         <div className="mt-auto">
           {isExternalLink ? (
             <a
-              href={sanitizeString(post.slug)}
+              href={
+                typeof post.slug === "string" ? sanitizeString(post.slug) : "#"
+              }
               target="_blank"
               rel="noopener noreferrer"
             >

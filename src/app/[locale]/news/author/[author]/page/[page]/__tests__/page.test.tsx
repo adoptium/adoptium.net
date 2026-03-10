@@ -103,7 +103,7 @@ describe("AuthorNewsPagePaginated", () => {
 
     const { container } = render(element);
 
-    expect(screen.getByText("Jane Doe")).toBeInTheDocument();
+    expect(screen.getAllByText("Jane Doe")[0]).toBeInTheDocument();
     expect(screen.getByText("Author Page 2 News")).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();

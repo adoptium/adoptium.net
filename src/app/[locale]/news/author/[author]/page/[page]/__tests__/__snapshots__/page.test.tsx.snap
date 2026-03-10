@@ -137,6 +137,11 @@ exports[`AuthorNewsPagePaginated > renders news and header for author and page w
                 <span>
                   June 18, 2025
                 </span>
+                <span
+                  class="text-sm text-pink-500"
+                >
+                  Jane Doe
+                </span>
               </h3>
             </div>
             <div

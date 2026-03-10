@@ -91,9 +91,14 @@ export default async function NewsPageContent({
   const authorOptions = authors.map((slug) => {
     const authorData = getFormattedAuthorData(slug);
 
+    const label =
+      !authorData || authorData.name === "Unknown Author"
+        ? slug
+        : authorData.name;
+
     return {
       value: slug,
-      label: authorData.name,
+      label,
     };
   });
   return (

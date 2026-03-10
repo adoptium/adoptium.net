@@ -137,6 +137,11 @@ exports[`AuthorNewsPage > renders header and news when posts exist 1`] = `
                 <span>
                   June 18, 2025
                 </span>
+                <span
+                  class="text-sm text-pink-500"
+                >
+                  Jane Doe
+                </span>
               </h3>
             </div>
             <div

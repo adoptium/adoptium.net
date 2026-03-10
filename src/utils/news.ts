@@ -1,5 +1,6 @@
 import { getBlogPosts } from "./markdown";
 import { fetchLatestNews } from "./eclipse";
+import { getFormattedAuthorData } from "@/utils/authors";
 
 interface NewsResult {
   posts: ReturnType<typeof getBlogPosts>;
@@ -13,6 +14,11 @@ interface EclipseNewsItem {
   link: string;
   body: string;
   image?: string;
+  author?: {
+    full_name: string;
+    username: string;
+    picture: string;
+  }[];
 }
 
 function isAdoptiumHost(urlString: string): boolean {
@@ -33,25 +39,30 @@ async function getAllNewsData(includeEF: boolean) {
 
   if (includeEF) {
     const efNews = await fetchLatestNews();
-
     const efPosts = efNews.news
       .filter((newsItem: EclipseNewsItem) => !isAdoptiumHost(newsItem.link))
-      .map((newsItem: EclipseNewsItem) => ({
-        slug: newsItem.link,
-        newsItem,
-        metadata: {
-          title: newsItem.title,
-          date: newsItem.date,
-          tags: ["eclipse-news"],
-          author: "eclipse-foundation",
-          description: newsItem.body.substring(0, 150) + "...",
-          featuredImage:
-            newsItem.image && newsItem.image.trim() !== ""
-              ? newsItem.image
-              : "/images/backgrounds/ef-default-news.png",
-        },
-      }));
+      .map((newsItem: EclipseNewsItem) => {
+        const rawAuthor = newsItem.author?.[0]?.full_name?.trim();
 
+        const authorName =
+          rawAuthor && rawAuthor.length > 0 ? rawAuthor : "Eclipse Foundation";
+
+        return {
+          slug: newsItem.link,
+          newsItem,
+          metadata: {
+            title: newsItem.title,
+            date: newsItem.date,
+            tags: ["eclipse-news"],
+            author: authorName,
+            description: newsItem.body.substring(0, 150) + "...",
+            featuredImage:
+              newsItem.image && newsItem.image.trim() !== ""
+                ? newsItem.image
+                : "/images/backgrounds/ef-default-news.png",
+          },
+        };
+      });
     blogs = [...blogs, ...efPosts];
   }
 
@@ -73,7 +84,7 @@ export async function getNewsPageData({
   numPosts?: number;
   page?: number;
   includeEF?: boolean;
-  tag?: string;
+  tag?: string | string[];
   author?: string;
   source?: "adoptium" | "eclipse";
 }) {
@@ -82,6 +93,16 @@ export async function getNewsPageData({
   // ---------------------------------
   // DERIVE FILTER OPTIONS (FULL DATASET)
   // ---------------------------------
+
+  // Support multiple tags passed as comma-separated values
+  const selectedTags = Array.isArray(tag)
+    ? tag
+    : typeof tag === "string"
+      ? tag
+          .split(",")
+          .map((t) => t.trim())
+          .filter(Boolean)
+      : [];
 
   const tagSet = new Set<string>();
   const authorSet = new Set<string>();
@@ -95,7 +116,6 @@ export async function getNewsPageData({
       authorSet.add(post.metadata.author);
     }
   });
-
   const tags = Array.from(tagSet).sort();
   const authors = Array.from(authorSet).sort();
 
@@ -103,7 +123,26 @@ export async function getNewsPageData({
   // APPLY FILTERING (DISPLAY DATASET)
   // ---------------------------------
 
-  let blogs = [...allBlogs];
+  let blogs = allBlogs.map((post) => {
+    // Only normalize markdown blog authors
+    if (!post.metadata.tags?.includes("eclipse-news")) {
+      const slug = post.metadata.author;
+
+      if (!slug) return post;
+
+      const authorData = getFormattedAuthorData(slug);
+
+      return {
+        ...post,
+        metadata: {
+          ...post.metadata,
+          author: authorData?.name || slug,
+        },
+      };
+    }
+
+    return post;
+  });
 
   if (source === "adoptium") {
     blogs = blogs.filter(
@@ -117,8 +156,14 @@ export async function getNewsPageData({
     );
   }
 
-  if (tag) {
-    blogs = blogs.filter((post) => post.metadata.tags?.includes(tag));
+  if (selectedTags.length > 0) {
+    const normalizedTags = selectedTags.map((t) => t.toLowerCase());
+
+    blogs = blogs.filter((post) =>
+      normalizedTags.every((t) =>
+        post.metadata.tags?.some((tag) => tag.toLowerCase() === t),
+      ),
+    );
   }
 
   if (author) {

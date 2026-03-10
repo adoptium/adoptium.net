@@ -72,7 +72,7 @@ describe("AuthorNewsPage", () => {
 
     const { container } = render(element);
 
-    expect(screen.getByText("Jane Doe")).toBeInTheDocument();
+    expect(screen.getAllByText("Jane Doe").length).toBeGreaterThan(0);
     expect(screen.getByText("Author News")).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();
