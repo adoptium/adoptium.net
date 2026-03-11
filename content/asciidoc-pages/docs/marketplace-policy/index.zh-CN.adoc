@@ -7,48 +7,48 @@
 
 == 概览
 
-Adoptium 市场为用户提供便捷的途径获取各种高质量、完全兼容的 OpenJDK Java 二进制文件，并为生产这些二进制文件的组织提供了一种机制，以扩大其 Java 运行时的发行范围。
+Adoptium 市场为用户提供了一条便捷获取各种高质量、完全兼容的 OpenJDK Java 二进制文件的途径。同时，它也为生产这些二进制文件的组织提供了一种有效机制，以扩大其 Java 运行时的发行范围。
 
 === 用户权益
 
-通过 Adoptium 市场link:/marketplace[网站]和 https://marketplace-api.adoptium.net/q/swagger-ui/[API^] 提供的每个二进制文件均与 Java SE 兼容，并通过了 link:/aqavit[AQAvit^] 质量验证套件测试，证明其已准备好在各种环境中用于生产。
+通过 Adoptium 市场link:/marketplace[网站]和 https://marketplace-api.adoptium.net/q/swagger-ui/[API^] 提供的所有二进制文件均兼容 Java SE，并通过了 link:/aqavit[AQAvit^] 质量验证套件测试，这证明它们已经完全具备在各类生产环境中运行的条件。
 
-https://projects.eclipse.org/projects/adoptium.aqavit[AQAvit 验证套件^]评估 Java 运行时的功能正确性、性能、弹性、安全性以及通过各种应用程序测试套件的能力。因此，企业对将其引入公司并整合到其软件供应链中的二进制文件将具有更高的信心。
+https://projects.eclipse.org/projects/adoptium.aqavit[AQAvit 验证套件^]会评估 Java 运行时的功能正确性、性能、弹性、安全性，以及其通过各种应用程序测试套件验证的能力。因此，企业在将这些二进制文件引入内部框架并整合到其软件供应链中时，会拥有更高的信心。
 
 === 生产者权益
 
-Adoptium 市场中列出的所有生产者均享有以下权益。
+在 Adoptium 市场中列出的所有生产者均可享受以下权益：
 
- * 证明其产品是高质量的产品，已准备好供企业使用，通过了必需的 Java 兼容性和 AQAvit 质量纳入标准。
- * 表明其产品在特定版本和构建中满足 Eclipse Adoptium 工作组关于安全性、可扩展性、耐用性和功能正确性的所有要求。
- * 声明提供商是 Adoptium 社区的参与者，并支持整个行业 AQAvit 质量标准的定义和范围。
- * 上架产品可受益于 Eclipse 基金会支持的、由 Adoptium 工作组赞助的全行业营销和推广活动。
+ * 证明其产品质量卓越，已达到企业级应用标准，并满足了 Java 兼容性和 AQAvit 质量方面的基本准入要求。
+ * 表明其产品在特定的版本和构建中，完全符合 Eclipse Adoptium 工作组在安全性、可扩展性、耐用性和功能正确性方面的各项要求。
+ * 彰显该提供商是 Adoptium 社区的积极参与者，并支持行业范围内 AQAvit 质量标准的定义及范围。
+ * 上架产品将受益于由 Eclipse 基金会支持、Adoptium 工作组赞助的全行业营销与推广活动。
 
-市场对所有 Adoptium 工作组的战略和企业成员开放，供应商无需支付额外费用，它是非排他性的，并保留了在提供产品的同时提供付费服务的机会。
+市场对所有 Adoptium 工作组的战略和企业成员开放，供应商无需支付额外费用。该市场是非排他性的，并且允许生产者在提供免费产品的同时提供相关的付费服务。
 
 == AQAvit 软件产品验证
 
-只有那些通过 AQAVit 软件产品验证测试套件并遵守 https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证套件许可证^]义务的产品才能包含在 Adoptium 市场中。
+只有通过 AQAVit 软件产品验证测试套件，并遵守 https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证套件许可证^]中所规定义务的产品，才有资格被收录到 Adoptium 市场中。
 
-必须link:/aqavit[验证每个二进制文件]，才能被包含在 Adoptium 市场中。生产通过 AQAvit 验证的软件产品无需成为 Adoptium 工作组成员。
+必须对link:/aqavit[每个独立的二进制文件进行验证]后，其才能被包含在 Adoptium 市场中。此外，生产通过 AQAvit 验证的软件产品，并不以成为 Adoptium 工作组成员为前提。
 
 == Java SE 兼容性
 
-遵守 Java SE 规范完全通过使用 Oracle 的 Java 平台https://en.wikipedia.org/wiki/Technology_Compatibility_Kit[技术兼容性套件^] (TCK)（也称为 Java 兼容性套件 (JCK)）来确定。
+产品是否符合 Java SE 规范，完全取决于其是否通过了 Oracle 的 Java 平台https://en.wikipedia.org/wiki/Technology_Compatibility_Kit[技术兼容性套件^] (TCK)（又称 Java 兼容性套件 (JCK)）的测试。
 
-JCK 测试套件是 Oracle 的财产，不能在开源许可证下使用。Eclipse 不会对第三方软件产品进行 Java 兼容性测试。生产者应联系 Oracle 以获取他们自己使用 JCK 进行此类测试的许可证。
+JCK 测试套件是 Oracle 的专有财产，不以开源许可证形式提供。Eclipse 不会代为对第三方软件产品进行 Java 兼容性测试。生产者需自行联系 Oracle，以获取使用 JCK 进行兼容性测试的相关许可。
 
 == 在 Adoptium 市场上架
 
-Adoptium 市场为 Adoptium 工作组成员（“生产者”）提供了一个展示软件产品和开源项目（“产品”）的机会，这些产品已证明具备高质量并可供企业使用。
+Adoptium 市场为 Adoptium 工作组成员（以下简称“生产者”）提供了一个绝佳的机会，用以展示那些被证明具有高质量且能满足企业级应用需求的软件产品和开源项目（以下简称“产品”）。
 
-在市场上架的产品 *必须* 遵守以下标准。
+在市场上架的产品 *必须* 满足以下标准：
 
-. 产品必须通过相关的 Eclipse AQAvit 质量验证套件 (QVS) 并遵守 https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证套件许可证^]。
-. 生产者必须向 Adoptium 工作组声明并令其满意：产品已通过适用的 Java SE 技术兼容性套件测试。
+. 产品必须通过相关 Eclipse AQAvit 质量验证套件 (QVS) 的测试，并遵守 https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证套件许可证^]。
+. 生产者必须向 Adoptium 工作组提供充分声明并确保其认可：该产品已通过适用的 Java SE 技术兼容性套件测试。
 . 生产者必须是 Adoptium 工作组的参与者、企业或战略成员。
-. 生产者必须签署 https://www.eclipse.org/legal/documents/eclipse-adoptium-marketplace-publisher-agreement.pdf[Eclipse Adoptium 市场发布者协议^]并遵守其中的所有义务。
+. 生产者必须签署 https://www.eclipse.org/legal/documents/eclipse-adoptium-marketplace-publisher-agreement.pdf[Eclipse Adoptium 市场发布商协议^]，并严格履行其中的所有义务。
 
-满足这些要求的产品有资格在市场上架。要上架，生产者应https://github.com/adoptium/adoptium/issues/new[向 Adoptium 工作组提出请求^]，寻求作为生产者被纳入市场。
+满足上述标准的产品即有资格在市场上架。为了完成上架，生产者需要https://github.com/adoptium/adoptium/issues/new[向 Adoptium 工作组提交请求^]，申请作为授权生产者加入市场。
 
-本策略的修改由 link:/members[Adoptium 工作组指导委员会]进行。
+本策略的任何修订均由 link:/members[Adoptium 工作组指导委员会]负责进行。
