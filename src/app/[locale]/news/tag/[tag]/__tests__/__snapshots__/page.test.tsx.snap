@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TagsPage > renders news and header for tag when posts exist 1`] = `
+exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
 <div>
   <div>
     <script
       type="application/ld+json"
     >
-      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin","name":"Posts tagged with &quot;temurin&quot;","url":"https://adoptium.net/news/tag/temurin","mainEntity":[{"@type":"BlogPosting","headline":"Tagged News","url":"https://adoptium.net/news/undefined/undefined/tagged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
+      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin","name":"Posts tagged with &quot;temurin&quot;","url":"https://adoptium.net/news/tag/temurin","mainEntity":[{"@type":"BlogPosting","headline":"Tagged News","url":"https://adoptium.net/news/2025/06/tagged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
     </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
@@ -89,20 +89,20 @@ exports[`TagsPage > renders news and header for tag when posts exist 1`] = `
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
       >
         <div
-          class="flex flex-col max-w-[385px] w-full sm:w-[385px] min-h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
+          class="flex flex-col w-full rounded-3xl newscard-2 bg-[#200D46]"
         >
           <img
             alt="blog banner image"
             class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
             height="200"
-            src="/news/undefined/undefined/tagged-news/opengraph-image"
+            src="/news/2025/06/tagged-news/opengraph-image"
             width="385"
           />
           <div
-            class="p-8 flex flex-col h-[400px]"
+            class="p-8 flex flex-col flex-1"
           >
             <h3
-              class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+              class="text-[24px] font-semibold leading-normal line-clamp-3 mb-2"
               title="Tagged News"
             >
               Tagged News
@@ -116,10 +116,15 @@ exports[`TagsPage > renders news and header for tag when posts exist 1`] = `
                 <span>
                   June 18, 2025
                 </span>
+                <span
+                  class="text-sm text-pink-500"
+                >
+                  author
+                </span>
               </h3>
             </div>
             <div
-              class="flex-grow overflow-hidden mb-4"
+              class="flex-grow mb-4"
             >
               <p
                 class="line-clamp-4 text-base text-gray-200"
@@ -161,8 +166,44 @@ exports[`TagsPage > renders news and header for tag when posts exist 1`] = `
                 1
               </p>
             </a>
+            <a
+              href="/news/tag/temurin/page/2"
+            >
+              <p
+                class="tab-button-text mb-0 cursor-pointer "
+              >
+                2
+              </p>
+            </a>
           </div>
         </div>
+        <a
+          class="flex items-center gap-3"
+          href="/news/tag/temurin/page/2"
+        >
+          <p
+            class="tab-button-text mb-0 hidden md:block"
+          >
+            Next
+          </p>
+          <span
+            class="cursor-pointer"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 320 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+              />
+            </svg>
+          </span>
+        </a>
       </div>
       <div
         class="flex justify-center items-center gap-5 mt-8"
