@@ -9,6 +9,7 @@ interface PaginationProps {
   currentPage: number;
   totalPages: number;
   baseUrl: string;
+  queryString?: string;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -18,11 +19,15 @@ const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   totalPages,
   baseUrl,
+  queryString,
 }) => {
   // Helper to build a link for a given page number.
   // If page 1, return the baseUrl; otherwise append "/page/{page}".
-  const createPageLink = (page: number): string =>
-    page === 1 ? `${baseUrl}` : `${baseUrl}/page/${page}`;
+  const createPageLink = (page: number): string => {
+    const path = page === 1 ? `${baseUrl}` : `${baseUrl}/page/${page}`;
+
+    return queryString ? `${path}?${queryString}` : path;
+  };
 
   // Build an array of page numbers and ellipses.
   const pages: (number | string)[] = [];
@@ -73,7 +78,11 @@ const Pagination: React.FC<PaginationProps> = ({
     <div className="flex justify-center items-center gap-8 md:gap-14 my-8">
       {/* Previous arrow using your passed parameters */}
       {previousPageNumber && previousPageLink && (
-        <Link href={previousPageLink} rel="prev" className="flex items-center gap-3">
+        <Link
+          href={previousPageLink}
+          rel="prev"
+          className="flex items-center gap-3"
+        >
           <span className="cursor-pointer">
             <FaChevronLeft />
           </span>
@@ -92,13 +101,14 @@ const Pagination: React.FC<PaginationProps> = ({
             ) : (
               <Link key={index} href={createPageLink(page as number)}>
                 <p
-                  className={`tab-button-text mb-0 cursor-pointer ${page === currentPage ? "font-bold text-pink" : ""
-                    }`}
+                  className={`tab-button-text mb-0 cursor-pointer ${
+                    page === currentPage ? "font-bold text-pink" : ""
+                  }`}
                 >
                   {page}
                 </p>
               </Link>
-            )
+            ),
           )}
         </div>
       </div>

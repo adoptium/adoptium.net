@@ -1,51 +1,68 @@
-import { describe, it, expect, vi, afterEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { axe } from "vitest-axe"
+import { describe, it, expect, vi, afterEach } from "vitest";
+import { render, screen } from "@testing-library/react";
+import { axe } from "vitest-axe";
 
-import NewsPage from '../page';
-import * as newsUtils from '@/utils/news';
-import { notFound } from 'next/navigation';
+import NewsPage from "../page";
 
-vi.mock('@/utils/news');
-vi.mock('next/navigation', () => ({ notFound: vi.fn() }));
+// Mock child component
+vi.mock("@/components/News/NewsPageContent", () => ({
+  default: vi.fn((props) => (
+    <div data-testid="news-page-content">Page: {props.pageNumber}</div>
+  )),
+}));
 
-const mockGetNews = newsUtils.getNews as unknown as ReturnType<typeof vi.fn>;
+import NewsPageContent from "@/components/News/NewsPageContent";
 
-describe('NewsPage', () => {
-    afterEach(() => {
-        vi.resetAllMocks();
+describe("NewsPage (root)", () => {
+  afterEach(() => {
+    vi.resetAllMocks();
+  });
+
+  it("renders header and NewsPageContent with resolved searchParams", async () => {
+    const mockSearchParams = Promise.resolve({
+      tag: "release",
+      page: "2",
     });
 
-    it('renders news and header when posts exist', async () => {
-        mockGetNews.mockResolvedValue({
-            posts: [
-                {
-                    metadata: {
-                        title: 'Test News',
-                        description: 'desc',
-                        date: '2025-06-18',
-                        author: 'jdoe',
-                        tags: []
-                    },
-                    slug: 'test-news'
-                }
-            ],
-            totalPages: 2
-        });
-        const element = await NewsPage();
-        const { container } = render(element);
-        expect(screen.getByText('News & Updates')).toBeInTheDocument();
-        expect(screen.getByText('Test News')).toBeInTheDocument();
-        // Snapshot test
-        expect(container).toMatchSnapshot();
-        // Axe accessibility lint
-        const results = await axe(container);
-        expect(results).toHaveNoViolations();
+    const element = await NewsPage({
+      searchParams: mockSearchParams,
     });
 
-    it('calls notFound if no posts', async () => {
-        mockGetNews.mockResolvedValue({ posts: [], totalPages: 1 });
-        await NewsPage();
-        expect(notFound).toHaveBeenCalled();
+    const { container } = render(element);
+
+    // Header rendered
+    expect(screen.getByText("News & Updates")).toBeInTheDocument();
+
+    // Child rendered
+    expect(screen.getByTestId("news-page-content")).toBeInTheDocument();
+
+    // Assert props passed correctly (first call only)
+    const firstCallProps = (NewsPageContent as any).mock.calls[0][0];
+
+    expect(firstCallProps).toMatchObject({
+      pageNumber: 1,
+      searchParams: { tag: "release", page: "2" },
+      basePath: "/news",
     });
+
+    // Snapshot
+    expect(container).toMatchSnapshot();
+
+    // Accessibility
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
+  it("handles undefined searchParams gracefully", async () => {
+    const element = await NewsPage({});
+    render(element);
+
+    const firstCallProps = (NewsPageContent as any).mock.calls[0][0];
+
+    expect(firstCallProps).toMatchObject({
+      pageNumber: 1,
+      searchParams: undefined,
+      basePath: "/news",
+    });
+  });
 });
