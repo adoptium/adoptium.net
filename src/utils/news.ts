@@ -171,7 +171,15 @@ export async function getNewsPageData({
   }
 
   if (author) {
-    blogs = blogs.filter((post) => post.metadata.author === author);
+    const normalizedAuthor = author.toLowerCase().replace(/\s+/g, "");
+
+    blogs = blogs.filter((post) => {
+      const postAuthor = post.metadata.author
+        ?.toLowerCase()
+        .replace(/\s+/g, "");
+
+      return postAuthor === normalizedAuthor;
+    });
   }
 
   // ---------------------------------

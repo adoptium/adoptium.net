@@ -7,6 +7,7 @@ description:
   they are needed and the work ongoing to achieve them.
 tags:
   - temurin
+  - reproducible
 ---
 
 ## Why do we need Reproducible Builds?
