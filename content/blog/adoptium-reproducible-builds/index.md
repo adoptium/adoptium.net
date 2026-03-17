@@ -84,7 +84,7 @@ OpenJDK contributions:
 - [8277762: Allow configuration of HOTSPOT_BUILD_USER](https://github.com/openjdk/jdk/pull/6542)
 - [8276766: Enable jar and jmod to produce deterministic timestamped content](https://github.com/openjdk/jdk/pull/6481)
 - [8276764: Enable deterministic file content ordering for Jar and Jmod](https://github.com/openjdk/jdk/pull/6395)
-- [8276743: Make openjdk build Zip Archive generation "reproducible"](https://github.com/openjdk/jdk/pull/6311)
+- [8276743: Make openjdk build ZIP Archive generation "reproducible"](https://github.com/openjdk/jdk/pull/6311)
 - [8276654: element-list order is non deterministic](https://github.com/openjdk/jdk/pull/6278)
 
 ### Ongoing Eclipse Adoptium Reproducible Build projects
