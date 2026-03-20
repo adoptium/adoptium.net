@@ -58,18 +58,14 @@ export default function SustainersPage() {
     <>
       <Link
         href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=become-sustainer"
-        className="w-full sm:w-auto cursor-pointer"
+        className="cursor-pointer w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <button className="cursor-pointer w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-          Become an individual Sustainer
-        </button>
+        Become an individual Sustainer
       </Link>
-      <Link href="/become-a-sustainer" className="w-full sm:w-auto cursor-pointer">
-        <button className="cursor-pointer w-full px-8 py-4 rounded-full border-2 border-white text-white hover:bg-pink-500 hover:text-white font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2">
-          Become a corporate Sustainer
-        </button>
+      <Link href="/become-a-sustainer" className="cursor-pointer w-full sm:w-auto px-8 py-4 rounded-full border-2 border-white text-white hover:bg-pink-500 hover:text-white font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2">
+        Become a corporate Sustainer
       </Link>
     </>
   );

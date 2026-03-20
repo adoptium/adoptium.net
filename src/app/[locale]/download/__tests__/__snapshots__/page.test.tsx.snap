@@ -354,7 +354,9 @@ exports[`Download page > renders correctly 1`] = `
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                **Eclipse Foundation**
+                <strong>
+                  Eclipse Foundation
+                </strong>
               </a>
                Sponsorship Temurin’s long-term viability, enhance security, and accelerate faster releases for the Java community
             </div>
