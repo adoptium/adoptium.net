@@ -439,7 +439,7 @@ exports[`Download page > renders correctly 1`] = `
               Corporate Sustainer – Looking to make a bigger impact? Join as a 
               <a
                 class="text-pink cursor-pointer"
-                href="/become-a-sustainer/"
+                href="/become-a-sustainer"
               >
                 Corporate Sustainer
               </a>
