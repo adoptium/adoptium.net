@@ -68,4 +68,22 @@ You can download the logo in all available variants as PNG images with transpare
 [.bg-white]
 image:/docs/logo-styleguide/mission-control-logos-l-p.png[AQAvit logo in landscape and portrait mode, 100%]
 
+=== Logo Download
+
 You can download the logo in all available variants as PNG images with transparent background link:{baseurl}/docs/logo-styleguide/mission-control-logo.zip[here].
+
+== Migration Toolkit by Adoptium
+
+For the https://adoptium.net/en-GB/emt[Migration Toolkit project] we provide an official logo. The logo follows the same design language used across all Adoptium working group projects. Like other project logos, it can be used in both landscape and portrait modes:
+
+[.m-5]
+[.bg-white]
+image:/docs/logo-styleguide/migration-toolkit-logos-l-p.png[Migration Toolkit logo in landscape and portrait mode, 100%]
+
+=== Color Variants
+
+The logo is available in multiple color variants including coloured, grayscale, and black & white to ensure proper contrast across different backgrounds.
+
+=== Logo Download
+
+You can download the logo in all available variants as PNG images with transparent background link:{baseurl}/docs/logo-styleguide/migration-toolkit-logo.zip[here].
