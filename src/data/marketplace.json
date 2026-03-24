@@ -5,11 +5,6 @@
     "postDownload": null
   },
   {
-    "name": "Red Hat",
-    "icon": "vendor-redhat.png",
-    "postDownload": "https://access.redhat.com/products/openjdk"
-  },
-  {
     "name": "Microsoft",
     "icon": "vendor-microsoft.png",
     "postDownload": "https://learn.microsoft.com/java/openjdk/"

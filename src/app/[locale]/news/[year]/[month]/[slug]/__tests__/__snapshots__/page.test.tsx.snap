@@ -120,7 +120,8 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on X (Twitter)"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+                type="button"
               >
                 <svg
                   fill="currentColor"
@@ -139,7 +140,8 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Linkedin"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+                type="button"
               >
                 <svg
                   fill="currentColor"
@@ -158,7 +160,8 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Facebook"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+                type="button"
               >
                 <svg
                   fill="currentColor"
@@ -177,7 +180,8 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Reddit"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+                type="button"
               >
                 <svg
                   fill="currentColor"
@@ -196,7 +200,8 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share on Bluesky"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+                type="button"
               >
                 <svg
                   fill="currentColor"
@@ -215,7 +220,8 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
               <button
                 aria-label="Share via Email"
                 class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; font: inherit; color: inherit; cursor: pointer;"
+                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+                type="button"
               >
                 <svg
                   fill="currentColor"
@@ -237,7 +243,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
             >
               <a
                 class="px-3 py-1 text-sm bg-pink hover:bg-rose-800 transition-colors rounded-full text-white"
-                href="/news/tag/temurin"
+                href="/news?tag=temurin"
               >
                 #
                 temurin

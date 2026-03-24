@@ -12,9 +12,8 @@ type Post = {
     date: string;
     featuredImage?: string;
     tags?: string[];
+    author?: string;
   };
-  author?: string;
-  tags?: string[];
 };
 
 interface NewsCardListProps {
@@ -25,6 +24,7 @@ interface NewsCardListProps {
   currentPage: number;
   totalPages: number;
   baseUrl: string;
+  queryString?: string;
 }
 
 const NewsCardList: React.FC<NewsCardListProps> = ({
@@ -35,6 +35,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
   currentPage,
   totalPages,
   baseUrl,
+  queryString,
 }) => {
   const allPosts = [...posts];
   const rowsNeeded = Math.ceil(allPosts.length / 3);
@@ -59,8 +60,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
             <EventCard
               key={`post-${rowIndex}-${index}`}
               post={post}
-              isEclipseNews={post.author === 'Eclipse Foundation' ||
-                (post.tags && post.tags.includes('eclipse-news'))}
+              isEclipseNews={post.metadata.tags?.includes("eclipse-news")}
             />
           ))}
         </div>
@@ -72,13 +72,17 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
         currentPage={currentPage}
         totalPages={totalPages}
         baseUrl={baseUrl}
+        queryString={queryString}
       />
       <div className="flex justify-center items-center gap-5 mt-8">
         <a
           href="https://newsroom.eclipse.org/node/add/news"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium">Submit News</a>
+          className="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
+        >
+          Submit News
+        </a>
       </div>
     </div>
   );

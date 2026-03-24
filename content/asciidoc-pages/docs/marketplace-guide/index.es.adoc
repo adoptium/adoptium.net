@@ -1,0 +1,76 @@
+= Guía para Editores del Mercado de Adoptium(R)
+:description: Guía para Editores del Mercado de Adoptium
+:keywords: mercado de adoptium
+:orgname: Eclipse Adoptium
+:lang: es
+:page-authors: tellison, gdams, jiekang
+
+== Introducción
+
+Este documento proporciona orientación para los editores que son elegibles para comercializar y promover entornos de ejecución de OpenJDK a través del link:/marketplace[Mercado de Adoptium].
+
+Los editores pueden ser proveedores, entidades sin fines de lucro, grupos de usuarios y otros que comparten los valores consagrados en la link:/docs/marketplace-policy[política del mercado de Adoptium^]. Los editores pueden ofrecer productos de código abierto o con licencia comercial, cada uno utilizable sin costo o mediante una tarifa para el usuario final. El mercado no requiere versión, plataforma, uso o términos de licencia específicos, y los binarios disponibles a través del mercado también pueden estar disponibles en otros lugares. Todos los binarios ofrecidos a través del mercado de Adoptium deben cumplir con los criterios de compatibilidad y calidad definidos en la política del mercado.
+
+El mercado está disponible para los usuarios finales tanto como un link:/marketplace[sitio web] como una https://marketplace-api.adoptium.net/[interfaz de programación de aplicaciones^] (API) alojada y mantenida por el proyecto Adoptium.
+
+Se anima a los editores a discutir su participación en el mercado con el link:/members[Grupo de Trabajo de Adoptium], quienes proporcionarán orientación y asistencia con los pasos descritos a continuación. En caso de contradicciones entre las políticas y acuerdos formales referenciados a continuación y esta guía del editor, las políticas y acuerdos formales prevalecerán.
+
+== Pasos no técnicos preliminares
+
+Los posibles editores y sus productos deben cumplir con los criterios descritos en la link:/marketplace-policy[Política del Mercado de Adoptium]. Estos criterios incluyen convertirse en miembro del grupo de trabajo de Adoptium a un nivel apropiado, lo que le otorga voz en la política y el funcionamiento del mercado. No todos los miembros del grupo de trabajo serán editores. También se anima a los usuarios finales a unirse al grupo de trabajo para ayudar a guiar los productos y requisitos de los productos del mercado.
+
+Los miembros del grupo de trabajo que deseen publicar un producto en el mercado deben aceptar el https://www.eclipse.org/legal/documents/eclipse-adoptium-marketplace-publisher-agreement.pdf[Acuerdo de Editor del Mercado de Adoptium]. Este acuerdo establece los términos y condiciones bajo los cuales la Fundación Eclipse acepta la promoción de su producto. Los productos se beneficiarán de iniciativas de marketing destinadas a promover el valor de los binarios en este contexto una vez aceptados en el mercado.
+
+== Descripción general de la publicación
+
+El sitio web y la API del mercado de Adoptium están impulsados por los metadatos que usted proporciona sobre sus productos elegibles. Usted pone a disposición los metadatos en un formato legible por máquina https://www.json.org/[JSON^], junto con una https://en.wikipedia.org/wiki/Digital_signature[firma digital segura^] para garantizar la autenticidad, integridad y no repudio de la información que publica.
+
+Como editor, es responsable de autocertificar que la información de cada producto descrito en los metadatos sea precisa y cumpla con sus obligaciones en la link:/marketplace-policy[Política del Mercado].
+
+Usted controla los metadatos de sus productos y la frecuencia con la que se actualizan. La aplicación del mercado de Adoptium se basará en esa información para comercializar sus productos y dirigir a los usuarios a que descarguen su producto directamente desde un sitio bajo su control. Adoptium no aloja ni distribuye sus binarios.
+
+Cuando se inicie una descarga a través del mercado de Adoptium, los usuarios serán dirigidos a una página posterior a la descarga donde podrá proporcionar un enlace a información adicional sobre su producto, organización, servicios, etc.
+
+== Proporcionar información del editor
+
+Los editores deben proporcionar la siguiente información para ser incluidos en el mercado.
+
+ * Nombre del editor: cómo le gustaría ser conocido en el sitio web y en la API del mercado.
+ * Imagen del logotipo: una representación visual suya como editor para usar en el sitio web.
+ * Ubicación de los datos del listado: la URL base que Adoptium utilizará para recuperar los metadatos del listado de su mercado.
+ * Clave pública de firma: la clave pública que utilizaremos para verificar su firma.
+ * Página posterior a la descarga: la página web a la que deberíamos dirigir a los usuarios del sitio web cuando descargan su producto.
+
+No esperamos que cambie estos datos con frecuencia, ya que Adoptium los agregará en la configuración de la aplicación del mercado.
+
+La información del editor se proporciona abriendo un https://github.com/adoptium/adoptium/issues/new/choose[nuevo problema de solicitud de editor^] en el repositorio de Adoptium. Puede crear un nuevo problema en el mismo repositorio si posteriormente necesita cambiarla.
+
+== Superar las pruebas TCK de Oracle
+
+Cada binario que publique a través del mercado de Adoptium debe satisfacer plenamente todos los requisitos del TCK actual para la versión de la Plataforma Java que está promoviendo a través del mercado de Adoptium. Usted es responsable de asegurarse de que esto haya sucedido antes de publicar el binario. Adoptium no comprobará esto en su nombre.
+
+Los proyectos de Adoptium https://projects.eclipse.org/projects/adoptium.temurin-compliance[desarrollan y usan herramientas^] que facilitan la ejecución y el análisis del TCK. Los editores pueden participar en el proyecto técnico y usar estas herramientas para que los ayuden con la tarea de ejecutar el TCK en sus propios productos.
+
+== Superar las pruebas de verificación AQAvit
+
+Cada binario que publique a través del mercado de Adoptium debe satisfacer plenamente todos los requisitos de la suite de pruebas de AQAvit actual para la versión que está promoviendo a través del mercado de Adoptium. Usted es responsable de asegurarse de que esto haya sucedido antes de publicar el binario. Adoptium no comprobará esto en su nombre.
+
+El link:/aqavit[proceso de verificación de AQAvit] debe cumplirse en el momento en que el binario se ofrece inicialmente a través del mercado. No se exige a los editores que verifiquen el binario con versiones posteriores de la suite de verificación de AQAvit. Una vez que un binario cumple con los criterios, puede continuar ofreciéndose a través del mercado.
+
+AQAvit es una suite de pruebas de código abierto administrada en el proyecto Adoptium. Los editores pueden participar en el proyecto AQAvit para obtener ayuda en la tarea de ejecutar AQAvit en sus propios productos.
+
+== Información de listado de productos
+
+El listado de sus productos para el mercado se puede alojar en cualquier lugar bajo su control directo que admita solicitudes y respuestas https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol[HTTP^], incluida su propia propiedad web, GitHub, etc. Si bien Adoptium comprobará que la información se reciba de usted de forma segura mediante el uso de una firma digital basada en información verificada, usted es el responsable final de la información proporcionada al mercado a través de la URL de ubicación de los datos del listado.
+
+La información del listado de productos consta de archivos con formato JSON estructurado, con flexibilidad para permitir múltiples compilaciones y versiones. La información se basa en la ubicación de datos del listado proporcionada en la <<Proporcionar-informacion-del-editor,información del editor>> en el formato descrito en la documentación del link:/docs/marketplace-listing[Repositorio de Listado de Productos del Editor del Mercado de Adoptium].
+
+// TODO: How does a publisher check the logs of successful/failed pulls and schema validation?
+La información del listado de productos se rechazará si no se adhiere a la link:/docs/marketplace-listing[estructura del listado de productos], al esquema del archivo del mercado o si la firma no verifica el contenido correctamente. Nos pondremos en contacto con usted si el archivo de listado falla repetidamente en estas comprobaciones de validación.
+
+== Página posterior a la descarga
+
+// TODO: Should the post-download be per-publisher or per-product (i.e. embedded in the metadata).
+Cuando un usuario elige descargar su producto a través del sitio web del mercado, será dirigido a una página posterior a la descarga, ya que la descarga se inicia desde su servidor de distribución. La página posterior a la descarga agradecerá al usuario e identificará al editor, incluyendo un enlace a una página web de su elección. Prevemos que esta página web llevará al usuario a información sobre su producto, organización, servicios, etc.
+
+El enlace hacia la página posterior a la descarga no es utilizado por la https://marketplace-api.adoptium.net/[API del mercado de Adoptium].
