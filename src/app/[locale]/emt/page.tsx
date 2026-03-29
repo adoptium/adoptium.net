@@ -36,10 +36,10 @@ export default function EMTPage() {
             <div className="absolute sm:static sm:z-auto top-[80px] z-[-1] left-[50%] translate-x-[-50%] sm:translate-x-0">
               <Image
                 src="/images/projects/migration-toolkit-logo.png"
-                style={{ width: "8em" }}
                 alt="background-image"
-                width={128}
-                height={128}
+                width={256}
+                height={256}
+                className="w-32 sm:w-40 md:w-48 lg:w-56"
               />
             </div>
 
