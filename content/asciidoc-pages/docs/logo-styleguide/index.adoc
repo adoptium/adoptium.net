@@ -32,7 +32,7 @@ You can download the logo in all available variants as PNG images with transpare
 
 == Temurin by Adoptium
 
-For the https://projects.eclipse.org/projects/adoptium.temurin[Temurin project] we provide an official logo, too. The logo is based on the general layout and style that is used for all logos of project of the Adoptium working group. Like the Adoptium logo the Temurin logo can be used in landscape and portrait mode:
+For the link:/temurin[Temurin project] we provide an official logo, too. The logo is based on the general layout and style that is used for all logos of project of the Adoptium working group. Like the Adoptium logo the Temurin logo can be used in landscape and portrait mode:
 
 [.m-5]
 [.bg-white]
@@ -48,7 +48,7 @@ You can download the logo in all available variants as PNG images with transpare
 
 == AQAvit by Adoptium
 
-For the https://projects.eclipse.org/projects/adoptium.temurin[AQAvit project] we provide an official logo, too. The logo is based on the general layout and style that is used for all logos of project of the Adoptium working group. Like the Adoptium logo the AQAvit logo can be used in landscape and portrait mode:
+For the link:/aqavit[AQAvit project] we provide an official logo, too. The logo is based on the general layout and style that is used for all logos of project of the Adoptium working group. Like the Adoptium logo the AQAvit logo can be used in landscape and portrait mode:
 
 [.m-5]
 [.bg-white]
