@@ -9,7 +9,7 @@ tags:
   - contributors
 ---
 
-As we conclude our 2025 reporting cycle, the Project Management Committee (PMC) assessed the many contributions across the Adoptium projects. This report highlights key technical milestones from [2025 Q4](https://github.com/adoptium/adoptium/issues/271#issuecomment-3891025693) in release automation, testing efficiency, and supply chain integrity. 
+As we conclude our 2025 reporting cycle, the Project Management Committee (PMC) assessed the many contributions across the Adoptium projects. This report highlights key technical milestones from [2025 Q4](https://github.com/adoptium/adoptium/issues/271#issuecomment-3891025693) in release automation, testing efficiency, and supply chain integrity.
 
 ## Release Delivery Goals: 12-Hour Linux Turnaround
 
@@ -37,7 +37,7 @@ The PMC continues to prioritise the integrity and predictability of our installe
 
 ## Closing Summary
 
-The technical health of Adoptium relies on our contributors, through the quality of their work and their dedication to fixing the ‘right things’.  
+The technical health of Adoptium relies on our contributors, through the quality of their work and their dedication to fixing the ‘right things’.
 
 The PMC recognises all contributions, including optimising pipelines, resolving installer bugs, or providing technical mentorship. These highlighted achievements of [Q4 2025](https://github.com/orgs/adoptium/projects/40/views/16) have established a rigorous baseline for our [2026 roadmap](https://github.com/orgs/adoptium/projects/48).
 
