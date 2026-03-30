@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TaggedNewsPage > renders news and header for tag and page when posts exist 1`] = `
+exports[`TaggedNewsPage (paginated) > renders news and header for tag and page when posts exist 1`] = `
 <div>
   <div>
     <script
       type="application/ld+json"
     >
-      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin/page/2","name":"Posts tagged with &quot;temurin&quot; - Page 2","url":"https://adoptium.net/news/tag/temurin/page/2","isPartOf":{"@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin"},"mainEntity":[{"@type":"BlogPosting","headline":"Tagged News","url":"https://adoptium.net/news/undefined/undefined/tagged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
+      {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin/page/2","name":"Posts tagged with &quot;temurin&quot; - Page 2","url":"https://adoptium.net/news/tag/temurin/page/2","isPartOf":{"@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin"},"mainEntity":[{"@type":"BlogPosting","headline":"Tagged Page 2 News","url":"https://adoptium.net/news/2025/06/tagged-page-2-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
     </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
@@ -89,23 +89,23 @@ exports[`TaggedNewsPage > renders news and header for tag and page when posts ex
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
       >
         <div
-          class="flex flex-col max-w-[385px] w-full sm:w-[385px] min-h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
+          class="flex flex-col w-full rounded-3xl newscard-2 bg-[#200D46]"
         >
           <img
             alt="blog banner image"
             class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
             height="200"
-            src="/news/undefined/undefined/tagged-news/opengraph-image"
+            src="/news/2025/06/tagged-page-2-news/opengraph-image"
             width="385"
           />
           <div
-            class="p-8 flex flex-col h-[400px]"
+            class="p-8 flex flex-col flex-1"
           >
             <h3
-              class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
-              title="Tagged News"
+              class="text-[24px] font-semibold leading-normal line-clamp-3 mb-2"
+              title="Tagged Page 2 News"
             >
-              Tagged News
+              Tagged Page 2 News
             </h3>
             <div
               class="flex justify-between py-2"
@@ -116,10 +116,15 @@ exports[`TaggedNewsPage > renders news and header for tag and page when posts ex
                 <span>
                   June 18, 2025
                 </span>
+                <span
+                  class="text-sm text-pink-500"
+                >
+                  author
+                </span>
               </h3>
             </div>
             <div
-              class="flex-grow overflow-hidden mb-4"
+              class="flex-grow mb-4"
             >
               <p
                 class="line-clamp-4 text-base text-gray-200"

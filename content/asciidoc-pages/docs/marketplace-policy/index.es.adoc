@@ -1,0 +1,54 @@
+= Política del Mercado de Productos de Software de Adoptium(R)
+:description: Política del Mercado de Adoptium
+:keywords: política del mercado de adoptium
+:orgname: Eclipse Adoptium
+:lang: es
+:page-authors: tellison, gdams
+
+== Descripción general
+
+El Mercado de Adoptium (Adoptium Marketplace) proporciona a los usuarios un acceso fácil a una amplia variedad de binarios de Java OpenJDK de alta calidad y totalmente compatibles, y proporciona a las organizaciones que producen esos binarios un mecanismo para ampliar la distribución de sus entornos de ejecución de Java.
+
+=== Beneficios para el Usuario
+
+Cada binario disponible a través del link:/marketplace[sitio web] del mercado de Adoptium y la https://marketplace-api.adoptium.net/q/swagger-ui/[API^] es compatible con Java SE y ha demostrado que está listo para su uso en producción en una amplia variedad de entornos al superar la suite de verificación de calidad link:/aqavit[AQAvit^].
+
+La https://projects.eclipse.org/projects/adoptium.aqavit[suite de verificación de AQAvit^] evalúa los entornos de ejecución de Java en cuanto a corrección funcional, rendimiento, resiliencia, seguridad y la capacidad de superar una amplia variedad de suites de pruebas de aplicaciones. Como resultado, se proporciona a las empresas un mayor grado de confianza en los binarios que incorporan a sus empresas y a sus cadenas de suministro de software.
+
+=== Beneficios para el Productor
+
+Los siguientes beneficios son disfrutados por todos los productores listados en el mercado de Adoptium.
+
+ * Demuestra que su producto es una oferta de alta calidad, lista para uso empresarial, habiendo superado los criterios de inclusión requeridos de compatibilidad con Java y calidad de AQAvit.
+ * Muestra que su producto cumple con todos los requisitos del Grupo de Trabajo de Eclipse Adoptium en cuanto a seguridad, escalabilidad, durabilidad y corrección funcional en una versión y compilación específicas.
+ * Declara que el proveedor es un participante en la comunidad de Adoptium y apoya la definición y el alcance de los criterios de calidad de AQAvit en toda la industria.
+ * Los productos listados se benefician de las iniciativas de marketing y promoción patrocinadas por el Grupo de Trabajo de Adoptium en toda la industria con el apoyo de la Fundación Eclipse.
+
+La inclusión en el mercado está abierta a todos los miembros estratégicos y empresariales del grupo de trabajo de Adoptium sin costo adicional para el proveedor, no es exclusiva y preserva la oportunidad de suministrar servicios de pago junto con la oferta.
+
+== Verificación de Productos de Software AQAvit
+
+Solo aquellos productos que superen la suite de pruebas de verificación de productos de software de AQAVit y cumplan con las obligaciones de la https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Licencia de la Suite de Verificación de Calidad de la Fundación Eclipse^] pueden incluirse en el Mercado de Adoptium.
+
+Es necesario link:/aqavit[verificar cada binario] que desee ser incluido en el Mercado de Adoptium. No es necesario ser miembro del grupo de trabajo de Adoptium para producir un producto de software verificado por AQAvit.
+
+== Compatibilidad con Java SE
+
+El cumplimiento de la Especificación de Java SE se determina exclusivamente a través del uso del https://en.wikipedia.org/wiki/Technology_Compatibility_Kit[Kit de Compatibilidad de Tecnología^] (TCK) de Oracle para la Plataforma Java, también conocido como el Kit de Compatibilidad de Java (JCK).
+
+El kit de pruebas JCK es propiedad de Oracle y no está disponible bajo una licencia de código abierto. Eclipse no prueba productos de software de terceros para comprobar la compatibilidad con Java. Los productores deben dirigirse a Oracle para asegurar su propia licencia para usar el JCK con tales fines.
+
+== Listado en el Mercado de Adoptium
+
+El Mercado de Adoptium es una oportunidad para que los Miembros del Grupo de Trabajo de Adoptium ("Productores") muestren productos de software y proyectos de código abierto ("Productos") que hayan demostrado ser de alta calidad y estar listos para la empresa.
+
+Los productos listados en el mercado *DEBEN* cumplir con los siguientes criterios.
+
+. El Producto debe superar la suite de verificación de calidad (QVS) de Eclipse AQAvit correspondiente y cumplir con la https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Licencia de la Suite de Verificación de Calidad de la Fundación Eclipse^].
+. El Productor debe declarar a satisfacción del Grupo de Trabajo de Adoptium que el Producto ha superado el Kit de Compatibilidad de Tecnología de Java SE aplicable.
+. El Productor debe ser un Participante, o Miembro Empresarial o Estratégico del Grupo de Trabajo de Adoptium.
+. El Productor debe ejecutar el https://www.eclipse.org/legal/documents/eclipse-adoptium-marketplace-publisher-agreement.pdf[Acuerdo de Editor del Mercado de Eclipse Adoptium^] y cumplir con todas sus obligaciones.
+
+Los Productos que cumplen con estos requisitos son elegibles para ser listados en el mercado. Para ser listado, el Productor debe https://github.com/adoptium/adoptium/issues/new[abrir una solicitud con el Grupo de Trabajo de Adoptium^] buscando su inclusión como Productor en el mercado.
+
+Los cambios en esta política son realizados por el link:/members[Comité Directivo del Grupo de Trabajo de Adoptium].
