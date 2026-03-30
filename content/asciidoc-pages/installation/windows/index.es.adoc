@@ -1,0 +1,118 @@
+= Paquetes de instalación MSI para Windows
+:page-authors: gdams, karianna, SueChaplain, ParkerM, KalyanJoseph, NickJavaDev88
+:toc:
+:page-description: Descargue e instale Eclipse Temurin en Windows utilizando archivos MSI.
+:keywords: java, windows, msi, instalador, temurin, eclipse, jdk, jre, instalación
+
+Los paquetes de instalación de Eclipse Temurin para Windows están disponibles como archivos estándar `.msi`, los cuales pueden ejecutarse con una interfaz de usuario interactiva o de forma silenciosa desde la línea de comandos. El instalador está diseñado para usarse por máquina, no por usuario, por lo que solo puede tener tener una instalación del MSI en una máquina para todos los usuarios.
+
+Nota: Los paquetes de instalación de Windows solo son compatibles con sistemas Windows x64.
+
+== Instalación con GUI
+
+Instrucciones para ejecutar una instalación interactiva utilizando el instalador MSI de Windows:
+
+. link:/temurin/releases[Descargue] el archivo `.msi`. Ábralo para iniciar el programa de instalación.
+. Lea y acepte la licencia si está de acuerdo con los términos.
+. En la pantalla de Configuración Personalizada puede elegir las características que desea instalar y opcionalmente cambiar el directorio de instalación por defecto. Por defecto, Temurin se instala en `C:\Program Files\Eclipse Adoptium\<paquete>` con las siguientes características, que puede deseleccionar si es necesario:
+* Añadir la instalación a la variable de entorno PATH
+* Asociar archivos `.jar` con aplicaciones Java
+Se pueden seleccionar características adicionales haciendo clic en el árbol de directorios donde vea una marca de verificación (x). Estas características incluyen:
+* Actualizar la variable de entorno `JAVA_HOME`
+. Cuando haya elegido las características que desea instalar, haga clic en Siguiente (Next).
+. Haga clic en Instalar (Install) para comenzar la instalación.
+. Cuando la instalación haya finalizado, haga clic en Finalizar (Finish) para cerrar el programa.
+
+== Instalación por línea de comandos
+
+Una instalación silenciosa le permite instalar el paquete de Windows con características preseleccionadas sin interacción del usuario, lo cual puede ser útil para un despliegue a gran escala. Siga estos pasos:
+
+. link:/temurin/releases[Descargue] el archivo `.msi`.
+. Elija las características que desea instalar, las cuales se muestran en la siguiente tabla:
++
+[width="100%",cols="50%,50%",options="header",]
+|=======================================================================
+|Característica |Descripción
+|`FeatureMain` |Instalación principal de Temurin (POR DEFECTO)
+
+|`FeatureEnvironment` |Actualizar la variable de entorno PATH (POR DEFECTO)
+
+|`FeatureJarFileRunWith` |Asociar archivos .jar con aplicaciones Java (POR DEFECTO)
+
+|`FeatureJavaHome` |Actualizar la variable de entorno JAVA_HOME
+
+|`FeatureOracleJavaSoft` |Actualiza las claves de registro HKLM
+|=======================================================================
++
+Nota: `FeatureOracleJavaSoft` se puede usar para evitar que Oracle Java se inicie desde el `PATH` cuando Temurin se desinstala. Reinstale Oracle Java si necesita restaurar las claves de registro de Oracle.
++
+Se pueden utilizar parámetros opcionales que agrupan algunas de las características:
++
+[cols=",",options="header",]
+|======================================================================
+|Parámetro |Características
+|`INSTALLLEVEL=1` |FeatureMain,FeatureEnvironment,FeatureJarFileRunWith
+|======================================================================
+. Ejecute el comando en la estación de trabajo de destino. El siguiente ejemplo instala silenciosamente Temurin, actualiza el PATH, asocia los archivos .jar con aplicaciones Java y define JAVA_HOME:
++
+[source,batch]
+----
+msiexec /i <paquete>.msi ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome INSTALLDIR="c:\Program Files\Temurin\" /quiet
+----
++
+Nota: Debe usar `INSTALLDIR` con FeatureMain.
++
+El siguiente ejemplo instala silenciosamente todas las características para `INSTALLLEVEL=1`:
++
+[source,batch]
+----
+msiexec /i <paquete>.msi INSTALLLEVEL=1 /quiet
+----
++
+Si desea iniciar una instalación interactiva en otro idioma, puede usar la opción `TRANSFORMS` del instalador de Windows para establecer su elección de idioma. Por ejemplo, para establecer el idioma de la interfaz en alemán, use el código `1031`, que debe ir precedido por dos puntos `:`.
++
+[source,batch]
+----
+msiexec /i <paquete>.msi INSTALLLEVEL=1 TRANSFORMS=:1031
+----
++
+Para obtener una lista de códigos compatibles, consulte la https://github.com/adoptium/installer/blob/master/wix/Lang/LanguageList.config[Lista de idiomas].
+
+== Reinstalación o actualización
+
+Para reinstalar Temurin en modo silencioso con las características por defecto, ejecute el siguiente comando:
+
+[source,batch]
+----
+msiexec /i <paquete>.msi REINSTALL=ALL /quiet
+----
+
+Si desea actualizar Temurin en modo silencioso, ejecute el siguiente comando:
+
+[source,batch]
+----
+msiexec /i <paquete>.msi REINSTALL=ALL REINSTALLMODE=amus /quiet
+----
+
+Opciones de `REINSTALLMODE`: (de https://www.advancedinstaller.com/user-guide/control-events.html[Eventos de Control])
+
+* `a`: Forzar la instalación de todos los archivos independientemente de la suma de comprobación o versión
+* `m`: Reescribir todas las entradas de registro requeridas de la Tabla de Registro que van a `HKEY_LOCAL_MACHINE`
+* `o`: Reinstalar si el archivo falta o es una versión anterior
+* `u`: Reescribir todas las entradas de registro requeridas de la Tabla de Registro que van a `HKEY_CURRENT_USER` o `HKEY_USERS`
+* `s`: Reinstalar todos los accesos directos y volver a almacenar en caché todos los iconos sobrescribiendo cualquier acceso directo o icono existente
+
+Nota: `REINSTALL=ALL` establece automáticamente `REINSTALLMODE=omus`
+
+=== Limitación de actualización:
+
+La actualización de archivos `.msi` funciona solo para los primeros 3 dígitos del número de compilación debido a una https://docs.microsoft.com/windows/desktop/Msi/productversion[limitación de MSI]:
+
+* Actualizar 8.0.2.1 a 8.0.3.1 funciona.
+* Actualizar 8.0.2.1 a 8.0.2.2 no funciona. Desinstale el .msi anterior e instale el nuevo.
+* Actualizar 8.0.2.1 a 8.1.2.1 funciona.
+* Actualizar 8.0.2.1 a 11.0.2.1 no funciona. Temurin no proporciona actualizaciones para versiones mayores. Mantenga ambas instalaciones o desinstale la anterior.
+
+== Lectura de referencia
+
+* https://www.advancedinstaller.com/user-guide/msiexec.html[Línea de comandos de Msiexec.exe]

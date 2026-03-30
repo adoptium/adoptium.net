@@ -1,0 +1,28 @@
+= Instalación de Eclipse Temurin(TM)
+:page-authors: gdams, karianna, tellison, NickJavaDev88
+:page-description: Descarga e instala Eclipse Temurin, una distribución OpenJDK de código abierto.
+:page-keywords: java, jdk, jre, openjdk, eclipse temurin, instalación, descarga
+
+link:/temurin/releases[Eclipse Temurin] está disponible para descarga en múltiples
+formatos de paquete de instalación:
+
+* Gestores de paquetes (mostrados arriba)
+* link:#_installers[Instaladores]
+* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[API Programática]
+* link:/installation/archives[Archivos comprimidos]
+* link:https://hub.docker.com/_/eclipse-temurin[Imágenes de Contenedor] (Documentación externa en DockerHub)
+
+Los binarios son compatibles con las arquitecturas y sistemas operativos
+listados en link:/supported-platforms[Plataformas Soportadas]. Si estás
+migrando a Temurin, puedes aprender sobre las diferencias entre Oracle
+JDK y Temurin en nuestra link:/docs/migration[Guía de Migración] y cualquier paso
+que necesites tomar.
+
+== Instaladores
+
+Los instaladores están actualmente disponibles para paquetes JDK y JRE de Windows(R) y macOS(R).
+Los pasos de instalación se cubren en las siguientes secciones:
+
+* link:/installation/windows[Paquetes de instalación MSI de Windows]
+* link:/installation/macOS[Paquetes de instalación PKG de macOS]
+* link:/installation/linux[Paquetes de instalación Linux (RPM/DEB/APK)]

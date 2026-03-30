@@ -5,7 +5,7 @@ import "../InstallTabs.css"
 
 export const PureLinuxPanel = (): React.ReactNode => {
   // Hardcoded value for latest LTS, should be replaced with actual data fetching in Next.js
-  const mostRecentLts = "21"
+  const mostRecentLts = "25"
   return (
     <div>
       <ShellBox>

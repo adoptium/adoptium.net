@@ -19,11 +19,7 @@ exports[`EditLink component > renders correctly 1`] = `
         <img
           alt="edit icon"
           class="relative w-full h-full p-3 bg-[#200D46]/60 border border-white/20 rounded-full shadow-md"
-          data-nimg="fill"
-          decoding="async"
-          loading="lazy"
           src="/images/icons/edit.svg"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
         />
       </div>
       <div

@@ -2,11 +2,13 @@
 title: Eclipse Temurin Reproducible Verification Builds for Secure Supply Chain Validation
 date: "2024-08-09T12:00:00+00:00"
 author: andrewleonard
-description: Eclipse Temurin JDK 21+ builds are fully reproducible. This blog explains how
- third-party users can perform an independent secure verification of an Eclipse Temurin build to
- validate the integrity of the supply chain, and why you would want to do this.
+description:
+  Eclipse Temurin JDK 21+ builds are fully reproducible. This blog explains how
+  third-party users can perform an independent secure verification of an Eclipse Temurin build to
+  validate the integrity of the supply chain, and why you would want to do this.
 tags:
   - temurin
+  - reproducible
 ---
 
 ### What is a third-party Reproducible Verification Build?

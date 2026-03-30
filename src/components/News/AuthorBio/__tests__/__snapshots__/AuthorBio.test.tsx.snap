@@ -8,13 +8,8 @@ exports[`AuthorBio component > should render correctly 1`] = `
     <img
       alt="Test Author"
       class="ml-2 mb-0 rounded-full"
-      data-nimg="1"
-      decoding="async"
       height="50"
-      loading="lazy"
-      src="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=128&q=75"
-      srcset="/_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fpmc.jpg&w=128&q=75 2x"
-      style="color: transparent;"
+      src="/images/authors/pmc.jpg"
       width="50"
     />
   </div>
