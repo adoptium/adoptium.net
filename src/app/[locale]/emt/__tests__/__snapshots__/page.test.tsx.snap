@@ -29,10 +29,10 @@ exports[`EMT page > renders correctly 1`] = `
         >
           <img
             alt="background-image"
-            height="128"
-            src="/images/projects/adoptium-icon.png"
-            style="width: 8em;"
-            width="128"
+            class="w-32 sm:w-40 md:w-48 lg:w-56"
+            height="256"
+            src="/images/projects/migration-toolkit-logo.png"
+            width="256"
           />
         </div>
         <div
@@ -448,7 +448,8 @@ exports[`EMT page > renders correctly 1`] = `
                   >
                     Java Agent:
                   </strong>
-                   Provides runtime context information and accurate call stack analysis to find more potential issues
+                   
+                  Provides runtime context information and accurate call stack analysis to find more potential issues
                 </div>
               </li>
               <li
@@ -474,7 +475,8 @@ exports[`EMT page > renders correctly 1`] = `
                   >
                     Command-line Tool:
                   </strong>
-                   Easy to use without starting your application, though may have some false positives
+                   
+                  Easy to use without starting your application, though may have some false positives
                 </div>
               </li>
               <li
@@ -500,7 +502,8 @@ exports[`EMT page > renders correctly 1`] = `
                   >
                     Maven Plugin:
                   </strong>
-                   Integrates directly into your build process to catch issues during development
+                   
+                  Integrates directly into your build process to catch issues during development
                 </div>
               </li>
             </ul>
