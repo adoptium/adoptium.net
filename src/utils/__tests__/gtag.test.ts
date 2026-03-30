@@ -64,6 +64,8 @@ describe("getBlogRoutes", () => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mockedFs.readdirSync.mockImplementation((dir: string, opts: any) => {
+      // Normalize the directory path
+      dir = dir.replace(/\\/g, "/"); // Normalize input
       if (opts?.withFileTypes) {
         if (
           dir.includes("blog") &&
@@ -85,12 +87,13 @@ describe("getBlogRoutes", () => {
       return [];
     });
 
-    mockedFs.existsSync.mockImplementation(
-      (p: string) =>
-        p.includes("blog1/index.md") || p.includes("blog2/index.md")
-    );
+    mockedFs.existsSync.mockImplementation((p: string) => {
+      p = p.replace(/\\/g, "/"); //  Normalize input
+      return p.includes("blog1/index.md") || p.includes("blog2/index.md");
+    });
 
     mockedFs.statSync.mockImplementation((p: string) => {
+      p = p.replace(/\\/g, "/");
       if (p.includes("blog1/index.md")) {
         return { mtime: new Date("2024-05-20") } as fs.Stats;
       }
@@ -101,6 +104,7 @@ describe("getBlogRoutes", () => {
     });
 
     mockedFs.readFileSync.mockImplementation((p: string) => {
+      p = p.replace(/\\/g, "/");
       if (p.includes("blog1/index.md")) {
         return `---\ndate: 2025-05-09\n---\nBlog 1 content`;
       }
@@ -120,9 +124,10 @@ describe("getBlogRoutes", () => {
   });
 
   it("returns blog routes with lastmod from index.md missing", () => {
-    mockedFs.existsSync.mockImplementation((p: string) =>
-      p.includes("blog2/index.md")
-    );
+    mockedFs.existsSync.mockImplementation((p: string) => {
+      p = p.replace(/\\/g, "/"); // Normalize input
+      return p.includes("blog2/index.md");
+    });
     const routes = getBlogRoutes();
     expect(routes).toEqual([
       { loc: "/news/2024/06/blog2/", lastmod: "2024-06-26" },

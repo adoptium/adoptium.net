@@ -7,12 +7,18 @@ import { SitemapData } from '@/types/sitemap';
 describe('SitemapClient', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.useFakeTimers();
+
+    // Default date for all tests -> 21/12/2012 - This is the end of the world!
+    // NOTE: this is important for accessibility tests
+    const date = Date.UTC(2012, 11, 21, 0, 0, 0, 0);
+    vi.useFakeTimers({now: date, shouldAdvanceTime: true});
+
     document.body.innerHTML = '';
   });
 
   afterEach(() => {
     vi.useRealTimers();
+
     document.body.innerHTML = '';
   });
 

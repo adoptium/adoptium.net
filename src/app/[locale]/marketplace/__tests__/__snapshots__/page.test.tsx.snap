@@ -88,12 +88,8 @@ exports[`Marketplace page > renders correctly 1`] = `
         <img
           alt="AQAvit Logo"
           class="w-full"
-          data-nimg="1"
-          decoding="async"
           height="110"
-          loading="lazy"
           src="/images/projects/aqavit-project.svg"
-          style="color: transparent;"
           width="110"
         />
       </div>

@@ -1,0 +1,30 @@
+= Temurin(TM) 支持
+:page-authors: gdams, karianna, sxa, tellison, SueChaplain, sxa555, mvitz, ParkerM, M-Davies, Malax, lasombra, jeffalder, hendrikebbers, douph1, andrew-m-leonard, mr-david-owens, DanHeidinga, sophia-guo, zdtsw, adamfarley, garydgregory, mtughan, xavierfacq, NickJavaDev88
+:toc:
+:partialDir: _partials
+
+== 社区支持
+
+我们要为我们的发布质量二进制文件提供支持，因此每个被标识为发布的构建都会通过 Adoptium(R) 社区获得支持。我们的支持意味着您可以 https://github.com/adoptium/adoptium-support/issues/new/choose[提出问题] 来描述您在构建中发现的错误，我们将与您和相应的开发团队合作解决它。我们确定的任何修复都将作为下一个 Adoptium 发布的一部分交付。
+
+作为一个开源开发者社区，我们的承诺是对提出的任何问题进行分类，并在相应的源代码项目中支持它们。当然，如果问题源于我们构建和测试代码的方式，我们可以直接修复它。对于具有服务级别协议的专门支持，您应该联系提供 Temurin 二进制文件支持的商业公司。阅读 https://medium.com/@javachampions/java-is-still-free-3-0-0-ocrt-2021-bca75c88d23b[Java Is Still Free (3.0.0)] 以了解有关 Java 支持选项的一些背景信息。
+
+== 商业支持
+
+我们理解有些用户更喜欢 Eclipse Temurin 的商业付费支持。Eclipse 不提供此类服务，但请参阅我们的 link:/temurin/commercial-support[商业支持] 页面，其中维护了一份提供合同支持的公司列表。
+
+== 发布路线图
+
+Temurin 发布的频率由我们依赖项的时间表指导。
+
+OpenJDK 每六个月提供一个新的功能版本，并每三个月基于每个活动版本提供一个维护/安全更新。OpenJDK 项目的发布日期通常是 1 月、4 月、7 月和 10 月的 https://www.oracle.com/security-alerts/[第三个星期二]。我们将遵循此时间表发布 Adoptium 的二进制版本，以确保您获得最新、最安全的构建。
+
+此外，自 2021 年以来，每两年将有一个功能版本被指定为长期支持 (LTS) 版本。我们将支持 LTS 版本至少四年。此保证将允许您保留在定义良好的代码流上，并让您有时间在下一个新的、稳定的 LTS 版本可用时迁移到它。
+
+基于此路线图，这是显示用于构建 Eclipse Temurin 的各种 OpenJDK 版本的当前发布日期的时间表。请注意，以下日期来自 https://www.java.com/releases[上游 OpenJDK 项目页面]，不应被视为 Adoptium 项目将提供二进制文件的日期 - 相对于这些日期会有短暂的延迟，因为我们要完成可能需要长达三周的广泛构建和测试周期。我们的 https://calendar.google.com/calendar/embed?src=c_56d7263c0ceda87a1678f6144426f23fb53721480b5ff71b073afb51091e5492%40group.calendar.google.com[包含我们发布周期的 Google 日历] 显示了我们每个发布的预期周期长度。我们总是优先考虑最流行的平台，这些平台通常会在这些日期的几天内出现。
+
+include::{partialDir}/support-table.adoc[]
+
+^[1]^ 作为一般理念，只要相应的上游源代码得到积极维护，Adoptium 将继续为 LTS 版本构建二进制文件。
+
+^[2]^ 服务/支持寿命结束 - 此代码流不再维护。没有计划进一步构建 Eclipse Temurin。

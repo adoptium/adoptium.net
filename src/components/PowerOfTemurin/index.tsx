@@ -1,14 +1,23 @@
-import React from "react"
-import { Link } from "@/i18n/navigation"
-import { useTranslations } from "next-intl"
+"use client";
 
-import UiVirtualScroll from "@/components/UiVirtualScroll"
+import React from "react";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+
+import UiVirtualScroll from "@/components/UiVirtualScroll";
 
 const PowerOfTemurin = () => {
-  const t = useTranslations("PowerOfTemurin")
+  const t = useTranslations("PowerOfTemurin");
   return (
-    <div className="bg-purple py-16">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16">
+    <div className="bg-purple pt-16 pb-0">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
+      >
         <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900">
           {t("title")}
         </h2>
@@ -16,14 +25,14 @@ const PowerOfTemurin = () => {
           {t("description")}
         </h3>
         <Link href="/business-benefits">
-          <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border">
+          <button className="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border hover:scale-105 transition-transform duration-300">
             {t("button")}
           </button>
         </Link>
-      </div>
+      </motion.div>
       <UiVirtualScroll />
     </div>
-  )
-}
+  );
+};
 
-export default PowerOfTemurin
+export default PowerOfTemurin;

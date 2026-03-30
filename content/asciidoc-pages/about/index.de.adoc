@@ -1,0 +1,62 @@
+= Über Eclipse Adoptium(R)
+:page-authors: gdams, karianna, tellison, parkerm, lasombra, hendrikebbers, davew16, akdsco, sw-fox
+
+Die Mission des Eclipse Adoptium Top-Level-Projekts besteht darin,
+hochwertige Laufzeitumgebungen und zugehörige Technologien für den Einsatz im Java-Ökosystem zu entwickeln.
+Dies erreichen wir durch eine Reihe von Projekten unter dem Dach des Adoptium PMC
+und eine enge Zusammenarbeit mit externen Projekten, insbesondere
+OpenJDK für die Bereitstellung der Java SE-Laufzeitumgebung. Unser Ziel ist es,
+die Anforderungen sowohl der Eclipse-Community als auch einer breiteren Gruppe von Laufzeitanwendern zu erfüllen,
+indem wir eine umfassende Reihe von Technologien rund um Laufzeiten für
+Java-Anwendungen bereitstellen, die mit bestehenden Standards,
+Infrastrukturen und Cloud-Plattformen kompatibel sind.
+
+
+Das AdoptOpenJDK-Projekt wurde 2017 nach jahrelangen
+Diskussionen über den allgemeinen Mangel an einem offenen und reproduzierbaren Build- und
+Testsystem für OpenJDK-Quellcode auf mehreren Plattformen ins Leben gerufen. Seitdem hat es
+sich zu einem führenden Anbieter von hochwertigen OpenJDK-basierten
+Binärdateien entwickelt, die von Unternehmen in eingebetteten Systemen, Desktops, traditionellen
+Servern, modernen Cloud-Plattformen und großen Mainframes verwendet werden. Das Eclipse
+Adoptium-Projekt ist die Fortsetzung der ursprünglichen AdoptOpenJDK-Mission.
+
+== Umfang
+
+Eclipse Adoptium bietet Laufzeit-Binärdateien, die leistungsstark,
+enterprise-tauglich, plattformübergreifend, Open-Source-lizenziert, Java SE
+TCK-getestet und für den allgemeinen Einsatz im gesamten Java-Ökosystem kompatibel sind.
+Eclipse Adoptium bietet außerdem Artefakte wie Open-Source-Infrastruktur
+als Code, eine umfassende Build- und Testfarm für kontinuierliche Integration
+sowie umfangreiche Qualitätssicherungstests. Diese Artefakte können
+von Eclipse Adoptium-Projekten und anderen Entwicklern von Laufzeittechnologien
+verwendet werden, um die Bereitstellung sicherer, Java SE TCK-geprüfter und konformer,
+produktionsreifer Laufzeitumgebungen zu gewährleisten.
+
+Der Umfang des Projekts umfasst die Entwicklung, Verwaltung, Förderung und
+Unterstützung von Technologien wie:
+
+* Laufzeitumgebungen und Entwicklungskits: Unterstützung der gesamten Bandbreite an APIs,
+die von verschiedenen Versionen von Java SE spezifiziert werden und auf einer Vielzahl
+von Prozessorarchitekturen und Betriebssystemkombinationen verfügbar sind.
+* TCK-Testinfrastruktur: Bereitstellung einer Infrastruktur zum Ausführen von Java
+SE-TCKs, um Konformität und Kompatibilität sicherzustellen.
+* JDK Mission Control: Suite mit Profiling- und Diagnosetools mit geringem Overhead für die JVM.
+* Installationsprogramme und Repositorys: Verschiedene Mechanismen zum Abrufen und
+Verwalten der Installation von Laufzeittechnologie, z. B. plattformnative
+Installationsprogramme, Container-Images, Download-Server, eine Website und Artefakt-Repositorys.
+
+Das Eclipse Adoptium-Projekt ist nicht nur eine zuverlässige Quelle für aktuelle Java-Laufzeit-Binärdateien,
+sondern auch eine Plattform für Experimente
+von Entwicklern, Wissenschaftlern und Forschern. Hier können
+neue Ideen für Laufzeitumgebungen, Builds, Tests und Infrastrukturen ausprobiert werden. Beispiele für
+Projekte, die unter dieses Top-Level-Projekt fallen, sind „jlink.online”
+für die Bereitstellung von Laufzeitumgebungen in der richtigen Größe für Anwendungsentwickler, „Github
+Actions” zum Abrufen und Testen von Laufzeitumgebungen innerhalb des Git-Workflows,
+„TKG”, das Framework zur Generierung von Test-Kits, „Bumblebench”, das
+Microbenchmarking-Framework, und vieles mehr.
+
+== Lizenzen
+
+* Build-Skripte und anderer Code zur Erstellung der Binärdateien, der Website und
+anderer Build-Infrastrukturen unterliegen der https://www.apache.org/licenses/LICENSE-2.0[Apache-Lizenz, Version 2.0].
+* Der OpenJDK-Code selbst unterliegt der Lizenz https://openjdk.java.net/legal/gplv2+ce.html[GPL v2 mit Classpath-Ausnahme] (GPLv2+CE) und https://openjdk.java.net/legal/assembly-exception.html[GPL v2 mit Assembly-Ausnahme] (GPLv2+Assembly).

@@ -1,0 +1,118 @@
+= Gestión de la Cadena de Suministro Segura de Adoptium(R)
+:description: Gestión de la Cadena de Suministro Segura de Adoptium
+:keywords: Seguridad SSDF SLSA Cadena de Suministro
+:orgname: Eclipse Adoptium
+:lang: es
+:page-authors: tellison, sxa, gdams, NickJavaDev88
+
+
+El marco de https://slsa.dev/[Niveles de la Cadena de Suministro para Artefactos de Software (SLSA)^] es un marco de seguridad que ayuda a proporcionar confianza en que un conjunto de entradas, como el código fuente, las bibliotecas y los paquetes de software, conducen a un conjunto de salidas bien definidas, como un binario y una lista de materiales de software. Es un conjunto estructurado de requisitos técnicos para ayudar a un productor a confiar en las partes de la cadena de suministro que están bajo su control directo y ayuda a proporcionar confianza en el proceso de construcción para detectar cualquier ataque en las fases iniciales de la cadena de suministro.
+
+Adoptium ha evaluado las
+link:/docs/secure-software[prácticas de ingeniería segura de nuestro proyecto^]
+para determinar el nivel apropiado de atestación SLSA. A continuación se detallan los requisitos del nivel SLSA y cómo los está cumpliendo Adoptium. Tenga en cuenta que SLSA todavía se encuentra en estado "alpha" y los requisitos están sujetos a cambios, particularmente para los niveles 3 y 4 de SLSA.
+
+== Nivel Uno de SLSA
+
+Se han alcanzado los siguientes requisitos para la construcción de Eclipse Temurin por parte de Adoptium, y satisfacen los requisitos necesarios para cumplir con el Nivel 1 de SLSA.
+
+Este nivel significa que el proceso de construcción de Adoptium está totalmente guionado y automatizado, y publica atestaciones de lista de materiales de software (SBOM) formalmente estructuradas que enumeran los componentes, bibliotecas y módulos necesarios para construir cada binario.
+
+Construcción - https://slsa.dev/spec/v0.1/requirements#scripted-build[Construcción guionada^]::
++
+Todos los pasos para producir Eclipse Temurin están definidos por 
+https://github.com/adoptium/ci-jenkins-pipelines[pipelines de Jenkins^] con control de versiones que invocan scripts de construcción almacenados en el repositorio
+https://github.com/adoptium/temurin-build[adoptium/temurin-build^].
+Las pipelines y los scripts de construcción están disponibles para que cualquiera pueda verlos y verificarlos, y las ejecuciones en 
+https://ci.adoptium.net/[el sistema Jenkins^] están abiertas al escrutinio. La documentación para usar los scripts de construcción está disponible en el 
+https://github.com/adoptium/temurin-build#readme[archivo readme^] del repositorio de construcción.
+
+Procedencia - https://slsa.dev/spec/v0.1/requirements#available[Disponible^]::
++
+Adoptium proporciona atestaciones SBOM para la procedencia de las construcciones de Eclipse Temurin. El SBOM está en formato
+https://cyclonedx.org/[OWASP CycloneDX^] y está disponible junto con cada uno de nuestros artefactos de lanzamiento de Temurin.
++
+El SBOM incluye la información requerida para recrear la construcción si fuera necesario, incluyendo las etiquetas del repositorio de fuentes utilizadas por el proceso de construcción, el conjunto completo de parámetros utilizados, la salida de los pasos de configuración y otras piezas de información. Estamos
+https://github.com/adoptium/temurin-build/issues/3013[evolucionando continuamente^] los detalles específicos incluidos en el SBOM.
+
+== Nivel Dos de SLSA
+
+Se han alcanzado los siguientes requisitos adicionales para la construcción de Eclipse Temurin por parte de Adoptium, y satisfacen los requisitos necesarios para cumplir con el Nivel 2 de SLSA.
+
+Este nivel añade requisitos adicionales para proporcionar cierta resistencia a la manipulación del proceso de construcción, principalmente en las áreas de tener todo el código bajo control de versiones y usar un servicio de construcción para producir y distribuir las versiones.
+
+Fuente - https://slsa.dev/spec/v0.1/requirements#version-controlled[Control de versiones^]::
++
+Adoptium refleja el código fuente de la implementación de referencia de Java SE de
+https://openjdk.org/[OpenJDK^] en nuestro repositorio local de GitHub
+(p. ej. https://github.com/adoptium/jdk17u[adoptium/jdk17u^]).
+Cada cambio en la fuente que construimos y en los scripts que usamos es rastreado por el sistema de control de versiones de GitHub. Esto asegura un registro del historial de cambios que formaron parte de cada revisión. Cada cambio contiene las identidades de quien lo subió y de los revisores, las marcas de tiempo de las revisiones y el envío, la descripción/justificación del cambio, el contenido del cambio y las revisiones principales. Todos los colaboradores y revisores se someten a una autenticación sólida, y todos los contribuyentes deben ejecutar y cumplir con el
+https://www.eclipse.org/legal/ECA.php[Acuerdo de Contribuyente de Eclipse^].
++
+Cada revisión inmutable del código bajo nuestro control tiene una referencia única con una vida útil indefinida a través de GitHub (URL del repo + rama/etiqueta/ref + ID del commit). Eclipse Temurin se construye a partir de revisiones etiquetadas de nuestro espejo, y ponemos a disposición archivos comprimidos de la fuente para cada lanzamiento.
+
+Construcción - https://slsa.dev/spec/v0.1/requirements#build-service[Servicio de construcción^]::
++
+Todos los pasos de construcción de Adoptium se ejecutan en
+https://ci.adoptium.net/[nuestro propio servicio de construcción Jenkins gestionado^] y en el servicio de firma de código de la Fundación Eclipse. Estos servicios realizan las construcciones, generan los SBOM y construyen los instaladores cuando corresponde. La salida de las construcciones se sube a los repositorios de lanzamiento de GitHub por el sistema CI de Jenkins. Ninguna parte del proceso se ejecuta en la estación de trabajo de un desarrollador.
++
+El acceso a los servicios de construcción está cuidadosamente gestionado por el proyecto. El sistema de construcción es lo más abierto posible para permitir el escrutinio de la comunidad sin comprometer la seguridad.
+
+Procedencia - https://slsa.dev/spec/v0.1/requirements#authenticated[Autenticada^]::
++
+TODO: La autenticidad e integridad de la procedencia pueden ser verificadas por el consumidor. Esto DEBERÍA hacerse mediante una firma digital de una clave privada accesible solo al servicio que genera la procedencia.
+
+Procedencia - https://slsa.dev/spec/v0.1/requirements#service-generated[Generada por el servicio^]::
++
+Todos los datos de procedencia de Adoptium son generados directamente por los sistemas de construcción y prueba continua del proyecto. Los usuarios del servicio no pueden inyectar ni alterar el contenido de la procedencia. Las firmas de código GNU Privacy Guard (GPG) de Eclipse Temurin son generadas por el servicio de firma de código de Eclipse; otros datos de procedencia, incluyendo la lista de materiales de software, hashes criptográficos, metadatos de construcción, etc., son emitidos directamente por el sistema de construcción del proyecto.
+
+
+== Nivel Tres de SLSA - **En progreso**
+
+Se han alcanzado algunos de los siguientes requisitos adicionales para la construcción de Eclipse Temurin por parte de Adoptium. Se sigue trabajando en los elementos restantes mientras buscamos alcanzar el Nivel 3 de SLSA.
+
+Fuente - https://slsa.dev/spec/v0.1/requirements#retained-indefinitely[Retenida 18 meses^]::
++
+Todas las revisiones del código fuente y su historial de cambios se conservan indefinidamente y no pueden ser eliminadas, excepto cuando estén sujetas a una política establecida y transparente de eliminación, como un requisito legal o una política de la Fundación Eclipse. Este nivel de control de superusuario para cambiar o eliminar el historial es mantenido directa y exclusivamente por
+https://eclipse.org[la Fundación Eclipse^] en nombre del proyecto.
++
+Dado que almacenamos todo nuestro código en GitHub, no es posible que las personas eliminen o modifiquen el historial, incluso con la aprobación de múltiples partes, excepto por los administradores de la plataforma de la Fundación Eclipse de confianza con la aprobación de dos partes siguiendo la política de eliminación de la fundación. Las preguntas sobre esta política deben dirigirse a la
+https://www.eclipse.org/org/foundation/contact.php[Fundación Eclipse].
+
+Construcción - https://slsa.dev/spec/v0.1/requirements#build-as-code[Construcción como código^]::
++
+La definición y configuración de la construcción de Adoptium ejecutada por
+https://ci.adoptium.net/[el servicio de construcción^] se deriva verificablemente de definiciones en archivos de texto almacenados en nuestro sistema de control de versiones.
+
+Construcción - https://slsa.dev/spec/v0.1/requirements#ephemeral-environment[Entorno efímero^]::
++
+Las construcciones en entornos efímeros, como un contenedor o una máquina virtual, provisionados exclusivamente para esta construcción y no reutilizados de una construcción anterior, están implementados para las construcciones Linux x86, ARM32 y aarch64. Otras plataformas siguen siendo un trabajo en progreso en el proyecto.
+
+Construcción - https://slsa.dev/spec/v0.1/requirements#isolated[Aislada^]::
++
+El servicio de construcción de Adoptium garantiza que cada paso de la construcción se ejecute en un entorno aislado libre de la influencia de otras instancias de construcción, ya sean anteriores o simultáneas.
++
+No es posible que una construcción acceda a ningún secreto del servicio de construcción, como la clave de firma de procedencia, ya que estos se almacenan fuera del sistema de construcción y se accede a ellos mediante una llamada remota a un sistema separado. No es posible que dos construcciones que se solapan en el tiempo se influyan mutuamente. Cada paso de la construcción se ejecuta en un entorno de máquina aislado orquestado por el sistema CI de Jenkins, y los pasos de cada construcción se ensamblan mediante el uso de pipelines gestionadas. Las memorias de caché de construcción, donde se utilizan, son puramente direccionables por contenido para evitar manipulaciones.
++
+Continuamos trabajando para asegurar que no sea posible que una construcción persista o influya en el entorno de construcción de una construcción posterior. Cada parte del entorno se especifica en los scripts de construcción. Esto se garantizará ejecutando construcciones en máquinas efímeras en todas partes y comprobando que los resultados sean idénticos.
+
+Procedencia - https://slsa.dev/spec/v0.1/requirements#non-falsifiable[No falsificable^]::
++
+La información de procedencia del SBOM no puede ser falsificada por los usuarios del servicio, ya que es generada por máquina por el proceso de construcción y firmada criptográficamente por el servicio de firma de código de la Fundación Eclipse para evitar manipulaciones. El servicio de firma de código no es accesible para los colaboradores regulares del proyecto ni para los usuarios de Jenkins.
+
+
+== Nivel Cuatro de SLSA - **En progreso**
+
+Adoptium está trabajando en los elementos necesarios para cumplir con los requisitos del Nivel 4 de SLSA. Estos se están rastreando a través de nuestro
+https://github.com/adoptium/adoptium/issues/160[sistema de seguimiento de problemas^], y las contribuciones para esas tareas son bienvenidas.
+
+////
+* Fuente - Revisada por dos personas
+* Construcción - Sin parámetros
+* Construcción - Hermética
+* [x] Construcción - Reproducible
+* [x] Procedencia - Dependencias completas
+* Común - Seguridad
+* Común - Acceso
+* Común - Superusuarios
+////

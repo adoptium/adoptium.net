@@ -12,6 +12,14 @@ expect.extend(matchers);
 // This extends Vitest's expect with Jest-DOM matchers
 expect.extend(jestDomMatchers);
 
+// Add snapshot serializer to remove dynamic MUI class hashes
+expect.addSnapshotSerializer({
+  test: (val) => typeof val === "string" && /css-[a-zA-Z0-9]+-Mui/.test(val),
+  print: (val) => {
+    return `"${(val as string).replace(/css-[a-zA-Z0-9]+-Mui/g, "css-Mui")}"`;
+  },
+});
+
 // Mock GSAP and ScrollTrigger
 vi.mock("gsap", () => {
   const mockGsap = {
@@ -75,6 +83,99 @@ vi.mock("next-intl", () => ({
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => (
     <>{children}</>
   ),
+}));
+
+// Mock framer-motion
+vi.mock("framer-motion", () => {
+  const filterMotionProps = (props: any) => {
+    const {
+      initial,
+      animate,
+      exit,
+      whileInView,
+      whileHover,
+      whileTap,
+      whileDrag,
+      whileFocus,
+      viewport,
+      transition,
+      variants,
+      onAnimationStart,
+      onAnimationComplete,
+      onUpdate,
+      drag,
+      dragControls,
+      dragListener,
+      dragConstraints,
+      dragElastic,
+      dragMomentum,
+      dragPropagation,
+      dragSnapToOrigin,
+      layout,
+      layoutId,
+      layoutDependency,
+      layoutScroll,
+      ...validProps
+    } = props;
+    return validProps;
+  };
+
+  return {
+    motion: {
+      div: ({ children, ...props }: any) => (
+        <div {...filterMotionProps(props)}>{children}</div>
+      ),
+      h3: ({ children, ...props }: any) => (
+        <h3 {...filterMotionProps(props)}>{children}</h3>
+      ),
+      p: ({ children, ...props }: any) => (
+        <p {...filterMotionProps(props)}>{children}</p>
+      ),
+      span: ({ children, ...props }: any) => (
+        <span {...filterMotionProps(props)}>{children}</span>
+      ),
+      section: ({ children, ...props }: any) => (
+        <section {...filterMotionProps(props)}>{children}</section>
+      ),
+      article: ({ children, ...props }: any) => (
+        <article {...filterMotionProps(props)}>{children}</article>
+      ),
+      ul: ({ children, ...props }: any) => (
+        <ul {...filterMotionProps(props)}>{children}</ul>
+      ),
+      li: ({ children, ...props }: any) => (
+        <li {...filterMotionProps(props)}>{children}</li>
+      ),
+      a: ({ children, ...props }: any) => (
+        <a {...filterMotionProps(props)}>{children}</a>
+      ),
+      button: ({ children, ...props }: any) => (
+        <button {...filterMotionProps(props)}>{children}</button>
+      ),
+      img: ({ children, ...props }: any) => (
+        <img {...filterMotionProps(props)} />
+      ),
+    },
+    useScroll: () => ({ scrollYProgress: { get: () => 0 } }),
+    useTransform: () => 0,
+    AnimatePresence: ({ children }: any) => <>{children}</>,
+  };
+});
+
+// Mock next/image
+vi.mock("next/image", () => ({
+  default: ({
+    src,
+    alt,
+    fill,
+    priority,
+    quality,
+    placeholder,
+    blurDataURL,
+    loader,
+    unoptimized,
+    ...props
+  }: any) => <img src={src} alt={alt} {...props} />,
 }));
 
 vi.mock("@/i18n/navigation", () => ({

@@ -15,10 +15,12 @@ const allVersions = [
 
 describe("TemurinNightly page", () => {
   it("renders correctly", () => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date("2025-06-13T12:00:00Z"));
+    const date = new Date("2025-06-13T12:00:00Z");
+    vi.useFakeTimers({now: date, shouldAdvanceTime: true});
+
     const { container } = render(<TemurinNightly allVersions={allVersions} latestLTS={21} />)
     expect(container.firstChild).toMatchSnapshot()
+
     vi.useRealTimers();
   })
 

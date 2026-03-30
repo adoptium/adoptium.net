@@ -146,12 +146,8 @@ exports[`Members page > renders correctly 1`] = `
                   alt=""
                   aria-hidden="true"
                   class="mb-0 w-16 h-16"
-                  data-nimg="1"
-                  decoding="async"
                   height="64"
-                  loading="lazy"
                   src="/images/initiatives/lead.svg"
-                  style="color: transparent;"
                   width="64"
                 />
               </div>
@@ -220,12 +216,8 @@ exports[`Members page > renders correctly 1`] = `
                   alt=""
                   aria-hidden="true"
                   class="mb-0 w-16 h-16"
-                  data-nimg="1"
-                  decoding="async"
                   height="64"
-                  loading="lazy"
                   src="/images/initiatives/strengthen.svg"
-                  style="color: transparent;"
                   width="64"
                 />
               </div>
@@ -294,12 +286,8 @@ exports[`Members page > renders correctly 1`] = `
                   alt=""
                   aria-hidden="true"
                   class="mb-0 w-16 h-16"
-                  data-nimg="1"
-                  decoding="async"
                   height="64"
-                  loading="lazy"
                   src="/images/initiatives/governance.svg"
-                  style="color: transparent;"
                   width="64"
                 />
               </div>
@@ -365,12 +353,8 @@ exports[`Members page > renders correctly 1`] = `
                   alt=""
                   aria-hidden="true"
                   class="mb-0 w-16 h-16"
-                  data-nimg="1"
-                  decoding="async"
                   height="64"
-                  loading="lazy"
                   src="/images/initiatives/community.svg"
-                  style="color: transparent;"
                   width="64"
                 />
               </div>
@@ -439,12 +423,8 @@ exports[`Members page > renders correctly 1`] = `
                   alt=""
                   aria-hidden="true"
                   class="mb-0 w-16 h-16"
-                  data-nimg="1"
-                  decoding="async"
                   height="64"
-                  loading="lazy"
                   src="/images/initiatives/cut.svg"
-                  style="color: transparent;"
                   width="64"
                 />
               </div>
@@ -510,12 +490,8 @@ exports[`Members page > renders correctly 1`] = `
                   alt=""
                   aria-hidden="true"
                   class="mb-0 w-16 h-16"
-                  data-nimg="1"
-                  decoding="async"
                   height="64"
-                  loading="lazy"
                   src="/images/initiatives/narrative.svg"
-                  style="color: transparent;"
                   width="64"
                 />
               </div>
@@ -845,6 +821,1353 @@ exports[`Members page > renders correctly 1`] = `
   <div />
   <div />
   <div />
+  <section
+    class="max-w-[1264px] mx-auto px-6 py-18"
+  >
+    <h2
+      class="text-center text-5xl font-semibold leading-[56px] text-white mb-12"
+    >
+      Compare Membership Levels
+    </h2>
+    <div
+      class="bg-white/5 p-8 rounded-3xl overflow-hidden mb-12"
+    >
+      <div
+        class="grid items-center px-8 py-6 border-b border-[#3E3355]"
+        style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+      >
+        <div
+          class="text-[#C4BFCE] text-xl font-semibold leading-7"
+        >
+          Benefit Category
+        </div>
+        <div
+          class="text-[#C4BFCE] text-xl font-semibold leading-7 text-center"
+        >
+          Strategic
+        </div>
+        <div
+          class="text-[#C4BFCE] text-xl font-semibold leading-7 text-center"
+        >
+          Enterprise
+        </div>
+        <div
+          class="text-[#C4BFCE] text-xl font-semibold leading-7 text-center"
+        >
+          Participant
+        </div>
+        <div />
+         
+      </div>
+      <div>
+        <div
+          class="grid items-center px-8 py-8 cursor-pointer "
+          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+        >
+          <div
+            class="text-white text-2xl font-semibold leading-8 col-span-4"
+          >
+            Governance
+          </div>
+          <div
+            class="flex justify-end"
+          >
+            <button
+              aria-label="Collapse section"
+              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
+            >
+              <svg
+                class="rotate-45"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid transition-all duration-300 ease-in-out grid-rows-[1fr] opacity-100"
+        >
+          <div
+            class="overflow-hidden"
+          >
+            <div
+              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
+            >
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  >
+                    One guaranteed seat & one alternate representative
+                  </strong>
+                  <span
+                    class="font-normal"
+                  >
+                     on each of the Adoptium Steering, Specification & Marketing Committees
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  >
+                    Eligible to participate in elections for
+                  </strong>
+                  <span
+                    class="font-normal"
+                  >
+                    1 member-level seats on each of Adoptium's Steering, Specification and Marketing Committees
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="grid items-center px-8 py-8 cursor-pointer border-b border-[#3E3355]"
+          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+        >
+          <div
+            class="text-white text-2xl font-semibold leading-8 col-span-4"
+          >
+            Technical and infrastructure sharing
+          </div>
+          <div
+            class="flex justify-end"
+          >
+            <button
+              aria-label="Expand section"
+              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
+        >
+          <div
+            class="overflow-hidden"
+          >
+            <div
+              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
+            >
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Opportunity to list verified binaries on the high-visibility Adoptium marketplace
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Access to public test results and shared triage efforts
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Cross-enterprise collaboration via the Incubator projects
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="grid items-center px-8 py-8 cursor-pointer border-b border-[#3E3355]"
+          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+        >
+          <div
+            class="text-white text-2xl font-semibold leading-8 col-span-4"
+          >
+            Visibility
+          </div>
+          <div
+            class="flex justify-end"
+          >
+            <button
+              aria-label="Expand section"
+              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
+        >
+          <div
+            class="overflow-hidden"
+          >
+            <div
+              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
+            >
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  >
+                    Logo placement on Adoptium website
+                  </strong>
+                  <span
+                    class="font-normal"
+                  >
+                     and marketing collateral
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  >
+                    Speaking opportunities
+                  </strong>
+                  <span
+                    class="font-normal"
+                  >
+                     at Adoptium-sponsored events and conferences
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="grid items-center px-8 py-8 cursor-pointer "
+          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+        >
+          <div
+            class="text-white text-2xl font-semibold leading-8 col-span-4"
+          >
+            Content & thought leadership
+          </div>
+          <div
+            class="flex justify-end"
+          >
+            <button
+              aria-label="Expand section"
+              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
+        >
+          <div
+            class="overflow-hidden"
+          >
+            <div
+              class="pb-6 flex flex-col gap-2 "
+            >
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Option to issue a joint press release upon joining
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Opportunity to appoint a spokesperson to participate in analyst briefings and media outreach
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Featured participation in success stories, case studies, or blog series
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Submit content to Adoptium community news
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Amplification of your Adoptium-related news and announcements across Adoptium channels
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Opportunity for co-branded marketing materials in the community booths at industry events or digital assets at virtual events
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Priority keynote session at Adoptium Summit events
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Priority keynote session at Adoptium Summit events
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <svg
+                    class="rotate-45 text-[#FF1464]"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12h14"
+                    />
+                    <path
+                      d="M12 5v14"
+                    />
+                  </svg>
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Amplification of your Adoptium-related events across Adoptium channels
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Participation in Adoptium or EF community booths at industry events
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+              <div
+                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
+                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              >
+                <div
+                  class="text-white text-base leading-6 pr-4"
+                >
+                  <strong
+                    class="font-bold"
+                  />
+                  <span
+                    class="font-normal"
+                  >
+                    Opportunity to host open community meetups or Adoptium Summit webinar series
+                  </span>
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div
+                  class="flex justify-center items-center"
+                >
+                  <img
+                    alt="tick"
+                    height="24"
+                    src="/images/icons/tick.svg"
+                    width="24"
+                  />
+                </div>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div
     class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4"
   >
@@ -870,22 +2193,14 @@ exports[`Members page > renders correctly 1`] = `
     <img
       alt="gradient overlay"
       class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-      data-nimg="fill"
-      decoding="async"
       sizes="100vw"
-      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75"
-      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay.png&w=3840&q=75 3840w"
-      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      src="/images/backgrounds/gradient-overlay.png"
     />
     <img
       alt="gradient overlay mobile"
       class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-      data-nimg="fill"
-      decoding="async"
       sizes="100vw"
-      src="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75"
-      srcset="/_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbackgrounds%2Fgradient-overlay-mobile.png&w=3840&q=75 3840w"
-      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      src="/images/backgrounds/gradient-overlay-mobile.png"
     />
     <div
       class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
@@ -893,12 +2208,8 @@ exports[`Members page > renders correctly 1`] = `
       <img
         alt="message icon"
         class="!mb-0"
-        data-nimg="1"
-        decoding="async"
         height="120"
-        loading="lazy"
         src="/images/icons/message.svg"
-        style="color: transparent;"
         width="120"
       />
       <p
