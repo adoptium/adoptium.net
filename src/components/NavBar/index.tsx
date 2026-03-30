@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect, Fragment } from "react"
-import { Link, usePathname } from "@/i18n/navigation"
-import Image from "next/image"
+import React, { useState, useEffect, Fragment } from "react";
+import { Link, usePathname } from "@/i18n/navigation";
+import Image from "next/image";
 import {
   Dialog,
   DialogPanel,
@@ -11,27 +11,45 @@ import {
   MenuItem,
   MenuItems,
   Transition,
-} from "@headlessui/react"
-import { FaChevronDown, FaRegBell } from "react-icons/fa"
-import { BsXLg, BsList } from "react-icons/bs"
+} from "@headlessui/react";
+import { FaChevronDown, FaRegBell } from "react-icons/fa";
+import { BsXLg, BsList } from "react-icons/bs";
 
-import IconSocial from "@/components/IconSocial"
-import LanguageSelector from "@/components/LanguageSelector"
-import Announcements from "@/components/Announcements"
+import IconSocial from "@/components/IconSocial";
+import LanguageSelector from "@/components/LanguageSelector";
+import Announcements from "@/components/Announcements";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 interface NavItem {
-  name: string
-  href?: string
-  children?: NavItem[]
+  name: string;
+  href?: string;
+  children?: NavItem[];
 }
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 const navigation: NavItem[] = [
-  { name: "Join Us", href: "/join-us" },
+  {
+    name: "Join Us",
+    children: [
+      { name: "Become a Member", href: "/members" },
+      { name: "Our Members", href: "/members#strategic-sec" },
+      {
+        name: "Become an Individual Sustainer",
+        href: "https://www.eclipse.org/sponsor/adoptium/",
+      },
+      { name: "Become a Corporate Sustainer", href: "/become-a-sustainer" },
+      { name: "Our Sustainers", href: "/sustainers#temurin-sustainers" },
+      { name: "Contribute to Adoptium", href: "/contributing" },
+      {
+        name: "Become an Adopter",
+        href: "/adopters?open=adopter#become-adopter",
+      },
+      { name: "Our Adopters", href: "/adopters" },
+    ],
+  },
   { name: "Latest Releases", href: "/temurin/releases" },
   { name: "Marketplace", href: "/marketplace" },
   {
@@ -64,43 +82,59 @@ const navigation: NavItem[] = [
       { name: "Slack", href: "/slack" },
     ],
   },
-]
+];
 
 /**
  * A reusable mobile link component that renders a Link (if the href starts with "/")
  * or a regular <a> element. Both get the same classes.
  */
 const MobileLink: React.FC<{
-  href?: string
-  name: string
-  activePaths: Set<string>
-  onClick?: () => void
+  href?: string;
+  name: string;
+  activePaths: Set<string>;
+  onClick?: () => void;
 }> = ({ href, name, activePaths, onClick }) => {
   const commonClasses = classNames(
     "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
     href && activePaths.has(href) ? "text-rose-600" : "",
-  )
+  );
 
-  if (href && href.startsWith("/")) {
+  if (href && href.startsWith("http")) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={commonClasses}
+        onClick={onClick}
+      >
+        {name}
+      </a>
+    );
+  }
+
+  if (href && href.startsWith("/") && !href.includes("#")) {
     return (
       <Link href={href} className={commonClasses} onClick={onClick}>
         {name}
       </Link>
-    )
+    );
   }
+
+  // ✅ Internal links WITH hash → normal anchor (same tab)
   return (
     <a href={href} className={commonClasses} onClick={onClick}>
       {name}
     </a>
-  )
-}
+  );
+};
 
 /**
  * A tiny divider used between mobile nav items.
  */
 const MobileDivider: React.FC = () => (
   <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
-)
+);
 
 function calculateActivePaths(currentPath: string): Set<string> {
   if (!currentPath) return new Set();
@@ -108,34 +142,42 @@ function calculateActivePaths(currentPath: string): Set<string> {
   // Remove locale prefix from current path (e.g., /en-GB/docs/faq -> /docs/faq)
   const removeLocalePrefix = (pathname: string): string => {
     // Match patterns like /en-GB/, /de/, /es/, /fr/, /zh-CN/, etc.
-    const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//
-    return pathname.replace(localePattern, '/')
-  }
+    const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//;
+    return pathname.replace(localePattern, "/");
+  };
 
   const pathWithoutLocale = removeLocalePrefix(currentPath);
-  const normalizedCurrentPath = pathWithoutLocale.endsWith('/') ? pathWithoutLocale.slice(0, -1) : pathWithoutLocale;
+  const normalizedCurrentPath = pathWithoutLocale.endsWith("/")
+    ? pathWithoutLocale.slice(0, -1)
+    : pathWithoutLocale;
 
   // Get all navigation paths to find the most specific match
-  const allPaths: { path: string, normalizedPath: string }[] = [];
+  const allPaths: { path: string; normalizedPath: string }[] = [];
 
-  navigation.forEach(item => {
+  navigation.forEach((item) => {
     if (item.href) {
-      const normalizedPath = item.href.endsWith('/') ? item.href.slice(0, -1) : item.href;
+      const normalizedPath = item.href.endsWith("/")
+        ? item.href.slice(0, -1)
+        : item.href;
       allPaths.push({ path: item.href, normalizedPath });
     }
     if (item.children) {
-      item.children.forEach(child => {
+      item.children.forEach((child) => {
         if (child.href) {
-          const normalizedPath = child.href.endsWith('/') ? child.href.slice(0, -1) : child.href;
+          const normalizedPath = child.href.endsWith("/")
+            ? child.href.slice(0, -1)
+            : child.href;
           allPaths.push({ path: child.href, normalizedPath });
         }
-      })
+      });
     }
   });
 
   // Find all matching paths
-  const matchingPaths = allPaths.filter(({ normalizedPath }) =>
-    normalizedCurrentPath === normalizedPath || normalizedCurrentPath.startsWith(normalizedPath + '/')
+  const matchingPaths = allPaths.filter(
+    ({ normalizedPath }) =>
+      normalizedCurrentPath === normalizedPath ||
+      normalizedCurrentPath.startsWith(normalizedPath + "/"),
   );
 
   // If no matches, return empty set
@@ -143,7 +185,9 @@ function calculateActivePaths(currentPath: string): Set<string> {
 
   // Find the longest (most specific) matching path
   const longestMatch = matchingPaths.reduce((longest, current) =>
-    current.normalizedPath.length > longest.normalizedPath.length ? current : longest
+    current.normalizedPath.length > longest.normalizedPath.length
+      ? current
+      : longest,
   );
 
   // Only highlight the most specific match
@@ -151,21 +195,20 @@ function calculateActivePaths(currentPath: string): Set<string> {
 }
 
 const NavBar = ({ locale }: { locale: string }) => {
-
-  const [openedMenu, setOpenedMenu] = useState(undefined as undefined | string)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [showLastSlide, setShowLastSlide] = useState(false)
-  const [showAnnouncement, setShowAnnouncement] = useState(false)
-  const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null)
+  const [openedMenu, setOpenedMenu] = useState(undefined as undefined | string);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showLastSlide, setShowLastSlide] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
+  const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null);
   // To prevent hydration mismatch, we'll start with no active paths
-  const [activePaths, setActivePaths] = useState<Set<string>>(new Set())
+  const [activePaths, setActivePaths] = useState<Set<string>>(new Set());
   const pathname = usePathname();
 
   useEffect(() => {
     if (!mobileMenuOpen) {
-      setShowLastSlide(false)
+      setShowLastSlide(false);
     }
-  }, [mobileMenuOpen])
+  }, [mobileMenuOpen]);
 
   // Calculate active paths on client-side only after initial render
   useEffect(() => {
@@ -176,29 +219,30 @@ const NavBar = ({ locale }: { locale: string }) => {
   }, [pathname]);
 
   const openLastSlideHandler = (item: NavItem) => {
-    setShowLastSlide(true)
-    setActiveLastSlide(item)
-  }
+    setShowLastSlide(true);
+    setActiveLastSlide(item);
+  };
 
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0)
-    }
+      setScrolled(window.scrollY > 0);
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
-      className={`sticky inset-x-0 top-0 z-50 ${scrolled
-        ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl"
-        : ""
-        }`}
+      className={`sticky inset-x-0 top-0 z-50 ${
+        scrolled
+          ? "bg-[#200E46] border-b-2 border-[#3E3355]/85 backdrop-blur-xl"
+          : ""
+      }`}
     >
       {showAnnouncement && (
         <Announcements handleClose={() => setShowAnnouncement(false)} />
@@ -220,81 +264,199 @@ const NavBar = ({ locale }: { locale: string }) => {
           </Link>
           <div className="flex items-center gap-4">
             <div className="hidden lg:flex lg:gap-6 xl:gap-x-12">
-              {navigation.map(item =>
+              {navigation.map((item) =>
                 item.children ? (
-                  <Menu
-                    as="div"
-                    key={`desktop-${item.name}`}
-                    className="relative inline-block text-left"
-                  >
-                    <div>
-                      <MenuButton 
-                        className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
-                        onClick={() => setOpenedMenu(openedMenu === item.name ? undefined : item.name)}
-                      >
-                        {item.name}
-                        <FaChevronDown
-                          className="-mr-1 mt-1"
-                          aria-hidden="true"
-                        />
-                      </MenuButton>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                      show={openedMenu === item.name}
+                  item.name === "Join Us" ? (
+                    // ✅ MEGA MENU (Join Us)
+                    <Menu
+                      as="div"
+                      key={`desktop-${item.name}`}
+                      className="relative inline-block text-left"
                     >
-                      <MenuItems
-                        className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black/5 focus:outline-hidden"
-                        style={{ minWidth: "max-content" }}
+                      <div>
+                        <MenuButton
+                          className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 cursor-pointer"
+                          onClick={() =>
+                            setOpenedMenu(
+                              openedMenu === item.name ? undefined : item.name,
+                            )
+                          }
+                        >
+                          {item.name}
+                          <FaChevronDown className="-mr-1 mt-1" />
+                        </MenuButton>
+                      </div>
+
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 translate-y-2"
+                        enterTo="transform opacity-100 translate-y-0"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 translate-y-0"
+                        leaveTo="transform opacity-0 translate-y-2"
+                        show={openedMenu === item.name}
                       >
-                        <ClickAwayListener onClickAway={() => setOpenedMenu(undefined)}>
-                          <div className="py-6 px-4">
-                            {item.children.map(child => (
-                              <MenuItem key={`mobile-${child.name}`} as="div">
-                                {() => (
+                        <MenuItems className="fixed left-1/2 -translate-x-1/2 top-[80px] mt-4 w-max max-w-[1000px] bg-[#0E002A] shadow-lg rounded-md p-8 z-50">
+                          <ClickAwayListener
+                            onClickAway={() => setOpenedMenu(undefined)}
+                          >
+                            <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-8 gap-y-6">
+                              <div>
+                                <h3 className="text-xs uppercase text-blue-400 mb-3">
+                                  Membership
+                                </h3>
+                                <div className="space-y-2">
                                   <MobileLink
-                                    href={child.href}
-                                    name={child.name}
+                                    href="/members"
+                                    name="Become a Member"
                                     activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
-                                )}
-                              </MenuItem>
-                            ))}
-                          </div>
-                        </ClickAwayListener>
-                      </MenuItems>
-                    </Transition>
-                  </Menu>
+                                  <MobileLink
+                                    href="/members#strategic-sec"
+                                    name="Our Members"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <h3 className="text-xs uppercase text-blue-400 mb-3">
+                                  Sponsorship
+                                </h3>
+                                <div className="space-y-2">
+                                  <MobileLink
+                                    href="https://www.eclipse.org/sponsor/adoptium/"
+                                    name="Become an Individual Sustainer"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/become-a-sustainer"
+                                    name="Become a Corporate Sustainer"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/sustainers#temurin-sustainers"
+                                    name="Our Sustainers"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <h3 className="text-xs uppercase text-blue-400 mb-3">
+                                  Contribute
+                                </h3>
+                                <div className="space-y-2">
+                                  <MobileLink
+                                    href="/contributing"
+                                    name="Contribute to Adoptium"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <h3 className="text-xs uppercase text-blue-400 mb-3">
+                                  Adopt
+                                </h3>
+                                <div className="space-y-2">
+                                  <MobileLink
+                                    href="/adopters?open=adopter#become-adopter"
+                                    name="Become an Adopter"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/adopters"
+                                    name="Our Adopters"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </ClickAwayListener>
+                        </MenuItems>
+                      </Transition>
+                    </Menu>
+                  ) : (
+                    // ✅ EXISTING dropdown (unchanged)
+                    <Menu
+                      as="div"
+                      key={`desktop-${item.name}`}
+                      className="relative inline-block text-left"
+                    >
+                      <div>
+                        <MenuButton
+                          className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                          onClick={() =>
+                            setOpenedMenu(
+                              openedMenu === item.name ? undefined : item.name,
+                            )
+                          }
+                        >
+                          {item.name}
+                          <FaChevronDown className="-mr-1 mt-1" />
+                        </MenuButton>
+                      </div>
+
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
+                        show={openedMenu === item.name}
+                      >
+                        <MenuItems
+                          className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+                          style={{ minWidth: "max-content" }}
+                        >
+                          <ClickAwayListener
+                            onClickAway={() => setOpenedMenu(undefined)}
+                          >
+                            <div className="py-6 px-4">
+                              {item.children.map((child) => (
+                                <MenuItem key={child.name}>
+                                  {() => (
+                                    <MobileLink
+                                      href={child.href}
+                                      name={child.name}
+                                      activePaths={activePaths}
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                  )}
+                                </MenuItem>
+                              ))}
+                            </div>
+                          </ClickAwayListener>
+                        </MenuItems>
+                      </Transition>
+                    </Menu>
+                  )
                 ) : item.href ? (
                   <Link
                     key={`desktop-${item.name}`}
                     href={item.href}
                     className={classNames(
                       "text-sm font-semibold leading-6 text-white-900",
-                      item.href && activePaths.has(item.href) ? "text-rose-600" : ""
+                      item.href && activePaths.has(item.href)
+                        ? "text-rose-600"
+                        : "",
                     )}
                   >
                     {item.name}
                   </Link>
-                ) : (
-                  <a
-                    key={`desktop-${item.name}`}
-                    href={item.href}
-                    className={classNames(
-                      "text-sm font-semibold leading-6 text-white-900",
-                      item.href && activePaths.has(item.href) ? "text-rose-600" : ""
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                ),
+                ) : null,
               )}
             </div>
             <div className="flex space-x-3 h-12">
@@ -362,8 +524,9 @@ const NavBar = ({ locale }: { locale: string }) => {
           <div className="mt-6 grow relative w-full h-full overflow-hidden flow-root">
             {/* Mobile menu – main navigation */}
             <div
-              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${showLastSlide ? "left-[-100%]" : ""
-                }`}
+              className={`-my-6 absolute duration-200 h-full left-0 w-full divide-y divide-white-500/10 ${
+                showLastSlide ? "left-[-100%]" : ""
+              }`}
             >
               <div className="space-y-2 py-6">
                 {navigation.map((item, index) => (
@@ -410,8 +573,9 @@ const NavBar = ({ locale }: { locale: string }) => {
 
             {/* Mobile menu – last slide (child links) */}
             <div
-              className={`absolute duration-200 w-full h-full ${showLastSlide ? "left-0" : "left-full"
-                }`}
+              className={`absolute duration-200 w-full h-full ${
+                showLastSlide ? "left-0" : "left-full"
+              }`}
             >
               <div
                 onClick={() => setShowLastSlide(false)}
@@ -523,7 +687,7 @@ const NavBar = ({ locale }: { locale: string }) => {
         </DialogPanel>
       </Dialog>
     </header>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
