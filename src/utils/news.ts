@@ -70,9 +70,10 @@ async function getAllNewsData(includeEF: boolean) {
 }
 
 /**
- * Unified data pipeline used by page-level rendering.
- * Fetches once, derives filters, applies filtering, sorting, and pagination.
- */
+  Unified data pipeline used by page-level rendering.
+    Fetches all posts once, normalizes author data, derives filter options,
+    applies filtering, sorting, and pagination.
+ **/
 export async function getNewsPageData({
   numPosts = 9,
   page = 1,
@@ -88,8 +89,42 @@ export async function getNewsPageData({
   author?: string;
   source?: "adoptium" | "eclipse";
 }) {
-  const allBlogs = await getAllNewsData(includeEF);
+  const rawBlogs = await getAllNewsData(includeEF);
 
+  const tagSet = new Set<string>();
+  const authorSet = new Set<string>();
+
+  const allBlogs = rawBlogs.map((post) => {
+    let normalizedPost = post;
+
+    // Normalize markdown authors
+    if (!post.metadata.tags?.includes("eclipse-news")) {
+      const slug = post.metadata.author;
+
+      if (slug) {
+        const authorData = getFormattedAuthorData(slug);
+
+        normalizedPost = {
+          ...post,
+          metadata: {
+            ...post.metadata,
+            author: authorData?.name || slug,
+          },
+        };
+      }
+    }
+
+    // Derive filter options during same pass
+    normalizedPost.metadata.tags?.forEach((t) => {
+      if (t) tagSet.add(t);
+    });
+
+    if (normalizedPost.metadata.author) {
+      authorSet.add(normalizedPost.metadata.author);
+    }
+
+    return normalizedPost;
+  });
   // ---------------------------------
   // DERIVE FILTER OPTIONS (FULL DATASET)
   // ---------------------------------
@@ -104,18 +139,6 @@ export async function getNewsPageData({
           .filter(Boolean)
       : [];
 
-  const tagSet = new Set<string>();
-  const authorSet = new Set<string>();
-
-  allBlogs.forEach((post) => {
-    post.metadata.tags?.forEach((t) => {
-      if (t) tagSet.add(t);
-    });
-
-    if (post.metadata.author) {
-      authorSet.add(post.metadata.author);
-    }
-  });
   const tags = Array.from(tagSet).sort();
   const authors = Array.from(authorSet).sort();
 
@@ -123,26 +146,7 @@ export async function getNewsPageData({
   // APPLY FILTERING (DISPLAY DATASET)
   // ---------------------------------
 
-  let blogs = allBlogs.map((post) => {
-    // Only normalize markdown blog authors
-    if (!post.metadata.tags?.includes("eclipse-news")) {
-      const slug = post.metadata.author;
-
-      if (!slug) return post;
-
-      const authorData = getFormattedAuthorData(slug);
-
-      return {
-        ...post,
-        metadata: {
-          ...post.metadata,
-          author: authorData?.name || slug,
-        },
-      };
-    }
-
-    return post;
-  });
+  let blogs = [...allBlogs];
 
   if (source === "adoptium") {
     blogs = blogs.filter(
@@ -167,14 +171,22 @@ export async function getNewsPageData({
   }
 
   if (author) {
-    blogs = blogs.filter((post) => post.metadata.author === author);
+    const normalizedAuthor = author.toLowerCase().replace(/\s+/g, "");
+
+    blogs = blogs.filter((post) => {
+      const postAuthor = post.metadata.author
+        ?.toLowerCase()
+        .replace(/\s+/g, "");
+
+      return postAuthor === normalizedAuthor;
+    });
   }
 
   // ---------------------------------
   // SORTING
   // ---------------------------------
 
-  const sortedBlogs = blogs.sort((a, b) => {
+  const sortedBlogs = [...blogs].sort((a, b) => {
     const dateA = new Date(a.metadata.date).getTime();
     const dateB = new Date(b.metadata.date).getTime();
     return dateB - dateA;
@@ -184,11 +196,13 @@ export async function getNewsPageData({
   // PAGINATION
   // ---------------------------------
 
-  const totalPages = Math.ceil(sortedBlogs.length / numPosts);
+  const totalPages = Math.max(1, Math.ceil(sortedBlogs.length / numPosts));
+
+  const safePage = Math.min(Math.max(page, 1), totalPages);
 
   const paginatedPosts = sortedBlogs.slice(
-    (page - 1) * numPosts,
-    page * numPosts,
+    (safePage - 1) * numPosts,
+    safePage * numPosts,
   );
 
   return {
