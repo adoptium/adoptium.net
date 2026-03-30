@@ -91,12 +91,10 @@ const navigation: NavItem[] = [
 const MobileLink: React.FC<{
   href?: string;
   name: string;
-  activePaths: Set<string>;
   onClick?: () => void;
-}> = ({ href, name, activePaths, onClick }) => {
+}> = ({ href, name, onClick }) => {
   const commonClasses = classNames(
     "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
-    href && activePaths.has(href) ? "text-rose-600" : "",
   );
 
   if (href && href.startsWith("http")) {
@@ -267,7 +265,6 @@ const NavBar = ({ locale }: { locale: string }) => {
               {navigation.map((item) =>
                 item.children ? (
                   item.name === "Join Us" ? (
-                    // ✅ MEGA MENU (Join Us)
                     <Menu
                       as="div"
                       key={`desktop-${item.name}`}
@@ -310,13 +307,11 @@ const NavBar = ({ locale }: { locale: string }) => {
                                   <MobileLink
                                     href="/members"
                                     name="Become a Member"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                   <MobileLink
                                     href="/members#strategic-sec"
                                     name="Our Members"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                 </div>
@@ -330,19 +325,16 @@ const NavBar = ({ locale }: { locale: string }) => {
                                   <MobileLink
                                     href="https://www.eclipse.org/sponsor/adoptium/"
                                     name="Become an Individual Sustainer"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                   <MobileLink
                                     href="/become-a-sustainer"
                                     name="Become a Corporate Sustainer"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                   <MobileLink
                                     href="/sustainers#temurin-sustainers"
                                     name="Our Sustainers"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                 </div>
@@ -356,7 +348,6 @@ const NavBar = ({ locale }: { locale: string }) => {
                                   <MobileLink
                                     href="/contributing"
                                     name="Contribute to Adoptium"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                 </div>
@@ -370,13 +361,11 @@ const NavBar = ({ locale }: { locale: string }) => {
                                   <MobileLink
                                     href="/adopters?open=adopter#become-adopter"
                                     name="Become an Adopter"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                   <MobileLink
                                     href="/adopters"
                                     name="Our Adopters"
-                                    activePaths={activePaths}
                                     onClick={() => setOpenedMenu(undefined)}
                                   />
                                 </div>
@@ -387,7 +376,6 @@ const NavBar = ({ locale }: { locale: string }) => {
                       </Transition>
                     </Menu>
                   ) : (
-                    // ✅ EXISTING dropdown (unchanged)
                     <Menu
                       as="div"
                       key={`desktop-${item.name}`}
@@ -431,7 +419,6 @@ const NavBar = ({ locale }: { locale: string }) => {
                                     <MobileLink
                                       href={child.href}
                                       name={child.name}
-                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                   )}
@@ -560,7 +547,6 @@ const NavBar = ({ locale }: { locale: string }) => {
                         <MobileLink
                           href={item.href}
                           name={item.name}
-                          activePaths={activePaths}
                           onClick={() => setMobileMenuOpen(false)}
                         />
                       </div>
@@ -625,7 +611,6 @@ const NavBar = ({ locale }: { locale: string }) => {
                         <MobileLink
                           href={item.href}
                           name={item.name}
-                          activePaths={activePaths}
                           onClick={() => setMobileMenuOpen(false)}
                         />
                       </div>
