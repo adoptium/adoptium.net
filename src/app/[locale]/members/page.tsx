@@ -7,6 +7,7 @@ import Logos, { LogoType } from "@/components/Logos";
 import KeyInitiatives from "@/components/Sustainers/KeyInitiatives";
 import MembershipLevels from "@/components/MembershipLevels";
 import CommonButton from "@/components/Common/CommonButton";
+import MemberBenefits from "@/components/MemberBenefits";
 
 export const metadata: Metadata = {
   title: "Become a Member",
@@ -236,6 +237,8 @@ export default function MembersPage() {
         title="Participant Members"
         // description="Participant Members are typically organizations that deliver products or services based on Adoptium technology. These organizations want to participate in the evolution of the Eclipse Adoptium ecosystem to ensure it continues to meet their needs."
       />
+
+      <MemberBenefits />
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4">
         <p className="text-[20px] leading-[28px] text-white my-0 text-center">
