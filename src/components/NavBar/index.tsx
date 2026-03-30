@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, Fragment } from "react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   Dialog,
@@ -119,7 +119,7 @@ const MobileLink: React.FC<{
     );
   }
 
-  // ✅ Internal links WITH hash → normal anchor (same tab)
+  // Internal links WITH hash → normal anchor (same tab)
   return (
     <a href={href} className={commonClasses} onClick={onClick}>
       {name}
@@ -134,73 +134,12 @@ const MobileDivider: React.FC = () => (
   <div className="w-full px-3 bg-[#3E3355] h-[1px]"></div>
 );
 
-function calculateActivePaths(currentPath: string): Set<string> {
-  if (!currentPath) return new Set();
-
-  // Remove locale prefix from current path (e.g., /en-GB/docs/faq -> /docs/faq)
-  const removeLocalePrefix = (pathname: string): string => {
-    // Match patterns like /en-GB/, /de/, /es/, /fr/, /zh-CN/, etc.
-    const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//;
-    return pathname.replace(localePattern, "/");
-  };
-
-  const pathWithoutLocale = removeLocalePrefix(currentPath);
-  const normalizedCurrentPath = pathWithoutLocale.endsWith("/")
-    ? pathWithoutLocale.slice(0, -1)
-    : pathWithoutLocale;
-
-  // Get all navigation paths to find the most specific match
-  const allPaths: { path: string; normalizedPath: string }[] = [];
-
-  navigation.forEach((item) => {
-    if (item.href) {
-      const normalizedPath = item.href.endsWith("/")
-        ? item.href.slice(0, -1)
-        : item.href;
-      allPaths.push({ path: item.href, normalizedPath });
-    }
-    if (item.children) {
-      item.children.forEach((child) => {
-        if (child.href) {
-          const normalizedPath = child.href.endsWith("/")
-            ? child.href.slice(0, -1)
-            : child.href;
-          allPaths.push({ path: child.href, normalizedPath });
-        }
-      });
-    }
-  });
-
-  // Find all matching paths
-  const matchingPaths = allPaths.filter(
-    ({ normalizedPath }) =>
-      normalizedCurrentPath === normalizedPath ||
-      normalizedCurrentPath.startsWith(normalizedPath + "/"),
-  );
-
-  // If no matches, return empty set
-  if (matchingPaths.length === 0) return new Set();
-
-  // Find the longest (most specific) matching path
-  const longestMatch = matchingPaths.reduce((longest, current) =>
-    current.normalizedPath.length > longest.normalizedPath.length
-      ? current
-      : longest,
-  );
-
-  // Only highlight the most specific match
-  return new Set([longestMatch.path]);
-}
-
 const NavBar = ({ locale }: { locale: string }) => {
   const [openedMenu, setOpenedMenu] = useState(undefined as undefined | string);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showLastSlide, setShowLastSlide] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(false);
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null);
-  // To prevent hydration mismatch, we'll start with no active paths
-  const [activePaths, setActivePaths] = useState<Set<string>>(new Set());
-  const pathname = usePathname();
 
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -209,12 +148,6 @@ const NavBar = ({ locale }: { locale: string }) => {
   }, [mobileMenuOpen]);
 
   // Calculate active paths on client-side only after initial render
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const paths = calculateActivePaths(pathname);
-      setActivePaths(paths);
-    }
-  }, [pathname]);
 
   const openLastSlideHandler = (item: NavItem) => {
     setShowLastSlide(true);
@@ -436,9 +369,6 @@ const NavBar = ({ locale }: { locale: string }) => {
                     href={item.href}
                     className={classNames(
                       "text-sm font-semibold leading-6 text-white-900",
-                      item.href && activePaths.has(item.href)
-                        ? "text-rose-600"
-                        : "",
                     )}
                   >
                     {item.name}
