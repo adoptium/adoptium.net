@@ -1,8 +1,8 @@
 ---
-title: Celebrating Technical Achievements: 2025 Q4 Engineering milestones and community contributions
+title: "Celebrating Technical Achievements: 2025 Q4 Engineering milestones and community contributions"
 date: "2026-03-30"
 author: pmc
-description: A summary from the Adoptium PMC that highlights notable technical achievements with large positive impact on the project, including infrastructure optimisations, release delivery time improvements, and package hardening achieved in the final quarter of 2025.
+description: "A summary from the Adoptium PMC that highlights notable technical achievements with large positive impact on the project, including infrastructure optimisations, release delivery time improvements, and package hardening achieved in the final quarter of 2025."
 tags:
   - Adoptium
   - announcement
