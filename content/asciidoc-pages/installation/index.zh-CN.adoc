@@ -1,0 +1,22 @@
+= 安装 Eclipse Temurin(TM)
+:page-authors: gdams, karianna, tellison, NickJavaDev88
+:page-description: 下载并安装 Eclipse Temurin，一个开源的 OpenJDK 发行版。
+:page-keywords: java, jdk, jre, openjdk, eclipse temurin, 安装, 下载
+
+link:/temurin/releases[Eclipse Temurin] 提供多种安装包格式下载：
+
+* 包管理器（如上所示）
+* link:#_installers[安装程序]
+* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[编程 API]
+* link:/installation/archives[压缩归档文件]
+* link:https://hub.docker.com/_/eclipse-temurin[容器镜像]（DockerHub 上的外部文档）
+
+二进制文件支持 link:/supported-platforms[支持的平台] 中列出的架构和操作系统。如果您正在迁移到 Temurin，可以在我们的 link:/docs/migration[迁移指南] 中了解 Oracle JDK 和 Temurin 之间的差异以及您可能需要采取的任何步骤。
+
+== 安装程序
+
+目前提供 Windows(R) 和 macOS(R) JDK 和 JRE 包的安装程序。安装步骤包含在以下部分中：
+
+* link:/installation/windows[Windows MSI 安装包]
+* link:/installation/macOS[macOS PKG 安装包]
+* link:/installation/linux[Linux (RPM/DEB/APK) 安装包]

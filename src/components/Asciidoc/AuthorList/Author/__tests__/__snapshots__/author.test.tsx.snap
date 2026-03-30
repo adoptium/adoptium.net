@@ -13,13 +13,8 @@ exports[`Author component > renders correctly 1`] = `
     <img
       alt="test-author"
       class="rounded-full border-solid border-4 border-purple mb-6"
-      data-nimg="1"
-      decoding="async"
       height="60"
-      loading="lazy"
-      src="/_next/image?url=https%3A%2F%2Fgithub.com%2Ftest-author.png%3Fsize%3D60&w=128&q=75"
-      srcset="/_next/image?url=https%3A%2F%2Fgithub.com%2Ftest-author.png%3Fsize%3D60&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Fgithub.com%2Ftest-author.png%3Fsize%3D60&w=128&q=75 2x"
-      style="color: transparent;"
+      src="https://github.com/test-author.png?size=60"
       width="60"
     />
   </a>

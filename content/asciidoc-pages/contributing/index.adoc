@@ -47,7 +47,7 @@ After signing the ECA, you can propose contributions by sending pull requests (P
 
 If this is your first time contributing to the project, fork the repo by clicking on the Fork button in the top-right corner of the git repo page. This creates a copy of the repo under your GitHub account: https://github.com/<YourGitUserName>/aqa-tests.git
 
-Git clone the your repo:
+Git clone your repo:
 
 [source, bash]
 ----
@@ -116,6 +116,3 @@ If you have been given access to run test jobs in our Jenkins server, run https:
 Ensure all related Grinder jobs pass and provide the Grinder links in the PR comment. Your changes must also pass the auto PR builds that will be applied to your pull request.
 
 Convert PR to `Ready for review` once the PR is ready.
-
-== Contact
-Contact the Eclipse Foundation Webdev team via webdev@eclipse-foundation.org.

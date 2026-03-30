@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AuthorNewsPage > renders news and header for author when posts exist 1`] = `
+exports[`AuthorNewsPage > renders header and news when posts exist 1`] = `
 <div>
   <div>
     <script
       type="application/ld+json"
     >
-      {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","description":"No biography available","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jane-doe"},{"@type":"CollectionPage","@id":"https://adoptium.net/news/author/jane-doe","name":"Posts by Jane Doe","url":"https://adoptium.net/news/author/jane-doe","mainEntity":[{"@type":"BlogPosting","headline":"Author News","url":"https://adoptium.net/news/undefined/undefined/author-news","datePublished":"2025-06-18T00:00:00.000Z"}]}]}
+      {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","description":"No biography available","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jane-doe"},{"@type":"CollectionPage","@id":"https://adoptium.net/news/author/jane-doe","name":"Posts by Jane Doe","url":"https://adoptium.net/news/author/jane-doe","mainEntity":[{"@type":"BlogPosting","headline":"Author News","url":"https://adoptium.net/news/2025/06/author-news","datePublished":"2025-06-18T00:00:00.000Z"}]}]}
     </script>
     <div
       class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
@@ -83,13 +83,8 @@ exports[`AuthorNewsPage > renders news and header for author when posts exist 1`
               <img
                 alt="Jane Doe"
                 class="ml-2 mb-0 rounded-full"
-                data-nimg="1"
-                decoding="async"
                 height="50"
-                loading="lazy"
-                src="/_next/image?url=%2Fimages%2Fauthors%2Fjane-doe.jpg&w=128&q=75"
-                srcset="/_next/image?url=%2Fimages%2Fauthors%2Fjane-doe.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fauthors%2Fjane-doe.jpg&w=128&q=75 2x"
-                style="color: transparent;"
+                src="/images/authors/jane-doe.jpg"
                 width="50"
               />
             </div>
@@ -115,25 +110,20 @@ exports[`AuthorNewsPage > renders news and header for author when posts exist 1`
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
       >
         <div
-          class="flex flex-col max-w-[385px] w-full sm:w-[385px] min-h-[600px] rounded-3xl newscard-2 bg-[#200D46]"
+          class="flex flex-col w-full rounded-3xl newscard-2 bg-[#200D46]"
         >
           <img
             alt="blog banner image"
             class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-            data-nimg="1"
-            decoding="async"
             height="200"
-            loading="lazy"
-            src="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Fauthor-news%2Fopengraph-image&w=828&q=75"
-            srcset="/_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Fauthor-news%2Fopengraph-image&w=640&q=75 1x, /_next/image?url=%2Fnews%2Fundefined%2Fundefined%2Fauthor-news%2Fopengraph-image&w=828&q=75 2x"
-            style="color: transparent;"
+            src="/news/2025/06/author-news/opengraph-image"
             width="385"
           />
           <div
-            class="p-8 flex flex-col h-[400px]"
+            class="p-8 flex flex-col flex-1"
           >
             <h3
-              class="text-[24px] font-semibold leading-normal h-auto line-clamp-3 mb-2"
+              class="text-[24px] font-semibold leading-normal line-clamp-3 mb-2"
               title="Author News"
             >
               Author News
@@ -147,10 +137,15 @@ exports[`AuthorNewsPage > renders news and header for author when posts exist 1`
                 <span>
                   June 18, 2025
                 </span>
+                <span
+                  class="text-sm text-pink-500"
+                >
+                  Jane Doe
+                </span>
               </h3>
             </div>
             <div
-              class="flex-grow overflow-hidden mb-4"
+              class="flex-grow mb-4"
             >
               <p
                 class="line-clamp-4 text-base text-gray-200"

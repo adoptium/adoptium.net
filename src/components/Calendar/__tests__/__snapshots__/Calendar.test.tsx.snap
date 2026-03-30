@@ -1,0 +1,89 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Calendar > matches snapshot 1`] = `
+<div
+  class="mx-auto max-w-3xl px-6 lg:px-8 mb-12"
+>
+  <div
+    class="bg-blue/20 border border-pink/30 rounded-lg p-8 backdrop-blur-sm"
+  >
+    <h3
+      class="text-2xl font-semibold text-white mb-4 flex items-center gap-3"
+    >
+      <svg
+        class="w-6 h-6 text-pink"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+      Adoptium Community Calendar
+    </h3>
+    <p
+      class="text-grey mb-6 leading-relaxed"
+    >
+      Stay up to date with the Adoptium Community meetings, catch up with community members, and share your ideas and work-in-progress.
+    </p>
+    <div
+      class="flex flex-col sm:flex-row gap-4"
+    >
+      <a
+        class="inline-flex items-center justify-center px-6 py-3 bg-pink text-white font-semibold rounded-lg hover:bg-pink/80 transform hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-purple"
+        href="https://calendar.google.com/calendar/embed?src=c_uannoums5ho0olhjk3ulecdkbc%40group.calendar.google.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View Calendar
+        <svg
+          class="ml-2 w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+      <a
+        class="inline-flex items-center justify-center px-6 py-3 border-2 border-pink/60 text-pink font-semibold rounded-lg hover:border-pink hover:bg-pink hover:text-white transform hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-purple"
+        href="https://calendar.google.com/calendar/ical/c_uannoums5ho0olhjk3ulecdkbc%40group.calendar.google.com/public/basic.ics"
+      >
+        Subscribe to iCal
+        <svg
+          class="ml-2 w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+    </div>
+    <p
+      class="text-sm text-grey/80 mt-4 leading-relaxed"
+    >
+      <strong
+        class="text-white"
+      >
+        What you'll find:
+      </strong>
+       What you will find: Community Calls: General, Security, AQAvit, Website, other technical team, Release dates, and other community online meetings.
+    </p>
+  </div>
+</div>
+`;

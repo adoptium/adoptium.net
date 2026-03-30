@@ -1,0 +1,122 @@
+= 贡献给 Adoptium(R)
+:page-authors: Ndacyayisenga-droid, NickJavaDev88
+
+感谢您对本项目的关注。
+
+== 项目描述
+
+Adoptium 是一个开源项目，专注于提供高质量、生产就绪的 Java 开发工具包 (JDK) 发行版及相关技术。该项目的主要目标是创建一个供应商中立、社区驱动的 OpenJDK 发行版，OpenJDK 是 Java 平台标准版 (Java SE) 的开源实现。
+
+Adoptium 旨在为用户提供跨不同平台（包括 Windows、macOS、Linux 等）的可靠且经过充分测试的 OpenJDK 构建。该项目与 OpenJDK 社区紧密合作，并受益于包括开发人员、组织和 Java 爱好者在内的多元化贡献者群体的专业知识。
+
+Adoptium 的关键目标之一是让开发人员和组织更容易访问和使用 OpenJDK 构建。它提供经过彻底测试的预构建二进制文件，确保稳定性和兼容性。这些二进制文件免费提供，使开发人员能够方便地在他们的项目中采用和使用 OpenJDK，没有任何许可限制。
+
+Adoptium 还提供长期支持 (LTS) 构建，专为需要稳定可靠的 Java 运行环境的企业和组织设计。LTS 构建会定期收到更新和安全补丁，确保 Java 平台的长久性和维护。
+
+总的来说，Adoptium 旨在提供一个值得信赖且易于访问的 OpenJDK 发行版，促进 Java 生态系统内的透明度、协作和社区驱动的创新。
+
+- https://github.com/adoptium
+
+== 开发者资源
+
+Adoptium 项目维护以下源代码仓库：
+
+- https://github.com/adoptium/temurin-build
+- https://github.com/adoptium/aqa-tests
+- https://github.com/adoptium/installer
+- https://github.com/adoptium/adoptium-support
+- https://github.com/adoptium/containers
+- https://github.com/adoptium/adoptium.net
+- 以及许多 https://github.com/adoptium/[其他仓库]
+
+== Eclipse 贡献者协议
+
+在项目团队接受您的贡献之前，贡献者必须以电子方式签署 Eclipse 贡献者协议 (ECA)。
+
+- http://www.eclipse.org/legal/ECA.php
+
+由非提交者提供的提交必须在页脚中包含 Signed-off-by 字段，表明作者知晓贡献提供给项目的条款。非提交者还必须拥有 Eclipse 基金会账户，并且必须存档已签署的 https://adoptium.net/docs/eca-sign-off[Eclipse 贡献者协议] (ECA)。
+
+有关更多信息，请参阅 https://www.eclipse.org/projects/handbook/#resources-commit[Eclipse 提交者手册] 和 Adoptium 文档：
+
+== 向 Adoptium 提交贡献
+
+签署 ECA 后，您可以通过 GitHub 发送拉取请求 (PR) 来提议贡献。
+
+**注意：** 假设我们要向 `aqa-tests` 仓库贡献代码
+
+如果是第一次向该项目贡献代码，请点击 git 仓库页面右上角的 Fork 按钮复刻该仓库。这将在您的 GitHub 账户下创建该仓库的副本：https://github.com/<YourGitUserName>/aqa-tests.git
+
+Git 克隆您的仓库：
+
+[source, bash]
+----
+git clone https://github.com/<YourGitUserName>/aqa-tests.git
+----
+
+创建一个新分支进行工作：
+
+[source, bash]
+----
+cd aqa-tests
+git checkout -b my_new_branch
+----
+
+- 添加 https://github.com/adoptium/aqa-tests.git 作为您的上游仓库：
+
+[source, bash]
+----
+git remote add upstream https://github.com/adoptium/aqa-tests.git
+----
+
+在开始处理问题之前，请确保本地分支是最新的：
+
+[source, bash]
+----
+git fetch upstream
+git rebase upstream/master
+----
+
+完成工作后，跟踪您的更改并提交。
+
+[source, bash]
+----
+git add .
+git commit -s -m "关于此 PR 的信息"
+----
+
+- 提交信息示例：
+
+[source]
+----
+Update jtreg in openjdk test
+This patch updates jtreg version from 5.1 to 6.1.
+Fixes: #1234
+Signed-off-by: Full Name <email>
+----
+
+- 第一行是 PR 标题。它应该描述所做的更改。请保持简短明了。
+- 正文应包含有关您的 PR 的详细信息。您可能希望包含设计、理由以及对所做更改的简要说明。请保持简洁。
+- 当提交有相关问题时，请使用 Git 关键字自动关闭或关联问题。 https://help.github.com/articles/closing-issues-using-keywords/
+- 请在页脚中签署您的提交。这可以通过向 git commit 传递 -s 来自动添加到您的提交中（见上例）。
+
+将更改推送到您的 Git 仓库：
+
+[source, bash]
+----
+git push origin my_new_branch
+----
+
+- 如果需要覆盖 git 历史记录，可以在 git push 中使用 -f。请谨慎使用此标志。
+
+我们鼓励您尽早通过 `Create draft pull request`（创建草稿拉取请求）选项打开拉取请求。这允许其他人检查 PR，获得早期反馈，并有助于创建更好的最终产品。
+
+如果您已被授予在我们的 Jenkins 服务器中运行测试作业的权限，请运行 https://ci.adoptium.net/job/Grinder/[Grinder] 来验证您的 PR。如果您没有权限，您的 PR 审查者将运行一些测试。审查者可能会根据您在 PR 中所做的更改要求您运行额外的测试。
+
+确保所有相关的 Grinder 作业都通过，并在 PR 评论中提供 Grinder 链接。您的更改还必须通过将应用于您的拉取请求的自动 PR 构建。
+
+一旦 PR 准备就绪，请将 PR 转换为 `Ready for review`（准备审查）。
+
+== 联系方式
+
+通过 webdev@eclipse-foundation.org 联系 Eclipse 基金会 Web 开发团队。

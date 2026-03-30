@@ -1,11 +1,9 @@
-import { useTranslations } from "next-intl"
-import UiMobileScroll from "./mobile"
-import UiVirtualContent from "./UiVirtualContent"
-
-import "./UiVirtualScroll.css"
+import { useTranslations } from "next-intl";
+import UiMobileScroll from "./mobile";
+import UiVirtualContent from "./UiVirtualContent";
 
 const UiVirtualScroll = () => {
-  const t = useTranslations("PowerOfTemurin")
+  const t = useTranslations("PowerOfTemurin");
   const data = [
     {
       title: t("benefits.performance.title"),
@@ -22,7 +20,7 @@ const UiVirtualScroll = () => {
       description: t("benefits.developers.description"),
       image: "feature-layers.svg",
     },
-  ]
+  ];
   return (
     <>
       <UiMobileScroll data={data} />
@@ -30,7 +28,7 @@ const UiVirtualScroll = () => {
         <UiVirtualContent data={data} />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default UiVirtualScroll
+export default UiVirtualScroll;
