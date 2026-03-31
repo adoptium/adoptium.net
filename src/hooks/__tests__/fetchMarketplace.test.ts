@@ -76,9 +76,6 @@ describe("getAllPkgsForVersion", () => {
     expect(getImageForDistribution("temurin")).toBe(
       "/images/vendors/adoptium-logo.png"
     );
-    expect(getImageForDistribution("redhat")).toBe(
-      "/images/members/redhat.svg"
-    );
     expect(getImageForDistribution("zulu")).toBe(
       "/images/vendors/azul-logo.png"
     );

@@ -376,7 +376,7 @@ exports[`Members page > renders correctly 1`] = `
               class="list-disc list-inside space-y-2 text-left"
             >
               <li>
-                Collaborate with leading Java vendors like Microsoft, Red Hat, IBM, Google, Alibaba, and Rivos.
+                Collaborate with leading Java vendors like Microsoft, IBM, Google, Alibaba, and Rivos.
               </li>
               <li>
                 Ensure your enterprise use cases shape the future quality standards of Java.
