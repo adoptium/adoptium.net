@@ -94,7 +94,7 @@ const MobileLink: React.FC<{
   onClick?: () => void;
 }> = ({ href, name, onClick }) => {
   const commonClasses = classNames(
-    "-mx-3 block rounded-lg px-3 py-2 text-[20px] font-normal leading-7 text-white-900 hover:bg-white-50",
+    "-mx-3 block rounded-lg px-2.5 py-1.5 text-[16px] font-normal leading-6 text-white-900 hover:bg-white-50",
   );
 
   if (href && href.startsWith("http")) {
@@ -205,7 +205,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                     >
                       <div>
                         <MenuButton
-                          className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 cursor-pointer"
+                          className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
                           onClick={() =>
                             setOpenedMenu(
                               openedMenu === item.name ? undefined : item.name,
@@ -220,88 +220,101 @@ const NavBar = ({ locale }: { locale: string }) => {
                       <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 translate-y-2"
-                        enterTo="transform opacity-100 translate-y-0"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
                         leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 translate-y-0"
-                        leaveTo="transform opacity-0 translate-y-2"
                         show={openedMenu === item.name}
                       >
-                        <MenuItems className="fixed left-1/2 -translate-x-1/2 top-[80px] mt-4 w-max max-w-[1000px] bg-[#0E002A] shadow-lg rounded-md p-8 z-50">
+                        <MenuItems className="fixed left-1/2 -translate-x-1/2 top-[80px] mt-4 w-max max-w-[1000px] bg-[#0E002A] shadow-lg rounded-md p-5 z-50 outline-none border-none focus:outline-none focus:ring-0">
                           <ClickAwayListener
                             onClickAway={() => setOpenedMenu(undefined)}
                           >
-                            <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-8 gap-y-6">
-                              <div>
-                                <h3 className="text-xs uppercase text-blue-400 mb-3">
-                                  Membership
-                                </h3>
-                                <div className="space-y-2">
-                                  <MobileLink
-                                    href="/members"
-                                    name="Become a Member"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                  <MobileLink
-                                    href="/members#strategic-sec"
-                                    name="Our Members"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
+                            <div className="flex flex-col gap-4">
+                              {/* Grid */}
+                              <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-5 gap-y-3">
+                                <div>
+                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-1">
+                                    Membership
+                                  </h3>
+                                  <div className="space-y-1">
+                                    <MobileLink
+                                      href="/members"
+                                      name="Become a Member"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                    <MobileLink
+                                      href="/members#strategic-sec"
+                                      name="Our Members"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-2">
+                                    Sponsorship
+                                  </h3>
+                                  <div className="space-y-1">
+                                    <MobileLink
+                                      href="https://www.eclipse.org/sponsor/adoptium/"
+                                      name="Become an Individual Sustainer"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                    <MobileLink
+                                      href="/become-a-sustainer"
+                                      name="Become a Corporate Sustainer"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                    <MobileLink
+                                      href="/sustainers#temurin-sustainers"
+                                      name="Our Sustainers"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-2">
+                                    Contribute
+                                  </h3>
+                                  <div className="space-y-1">
+                                    <MobileLink
+                                      href="/contributing"
+                                      name="Contribute to Adoptium"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-2">
+                                    Adopt
+                                  </h3>
+                                  <div className="space-y-1">
+                                    <MobileLink
+                                      href="/adopters?open=adopter#become-adopter"
+                                      name="Become an Adopter"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                    <MobileLink
+                                      href="/adopters"
+                                      name="Our Adopters"
+                                      onClick={() => setOpenedMenu(undefined)}
+                                    />
+                                  </div>
                                 </div>
                               </div>
-
-                              <div>
-                                <h3 className="text-xs uppercase text-blue-400 mb-3">
-                                  Sponsorship
-                                </h3>
-                                <div className="space-y-2">
-                                  <MobileLink
-                                    href="https://www.eclipse.org/sponsor/adoptium/"
-                                    name="Become an Individual Sustainer"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                  <MobileLink
-                                    href="/become-a-sustainer"
-                                    name="Become a Corporate Sustainer"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                  <MobileLink
-                                    href="/sustainers#temurin-sustainers"
-                                    name="Our Sustainers"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                </div>
-                              </div>
-
-                              <div>
-                                <h3 className="text-xs uppercase text-blue-400 mb-3">
-                                  Contribute
-                                </h3>
-                                <div className="space-y-2">
-                                  <MobileLink
-                                    href="/contributing"
-                                    name="Contribute to Adoptium"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                </div>
-                              </div>
-
-                              <div>
-                                <h3 className="text-xs uppercase text-blue-400 mb-3">
-                                  Adopt
-                                </h3>
-                                <div className="space-y-2">
-                                  <MobileLink
-                                    href="/adopters?open=adopter#become-adopter"
-                                    name="Become an Adopter"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                  <MobileLink
-                                    href="/adopters"
-                                    name="Our Adopters"
-                                    onClick={() => setOpenedMenu(undefined)}
-                                  />
-                                </div>
+                              {/* CTA (NEW) */}
+                              <div className="pt-3  flex justify-center">
+                                <Link
+                                  href="/join-us"
+                                  className="text-sm font-semibold text-[#B20E46] hover:underline"
+                                  onClick={() => setOpenedMenu(undefined)}
+                                >
+                                  Join Us Overview
+                                </Link>
                               </div>
                             </div>
                           </ClickAwayListener>
