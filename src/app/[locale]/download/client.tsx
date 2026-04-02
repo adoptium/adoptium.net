@@ -9,6 +9,7 @@ import {
   FaBook,
   FaCheckCircle,
   FaExclamationTriangle,
+  FaHeart,
 } from "react-icons/fa";
 import { Link } from "@/i18n/navigation";
 
@@ -107,14 +108,14 @@ export default function DownloadPageClient() {
               </h2>
 
               <p className="text-xl md:text-2xl font-bold text-[#ff1365] mb-6 italic">
-                {t("appeal-quote")}
+                &ldquo;{t("appeal-quote")}&rdquo;
               </p>
 
               <p className="text-[#c4bfce] text-lg leading-relaxed mb-8 max-w-xl">
                 {t("appeal-text")}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
                 <a
                   href="https://github.com/sponsors/adoptium"
                   target="_blank"
@@ -122,6 +123,15 @@ export default function DownloadPageClient() {
                   className="inline-flex items-center justify-center gap-3 bg-[#ff1365] hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-[#ff1365]/20"
                 >
                   <FaGithub className="text-2xl" />
+                  {t("github-sponsor-btn")}
+                </a>
+                <a
+                  href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=thank-you-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 bg-[#ff1365] hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-[#ff1365]/20"
+                >
+                  <FaHeart className="text-xl" />
                   {t("become-sustainer-btn")}
                 </a>
                 <Link
