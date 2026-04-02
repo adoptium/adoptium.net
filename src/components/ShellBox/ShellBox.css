@@ -68,7 +68,7 @@
 }
 
 .shell-box .shell-box-top button {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 8%);
   border-radius: 8px;
   border-width: 0;
   color: #cbd5e1;
@@ -79,7 +79,7 @@
 }
 
 .shell-box .shell-box-top button:hover {
-  background-color: rgba(255, 107, 157, 0.2);
+  background-color: rgba(255, 107, 157, 20%);
   color: #fff;
 }
 
