@@ -78,7 +78,7 @@ const WGProjects = () => {
                 <Image
                   src={`/images/projects/${project.imagePath}`}
                   alt={`${project.title} logo`}
-                  className="w-[140px]"
+                  className="w-[140px] h-auto"
                   width={140}
                   height={70}
                 />

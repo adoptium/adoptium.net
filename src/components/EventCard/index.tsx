@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { formatDate } from "@/utils/date";
 import { sanitizeString } from "@/utils/sanitize";
+import { getFormattedAuthorData } from "@/utils/authors";
 
 interface EventCardProps {
   post: {
@@ -20,9 +21,10 @@ interface EventCardProps {
     };
   };
   isEclipseNews?: boolean;
+  priority?: boolean;
 }
 
-const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
+const EventCard = ({ post, isEclipseNews, priority }: EventCardProps) => {
   const locale = useLocale();
 
   const isExternalLink =
@@ -38,26 +40,33 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
   const title = post.metadata.title || "Untitled";
   const description = post.metadata.description || "";
   const date = formatDate(post.metadata.date, locale) || "";
+  const authorName = post.metadata.author
+    ? getFormattedAuthorData(post.metadata.author).name
+    : undefined;
 
   return (
     <div className="flex flex-col w-full rounded-3xl newscard-2 bg-[#200D46]">
-      {post.metadata.featuredImage ? (
-        <Image
-          className="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-          src={post.metadata.featuredImage}
-          width={385}
-          height={200}
-          alt="blog banner image"
-        />
-      ) : (
-        <Image
-          className="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-          src={`/news/${post.year}/${post.month}/${post.slug}/opengraph-image`}
-          width={385}
-          height={200}
-          alt="blog banner image"
-        />
-      )}
+      <div className="relative h-[200px] m-0.5 rounded-t-3xl overflow-hidden">
+        {post.metadata.featuredImage ? (
+          <Image
+            className="object-cover"
+            src={post.metadata.featuredImage}
+            fill
+            sizes="(max-width: 768px) 100vw, 385px"
+            alt="blog banner image"
+            priority={priority}
+          />
+        ) : (
+          <Image
+            className="object-cover"
+            src={`/news/${post.year}/${post.month}/${post.slug}/opengraph-image`}
+            fill
+            sizes="(max-width: 768px) 100vw, 385px"
+            alt="blog banner image"
+            priority={priority}
+          />
+        )}
+      </div>
 
       <div className="p-8 flex flex-col flex-1">
         <h3
@@ -70,9 +79,9 @@ const EventCard = ({ post, isEclipseNews }: EventCardProps) => {
         <div className="flex justify-between py-2">
           <h3 className="flex flex-col gap-1 tab-button-text text-white">
             <span>{date}</span>
-            {post.metadata.author && (
+            {authorName && (
               <span className="text-sm text-pink-500">
-                {post.metadata.author}
+                {authorName}
               </span>
             )}
           </h3>

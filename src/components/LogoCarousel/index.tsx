@@ -68,16 +68,16 @@ const LogoCarousel = () => {
       </h2>
       <Slider {...settings} className="mt-6">
         {featuredAdopters.map((adopter, index) => (
-            <span key={index} className="px-4">
+            <div key={index} className="!flex items-center justify-center h-[100px] px-4">
             <Image
               width={200}
               height={100}
               src={`/images/${adopter.logo_white}`}
               alt={adopter.name}
-              className="h-[100px] w-auto object-contain mx-auto"
+              className="w-auto h-auto object-contain mx-auto max-h-[100px]"
               style={{ padding: adopter.logoPadding || 0 }}
             />
-            </span>
+            </div>
         ))}
       </Slider>
     </div>

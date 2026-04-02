@@ -44,6 +44,7 @@ const HeroSection = ({ latestLTS }: HeroSectionProps) => {
             src="/images/backgrounds/temurin-hero-img.png"
             alt="Temurin Logo Background"
             fill
+            sizes="1000px"
             className="object-contain"
             priority
           />

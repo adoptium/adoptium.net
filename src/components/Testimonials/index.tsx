@@ -194,7 +194,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ type }) => {
                   <Image
                     src={testimonial.companyLogo}
                     alt={testimonial.companyName}
-                    className="max-h-full max-w-full object-contain brightness-0 invert"
+                    className="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
                     width={128}
                     height={48}
                   />

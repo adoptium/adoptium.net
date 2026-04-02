@@ -91,13 +91,16 @@ exports[`TaggedNewsPage (paginated) > renders news and header for tag and page w
         <div
           class="flex flex-col w-full rounded-3xl newscard-2 bg-[#200D46]"
         >
-          <img
-            alt="blog banner image"
-            class="m-0.5 rounded-t-3xl h-[200px] object-cover w-full"
-            height="200"
-            src="/news/2025/06/tagged-page-2-news/opengraph-image"
-            width="385"
-          />
+          <div
+            class="relative h-[200px] m-0.5 rounded-t-3xl overflow-hidden"
+          >
+            <img
+              alt="blog banner image"
+              class="object-cover"
+              sizes="(max-width: 768px) 100vw, 385px"
+              src="/news/2025/06/tagged-page-2-news/opengraph-image"
+            />
+          </div>
           <div
             class="p-8 flex flex-col flex-1"
           >
@@ -119,7 +122,7 @@ exports[`TaggedNewsPage (paginated) > renders news and header for tag and page w
                 <span
                   class="text-sm text-pink-500"
                 >
-                  author
+                  Unknown Author
                 </span>
               </h3>
             </div>
