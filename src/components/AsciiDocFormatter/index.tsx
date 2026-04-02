@@ -1,9 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from 'next-intl';
-import parse, { domToReact, HTMLReactParserOptions, Element, DOMNode } from "html-react-parser";
+import { useTranslations } from "next-intl";
+import parse, {
+  domToReact,
+  HTMLReactParserOptions,
+  Element,
+  DOMNode,
+} from "html-react-parser";
 import AccordionItem from "@/components/Asciidoc/AccordionItem";
 
 interface AsciiDocFormatterProps {
@@ -11,7 +16,6 @@ interface AsciiDocFormatterProps {
 }
 
 const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
-  const isBrowser = typeof window !== "undefined";
   const t = useTranslations("Asciidoc");
 
   const options: HTMLReactParserOptions = {
@@ -22,16 +26,12 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
 
       // Transform <a> tags
       if (node.name === "a" && node.attribs) {
-        let isExternal = false;
-        if (isBrowser && node.attribs.href) {
-          isExternal =
-            node.attribs.href.startsWith("http") &&
-            !node.attribs.href.includes(window.location.host);
-        }
+        const href = node.attribs.href || "";
+        const isExternal = href.startsWith("http");
         if (isExternal) {
           return (
             <a
-              href={node.attribs.href}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               className={node.attribs.class}
@@ -42,11 +42,16 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
           );
         } else {
           return (
-            <Link href={node.attribs.href} className={node.attribs.class}>
+            <Link href={href} className={node.attribs.class}>
               {domToReact(node.children as DOMNode[], options)}
             </Link>
           );
         }
+      }
+
+      // Prevent script execution + hydration mismatches from AsciiDoc output
+      if (node.name === "script") {
+        return <template />;
       }
 
       // Transform heading tags (h1-h6) to add hoverable anchors
@@ -54,7 +59,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
         const id = node.attribs?.id;
         const headingProps = {
           id,
-          className: `${node.attribs?.class || ''} group relative scroll-mt-30`
+          className: `${node.attribs?.class || ""} group relative scroll-mt-30`,
         };
 
         const headingContent = (
@@ -84,64 +89,122 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
         return <i className={node.attribs.class.replace("fa", "fab")} />;
       }
 
-      // Transform <td> tags
+      // Transform admonition blocks into GitHub-style callouts
       if (
-        node.name === "td" &&
-        node.attribs?.class === "icon"
+        node.name === "div" &&
+        node.attribs?.class &&
+        node.attribs.class.includes("admonitionblock")
       ) {
+        const type = node.attribs.class.replace("admonitionblock ", "").trim();
+
+        const config: Record<
+          string,
+          { icon: React.ReactNode; label: string; className: string }
+        > = {
+          note: {
+            icon: (
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+              </svg>
+            ),
+            label: "Note",
+            className: "callout-note",
+          },
+          tip: {
+            icon: (
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path>
+              </svg>
+            ),
+            label: "Tip",
+            className: "callout-tip",
+          },
+          warning: {
+            icon: (
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+              </svg>
+            ),
+            label: "Warning",
+            className: "callout-warning",
+          },
+          caution: {
+            icon: (
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+              </svg>
+            ),
+            label: "Caution",
+            className: "callout-caution",
+          },
+          important: {
+            icon: (
+              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+              </svg>
+            ),
+            label: "Important",
+            className: "callout-important",
+          },
+        };
+
+        const callout = config[type] || config.note;
+
+        // Find the content td
+        const table = node.children.find(
+          (child) => child instanceof Element && child.name === "table",
+        ) as Element | undefined;
+        let contentNode: Element | undefined;
+        if (table) {
+          const tbody = table.children.find(
+            (child) =>
+              child instanceof Element &&
+              (child.name === "tbody" || child.name === "tr"),
+          ) as Element | undefined;
+          const row =
+            tbody?.name === "tr"
+              ? tbody
+              : (tbody?.children.find(
+                  (child) => child instanceof Element && child.name === "tr",
+                ) as Element | undefined);
+          if (row) {
+            contentNode = row.children.find(
+              (child) =>
+                child instanceof Element &&
+                child.name === "td" &&
+                child.attribs?.class === "content",
+            ) as Element | undefined;
+          }
+        }
+
         return (
-          <td>
-            {domToReact(node.children as DOMNode[], options)}
-            <i className="fa fa-circle-info fa-xl" aria-hidden="true" />
-          </td>
+          <div className={`github-callout ${callout.className}`}>
+            <p className="callout-title">
+              {callout.icon}
+              {callout.label}
+            </p>
+            <div className="callout-body">
+              {contentNode
+                ? domToReact(contentNode.children as DOMNode[], options)
+                : domToReact(node.children as DOMNode[], options)}
+            </div>
+          </div>
         );
       }
 
-      // Transform Table of Contents
-      if (
-        node.name === "div" &&
-        node.attribs?.class === "toc"
-      ) {
-        // Get the ul element class="sectlevel1"
-        const tocList = node.children.find(
-          (child) =>
-            child instanceof Element &&
-            child.attribs &&
-            child.attribs.class &&
-            typeof child.attribs.class === 'string' &&
-            child.attribs.class.includes("sectlevel1")
-        ) as Element | undefined;
-
-        return (
-          <div className="my-6 rounded-lg shadow-md overflow-hidden border border-gray-300 dark:border-gray-700">
-            <details className="group">
-              <summary className="flex items-center justify-between p-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 cursor-pointer hover:from-gray-200 hover:to-gray-300 dark:hover:from-gray-700 dark:hover:to-gray-600 transition-all duration-300">
-                <div className="flex items-center">
-                  <i className="fa fa-list-ul mr-3 text-pink dark:text-purple-400" aria-hidden="true" />
-                  <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
-                    {t('table-of-contents')}
-                  </span>
-                </div>
-                <i className="fa fa-chevron-down text-pink dark:text-purple-400 group-open:rotate-180 transition-transform duration-300" aria-hidden="true" />
-              </summary>
-              <div className="p-4 bg-gray-50 dark:bg-gray-800">
-                {tocList ? (
-                  <div className="toc-container pl-2 not-prose [&_a]:text-gray-700 [&_a:hover]:text-gray-900 dark:[&_a]:text-gray-200 dark:[&_a:hover]:text-white">
-                    <ul className="space-y-1">
-                      {domToReact(tocList.children as DOMNode[], options)}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
-            </details>
-          </div>
-        );
+      // Hide inline Table of Contents (rendered in sidebar instead)
+      if (node.name === "div" && node.attribs?.class === "toc") {
+        return <></>;
       }
 
       // Transform iframe tags
       if (node.name === "iframe") {
         return (
-          <iframe {...node.attribs} className="w-full aspect-video" height="400">
+          <iframe
+            {...node.attribs}
+            className="w-full aspect-video"
+            height="400"
+          >
             {domToReact(node.children as DOMNode[], options)}
           </iframe>
         );
@@ -150,9 +213,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       // Transform <details> and <summary> tags into Accordion
       if (node.name === "details") {
         const summary = node.children.find(
-          (child) =>
-            child instanceof Element &&
-            child.name === "summary"
+          (child) => child instanceof Element && child.name === "summary",
         ) as Element | undefined;
 
         const summaryContent = summary
@@ -160,7 +221,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
           : "Details";
 
         const detailsContent = node.children.filter(
-          child => !(child instanceof Element && child.name === "summary")
+          (child) => !(child instanceof Element && child.name === "summary"),
         );
 
         return (
@@ -172,14 +233,10 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
 
       // Default case - return undefined to keep original element
       return undefined;
-    }
+    },
   };
 
-  return (
-    <div className="prose prose-invert lg:prose-lg max-w-none">
-      {parse(content, options)}
-    </div>
-  );
+  return <div>{parse(content, options)}</div>;
 };
 
 export default AsciiDocFormatter;

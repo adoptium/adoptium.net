@@ -5,7 +5,7 @@ exports[`EditLink component > does not render without a path 1`] = `<div />`;
 exports[`EditLink component > renders correctly 1`] = `
 <div>
   <div
-    class="w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
+    class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
   >
     <div
       class="flex items-center gap-5"
@@ -14,24 +14,24 @@ exports[`EditLink component > renders correctly 1`] = `
         class="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0"
       >
         <div
-          class="absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-full opacity-30 blur-md"
+          class="doc-edit-glow absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-full opacity-30 blur-md"
         />
         <img
           alt="edit icon"
-          class="relative w-full h-full p-3 bg-[#200D46]/60 border border-white/20 rounded-full shadow-md"
+          class="doc-edit-icon relative w-full h-full p-3 bg-[#200D46]/60 border border-white/20 rounded-full shadow-md"
           src="/images/icons/edit.svg"
         />
       </div>
       <div
         class="flex flex-col gap-2"
       >
-        <h3
-          class="text-white text-xl md:text-2xl font-bold leading-tight"
+        <h2
+          class="doc-edit-title text-white text-xl md:text-2xl font-bold leading-tight"
         >
           Text
-        </h3>
+        </h2>
         <p
-          class="text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg"
+          class="doc-edit-desc text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg"
         >
           Text
         </p>

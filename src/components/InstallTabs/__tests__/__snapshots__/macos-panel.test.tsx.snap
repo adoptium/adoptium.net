@@ -2,110 +2,58 @@
 
 exports[`Tests for MacOSPanel component > renders correctly 1`] = `
 <div>
-  <div>
-    <pre
-      class="shell-box no-highlight"
+  <div
+    class="install-panel"
+  >
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install the latest LTS version
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          brew install --cask 
-        </span>
-        temurin@
-        25
-      </code>
-    </pre>
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Install the latest LTS version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          brew install --cask temurin@25
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install a specific version
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          brew install --cask 
-        </span>
-        temurin@8
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          brew install --cask 
-        </span>
-        temurin@
-        25
-      </code>
-    </pre>
-    <br />
-    <br />
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Install a specific version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          brew install --cask temurin@8
+brew install --cask temurin@25
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Uninstall a specific version
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          brew uninstall --cask 
-        </span>
-        temurin@
-        25
-      </code>
-    </pre>
+        Uninstall a specific version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          brew uninstall --cask temurin@25
+        </code>
+      </pre>
+    </div>
     <a
       class="install__docs-button"
       href="https://docs.brew.sh/Manpage"

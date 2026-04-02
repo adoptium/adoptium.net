@@ -36,3 +36,4 @@ jobs:
           VALIDATE_TYPESCRIPT_PRETTIER: false
           VALIDATE_TSX: false
           VALIDATE_JSON: false
+          VALIDATE_CSS_PRETTIER: false

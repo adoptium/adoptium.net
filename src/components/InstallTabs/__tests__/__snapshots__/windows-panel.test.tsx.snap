@@ -2,128 +2,73 @@
 
 exports[`Tests for WindowsPanel component > renders correctly 1`] = `
 <div>
-  <div>
-    <pre
-      class="shell-box no-highlight"
+  <div
+    class="install-panel"
+  >
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install the latest version
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          winget install 
-        </span>
-        EclipseAdoptium.Temurin.
-        25
-        .JDK
-      </code>
-    </pre>
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Install the latest version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          winget install EclipseAdoptium.Temurin.25.JDK
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install a different version
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          winget install 
-        </span>
-        EclipseAdoptium.Temurin.11.JDK
-      </code>
-    </pre>
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Install a different version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          winget install EclipseAdoptium.Temurin.11.JDK
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Upgrade the Winget package
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          winget upgrade 
-        </span>
-        EclipseAdoptium.Temurin.
-        25
-        .JDK
-      </code>
-    </pre>
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Upgrade the Winget package
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          winget upgrade EclipseAdoptium.Temurin.25.JDK
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Uninstall the Winget package
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          winget uninstall 
-        </span>
-        EclipseAdoptium.Temurin.
-        25
-        .JDK
-      </code>
-    </pre>
+        Uninstall the Winget package
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          winget uninstall EclipseAdoptium.Temurin.25.JDK
+        </code>
+      </pre>
+    </div>
     <a
       class="install__docs-button"
       href="https://docs.microsoft.com/en-us/windows/package-manager/winget/"

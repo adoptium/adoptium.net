@@ -2,9 +2,7 @@
 
 exports[`AsciiDocFormatter > renders basic HTML content correctly 1`] = `
 <div>
-  <div
-    class="prose prose-invert lg:prose-lg max-w-none"
-  >
+  <div>
     <p>
       Hello world
     </p>

@@ -2,99 +2,57 @@
 
 exports[`Tests for LinuxPanel component > renders correctly 1`] = `
 <div>
-  <div>
-    <pre
-      class="shell-box no-highlight"
+  <div
+    class="install-panel"
+  >
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install the latest LTS version (Debian or Ubuntu)
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          apt-get install 
-        </span>
-        temurin-
-        25
-        -jdk
-      </code>
-    </pre>
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Install the latest LTS version (Debian or Ubuntu)
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          apt-get install temurin-25-jdk
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install the latest LTS version (CentOS/RHEL/Fedora)
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          yum install 
-        </span>
-        temurin-
-        25
-        -jdk
-      </code>
-    </pre>
-    <br />
-    <pre
-      class="shell-box no-highlight"
+        Install the latest LTS version (CentOS/RHEL/Fedora)
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          yum install temurin-25-jdk
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
     >
       <div
-        class="shell-box-top"
-      />
-      <code
-        class="shell-box-code"
+        class="install-block-title"
       >
-        <span
-          class="install__text__no-select"
-        >
-          # Install the latest LTS version (openSUSE/SLES)
-        </span>
-        <br />
-        <span
-          class="install__text__no-select"
-        >
-          $
-        </span>
-        <span
-          class="install-text-command"
-        >
-          zypper install 
-        </span>
-        temurin-
-        25
-        -jdk
-      </code>
-    </pre>
+        Install the latest LTS version (openSUSE/SLES)
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          zypper install temurin-25-jdk
+        </code>
+      </pre>
+    </div>
     <a
       class="install__docs-button"
       href="/installation/linux"
