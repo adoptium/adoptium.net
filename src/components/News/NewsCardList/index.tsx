@@ -61,6 +61,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
               key={`post-${rowIndex}-${index}`}
               post={post}
               isEclipseNews={post.metadata.tags?.includes("eclipse-news")}
+              priority={rowIndex === 0}
             />
           ))}
         </div>

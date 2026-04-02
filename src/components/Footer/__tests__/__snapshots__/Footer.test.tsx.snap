@@ -666,6 +666,7 @@ exports[`Footer component > renders correctly 1`] = `
             >
               <img
                 alt="Deploys by Netlify"
+                class="w-auto h-auto"
                 height="25"
                 src="/images/netlify-light.svg"
                 width="80"
@@ -1381,6 +1382,7 @@ exports[`Footer component > renders correctly 1`] = `
             >
               <img
                 alt="Deploys by Netlify"
+                class="w-auto h-auto"
                 height="25"
                 src="/images/netlify-light.svg"
                 width="80"

@@ -52,7 +52,7 @@ const LogosGrid = ({ logos, type }: LogosGridProps) => {
                       height={100}
                       src={`/images/${data.logo}`}
                       alt={data.name}
-                      className="max-h-16 md:max-h-20 m-0 relative z-10 transform group-hover:scale-110 transition-transform duration-300"
+                      className="max-h-16 md:max-h-20 w-auto m-0 relative z-10 transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                 </motion.a>

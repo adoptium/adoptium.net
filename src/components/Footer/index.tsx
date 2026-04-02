@@ -312,7 +312,7 @@ const Footer: React.FC = () => {
                               if (
                                 link.disclaimerMessage &&
                                 window.confirm(
-                                  link.disclaimerMessage.defaultText
+                                  link.disclaimerMessage.defaultText,
                                 )
                               ) {
                                 window.open(link.url, "_blank");
@@ -372,6 +372,7 @@ const Footer: React.FC = () => {
                   alt="Deploys by Netlify"
                   width={80}
                   height={25}
+                  className="w-auto h-auto"
                 />
               </a>
             </div>
@@ -416,6 +417,7 @@ const Footer: React.FC = () => {
                   alt="Deploys by Netlify"
                   width={80}
                   height={25}
+                  className="w-auto h-auto"
                 />
               </a>
             </div>

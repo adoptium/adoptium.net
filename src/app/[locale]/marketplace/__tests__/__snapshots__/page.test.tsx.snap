@@ -87,7 +87,7 @@ exports[`Marketplace page > renders correctly 1`] = `
       >
         <img
           alt="AQAvit Logo"
-          class="w-full"
+          class="w-full h-auto"
           height="110"
           src="/images/projects/aqavit-project.svg"
           width="110"

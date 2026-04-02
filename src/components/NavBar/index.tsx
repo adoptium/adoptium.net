@@ -216,6 +216,7 @@ const NavBar = ({ locale }: { locale: string }) => {
               width={0}
               height={0}
               className="h-10 w-auto"
+              priority
             />
           </Link>
           <div className="flex items-center gap-4">
@@ -346,6 +347,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                 alt="Adoptium Logo"
                 width={0}
                 height={0}
+                priority
               />
             </Link>
             <button
