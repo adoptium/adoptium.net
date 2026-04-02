@@ -40,6 +40,7 @@ Recorder] |  icon:check[]   |  icon:check[]
 Mission Control] |  icon:check[]   |  icon:check[]
 |=======================================================================
 
+[#_icedtea_web]
 === IcedTea-Web
 
 Java Web Start 已被 Oracle 在 Java SE 8 中弃用，并在 Java
@@ -66,6 +67,7 @@ IcedTea-Web 1.8.x 和 2.0.x 与 Temurin 8 构建版本兼容。我们
 任何检查 OpenJDK 11 及更高版本支持的测试，我们也不将其与
 Temurin 11 构建版本捆绑。
 
+[#_openjfx]
 === OpenJFX
 
 早在 2017 年，JavaFX 就从 Oracle JDK 中解耦并贡献
@@ -96,11 +98,13 @@ Oracle JDK 8 使用名为 Ductus 的专有 2D 图形渲染器，
 9 开始，使用了 Marlin 渲染器。Adoptium 计划将 Marlin
 向后移植到 OpenJDK 8 和/或最大程度地减少两者之间的任何显示问题。
 
+[#_lcms]
 === LCMS
 
 OpenJDK 使用 Little Color Matching System (LCMS) 开源
 库代替专有的 Kodac CMS 库。
 
+[#_jmx]
 === JMX
 
 Oracle JDK 8 附带的专有 SNMP 包在

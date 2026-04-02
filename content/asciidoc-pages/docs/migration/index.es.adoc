@@ -42,6 +42,7 @@ Recorder] |  icon:check[]   |  icon:check[]
 Mission Control] |  icon:check[]   |  icon:check[]
 |=======================================================================
 
+[#_icedtea_web]
 === IcedTea-Web
 
 Java Web Start fue obsoleto por Oracle en Java SE 8 y eliminado en Java
@@ -69,6 +70,7 @@ de aplicaciones JNLP basadas en OpenJDK 11 y superiores, pero IcedTea-Web no con
 ninguna prueba para verificar el soporte de OpenJDK 11 y superiores y no lo incluimos con
 las compilaciones de Temurin 11.
 
+[#_openjfx]
 === OpenJFX
 
 En 2017, JavaFX se desacopló de Oracle JDK y se contribuyó
@@ -101,11 +103,13 @@ mientras que OpenJDK utiliza un renderizador de código abierto llamado Pisces. 
 backportar Marlin a OpenJDK 8 y/o minimizar cualquier problema de visualización entre
 los dos.
 
+[#_lcms]
 === LCMS
 
 OpenJDK utiliza la biblioteca de código abierto Little Color Matching System (LCMS)
 en lugar de la biblioteca propietaria Kodac CMS.
 
+[#_jmx]
 === JMX
 
 El paquete SNMP propietario enviado con Oracle JDK 8 no está presente en

@@ -237,7 +237,7 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
             >
               <a
                 class="px-3 py-1 text-sm bg-pink hover:bg-rose-800 transition-colors rounded-full text-white"
-                href="/news/tag/temurin"
+                href="/news?tag=temurin"
               >
                 #
                 temurin

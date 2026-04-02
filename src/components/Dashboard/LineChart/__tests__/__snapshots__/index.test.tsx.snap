@@ -12,7 +12,7 @@ exports[`LineChart > matches snapshot 1`] = `
       class="highcharts-container "
       dir="ltr"
       id="highcharts-0"
-      style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; outline: none; padding: 0px; font-family: inherit;"
+      style="position: relative; overflow: hidden; width: 600px; height: 400px; text-align: left; line-height: normal; z-index: 0; user-select: none; touch-action: manipulation; outline: none; padding: 0px; font-family: inherit;"
     >
       <svg
         aria-label="Test Line Chart"
@@ -175,7 +175,7 @@ exports[`LineChart > matches snapshot 1`] = `
           <text
             class="highcharts-axis-title"
             data-z-index="7"
-            style="font-size: 1rem; font-weight: bold; fill: #fff;"
+            style="font-size: 1rem; font-weight: bold; fill: rgb(255, 255, 255);"
             text-anchor="middle"
             transform="translate(0,0) rotate(270 NaN NaN)"
             x="NaN"
@@ -229,7 +229,7 @@ exports[`LineChart > matches snapshot 1`] = `
         <text
           class="highcharts-title"
           data-z-index="4"
-          style="font-size: 1.25rem; font-weight: bold; fill: #fff;"
+          style="font-size: 1.25rem; font-weight: bold; fill: rgb(255, 255, 255);"
           text-align="center"
           text-anchor="middle"
           transform="translate(0,0) scale(1 1)"
@@ -242,7 +242,7 @@ exports[`LineChart > matches snapshot 1`] = `
         <text
           class="highcharts-caption"
           data-z-index="4"
-          style="font-size: 0.8em; fill: #666666;"
+          style="font-size: 0.8em; fill: rgb(102, 102, 102);"
           text-align="left"
           text-anchor="start"
           transform="translate(0,0) scale(1 1)"
@@ -265,7 +265,7 @@ exports[`LineChart > matches snapshot 1`] = `
           >
             <text
               data-z-index="1"
-              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              style="font-size: 0.7em; font-weight: bold; fill: rgb(255, 255, 255);"
               x="NaN"
               y="7"
             >
@@ -281,7 +281,7 @@ exports[`LineChart > matches snapshot 1`] = `
           >
             <text
               data-z-index="1"
-              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              style="font-size: 0.7em; font-weight: bold; fill: rgb(255, 255, 255);"
               x="NaN"
               y="7"
             >
@@ -297,7 +297,7 @@ exports[`LineChart > matches snapshot 1`] = `
           >
             <text
               data-z-index="1"
-              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              style="font-size: 0.7em; font-weight: bold; fill: rgb(255, 255, 255);"
               x="NaN"
               y="7"
             >
@@ -320,7 +320,7 @@ exports[`LineChart > matches snapshot 1`] = `
           >
             <text
               data-z-index="1"
-              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              style="font-size: 0.7em; font-weight: bold; fill: rgb(255, 255, 255);"
               x="NaN"
               y="7"
             >
@@ -336,7 +336,7 @@ exports[`LineChart > matches snapshot 1`] = `
           >
             <text
               data-z-index="1"
-              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              style="font-size: 0.7em; font-weight: bold; fill: rgb(255, 255, 255);"
               x="NaN"
               y="7"
             >
@@ -352,7 +352,7 @@ exports[`LineChart > matches snapshot 1`] = `
           >
             <text
               data-z-index="1"
-              style="font-size: 0.7em; font-weight: bold; fill: #fff;"
+              style="font-size: 0.7em; font-weight: bold; fill: rgb(255, 255, 255);"
               x="NaN"
               y="7"
             >
@@ -402,7 +402,7 @@ exports[`LineChart > matches snapshot 1`] = `
                 />
                 <text
                   data-z-index="2"
-                  style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: #333333;"
+                  style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);"
                   text-anchor="start"
                   x="21"
                   y="5"
@@ -433,7 +433,7 @@ exports[`LineChart > matches snapshot 1`] = `
                 />
                 <text
                   data-z-index="2"
-                  style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: #333333;"
+                  style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);"
                   text-anchor="start"
                   x="21"
                   y="5"
@@ -449,13 +449,13 @@ exports[`LineChart > matches snapshot 1`] = `
           data-z-index="7"
         >
           <text
-            style="cursor: default; font-size: 1rem; font-weight: bold; fill: #fff;"
+            style="cursor: default; font-size: 1rem; font-weight: bold; fill: rgb(255, 255, 255);"
             x="0"
           >
             x
           </text>
           <text
-            style="cursor: default; font-size: 1rem; font-weight: bold; fill: #fff;"
+            style="cursor: default; font-size: 1rem; font-weight: bold; fill: rgb(255, 255, 255);"
             text-anchor="middle"
             transform="translate(0,0)"
             x="0"
@@ -463,7 +463,7 @@ exports[`LineChart > matches snapshot 1`] = `
             Jan
           </text>
           <text
-            style="cursor: default; font-size: 1rem; font-weight: bold; fill: #fff;"
+            style="cursor: default; font-size: 1rem; font-weight: bold; fill: rgb(255, 255, 255);"
             text-anchor="middle"
             transform="translate(0,0)"
             x="0"
@@ -471,7 +471,7 @@ exports[`LineChart > matches snapshot 1`] = `
             Feb
           </text>
           <text
-            style="cursor: default; font-size: 1rem; font-weight: bold; fill: #fff;"
+            style="cursor: default; font-size: 1rem; font-weight: bold; fill: rgb(255, 255, 255);"
             text-anchor="middle"
             transform="translate(0,0)"
             x="0"
@@ -486,7 +486,7 @@ exports[`LineChart > matches snapshot 1`] = `
         <text
           class="highcharts-credits"
           data-z-index="8"
-          style="cursor: pointer; font-size: 0.6em; fill: #999999;"
+          style="cursor: pointer; font-size: 0.6em; fill: rgb(153, 153, 153);"
           text-align="right"
           text-anchor="end"
           x="590"
