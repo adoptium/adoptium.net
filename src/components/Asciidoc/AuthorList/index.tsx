@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import React from "react"
-import { useTranslations } from "next-intl"
-import Author from "./Author"
+import React from "react";
+import { useTranslations } from "next-intl";
+import Author from "./Author";
 
 interface Props {
-  authors: string[]
+  authors: string[];
 }
 
 const AuthorList: React.FC<Props> = ({ authors = [] }) => {
-  const t = useTranslations("AuthorList")
+  const t = useTranslations("AuthorList");
   if (authors.length) {
     return (
       <div className="mt-10 flex-col justify-center items-start gap-4">
-        <div className="self-stretch text-white my-5 text-lg font-semibold leading-normal">
+        <div className="doc-authors-title self-stretch text-white my-5 text-lg font-semibold leading-normal">
           {t("documentation-authors")}
         </div>
         <div className="flex flex-wrap justify-start items-center space-x-[-12px]">
@@ -22,10 +22,10 @@ const AuthorList: React.FC<Props> = ({ authors = [] }) => {
           ))}
         </div>
       </div>
-    )
+    );
   }
 
-  return null
-}
+  return null;
+};
 
-export default AuthorList
+export default AuthorList;

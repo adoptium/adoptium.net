@@ -6,7 +6,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
     class="mt-10 flex-col justify-center items-start gap-4"
   >
     <div
-      class="self-stretch text-white my-5 text-lg font-semibold leading-normal"
+      class="doc-authors-title self-stretch text-white my-5 text-lg font-semibold leading-normal"
     >
       Text
     </div>
@@ -21,7 +21,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
       >
         <img
           alt="test-author"
-          class="rounded-full border-solid border-4 border-purple mb-6"
+          class="doc-author-avatar rounded-full border-solid border-4 border-purple mb-6"
           height="55"
           src="https://github.com/test-author.png?size=55"
           width="55"
@@ -35,7 +35,7 @@ exports[`AuthorsList component > renders correctly 1`] = `
       >
         <img
           alt="another-test-author"
-          class="rounded-full border-solid border-4 border-purple mb-6"
+          class="doc-author-avatar rounded-full border-solid border-4 border-purple mb-6"
           height="55"
           src="https://github.com/another-test-author.png?size=55"
           width="55"
