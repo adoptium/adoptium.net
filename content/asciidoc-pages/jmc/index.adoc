@@ -1,6 +1,6 @@
 = Eclipse Mission Control
 :page-authors: reinhapa, thegreystone, gdams, karianna, jiekang, hendrikebbers, ggam, xavierfacq
-:stable: 9.1.1
+:stable: 9.1.2
 :snapshot: 10.0.0-SNAPSHOT
 
 Eclipse Mission Control is a low-overhead profiling and diagnostics tools
