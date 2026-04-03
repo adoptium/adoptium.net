@@ -26,9 +26,10 @@ By using `sudo tee`, you can write the repository entry to the appropriate file 
 
 The following name schema is being used:
 
+[subs="attributes"]
 ....
 temurin-<version>-jdk
-e.g temurin-17-jdk or temurin-8-jdk
+e.g temurin-{latest-lts}-jdk or temurin-8-jdk
 ....
 
 == Deb installation on Debian or Ubuntu
@@ -57,10 +58,10 @@ TIP: For Linux Mint (based on Ubuntu) you have to replace `VERSION_CODENAME` wit
 +
 . Install the Temurin version you require:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
 apt update # update if you haven't already
-apt install temurin-17-jdk
+apt install temurin-{latest-lts}-jdk
 ----
 
 == CentOS/RHEL/Fedora Instructions
@@ -84,15 +85,15 @@ EOF
 +
 . Install the Temurin version you require using `dnf`:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-dnf install temurin-17-jdk
+dnf install temurin-{latest-lts}-jdk
 ----
 Alternatively, if you are using `yum`:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-yum install temurin-17-jdk
+yum install temurin-{latest-lts}-jdk
 ----
 
 == openSUSE/SLES Instructions
@@ -107,9 +108,9 @@ zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-
 +
 . Install the Temurin version you require:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-zypper install temurin-17-jdk
+zypper install temurin-{latest-lts}-jdk
 ----
 
 
@@ -131,9 +132,9 @@ echo 'https://packages.adoptium.net/artifactory/apk/alpine/main' >> /etc/apk/rep
 +
 . Install the Temurin version you require:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-apk add temurin-17-jdk
+apk add temurin-{latest-lts}-jdk
 ----
 
 Please raise any issues over at

@@ -2,25 +2,29 @@
 :page-authors: gdams, karianna, tellison
 
 link:/temurin/releases[Eclipse Temurin] is available for download in multiple
-installation package formats:
+installation package formats. The binaries are supported on the architectures
+and operating systems listed in link:/supported-platforms[Supported Platforms].
+If you're migrating to Temurin, you can learn about the differences between
+Oracle JDK and Temurin in our link:/docs/migration[Migration Guide] and any
+steps that you might need to take.
 
-* Package managers (shown above)
-* link:#_installers[Installers]
-* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[Programmatic API]
-* link:/installation/archives[Archive files]
-* link:https://hub.docker.com/_/eclipse-temurin[Container Images] (External documentation at DockerHub)
+== Package Managers
 
-The binaries are supported on the architectures and operating systems
-listed in link:/supported-platforms[Supported Platforms]. If you’re
-migrating to Temurin, you can learn about the differences between Oracle
-JDK and Temurin in our link:/docs/migration[Migration Guide] and any steps
-that you might need to take.
+The recommended way to install Eclipse Temurin on most systems is through
+a package manager. Select your operating system above, or jump directly
+to the instructions for your platform:
 
-== Installers
-
-Installers are currently available for Windows(R) and macOS(R) JDK and JRE
-packages. Installation steps are covered in the following sections:
-
-* link:/installation/windows[Windows MSI installers packages]
-* link:/installation/macOS[macOS PKG installer packages]
 * link:/installation/linux[Linux (RPM/DEB/APK) installer packages]
+* link:/installation/macOS[macOS PKG installer packages]
+* link:/installation/windows[Windows MSI installer packages]
+
+== CI/CD Integration
+
+* link:/installation/github-actions[GitHub Actions] — Use `actions/setup-java` with `distribution: 'temurin'`
+* link:/installation/ci-scripts[Other CI/CD Platforms] — Download and verify Temurin via the Adoptium API in Azure DevOps, GitLab CI, Jenkins, and more
+
+== Other Installation Methods
+
+* link:/installation/archives[Archive files] — Manual installation from `.tar.gz` or `.zip` archives
+* link:https://hub.docker.com/_/eclipse-temurin[Container Images] — Official Docker images (DockerHub)
+* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[Programmatic API] — Automate downloads via the Adoptium API

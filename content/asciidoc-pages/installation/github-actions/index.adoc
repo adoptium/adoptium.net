@@ -1,0 +1,185 @@
+= Using Eclipse Temurin in GitHub Actions
+:page-authors: gdams
+:toc:
+:icons: font
+:setup-java-version: v5
+:checkout-version: v6
+
+The link:https://github.com/actions/setup-java[`actions/setup-java`] action is
+the recommended way to install Eclipse Temurin in GitHub Actions workflows.
+It handles downloading, caching, and configuring the JDK on the runner.
+
+== Basic Usage
+
+To set up Eclipse Temurin in a workflow, add the following step:
+
+[NOTE]
+====
+The action versions shown in these examples may not always reflect the latest releases. Check the
+link:https://github.com/actions/setup-java/releases[`actions/setup-java` releases] and
+link:https://github.com/actions/checkout/releases[`actions/checkout` releases] for the most
+up-to-date versions. The Adoptium project recommends pinning actions to full commit SHAs rather
+than version tags for improved security and reproducibility.
+====
+
+[source, yaml, subs="attributes"]
+----
+steps:
+  - uses: actions/checkout@{checkout-version}
+  - uses: actions/setup-java@{setup-java-version}
+    with:
+      distribution: 'temurin'
+      java-version: '{latest-lts}'
+  - run: java --version
+----
+
+The `distribution` must be set to `temurin` and `java-version` specifies which
+major version to install.
+
+== Testing Against Multiple Java Versions
+
+Use a matrix strategy to test your project against multiple Java versions:
+
+[source, yaml, subs="attributes"]
+----
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ '11', '17', '{latest-lts}' ]
+    name: Java ${{ matrix.java }}
+    steps:
+      - uses: actions/checkout@{checkout-version}
+      - uses: actions/setup-java@{setup-java-version}
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java }}
+      - run: java --version
+----
+
+== Caching Dependencies
+
+The `setup-java` action has built-in support for caching dependencies managed
+by Maven, Gradle, and sbt.
+
+=== Caching Maven Dependencies
+
+[source, yaml, subs="attributes"]
+----
+steps:
+  - uses: actions/checkout@{checkout-version}
+  - uses: actions/setup-java@{setup-java-version}
+    with:
+      distribution: 'temurin'
+      java-version: '{latest-lts}'
+      cache: 'maven'
+  - run: mvn -B package
+----
+
+=== Caching Gradle Dependencies
+
+[source, yaml, subs="attributes"]
+----
+steps:
+  - uses: actions/checkout@{checkout-version}
+  - uses: actions/setup-java@{setup-java-version}
+    with:
+      distribution: 'temurin'
+      java-version: '{latest-lts}'
+      cache: 'gradle'
+  - run: ./gradlew build
+----
+
+=== Caching sbt Dependencies
+
+[source, yaml, subs="attributes"]
+----
+steps:
+  - uses: actions/checkout@{checkout-version}
+  - uses: actions/setup-java@{setup-java-version}
+    with:
+      distribution: 'temurin'
+      java-version: '{latest-lts}'
+      cache: 'sbt'
+  - run: sbt package
+----
+
+== Complete Workflow Example
+
+Here is a complete workflow that builds and tests a Maven project using
+Eclipse Temurin across multiple Java versions:
+
+[source, yaml, subs="attributes"]
+----
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ '11', '17', '{latest-lts}' ]
+    name: Build with Java ${{ matrix.java }}
+    steps:
+      - uses: actions/checkout@{checkout-version}
+      - name: Set up JDK ${{ matrix.java }}
+        uses: actions/setup-java@{setup-java-version}
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java }}
+          cache: 'maven'
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+----
+
+== Using the Latest Version
+
+Set `check-latest: true` to always download the most up-to-date version
+available, rather than relying on the cached version on the runner:
+
+[source, yaml, subs="attributes"]
+----
+- uses: actions/setup-java@{setup-java-version}
+  with:
+    distribution: 'temurin'
+    java-version: '{latest-lts}'
+    check-latest: true
+----
+
+NOTE: Setting `check-latest` to `true` has performance implications as
+downloading a JDK is slower than using cached versions.
+
+== Installing Multiple JDKs
+
+You can install multiple JDK versions in a single job. The last version
+configured will be the default on `PATH`:
+
+[source, yaml, subs="attributes"]
+----
+steps:
+  - uses: actions/setup-java@{setup-java-version}
+    with:
+      distribution: 'temurin'
+      java-version: |
+        11
+        17
+        {latest-lts}
+----
+
+Other Java versions can be accessed through environment variables such as
+`JAVA_HOME_11_X64`, `JAVA_HOME_17_X64`, etc.
+
+== Further Reading
+
+* link:https://github.com/actions/setup-java[`actions/setup-java` on GitHub]
+* link:https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md[Advanced usage documentation]

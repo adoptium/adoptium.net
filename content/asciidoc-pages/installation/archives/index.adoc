@@ -1,184 +1,132 @@
 = Archive Installation
 :page-authors: gdams, tellison
 :toc:
+:icons: font
 
-== Linux
+Archive files provide a simple way to install Eclipse Temurin without a package
+manager. Download the appropriate archive from the
+link:/temurin/releases[releases page] and follow the instructions for your
+platform below.
 
-. Make sure you have downloaded the latest link:/download[Linux binary]
-to a directory that will not move or be deleted, and use Terminal to cd
-into it.
-. Optional: use these checksum instructions to ensure the authenticity
-of your binary:
-+
+[NOTE]
+====
+For most users, we recommend using a link:/installation/linux[package manager]
+or link:/installation/github-actions[CI/CD integration] instead of manual
+archive installation. Archives are best suited for custom environments or
+platforms without package manager support.
+====
+
+== Verifying Your Download
+
+All Eclipse Temurin archives include a SHA-256 checksum file. We strongly
+recommend verifying your download before installation.
+
+=== Linux / macOS / AIX / Solaris
+
 [source, bash]
 ----
-# The command must run in the same directory as the downloaded binary file
+# Run this in the same directory as the downloaded binary
 wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
 ----
-+
-. Extract the `.tar.gz.` You can use the following command:
-+
-[source, bash]
-----
-tar xzf <openjdk_binary>.tar.gz
-----
-+
-. Add this version of Java to your `PATH`
-+
-[source, bash]
-----
-export PATH=$PWD/<extracted_directory>/bin:$PATH
-----
-+
-. Check that Java has installed correctly:
-+
-[source, bash]
-----
-java -version
-----
 
-== macOS
+=== Windows
 
-. Make sure you have downloaded the latest link:/download[macOS binary]
-to a directory that will not move or be deleted, and use Terminal to cd
-into it.
-. Optional: use these checksum instructions to ensure the authenticity
-of your binary:
-+
-[source, bash]
-----
-# The command must run in the same directory as the downloaded binary file
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extract the `.tar.gz.` You can use the following command:
-+
-[source, bash]
-----
-tar xzf <openjdk_binary>.tar.gz
-----
-+
-. Add this version of Java to your `PATH`
-+
-[source, bash]
-----
-export PATH=$PWD/<extracted_directory>/Contents/Home/bin:$PATH
-----
-+
-. Check that Java has installed correctly:
-+
-[source, bash]
-----
-java -version
-----
-
-== Windows
-
-. Make sure you have downloaded the latest link:/download[Windows binary] to a directory that will not move or be deleted, and use Command
-Prompt to cd into it.
-. Optional: use these checksum instructions to ensure the authenticity
-of your binary:
-+
 [source, powershell]
 ----
 certutil -hashfile <downloaded_file>.zip SHA256
 ----
-+
-. Extract the .zip. You can use the following command:
-+
-[source, powershell]
+
+TIP: Checksum files are available alongside every binary on the
+link:/temurin/releases[releases page]. You can also verify downloads via
+the link:https://api.adoptium.net/q/swagger-ui/[Adoptium API].
+
+== Linux
+
+[source, bash]
 ----
-Expand-Archive -Path .\<downloaded_file>.zip -DestinationPath .
-----
-+
-. Add this version of Java to your `PATH`:
-+
-[source, powershell]
-----
-set PATH=%cd%\<extracted_directory>\bin;%PATH%
-----
-+
-. Check that Java has installed correctly:
-+
-[source, powershell]
-----
+# Extract the archive
+tar xzf <openjdk_binary>.tar.gz
+
+# Add to PATH
+export PATH=$PWD/<extracted_directory>/bin:$PATH
+
+# Verify
 java -version
 ----
 
+To make this permanent, add the `export PATH` line to your `~/.bashrc`,
+`~/.zshrc`, or equivalent shell profile.
+
+== macOS
+
+[source, bash]
+----
+# Extract the archive
+tar xzf <openjdk_binary>.tar.gz
+
+# Add to PATH (note the Contents/Home subdirectory)
+export PATH=$PWD/<extracted_directory>/Contents/Home/bin:$PATH
+
+# Verify
+java -version
+----
+
+NOTE: macOS archives include a `Contents/Home` directory structure that mirrors
+the standard macOS JDK layout.
+
+== Windows
+
+[source, powershell]
+----
+# Extract the archive
+Expand-Archive -Path .\<downloaded_file>.zip -DestinationPath .
+
+# Add to PATH (Command Prompt)
+set PATH=%cd%\<extracted_directory>\bin;%PATH%
+
+# Verify
+java -version
+----
+
+TIP: To set `JAVA_HOME` and update `PATH` permanently on Windows, use
+*System Properties > Environment Variables*, or run:
+`setx JAVA_HOME "C:\path\to\<extracted_directory>"` and
+`setx PATH "%JAVA_HOME%\bin;%PATH%"`.
+
 == AIX
 
-. The last versions of Eclipse Temurin able to run on AIX 7.1 were 8u362,
-11.0.18 and 17.0.8. Later versions require IBM XL C/C++ runtime package,
-available with the compiler or standalone, for
-link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[XLC 13.1]
-for JDK8, and
-link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[XLC 16.1]
-for JDK11, 17 and 21, and
-link:https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.2?topic=reference-open-xl-cc-runtime-environment-filesets[OpenXL 17] (which also requires AIX 7.2 TL5 SP3 or later).
-. Make sure you have downloaded the latest link:/download[AIX binary]
-to a directory that will not move or be deleted, and use Terminal to cd
-into it.
-. Optional: use these checksum instructions to ensure the authenticity
-of your binary:
-+
+[WARNING]
+====
+The last versions of Eclipse Temurin able to run on AIX 7.1 were 8u362,
+11.0.18, and 17.0.8. Later versions require the IBM XL C/C++ runtime package:
+
+* link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[XLC 13.1] for JDK 8
+* link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[XLC 16.1] for JDK 11, 17, and 21
+* link:https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.2?topic=reference-open-xl-cc-runtime-environment-filesets[OpenXL 17] (requires AIX 7.2 TL5 SP3 or later)
+====
+
 [source, bash]
 ----
-# The command must run in the same directory as the downloaded binary file
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extract the `.tar.gz.` You can use the following command:
-+
-[source, bash]
-----
+# Extract the archive (AIX tar does not support the z flag)
 gunzip -c <openjdk_binary>.tar.gz | tar xf -
-----
-+
-. Add this version of Java to your `PATH`
-+
-[source, bash]
-----
+
+# Add to PATH
 export PATH=$PWD/<extracted_directory>/bin:$PATH
-----
-+
-. Check that Java has installed correctly:
-+
-[source, bash]
-----
+
+# Verify
 java -version
 ----
 
 == Solaris
 
-. Make sure you have downloaded the latest link:/download[Solaris
-binary] to a directory that will not move or be deleted, and use
-Terminal to cd into it.
-. Optional: use these checksum instructions to ensure the authenticity
-of your binary:
-+
 [source, bash]
 ----
-# The command must run in the same directory as the downloaded binary file
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extract the `.tar.gz.` You can use the following command:
-+
-[source, bash]
-----
+# Extract the archive
 gunzip -c <openjdk_binary>.tar.gz | tar xf -
-----
-+
-. Add this version of Java to your `PATH`
-+
-[source, bash]
-----
+
+# Add to PATH
 export PATH=$PWD/<extracted_directory>/bin:$PATH
-----
-+
-. Check that Java has installed correctly:
-+
-[source, bash]
-----
+
+# Verify
 java -version
 ----

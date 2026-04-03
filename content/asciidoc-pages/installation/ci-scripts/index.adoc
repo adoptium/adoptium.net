@@ -1,0 +1,241 @@
+= Using the Adoptium API in CI/CD Pipelines
+:page-authors: gdams
+:toc:
+:icons: font
+
+If your CI/CD platform does not have a dedicated Temurin setup task (such as
+link:/installation/github-actions[GitHub Actions]), you can use the
+link:https://api.adoptium.net/q/swagger-ui/[Adoptium API] to download, verify,
+and install Eclipse Temurin directly. This guide covers using the API with
+shell scripts that work in any CI environment including Azure DevOps, GitLab CI,
+Jenkins, CircleCI, and others.
+
+== API Overview
+
+The Adoptium API provides stable URLs for downloading Temurin binaries. The
+general URL pattern for downloading the latest GA release is:
+
+....
+https://api.adoptium.net/v3/binary/latest/{version}/ga/{os}/{arch}/{image_type}/hotspot/normal/eclipse
+....
+
+Where:
+
+* `{version}` — Java major version (e.g. `8`, `11`, `17`, `21`, `25`)
+* `{os}` — Operating system: `linux`, `windows`, `mac`, `alpine-linux`, `aix`, `solaris`
+* `{arch}` — Architecture: `x64`, `aarch64`, `arm`, `ppc64le`, `s390x`, `riscv64`
+* `{image_type}` — `jdk` or `jre`
+
+[NOTE]
+====
+Not all combinations are available. The API returns `HTTP 404` if no build
+exists for the specified combination.
+====
+
+== Querying Available Versions
+
+You can discover which versions are available, including the current LTS:
+
+[source, bash]
+----
+# Get the most recent LTS version
+curl -s https://api.adoptium.net/v3/info/available_releases | jq '.most_recent_lts'
+
+# List all available LTS releases
+curl -s https://api.adoptium.net/v3/info/available_releases | jq '.available_lts_releases'
+----
+
+== Downloading a Binary
+
+=== Linux / macOS
+
+[source, bash, subs="attributes"]
+----
+#!/bin/bash
+set -euo pipefail
+
+JAVA_VERSION="{latest-lts}"
+OS="linux"
+ARCH="x64"
+IMAGE_TYPE="jdk"
+
+API_URL="https://api.adoptium.net/v3/binary/latest/${JAVA_VERSION}/ga/${OS}/${ARCH}/${IMAGE_TYPE}/hotspot/normal/eclipse"
+
+# Download the binary (follows redirects)
+FETCH_URL=$(curl -s -w %{redirect_url} "${API_URL}")
+FILENAME=$(curl -OLs -w %{filename_effective} "${FETCH_URL}")
+
+echo "Downloaded ${FILENAME}"
+----
+
+=== Windows (PowerShell)
+
+[source, powershell, subs="attributes"]
+----
+$JavaVersion = "{latest-lts}"
+$ApiUrl = "https://api.adoptium.net/v3/binary/latest/$JavaVersion/ga/windows/x64/jdk/hotspot/normal/eclipse"
+
+$Response = Invoke-WebRequest -Uri $ApiUrl -MaximumRedirection 0 -ErrorAction SilentlyContinue
+$DownloadUrl = $Response.Headers.Location
+$FileName = [System.IO.Path]::GetFileName($DownloadUrl)
+
+Invoke-WebRequest -Uri $DownloadUrl -OutFile $FileName
+Write-Host "Downloaded $FileName"
+----
+
+== Verifying the Download
+
+Eclipse Temurin releases include SHA-256 checksums and GPG signatures alongside
+every binary. The Adoptium project strongly recommends verifying your download
+in CI/CD pipelines to ensure integrity and authenticity.
+
+=== SHA-256 Checksum Verification
+
+The checksum file is available at the same URL as the binary with `.sha256.txt`
+appended:
+
+[source, bash]
+----
+# Download and verify the checksum in one step
+curl -Ls "${FETCH_URL}.sha256.txt" | sha256sum -c --status
+echo "Checksum verified successfully"
+----
+
+For PowerShell on Windows:
+
+[source, powershell]
+----
+# Download expected checksum
+$ExpectedHash = (Invoke-WebRequest -Uri "$DownloadUrl.sha256.txt").Content.Split(" ")[0]
+
+# Compute actual hash
+$ActualHash = (Get-FileHash $FileName -Algorithm SHA256).Hash
+
+if ($ExpectedHash -ne $ActualHash) {
+    Write-Error "Checksum verification failed!"
+    exit 1
+}
+Write-Host "Checksum verified successfully"
+----
+
+=== GPG Signature Verification
+
+Temurin releases are signed with the Adoptium GPG key. The signature file is
+available at the binary URL with `.sig` appended:
+
+[source, bash]
+----
+# Import the Adoptium GPG public key
+wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --import
+
+# Download the signature file
+curl -OLs "${FETCH_URL}.sig"
+
+# Verify the signature
+gpg --verify "${FILENAME}.sig" "${FILENAME}"
+----
+
+== Complete CI Script Example
+
+Here is a complete script suitable for use in any CI/CD pipeline that
+downloads, verifies, and installs Eclipse Temurin:
+
+[source, bash, subs="attributes"]
+----
+#!/bin/bash
+set -euo pipefail
+
+# Configuration
+JAVA_VERSION="${JAVA_VERSION:-{latest-lts}}"
+OS="${OS:-linux}"
+ARCH="${ARCH:-x64}"
+IMAGE_TYPE="${IMAGE_TYPE:-jdk}"
+
+API_URL="https://api.adoptium.net/v3/binary/latest/${JAVA_VERSION}/ga/${OS}/${ARCH}/${IMAGE_TYPE}/hotspot/normal/eclipse"
+
+echo "Downloading Eclipse Temurin ${JAVA_VERSION} (${OS}/${ARCH})..."
+
+# Download the binary
+FETCH_URL=$(curl -s -w %{redirect_url} "${API_URL}")
+FILENAME=$(curl -OLs -w %{filename_effective} "${FETCH_URL}")
+
+# Verify SHA-256 checksum
+echo "Verifying checksum..."
+curl -Ls "${FETCH_URL}.sha256.txt" | sha256sum -c --status
+echo "Checksum OK"
+
+# Extract and configure
+INSTALL_DIR="/opt/java/${JAVA_VERSION}"
+mkdir -p "${INSTALL_DIR}"
+tar xzf "${FILENAME}" -C "${INSTALL_DIR}" --strip-components=1
+
+# Set environment variables
+export JAVA_HOME="${INSTALL_DIR}"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+
+echo "Eclipse Temurin ${JAVA_VERSION} installed to ${JAVA_HOME}"
+java -version
+----
+
+== Platform-Specific Examples
+
+=== Azure DevOps
+
+[source, yaml, subs="attributes"]
+----
+steps:
+  - script: |
+      JAVA_VERSION="{latest-lts}"
+      API_URL="https://api.adoptium.net/v3/binary/latest/${JAVA_VERSION}/ga/linux/x64/jdk/hotspot/normal/eclipse"
+      FETCH_URL=$(curl -s -w %{redirect_url} "${API_URL}")
+      FILENAME=$(curl -OLs -w %{filename_effective} "${FETCH_URL}")
+      curl -Ls "${FETCH_URL}.sha256.txt" | sha256sum -c --status
+      mkdir -p /opt/java && tar xzf "${FILENAME}" -C /opt/java --strip-components=1
+      echo "##vso[task.setvariable variable=JAVA_HOME]/opt/java"
+      echo "##vso[task.prependpath]/opt/java/bin"
+    displayName: 'Install Eclipse Temurin {latest-lts}'
+----
+
+=== GitLab CI
+
+[source, yaml, subs="attributes"]
+----
+install-temurin:
+  before_script:
+    - |
+      JAVA_VERSION="{latest-lts}"
+      API_URL="https://api.adoptium.net/v3/binary/latest/${JAVA_VERSION}/ga/linux/x64/jdk/hotspot/normal/eclipse"
+      FETCH_URL=$(curl -s -w %{redirect_url} "${API_URL}")
+      FILENAME=$(curl -OLs -w %{filename_effective} "${FETCH_URL}")
+      curl -Ls "${FETCH_URL}.sha256.txt" | sha256sum -c --status
+      tar xzf "${FILENAME}" -C /opt --strip-components=1
+      export JAVA_HOME=/opt
+      export PATH="${JAVA_HOME}/bin:${PATH}"
+      java -version
+----
+
+=== Jenkins (Scripted Pipeline)
+
+[source, groovy, subs="attributes"]
+----
+node {
+    stage('Install Temurin') {
+        sh '''
+            JAVA_VERSION="{latest-lts}"
+            API_URL="https://api.adoptium.net/v3/binary/latest/$JAVA_VERSION/ga/linux/x64/jdk/hotspot/normal/eclipse"
+            FETCH_URL=$(curl -s -w %{redirect_url} "$API_URL")
+            FILENAME=$(curl -OLs -w %{filename_effective} "$FETCH_URL")
+            curl -Ls "$FETCH_URL.sha256.txt" | sha256sum -c --status
+            tar xzf "$FILENAME" -C /opt --strip-components=1
+        '''
+        env.JAVA_HOME = '/opt'
+        env.PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
+    }
+}
+----
+
+== Further Reading
+
+* link:https://api.adoptium.net/q/swagger-ui/[Adoptium API documentation]
+* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[Adoptium API Cookbook]
+* link:/docs/secure-software[Adoptium Secure Software Practices]
