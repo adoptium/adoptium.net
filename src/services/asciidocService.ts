@@ -33,7 +33,12 @@ export async function getAsciidocContent(
 ): Promise<AsciidocData | null> {
   // Build the file path
   const slugParts = slug.split("/").filter(Boolean);
-  const dirPath = path.join(CONTENT_BASE_DIR, ...slugParts);
+  const dirPath = path.resolve(CONTENT_BASE_DIR, ...slugParts);
+
+  // Prevent path traversal: ensure resolved path is within the content directory
+  if (!dirPath.startsWith(CONTENT_BASE_DIR)) {
+    return null;
+  }
 
   // Try locale-specific file first
   let filePath = path.join(dirPath, `index.${locale}.adoc`);
