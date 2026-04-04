@@ -23,16 +23,24 @@ const docSections: Record<string, DocSection> = {
     items: [
       { title: "Overview", href: "/installation" },
       {
-        title: "Windows MSI Installer",
-        href: "/installation/windows",
+        title: "Linux (RPM/DEB/APK)",
+        href: "/installation/linux",
       },
       {
         title: "macOS PKG Installer",
         href: "/installation/macOS",
       },
       {
-        title: "Linux (RPM/DEB/APK)",
-        href: "/installation/linux",
+        title: "Windows MSI Installer",
+        href: "/installation/windows",
+      },
+      {
+        title: "GitHub Actions",
+        href: "/installation/github-actions",
+      },
+      {
+        title: "CI/CD Scripts",
+        href: "/installation/ci-scripts",
       },
       { title: "Archive Files", href: "/installation/archives" },
     ],

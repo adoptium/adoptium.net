@@ -27,9 +27,10 @@ echo "deb [arch=amd64] https://some.repository.url focal main" | sudo tee /etc/a
 
 使用以下命名方案：
 
+[subs="attributes"]
 ....
 temurin-<version>-jdk
-例如 temurin-17-jdk 或 temurin-8-jdk
+例如 temurin-{latest-lts}-jdk 或 temurin-8-jdk
 ....
 
 == 在 Debian 或 Ubuntu 上安装 Deb
@@ -58,10 +59,10 @@ echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_COD
 +
 . 安装您需要的 Temurin 版本：
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
 apt update # 如果您还没有更新，请更新
-apt install temurin-17-jdk
+apt install temurin-{latest-lts}-jdk
 ----
 
 == CentOS/RHEL/Fedora 说明
@@ -85,15 +86,15 @@ EOF
 +
 . 使用 `dnf` 安装您需要的 Temurin 版本：
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-dnf install temurin-17-jdk
+dnf install temurin-{latest-lts}-jdk
 ----
 或者，如果您正在使用 `yum`：
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-yum install temurin-17-jdk
+yum install temurin-{latest-lts}-jdk
 ----
 
 == openSUSE/SLES 说明
@@ -108,9 +109,9 @@ zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-
 +
 . 安装您需要的 Temurin 版本：
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-zypper install temurin-17-jdk
+zypper install temurin-{latest-lts}-jdk
 ----
 
 == Alpine Linux 说明
@@ -131,9 +132,9 @@ echo 'https://packages.adoptium.net/artifactory/apk/alpine/main' >> /etc/apk/rep
 +
 . 安装您需要的 Temurin 版本：
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-apk add temurin-17-jdk
+apk add temurin-{latest-lts}-jdk
 ----
 
 请在 https://github.com/adoptium/installer/issues 上提出任何问题。

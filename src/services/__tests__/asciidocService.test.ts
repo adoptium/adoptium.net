@@ -103,7 +103,12 @@ This is test content.`;
       expect(mockFs.readFileSync).toHaveBeenCalledWith(fallbackPath, "utf8");
       expect(mockProcessAsciiDoc).toHaveBeenCalledWith(
         fallbackPath,
-        mockContent
+        mockContent,
+        {
+          attributes: {
+            "latest-lts": "21",
+          },
+        },
       );
       expect(mockExtractMetadata).toHaveBeenCalledWith(
         fallbackPath,

@@ -25,9 +25,10 @@ Al utilizar `sudo tee`, puede escribir la entrada del repositorio en el archivo 
 
 Se utiliza el siguiente esquema de nombres:
 
+[subs="attributes"]
 ....
 temurin-<versión>-jdk
-por ejemplo: temurin-17-jdk o temurin-8-jdk
+por ejemplo: temurin-{latest-lts}-jdk o temurin-8-jdk
 ....
 
 == Instalación de paquetes DEB en Debian o Ubuntu
@@ -56,10 +57,10 @@ CONSEJO: Para Linux Mint (basado en Ubuntu), debe reemplazar `VERSION_CODENAME` 
 +
 . Instale la versión de Temurin que necesite:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
 apt update # actualice si no lo ha hecho ya
-apt install temurin-17-jdk
+apt install temurin-{latest-lts}-jdk
 ----
 
 == Instrucciones para CentOS/RHEL/Fedora
@@ -83,15 +84,15 @@ EOF
 +
 . Instale la versión de Temurin que necesite utilizando `dnf`:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-dnf install temurin-17-jdk
+dnf install temurin-{latest-lts}-jdk
 ----
 Alternativamente, si está utilizando `yum`:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-yum install temurin-17-jdk
+yum install temurin-{latest-lts}-jdk
 ----
 
 == Instrucciones para openSUSE/SLES
@@ -105,9 +106,9 @@ zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-
 +
 . Instale la versión de Temurin que necesite:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-zypper install temurin-17-jdk
+zypper install temurin-{latest-lts}-jdk
 ----
 
 == Instrucciones para Alpine Linux
@@ -128,9 +129,9 @@ echo 'https://packages.adoptium.net/artifactory/apk/alpine/main' >> /etc/apk/rep
 +
 . Instale la versión de Temurin que necesite:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-apk add temurin-17-jdk
+apk add temurin-{latest-lts}-jdk
 ----
 
 Por favor, reporte cualquier problema en https://github.com/adoptium/installer/issues.

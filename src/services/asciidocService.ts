@@ -8,6 +8,7 @@ import {
   getLanguageVariants,
   fileExists,
 } from "@/utils/asciidoc";
+import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases";
 
 // Base directory for AsciiDoc content
 const CONTENT_BASE_DIR = path.join(process.cwd(), "content/asciidoc-pages");
@@ -28,11 +29,16 @@ interface AsciidocData {
 
 export async function getAsciidocContent(
   slug: string,
-  locale = "en"
+  locale = "en",
 ): Promise<AsciidocData | null> {
   // Build the file path
   const slugParts = slug.split("/").filter(Boolean);
-  const dirPath = path.join(CONTENT_BASE_DIR, ...slugParts);
+  const dirPath = path.resolve(CONTENT_BASE_DIR, ...slugParts);
+
+  // Prevent path traversal: ensure resolved path is within the content directory
+  if (!dirPath.startsWith(CONTENT_BASE_DIR)) {
+    return null;
+  }
 
   // Try locale-specific file first
   let filePath = path.join(dirPath, `index.${locale}.adoc`);
@@ -51,8 +57,21 @@ export async function getAsciidocContent(
     // Read the file content
     const content = fs.readFileSync(filePath, "utf8");
 
+    // Fetch latest LTS version from Adoptium API for AsciiDoc attribute substitution
+    let latestLts = 21; // fallback
+    try {
+      const releases = await fetchAvailableReleases();
+      latestLts = releases.most_recent_lts;
+    } catch {
+      // Use fallback if API is unavailable
+    }
+
     // Process AsciiDoc to HTML
-    const htmlContent = processAsciiDoc(filePath, content);
+    const htmlContent = processAsciiDoc(filePath, content, {
+      attributes: {
+        "latest-lts": String(latestLts),
+      },
+    });
 
     // Extract metadata
     const metadata = extractMetadata(filePath, content);
@@ -123,6 +142,6 @@ export async function getPagesInSection(section: string, locale = "en") {
     (path) =>
       path.slug.startsWith(section) &&
       path.slug !== section && // Exclude the section itself
-      (path.locale === locale || path.locale === "en") // Include preferred locale and English fallback
+      (path.locale === locale || path.locale === "en"), // Include preferred locale and English fallback
   );
 }
