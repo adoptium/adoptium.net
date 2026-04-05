@@ -52,7 +52,7 @@ const DocTableOfContents: React.FC = () => {
 
   return (
     <nav aria-label="On this page">
-      <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">
+      <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 light:text-gray-500 mb-3">
         On this page
       </h4>
       <ul className="space-y-1 text-sm">
@@ -65,7 +65,7 @@ const DocTableOfContents: React.FC = () => {
               } ${
                 activeId === heading.id
                   ? "border-pink text-pink"
-                  : "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-600"
+                  : "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-600 light:text-gray-500 light:hover:text-gray-900"
               }`}
             >
               {heading.text}

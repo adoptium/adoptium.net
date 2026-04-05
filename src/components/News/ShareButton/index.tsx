@@ -1,26 +1,17 @@
-"use client"
+"use client";
 
 import {
-  TwitterShareButton,
+  XShareButton,
   EmailShareButton,
   FacebookShareButton,
   LinkedinShareButton,
   RedditShareButton,
   BlueskyShareButton,
-} from "react-share"
+} from "react-share";
 
-import {
-  FaLinkedin,
-  FaFacebook,
-  FaReddit,
-} from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaReddit } from "react-icons/fa";
 
-import {
-  FaXTwitter,
-  FaBluesky,
-  FaEnvelope,
-} from "react-icons/fa6";
-
+import { FaXTwitter, FaBluesky, FaEnvelope } from "react-icons/fa6";
 
 interface SocialProps {
   twitter: string;
@@ -42,14 +33,17 @@ interface ShareButtonProps {
   post: PostProps;
 }
 
-const ShareButton: React.FC<ShareButtonProps> = props => {
-  const { location, siteMetadata, post } = props
-  const twitter = [siteMetadata.social.twitter]
-  const url = location
+const ShareButton: React.FC<ShareButtonProps> = (props) => {
+  const { location, siteMetadata, post } = props;
+  const twitter = [siteMetadata.social.twitter];
+  const url = location;
 
   return (
-    <div id="share-buttons">
-      <TwitterShareButton
+    <div
+      id="share-buttons"
+      className="flex items-center gap-1 text-white/70 light:text-gray-500 [&>button:hover]:text-white light:[&>button:hover]:text-gray-900 [&>button]:transition-colors"
+    >
+      <XShareButton
         aria-label="Share on X (Twitter)"
         url={url}
         className="mr-2"
@@ -58,7 +52,7 @@ const ShareButton: React.FC<ShareButtonProps> = props => {
         related={twitter}
       >
         <FaXTwitter size={25} />
-      </TwitterShareButton>
+      </XShareButton>
 
       <LinkedinShareButton
         aria-label="Share on Linkedin"
@@ -105,7 +99,7 @@ const ShareButton: React.FC<ShareButtonProps> = props => {
         <FaEnvelope size={25} />
       </EmailShareButton>
     </div>
-  )
-}
+  );
+};
 
-export default ShareButton
+export default ShareButton;

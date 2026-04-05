@@ -123,7 +123,7 @@ const DocSidebar: React.FC = () => {
   return (
     <nav className="w-full" aria-label="Documentation navigation">
       <div className="mb-3">
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-3">
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 light:text-gray-500 mb-3 px-3">
           {section.title}
         </h3>
       </div>
@@ -137,7 +137,7 @@ const DocSidebar: React.FC = () => {
                 className={`block px-3 py-2 rounded-md text-sm transition-colors duration-150 ${
                   active
                     ? "bg-pink/10 text-pink font-medium border-l-2 border-pink"
-                    : "text-gray-300 hover:bg-white/5 hover:text-white"
+                    : "text-gray-300 hover:bg-white/5 hover:text-white light:text-gray-900 light:hover:bg-gray-100 light:hover:text-gray-900"
                 }`}
               >
                 {item.title}

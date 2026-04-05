@@ -83,11 +83,11 @@ This is test content.`;
       const slug = "about";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/about/index.en.adoc"
+        "content/asciidoc-pages/about/index.en.adoc",
       );
       const fallbackPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/about/index.adoc"
+        "content/asciidoc-pages/about/index.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -112,11 +112,11 @@ This is test content.`;
       );
       expect(mockExtractMetadata).toHaveBeenCalledWith(
         fallbackPath,
-        mockContent
+        mockContent,
       );
       expect(mockGetLanguageVariants).toHaveBeenCalledWith(
         fallbackPath,
-        "index"
+        "index",
       );
 
       expect(result).toEqual({
@@ -134,7 +134,7 @@ This is test content.`;
       const locale = "zh-CN";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/about/index.zh-CN.adoc"
+        "content/asciidoc-pages/about/index.zh-CN.adoc",
       );
 
       mockFileExists.mockReturnValue(true);
@@ -154,11 +154,11 @@ This is test content.`;
       const slug = "docs/installation/guide";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/docs/installation/guide/index.en.adoc"
+        "content/asciidoc-pages/docs/installation/guide/index.en.adoc",
       );
       const fallbackPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/docs/installation/guide/index.adoc"
+        "content/asciidoc-pages/docs/installation/guide/index.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -200,7 +200,7 @@ This is test content.`;
       expect(result).toBeNull();
       expect(consoleSpy).toHaveBeenCalledWith(
         expect.stringContaining("Error processing AsciiDoc file"),
-        expect.any(Error)
+        expect.any(Error),
       );
 
       consoleSpy.mockRestore();
@@ -230,7 +230,7 @@ This is test content.`;
       const slug = "/docs//installation/";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/docs/installation/index.en.adoc"
+        "content/asciidoc-pages/docs/installation/index.en.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -248,7 +248,7 @@ This is test content.`;
       const slug = "";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/index.en.adoc"
+        "content/asciidoc-pages/index.en.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -357,7 +357,7 @@ This is test content.`;
       ];
 
       (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(
-        mockDirEntries
+        mockDirEntries,
       );
 
       const result = await getAllAsciidocPaths();
@@ -486,8 +486,8 @@ This is test content.`;
       expect(result.length).toBeGreaterThan(0);
       expect(
         result.every(
-          (page) => page.slug.startsWith("docs") && page.slug !== "docs"
-        )
+          (page) => page.slug.startsWith("docs") && page.slug !== "docs",
+        ),
       ).toBe(true);
     });
 
@@ -586,7 +586,7 @@ This is test content.`;
       const slug = "very/deep/nested/path/structure";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/very/deep/nested/path/structure/index.en.adoc"
+        "content/asciidoc-pages/very/deep/nested/path/structure/index.en.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
