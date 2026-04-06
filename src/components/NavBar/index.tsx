@@ -338,7 +338,10 @@ const NavBar = ({ locale }: { locale: string }) => {
                     >
                       <div>
                         <MenuButton
-                          className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                          className={classNames(
+                            "inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer",
+                            navItemFocusClasses,
+                          )}
                           onClick={() =>
                             setOpenedMenu(
                               openedMenu === item.name ? undefined : item.name,
