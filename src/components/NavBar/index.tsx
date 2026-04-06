@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { usePathname } from "@/i18n/navigation";
 import {
   Dialog,
   DialogPanel,
@@ -28,6 +29,56 @@ interface NavItem {
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
+}
+function calculateActivePaths(currentPath: string): Set<string> {
+  if (!currentPath) return new Set();
+
+  const removeLocalePrefix = (pathname: string): string => {
+    const localePattern = /^\/[a-z]{2}(-[A-Z]{2})?\//;
+    return pathname.replace(localePattern, "/");
+  };
+
+  const pathWithoutLocale = removeLocalePrefix(currentPath);
+  const normalizedCurrentPath = pathWithoutLocale.endsWith("/")
+    ? pathWithoutLocale.slice(0, -1)
+    : pathWithoutLocale;
+
+  const allPaths: { path: string; normalizedPath: string }[] = [];
+
+  navigation.forEach((item) => {
+    if (item.href) {
+      const normalizedPath = item.href.endsWith("/")
+        ? item.href.slice(0, -1)
+        : item.href;
+      allPaths.push({ path: item.href, normalizedPath });
+    }
+    if (item.children) {
+      item.children.forEach((child) => {
+        if (child.href) {
+          const normalizedPath = child.href.endsWith("/")
+            ? child.href.slice(0, -1)
+            : child.href;
+          allPaths.push({ path: child.href, normalizedPath });
+        }
+      });
+    }
+  });
+
+  const matchingPaths = allPaths.filter(
+    ({ normalizedPath }) =>
+      normalizedCurrentPath === normalizedPath ||
+      normalizedCurrentPath.startsWith(normalizedPath + "/"),
+  );
+
+  if (matchingPaths.length === 0) return new Set();
+
+  const longestMatch = matchingPaths.reduce((longest, current) =>
+    current.normalizedPath.length > longest.normalizedPath.length
+      ? current
+      : longest,
+  );
+
+  return new Set([longestMatch.path]);
 }
 
 const navigation: NavItem[] = [
@@ -91,10 +142,12 @@ const navigation: NavItem[] = [
 const MobileLink: React.FC<{
   href?: string;
   name: string;
+  activePaths: Set<string>;
   onClick?: () => void;
-}> = ({ href, name, onClick }) => {
+}> = ({ href, name, onClick, activePaths }) => {
   const commonClasses = classNames(
     "-mx-3 block rounded-lg px-2.5 py-1.5 text-[16px] font-normal leading-6 text-white-900 hover:bg-white-50",
+    href && activePaths.has(href) ? "text-rose-600" : "",
   );
 
   if (href && href.startsWith("http")) {
@@ -140,6 +193,14 @@ const NavBar = ({ locale }: { locale: string }) => {
   const [showLastSlide, setShowLastSlide] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(false);
   const [activeLastSlide, setActiveLastSlide] = useState<NavItem | null>(null);
+  const pathname = usePathname();
+  const [activePaths, setActivePaths] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setActivePaths(calculateActivePaths(pathname));
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (!mobileMenuOpen) {
@@ -211,6 +272,9 @@ const NavBar = ({ locale }: { locale: string }) => {
                           className={classNames(
                             "inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer",
                             navItemFocusClasses,
+                            item.href && activePaths.has(item.href)
+                              ? "text-rose-600"
+                              : "",
                           )}
                           onClick={() =>
                             setOpenedMenu(
@@ -251,11 +315,13 @@ const NavBar = ({ locale }: { locale: string }) => {
                                     <MobileLink
                                       href="/members"
                                       name="Become a Member"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                     <MobileLink
                                       href="/members#strategic-sec"
                                       name="Our Members"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                   </div>
@@ -269,16 +335,19 @@ const NavBar = ({ locale }: { locale: string }) => {
                                     <MobileLink
                                       href="https://www.eclipse.org/sponsor/adoptium/"
                                       name="Become an Individual Sustainer"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                     <MobileLink
                                       href="/become-a-sustainer"
                                       name="Become a Corporate Sustainer"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                     <MobileLink
                                       href="/sustainers#temurin-sustainers"
                                       name="Our Sustainers"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                   </div>
@@ -292,6 +361,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                     <MobileLink
                                       href="/contributing"
                                       name="Contribute to Adoptium"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                   </div>
@@ -305,11 +375,13 @@ const NavBar = ({ locale }: { locale: string }) => {
                                     <MobileLink
                                       href="/adopters?open=adopter#become-adopter"
                                       name="Become an Adopter"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                     <MobileLink
                                       href="/adopters"
                                       name="Our Adopters"
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                   </div>
@@ -341,6 +413,9 @@ const NavBar = ({ locale }: { locale: string }) => {
                           className={classNames(
                             "inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer",
                             navItemFocusClasses,
+                            item.href && activePaths.has(item.href)
+                              ? "text-rose-600"
+                              : "",
                           )}
                           onClick={() =>
                             setOpenedMenu(
@@ -377,6 +452,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                     <MobileLink
                                       href={child.href}
                                       name={child.name}
+                                      activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                   )}
@@ -395,6 +471,9 @@ const NavBar = ({ locale }: { locale: string }) => {
                     className={classNames(
                       "text-sm font-semibold leading-6 text-white-900",
                       navItemFocusClasses,
+                      item.href && activePaths.has(item.href)
+                        ? "text-rose-600"
+                        : "",
                     )}
                   >
                     {item.name}
@@ -503,6 +582,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                         <MobileLink
                           href={item.href}
                           name={item.name}
+                          activePaths={activePaths}
                           onClick={() => setMobileMenuOpen(false)}
                         />
                       </div>
@@ -567,6 +647,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                         <MobileLink
                           href={item.href}
                           name={item.name}
+                          activePaths={activePaths}
                           onClick={() => setMobileMenuOpen(false)}
                         />
                       </div>
