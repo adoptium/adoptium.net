@@ -167,6 +167,9 @@ const NavBar = ({ locale }: { locale: string }) => {
     };
   }, []);
 
+  const navItemFocusClasses =
+    "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]";
+
   return (
     <header
       className={`sticky inset-x-0 top-0 z-50 ${
@@ -205,7 +208,10 @@ const NavBar = ({ locale }: { locale: string }) => {
                     >
                       <div>
                         <MenuButton
-                          className="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                          className={classNames(
+                            "inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer",
+                            navItemFocusClasses,
+                          )}
                           onClick={() =>
                             setOpenedMenu(
                               openedMenu === item.name ? undefined : item.name,
@@ -227,15 +233,18 @@ const NavBar = ({ locale }: { locale: string }) => {
                         leave="transition ease-in duration-75"
                         show={openedMenu === item.name}
                       >
-                        <MenuItems className="fixed left-1/2 -translate-x-1/2 top-[80px] mt-4 w-max max-w-[1000px] bg-[#0E002A] shadow-lg rounded-md p-5 z-50 outline-none border-none focus:outline-none focus:ring-0">
+                        <MenuItems
+                          className="fixed  left-1/2 -translate-x-1/2 top-[80px] mt-4  min-w-[700px] max-w-[1000px] 
+  py-5 pl-7 pr-1  bg-[#0E002A] shadow-lg rounded-md z-50 outline-none border-none focus:outline-none "
+                        >
                           <ClickAwayListener
                             onClickAway={() => setOpenedMenu(undefined)}
                           >
-                            <div className="flex flex-col gap-4">
+                            <div className="flex flex-col gap-3">
                               {/* Grid */}
-                              <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-5 gap-y-3">
+                              <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-5 gap-y-3 ">
                                 <div>
-                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-1">
+                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
                                     Membership
                                   </h3>
                                   <div className="space-y-1">
@@ -253,7 +262,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                 </div>
 
                                 <div>
-                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-2">
+                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
                                     Sponsorship
                                   </h3>
                                   <div className="space-y-1">
@@ -276,7 +285,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                 </div>
 
                                 <div>
-                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-2">
+                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
                                     Contribute
                                   </h3>
                                   <div className="space-y-1">
@@ -289,7 +298,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                 </div>
 
                                 <div>
-                                  <h3 className="text-sm font-semibold  text-[#B20E46] mb-2">
+                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
                                     Adopt
                                   </h3>
                                   <div className="space-y-1">
@@ -310,10 +319,10 @@ const NavBar = ({ locale }: { locale: string }) => {
                               <div className="pt-3  flex justify-center">
                                 <Link
                                   href="/join-us"
-                                  className="text-sm font-semibold text-[#B20E46] hover:underline"
+                                  className="text-[15px] font-semibold text-[#ff1365] hover:underline"
                                   onClick={() => setOpenedMenu(undefined)}
                                 >
-                                  Join Us Overview
+                                  Join Us Overview →
                                 </Link>
                               </div>
                             </div>
@@ -382,6 +391,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                     href={item.href}
                     className={classNames(
                       "text-sm font-semibold leading-6 text-white-900",
+                      navItemFocusClasses,
                     )}
                   >
                     {item.name}
