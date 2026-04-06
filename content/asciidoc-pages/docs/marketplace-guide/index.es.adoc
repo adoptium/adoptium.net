@@ -3,7 +3,7 @@
 :keywords: mercado de adoptium
 :orgname: Eclipse Adoptium
 :lang: es
-:page-authors: tellison, gdams, jiekang
+:page-authors: tellison, gdams, jiekang, NickJavaDev88
 
 == Introducción
 

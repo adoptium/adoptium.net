@@ -1,5 +1,5 @@
 = AQAvit(TM) 验证
-:page-authors: gdams, smlambert, llxia, tellison, NickJavaDev88
+:page-authors: gdams, smlambert, llxia, tellison, NickJavaDev88, xavierfacq, Copilot
 :aqavit-branch: v0.9.6-release
 :lang: zh-CN
 版本 0.2, 2022.03.02

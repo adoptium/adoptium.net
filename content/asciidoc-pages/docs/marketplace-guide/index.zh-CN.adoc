@@ -3,7 +3,7 @@
 :keywords: Adoptium 市场
 :orgname: Eclipse Adoptium
 :lang: zh-CN
-:page-authors: tellison, gdams, jiekang
+:page-authors: tellison, gdams, jiekang, NickJavaDev88
 
 == 简介
 

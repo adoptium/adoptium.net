@@ -1,5 +1,5 @@
 = Linux (RPM/DEB/APK) installer packages
-:page-authors: rocketxz
+:page-authors: rocketxz, NickJavaDev88, gdams
 :toc:
 :icons: font
 
