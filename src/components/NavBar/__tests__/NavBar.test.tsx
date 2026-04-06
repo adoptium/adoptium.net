@@ -1,13 +1,10 @@
 import { vi } from "vitest";
 import { fireEvent } from "@testing-library/react";
+import { waitFor } from "@testing-library/react";
 
-vi.mock("next-intl/navigation", () => ({
-  createNavigation: () => ({
-    Link: ({ children, href }: any) => <a href={href}>{children}</a>,
-    redirect: () => {},
-    usePathname: () => "",
-    useRouter: () => ({}),
-  }),
+vi.mock("@/i18n/navigation", () => ({
+  usePathname: () => "/members",
+  Link: ({ children, href }: any) => <a href={href}>{children}</a>,
 }));
 vi.mock("next/image", () => ({
   default: (props: any) => <img {...props} />,
@@ -81,6 +78,16 @@ describe("NavBar", () => {
     fireEvent.scroll(window);
 
     expect(container.firstChild).toHaveClass("bg-[#200E46]");
+  });
+
+  it("handles hash links correctly", async () => {
+    const { getByText } = render(<NavBar locale="en" />);
+
+    fireEvent.click(getByText("Join Us"));
+
+    const link = await getByText("Our Members");
+
+    expect(link.closest("a")).toHaveAttribute("href", "/members#strategic-sec");
   });
 
   it("renders external link correctly", () => {

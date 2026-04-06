@@ -60,13 +60,11 @@ exports[`NavBar > should match the snapshot 1`] = `
             </div>
           </div>
           <a
-            class="text-sm font-semibold leading-6 text-white-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
             href="/temurin/releases"
           >
             Latest Releases
           </a>
           <a
-            class="text-sm font-semibold leading-6 text-white-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
             href="/marketplace"
           >
             Marketplace
