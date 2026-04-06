@@ -30,7 +30,11 @@ jobs:
         id: files
         run: |
           changed_files=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}")
-          echo "all=$changed_files" >> "$GITHUB_OUTPUT"
+          {
+            echo "all<<EOF"
+            echo "$changed_files"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - run: pip3 install bs4
 
