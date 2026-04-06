@@ -37,17 +37,16 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({
   if (related.length === 0) return null;
 
   return (
-    <div className="mt-16 w-full max-w-[1264px] px-0 sm:px-6 mx-auto py-8 md:py-16">
-      <div className="w-full max-w-[670px] mx-auto flex flex-col items-center justify-center px-4 sm:px-0">
-        <h2 className="text-5xl leading-[116%] text-white text-center font-semibold">
+    <div className="w-full max-w-[1264px] mx-auto px-4 sm:px-6 py-16 md:py-24 border-t border-white/10 light:border-gray-200">
+      <div className="max-w-2xl mx-auto text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white light:text-gray-900 tracking-tight mb-4">
           Related Articles
         </h2>
-        <p className="text-lg leading-7 text-grey-300 text-center mt-4">
-          Explore more articles that might interest you based on your reading
-          history.
+        <p className="text-gray-400 light:text-gray-500 text-lg leading-relaxed">
+          Explore more articles based on similar topics.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center pt-8 px-2 sm:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {related.map((post) => (
           <EventCard key={post.slug} post={post} />
         ))}

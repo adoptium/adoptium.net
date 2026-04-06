@@ -75,14 +75,27 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
         baseUrl={baseUrl}
         queryString={queryString}
       />
-      <div className="flex justify-center items-center gap-5 mt-8">
+      <div className="flex justify-center items-center gap-5 mt-12">
         <a
           href="https://newsroom.eclipse.org/node/add/news"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
+          className="inline-flex items-center gap-2 bg-pink hover:bg-rose-700 text-white py-3 px-8 rounded-xl transition-colors duration-200 text-sm font-semibold shadow-lg shadow-pink/20"
         >
           Submit News
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
         </a>
       </div>
     </div>

@@ -89,63 +89,73 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
       >
         <div
-          class="flex flex-col w-full rounded-3xl newscard-2 bg-[#200D46]"
+          class="group flex flex-col w-full rounded-2xl border border-white/10 light:border-gray-200 bg-white/[0.03] light:bg-white backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-white/20 light:hover:border-gray-300 hover:shadow-xl hover:shadow-purple/10 light:hover:shadow-gray-200/50 light:shadow-sm"
         >
           <div
-            class="relative h-[200px] m-0.5 rounded-t-3xl overflow-hidden"
+            class="relative h-[200px] overflow-hidden"
           >
             <img
-              alt="blog banner image"
-              class="object-cover"
+              alt="Tagged News"
+              class="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 385px"
               src="/news/2025/06/tagged-news/opengraph-image"
             />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+            />
           </div>
           <div
-            class="p-8 flex flex-col flex-1"
+            class="p-6 flex flex-col flex-1"
           >
+            <div
+              class="flex items-center gap-2 text-sm text-gray-400 light:text-gray-500 mb-3"
+            >
+              <time>
+                June 18, 2025
+              </time>
+              <span
+                class="text-gray-600"
+              >
+                ·
+              </span>
+              <span
+                class="text-pink"
+              >
+                author
+              </span>
+            </div>
             <h3
-              class="text-[24px] font-semibold leading-normal line-clamp-3 mb-2"
+              class="text-lg font-semibold text-white light:text-gray-900 leading-snug line-clamp-2 mb-3 group-hover:text-pink transition-colors"
               title="Tagged News"
             >
               Tagged News
             </h3>
-            <div
-              class="flex justify-between py-2"
+            <p
+              class="line-clamp-3 text-sm text-gray-400 light:text-gray-600 leading-relaxed flex-grow mb-5"
             >
-              <h3
-                class="flex flex-col gap-1 tab-button-text text-white"
-              >
-                <span>
-                  June 18, 2025
-                </span>
-                <span
-                  class="text-sm text-pink-500"
-                >
-                  Unknown Author
-                </span>
-              </h3>
-            </div>
-            <div
-              class="flex-grow mb-4"
-            >
-              <p
-                class="line-clamp-4 text-base text-gray-200"
-              >
-                desc
-              </p>
-            </div>
+              desc
+            </p>
             <div
               class="mt-auto"
             >
               <a
+                class="inline-flex items-center gap-1.5 text-sm font-medium text-pink hover:underline transition-colors"
                 href="[object Object]"
               >
-                <button
-                  class="rounded-2xl bg-transparent gradient-border border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[160px] h-[48px] block"
+                Read more
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  Read More
-                </button>
+                  <path
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -209,15 +219,28 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
         </a>
       </div>
       <div
-        class="flex justify-center items-center gap-5 mt-8"
+        class="flex justify-center items-center gap-5 mt-12"
       >
         <a
-          class="bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-full transition-all duration-200 ease-in-out text-center font-medium"
+          class="inline-flex items-center gap-2 bg-pink hover:bg-rose-700 text-white py-3 px-8 rounded-xl transition-colors duration-200 text-sm font-semibold shadow-lg shadow-pink/20"
           href="https://newsroom.eclipse.org/node/add/news"
           rel="noopener noreferrer"
           target="_blank"
         >
           Submit News
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
         </a>
       </div>
     </div>

@@ -2,10 +2,10 @@
 
 exports[`AsciidocPage > renders correctly for installation page 1`] = `
 <div
-  class="doc-wrapper pt-4"
+  class="doc-wrapper pt-4 light:bg-white"
 >
   <div
-    class="doc-header border-b border-white/10"
+    class="doc-header border-b border-white/10 light:bg-white light:border-gray-200"
   >
     <div
       class="mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 py-6 lg:pl-[calc(16rem+2rem)]"
@@ -15,10 +15,10 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
       >
         <nav
           aria-label="Breadcrumb"
-          class="flex items-center text-sm text-gray-400"
+          class="flex items-center text-sm text-gray-400 light:text-gray-500"
         >
           <a
-            class="hover:text-white transition-colors"
+            class="hover:text-white light:hover:text-gray-900 transition-colors"
             href="/"
           >
             Home
@@ -37,7 +37,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
             />
           </svg>
           <span
-            class="text-gray-200"
+            class="text-gray-200 light:text-gray-900"
           >
             Installation
           </span>
@@ -63,14 +63,14 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
         </button>
       </div>
       <h1
-        class="text-2xl md:text-3xl font-semibold text-white tracking-tight"
+        class="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight"
       >
         Page Title
       </h1>
     </div>
   </div>
   <div
-    class="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16"
+    class="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16 light:bg-white"
   >
     <div
       class="flex flex-col lg:flex-row"
@@ -80,7 +80,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
         class="hidden lg:block w-64 flex-shrink-0"
       >
         <div
-          class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10"
+          class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10 light:border-gray-200"
         />
       </aside>
       <div
@@ -217,13 +217,13 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
           </div>
         </article>
         <div
-          class="doc-footer h-px my-8 border border-white/10"
+          class="doc-footer h-px my-8 border border-white/10 light:border-gray-200"
         />
         <div
           class="space-y-4"
         >
           <div
-            class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
+            class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 light:bg-gray-50 light:from-gray-50 light:to-gray-100 px-8 py-6 rounded-2xl border border-white/10 light:border-gray-200 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div
               class="flex items-center gap-5"
@@ -244,12 +244,12 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
                 class="flex flex-col gap-2"
               >
                 <h2
-                  class="doc-edit-title text-white text-xl md:text-2xl font-bold leading-tight"
+                  class="doc-edit-title text-white light:text-gray-900 text-xl md:text-2xl font-bold leading-tight"
                 >
                   Text
                 </h2>
                 <p
-                  class="doc-edit-desc text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg"
+                  class="doc-edit-desc text-white/90 light:text-gray-500 text-sm md:text-base font-normal leading-relaxed max-w-lg"
                 >
                   Text
                 </p>
@@ -329,7 +329,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
               />
             </svg>
             <span
-              class="doc-community-desc text-gray-400 text-sm"
+              class="doc-community-desc text-gray-400 light:text-gray-500 text-sm"
             >
               Join our Slack channel to discuss and reach out to maintainers.
             </span>
@@ -350,7 +350,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
         class="hidden xl:block w-56 flex-shrink-0"
       >
         <div
-          class="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10"
+          class="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10 light:border-gray-200"
         />
       </aside>
     </div>
@@ -360,10 +360,10 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
 
 exports[`AsciidocPage > renders correctly with English locale 1`] = `
 <div
-  class="doc-wrapper pt-4"
+  class="doc-wrapper pt-4 light:bg-white"
 >
   <div
-    class="doc-header border-b border-white/10"
+    class="doc-header border-b border-white/10 light:bg-white light:border-gray-200"
   >
     <div
       class="mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 py-6 lg:pl-[calc(16rem+2rem)]"
@@ -373,10 +373,10 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
       >
         <nav
           aria-label="Breadcrumb"
-          class="flex items-center text-sm text-gray-400"
+          class="flex items-center text-sm text-gray-400 light:text-gray-500"
         >
           <a
-            class="hover:text-white transition-colors"
+            class="hover:text-white light:hover:text-gray-900 transition-colors"
             href="/"
           >
             Home
@@ -395,7 +395,7 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
             />
           </svg>
           <span
-            class="text-gray-200"
+            class="text-gray-200 light:text-gray-900"
           >
             Test
           </span>
@@ -421,14 +421,14 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
         </button>
       </div>
       <h1
-        class="text-2xl md:text-3xl font-semibold text-white tracking-tight"
+        class="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight"
       >
         Page Title
       </h1>
     </div>
   </div>
   <div
-    class="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16"
+    class="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16 light:bg-white"
   >
     <div
       class="flex flex-col lg:flex-row"
@@ -438,7 +438,7 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
         class="hidden lg:block w-64 flex-shrink-0"
       >
         <div
-          class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10"
+          class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10 light:border-gray-200"
         />
       </aside>
       <div
@@ -455,13 +455,13 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
           </div>
         </article>
         <div
-          class="doc-footer h-px my-8 border border-white/10"
+          class="doc-footer h-px my-8 border border-white/10 light:border-gray-200"
         />
         <div
           class="space-y-4"
         >
           <div
-            class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
+            class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 light:bg-gray-50 light:from-gray-50 light:to-gray-100 px-8 py-6 rounded-2xl border border-white/10 light:border-gray-200 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div
               class="flex items-center gap-5"
@@ -482,12 +482,12 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
                 class="flex flex-col gap-2"
               >
                 <h2
-                  class="doc-edit-title text-white text-xl md:text-2xl font-bold leading-tight"
+                  class="doc-edit-title text-white light:text-gray-900 text-xl md:text-2xl font-bold leading-tight"
                 >
                   Text
                 </h2>
                 <p
-                  class="doc-edit-desc text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg"
+                  class="doc-edit-desc text-white/90 light:text-gray-500 text-sm md:text-base font-normal leading-relaxed max-w-lg"
                 >
                   Text
                 </p>
@@ -567,7 +567,7 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
               />
             </svg>
             <span
-              class="doc-community-desc text-gray-400 text-sm"
+              class="doc-community-desc text-gray-400 light:text-gray-500 text-sm"
             >
               Join our Slack channel to discuss and reach out to maintainers.
             </span>
@@ -588,7 +588,7 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
         class="hidden xl:block w-56 flex-shrink-0"
       >
         <div
-          class="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10"
+          class="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10 light:border-gray-200"
         />
       </aside>
     </div>
@@ -598,10 +598,10 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
 
 exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
 <div
-  class="doc-wrapper pt-4"
+  class="doc-wrapper pt-4 light:bg-white"
 >
   <div
-    class="doc-header border-b border-white/10"
+    class="doc-header border-b border-white/10 light:bg-white light:border-gray-200"
   >
     <div
       class="mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 py-6 lg:pl-[calc(16rem+2rem)]"
@@ -611,10 +611,10 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
       >
         <nav
           aria-label="Breadcrumb"
-          class="flex items-center text-sm text-gray-400"
+          class="flex items-center text-sm text-gray-400 light:text-gray-500"
         >
           <a
-            class="hover:text-white transition-colors"
+            class="hover:text-white light:hover:text-gray-900 transition-colors"
             href="/"
           >
             Home
@@ -633,7 +633,7 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
             />
           </svg>
           <span
-            class="text-gray-200"
+            class="text-gray-200 light:text-gray-900"
           >
             Test
           </span>
@@ -659,14 +659,14 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
         </button>
       </div>
       <h1
-        class="text-2xl md:text-3xl font-semibold text-white tracking-tight"
+        class="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight"
       >
         Page Title
       </h1>
     </div>
   </div>
   <div
-    class="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16"
+    class="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16 light:bg-white"
   >
     <div
       class="flex flex-col lg:flex-row"
@@ -676,7 +676,7 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
         class="hidden lg:block w-64 flex-shrink-0"
       >
         <div
-          class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10"
+          class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10 light:border-gray-200"
         />
       </aside>
       <div
@@ -728,13 +728,13 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
           </div>
         </article>
         <div
-          class="doc-footer h-px my-8 border border-white/10"
+          class="doc-footer h-px my-8 border border-white/10 light:border-gray-200"
         />
         <div
           class="space-y-4"
         >
           <div
-            class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
+            class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 light:bg-gray-50 light:from-gray-50 light:to-gray-100 px-8 py-6 rounded-2xl border border-white/10 light:border-gray-200 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div
               class="flex items-center gap-5"
@@ -755,12 +755,12 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
                 class="flex flex-col gap-2"
               >
                 <h2
-                  class="doc-edit-title text-white text-xl md:text-2xl font-bold leading-tight"
+                  class="doc-edit-title text-white light:text-gray-900 text-xl md:text-2xl font-bold leading-tight"
                 >
                   Text
                 </h2>
                 <p
-                  class="doc-edit-desc text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg"
+                  class="doc-edit-desc text-white/90 light:text-gray-500 text-sm md:text-base font-normal leading-relaxed max-w-lg"
                 >
                   Text
                 </p>
@@ -840,7 +840,7 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
               />
             </svg>
             <span
-              class="doc-community-desc text-gray-400 text-sm"
+              class="doc-community-desc text-gray-400 light:text-gray-500 text-sm"
             >
               Join our Slack channel to discuss and reach out to maintainers.
             </span>
@@ -861,7 +861,7 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
         class="hidden xl:block w-56 flex-shrink-0"
       >
         <div
-          class="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10"
+          class="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10 light:border-gray-200"
         />
       </aside>
     </div>
