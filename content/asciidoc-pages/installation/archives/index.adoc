@@ -1,5 +1,5 @@
 = Archive Installation
-:page-authors: gdams, tellison
+:page-authors: gdams, tellison, sxa
 :toc:
 :icons: font
 
