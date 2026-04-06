@@ -3,7 +3,7 @@
 :keywords: adoptium, AQAvit, calidad, política, verificación, java, qvs
 :orgname: Eclipse Adoptium
 :lang: es
-:page-authors: tellison, gdams, HanSolo, NickJavaDev88, xavierfacq, Copilot
+:page-authors: tellison, gdams, HanSolo, NickJavaDev88, xavierfacq
 
 == Descripción general
 
