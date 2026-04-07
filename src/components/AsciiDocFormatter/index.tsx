@@ -32,6 +32,12 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       if (node.name === "a" && node.attribs) {
         const href = node.attribs.href || "";
         const isExternal = href.startsWith("http");
+
+        // Don't show external icon if the link wraps an image
+        const wrapsImage = node.children.some(
+          (child) => isElement(child) && child.name === "img",
+        );
+
         if (isExternal) {
           return (
             <a
@@ -41,7 +47,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
               className={node.attribs.class}
             >
               {domToReact(node.children as DOMNode[], options)}
-              <i className="fa fa-external-link fa-xs p-1" />
+              {!wrapsImage && <i className="fa fa-external-link fa-xs p-1" />}
             </a>
           );
         } else {

@@ -1,0 +1,141 @@
+= Guide de Migration
+:page-authors: gdams
+:page-based-on: e0bae585804689459af34ceecc98fe74e8cfc3d6
+:page-description: Guide complet pour migrer d'Oracle JDK vers Eclipse Temurin.
+:page-keywords: java, jdk, migration, oracle, temurin, openjdk, eclipse
+:icons: font
+
+== Migrer vers Eclipse Temurin
+
+Si vous passez d'Oracle JDK à OpenJDK du projet Adoptium, vous avez
+probablement quelques questions clés en tête. Tout d'abord, vous voudrez
+connaître les différences entre Oracle JDK et Temurin et savoir s'il y a
+des étapes à suivre pour migrer. Les réponses aux questions courantes
+sont couvertes dans les sections qui suivent.
+
+== Migrer depuis Oracle JDK
+
+Le tableau suivant illustre les composants propriétaires présents dans
+Oracle JDK 8 et les technologies alternatives qui sont prévues ou
+disponibles pour les remplacer. Cliquez sur les liens pour en savoir
+plus sur chaque composant et les étapes éventuellement nécessaires pour
+les adopter.
+
+icon:check[] - Supporté, icon:times[] - Non supporté
+[cols="35%,25%,20%,20%",options="header",]
+|=======================================================================
+|Composant propriétaire Oracle JDK 8 |Composant alternatif |OpenJDK 8 |OpenJDK 11 et supérieur
+|Java Web Start |link:#_icedtea_web[IcedTea-Web] | icon:check[] |  icon:times[]
+|JavaFX |link:#_openjfx[OpenJFX] |  icon:times[]    |  icon:check[]
+|Moteur de rendu T2K
+|link:#_biblioth%C3%A8que_de_rendu_freetype[Freetype] |  icon:check[]   |  icon:check[]
+|Polices Monotype Lucida |link:#_polices_lucida_sous_nouvelle_licence[Polices Lucida
+sous nouvelle licence] |  icon:times[]    (bientôt disponible) |  icon:times[]    (bientôt disponible)
+|Moteur de rendu 2D Ductus |link:#_pisces_et_marlin[Pisces/Marlin] |  icon:check[]   (Pisces)
+|  icon:check[]   (Marlin)
+|Bibliothèque Kodac Color Matching System (KCMS) |link:#_lcms[LCMS] |  icon:check[]   |  icon:check[]
+|SNMP |Utiliser link:#_jmx[JMX] (ou SNMP4J) |  icon:check[]   (non inclus) |  icon:check[]   (non
+inclus)
+|Pilotes audio |Utiliser link:#_pilotes_audio_windows[les pilotes audio Windows]
+|  icon:check[]   (non inclus) |  icon:check[]   (non inclus)
+|Java Flight Recorder (JFR) |link:#_java_flight_recorder[Java Flight
+Recorder] |  icon:check[]   |  icon:check[]
+|Java Mission Control (JMC) |Utiliser link:#_eclipse_mission_control[Eclipse
+Mission Control] |  icon:check[]   |  icon:check[]
+|=======================================================================
+
+[#_icedtea_web]
+=== IcedTea-Web
+
+Java Web Start a été déprécié par Oracle dans Java SE 8 et supprimé dans
+Java SE 9. IcedTea-Web peut fournir une fonctionnalité équivalente pour
+les utilisateurs de Temurin 8.
+
+IcedTea-Web est disponible au téléchargement depuis la
+https://adoptopenjdk.net/icedtea-web.html[page du projet IcedTea-Web]
+aux formats Linux, Windows, macOS et Portable.
+
+Utilisez IcedTea-Web de la même manière que Java Web Start. Pour plus
+d'informations, consultez
+https://docs.oracle.com/javase/tutorial/deployment/webstart/developing.html[Développer
+une application Java Web Start] et
+https://docs.oracle.com/javase/tutorial/deployment/webstart/deploying.html[Déployer
+une application Java Web Start]. Bien qu'IcedTea-Web soit conçu pour
+fonctionner de la même manière que Java Web Start, il existe quelques
+différences connues, qui sont signalées comme problèmes dans le
+https://github.com/AdoptOpenJDK/icedtea-web[projet GitHub]. Des travaux
+sont en cours pour minimiser ou éliminer ces différences.
+
+IcedTea-Web 1.8.x et 2.0.x sont compatibles avec les builds Temurin 8.
+Nous savons que les logiciels basés sur IcedTea-Web supportent
+l'exécution d'applications JNLP basées sur OpenJDK 11 et supérieur,
+mais IcedTea-Web ne contient aucun test pour vérifier le support
+d'OpenJDK 11 et supérieur et nous ne l'incluons pas avec les builds
+Temurin 11.
+
+[#_openjfx]
+=== OpenJFX
+
+En 2017, JavaFX a été découplé d'Oracle JDK et contribué à la communauté
+OpenJDK. La communauté OpenJFX se concentre sur OpenJFX 11+ et fournit
+des binaires que vous pouvez utiliser avec Temurin.
+
+OpenJFX 8 n'est plus activement maintenu. Si vous avez besoin de cette
+fonctionnalité, nous recommandons de passer à OpenJFX 11.
+
+[#_bibliothèque_de_rendu_freetype]
+=== Bibliothèque de rendu Freetype
+
+OpenJDK utilise la bibliothèque de rendu de polices open source FreeType
+au lieu de la bibliothèque propriétaire T2K.
+
+[#_polices_lucida_sous_nouvelle_licence]
+=== Polices Lucida sous nouvelle licence
+
+Les polices Lucida disponibles dans Oracle JDK 8 ont une licence
+propriétaire tierce. Adoptium prévoit de fournir des polices Lucida sous
+nouvelle licence. Des travaux sont en cours pour minimiser les problèmes
+d'affichage lorsque ces polices sont rendues par Freetype.
+
+[#_pisces_et_marlin]
+=== Pisces et Marlin
+
+Oracle JDK 8 utilise un moteur de rendu graphique 2D propriétaire appelé
+Ductus, tandis qu'OpenJDK utilise un moteur open source appelé Pisces. À
+partir d'OpenJDK 9, le moteur Marlin est utilisé. Des travaux sont
+prévus chez Adoptium pour rétroporter Marlin vers OpenJDK 8 et/ou
+minimiser les différences d'affichage entre les deux.
+
+[#_lcms]
+=== LCMS
+
+OpenJDK utilise la bibliothèque open source Little Color Matching System
+(LCMS) au lieu de la bibliothèque propriétaire Kodac CMS.
+
+[#_jmx]
+=== JMX
+
+Le paquet SNMP propriétaire fourni avec Oracle JDK 8 n'est pas présent
+dans OpenJDK. Utilisez JMX comme alternative, ou SNMP4J. Ces paquets ne
+sont pas inclus avec les binaires Temurin.
+
+[#_pilotes_audio_windows]
+=== Pilotes audio Windows
+
+Oracle JDK fournit des pilotes audio natifs pour Java 8 sous Windows,
+qui ne sont pas présents dans OpenJDK. Utilisez les pilotes audio
+disponibles avec Microsoft Windows à la place.
+
+[#_java_flight_recorder]
+=== Java Flight Recorder
+
+Java Flight Recorder (JFR) a été découplé d'Oracle JDK et contribué à
+la communauté OpenJDK. JFR est inclus dans toutes les versions de
+Temurin.
+
+[#_eclipse_mission_control]
+=== Eclipse Mission Control
+
+Le projet https://projects.eclipse.org/projects/adoptium.mc[Eclipse
+Mission Control] fournit un téléchargement de JMC disponible depuis la
+link:/jmc[page de téléchargement].

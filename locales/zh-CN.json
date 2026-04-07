@@ -140,6 +140,18 @@
     "all-adoptium-docs-are-open-source": "所有 Adoptium 文档均为开源。发现错误或不清楚的内容？",
     "edit-this-page": "编辑此页面"
   },
+  "DocThemeToggle": {
+    "light": "浅色",
+    "dark": "深色",
+    "switch-to-light": "切换到浅色模式",
+    "switch-to-dark": "切换到深色模式"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "本页内容"
+  },
+  "DocumentationSearch": {
+    "placeholder": "搜索文档..."
+  },
   "Asciidoc": {
     "table-of-contents": "目录",
     "warn-default-locale": "此页面为 <englishVersionLink>英文版本</englishVersionLink>，因为尚无中文版本。请协助我们将其翻译为中文。更多信息请参见 <translationGuideLink>翻译指南</translationGuideLink>。",
@@ -253,5 +265,21 @@
     "title": "网站地图",
     "subtitle": "浏览 Adoptium",
     "description": "Adoptium 网站上所有页面、文档和资源的完整概览。快速轻松地找到您要查找的内容。"
+  },
+  "DocsPage": {
+    "home": "首页",
+    "documentation": "文档",
+    "title": "Adoptium® 文档",
+    "subtitle": "Eclipse Adoptium 和 Eclipse Temurin 的指南、参考资料和资源",
+    "getting-started": "快速入门",
+    "explore-by-topic": "按主题浏览",
+    "install-temurin": "安装 Temurin",
+    "install-temurin-desc": "适用于所有平台的分步安装指南",
+    "download-temurin": "下载 Temurin",
+    "download-temurin-desc": "获取最新的 Eclipse Temurin 版本",
+    "migration-guide": "迁移指南",
+    "migration-guide-desc": "从其他 JDK 迁移到 Eclipse Temurin",
+    "supported-platforms": "支持的平台",
+    "supported-platforms-desc": "操作系统和架构兼容性矩阵"
   }
 }

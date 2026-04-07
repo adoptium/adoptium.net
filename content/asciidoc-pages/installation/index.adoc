@@ -5,7 +5,7 @@ link:/temurin/releases[Eclipse Temurin] is available for download in multiple
 installation package formats. The binaries are supported on the architectures
 and operating systems listed in link:/supported-platforms[Supported Platforms].
 If you're migrating to Temurin, you can learn about the differences between
-Oracle JDK and Temurin in our link:/docs/migration[Migration Guide] and any
+Oracle JDK and Temurin in our link:/temurin/migration[Migration Guide] and any
 steps that you might need to take.
 
 == Package Managers

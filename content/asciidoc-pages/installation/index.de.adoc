@@ -11,7 +11,7 @@ link:/temurin/releases[Eclipse Temurin] ist in verschiedenen Formaten zum Downlo
 
 Die Binärdateien werden auf den Architekturen und Betriebssystemen unterstützt,
 die unter link:/supported-platforms[Unterstützte Plattformen] aufgeführt sind. Wenn Sie
-zu Temurin migrieren, finden Sie in unserem link:/docs/migration[Migrationsleitfaden] Informationen zu den Unterschieden zwischen Oracle
+zu Temurin migrieren, finden Sie in unserem link:/temurin/migration[Migrationsleitfaden] Informationen zu den Unterschieden zwischen Oracle
 JDK und Temurin sowie zu allen Schritten,
 die Sie möglicherweise durchführen müssen.
 

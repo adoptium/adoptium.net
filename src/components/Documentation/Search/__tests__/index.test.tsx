@@ -26,12 +26,12 @@ describe('DocumentationSearch', () => {
 
     it('renders the input', () => {
         render(<DocumentationSearch />);
-        expect(screen.getByPlaceholderText(/search documentation/i)).toBeInTheDocument();
+        expect(screen.getByRole("textbox")).toBeInTheDocument();
     });
 
     it('shows results when typing a query', async () => {
         render(<DocumentationSearch />);
-        const input = screen.getByPlaceholderText(/search documentation/i);
+        const input = screen.getByRole("textbox");
         fireEvent.change(input, { target: { value: 'fo' } });
         await waitFor(() => expect(screen.getByText('Foo Title')).toBeInTheDocument());
         expect(screen.getByText('Bar Title')).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe('DocumentationSearch', () => {
 
     it('hides results when clicking outside', async () => {
         render(<DocumentationSearch />);
-        const input = screen.getByPlaceholderText(/search documentation/i);
+        const input = screen.getByRole("textbox");
         fireEvent.change(input, { target: { value: 'fo' } });
         await waitFor(() => expect(screen.getByText('Foo Title')).toBeInTheDocument());
         // Simulate click outside
@@ -51,7 +51,7 @@ describe('DocumentationSearch', () => {
 
     it('navigates to the correct link when a result is clicked', async () => {
         render(<DocumentationSearch />);
-        const input = screen.getByPlaceholderText(/search documentation/i);
+        const input = screen.getByRole("textbox");
         fireEvent.change(input, { target: { value: 'fo' } });
         await waitFor(() => expect(screen.getByText('Foo Title')).toBeInTheDocument());
         const link = screen.getByText('Foo Title').closest('a');

@@ -380,17 +380,17 @@ exports[`sitemap > generates the expected sitemap snapshot 1`] = `
   {
     "alternates": {
       "languages": {
-        "de": "https://adoptium.net/de/docs/migration",
-        "en-GB": "https://adoptium.net/en-GB/docs/migration",
-        "es": "https://adoptium.net/es/docs/migration",
-        "fr": "https://adoptium.net/fr/docs/migration",
-        "pt-BR": "https://adoptium.net/pt-BR/docs/migration",
-        "x-default": "https://adoptium.net/docs/migration",
-        "zh-CN": "https://adoptium.net/zh-CN/docs/migration",
+        "de": "https://adoptium.net/de/temurin/migration",
+        "en-GB": "https://adoptium.net/en-GB/temurin/migration",
+        "es": "https://adoptium.net/es/temurin/migration",
+        "fr": "https://adoptium.net/fr/temurin/migration",
+        "pt-BR": "https://adoptium.net/pt-BR/temurin/migration",
+        "x-default": "https://adoptium.net/temurin/migration",
+        "zh-CN": "https://adoptium.net/zh-CN/temurin/migration",
       },
     },
     "lastModified": undefined,
-    "url": "https://adoptium.net/docs/migration",
+    "url": "https://adoptium.net/temurin/migration",
   },
   {
     "alternates": {

@@ -195,13 +195,33 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #9ca3af;
-    padding: 0.625rem 1rem;
     border-bottom: 1px solid rgb(255, 255, 255, 8%);
+  }
+
+  & th {
+    padding: 0.625rem 1rem;
   }
 
   & td {
     padding: 0.625rem 1rem;
     border-bottom: 1px solid rgb(255, 255, 255, 4%);
+    vertical-align: middle;
+  }
+
+  & td img {
+    border: 0;
+    border-radius: 0.375rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  & td img:not(.no-bg-pad) {
+    background: white;
+    padding: 0.5rem;
+  }
+
+  & td pre {
+    margin: 0;
   }
 
   & tbody tr:hover {
@@ -428,6 +448,11 @@ body {
 
 .doc-light .doc-content td {
   border-color: #e5e7eb;
+}
+
+.doc-light .doc-content td img {
+  background: transparent;
+  padding: 0;
 }
 
 .doc-light .doc-content tbody tr:hover {

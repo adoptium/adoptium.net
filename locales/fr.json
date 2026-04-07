@@ -140,6 +140,18 @@
     "all-adoptium-docs-are-open-source": "Toutes les documentations Adoptium sont open source. Une erreur ou un point flou ?",
     "edit-this-page": "Modifier cette page"
   },
+  "DocThemeToggle": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "switch-to-light": "Passer en mode clair",
+    "switch-to-dark": "Passer en mode sombre"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "Sur cette page"
+  },
+  "DocumentationSearch": {
+    "placeholder": "Rechercher dans la documentation..."
+  },
   "Asciidoc": {
     "table-of-contents": "Table des matières",
     "warn-default-locale": "Cette page est la <englishVersionLink>version anglaise</englishVersionLink> car elle n'est pas encore disponible dans votre langue. Vous pouvez nous aider à la traduire. Consultez notre <translationGuideLink>guide de traduction</translationGuideLink> pour en savoir plus.",
@@ -253,5 +265,21 @@
     "title": "Plan du site",
     "subtitle": "Naviguer sur Adoptium",
     "description": "Aperçu complet de toutes les pages, documentation et ressources disponibles sur le site web Adoptium. Trouvez rapidement et facilement ce que vous cherchez."
+  },
+  "DocsPage": {
+    "home": "Accueil",
+    "documentation": "Documentation",
+    "title": "Documentation Adoptium®",
+    "subtitle": "Guides, références et ressources pour Eclipse Adoptium et Eclipse Temurin",
+    "getting-started": "Pour commencer",
+    "explore-by-topic": "Explorer par thème",
+    "install-temurin": "Installer Temurin",
+    "install-temurin-desc": "Guide d'installation étape par étape pour toutes les plateformes",
+    "download-temurin": "Télécharger Temurin",
+    "download-temurin-desc": "Obtenir les dernières versions d'Eclipse Temurin",
+    "migration-guide": "Guide de migration",
+    "migration-guide-desc": "Migrer vers Eclipse Temurin depuis d'autres JDKs",
+    "supported-platforms": "Plateformes supportées",
+    "supported-platforms-desc": "Matrice de compatibilité des systèmes d'exploitation et architectures"
   }
 }

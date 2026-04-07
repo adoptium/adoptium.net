@@ -70,9 +70,9 @@ jobs:
             done
           else
             # shellcheck disable=2043
-            for changed_file in ${{ steps.files.outputs.all }}; do
-              update_authors "${changed_file}"
-            done
+            while IFS= read -r changed_file; do
+              [[ -n "${changed_file}" ]] && update_authors "${changed_file}"
+            done <<< "${{ steps.files.outputs.all }}"
           fi
 
       - uses: gr2m/create-or-update-pull-request-action@b65137ca591da0b9f43bad7b24df13050ea45d1b # v1.10.1

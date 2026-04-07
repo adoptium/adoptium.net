@@ -21,6 +21,7 @@ import LinkText from "@/components/LinkText";
 import DocSidebar from "@/components/DocSidebar";
 import DocTableOfContents from "@/components/DocTableOfContents";
 import DocThemeToggle from "@/components/DocThemeToggle";
+import DocumentationSearch from "@/components/Documentation/Search";
 
 // Base directory for AsciiDoc content - same as in asciidocService.ts
 const CONTENT_BASE_DIR = path.join(process.cwd(), "content/asciidoc-pages");
@@ -125,14 +126,27 @@ export default async function AsciidocPage({
   });
 
   // Build sidebar navigation from filesystem
-  const sidebarSection = await getSidebarData(pathSegments[0], locale);
+  // For deeply nested pages (e.g. docs/reproducible-verification-builds/reproduce-windows-x64),
+  // try to build a sidebar from the parent subsection first, falling back to the top-level section.
+  let sidebarSection = null;
+  if (pathSegments.length >= 3) {
+    const subsection = pathSegments.slice(0, -1).join("/");
+    sidebarSection = await getSidebarData(subsection, locale);
+  }
+  if (!sidebarSection) {
+    sidebarSection = await getSidebarData(pathSegments[0], locale);
+  }
 
   return (
     <div className="doc-wrapper pt-4 light:bg-white">
       {/* Compact doc header */}
       <div className="doc-header border-b border-white/10 light:bg-white light:border-gray-200">
         <div className="mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 py-6 lg:pl-[calc(16rem+2rem)]">
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between mb-4">
+            <DocumentationSearch compact />
+            <DocThemeToggle />
+          </div>
+          <div className="flex items-center mb-3">
             <nav
               className="flex items-center text-sm text-gray-400 light:text-gray-500"
               aria-label="Breadcrumb"
@@ -173,7 +187,6 @@ export default async function AsciidocPage({
                 </React.Fragment>
               ))}
             </nav>
-            <DocThemeToggle />
           </div>
           <h1 className="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight">
             {asciidoc.metadata.title}
@@ -196,11 +209,11 @@ export default async function AsciidocPage({
           {/* Main content */}
           <div className="flex-1 min-w-0 py-8 lg:px-10" role="article">
             {displayDefaultLocaleWarning && (
-              <div className="mb-6 bg-purple-950/40 border-l-4 border-purple-400 p-4 rounded-md shadow-sm">
+              <div className="mb-6 bg-purple-950/40 light:bg-amber-50 border-l-4 border-purple-400 light:border-amber-400 p-4 rounded-md shadow-sm">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <svg
-                      className="h-5 w-5 text-purple-400"
+                      className="h-5 w-5 text-purple-400 light:text-amber-500"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -213,10 +226,10 @@ export default async function AsciidocPage({
                     </svg>
                   </div>
                   <div className="ml-3">
-                    <div className="text-sm text-gray-300">
+                    <div className="text-sm text-gray-300 light:text-gray-700">
                       {t.rich("warn-default-locale", {
                         englishVersionLink: (chunks: React.ReactNode) => (
-                          <span className="font-medium text-purple-300 hover:text-purple-200">
+                          <span className="font-medium text-purple-300 light:text-amber-700 hover:text-purple-200 light:hover:text-amber-900">
                             <LinkText
                               href={`https://github.com/adoptium/adoptium.net/blob/main/content/asciidoc-pages/${relativePath.replace(
                                 `.${locale}`,
@@ -228,7 +241,7 @@ export default async function AsciidocPage({
                           </span>
                         ),
                         translationGuideLink: (chunks: React.ReactNode) => (
-                          <span className="font-medium text-purple-300 hover:text-purple-200">
+                          <span className="font-medium text-purple-300 light:text-amber-700 hover:text-purple-200 light:hover:text-amber-900">
                             <LinkText href="https://github.com/adoptium/adoptium.net/tree/main/content/asciidoc-pages#localising-documentation">
                               {chunks}
                             </LinkText>
