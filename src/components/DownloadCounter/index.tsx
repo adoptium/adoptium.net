@@ -32,10 +32,10 @@ const DownloadCounter = ({ total }: DownloadCounterProps) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min(
               (timestamp - startTimestamp) / duration,
-              1
+              1,
             );
             setCount(
-              Math.floor(progress * (endValue - startValue) + startValue)
+              Math.floor(progress * (endValue - startValue) + startValue),
             );
             if (progress < 1) {
               window.requestAnimationFrame(step);
@@ -44,7 +44,7 @@ const DownloadCounter = ({ total }: DownloadCounterProps) => {
           window.requestAnimationFrame(step);
         }
       },
-      { root: null, threshold: 0.5 }
+      { root: null, threshold: 0.5 },
     );
 
     if (counterRef.current) {
@@ -74,12 +74,18 @@ const DownloadCounter = ({ total }: DownloadCounterProps) => {
           {count.toLocaleString()}
         </h3>
         <div className="flex items-center gap-4 flex-wrap sm:gap-6 justify-center">
-          <span>
-            <DiGithubFull size={70} />
-          </span>
-          <p className="text-[16px] font-normal leading-6 text-white mb-0">
-            {t("total-download-docker-pulls-ever")}
-          </p>
+          <a
+            href="https://adoptium.net/stats/download"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 flex-wrap sm:gap-6 justify-center cursor-pointer"
+          >
+            <span>
+              <DiGithubFull size={70} />
+            </span>
+            <p className="text-[16px] font-normal leading-6 text-white mb-0">
+              {t("total-download-docker-pulls-ever")}
+            </p>
+          </a>
         </div>
       </div>
     </motion.div>

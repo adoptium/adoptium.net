@@ -128,16 +128,19 @@ export default async function AsciidocPage({
   const sidebarSection = await getSidebarData(pathSegments[0], locale);
 
   return (
-    <div className="doc-wrapper pt-4">
+    <div className="doc-wrapper pt-4 light:bg-white">
       {/* Compact doc header */}
-      <div className="doc-header border-b border-white/10">
+      <div className="doc-header border-b border-white/10 light:bg-white light:border-gray-200">
         <div className="mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 py-6 lg:pl-[calc(16rem+2rem)]">
           <div className="flex items-center justify-between mb-3">
             <nav
-              className="flex items-center text-sm text-gray-400"
+              className="flex items-center text-sm text-gray-400 light:text-gray-500"
               aria-label="Breadcrumb"
             >
-              <a href="/" className="hover:text-white transition-colors">
+              <a
+                href="/"
+                className="hover:text-white light:hover:text-gray-900 transition-colors"
+              >
                 Home
               </a>
               {breadcrumbs.map((crumb) => (
@@ -156,11 +159,13 @@ export default async function AsciidocPage({
                     />
                   </svg>
                   {crumb.isLast ? (
-                    <span className="text-gray-200">{crumb.label}</span>
+                    <span className="text-gray-200 light:text-gray-900">
+                      {crumb.label}
+                    </span>
                   ) : (
                     <a
                       href={crumb.href}
-                      className="hover:text-white transition-colors"
+                      className="hover:text-white light:hover:text-gray-900 transition-colors"
                     >
                       {crumb.label}
                     </a>
@@ -170,20 +175,20 @@ export default async function AsciidocPage({
             </nav>
             <DocThemeToggle />
           </div>
-          <h1 className="text-2xl md:text-3xl font-semibold text-white tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight">
             {asciidoc.metadata.title}
           </h1>
         </div>
       </div>
 
-      <div className="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="doc-layout mx-auto max-w-[1400px] w-full px-4 sm:px-6 lg:px-8 pb-16 light:bg-white">
         <div className="flex flex-col lg:flex-row">
           {/* Left sidebar */}
           <aside
             className="hidden lg:block w-64 flex-shrink-0"
             aria-label="Documentation navigation"
           >
-            <div className="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10">
+            <div className="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10 light:border-gray-200">
               {sidebarSection && <DocSidebar section={sidebarSection} />}
             </div>
           </aside>
@@ -244,7 +249,7 @@ export default async function AsciidocPage({
               <AsciiDocFormatter content={asciidoc.content} />
               <SyntaxHighlighter />
             </article>
-            <div className="doc-footer h-px my-8 border border-white/10"></div>
+            <div className="doc-footer h-px my-8 border border-white/10 light:border-gray-200"></div>
             <div className="space-y-4">
               <EditLink relativePath={relativePath} />
               <AuthorList authors={asciidoc.metadata.authors} />
@@ -256,7 +261,7 @@ export default async function AsciidocPage({
                 >
                   <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" />
                 </svg>
-                <span className="doc-community-desc text-gray-400 text-sm">
+                <span className="doc-community-desc text-gray-400 light:text-gray-500 text-sm">
                   Join our Slack channel to discuss and reach out to
                   maintainers.
                 </span>
@@ -271,7 +276,7 @@ export default async function AsciidocPage({
 
           {/* Right sidebar - Table of Contents */}
           <aside className="hidden xl:block w-56 flex-shrink-0">
-            <div className="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10">
+            <div className="doc-toc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pl-6 border-l border-white/10 light:border-gray-200">
               <DocTableOfContents />
             </div>
           </aside>

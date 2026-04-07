@@ -5,7 +5,7 @@ exports[`EditLink component > does not render without a path 1`] = `<div />`;
 exports[`EditLink component > renders correctly 1`] = `
 <div>
   <div
-    class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
+    class="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 light:bg-gray-50 light:from-gray-50 light:to-gray-100 px-8 py-6 rounded-2xl border border-white/10 light:border-gray-200 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6"
   >
     <div
       class="flex items-center gap-5"
@@ -26,12 +26,12 @@ exports[`EditLink component > renders correctly 1`] = `
         class="flex flex-col gap-2"
       >
         <h2
-          class="doc-edit-title text-white text-xl md:text-2xl font-bold leading-tight"
+          class="doc-edit-title text-white light:text-gray-900 text-xl md:text-2xl font-bold leading-tight"
         >
           Text
         </h2>
         <p
-          class="doc-edit-desc text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg"
+          class="doc-edit-desc text-white/90 light:text-gray-500 text-sm md:text-base font-normal leading-relaxed max-w-lg"
         >
           Text
         </p>

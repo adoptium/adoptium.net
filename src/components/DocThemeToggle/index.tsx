@@ -12,6 +12,11 @@ const DocThemeToggle: React.FC = () => {
       setIsLight(true);
       document.documentElement.classList.add("doc-light");
     }
+
+    // Remove doc-light when navigating away from pages with the toggle
+    return () => {
+      document.documentElement.classList.remove("doc-light");
+    };
   }, []);
 
   const toggle = () => {

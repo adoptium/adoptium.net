@@ -5,6 +5,9 @@
 @import "prism-themes/themes/prism-ghcolors.css";
 @plugin "@tailwindcss/typography";
 
+/* Custom variant for doc-light mode: use light:bg-white etc. */
+@custom-variant light (&:where(.doc-light, .doc-light * ));
+
 @layer utilities {
   .bg-temurin-hero {
     background-image: url("/images/backgrounds/temurin-hero-img.png");
@@ -368,69 +371,9 @@ body {
   }
 }
 
-/* Documentation light mode */
-.doc-light .doc-wrapper {
-  background: #fff;
-}
+/* Documentation light mode — structural overrides handled by Tailwind light: variant */
 
-.doc-light .doc-header {
-  background: #fff;
-  border-color: #e5e7eb;
-}
-
-.doc-light .doc-header h1 {
-  color: #1f2328;
-}
-
-.doc-light .doc-header nav,
-.doc-light .doc-header nav a {
-  color: #656d76;
-}
-
-.doc-light .doc-header nav a:hover {
-  color: #1f2328;
-}
-
-.doc-light .doc-header nav span {
-  color: #1f2328;
-}
-
-.doc-light .doc-layout {
-  background: #fff;
-}
-
-.doc-light .doc-sidebar {
-  border-color: #e5e7eb;
-}
-
-.doc-light .doc-sidebar h3 {
-  color: #656d76;
-}
-
-.doc-light .doc-sidebar a {
-  color: #1f2328;
-}
-
-.doc-light .doc-sidebar a:hover {
-  background: #f6f8fa;
-  color: #1f2328;
-}
-
-.doc-light .doc-toc-sidebar {
-  border-color: #e5e7eb;
-}
-
-.doc-light .doc-toc-sidebar h4 {
-  color: #656d76;
-}
-
-.doc-light .doc-toc-sidebar a {
-  color: #656d76;
-}
-
-.doc-light .doc-toc-sidebar a:hover {
-  color: #1f2328;
-}
+/* Content prose and syntax highlighting overrides below require CSS since they target deeply nested elements */
 
 .doc-light .doc-content {
   color: #1f2328;
@@ -631,10 +574,28 @@ body {
   color: #032f62;
 }
 
-.doc-light .doc-content :not(pre) > code {
+.prose pre {
+  border: 0;
+}
+
+.prose :not(pre) > code {
+  background: rgb(255, 19, 101, 12%);
+  border: 1px solid rgb(255, 19, 101, 20%);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.3em;
+  font-size: 0.8125em;
+  color: #ff6b9d;
+}
+
+.doc-light .doc-content :not(pre) > code,
+.doc-light .prose :not(pre) > code {
   background: rgb(175, 184, 193, 20%);
   border-color: transparent;
   color: #1f2328;
+}
+
+.doc-light .prose :not(pre) > code [class^="sh__token"] {
+  color: #1f2328 !important;
 }
 
 .doc-light .doc-content code[class*="language-"],
@@ -707,25 +668,6 @@ body {
 
 .doc-light .doc-content img {
   border-color: #d1d9e0;
-}
-
-.doc-light .doc-footer {
-  border-color: #e5e7eb;
-}
-
-/* Edit card light mode */
-.doc-light .doc-edit-card {
-  background: #f6f8fa;
-  border-color: #d1d9e0;
-  backdrop-filter: none;
-}
-
-.doc-light .doc-edit-title {
-  color: #1f2328;
-}
-
-.doc-light .doc-edit-desc {
-  color: #656d76;
 }
 
 .doc-light .doc-edit-icon {

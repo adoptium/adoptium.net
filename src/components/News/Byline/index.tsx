@@ -1,25 +1,30 @@
-import React from "react"
-import { Link } from "@/i18n/navigation"
-import ProfilePicInline from "@/components/ProfilePicInline"
+import React from "react";
+import { Link } from "@/i18n/navigation";
+import ProfilePicInline from "@/components/ProfilePicInline";
 
 interface IBylineProps {
-  author: string
-  date: string
-  identifier: string
+  author: string;
+  date: string;
+  identifier: string;
 }
 
-const Byline: React.FC<IBylineProps> = props => {
-  const { author, date, identifier } = props
+const Byline: React.FC<IBylineProps> = (props) => {
+  const { author, date, identifier } = props;
   return (
-    <div className="flex justify-center items-center gap-5">
+    <div className="flex items-center gap-4">
       <ProfilePicInline identifier={identifier} name={author} />
-      <span className="text-[16px] font-bold leading-[150%] text-white">
-        <Link href={`/news/author/${identifier}`}>
-          <span className="text-primary pr-2">{author},</span> {date}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm">
+        <Link
+          href={`/news/author/${identifier}`}
+          className="font-semibold text-pink hover:underline transition-colors"
+        >
+          {author}
         </Link>
-      </span>
+        <span className="hidden sm:inline text-gray-600">·</span>
+        <time className="text-gray-400 light:text-gray-500">{date}</time>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Byline
+export default Byline;

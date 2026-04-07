@@ -16,7 +16,7 @@ const EditLink: React.FC<Props> = ({ relativePath }) => {
   const href = `https://github.com/adoptium/adoptium.net/edit/main/content/asciidoc-pages/${relativePath}`;
 
   return (
-    <div className="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 px-8 py-6 rounded-2xl border border-white/10 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div className="doc-edit-card w-full backdrop-blur-sm bg-gradient-to-br from-[#20114D]/30 to-[#2A0845]/40 light:bg-gray-50 light:from-gray-50 light:to-gray-100 px-8 py-6 rounded-2xl border border-white/10 light:border-gray-200 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:border-white/20 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="flex items-center gap-5">
         <div className="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
           <div className="doc-edit-glow absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-full opacity-30 blur-md"></div>
@@ -28,10 +28,10 @@ const EditLink: React.FC<Props> = ({ relativePath }) => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <h2 className="doc-edit-title text-white text-xl md:text-2xl font-bold leading-tight">
+          <h2 className="doc-edit-title text-white light:text-gray-900 text-xl md:text-2xl font-bold leading-tight">
             {t("help-us-make-these-docs-great")}
           </h2>
-          <p className="doc-edit-desc text-white/90 text-sm md:text-base font-normal leading-relaxed max-w-lg">
+          <p className="doc-edit-desc text-white/90 light:text-gray-500 text-sm md:text-base font-normal leading-relaxed max-w-lg">
             {t("all-adoptium-docs-are-open-source")}
           </p>
         </div>
