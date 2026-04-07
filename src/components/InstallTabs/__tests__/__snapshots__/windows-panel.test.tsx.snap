@@ -14,7 +14,7 @@ exports[`Tests for WindowsPanel component > renders correctly 1`] = `
         Install the latest version
       </div>
       <pre
-        class="install-code"
+        class="install-code text-xs sm:text-sm"
       >
         <code>
           winget install EclipseAdoptium.Temurin.25.JDK
@@ -30,7 +30,7 @@ exports[`Tests for WindowsPanel component > renders correctly 1`] = `
         Install a different version
       </div>
       <pre
-        class="install-code"
+        class="install-code text-xs sm:text-sm"
       >
         <code>
           winget install EclipseAdoptium.Temurin.11.JDK
@@ -46,7 +46,7 @@ exports[`Tests for WindowsPanel component > renders correctly 1`] = `
         Upgrade the Winget package
       </div>
       <pre
-        class="install-code"
+        class="install-code text-xs sm:text-sm"
       >
         <code>
           winget upgrade EclipseAdoptium.Temurin.25.JDK
@@ -62,7 +62,7 @@ exports[`Tests for WindowsPanel component > renders correctly 1`] = `
         Uninstall the Winget package
       </div>
       <pre
-        class="install-code"
+        class="install-code text-xs sm:text-sm"
       >
         <code>
           winget uninstall EclipseAdoptium.Temurin.25.JDK

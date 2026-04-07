@@ -3,129 +3,25 @@
 
 import React from "react";
 import { Link, usePathname } from "@/i18n/navigation";
-
-interface NavItem {
-  title: string;
-  href: string;
-  children?: NavItem[];
-}
-
-interface DocSection {
-  title: string;
-  basePath: string;
-  items: NavItem[];
-}
-
-const docSections: Record<string, DocSection> = {
-  installation: {
-    title: "Installation",
-    basePath: "/installation",
-    items: [
-      { title: "Overview", href: "/installation" },
-      {
-        title: "Linux (RPM/DEB/APK)",
-        href: "/installation/linux",
-      },
-      {
-        title: "macOS PKG Installer",
-        href: "/installation/macOS",
-      },
-      {
-        title: "Windows MSI Installer",
-        href: "/installation/windows",
-      },
-      {
-        title: "GitHub Actions",
-        href: "/installation/github-actions",
-      },
-      {
-        title: "CI/CD Scripts",
-        href: "/installation/ci-scripts",
-      },
-      { title: "Archive Files", href: "/installation/archives" },
-    ],
-  },
-  docs: {
-    title: "Documentation",
-    basePath: "/docs",
-    items: [
-      { title: "FAQ", href: "/docs/faq" },
-      { title: "Migration Guide", href: "/docs/migration" },
-      { title: "Secure Software", href: "/docs/secure-software" },
-      { title: "SLSA Compliance", href: "/docs/slsa" },
-      {
-        title: "AQAvit Verification",
-        href: "/docs/aqavit-verification",
-      },
-      {
-        title: "Reproducible Builds",
-        href: "/docs/reproducible-verification-builds",
-      },
-      {
-        title: "Marketplace Guide",
-        href: "/docs/marketplace-guide",
-      },
-      {
-        title: "Marketplace Listing",
-        href: "/docs/marketplace-listing",
-      },
-      {
-        title: "Marketplace Policy",
-        href: "/docs/marketplace-policy",
-      },
-      { title: "QVS Policy", href: "/docs/qvs-policy" },
-      {
-        title: "Marketing Criteria",
-        href: "/docs/marketing-criteria",
-      },
-      { title: "Brand Guidelines", href: "/docs/brand" },
-      { title: "Logo Style Guide", href: "/docs/logo-styleguide" },
-      { title: "ECA Sign-Off", href: "/docs/eca-sign-off" },
-      {
-        title: "First Timer Support",
-        href: "/docs/first-timer-support",
-      },
-    ],
-  },
-  temurin: {
-    title: "Temurin",
-    basePath: "/temurin",
-    items: [
-      {
-        title: "Commercial Support",
-        href: "/temurin/commercial-support",
-      },
-      { title: "TCK Affidavit", href: "/temurin/tck-affidavit" },
-      { title: "Buttons", href: "/temurin/buttons" },
-    ],
-  },
-};
-
-function getSectionForPath(pathname: string): DocSection | null {
-  for (const [, section] of Object.entries(docSections)) {
-    if (pathname.startsWith(section.basePath)) {
-      return section;
-    }
-  }
-  return null;
-}
+import type { SidebarSection } from "@/services/asciidocService";
 
 function isActive(pathname: string, href: string): boolean {
   return pathname === href || pathname === `${href}/`;
 }
 
-const DocSidebar: React.FC = () => {
-  const pathname = usePathname();
-  const section = getSectionForPath(pathname);
+interface DocSidebarProps {
+  section: SidebarSection;
+}
 
-  if (!section) return null;
+const DocSidebar: React.FC<DocSidebarProps> = ({ section }) => {
+  const pathname = usePathname();
 
   return (
     <nav className="w-full" aria-label="Documentation navigation">
       <div className="mb-3">
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-3">
+        <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-3">
           {section.title}
-        </h3>
+        </p>
       </div>
       <ul className="space-y-0.5">
         {section.items.map((item) => {
@@ -150,5 +46,4 @@ const DocSidebar: React.FC = () => {
   );
 };
 
-export { getSectionForPath };
 export default DocSidebar;

@@ -39,7 +39,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
           <span
             class="text-gray-200"
           >
-            Installation
+            Page Title
           </span>
         </nav>
         <button
@@ -81,7 +81,34 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
       >
         <div
           class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10"
-        />
+        >
+          <nav
+            aria-label="Documentation navigation"
+            class="w-full"
+          >
+            <div
+              class="mb-3"
+            >
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-3"
+              >
+                Documentation
+              </p>
+            </div>
+            <ul
+              class="space-y-0.5"
+            >
+              <li>
+                <a
+                  class="block px-3 py-2 rounded-md text-sm transition-colors duration-150 text-gray-300 hover:bg-white/5 hover:text-white"
+                  href="/test"
+                >
+                  Page Title
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </aside>
       <div
         class="flex-1 min-w-0 py-8 lg:px-10"
@@ -161,7 +188,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
                     class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
                   >
                     <code
-                      class="install-row-cmd text-[13px] text-white/90 font-mono"
+                      class="install-row-cmd text-[12px] text-white/90 font-mono"
                     >
                       winget install EclipseAdoptium.Temurin.25.JDK
                     </code>
@@ -185,7 +212,7 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
                     class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
                   >
                     <code
-                      class="install-row-cmd text-[13px] text-white/90 font-mono"
+                      class="install-row-cmd text-[12px] text-white/90 font-mono"
                     >
                       winget install EclipseAdoptium.Temurin.11.JDK
                     </code>
@@ -397,7 +424,7 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
           <span
             class="text-gray-200"
           >
-            Test
+            Page Title
           </span>
         </nav>
         <button
@@ -439,7 +466,34 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
       >
         <div
           class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10"
-        />
+        >
+          <nav
+            aria-label="Documentation navigation"
+            class="w-full"
+          >
+            <div
+              class="mb-3"
+            >
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-3"
+              >
+                Documentation
+              </p>
+            </div>
+            <ul
+              class="space-y-0.5"
+            >
+              <li>
+                <a
+                  class="block px-3 py-2 rounded-md text-sm transition-colors duration-150 text-gray-300 hover:bg-white/5 hover:text-white"
+                  href="/test"
+                >
+                  Page Title
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </aside>
       <div
         class="flex-1 min-w-0 py-8 lg:px-10"
@@ -635,7 +689,7 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
           <span
             class="text-gray-200"
           >
-            Test
+            Page Title
           </span>
         </nav>
         <button
@@ -677,7 +731,34 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
       >
         <div
           class="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10"
-        />
+        >
+          <nav
+            aria-label="Documentation navigation"
+            class="w-full"
+          >
+            <div
+              class="mb-3"
+            >
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-3"
+              >
+                Documentation
+              </p>
+            </div>
+            <ul
+              class="space-y-0.5"
+            >
+              <li>
+                <a
+                  class="block px-3 py-2 rounded-md text-sm transition-colors duration-150 text-gray-300 hover:bg-white/5 hover:text-white"
+                  href="/test"
+                >
+                  Page Title
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </aside>
       <div
         class="flex-1 min-w-0 py-8 lg:px-10"

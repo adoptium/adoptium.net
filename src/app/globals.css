@@ -41,7 +41,7 @@ section[id] {
 }
 
 /* Inline code blocks (not processed by Prism) */
-:not(pre) > code {
+:not(pre) > code:not(.install-row-cmd) {
   background: var(--color-code-bg);
   color: var(--color-code);
   padding: 0.1em 0.3em;
@@ -826,4 +826,58 @@ body {
 
 .doc-light .accordion-body {
   color: #1f2328;
+}
+
+/* Cookie Consent Banner — override Eclipse Foundation default theme */
+.cc-window.cc-banner[class*="cc-color-override"] {
+  background: #14003c !important;
+  border-top: 1px solid rgb(255, 255, 255, 10%) !important;
+  padding: 1rem 2rem !important;
+  font-family: inherit !important;
+  color: #c4bfce !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-message {
+  color: #c4bfce !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-link {
+  color: #ff1365 !important;
+  opacity: 1 !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-link:hover {
+  color: #ff5a93 !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-btn.cc-deny {
+  background: transparent !important;
+  border: 1px solid rgb(255, 255, 255, 20%) !important;
+  border-radius: 6px !important;
+  padding: 0.5rem 1.25rem !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: #c4bfce !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-btn.cc-deny:hover {
+  border-color: rgb(255, 255, 255, 40%) !important;
+  color: white !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-btn.cc-allow {
+  background: #ff1365 !important;
+  border: 1px solid #ff1365 !important;
+  border-radius: 6px !important;
+  padding: 0.5rem 1.25rem !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.cc-window[class*="cc-color-override"] .cc-btn.cc-allow:hover {
+  background: #e0105a !important;
+  border-color: #e0105a !important;
 }

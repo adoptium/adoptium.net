@@ -9,25 +9,25 @@ export const PureWindowsPanel = (): React.ReactNode => {
     <div className="install-panel">
       <div className="install-block">
         <div className="install-block-title">Install the latest version</div>
-        <pre className="install-code">
+        <pre className="install-code text-xs sm:text-sm">
           <code>{`winget install EclipseAdoptium.Temurin.${mostRecentLts}.JDK`}</code>
         </pre>
       </div>
       <div className="install-block">
         <div className="install-block-title">Install a different version</div>
-        <pre className="install-code">
+        <pre className="install-code text-xs sm:text-sm">
           <code>{"winget install EclipseAdoptium.Temurin.11.JDK"}</code>
         </pre>
       </div>
       <div className="install-block">
         <div className="install-block-title">Upgrade the Winget package</div>
-        <pre className="install-code">
+        <pre className="install-code text-xs sm:text-sm">
           <code>{`winget upgrade EclipseAdoptium.Temurin.${mostRecentLts}.JDK`}</code>
         </pre>
       </div>
       <div className="install-block">
         <div className="install-block-title">Uninstall the Winget package</div>
-        <pre className="install-code">
+        <pre className="install-code text-xs sm:text-sm">
           <code>{`winget uninstall EclipseAdoptium.Temurin.${mostRecentLts}.JDK`}</code>
         </pre>
       </div>

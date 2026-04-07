@@ -148,7 +148,7 @@ const InstallTabs = (): React.ReactNode => {
                 {entry.label}
               </span>
               <div className="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5">
-                <code className="install-row-cmd text-[13px] text-white/90 font-mono">
+                <code className="install-row-cmd text-[12px] text-white/90 font-mono">
                   {entry.command}
                 </code>
                 <button

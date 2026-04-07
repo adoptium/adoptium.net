@@ -1,0 +1,136 @@
+= Verifying GPG Signatures for Eclipse Temurin Downloads
+:description: How to verify GPG signatures of Eclipse Temurin binaries using the Adoptium public key
+:keywords: GPG signature verification security Temurin
+:orgname: Eclipse Adoptium
+:lang: en
+:page-authors: sxa, gdams
+:toc:
+:icons: font
+
+Eclipse Temurin releases include GPG signatures that you can use to verify
+that your downloads are genuine and have not been tampered with since they
+were built. This page explains how to verify those signatures.
+
+== What Is GPG Signing?
+
+GPG signing is a cryptographic process that uses a private/public key pair to
+confirm that a file has not been tampered with between when it was published and
+when it was delivered to you. Adoptium uses the private key to produce a
+signature file that is distributed alongside the OpenJDK binaries. You can
+obtain the corresponding public key and use it to verify that the signature is
+valid, proving the integrity of the file and confirming that it was signed by
+Adoptium and not modified by a third party.
+
+== Why Use GPG Signatures Instead of SHA-256 Checksums?
+
+While SHA-256 checksums verify that a download has not been corrupted in
+transit, they may also be compromised in a man-in-the-middle attack. GPG
+signing avoids this issue by using a separately certified signature that you
+can independently trust and then verify subsequent downloads against.
+
+== Obtaining the Signatures
+
+The GPG signature for each binary is available via the Adoptium API metadata.
+In the following examples we use JDK {latest-lts}, but you can adjust the API
+calls for other versions.
+
+Download the release metadata:
+
+[source, bash, subs="attributes"]
+----
+curl 'https://api.adoptium.net/v3/assets/feature_releases/{latest-lts}/ga' > adopt.json
+----
+
+Extract the binary download link and its corresponding signature link using the
+https://stedolan.github.io/jq/[jq] command-line JSON tool. The information is
+in the `binaries[].package.link` and `binaries[].package.signature_link`
+fields.
+
+For example, to download the Linux x64 JDK and its signature:
+
+[source, bash]
+----
+jq '.[0].binaries[] | select(.architecture=="x64") | select (.os=="linux") | select (.image_type=="jdk") .package.link' adopt.json | xargs curl -LO
+jq '.[0].binaries[] | select(.architecture=="x64") | select (.os=="linux") | select (.image_type=="jdk") .package.signature_link' adopt.json | xargs curl -LO
+----
+
+You can also obtain the SHA-256 checksum from the metadata:
+
+[source, bash]
+----
+jq '.[0].binaries[] | select(.architecture=="x64") | select (.os=="linux") | select (.image_type=="jdk") .package.checksum' adopt.json
+----
+
+Verify the SHA-256 checksum against the output of one of the following
+commands:
+
+* *Linux*: `sha256sum <file>`
+* *macOS*: `shasum -a 256 <file>`
+* *Windows*: `certUtil -hashfile <file> SHA256`
+
+== Verifying the Signatures
+
+You need the `gpg` tool installed. Run the verify command supplying the
+signature file and the binary it corresponds to:
+
+[source, bash]
+----
+gpg --verify <binary_filename>.sig <binary_filename>
+----
+
+If you do not yet have Adoptium's public signing key, you will see a message
+like this:
+
+[source, output]
+----
+gpg: Signature made Mon Jul  4 18:20:31 2022 UTC
+gpg:                using RSA key 3B04D753C9050D9A5D343F39843C48A565F8F04B
+gpg: Can't check signature: No public key
+----
+
+=== Importing the Adoptium Public Key
+
+Download the key from a trusted GPG key server:
+
+[source, bash]
+----
+gpg --keyserver keyserver.ubuntu.com --recv-keys 3B04D753C9050D9A5D343F39843C48A565F8F04B
+----
+
+Run the verify command again. You will see the signature is valid, but the key
+is not yet trusted:
+
+[source, output]
+----
+gpg: Good signature from "Adoptium GPG Key (DEB/RPM Signing Key) <temurin-dev@eclipse.org>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+----
+
+=== Trusting the Key
+
+To fully trust the key and remove the warning, run the following and follow the
+prompts to grant ultimate trust:
+
+[source, bash]
+----
+gpg --edit-key 3B04D753C9050D9A5D343F39843C48A565F8F04B trust
+----
+
+Verification should then succeed:
+
+[source, output]
+----
+gpg: Signature made Mon Jul  4 18:20:31 2022 UTC
+gpg:                using RSA key 3B04D753C9050D9A5D343F39843C48A565F8F04B
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: Good signature from "Adoptium GPG Key (DEB/RPM Signing Key) <temurin-dev@eclipse.org>" [ultimate]
+----
+
+== Further Reading
+
+* link:https://wiki.eclipse.org/Platform-releng/How_to_check_integrity_of_downloads#Example_of_using_GPG_with_the_checksums_files[Eclipse integrity checking guide]
+* link:/docs/secure-software[Adoptium secure software development practices]
+* link:/docs/slsa[SLSA compliance]

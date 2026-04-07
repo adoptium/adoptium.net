@@ -8,6 +8,7 @@ import { redirect, Link } from "@/i18n/navigation";
 import {
   getAsciidocContent,
   getAllAsciidocPaths,
+  getSidebarData,
 } from "@/services/asciidocService";
 import Image from "next/image";
 import PageHeader from "@/components/Common/PageHeader";
@@ -110,12 +111,21 @@ export default async function AsciidocPage({
   const relativePath = `${asciidoc.slug}/${path.basename(asciidoc.path)}`;
 
   // Build breadcrumb segments from the slug
-  const breadcrumbs = pathSegments.map((segment, i) => ({
-    label:
-      segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " "),
-    href: `/${pathSegments.slice(0, i + 1).join("/")}`,
-    isLast: i === pathSegments.length - 1,
-  }));
+  // Use the document title for the last (current page) segment
+  const breadcrumbs = pathSegments.map((segment, i) => {
+    const isLast = i === pathSegments.length - 1;
+    const label = isLast
+      ? asciidoc.metadata.title
+      : segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ");
+    return {
+      label,
+      href: `/${pathSegments.slice(0, i + 1).join("/")}`,
+      isLast,
+    };
+  });
+
+  // Build sidebar navigation from filesystem
+  const sidebarSection = await getSidebarData(pathSegments[0], locale);
 
   return (
     <div className="doc-wrapper pt-4">
@@ -174,7 +184,7 @@ export default async function AsciidocPage({
             aria-label="Documentation navigation"
           >
             <div className="doc-sidebar sticky top-20 overflow-y-auto max-h-[calc(100vh-5rem)] py-8 pr-6 border-r border-white/10">
-              <DocSidebar />
+              {sidebarSection && <DocSidebar section={sidebarSection} />}
             </div>
           </aside>
 
