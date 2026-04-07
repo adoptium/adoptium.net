@@ -23,7 +23,7 @@ The goal of this part is to define proper criteria to publish and share an event
 
 4. Remember to share the event on the https://adoptium.slack.com/archives/C01BUN6GJUB[#community^] channel as well.
 
-== Share a news
+== Share news
 
 The goal of this document is to define proper criteria to publish and share a piece of news at the Adoptium / news and event https://adoptium.net/news/
 

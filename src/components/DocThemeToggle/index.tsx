@@ -2,9 +2,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const DocThemeToggle: React.FC = () => {
   const [isLight, setIsLight] = useState(false);
+  const t = useTranslations("DocThemeToggle");
 
   useEffect(() => {
     const saved = localStorage.getItem("doc-theme");
@@ -39,7 +41,7 @@ const DocThemeToggle: React.FC = () => {
           ? "text-gray-500 hover:text-gray-900 border-gray-300 hover:border-gray-400"
           : "text-gray-400 hover:text-white border-white/10 hover:border-white/20"
       }`}
-      aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+      aria-label={isLight ? t("switch-to-dark") : t("switch-to-light")}
     >
       {isLight ? (
         <svg
@@ -70,7 +72,7 @@ const DocThemeToggle: React.FC = () => {
           />
         </svg>
       )}
-      {isLight ? "Dark" : "Light"}
+      {isLight ? t("dark") : t("light")}
     </button>
   );
 };

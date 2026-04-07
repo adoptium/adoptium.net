@@ -1,5 +1,6 @@
 = Migration Guide
 :page-authors: gdams, karianna, SueChaplain, hendrikebbers, sxa, ParkerM, jiekang, HanSolo, MBoegers, ojuschugh1, adamfarley
+:page-keywords: java, jdk, oracle, temurin, openjdk, eclipse
 :icons: font
 
 == Migrating to Eclipse Temurin

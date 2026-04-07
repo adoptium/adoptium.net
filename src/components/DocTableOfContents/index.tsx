@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface TocItem {
   id: string;
@@ -12,6 +13,7 @@ interface TocItem {
 const DocTableOfContents: React.FC = () => {
   const [headings, setHeadings] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState<string>("");
+  const t = useTranslations("DocTableOfContents");
 
   useEffect(() => {
     const article = document.querySelector("[role='article']");
@@ -51,9 +53,9 @@ const DocTableOfContents: React.FC = () => {
   if (headings.length === 0) return null;
 
   return (
-    <nav aria-label="On this page">
+    <nav aria-label={t("on-this-page")}>
       <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 light:text-gray-500 mb-3">
-        On this page
+        {t("on-this-page")}
       </h4>
       <ul className="space-y-1 text-sm">
         {headings.map((heading) => (

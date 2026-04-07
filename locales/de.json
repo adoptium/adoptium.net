@@ -140,6 +140,18 @@
     "all-adoptium-docs-are-open-source": "Alle Adoptium-Dokumentationen sind Open Source. Etwas falsch oder unklar?",
     "edit-this-page": "Diese Seite bearbeiten"
   },
+  "DocThemeToggle": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "switch-to-light": "Zum hellen Modus wechseln",
+    "switch-to-dark": "Zum dunklen Modus wechseln"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "Auf dieser Seite"
+  },
+  "DocumentationSearch": {
+    "placeholder": "Dokumentation durchsuchen..."
+  },
   "Asciidoc": {
     "table-of-contents": "Inhaltsverzeichnis",
     "warn-default-locale": "Dies ist die <englishVersionLink>englische Version</englishVersionLink> der Seite, da aktuell noch keine deutsche Übersetzung verfügbar ist. Du kannst uns helfen, diese Seite auf Deutsch bereitzustellen. In unserem <translationGuideLink>Leitfaden zu Übersetzungen</translationGuideLink> findest du mehr Informationen.",
@@ -253,5 +265,21 @@
     "title": "Sitemap",
     "subtitle": "Adoptium navigieren",
     "description": "Vollständiger Überblick über alle Seiten, Dokumentation und Ressourcen auf der Adoptium-Website. Finden Sie schnell und einfach, was Sie suchen."
+  },
+  "DocsPage": {
+    "home": "Startseite",
+    "documentation": "Dokumentation",
+    "title": "Adoptium®-Dokumentation",
+    "subtitle": "Anleitungen, Referenzen und Ressourcen für Eclipse Adoptium und Eclipse Temurin",
+    "getting-started": "Erste Schritte",
+    "explore-by-topic": "Nach Thema erkunden",
+    "install-temurin": "Temurin installieren",
+    "install-temurin-desc": "Schritt-für-Schritt-Installationsanleitung für alle Plattformen",
+    "download-temurin": "Temurin herunterladen",
+    "download-temurin-desc": "Die neuesten Eclipse Temurin Versionen herunterladen",
+    "migration-guide": "Migrationsleitfaden",
+    "migration-guide-desc": "Von anderen JDKs zu Eclipse Temurin migrieren",
+    "supported-platforms": "Unterstützte Plattformen",
+    "supported-platforms-desc": "Kompatibilitätsmatrix für Betriebssysteme und Architekturen"
   }
 }

@@ -140,6 +140,18 @@
     "all-adoptium-docs-are-open-source": "Toda la documentación de Adoptium es de código abierto. ¿Has encontrado algo incorrecto o confuso?",
     "edit-this-page": "Editar esta página"
   },
+  "DocThemeToggle": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "switch-to-light": "Cambiar a modo claro",
+    "switch-to-dark": "Cambiar a modo oscuro"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "En esta página"
+  },
+  "DocumentationSearch": {
+    "placeholder": "Buscar documentación..."
+  },
   "Asciidoc": {
     "table-of-contents": "Tabla de contenidos",
     "warn-default-locale": "Esta es la <englishVersionLink>versión en inglés</englishVersionLink> porque no está disponible en tu idioma. Ayúdanos a traducirla. Consulta nuestra <translationGuideLink>guía de traducción</translationGuideLink> para más información.",
@@ -253,5 +265,21 @@
     "title": "Mapa del sitio",
     "subtitle": "Navegar Adoptium",
     "description": "Descripción completa de todas las páginas, documentación y recursos disponibles en el sitio web de Adoptium. Encuentre rápidamente lo que busca."
+  },
+  "DocsPage": {
+    "home": "Inicio",
+    "documentation": "Documentación",
+    "title": "Documentación de Adoptium®",
+    "subtitle": "Guías, referencias y recursos para Eclipse Adoptium y Eclipse Temurin",
+    "getting-started": "Primeros pasos",
+    "explore-by-topic": "Explorar por tema",
+    "install-temurin": "Instalar Temurin",
+    "install-temurin-desc": "Guía de instalación paso a paso para todas las plataformas",
+    "download-temurin": "Descargar Temurin",
+    "download-temurin-desc": "Obtener las últimas versiones de Eclipse Temurin",
+    "migration-guide": "Guía de migración",
+    "migration-guide-desc": "Migrar a Eclipse Temurin desde otros JDKs",
+    "supported-platforms": "Plataformas compatibles",
+    "supported-platforms-desc": "Matriz de compatibilidad de sistemas operativos y arquitecturas"
   }
 }

@@ -172,16 +172,21 @@ const SECTION_TITLES: Record<string, string> = {
  * Build sidebar navigation data for a given section by scanning the filesystem.
  * Returns the section title and a sorted list of items with titles extracted
  * from each AsciiDoc page's document title.
+ *
+ * The `section` parameter can be a top-level section like "docs" or a nested
+ * path like "docs/reproducible-verification-builds" for subsections that
+ * contain their own child pages.
  */
 export async function getSidebarData(
   section: string,
   locale = "en",
 ): Promise<SidebarSection | null> {
-  // Validate inputs: only allow alphanumeric, hyphens, and underscores
-  if (!/^[a-zA-Z0-9_-]+$/.test(section)) return null;
+  // Validate inputs: each segment must only contain alphanumeric, hyphens, and underscores
+  const segments = section.split("/");
+  if (!segments.every((s) => /^[a-zA-Z0-9_-]+$/.test(s))) return null;
   if (!/^[a-zA-Z0-9_-]+$/.test(locale)) return null;
 
-  const sectionDir = path.resolve(CONTENT_BASE_DIR, section);
+  const sectionDir = path.resolve(CONTENT_BASE_DIR, ...segments);
 
   // Prevent path traversal
   if (!sectionDir.startsWith(CONTENT_BASE_DIR)) return null;
@@ -235,10 +240,32 @@ export async function getSidebarData(
     .filter((i) => i.title !== "Overview")
     .sort((a, b) => a.title.localeCompare(b.title));
 
+  // Determine a human-readable title for the sidebar section
+  const topLevel = segments[0];
+  const lastSegment = segments[segments.length - 1];
+  let sectionTitle =
+    SECTION_TITLES[topLevel] ||
+    topLevel.charAt(0).toUpperCase() + topLevel.slice(1);
+  // For nested sections, derive title from the index page or last segment
+  if (segments.length > 1) {
+    const rootIndex = fileExists(path.join(sectionDir, `index.${locale}.adoc`))
+      ? path.join(sectionDir, `index.${locale}.adoc`)
+      : fileExists(path.join(sectionDir, "index.adoc"))
+        ? path.join(sectionDir, "index.adoc")
+        : null;
+    if (rootIndex) {
+      const rootContent = fs.readFileSync(rootIndex, "utf8");
+      const rootMeta = extractMetadata(rootIndex, rootContent);
+      sectionTitle = rootMeta.title;
+    } else {
+      sectionTitle =
+        lastSegment.charAt(0).toUpperCase() +
+        lastSegment.slice(1).replace(/-/g, " ");
+    }
+  }
+
   return {
-    title:
-      SECTION_TITLES[section] ||
-      section.charAt(0).toUpperCase() + section.slice(1),
+    title: sectionTitle,
     basePath: `/${section}`,
     items: overview ? [overview, ...rest] : rest,
   };

@@ -24,7 +24,7 @@ const docsSection: SidebarSection = {
   basePath: "/docs",
   items: [
     { title: "FAQ", href: "/docs/faq" },
-    { title: "Migration Guide", href: "/docs/migration" },
+    { title: "Migration Guide", href: "/temurin/migration" },
   ],
 };
 
