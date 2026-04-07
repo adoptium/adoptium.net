@@ -76,7 +76,6 @@ const DownloadCounter = ({ total }: DownloadCounterProps) => {
         <div className="flex items-center gap-4 flex-wrap sm:gap-6 justify-center">
           <a
             href="https://adoptium.net/stats/download"
-            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 flex-wrap sm:gap-6 justify-center cursor-pointer"
           >
