@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
+"""List GitHub contributor usernames for a given file."""
+
+# pylint: disable=invalid-name
 
 import argparse
 
 import requests
 from bs4 import BeautifulSoup
 
-org = "adoptium"
-repo = "adoptium.net"
-branch = "main"
+ORG = "adoptium"
+REPO = "adoptium.net"
+BRANCH = "main"
 # This is where we define users that should be skipped
-excludedUsers = "adoptium-bot, eclipse-temurin-bot"
+EXCLUDED_USERS = "adoptium-bot, eclipse-temurin-bot, Copilot"
 
 parser = argparse.ArgumentParser(
     description="List GitHub contributor usernames for a given file"
@@ -23,9 +26,8 @@ parser.add_argument(
 args = parser.parse_args()
 
 page = requests.get(
-    "https://github.com/{org}/{repo}/contributors-list/{branch}/{args.file}".format(
-        **locals()
-    )
+    f"https://github.com/{ORG}/{REPO}/contributors-list/{BRANCH}/{args.file}",
+    timeout=30,
 )
 soup = BeautifulSoup(page.content, "html.parser")
 
@@ -33,5 +35,5 @@ contributors = soup.findAll("a")
 
 for contributor in contributors:
     username = contributor.find("href")
-    if not contributor.text.strip() in excludedUsers:
+    if contributor.text.strip() not in EXCLUDED_USERS:
         print(contributor.text.strip())
