@@ -625,4 +625,173 @@ This is test content.`;
       expect(result?.slug).toBe(slug);
     });
   });
+
+  describe("getSidebarData", () => {
+    // We need to import getSidebarData
+    let getSidebarData: typeof import("../asciidocService").getSidebarData;
+
+    beforeEach(async () => {
+      ({ getSidebarData } = await import("../asciidocService"));
+    });
+
+    it("returns null for invalid section names with special characters", async () => {
+      const result = await getSidebarData("../etc/passwd");
+      expect(result).toBeNull();
+    });
+
+    it("returns null for invalid locale with special characters", async () => {
+      const result = await getSidebarData("docs", "../etc");
+      expect(result).toBeNull();
+    });
+
+    it("returns null if section directory does not exist", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(false);
+      const mockLstatSync = vi.fn();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      const result = await getSidebarData("nonexistent");
+      expect(result).toBeNull();
+    });
+
+    it("returns sidebar data with known section title", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+
+      const mockDirEntries: MockDirent[] = [
+        { name: "page1", isDirectory: () => true, isFile: () => false },
+      ];
+      const mockPage1Entries: MockDirent[] = [
+        { name: "index.adoc", isDirectory: () => false, isFile: () => true },
+      ];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock)
+        .mockReturnValueOnce(mockDirEntries)
+        .mockReturnValueOnce(mockPage1Entries);
+
+      // Mock fileExists for root index check (no root index)
+      mockFileExists.mockReturnValue(false);
+      mockFileExists.mockReturnValueOnce(false); // locale-specific
+      mockFileExists.mockReturnValueOnce(false); // default
+
+      mockFs.readFileSync.mockReturnValue("= Page One\n:description: Test\n");
+      mockExtractMetadata.mockReturnValue({
+        title: "Page One",
+        description: "Test",
+        authors: [],
+        attributes: {},
+      });
+
+      const result = await getSidebarData("installation");
+      expect(result?.title).toBe("Installation");
+      expect(result?.basePath).toBe("/installation");
+    });
+
+    it("uses capitalized section name for unknown sections", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce([]);
+
+      mockFileExists.mockReturnValue(false);
+
+      const result = await getSidebarData("customsection");
+      expect(result?.title).toBe("Customsection");
+    });
+
+    it("includes Overview item when root index exists", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce([]);
+
+      // Root index exists
+      mockFileExists.mockReturnValueOnce(false); // locale-specific not found
+      mockFileExists.mockReturnValueOnce(true); // default found
+      mockFs.readFileSync.mockReturnValue("= Section Overview\n");
+      mockExtractMetadata.mockReturnValue({
+        title: "Section Overview",
+        description: "",
+        authors: [],
+        attributes: {},
+      });
+
+      const result = await getSidebarData("docs");
+      expect(result?.items.some((i) => i.title === "Overview")).toBe(true);
+    });
+
+    it("skips _partials subdirectories", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+
+      const mockDirEntries: MockDirent[] = [
+        { name: "_partials", isDirectory: () => true, isFile: () => false },
+        { name: "page1", isDirectory: () => true, isFile: () => false },
+      ];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock)
+        .mockReturnValueOnce(mockDirEntries);
+
+      mockFileExists.mockReturnValue(false); // no root or child index
+
+      const result = await getSidebarData("docs");
+      expect(result?.items).toHaveLength(0);
+    });
+
+    it("uses page-sidebar-title attribute when available", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+
+      const mockDirEntries: MockDirent[] = [
+        { name: "subpage", isDirectory: () => true, isFile: () => false },
+      ];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(mockDirEntries);
+
+      // no root index
+      mockFileExists.mockReturnValueOnce(false);
+      mockFileExists.mockReturnValueOnce(false);
+      // child index exists
+      mockFileExists.mockReturnValueOnce(false); // locale-specific
+      mockFileExists.mockReturnValueOnce(true); // default
+
+      mockFs.readFileSync.mockReturnValue("= Subpage Title\n:page-sidebar-title: Short Title\n");
+      mockExtractMetadata.mockReturnValue({
+        title: "Subpage Title",
+        description: "",
+        authors: [],
+        attributes: { "page-sidebar-title": "Short Title" },
+      });
+
+      const result = await getSidebarData("docs");
+      expect(result?.items.some((i) => i.title === "Short Title")).toBe(true);
+    });
+  });
 });
