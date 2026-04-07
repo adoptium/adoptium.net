@@ -91,7 +91,7 @@ const navigation: NavItem[] = [
         name: "Become an Individual Sustainer",
         href: "https://www.eclipse.org/sponsor/adoptium/",
       },
-      { name: "Become a Corporate Sustainer", href: "/become-a-sustainer" },
+      { name: "Become a Corporate Sustainer", href: "/sustainers" },
       { name: "Our Sustainers", href: "/sustainers#temurin-sustainers" },
       { name: "Contribute to Adoptium", href: "/contributing" },
       {
@@ -339,7 +339,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                                       onClick={() => setOpenedMenu(undefined)}
                                     />
                                     <MobileLink
-                                      href="/become-a-sustainer"
+                                      href="/sustainers"
                                       name="Become a Corporate Sustainer"
                                       activePaths={activePaths}
                                       onClick={() => setOpenedMenu(undefined)}
