@@ -1,4 +1,4 @@
-= Adoptium marketing criteria
+= Adoptium(R) Marketing Criteria
 :description: Adoptium Marketing Criteria
 :keywords: adoptium marketing
 :orgname: Eclipse Adoptium

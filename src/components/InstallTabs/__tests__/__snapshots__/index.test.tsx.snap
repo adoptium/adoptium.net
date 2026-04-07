@@ -73,7 +73,7 @@ exports[`Tests for InstallTabs component > renders correctly 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               winget install EclipseAdoptium.Temurin.25.JDK
             </code>
@@ -97,7 +97,7 @@ exports[`Tests for InstallTabs component > renders correctly 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               winget install EclipseAdoptium.Temurin.11.JDK
             </code>
@@ -194,7 +194,7 @@ exports[`Tests for InstallTabs component > renders correctly for Linux 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               apt-get install temurin-25-jdk
             </code>
@@ -218,7 +218,7 @@ exports[`Tests for InstallTabs component > renders correctly for Linux 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               yum install temurin-25-jdk
             </code>
@@ -242,7 +242,7 @@ exports[`Tests for InstallTabs component > renders correctly for Linux 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               zypper install temurin-25-jdk
             </code>
@@ -339,7 +339,7 @@ exports[`Tests for InstallTabs component > renders correctly for Unix 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               apt-get install temurin-25-jdk
             </code>
@@ -363,7 +363,7 @@ exports[`Tests for InstallTabs component > renders correctly for Unix 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               yum install temurin-25-jdk
             </code>
@@ -387,7 +387,7 @@ exports[`Tests for InstallTabs component > renders correctly for Unix 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               zypper install temurin-25-jdk
             </code>
@@ -484,7 +484,7 @@ exports[`Tests for InstallTabs component > renders correctly for macOS 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               brew install --cask temurin@25
             </code>
@@ -508,7 +508,7 @@ exports[`Tests for InstallTabs component > renders correctly for macOS 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               brew install --cask temurin@8
             </code>
@@ -605,7 +605,7 @@ exports[`Tests for InstallTabs component > renders correctly for other 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               winget install EclipseAdoptium.Temurin.25.JDK
             </code>
@@ -629,7 +629,7 @@ exports[`Tests for InstallTabs component > renders correctly for other 1`] = `
             class="install-code-block flex items-center justify-between rounded-lg bg-white/[0.06] border border-white/[0.08] px-4 py-2.5"
           >
             <code
-              class="install-row-cmd text-[13px] text-white/90 font-mono"
+              class="install-row-cmd text-[12px] text-white/90 font-mono"
             >
               winget install EclipseAdoptium.Temurin.11.JDK
             </code>

@@ -40,6 +40,10 @@ TIP: Checksum files are available alongside every binary on the
 link:/temurin/releases[releases page]. You can also verify downloads via
 the link:https://api.adoptium.net/q/swagger-ui/[Adoptium API].
 
+In addition to SHA-256 checksums, we provide GPG signatures for all binaries.
+See link:/docs/gpg-verification[Verifying GPG Signatures] for instructions on
+how to verify the authenticity of your downloads using the Adoptium public key.
+
 == Linux
 
 [source, bash]

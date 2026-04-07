@@ -12,7 +12,7 @@ ORG = "adoptium"
 REPO = "adoptium.net"
 BRANCH = "main"
 # This is where we define users that should be skipped
-EXCLUDED_USERS = "adoptium-bot, eclipse-temurin-bot, Copilot"
+EXCLUDED_USERS = "adoptium-bot, eclipse-temurin-bot, Copilot, sxa555"
 
 parser = argparse.ArgumentParser(
     description="List GitHub contributor usernames for a given file"
