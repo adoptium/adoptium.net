@@ -79,6 +79,7 @@ exports[`Adopters page > renders correctly 1`] = `
   <div />
   <div
     class="flex flex-col items-center justify-center"
+    id="become-adopter"
   >
     <button
       class="mx-auto mt-10 mb-6 bg-gradient-to-r from-[#FF1464] to-[#7F1CFF] text-white text-lg font-semibold w-full max-w-xs h-14 rounded-full shadow-lg hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-pink-400/50 border-none"

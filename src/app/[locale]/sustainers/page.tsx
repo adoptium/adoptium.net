@@ -95,7 +95,10 @@ export default function SustainersPage() {
 
         <div className="w-full max-w-[1180px] p-4">
           <SustainerLevels />
-          <h2 className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-40 relative">
+          <h2
+            className="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-40 relative"
+            id="temurin-sustainers"
+          >
             <div className="absolute -left-full -right-full -top-20 -z-10">
               <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"></div>
             </div>
