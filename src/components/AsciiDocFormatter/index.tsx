@@ -11,6 +11,10 @@ import parse, {
 } from "html-react-parser";
 import AccordionItem from "@/components/Asciidoc/AccordionItem";
 
+function isElement(node: { type?: string }): node is Element {
+  return node.type === "tag";
+}
+
 interface AsciiDocFormatterProps {
   content: string;
 }
@@ -20,7 +24,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
 
   const options: HTMLReactParserOptions = {
     replace: (node) => {
-      if (!(node instanceof Element)) {
+      if (!isElement(node)) {
         return undefined;
       }
 
@@ -152,25 +156,25 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
 
         // Find the content td
         const table = node.children.find(
-          (child) => child instanceof Element && child.name === "table",
+          (child) => isElement(child) && child.name === "table",
         ) as Element | undefined;
         let contentNode: Element | undefined;
         if (table) {
           const tbody = table.children.find(
             (child) =>
-              child instanceof Element &&
+              isElement(child) &&
               (child.name === "tbody" || child.name === "tr"),
           ) as Element | undefined;
           const row =
             tbody?.name === "tr"
               ? tbody
               : (tbody?.children.find(
-                  (child) => child instanceof Element && child.name === "tr",
+                  (child) => isElement(child) && child.name === "tr",
                 ) as Element | undefined);
           if (row) {
             contentNode = row.children.find(
               (child) =>
-                child instanceof Element &&
+                isElement(child) &&
                 child.name === "td" &&
                 child.attribs?.class === "content",
             ) as Element | undefined;
@@ -213,7 +217,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
       // Transform <details> and <summary> tags into Accordion
       if (node.name === "details") {
         const summary = node.children.find(
-          (child) => child instanceof Element && child.name === "summary",
+          (child) => isElement(child) && child.name === "summary",
         ) as Element | undefined;
 
         const summaryContent = summary
@@ -221,7 +225,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
           : "Details";
 
         const detailsContent = node.children.filter(
-          (child) => !(child instanceof Element && child.name === "summary"),
+          (child) => !(isElement(child) && child.name === "summary"),
         );
 
         return (
