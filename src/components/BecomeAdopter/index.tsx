@@ -23,7 +23,6 @@ const BecomeAdopter = () => {
       });
     }
   }, [searchParams]);
-  console.log(searchParams.get("open"));
 
   return (
     <div

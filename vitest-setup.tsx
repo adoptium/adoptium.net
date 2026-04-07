@@ -462,5 +462,20 @@ vi.mock("react-slick", () => {
 vi.mock("slick-carousel/slick/slick.css", () => ({}));
 vi.mock("slick-carousel/slick/slick-theme.css", () => ({}));
 
+/**
+ * Suppress jsdom "Not implemented" warnings for getComputedStyle with pseudo-elements.
+ * jsdom does not support pseudo-element selectors; these warnings are harmless noise.
+ */
+const originalConsoleError = console.error;
+console.error = (...args: any[]) => {
+  if (
+    typeof args[0] === "string" &&
+    args[0].includes("Not implemented: Window's getComputedStyle()")
+  ) {
+    return;
+  }
+  originalConsoleError(...args);
+};
+
 // Export everything from testing-library/react
 export * from "@testing-library/react";

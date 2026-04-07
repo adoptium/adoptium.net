@@ -34,7 +34,7 @@ interface UseAttestationsResult {
 
 export function useAttestations(
   releaseName: string | undefined,
-  checksums: string[]
+  checksums: string[],
 ): UseAttestationsResult {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | undefined>(undefined);
@@ -50,10 +50,17 @@ export function useAttestations(
    * - reduce processing
    * - avoid redundant joins
    * - make batching predictable
+   *
+   * We serialise the array to a string key so that useMemo produces
+   * a stable reference even when callers pass a new array literal
+   * on every render. Without this, the effect dependency would change
+   * every render and cause an infinite fetch loop on errors.
    */
+  const checksumKey = checksums.join("\0");
   const uniqueChecksums = useMemo(() => {
     return Array.from(new Set(checksums)).filter(Boolean);
-  }, [checksums]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [checksumKey]);
 
   useEffect(() => {
     if (!releaseName || uniqueChecksums.length === 0) {
@@ -61,7 +68,7 @@ export function useAttestations(
     }
 
     const unresolvedChecksums = uniqueChecksums.filter(
-      (checksum) => !(checksum in cacheRef.current)
+      (checksum) => !(checksum in cacheRef.current),
     );
 
     if (unresolvedChecksums.length === 0) {
@@ -77,9 +84,9 @@ export function useAttestations(
       try {
         const response = await axios.get<Attestation[]>(
           `${BASE_URL}/attestations/release_name/${encodeURIComponent(
-            releaseName
+            releaseName,
           )}`,
-          { params: { project: "jdk" } }
+          { params: { project: "jdk" } },
         );
 
         if (cancelled) return;

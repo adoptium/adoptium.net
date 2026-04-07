@@ -1,5 +1,3 @@
-:page-authors: reinhapa, thegreystone, gdams, karianna, jiekang, hendrikebbers, ggam, xavierfacq
-
 === Eclipse Mission Control 9.1.1
 
 [cols="20%,20%,70%",options="header"]

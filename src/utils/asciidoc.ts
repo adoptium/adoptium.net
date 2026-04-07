@@ -188,7 +188,10 @@ export function extractMetadata(
   authors: string[];
   attributes: Record<string, unknown>;
 } {
-  const doc = Asciidoctor.load(content, { safe: "server" });
+  const doc = Asciidoctor.load(content, {
+    safe: "server",
+    base_dir: path.dirname(filePath),
+  });
 
   // Get the title and ensure it's a string
   const docTitle = doc.getDocumentTitle();
