@@ -177,6 +177,10 @@ export async function getSidebarData(
   section: string,
   locale = "en",
 ): Promise<SidebarSection | null> {
+  // Validate inputs: only allow alphanumeric, hyphens, and underscores
+  if (!/^[a-zA-Z0-9_-]+$/.test(section)) return null;
+  if (!/^[a-zA-Z0-9_-]+$/.test(locale)) return null;
+
   const sectionDir = path.resolve(CONTENT_BASE_DIR, section);
 
   // Prevent path traversal
