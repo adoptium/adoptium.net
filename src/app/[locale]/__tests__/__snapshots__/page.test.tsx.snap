@@ -555,7 +555,6 @@ exports[`Index page > renders correctly 1`] = `
           class="flex items-center gap-4 flex-wrap sm:gap-6 justify-center cursor-pointer"
           href="https://adoptium.net/stats/download"
           rel="noopener noreferrer"
-          target="_blank"
         >
           <span>
             <svg
