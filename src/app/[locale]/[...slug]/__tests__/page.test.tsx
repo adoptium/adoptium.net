@@ -32,6 +32,7 @@ vi.mock("@/services/asciidocService", () => ({
         title: "Page Title",
         description: "Page description",
         authors: ["Author"],
+        attributes: {},
       },
       path: "/mock/path.adoc",
       slug,

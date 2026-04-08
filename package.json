@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postbuild": "node scripts/build-search-index.mjs",
     "start": "next start",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
@@ -76,6 +77,7 @@
     "eslint-config-next": "16.2.2",
     "jsdom": "^29.0.2",
     "jsdom-testing-mocks": "^1.16.0",
+    "pagefind": "^1.5.0",
     "tailwindcss": "^4.2.1",
     "typescript": "^6.0.2",
     "vitest": "^4.0.15",

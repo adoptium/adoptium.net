@@ -7,7 +7,18 @@ vi.mock("@/i18n/navigation", () => ({
   Link: ({ children, href }: any) => <a href={href}>{children}</a>,
 }));
 vi.mock("next/image", () => ({
-  default: (props: any) => <img {...props} />,
+  default: ({
+    src,
+    alt,
+    fill,
+    priority,
+    quality,
+    placeholder,
+    blurDataURL,
+    loader,
+    unoptimized,
+    ...props
+  }: any) => <img src={src} alt={alt} {...props} />,
 }));
 
 vi.mock("@/components/IconSocial", () => ({

@@ -137,6 +137,11 @@ export default async function AsciidocPage({
     sidebarSection = await getSidebarData(pathSegments[0], locale);
   }
 
+  // Check for optional page logo (set via :page-logo: attribute in AsciiDoc)
+  const pageLogo = asciidoc.metadata.attributes["page-logo"]
+    ? String(asciidoc.metadata.attributes["page-logo"])
+    : null;
+
   return (
     <div className="doc-wrapper pt-4 light:bg-white">
       {/* Compact doc header */}
@@ -188,9 +193,21 @@ export default async function AsciidocPage({
               ))}
             </nav>
           </div>
-          <h1 className="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight">
-            {asciidoc.metadata.title}
-          </h1>
+          <div className="flex items-center gap-5">
+            {pageLogo && (
+              <Image
+                src={pageLogo}
+                alt={`${asciidoc.metadata.title} logo`}
+                width={80}
+                height={80}
+                className="h-16 w-auto flex-shrink-0 rounded-lg bg-white p-1 light:bg-transparent light:p-0"
+                style={{ objectFit: "contain" }}
+              />
+            )}
+            <h1 className="text-2xl md:text-3xl font-semibold text-white light:text-gray-900 tracking-tight">
+              {asciidoc.metadata.title}
+            </h1>
+          </div>
         </div>
       </div>
 
