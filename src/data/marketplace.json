@@ -10,12 +10,6 @@
     "postDownload": "https://learn.microsoft.com/java/openjdk/"
   },
   {
-    "name": "Azul",
-    "icon": "vendor-azul.png",
-    "iconPadding": "0.7em",
-    "postDownload": "https://www.azul.com/downloads"
-  },
-  {
     "name": "IBM",
     "icon": "vendor-ibm.png",
     "postDownload": "https://developer.ibm.com/languages/java/semeru-runtimes"

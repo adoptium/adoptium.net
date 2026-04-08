@@ -7,12 +7,6 @@
     "tier": "strategic"
   },
   {
-    "name": "Azul",
-    "logo": "members/azul.svg",
-    "url": "https://www.azul.com",
-    "tier": "strategic"
-  },
-  {
     "name": "Google",
     "logo": "members/google.svg",
     "url": "https://google.com",
