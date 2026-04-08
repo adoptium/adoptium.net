@@ -15,7 +15,7 @@ const membershipTiers: MembershipTier[] = [
   {
     title: "Strategic",
     subtitle: "Member",
-    pricing: "$10,000 - $50,000",
+    pricing: "€9,000 - €45,000",
     pricingNote: "(Based on corporate revenue)",
     benefits: [
       "For organisations that view Adoptium as critical to their future and are looking to play a leading role in shaping its direction.",
@@ -25,7 +25,7 @@ const membershipTiers: MembershipTier[] = [
   {
     title: "Enterprise",
     subtitle: "Member",
-    pricing: "$12,000 - $32,000",
+    pricing: "€6,500 - €30,000",
     pricingNote: "(Based on corporate revenue)",
     benefits: [
       "For organisations that rely on Adoptium in their business operations and are seeking to influence the ecosystem's direction.",
@@ -34,7 +34,7 @@ const membershipTiers: MembershipTier[] = [
   {
     title: "Participant",
     subtitle: "Member",
-    pricing: "$0 - $15,000",
+    pricing: "€0 - €12,500",
     pricingNote: "(Based on corporate revenue)",
     benefits: [
       "For organisations that use or build on Adoptium technology and are looking to stay engaged as it evolves.",
