@@ -53,9 +53,9 @@ describe("MembershipLevels", () => {
   it("displays correct pricing for each tier", () => {
     render(<MembershipLevels />);
 
-    expect(screen.getByText("$10,000 - $50,000")).toBeInTheDocument();
-    expect(screen.getByText("$12,000 - $32,000")).toBeInTheDocument();
-    expect(screen.getByText("$0 - $15,000")).toBeInTheDocument();
+    expect(screen.getByText("€9,000 - €45,000")).toBeInTheDocument();
+    expect(screen.getByText("€6,500 - €30,000")).toBeInTheDocument();
+    expect(screen.getByText("€0 - €12,500")).toBeInTheDocument();
 
     // Check pricing notes
     const pricingNotes = screen.getAllByText("(Based on corporate revenue)");
