@@ -4,6 +4,7 @@
 :orgname: Eclipse Adoptium
 :lang: es
 :page-authors: tellison, sxa, gdams, NickJavaDev88
+:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 
 
 El marco de https://slsa.dev/[Niveles de la Cadena de Suministro para Artefactos de Software (SLSA)^] es un marco de seguridad que ayuda a proporcionar confianza en que un conjunto de entradas, como el código fuente, las bibliotecas y los paquetes de software, conducen a un conjunto de salidas bien definidas, como un binario y una lista de materiales de software. Es un conjunto estructurado de requisitos técnicos para ayudar a un productor a confiar en las partes de la cadena de suministro que están bajo su control directo y ayuda a proporcionar confianza en el proceso de construcción para detectar cualquier ataque en las fases iniciales de la cadena de suministro.
