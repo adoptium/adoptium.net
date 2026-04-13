@@ -1,5 +1,6 @@
 """Check for outdated locale translations and create GitHub issues."""
 
+import argparse
 import os
 import re
 import subprocess
@@ -33,7 +34,7 @@ def get_shasum_from_git(file_path):
     return shasum
 
 
-def add_localized_shasum(english_shasum, locale, root):
+def add_localized_shasum(english_shasum, locale, root, dry_run=False):
     """Add or update the page-based-on shasum in a localized file."""
     # Add the shasum to the localized file
     localized_file = os.path.join(root, f"index.{locale}.adoc")
@@ -42,11 +43,15 @@ def add_localized_shasum(english_shasum, locale, root):
         match = re.search(r":page-based-on:\s+(\S+)", content)
         if match:
             print(f"Updating {localized_file} with shasum {english_shasum}")
+            if dry_run:
+                return
             content = content.replace(match.group(1), english_shasum)
             with open(localized_file, "w", encoding="utf-8") as f:
                 f.write(content)
         else:
             print(f"Adding shasum {english_shasum} to {localized_file}")
+            if dry_run:
+                return
             with open(localized_file, "r", encoding="utf-8") as f:
                 content = f.readlines()
 
@@ -69,7 +74,9 @@ def add_localized_shasum(english_shasum, locale, root):
                 f.writelines(content)
 
 
-def build_issue_body(english_file, english_shasum, outdated_locales, root):
+def build_issue_body(
+    english_file, english_shasum, outdated_locales, root, dry_run=False
+):
     """Build the GitHub issue body for outdated translations."""
     body = "The English version of this file has been updated. "
     body += "The following localised versions are potentially out of date:\n\n"
@@ -90,7 +97,7 @@ def build_issue_body(english_file, english_shasum, outdated_locales, root):
         localized_shasum = get_shasum(os.path.join(root, f"index.{locale}.adoc"))
         # If localized file has no shasum, add it
         if localized_shasum is None:
-            add_localized_shasum(english_shasum, locale, root)
+            add_localized_shasum(english_shasum, locale, root, dry_run)
         # Add localized shasum to outdated_locales
         outdated_locales[outdated_locales.index(locale)] = (
             f"{localized_shasum} {locale}"
@@ -118,8 +125,13 @@ def build_issue_body(english_file, english_shasum, outdated_locales, root):
     return body
 
 
-def main():
+def main(dry_run=False):
     """Find outdated translations and create issues for them."""
+    if dry_run:
+        print(
+            "=== DRY RUN MODE — no issues will be created, "
+            "no files will be modified ==="
+        )
     for root, _, files in os.walk(CONTENT_DIR):
         english_file = os.path.join(root, "index.adoc")
 
@@ -149,6 +161,22 @@ def main():
 
         # Print the list of outdated locales
         print(f"Outdated locales for {english_file}: {outdated_locales}")
+
+        rel_path = os.path.relpath(english_file, CONTENT_DIR)
+        title = "Translation review required" f" after updates to {rel_path}"
+
+        if dry_run:
+            print(f"[DRY RUN] Would create issue: {title}")
+            body = build_issue_body(
+                english_file,
+                english_shasum,
+                outdated_locales,
+                root,
+                dry_run=True,
+            )
+            print(f"[DRY RUN] Issue body:\n{body}")
+            continue
+
         # Check if an issue already exists for this file
         check_issue = (
             os.popen(
@@ -168,9 +196,6 @@ def main():
 
         # Create an issue for this file
         print(f"Creating issue for {english_file}")
-
-        rel_path = os.path.relpath(english_file, CONTENT_DIR)
-        title = "Translation review required" f" after updates to {rel_path}"
 
         body = build_issue_body(english_file, english_shasum, outdated_locales, root)
 
@@ -194,4 +219,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Check for outdated locale translations."
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Report outdated translations without creating issues or modifying files.",
+    )
+    args = parser.parse_args()
+    main(dry_run=args.dry_run)
