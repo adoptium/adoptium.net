@@ -121,8 +121,6 @@ def main():
             body += "| Locale | File | Locale Lead |\n"
             body += "| ------ | ---- | ----------- |\n"
             for locale in outdated_locales:
-                localized_shasum = locale.split()[0].strip()
-                locale = locale.split()[1].strip()
                 # get locale lead
                 locale_lead = locale_leads.get(locale)
                 if locale_lead is None:
@@ -174,7 +172,7 @@ def main():
                     "--body",
                     body,
                     "--label",
-                    "translation,help wanted, good first issue",
+                    "translation,help wanted",
                 ]
             )
 
