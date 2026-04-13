@@ -4,6 +4,7 @@
 :orgname: Eclipse Adoptium
 :lang: zh-CN
 :page-authors: tellison, gdams, NickJavaDev88
+:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 
 == 概览
 
