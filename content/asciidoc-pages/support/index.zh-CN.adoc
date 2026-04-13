@@ -1,5 +1,6 @@
 = Temurin(TM) 支持
 :page-authors: gdams, karianna, sxa, tellison, SueChaplain, mvitz, ParkerM, M-Davies, Malax, lasombra, jeffalder, hendrikebbers, douph1, andrew-m-leonard, mr-david-owens, DanHeidinga, sophia-guo, zdtsw, adamfarley, garydgregory, mtughan, xavierfacq, NickJavaDev88
+:page-based-on: 8d3e6bb8724190dec8e19e3c79ffd3ee5c45855d
 :toc:
 :partialDir: _partials
 
