@@ -28,6 +28,6 @@ jobs:
           fetch-depth: 0
 
       - name: Check asciidoc docs
-        run: python3 .github/workflows/locale-checker.py
+        run: python3 .github/workflows/locale_checker.py
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

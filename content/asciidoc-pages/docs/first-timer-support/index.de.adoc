@@ -1,6 +1,6 @@
 = Eclipse Adoptium(R) First Timers Support
 :page-authors: gdams, HanSolo, hendrikebbers, tellison, xavierfacq
-:page-based-on: 50dc526fadcdd7dd03b386f112ac1ab4043bb554
+:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 :description: Support with first time contributions
 :keywords: adoptium documentation contribute first-time
 :icons: font
