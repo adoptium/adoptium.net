@@ -1,5 +1,6 @@
 = Windows MSI 安装包
 :page-authors: gdams, karianna, SueChaplain, ParkerM, KalyanJoseph, NickJavaDev88
+:page-based-on: 833bb2222afd46d6ecdc58a1dffc2cb22bd18925
 :toc:
 :page-description: 在 Windows 上下载并安装 Eclipse Temurin MSI 文件。
 :keywords: java, windows, msi,  installer, temurin, eclipse, jdk, jre, 安装, 下载
