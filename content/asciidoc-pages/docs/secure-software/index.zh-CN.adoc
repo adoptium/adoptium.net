@@ -4,6 +4,7 @@
 :orgname: Eclipse Adoptium
 :lang: zh-CN
 :page-authors: tellison, gdams, NickJavaDev88
+:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 
 Adoptium 项目为关键任务环境提供高质量的 Java 运行时。确保我们交付的软件既安全又可靠，对项目和我们的用户都至关重要。Adoptium 遵循一套基于既定安全软件开发实践的基础、完善且安全的软件开发实践，这些实践可以被验证，以确立我们交付成果的完整性。
 

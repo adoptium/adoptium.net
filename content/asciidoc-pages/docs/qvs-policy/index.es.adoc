@@ -4,6 +4,7 @@
 :orgname: Eclipse Adoptium
 :lang: es
 :page-authors: tellison, gdams, HanSolo, NickJavaDev88, xavierfacq
+:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 
 == Descripción general
 

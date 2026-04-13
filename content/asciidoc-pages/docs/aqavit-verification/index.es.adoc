@@ -1,5 +1,6 @@
 = Verificación AQAvit(TM)
 :page-authors: gdams, smlambert, llxia, tellison, NickJavaDev88, xavierfacq
+:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 :aqavit-branch: v0.9.6-release
 :lang: es
 Versión 0.2, 02.03.2022
