@@ -1,6 +1,6 @@
 = Comercial Soporte para Eclipse Temurin(TM)
 :page-authors: gdams, tellison, hendrikebbers, gerdogdu
-:page-based-on: 4f7e0d66e577a9c619e38c6d670d86f9c4736874
+:page-based-on: 0f3f4ae2b5572701f411b77708c6301f63a0a979
 
 Actualmente, hay disponible una variedad de opciones comerciales para el soporte de Eclipse Temurin. Es importante señalar que ninguno de estos proveedores ha sido evaluado ni cuenta con el respaldo oficial del proyecto Adoptium(R). Cada proveedor de soporte comercial tiende a atender diferentes casos de uso típicos, por lo que se recomienda que investigue cuidadosamente cada opción en función de sus necesidades y requisitos específicos.
 
@@ -12,14 +12,7 @@ En orden alfabético:
 | 
 
 ^.^|
-image:https://adoptium.net/images/azul-logo.png[Azul,150]
-|
-Azul is the largest commercial support provider for OpenJDK distributions, supporting multiple versions, platforms and configurations. For Eclipse Temurin, Azul provides support coverage backed by contractual SLAs with guaranteed timely access to TCK-tested updates (both full and security-only updates). Azul also provides application triage, root cause analysis, and production issue workarounds with out-of-cycle patches from our world-class Java engineering team. 
-
-For more details: please see the https://www.azul.com/newsroom/azul-announces-commercial-support-for-the-eclipse-temurin-openjdk-distribution/[Azul Temurin support announcement] and the https://www.azul.com/support-for-temurin/[Azul Temurin support website], or https://www.azul.com/contact/[Contact Us] for more information.
-
-^.^|
-image:https://adoptium.net/images/ibm-logo.png[IBM,150]
+image:https://adoptium.net/images/members/ibm-logo.png[IBM,150]
 |
 With more than two decades experience implementing, delivering, and supporting Java for enterprises of all sizes and industries, https://www.ibm.com[IBM] is a proud member of the Adoptium working group, supporting and contributing to the high quality community led delivery of Eclipse Temurin. Temurin consumers can receive cost effective and flexibly licensed enterprise-grade support for their mission critical Java workloads with IBM Runtimes for Business.
 
@@ -35,7 +28,7 @@ ManageCat’s support services are designed for teams that value flexibility and
 For more details, please visit the https://managecat.com/services-and-support/eclipse-temurin-openjdk[ManageCat website] or https://managecat.com/pages/contact-us[contact ManageCat] for additional information.
 
 ^.^|
-image:https://adoptium.net/images/openelements-light.svg[Open Elements,150]
+image:https://adoptium.net/images/members/openelements.svg[Open Elements,150]
 |
 
 La compra de https://open-elements.com[Open Elements] Temurin Support & Care te provee una variedad de beneficios que mejoran el rendimiento y la seguridad de tus aplicaciones Java, y optimizan tu proceso de desarrollo. Como miembro de Adoptium contribuimos directamente al desarrollo de proyectos en Adoptium. A través de nuestras actividades en el ecosistema de Java y Open Source, podemos proporcionarte información y conocimientos sobre los desarrollos actuales y futuros dentro del Eclipse Adoptium Working Group y del OpenJDK.
@@ -43,7 +36,7 @@ La compra de https://open-elements.com[Open Elements] Temurin Support & Care te 
 Para obtener más detalles, ve https://open-elements.com/[el sitio web de Open Elements].
 
 ^.^|
-image:https://adoptium.net/images/redhat.svg[Red Hat,150]
+image:https://adoptium.net/images/members/redhat.svg[Red Hat,150]
 |
 https://www.redhat.com[Red Hat] ha sido largamente reconocido por la comunidad Java, y continúa comprometido a llevar a Java, aún más allá, a través de una innovación potenciada por la comunidad abierta. Los clientes de Red Hat pueden obtener soporte profesional para Eclipse Temurin a través de una suscripción, la cual le permite acceder a un soporte 24x7 a nivel mundial para los sistemas críticos basados en Java.
 
