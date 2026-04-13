@@ -27,9 +27,8 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Markdown lint complains about the issue templates
-          # gh-aw lock files are auto-generated and should not be linted
-          FILTER_REGEX_EXCLUDE: .github/ISSUE_TEMPLATE/.*|.*\.lock\.yml
+          # Exclude issue templates, gh-aw lock files, and gh-aw workflow markdown
+          FILTER_REGEX_EXCLUDE: '.*(\.github/ISSUE_TEMPLATE/|\.lock\.yml|\.github/workflows/update-translations\.md).*'
           VALIDATE_YAML: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false

@@ -87,7 +87,7 @@ Assign PRs for review to the appropriate locale lead:
 
 2. **Determine what changed**: For each outdated localised file, run:
 
-   ```
+   ```bash
    git diff <old-sha>..<new-sha> -- <english-file>
    ```
 
