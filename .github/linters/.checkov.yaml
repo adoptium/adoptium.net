@@ -1,0 +1,5 @@
+skip-check:
+  # CKV_GHA_7 flags workflow_dispatch inputs as a security risk, but the
+  # aw_context input in gh-aw compiled lock files is framework infrastructure
+  # and not user-controllable build output.
+  - CKV_GHA_7
