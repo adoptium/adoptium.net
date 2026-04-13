@@ -41,7 +41,6 @@ Where:
 - `A ⊂ B`
 - `files(R) ∩ files(R') ≠ ∅`
 
-
 ### Contributing To Eclipse Temurin
 
 Looking to make an impact? We’re always looking for new contributors to help shape the future of open-source Java. Whether you’re interested in development, testing, or documentation, your expertise can help us continue to deliver high-quality runtimes to millions. Visit our Contributing page to learn how you can get involved and join our mission today.
