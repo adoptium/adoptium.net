@@ -1,6 +1,6 @@
 = Kommerziell Unterstützungsoptionen für Eclipse Temurin(TM)
 :page-authors: gdams, tellison, hendrikebbers, gerdogdu
-:page-based-on: 0f3f4ae2b5572701f411b77708c6301f63a0a979
+:page-based-on: 6868e004288a663890845c4ce0774e5bbbb37ac7
 
 Es gibt verschiedene kommerzielle Supportoptionen für Eclipse Temurin. Bitte beachten Sie, dass keiner der folgenden Anbieter vom Adoptium(R) Projekt evaluiert wurde oder offiziell empfohlen wird. Jeder kommerzielle Supportanbieter hat in der Regel unterschiedliche Schwerpunkte und Anwendungsfälle für seine Produkte. Daher wird empfohlen, jede Option sorgfältig im Hinblick auf Ihre spezifischen Bedürfnisse und Anforderungen hin zu evaluieren.
 
