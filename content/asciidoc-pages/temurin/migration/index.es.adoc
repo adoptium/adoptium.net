@@ -1,5 +1,6 @@
 = Guía de Migración
 :page-authors: gdams, karianna, SueChaplain, hendrikebbers, sxa, ParkerM, jiekang, HanSolo, MBoegers, ojuschugh1, NickJavaDev88, adamfarley
+:page-based-on: 5dc3e35770a9fd824dde93556a52db47d0896bb3
 :page-description: Guía completa para migrar de Oracle JDK a Eclipse Temurin.
 :page-keywords: java, jdk, migración, oracle, temurin, openjdk, eclipse
 :icons: font
