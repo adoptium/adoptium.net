@@ -9,6 +9,11 @@ vi.mock("@/hooks", () => ({
   loadLatestAssets: vi.fn().mockReturnValue(Promise.resolve([])),
 }));
 
+// mock setURLParam to avoid window access in tests
+vi.mock("@/utils/setURLParam", () => ({
+  setURLParam: vi.fn(),
+}));
+
 // mock { useSearchParams } from "next/navigation"
 vi.mock("next/navigation", () => ({
   useSearchParams: () => ({
