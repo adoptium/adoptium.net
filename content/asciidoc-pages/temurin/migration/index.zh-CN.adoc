@@ -1,5 +1,6 @@
 = 迁移指南
 :page-authors: gdams, karianna, SueChaplain, hendrikebbers, sxa, ParkerM, jiekang, HanSolo, MBoegers, ojuschugh1, NickJavaDev88, adamfarley
+:page-based-on: 5dc3e35770a9fd824dde93556a52db47d0896bb3
 :page-description: 从 Oracle JDK 迁移到 Eclipse Temurin 的综合指南。
 :page-keywords: java, jdk, 迁移, oracle, temurin, openjdk, eclipse
 :icons: font
