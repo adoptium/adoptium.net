@@ -1,5 +1,6 @@
 = 安装 Eclipse Temurin(TM)
 :page-authors: gdams, karianna, tellison, NickJavaDev88
+:page-based-on: 079fbe6c1bd10d44edd93f0c8e3e0e4755fafd36
 :page-description: 下载并安装 Eclipse Temurin，一个开源的 OpenJDK 发行版。
 :page-keywords: java, jdk, jre, openjdk, eclipse temurin, 安装, 下载
 

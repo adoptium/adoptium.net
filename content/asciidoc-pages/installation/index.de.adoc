@@ -1,5 +1,6 @@
 = Installation von Eclipse Temurin(TM)
 :page-authors: gdams, karianna, tellison, sw-fox
+:page-based-on: 079fbe6c1bd10d44edd93f0c8e3e0e4755fafd36
 
 link:/temurin/releases[Eclipse Temurin] ist in verschiedenen Formaten zum Download verfügbar.
 

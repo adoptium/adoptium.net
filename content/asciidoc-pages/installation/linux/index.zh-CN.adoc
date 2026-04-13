@@ -1,5 +1,6 @@
 = Linux (RPM/DEB/APK) 安装包
 :page-authors: gdams, karianna, perlun, TheCrazyLex, TobiX, topaussie, sxa, tellison, luozhenyu, Ndacyayisenga-droid, ecspresso, NickJavaDev88
+:page-based-on: 8b914e3acf93b00b855ef1918e8c5eba0fdfcbb4
 :toc:
 :icons: font
 :page-description: 在 Linux (RPM/DEB/APK) 上下载并安装 Eclipse Temurin。

@@ -1,5 +1,6 @@
 = 贡献给 Adoptium(R)
 :page-authors: Ndacyayisenga-droid, NickJavaDev88
+:page-based-on: 7bd51935082856714bdbb3a1c962b410b794e3b9
 
 感谢您对本项目的关注。
 
