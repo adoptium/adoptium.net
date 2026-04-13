@@ -1,0 +1,112 @@
+= Container Images
+:page-authors: gdams
+:icons: font
+
+Eclipse Temurin is available as an official Docker image on Docker Hub, making
+it easy to use in containerized environments. Images are published for a range
+of base operating systems and architectures.
+
+== Recommended Image
+
+For most users, we recommend the default Ubuntu-based image.
+
+[source, bash, subs="attributes+"]
+----
+docker pull eclipse-temurin:{latest-lts}-jdk
+----
+
+To use it in a Dockerfile for your application:
+
+[source, docker, subs="attributes+"]
+----
+FROM eclipse-temurin:{latest-lts}-jdk
+COPY target/my-app.jar /app/my-app.jar
+WORKDIR /app
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "my-app.jar"]
+----
+
+== Tag Schema
+
+Image tags follow this pattern:
+
+....
+eclipse-temurin:<java-version>-<image-type>-<os-version>
+....
+
+Where:
+
+* `<java-version>` — The Java feature version (e.g. `8`, `11`, `17`, `21`, `25`)
+* `<image-type>` — Either `jdk` (full development kit) or `jre` (runtime only)
+* `<os-version>` — The base OS variant (optional — defaults to latest Ubuntu)
+
+For example:
+
+....
+eclipse-temurin:21-jdk                        # Ubuntu (default)
+eclipse-temurin:21-jre                        # Ubuntu JRE (default)
+eclipse-temurin:21-jdk-noble                  # Ubuntu 24.04 (Noble)
+eclipse-temurin:21-jdk-jammy                  # Ubuntu 22.04 (Jammy)
+eclipse-temurin:21-jdk-alpine                 # Alpine Linux
+eclipse-temurin:21-jdk-ubi9-minimal           # Red Hat UBI 9
+eclipse-temurin:21-jdk-windowsservercore      # Windows Server Core
+eclipse-temurin:21-jdk-nanoserver             # Windows Nano Server
+....
+
+== Available Base Operating Systems
+
+In addition to the default Ubuntu image, Temurin images are available on
+several other base operating systems to suit different deployment needs.
+
+[cols="20%,40%,40%",options="header"]
+|===
+|Base OS |Tag Example |Use Case
+|**Ubuntu** (default) |`eclipse-temurin:{latest-lts}-jdk` |General purpose — recommended for most users.
+|**Alpine** |`eclipse-temurin:{latest-lts}-jdk-alpine` |Minimal image size for lightweight deployments. Uses `musl` libc instead of `glibc`.
+|**UBI** (Red Hat) |`eclipse-temurin:{latest-lts}-jdk-ubi9-minimal` |Enterprise environments requiring Red Hat Universal Base Image compatibility.
+|**Windows Server Core** |`eclipse-temurin:{latest-lts}-jdk-windowsservercore` |Windows container workloads on Windows Server.
+|**Windows Nano Server** |`eclipse-temurin:{latest-lts}-jdk-nanoserver` |Minimal Windows image for lightweight Windows container deployments.
+|===
+
+== Creating a Custom JRE with jlink
+
+On OpenJDK 21+, you can use `jlink` to create a minimal custom Java runtime
+containing only the modules your application needs. This produces a much smaller
+image than using the full JDK.
+
+[source, docker, subs="attributes+"]
+----
+# Example of custom Java runtime using jlink in a multi-stage container build
+FROM eclipse-temurin:{latest-lts} as jre-build
+
+# Create a custom Java runtime
+RUN $JAVA_HOME/bin/jlink \
+         --add-modules java.base \
+         --strip-debug \
+         --no-man-pages \
+         --no-header-files \
+         --compress=2 \
+         --output /javaruntime
+
+# Define your base image
+FROM debian:buster-slim
+ENV JAVA_HOME=/opt/java/openjdk
+ENV PATH "${JAVA_HOME}/bin:${PATH}"
+COPY --from=jre-build /javaruntime $JAVA_HOME
+
+# Continue with your application deployment
+RUN mkdir /opt/app
+COPY japp.jar /opt/app
+CMD ["java", "-jar", "/opt/app/japp.jar"]
+----
+
+TIP: Adjust the `--add-modules` list to include all modules required by your
+application. Use `jdeps` to determine which modules your application depends on.
+
+== Full Documentation
+
+For the complete list of supported tags and their corresponding Dockerfiles, see
+the link:https://github.com/docker-library/docs/blob/master/eclipse-temurin/README.md#supported-tags-and-respective-dockerfile-links[Supported Tags and Respective Dockerfile Links].
+
+For detailed usage instructions and additional configuration options, see the
+official link:https://hub.docker.com/_/eclipse-temurin[Eclipse Temurin on Docker Hub] page.

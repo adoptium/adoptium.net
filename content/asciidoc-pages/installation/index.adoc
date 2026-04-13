@@ -26,5 +26,5 @@ to the instructions for your platform:
 == Other Installation Methods
 
 * link:/installation/archives[Archive files] — Manual installation from `.tar.gz` or `.zip` archives
-* link:https://hub.docker.com/_/eclipse-temurin[Container Images] — Official Docker images (DockerHub)
+* link:/installation/containers[Container Images] — Official Docker images for Ubuntu, Alpine, UBI, and Windows
 * link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[Programmatic API] — Automate downloads via the Adoptium API
