@@ -18,15 +18,6 @@
     "type": "member"
   },
   {
-    "quote": "Azul has been a member of the Eclipse Adoptium Working Group since its formation. As a provider of free and supported OpenJDK builds—including Azul Platform Core (Zulu) and Azul Platform Prime (Zing)—Azul is a passionate contributor and steward for open-source Java. The company is committed to enhancing users' ability to access and utilize high-quality Java runtimes effectively, while also providing real-time, actionable Java intelligence such as JVM inventory, vulnerability detection, and identification of dead and unused code.",
-    "name": "Simon Ritter",
-    "role": "Deputy CTO at Azul Systems",
-    "image": "/images/quotes/simonritter.jpeg",
-    "companyLogo": "/images/members/azul.svg",
-    "companyName": "Azul Systems",
-    "type": "member"
-  },
-  {
     "quote": "As a leading provider of enterprise open source software solutions, Red Hat supports the Eclipse Adoptium Working Group. We contribute to Eclipse Temurin and AQAvit to deliver high-performance, enterprise-ready OpenJDK builds backed by a secure supply chain, suitable for production deployment. This aligns with our mission to foster secure, stable, and innovative technologies.",
     "name": "Mark Little",
     "role": "VP Middleware Engineering, Red Hat",
