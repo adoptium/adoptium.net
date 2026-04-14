@@ -24,7 +24,7 @@
     "axios": "^1.15.0",
     "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
-    "gsap": "^3.14.2",
+    "gsap": "^3.15.0",
     "highcharts": "^12.6.0",
     "highcharts-react-official": "^3.2.3",
     "html-entities": "^2.6.0",
