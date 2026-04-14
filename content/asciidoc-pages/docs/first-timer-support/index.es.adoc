@@ -1,7 +1,6 @@
 = Soporte para Primeros Pasos en Eclipse Adoptium(R)
-:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid, NickJavaDev88, xavierfacq
+:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid, NickJavaDev88, xavierfacq
 :page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
-, xavierfacq
 :description: Ayuda con las primeras contribuciones
 :keywords: adoptium documentación contribuir primera-vez
 :icons: font

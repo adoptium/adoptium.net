@@ -1,7 +1,6 @@
 = Eclipse Adoptium(R) 新手支持
-:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid, NickJavaDev88, xavierfacq
+:page-authors: MBoegers, hendrikebbers, gdams, tellison, Ndacyayisenga-droid, NickJavaDev88, xavierfacq
 :page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
-, xavierfacq
 :description: 首次贡献支持
 :keywords: adoptium 文档 贡献 首次
 :icons: font
