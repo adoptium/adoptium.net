@@ -4,11 +4,39 @@ on:
     paths: [content/asciidoc-pages/**]
     branches: [main]
   workflow_dispatch:
+  permissions:
+    contents: read
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+    - name: Detect outdated translations
+      id: has_outdated
+      run: |
+        found=false
+        for dir in $(find content/asciidoc-pages -name "index.adoc" -exec dirname {} \;); do
+          english="$dir/index.adoc"
+          sha=$(git log -1 --format=%H "$english")
+          for localized in "$dir"/index.*.adoc; do
+            [ -f "$localized" ] || continue
+            based_on=$(grep -oP '(?<=:page-based-on:\s)\S+' "$localized" || true)
+            if [ "$based_on" != "$sha" ]; then
+              found=true
+              break 2
+            fi
+          done
+        done
+        echo "has_outdated=$found" >> "$GITHUB_OUTPUT"
 
 permissions:
   contents: read
   issues: read
   pull-requests: read
+
+features:
+  copilot-requests: true
 
 safe-outputs:
   create-pull-request:
@@ -26,25 +54,6 @@ concurrency:
   cancel-in-progress: true
 
 timeout-minutes: 30
-
-steps:
-  - name: Detect outdated translations
-    id: has_outdated
-    run: |
-      found=false
-      for english in $(find content/asciidoc-pages -name "index.adoc"); do
-        dir=$(dirname "$english")
-        sha=$(git log -1 --format=%H "$english")
-        for localized in "$dir"/index.*.adoc; do
-          [ -f "$localized" ] || continue
-          based_on=$(grep -oP '(?<=:page-based-on:\s)\S+' "$localized" || true)
-          if [ "$based_on" != "$sha" ]; then
-            found=true
-            break 2
-          fi
-        done
-      done
-      echo "has_outdated=$found" >> "$GITHUB_OUTPUT"
 
 jobs:
   pre-activation:
