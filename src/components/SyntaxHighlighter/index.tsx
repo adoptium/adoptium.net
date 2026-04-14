@@ -50,8 +50,9 @@ export function addCopyButtons() {
     if (pre.classList.contains("no-highlight")) return;
     // Skip output language blocks
     if (codeBlock.classList.contains("language-output")) return;
-    // Skip if a copy button already exists
-    if (pre.parentElement?.querySelector(".copy-button-wrapper")) return;
+    // Skip if already processed
+    if (pre.dataset.copyButtonAdded) return;
+    pre.dataset.copyButtonAdded = "true";
 
     // Wrap the pre in a relative container so the button sits outside the scroll area
     const wrapper = document.createElement("div");
