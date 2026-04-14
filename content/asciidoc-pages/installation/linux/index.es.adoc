@@ -28,7 +28,7 @@ Se utiliza el siguiente esquema de nombres:
 
 [subs="attributes"]
 ....
-temurin-<versión>-jdk
+temurin-&lt;versión&gt;-jdk
 por ejemplo: temurin-{latest-lts}-jdk o temurin-8-jdk
 ....
 

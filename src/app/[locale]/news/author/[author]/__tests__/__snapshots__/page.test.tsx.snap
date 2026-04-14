@@ -9,7 +9,7 @@ exports[`AuthorNewsPage > renders header and news when posts exist 1`] = `
       {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","description":"No biography available","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jane-doe"},{"@type":"CollectionPage","@id":"https://adoptium.net/news/author/jane-doe","name":"Posts by Jane Doe","url":"https://adoptium.net/news/author/jane-doe","mainEntity":[{"@type":"BlogPosting","headline":"Author News","url":"https://adoptium.net/news/2025/06/author-news","datePublished":"2025-06-18T00:00:00.000Z"}]}]}
     </script>
     <div
-      class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+      class="relative overflow-hidden pt-14 pb-8 md:pt-20"
     >
       <div
         class="w-full relative"
@@ -28,10 +28,10 @@ exports[`AuthorNewsPage > renders header and news when posts exist 1`] = `
         class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-6 flex"
+          class="self-stretch flex-col justify-center items-center flex gap-1"
         >
           <div
-            class="self-stretch flex-col justify-center items-center gap-4 flex"
+            class="self-stretch flex-col justify-center items-center flex gap-1"
           >
             <div
               class="justify-start items-center gap-3 inline-flex"
@@ -69,13 +69,13 @@ exports[`AuthorNewsPage > renders header and news when posts exist 1`] = `
               </div>
             </div>
             <div
-              class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+              class="self-stretch text-center text-white font-semibold text-2xl md:text-4xl leading-tight"
             >
               Jane Doe
             </div>
           </div>
           <div
-            class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full"
+            class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-sm mx-auto max-w-[860px] px-2 w-full"
           >
             <div
               class="flex flex-wrap justify-center items-center gap-5 space-x-4 pb-4"
@@ -104,10 +104,10 @@ exports[`AuthorNewsPage > renders header and news when posts exist 1`] = `
       </div>
     </div>
     <div
-      class="max-w-[1264px] mx-auto px-6 py-8 md:pt-12"
+      class="max-w-[1264px] mx-auto px-6"
     >
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-4 md:py-6"
       >
         <div
           class="group flex flex-col w-full rounded-2xl border border-white/10 light:border-gray-200 bg-white/[0.03] light:bg-white backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-white/20 light:hover:border-gray-300 hover:shadow-xl hover:shadow-purple/10 light:hover:shadow-gray-200/50 light:shadow-sm"

@@ -49,12 +49,12 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
   }
 
   return (
-    <div className="max-w-[1264px] mx-auto px-6 py-8 md:pt-12">
+    <div className="max-w-[1264px] mx-auto px-6">
       {/* Display all posts in rows of up to 3 cards */}
       {rowData.map((row, rowIndex) => (
         <div
           key={`row-${rowIndex}`}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-8 md:py-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-4 md:py-6"
         >
           {row.map((post, index) => (
             <EventCard
