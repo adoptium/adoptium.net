@@ -188,12 +188,19 @@ export default async function Blog({
         <div className="absolute inset-0 bg-gradient-to-b from-purple/50 to-transparent pointer-events-none light:from-gray-50 light:to-transparent" />
         <div className="relative mx-auto max-w-3xl w-full px-6 lg:px-0 flex flex-col items-center">
           <div className="flex items-center justify-between w-full mb-6">
-            <div className="flex items-center gap-2">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2">
               <PinkIcon />
-              <span className="text-pink text-sm font-semibold uppercase tracking-wider">
+              <Link
+                href="/news"
+                className="text-pink text-sm font-semibold uppercase tracking-wider underline hover:no-underline transition-colors"
+              >
                 News
+              </Link>
+              <span className="text-gray-500 text-sm">/</span>
+              <span className="text-gray-400 light:text-gray-500 text-sm truncate max-w-[200px] md:max-w-xs">
+                {post.metadata.title}
               </span>
-            </div>
+            </nav>
             <DocThemeToggle />
           </div>
           <h1 className="text-center text-white light:text-gray-900 text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-6">
@@ -206,6 +213,7 @@ export default async function Blog({
             date={formatDate(post.metadata.date, locale)}
             author={author?.name || "Unknown Author"}
             identifier={post.metadata.author || ""}
+            readingTime={post.readingTime}
           />
         </div>
       </div>

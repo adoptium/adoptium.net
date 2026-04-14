@@ -2,7 +2,7 @@
 
 exports[`WhatWeDo page > renders correctly 1`] = `
 <div
-  class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+  class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
 >
   <div
     class="w-full relative"
@@ -21,10 +21,10 @@ exports[`WhatWeDo page > renders correctly 1`] = `
     class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
   >
     <div
-      class="self-stretch flex-col justify-center items-center gap-6 flex"
+      class="self-stretch flex-col justify-center items-center flex gap-6"
     >
       <div
-        class="self-stretch flex-col justify-center items-center gap-4 flex"
+        class="self-stretch flex-col justify-center items-center flex gap-4"
       >
         <div
           class="justify-start items-center gap-3 inline-flex"
@@ -62,13 +62,13 @@ exports[`WhatWeDo page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+          class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
         >
           About Eclipse Adoptium®
         </div>
       </div>
       <div
-        class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+        class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
       >
         <div
           class="text-center lg:text-justify flex flex-col ml-10 gap-3"

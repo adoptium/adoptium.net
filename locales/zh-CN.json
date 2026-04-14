@@ -281,5 +281,8 @@
     "migration-guide-desc": "从其他 JDK 迁移到 Eclipse Temurin",
     "supported-platforms": "支持的平台",
     "supported-platforms-desc": "操作系统和架构兼容性矩阵"
+  },
+  "Byline": {
+    "reading-time": "{minutes} 分钟阅读"
   }
 }

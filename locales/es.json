@@ -281,5 +281,8 @@
     "migration-guide-desc": "Migrar a Eclipse Temurin desde otros JDKs",
     "supported-platforms": "Plataformas compatibles",
     "supported-platforms-desc": "Matriz de compatibilidad de sistemas operativos y arquitecturas"
+  },
+  "Byline": {
+    "reading-time": "{minutes} min de lectura"
   }
 }

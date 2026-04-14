@@ -49,7 +49,7 @@ describe('NewsArticlePage', () => {
     mockFormatDate.mockReturnValue('June 18, 2025');
     const element = await NewsArticlePage({ params: Promise.resolve({ slug: 'test-article', year: '2025', month: '06', locale: 'en' }) });
     const { container } = render(element);
-    expect(screen.getByText('Test Article')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'Test Article' })).toBeInTheDocument();
     expect(screen.getByText('June 18, 2025')).toBeInTheDocument();
     // Snapshot test
     expect(container).toMatchSnapshot();

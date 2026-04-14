@@ -43,6 +43,7 @@
     "react-slick": "^0.31.0",
     "react-tabs": "^6.1.1",
     "react-world-flags": "^1.6.0",
+    "reading-time": "^1.5.0",
     "rehype-stringify": "^10.0.1",
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",

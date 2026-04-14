@@ -136,8 +136,9 @@ body {
   transition-duration: 300ms;
 }
 
-.underline {
-  text-underline-offset: 1em;
+/* Consistent underline offset for all underlined text */
+[class*="underline"] {
+  text-underline-offset: 0.5em;
 }
 
 /* Documentation content styling */
