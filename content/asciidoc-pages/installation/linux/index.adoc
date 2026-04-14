@@ -28,7 +28,7 @@ The following name schema is being used:
 
 [subs="attributes"]
 ....
-temurin-<version>-jdk
+temurin-&lt;version&gt;-jdk
 e.g temurin-{latest-lts}-jdk or temurin-8-jdk
 ....
 

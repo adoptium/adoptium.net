@@ -30,7 +30,7 @@ echo "deb [arch=amd64] https://some.repository.url focal main" | sudo tee /etc/a
 
 [subs="attributes"]
 ....
-temurin-<version>-jdk
+temurin-&lt;version&gt;-jdk
 例如 temurin-{latest-lts}-jdk 或 temurin-8-jdk
 ....
 
