@@ -28,7 +28,7 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Exclude issue templates, gh-aw lock files, and gh-aw workflow markdown
-          FILTER_REGEX_EXCLUDE: '.*(\.github/ISSUE_TEMPLATE/|\.lock\.yml|\.github/workflows/update-translations\.md).*'
+          FILTER_REGEX_EXCLUDE: '.*(\.github/ISSUE_TEMPLATE/|\.lock\.yml|\.github/workflows/update-translations\.md|\.github/workflows/agentics-maintenance\.yml).*'
           VALIDATE_YAML: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false
