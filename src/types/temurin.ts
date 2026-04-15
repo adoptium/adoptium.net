@@ -9,6 +9,12 @@ import type { components } from "@/types/adoptiumApiTypes";
 export type BinaryAssetView = components["schemas"]["BinaryAssetView"];
 
 /**
+ * OS and Architecture union types used by loadLatestAssets.
+ */
+export type OS = components["schemas"]["OperatingSystem"] | "any";
+export type Arch = components["schemas"]["Architecture"] | "any";
+
+/**
  * A release from the Adoptium API, containing multiple binaries.
  */
 export type Release = components["schemas"]["Release"];

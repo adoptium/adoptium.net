@@ -208,7 +208,11 @@ export default function TemurinReleasesPage({
 
     setIsLoading(true);
     try {
-      const results = await loadLatestAssets(versionArg, os, arch);
+      const results = await loadLatestAssets(
+        versionArg,
+        os as OS,
+        arch as Arch,
+      );
       setReleases(results);
       setHasInitialFetch(true);
     } catch (error) {
