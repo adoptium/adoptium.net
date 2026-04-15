@@ -30,9 +30,18 @@ export async function getAllPkgsForVersion(
 ): Promise<MarketplaceRelease[] | null> {
   return fetchMarketplaceReleases({
     version,
-    os: os !== "any" ? (os as marketplaceComponents["schemas"]["OperatingSystem"]) : undefined,
-    architecture: architecture !== "any" ? (architecture as marketplaceComponents["schemas"]["Architecture"]) : undefined,
-    package_type: package_type !== "any" ? (package_type as marketplaceComponents["schemas"]["ImageType"]) : undefined,
+    os:
+      os !== "any"
+        ? (os as marketplaceComponents["schemas"]["OperatingSystem"])
+        : undefined,
+    architecture:
+      architecture !== "any"
+        ? (architecture as marketplaceComponents["schemas"]["Architecture"])
+        : undefined,
+    package_type:
+      package_type !== "any"
+        ? (package_type as marketplaceComponents["schemas"]["ImageType"])
+        : undefined,
     vendors: vendors as MarketplaceVendor[],
   }) as Promise<MarketplaceRelease[] | null>;
 }

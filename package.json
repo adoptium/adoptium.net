@@ -87,5 +87,10 @@
     "typescript": "^6.0.2",
     "vitest": "^4.0.15",
     "vitest-axe": "^0.1.0"
+  },
+  "overrides": {
+    "openapi-typescript": {
+      "typescript": "^6.0.2"
+    }
   }
 }
