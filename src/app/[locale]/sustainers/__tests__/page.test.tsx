@@ -23,5 +23,5 @@ describe("Sustainers page", () => {
     const { container } = render(<Sustainers />);
     const results = await axe(container);
     expect(results).toHaveNoViolations();
-  }, 15000); // Increased timeout to 15 seconds
+  });
 });

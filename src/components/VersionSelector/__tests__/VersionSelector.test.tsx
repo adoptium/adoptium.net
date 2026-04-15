@@ -1,19 +1,20 @@
-import React from "react"
-import { render, fireEvent } from "@testing-library/react"
-import { beforeEach, describe, expect, it, vi } from "vitest"
-import { axe } from "vitest-axe"
-import VersionSelector from "../index"
-import { setURLParam } from "@/utils/setURLParam"
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { axe } from "vitest-axe";
+import VersionSelector from "../index";
+import { setURLParam } from "@/utils/setURLParam";
 
 // Mock the setURLParam utility
 vi.mock("@/utils/setURLParam", () => ({
   setURLParam: vi.fn(),
-}))
+}));
 
 // Mock next-intl's useTranslations to always return 'All Versions' for 'all-versions', otherwise return the key
 vi.mock("next-intl", () => ({
-  useTranslations: () => (key: string) => key === "all-versions" ? "All Versions" : key
-}))
+  useTranslations: () => (key: string) =>
+    key === "all-versions" ? "All Versions" : key,
+}));
 
 describe("VersionSelector component", () => {
   const mockProps = {
@@ -22,91 +23,117 @@ describe("VersionSelector component", () => {
     versions: [
       {
         name: "8",
-        value: 8
+        value: 8,
       },
       {
         name: "11",
-        value: 11
+        value: 11,
       },
       {
         name: "17",
-        value: 17
+        value: 17,
       },
     ],
     updateVersion: vi.fn(),
     defaultVersion: "latest",
     updateOS: vi.fn(),
     updateArch: vi.fn(),
-  }
+  };
 
   beforeEach(() => {
-    vi.clearAllMocks()
-  })
+    vi.clearAllMocks();
+  });
 
   it("renders correctly", () => {
-    const { container } = render(<VersionSelector {...mockProps} />)
-    expect(container).toMatchSnapshot()
-  })
+    const { container } = render(<VersionSelector {...mockProps} />);
+    expect(container).toMatchSnapshot();
+  });
 
   it("renders 'All Versions' button and version buttons", () => {
-    const { container } = render(<VersionSelector {...mockProps} />)
+    const { container } = render(<VersionSelector {...mockProps} />);
     const buttons = container.querySelectorAll('[data-testid="version-tab"]');
-    expect(buttons[0].textContent).toContain("All Versions")
-    expect(buttons[1].textContent).toContain("JDK 8")
-    expect(buttons[2].textContent).toContain("JDK 11")
-    expect(buttons[3].textContent).toContain("JDK 17")
-  })
+    expect(buttons[0].textContent).toContain("All Versions");
+    expect(buttons[1].textContent).toContain("JDK 8");
+    expect(buttons[2].textContent).toContain("JDK 11");
+    expect(buttons[3].textContent).toContain("JDK 17");
+  });
 
   it("highlights the active version tab", () => {
     const activeProps = {
       ...mockProps,
       activeVersionTab: 11,
-    }
+    };
 
-    const { container } = render(<VersionSelector {...activeProps} />)
+    const { container } = render(<VersionSelector {...activeProps} />);
 
     // Use container.querySelector to find the elements by their exact position
     // Find the first button (All Versions) and the third button (JDK 11)
-    const buttons = container.querySelectorAll('button');
-    const allVersionsSpan = buttons[0].querySelector('span');
-    const jdk11Span = buttons[2].querySelector('span');
+    const buttons = container.querySelectorAll("button");
+    const allVersionsSpan = buttons[0].querySelector("span");
+    const jdk11Span = buttons[2].querySelector("span");
 
     // Check correct classes are applied
-    expect(allVersionsSpan).toHaveClass("text-[#8a809e]")
-    expect(allVersionsSpan).toHaveClass("border-transparent")
+    expect(allVersionsSpan).toHaveClass("text-[#8a809e]");
+    expect(allVersionsSpan).toHaveClass("border-transparent");
 
-    expect(jdk11Span).toHaveClass("text-white")
-    expect(jdk11Span).toHaveClass("border-primary")
-    expect(jdk11Span).toHaveClass("border-b-[2px]")
-  })
+    expect(jdk11Span).toHaveClass("text-white");
+    expect(jdk11Span).toHaveClass("border-primary");
+    expect(jdk11Span).toHaveClass("border-b-[2px]");
+  });
 
   it("calls setActiveTabVersion with specific version when a version button is clicked", () => {
-    const { container } = render(<VersionSelector {...mockProps} />)
+    const { container } = render(<VersionSelector {...mockProps} />);
 
     // Get the JDK 11 button directly by its position (third button)
-    const buttons = container.querySelectorAll('button');
+    const buttons = container.querySelectorAll("button");
     const jdk11Button = buttons[2]; // Index 2 corresponds to the third button (JDK 11)
 
     // Click on JDK 11 button
-    fireEvent.click(jdk11Button)
+    fireEvent.click(jdk11Button);
 
     // Verify the callbacks
-    expect(setURLParam).toHaveBeenCalledWith("version", 11)
-    expect(mockProps.updateVersion).toHaveBeenCalledWith(11)
-    expect(mockProps.setActiveVersionTab).toHaveBeenCalledWith(11)
+    expect(setURLParam).toHaveBeenCalledWith("version", 11);
+    expect(mockProps.updateVersion).toHaveBeenCalledWith(11);
+    expect(mockProps.setActiveVersionTab).toHaveBeenCalledWith(11);
 
     // Verify OS and arch are reset to "any"
-    expect(setURLParam).toHaveBeenCalledWith("os", "any")
-    expect(mockProps.updateOS).toHaveBeenCalledWith("any")
-    expect(setURLParam).toHaveBeenCalledWith("arch", "any")
-    expect(mockProps.updateArch).toHaveBeenCalledWith("any")
-  })
+    expect(setURLParam).toHaveBeenCalledWith("os", "any");
+    expect(mockProps.updateOS).toHaveBeenCalledWith("any");
+    expect(setURLParam).toHaveBeenCalledWith("arch", "any");
+    expect(mockProps.updateArch).toHaveBeenCalledWith("any");
+  });
 
   it("has no accessibility violations", async () => {
-    const { container } = render(<VersionSelector {...mockProps} />)
-    const results = await axe(container)
+    const { container } = render(<VersionSelector {...mockProps} />);
+    const results = await axe(container);
 
     // Check for violations
-    expect(results.violations.length).toBe(0)
-  })
-})
+    expect(results.violations.length).toBe(0);
+  });
+
+  it("clicking All Versions tab calls updateOS and updateArch when provided", () => {
+    const { container } = render(<VersionSelector {...mockProps} />);
+    const buttons = container.querySelectorAll("button");
+    // Click "All Versions" (first button)
+    fireEvent.click(buttons[0]);
+    expect(setURLParam).toHaveBeenCalledWith("os", "any");
+    expect(mockProps.updateOS).toHaveBeenCalledWith("any");
+    expect(setURLParam).toHaveBeenCalledWith("arch", "any");
+    expect(mockProps.updateArch).toHaveBeenCalledWith("any");
+    expect(mockProps.setActiveVersionTab).toHaveBeenCalledWith(1);
+  });
+
+  it("clicking version tab without updateArch does not throw", () => {
+    const propsWithoutArch = { ...mockProps, updateArch: undefined };
+    const { container } = render(<VersionSelector {...propsWithoutArch} />);
+    const buttons = container.querySelectorAll("button");
+    expect(() => fireEvent.click(buttons[1])).not.toThrow();
+  });
+
+  it("clicking All Versions tab without updateOS does not throw", () => {
+    const propsWithoutOS = { ...mockProps, updateOS: undefined };
+    const { container } = render(<VersionSelector {...propsWithoutOS} />);
+    const buttons = container.querySelectorAll("button");
+    expect(() => fireEvent.click(buttons[0])).not.toThrow();
+  });
+});

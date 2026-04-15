@@ -1,18 +1,25 @@
-import React from "react"
-import { render } from "@testing-library/react"
-import { describe, expect, it } from "vitest"
-import { axe } from "vitest-axe"
-import Docs from "../page"
+import React from "react";
+import { render, act } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
+import { axe } from "vitest-axe";
+
+vi.mock("next-intl/server", () => ({
+  getTranslations: vi.fn().mockResolvedValue((key: string) => key),
+}));
+
+import Docs from "../page";
 
 describe("Docs page", () => {
-  it("renders correctly", () => {
-    const { container } = render(<Docs />)
-    expect(container.firstChild).toMatchSnapshot()
-  })
+  it("renders correctly", async () => {
+    const Page = await Docs();
+    const { container } = render(Page);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 
   it("has no accessibility violations", async () => {
-    const { container } = render(<Docs />)
-    const results = await axe(container)
-    expect(results).toHaveNoViolations()
-  })
-})
+    const Page = await Docs();
+    const { container } = render(Page);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+});
