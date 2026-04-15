@@ -23,16 +23,16 @@ export interface MarketplaceReleaseAsset {
 
 export async function getAllPkgsForVersion(
   version: number,
-  os: OperatingSystem,
-  architecture: Architecture,
-  package_type: ImageType,
+  os: string,
+  architecture: string,
+  package_type: string,
   vendors: string[] = [],
 ): Promise<MarketplaceRelease[] | null> {
   return fetchMarketplaceReleases({
     version,
-    os: os !== "any" ? os : undefined,
-    architecture: architecture !== "any" ? architecture : undefined,
-    package_type: package_type !== "any" ? package_type : undefined,
+    os: os !== "any" ? (os as marketplaceComponents["schemas"]["OperatingSystem"]) : undefined,
+    architecture: architecture !== "any" ? (architecture as marketplaceComponents["schemas"]["Architecture"]) : undefined,
+    package_type: package_type !== "any" ? (package_type as marketplaceComponents["schemas"]["ImageType"]) : undefined,
     vendors: vendors as MarketplaceVendor[],
   }) as Promise<MarketplaceRelease[] | null>;
 }
