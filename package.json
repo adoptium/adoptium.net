@@ -10,7 +10,8 @@
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "update-snapshots": "vitest --run -u",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:api-types": "openapi-typescript https://api.adoptium.net/q/openapi -o src/types/adoptiumApiTypes.ts && openapi-typescript https://marketplace-api.adoptium.net/q/openapi -o src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -18,6 +19,7 @@
     "@fortawesome/fontawesome-free": "^7.2.0",
     "@headlessui/react": "^2.2.10",
     "@mui/material": "^9.0.0",
+    "@mui/system": "^9.0.0",
     "@mui/x-data-grid": "^9.0.1",
     "@next/third-parties": "16.2.3",
     "asciidoctor": "^3.0.4",
@@ -34,6 +36,7 @@
     "next": "16.2.3",
     "next-intl": "^4.9.1",
     "next-mdx-remote": "^6.0.0",
+    "openapi-fetch": "^0.17.0",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.30.0",
     "react": "^19.2.5",
@@ -78,10 +81,16 @@
     "eslint-config-next": "16.2.3",
     "jsdom": "^29.0.2",
     "jsdom-testing-mocks": "^1.16.0",
+    "openapi-typescript": "^7.13.0",
     "pagefind": "^1.5.2",
     "tailwindcss": "^4.2.1",
     "typescript": "^6.0.2",
     "vitest": "^4.0.15",
     "vitest-axe": "^0.1.0"
+  },
+  "overrides": {
+    "openapi-typescript": {
+      "typescript": "^6.0.2"
+    }
   }
 }

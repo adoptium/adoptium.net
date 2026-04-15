@@ -2,22 +2,32 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { getAssetsForVersion } from "../fetchTemurinNightly";
 import { createMockTemurinFeatureReleaseAPI } from "@/hooks/__fixtures__/hooks";
-import axios from "axios";
-import MockAdapter from "axios-mock-adapter";
+import { fetchFeatureReleases } from "@/services/adoptiumApi";
 
-const mock = new MockAdapter(axios);
+vi.mock("@/services/adoptiumApi", () => ({
+  fetchFeatureReleases: vi.fn(),
+}));
+const mockedFetchFeatureReleases = vi.mocked(fetchFeatureReleases);
 
 afterEach(() => {
   vi.clearAllMocks();
-  mock.reset();
 });
 
 describe("getAssetsForVersion", () => {
   it("returns releases for a valid ea response", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
-    mock.onGet().reply(200, [mockPkg]);
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
     expect(result?.releases).toHaveLength(1);
@@ -26,9 +36,18 @@ describe("getAssetsForVersion", () => {
 
   it("returns releases for a valid ga response", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
-    mock.onGet().reply(200, [mockPkg], { pagecount: "3" });
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 3,
+    });
 
-    const result = await getAssetsForVersion(21, "ga", 10, new Date("2024-06-01"), 1);
+    const result = await getAssetsForVersion(
+      21,
+      "ga",
+      10,
+      new Date("2024-06-01"),
+      1,
+    );
 
     expect(result).not.toBeNull();
     expect(result?.releases).toHaveLength(1);
@@ -36,9 +55,15 @@ describe("getAssetsForVersion", () => {
   });
 
   it("returns empty releases on API error", async () => {
-    mock.onGet().reply(500);
+    mockedFetchFeatureReleases.mockRejectedValue(new Error("Server Error"));
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
     expect(result?.releases).toHaveLength(0);
@@ -47,83 +72,137 @@ describe("getAssetsForVersion", () => {
 
   it("includes installer info when installer is present", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(true);
-    mock.onGet().reply(200, [mockPkg]);
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
-    const assets = result?.releases[0]?.platforms?.["os_mock-arch_mock"]?.assets;
-    expect(assets).toBeDefined();
-    if (assets && assets.length > 0) {
-      expect(assets[0].installer_link).toBeDefined();
+    const binary = result?.releases[0]?.binaries?.[0];
+    expect(binary).toBeDefined();
+    if (binary) {
+      expect(binary.installer?.link).toBeDefined();
     }
   });
 
   it("filters out binary types not in the ea allowed list", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
     // Override binary type to something not in the ea allowed list
-    mockPkg.binaries[0].image_type = "sources";
-    mock.onGet().reply(200, [mockPkg]);
+    mockPkg.binaries![0].image_type = "sources";
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
     // sources is not in ["INSTALLER", "JDK", "JRE", "DEBUGIMAGE"] for ea
-    const assets = result?.releases[0]?.platforms?.["os_mock-arch_mock"]?.assets;
-    expect(assets).toBeUndefined();
+    expect(result?.releases[0]?.binaries).toHaveLength(0);
   });
 
   it("filters out binary types not in the ga allowed list", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
     // Override binary type to something not in the ga allowed list
-    mockPkg.binaries[0].image_type = "debugimage";
-    mock.onGet().reply(200, [mockPkg]);
+    mockPkg.binaries![0].image_type = "debugimage";
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ga", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ga",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
     // debugimage is not in ["INSTALLER", "JDK", "JRE"] for ga
-    const assets = result?.releases[0]?.platforms?.["os_mock-arch_mock"]?.assets;
-    expect(assets).toBeUndefined();
+    expect(result?.releases[0]?.binaries).toHaveLength(0);
   });
 
-  it("handles source_url when source is present", async () => {
+  it("handles source when source is present", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
     mockPkg.source = {
-      link: new URL("https://source_link_mock"),
+      link: "https://source_link_mock",
       name: "source_name_mock",
       size: 1000,
     };
-    mock.onGet().reply(200, [mockPkg]);
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
-    expect(result?.releases[0]?.source_url).toBeDefined();
+    expect(result?.releases[0]?.source).toBeDefined();
   });
 
   it("handles release_notes when present", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
     mockPkg.release_notes = {
-      link: new URL("https://release_notes_link_mock"),
+      link: "https://release_notes_link_mock",
       name: "release_notes_name_mock",
       size: 100,
     };
-    mock.onGet().reply(200, [mockPkg]);
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
-    expect(result?.releases[0]?.release_notes).toBe(true);
-    expect(result?.releases[0]?.release_notes_name).toBe("release_name_mock");
+    expect(result?.releases[0]?.release_notes).toBeDefined();
+    expect(result?.releases[0]?.release_notes?.name).toBe(
+      "release_notes_name_mock",
+    );
   });
 
   it("handles invalid buildDate gracefully", async () => {
     const mockPkg = createMockTemurinFeatureReleaseAPI(false);
-    mock.onGet().reply(200, [mockPkg]);
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg],
+      pagecount: 0,
+    });
 
     // Pass an invalid date
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("invalid"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("invalid"),
+      0,
+    );
 
     expect(result).not.toBeNull();
   });
@@ -131,9 +210,18 @@ describe("getAssetsForVersion", () => {
   it("handles multiple releases", async () => {
     const mockPkg1 = createMockTemurinFeatureReleaseAPI(false);
     const mockPkg2 = createMockTemurinFeatureReleaseAPI(true);
-    mock.onGet().reply(200, [mockPkg1, mockPkg2]);
+    mockedFetchFeatureReleases.mockResolvedValue({
+      data: [mockPkg1, mockPkg2],
+      pagecount: 0,
+    });
 
-    const result = await getAssetsForVersion(21, "ea", 5, new Date("2024-01-01"), 0);
+    const result = await getAssetsForVersion(
+      21,
+      "ea",
+      5,
+      new Date("2024-01-01"),
+      0,
+    );
 
     expect(result).not.toBeNull();
     expect(result?.releases).toHaveLength(2);

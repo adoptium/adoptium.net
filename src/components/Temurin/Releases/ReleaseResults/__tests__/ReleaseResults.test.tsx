@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import ReleaseResults from "../index";
-import { ReleaseAsset } from "@/types/temurin";
+import type { BinaryAssetView } from "@/types/temurin";
 import { useAttestations } from "@/hooks/useAttestations";
 import type { Attestation } from "@/types/temurin";
 
@@ -79,40 +79,34 @@ const createMockRelease = (
   architecture: string,
   releaseName: string,
   binaryType: string = "JDK",
-  hasInstaller: boolean = false
-): ReleaseAsset => ({
-  platform_name: `${os}-${architecture}`,
-  os,
-  architecture,
+  hasInstaller: boolean = false,
+): BinaryAssetView => ({
   release_name: releaseName,
   release_link: `https://example.com/releases/${releaseName}`,
-  release_date: "2023-01-01T00:00:00Z",
-  version: {
-    major: 11,
-    minor: 0,
-    security: 28,
-    build: 6,
-    openjdk_version: "11.0.28+6",
-    semver: "11.0.28+6",
-  },
-  binaries: [
-    {
-      type: binaryType,
+  binary: {
+    os: os as NonNullable<BinaryAssetView["binary"]>["os"],
+    architecture: architecture as NonNullable<
+      BinaryAssetView["binary"]
+    >["architecture"],
+    image_type: binaryType.toLowerCase() as NonNullable<
+      BinaryAssetView["binary"]
+    >["image_type"],
+    updated_at: "2023-01-01T00:00:00.000Z",
+    package: {
       link: `https://example.com/download/${releaseName}-${binaryType.toLowerCase()}.tar.gz`,
       checksum: "abc123",
-      size: 150,
-      extension: "tar.gz",
-      release_name: releaseName,
-      ...(hasInstaller && {
-        installer_link: `https://example.com/download/${releaseName}-${binaryType.toLowerCase()}.${
-          os === "windows" ? "msi" : "pkg"
-        }`,
-        installer_checksum: "def456",
-        installer_size: 200,
-        installer_extension: os === "windows" ? "msi" : "pkg",
-      }),
+      size: 150_000_000,
+      name: `${releaseName}-${binaryType.toLowerCase()}.tar.gz`,
     },
-  ],
+    ...(hasInstaller && {
+      installer: {
+        link: `https://example.com/download/${releaseName}-${binaryType.toLowerCase()}.${os === "windows" ? "msi" : "pkg"}`,
+        checksum: "def456",
+        size: 200_000_000,
+        name: `${releaseName}-${binaryType.toLowerCase()}.${os === "windows" ? "msi" : "pkg"}`,
+      },
+    }),
+  },
 });
 
 describe("ReleaseResults component", () => {
@@ -138,7 +132,7 @@ describe("ReleaseResults component", () => {
         releases={[]}
         isLoading={true}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     expect(screen.getByTestId("release-results-loading")).toBeInTheDocument();
@@ -153,7 +147,7 @@ describe("ReleaseResults component", () => {
         releases={[]}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     expect(screen.getByTestId("release-results-empty")).toBeInTheDocument();
@@ -162,7 +156,7 @@ describe("ReleaseResults component", () => {
     const titleElement = screen.getByTestId("empty-state-title");
     expect(titleElement).toHaveTextContent("No releases found");
     expect(screen.getByTestId("empty-state-description")).toHaveTextContent(
-      "Try adjusting your filters to find releases."
+      "Try adjusting your filters to find releases.",
     );
   });
 
@@ -177,7 +171,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     expect(screen.getByTestId("release-results-content")).toBeInTheDocument();
@@ -197,7 +191,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     expect(screen.getByTestId("os-title-linux")).toHaveTextContent("Linux");
@@ -216,7 +210,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show architecture tabs
@@ -242,12 +236,12 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show package type buttons
     expect(
-      screen.getByTestId("package-type-buttons-linux-x64")
+      screen.getByTestId("package-type-buttons-linux-x64"),
     ).toBeInTheDocument();
     expect(screen.getByTestId("jdk-button-linux-x64")).toBeInTheDocument();
     expect(screen.getByTestId("jre-button-linux-x64")).toBeInTheDocument();
@@ -270,7 +264,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show architecture tabs
@@ -296,12 +290,12 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show package type buttons
     expect(
-      screen.getByTestId("package-type-buttons-linux-x64")
+      screen.getByTestId("package-type-buttons-linux-x64"),
     ).toBeInTheDocument();
     expect(screen.getByTestId("jdk-button-linux-x64")).toBeInTheDocument();
     expect(screen.getByTestId("jre-button-linux-x64")).toBeInTheDocument();
@@ -321,7 +315,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     const releaseHeader = screen.getByTestId("release-header-linux");
@@ -338,21 +332,21 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show binary row
     expect(
-      screen.getByTestId("binary-row-linux-x64-JDK-0")
+      screen.getByTestId("binary-row-linux-x64-JDK-0"),
     ).toBeInTheDocument();
     expect(
-      screen.getByTestId("download-link-linux-x64-JDK-0")
+      screen.getByTestId("download-link-linux-x64-JDK-0"),
     ).toBeInTheDocument();
     expect(screen.getByTestId("binary-info-linux-x64-JDK-0")).toHaveTextContent(
-      "TAR.GZ, 150 MB"
+      "TAR.GZ, 150 MB",
     );
     expect(
-      screen.getByTestId("checksum-link-linux-x64-JDK-0")
+      screen.getByTestId("checksum-link-linux-x64-JDK-0"),
     ).toBeInTheDocument();
   });
 
@@ -365,7 +359,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     const downloadLink = screen.getByTestId("download-link-linux-x64-JDK-0");
@@ -389,7 +383,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     const checksumLink = screen.getByTestId("checksum-link-linux-x64-JDK-0");
@@ -406,21 +400,21 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show binary row
     expect(
-      screen.getByTestId("binary-row-linux-x64-JDK-0")
+      screen.getByTestId("binary-row-linux-x64-JDK-0"),
     ).toBeInTheDocument();
     expect(
-      screen.getByTestId("download-link-linux-x64-JDK-0")
+      screen.getByTestId("download-link-linux-x64-JDK-0"),
     ).toBeInTheDocument();
     expect(screen.getByTestId("binary-info-linux-x64-JDK-0")).toHaveTextContent(
-      "TAR.GZ, 150 MB"
+      "TAR.GZ, 150 MB",
     );
     expect(
-      screen.getByTestId("checksum-link-linux-x64-JDK-0")
+      screen.getByTestId("checksum-link-linux-x64-JDK-0"),
     ).toBeInTheDocument();
   });
 
@@ -433,7 +427,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     const downloadLink = screen.getByTestId("download-link-linux-x64-JDK-0");
@@ -457,7 +451,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     const checksumLink = screen.getByTestId("checksum-link-linux-x64-JDK-0");
@@ -476,17 +470,17 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show both binary and installer rows
     expect(
-      screen.getByTestId("binary-row-windows-x64-JDK-0")
+      screen.getByTestId("binary-row-windows-x64-JDK-0"),
     ).toBeInTheDocument();
     // Installer would have a different key pattern, but since we're filtering by package type,
     // we should see the installer information
     expect(
-      screen.getByTestId("binary-info-windows-x64-JDK-0")
+      screen.getByTestId("binary-info-windows-x64-JDK-0"),
     ).toBeInTheDocument();
   });
 
@@ -504,15 +498,15 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Get all release cards in DOM order
     const releaseCards = container.querySelectorAll(
-      '[data-testid^="release-card-"]'
+      '[data-testid^="release-card-"]',
     );
     const osOrder = Array.from(releaseCards).map((card) =>
-      card.getAttribute("data-testid")?.replace("release-card-", "")
+      card.getAttribute("data-testid")?.replace("release-card-", ""),
     );
 
     // Should follow the preferred order: linux, windows, mac, alpine-linux, aix, solaris
@@ -521,27 +515,8 @@ describe("ReleaseResults component", () => {
 
   it("should filter binaries by selected package type", () => {
     const releases = [
-      {
-        ...createMockRelease("linux", "x64", "11.0.28+6", "JDK"),
-        binaries: [
-          {
-            type: "JDK",
-            link: "https://example.com/jdk.tar.gz",
-            checksum: "jdk-checksum",
-            size: 150,
-            extension: "tar.gz",
-            release_name: "11.0.28+6",
-          },
-          {
-            type: "JRE",
-            link: "https://example.com/jre.tar.gz",
-            checksum: "jre-checksum",
-            size: 100,
-            extension: "tar.gz",
-            release_name: "11.0.28+6",
-          },
-        ],
-      },
+      createMockRelease("linux", "x64", "11.0.28+6", "JDK"),
+      createMockRelease("linux", "x64", "11.0.28+6", "JRE"),
     ];
 
     render(
@@ -549,12 +524,12 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // By default should show JDK
     expect(
-      screen.getByTestId("binary-row-linux-x64-JDK-0")
+      screen.getByTestId("binary-row-linux-x64-JDK-0"),
     ).toBeInTheDocument();
 
     // Click JRE button
@@ -566,23 +541,20 @@ describe("ReleaseResults component", () => {
   });
 
   it("should handle releases with missing data gracefully", () => {
-    const releases = [
+    const releases: BinaryAssetView[] = [
       {
-        platform_name: "linux-x64",
-        os: "linux",
-        architecture: "x64",
         release_name: "",
         release_link: "",
-        release_date: "",
-        version: {
-          major: 11,
-          minor: 0,
-          security: 28,
-          build: 6,
-          openjdk_version: "11.0.28+6",
-          semver: "11.0.28+6",
+        binary: {
+          os: "linux" as NonNullable<BinaryAssetView["binary"]>["os"],
+          architecture: "x64" as NonNullable<
+            BinaryAssetView["binary"]
+          >["architecture"],
+          image_type: "jdk" as NonNullable<
+            BinaryAssetView["binary"]
+          >["image_type"],
+          // No package, no installer, no updated_at
         },
-        binaries: [],
       },
     ];
 
@@ -591,7 +563,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should still render the OS card
@@ -611,7 +583,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should show JCK certification icon and AQAvit logo
@@ -630,13 +602,13 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     // Should still render the card with fallback Linux icon
     expect(screen.getByTestId("release-card-unknown-os")).toBeInTheDocument();
     expect(screen.getByTestId("os-title-unknown-os")).toHaveTextContent(
-      "Unknown-os"
+      "Unknown-os",
     );
   });
 
@@ -648,7 +620,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     const content = screen.getByTestId("release-results-content");
@@ -659,7 +631,7 @@ describe("ReleaseResults component", () => {
       "flex",
       "justify-between",
       "border",
-      "rounded-[24px]"
+      "rounded-[24px]",
     );
   });
 
@@ -681,7 +653,7 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     expect(screen.getByAltText("Reproducibility Verified")).toBeInTheDocument();
@@ -703,11 +675,11 @@ describe("ReleaseResults component", () => {
         releases={releases}
         isLoading={false}
         openModalWithChecksum={mockOpenModalWithChecksum}
-      />
+      />,
     );
 
     expect(
-      screen.queryByAltText("Reproducibility Verified")
+      screen.queryByAltText("Reproducibility Verified"),
     ).not.toBeInTheDocument();
   });
 });

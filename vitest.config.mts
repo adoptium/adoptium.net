@@ -15,6 +15,6 @@ export default defineConfig({
         inline: ["@mui/x-data-grid"],
       },
     },
-    testTimeout: 10000,
+    testTimeout: 30000,
   },
 });

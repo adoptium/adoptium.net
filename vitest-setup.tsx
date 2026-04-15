@@ -7,6 +7,14 @@ import * as jestDomMatchers from "@testing-library/jest-dom/matchers";
 Highcharts.useSerialIds(true);
 Highcharts.AST.allowedAttributes.push("rel");
 
+// jsdom does not implement getComputedStyle() for pseudo-elements and logs a
+// console error for every call. Suppress it to keep test output clean.
+const originalGetComputedStyle = window.getComputedStyle;
+window.getComputedStyle = (elt: Element, pseudoElt?: string | null) => {
+  if (pseudoElt) return {} as CSSStyleDeclaration;
+  return originalGetComputedStyle(elt);
+};
+
 // This explicitly adds the accessibility matchers to Vitest
 expect.extend(matchers);
 // This extends Vitest's expect with Jest-DOM matchers

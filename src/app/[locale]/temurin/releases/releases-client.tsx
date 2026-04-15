@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from "react"
-import { useTranslations } from "next-intl"
-import { loadLatestAssets } from "@/hooks"
-import { useSearchParams } from "next/navigation"
-import { ReleaseAsset } from "@/types/temurin"
-import { setURLParam } from "@/utils/setURLParam"
-import PageHeader from "@/components/Common/PageHeader"
-import ReleaseFilters from "@/components/Temurin/Releases/ReleaseFilters"
-import ReleaseResults from "@/components/Temurin/Releases/ReleaseResults"
-import ReleaseLinks from "@/components/Temurin/Releases/ReleaseLinks"
-import OneClickDownload from "@/components/Temurin/Releases/OneClickDownload"
-import DownloadMethods from "@/components/Temurin/DownloadMethods"
-import VersionSelector from "@/components/VersionSelector"
-import ChecksumModal from "@/components/ChecksumModal"
+import React, { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { loadLatestAssets } from "@/hooks";
+import { useSearchParams } from "next/navigation";
+import type { BinaryAssetView, OS, Arch } from "@/types/temurin";
+import { setURLParam } from "@/utils/setURLParam";
+import PageHeader from "@/components/Common/PageHeader";
+import ReleaseFilters from "@/components/Temurin/Releases/ReleaseFilters";
+import ReleaseResults from "@/components/Temurin/Releases/ReleaseResults";
+import ReleaseLinks from "@/components/Temurin/Releases/ReleaseLinks";
+import OneClickDownload from "@/components/Temurin/Releases/OneClickDownload";
+import DownloadMethods from "@/components/Temurin/DownloadMethods";
+import VersionSelector from "@/components/VersionSelector";
+import ChecksumModal from "@/components/ChecksumModal";
 
 interface AvailableReleases {
   available_lts_releases: number[];
@@ -21,41 +21,49 @@ interface AvailableReleases {
   most_recent_lts: number;
 }
 
-export default function TemurinReleasesPage({ availableReleases }: { availableReleases: AvailableReleases }) {
-  const t = useTranslations("TemurinReleases")
-  const [modalOpen, setModalOpen] = useState(false)
-  const [currentChecksum, setCurrentChecksum] = useState("")
-  const [releases, setReleases] = useState<ReleaseAsset[]>([])
-  const [isLoading, setIsLoading] = useState(false)
+export default function TemurinReleasesPage({
+  availableReleases,
+}: {
+  availableReleases: AvailableReleases;
+}) {
+  const t = useTranslations("TemurinReleases");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentChecksum, setCurrentChecksum] = useState("");
+  const [releases, setReleases] = useState<BinaryAssetView[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Filter state
-  const [selectedVersion, setSelectedVersion] = useState<string>("")
-  const [selectedOS, setSelectedOS] = useState("any")
-  const [selectedArch, setSelectedArch] = useState("any")
+  const [selectedVersion, setSelectedVersion] = useState<string>("");
+  const [selectedOS, setSelectedOS] = useState("any");
+  const [selectedArch, setSelectedArch] = useState("any");
 
   // LTS version tab state
-  const ltsVersions = availableReleases.available_lts_releases.map((version: number) => ({
-    name: `${version} - LTS`,
-    value: version,
-  }))
-  const allVersions = availableReleases.available_releases.map((version: number) => {
-    const isLTS = availableReleases.available_lts_releases.includes(version);
-    return {
-      name: isLTS ? `${version} - LTS` : version.toString(),
-      value: version.toString(),
-    };
-  });
-  const latestLTS = availableReleases.most_recent_lts
-  const [activeVersionTab, setActiveVersionTab] = useState<number | string>(21)
-  const [isAllVersionsMode, setIsAllVersionsMode] = useState(false)
+  const ltsVersions = availableReleases.available_lts_releases.map(
+    (version: number) => ({
+      name: `${version} - LTS`,
+      value: version,
+    }),
+  );
+  const allVersions = availableReleases.available_releases.map(
+    (version: number) => {
+      const isLTS = availableReleases.available_lts_releases.includes(version);
+      return {
+        name: isLTS ? `${version} - LTS` : version.toString(),
+        value: version.toString(),
+      };
+    },
+  );
+  const latestLTS = availableReleases.most_recent_lts;
+  const [activeVersionTab, setActiveVersionTab] = useState<number | string>(21);
+  const [isAllVersionsMode, setIsAllVersionsMode] = useState(false);
 
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
 
   // Flag to track if we've already fetched data
-  const [hasInitialFetch, setHasInitialFetch] = useState(false)
+  const [hasInitialFetch, setHasInitialFetch] = useState(false);
 
   // Flag to track if we're handling a filter change (vs initial page load)
-  const [isFilterChange, setIsFilterChange] = useState(false)
+  const [isFilterChange, setIsFilterChange] = useState(false);
 
   // Load initial data when component mounts if no URL parameters
   useEffect(() => {
@@ -70,13 +78,15 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
       // Don't proceed with tab selection if LTS versions aren't loaded yet
       if (ltsVersions.length === 0) {
         // Just do the initial fetch with the given version
-        fetchReleases(initialVersion, "any", "any")
-        setSelectedVersion(initialVersion)
+        fetchReleases(initialVersion, "any", "any");
+        setSelectedVersion(initialVersion);
         return;
       }
 
       // Check if version is in LTS versions list
-      const isLTSVersion = ltsVersions.some(lts => String(lts.value) === initialVersion);
+      const isLTSVersion = ltsVersions.some(
+        (lts) => String(lts.value) === initialVersion,
+      );
 
       // Check if OS or architecture are not "any"
       const hasNonDefaultFilters = initialOS !== "any" || initialArch !== "any";
@@ -95,13 +105,13 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
         setActiveVersionTab(parseInt(initialVersion, 10));
       }
 
-      fetchReleases(initialVersion, initialOS, initialArch)
+      fetchReleases(initialVersion, initialOS, initialArch);
 
       // Update selected version to match
-      setSelectedVersion(initialVersion)
+      setSelectedVersion(initialVersion);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams])
+  }, [searchParams]);
 
   // Listen for URL parameter changes and update filters accordingly
   useEffect(() => {
@@ -123,7 +133,9 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
       setSelectedArch(arch);
 
       // Check if version is in LTS versions list
-      const isLTSVersion = ltsVersions.some(lts => String(lts.value) === version);
+      const isLTSVersion = ltsVersions.some(
+        (lts) => String(lts.value) === version,
+      );
 
       // Check if OS or architecture are not "any"
       const hasNonDefaultFilters = os !== "any" || arch !== "any";
@@ -145,7 +157,7 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
           // Set All Versions mode if:
           // 1. It's not an LTS version, OR
           // 2. OS or arch parameters are not "any"
-          if ((!isLTSVersion) || hasNonDefaultFilters) {
+          if (!isLTSVersion || hasNonDefaultFilters) {
             setIsAllVersionsMode(true);
             setActiveVersionTab(1); // 1 represents All Versions tab
           } else if (isLTSVersion && !hasNonDefaultFilters) {
@@ -156,9 +168,11 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
         }
         // The mode=filter parameter now handles this case
         // If it's a filter change and we're already in All Versions mode, stay there
-        else if ((isFilterChange && isAllVersionsMode) ||
+        else if (
+          (isFilterChange && isAllVersionsMode) ||
           // Check for version change within the All Versions tab
-          (isAllVersionsMode && prevVersion !== version)) {
+          (isAllVersionsMode && prevVersion !== version)
+        ) {
           // Explicitly set All Versions tab to ensure it stays active
           setActiveVersionTab(1);
           // This ensures when selecting an LTS version in All Versions tab, we stay in All Versions tab
@@ -189,51 +203,50 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
   ) => {
     if (isLoading) return;
 
-    setIsLoading(true)
+    const versionArg: number | "any" =
+      version === "any" ? "any" : Number(version);
+
+    setIsLoading(true);
     try {
       const results = await loadLatestAssets(
-        version,
-        os,
-        arch
-      )
-      setReleases(results)
-      setHasInitialFetch(true)
+        versionArg,
+        os as OS,
+        arch as Arch,
+      );
+      setReleases(results);
+      setHasInitialFetch(true);
     } catch (error) {
-      console.error("Error fetching releases:", error)
-      setReleases([])
+      console.error("Error fetching releases:", error);
+      setReleases([]);
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
-  const handleFiltersChange = (
-    version: string,
-    os: string,
-    arch: string
-  ) => {
+  const handleFiltersChange = (version: string, os: string, arch: string) => {
     // Mark this as a filter change to prevent tab switching
-    setIsFilterChange(true)
+    setIsFilterChange(true);
 
     // Update state first
-    setSelectedVersion(version)
-    setSelectedOS(os)
-    setSelectedArch(arch)
+    setSelectedVersion(version);
+    setSelectedOS(os);
+    setSelectedArch(arch);
 
     // Then fetch data (always fetch both JDK and JRE)
-    fetchReleases(version, os, arch)
-  }
+    fetchReleases(version, os, arch);
+  };
 
   const openModalWithChecksum = (checksum: string) => {
-    setCurrentChecksum(checksum)
-    setModalOpen(true)
-  }
+    setCurrentChecksum(checksum);
+    setModalOpen(true);
+  };
 
   return (
     <div>
       <PageHeader
-        title={t('title')}
-        subtitle={t('latest-releases')}
-        description={t('description')}
+        title={t("title")}
+        subtitle={t("latest-releases")}
+        description={t("description")}
       />
 
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 pb-20">
@@ -307,13 +320,10 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
         )}
 
         {/* Links section - release notes, installation guide, etc. */}
-        <ReleaseLinks
-          selectedVersion={selectedVersion}
-          releases={releases}
-        />
+        <ReleaseLinks selectedVersion={selectedVersion} releases={releases} />
 
         {!isAllVersionsMode && (
-          < OneClickDownload
+          <OneClickDownload
             selectedVersion={selectedVersion}
             releases={releases}
           />
@@ -325,7 +335,6 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
           isLoading={isLoading}
           openModalWithChecksum={openModalWithChecksum}
         />
-
       </div>
       <DownloadMethods />
       <ChecksumModal
@@ -334,5 +343,5 @@ export default function TemurinReleasesPage({ availableReleases }: { availableRe
         checksum={currentChecksum}
       />
     </div>
-  )
+  );
 }
