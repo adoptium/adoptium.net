@@ -1,8 +1,8 @@
 "use client";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState, useEffect } from "react";
-import { shuffle } from "../../utils/shuffle";
+import { shuffle } from "@/utils/shuffle";
+import { filterByCurrentDate } from "@/utils/filterByDate";
 import { PinkIcon } from "../Common/Icon";
 import { BannerProps, currentBanners } from "./banners";
 
@@ -14,20 +14,10 @@ const Banner = () => {
 
   // Track when component mounts to prevent hydration issues
   useEffect(() => {
-    const now = new Date();
-
     // Filter banners based on current date and validity
-    const filteredBanners = currentBanners.filter(
-      (banner) =>
-        (banner.startDate ? now >= new Date(banner.startDate) : true) &&
-        (banner.endDate ? now <= new Date(banner.endDate) : true)
-    );
-
-    const releaseBanners = currentBanners.filter(
-      (banner) =>
-        (banner.releaseBanner ? banner.releaseBanner : false) &&
-        (banner.startDate ? now >= new Date(banner.startDate) : true) &&
-        (banner.endDate ? now <= new Date(banner.endDate) : true)
+    const filteredBanners = filterByCurrentDate(currentBanners);
+    const releaseBanners = filterByCurrentDate(
+      currentBanners.filter((banner) => !!banner.releaseBanner),
     );
 
     // Prioritize a Release banner
@@ -44,7 +34,7 @@ const Banner = () => {
     } else {
       // randomly select one banner if multiple are valid
       setBanner(
-        filteredBanners.length > 0 ? shuffle(filteredBanners)[0] : null
+        filteredBanners.length > 0 ? shuffle(filteredBanners)[0] : null,
       );
     }
     setIsMounted(true);

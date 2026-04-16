@@ -15,8 +15,8 @@ import {
   FaRocket,
 } from "react-icons/fa";
 
-import DocumentationHeader from "@/components/Documentation/Header";
-import DocumentationCard from "@/components/Documentation/Card";
+import DocumentationHeader from "@/components/Content/Documentation/Header";
+import DocumentationCard from "@/components/Content/Documentation/Card";
 
 export const metadata: Metadata = {
   title: "Documentation",

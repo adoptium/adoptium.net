@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import React from "react"
 import PageHeader from "@/components/Common/PageHeader"
-import BecomeAdopter from "@/components/BecomeAdopter"
+import BecomeAdopter from "@/components/Membership/BecomeAdopter"
 import ContactUs from "@/components/ContactUs"
 import Logos, { LogoType } from "@/components/Logos"
 

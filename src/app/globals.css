@@ -313,7 +313,7 @@ body {
     font-size: inherit;
   }
 
-  & .github-callout .callout-body p:first-child {
+  & .github-callout .callout-body p:first-of-type {
     margin-top: 0;
   }
 

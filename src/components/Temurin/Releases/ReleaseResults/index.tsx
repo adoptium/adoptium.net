@@ -13,7 +13,7 @@ import { FcLinux } from "react-icons/fc";
 import { SiAlpinelinux } from "react-icons/si";
 import { AixIcon, SolarisIcon } from "@/components/Common/Icon";
 import { BsCopy, BsDownload } from "react-icons/bs";
-import AnimatedPlaceholder from "@/components/AnimatedPlaceholder";
+import AnimatedPlaceholder from "@/components/Common/AnimatedPlaceholder";
 import { MdVerifiedUser } from "react-icons/md";
 import { useAttestations } from "@/hooks/useAttestations";
 

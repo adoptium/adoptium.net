@@ -106,7 +106,7 @@ This is test content.`;
         mockContent,
         {
           attributes: {
-            "latest-lts": "21",
+            "latest-lts": "25",
           },
         },
       );
@@ -658,7 +658,9 @@ This is test content.`;
 
     it("returns sidebar data with known section title", async () => {
       const mockExistsSync = vi.fn().mockReturnValue(true);
-      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
 
       const mockDirEntries: MockDirent[] = [
         { name: "page1", isDirectory: () => true, isFile: () => false },
@@ -696,7 +698,9 @@ This is test content.`;
 
     it("uses capitalized section name for unknown sections", async () => {
       const mockExistsSync = vi.fn().mockReturnValue(true);
-      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (fs as any).existsSync = mockExistsSync;
@@ -713,7 +717,9 @@ This is test content.`;
 
     it("includes Overview item when root index exists", async () => {
       const mockExistsSync = vi.fn().mockReturnValue(true);
-      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (fs as any).existsSync = mockExistsSync;
@@ -739,7 +745,9 @@ This is test content.`;
 
     it("skips _partials subdirectories", async () => {
       const mockExistsSync = vi.fn().mockReturnValue(true);
-      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
 
       const mockDirEntries: MockDirent[] = [
         { name: "_partials", isDirectory: () => true, isFile: () => false },
@@ -751,8 +759,9 @@ This is test content.`;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (fs as any).lstatSync = mockLstatSync;
 
-      (mockFs.readdirSync as unknown as Mock)
-        .mockReturnValueOnce(mockDirEntries);
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(
+        mockDirEntries,
+      );
 
       mockFileExists.mockReturnValue(false); // no root or child index
 
@@ -762,7 +771,9 @@ This is test content.`;
 
     it("uses page-sidebar-title attribute when available", async () => {
       const mockExistsSync = vi.fn().mockReturnValue(true);
-      const mockLstatSync = vi.fn().mockReturnValue({ isDirectory: () => true });
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
 
       const mockDirEntries: MockDirent[] = [
         { name: "subpage", isDirectory: () => true, isFile: () => false },
@@ -773,7 +784,9 @@ This is test content.`;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (fs as any).lstatSync = mockLstatSync;
 
-      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(mockDirEntries);
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(
+        mockDirEntries,
+      );
 
       // no root index
       mockFileExists.mockReturnValueOnce(false);
@@ -782,7 +795,9 @@ This is test content.`;
       mockFileExists.mockReturnValueOnce(false); // locale-specific
       mockFileExists.mockReturnValueOnce(true); // default
 
-      mockFs.readFileSync.mockReturnValue("= Subpage Title\n:page-sidebar-title: Short Title\n");
+      mockFs.readFileSync.mockReturnValue(
+        "= Subpage Title\n:page-sidebar-title: Short Title\n",
+      );
       mockExtractMetadata.mockReturnValue({
         title: "Subpage Title",
         description: "",

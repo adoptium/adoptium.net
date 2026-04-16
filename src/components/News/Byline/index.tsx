@@ -2,7 +2,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import ProfilePicInline from "@/components/ProfilePicInline";
+import ProfilePic from "@/components/Common/ProfilePic";
 
 interface IBylineProps {
   author: string;
@@ -16,7 +16,7 @@ const Byline: React.FC<IBylineProps> = (props) => {
   const t = useTranslations("Byline");
   return (
     <div className="flex items-center gap-4">
-      <ProfilePicInline identifier={identifier} name={author} />
+      <ProfilePic identifier={identifier} name={author} size={30} />
       <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm">
         <Link
           href={`/news/author/${identifier}`}

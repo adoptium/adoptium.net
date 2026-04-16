@@ -1,34 +1,27 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { shuffle } from "../../utils/shuffle";
+import { shuffle } from "@/utils/shuffle";
+import { filterByCurrentDate } from "@/utils/filterByDate";
 import { motion } from "framer-motion";
 import { currentAnnouncements, BannerMiddleProps } from "./announcements";
 
 const BannerMiddle = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [announcement, setAnnouncement] = useState<BannerMiddleProps | null>(
-    null
+    null,
   );
 
   // Track when component mounts to prevent hydration issues
   useEffect(() => {
-    const now = new Date();
-
     // Filter announcements based on current date and validity
-    const filteredAnnouncements = currentAnnouncements.filter(
-      (announcement) =>
-        (announcement.startDate
-          ? now >= new Date(announcement.startDate)
-          : true) &&
-        (announcement.endDate ? now <= new Date(announcement.endDate) : true)
-    );
+    const filteredAnnouncements = filterByCurrentDate(currentAnnouncements);
 
     // randomly select one announcement if multiple are valid
     setAnnouncement(
       filteredAnnouncements.length > 0
         ? shuffle(filteredAnnouncements)[0]
-        : null
+        : null,
     );
     setIsMounted(true);
   }, []);

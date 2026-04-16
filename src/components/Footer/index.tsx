@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { FooterIcon } from "@/components/Common/Icon";
-import IconSocial from "@/components/IconSocial";
+import IconSocial from "@/components/Common/IconSocial";
 import { useState } from "react";
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 

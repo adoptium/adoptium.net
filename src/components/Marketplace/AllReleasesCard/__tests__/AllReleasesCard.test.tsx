@@ -5,7 +5,7 @@ import { describe, it, expect, vi, afterEach } from "vitest";
 import AllReleaseCard from "../index";
 import type { MarketplaceRelease } from "@/hooks";
 
-vi.mock("@/components/ChecksumModal", () => ({
+vi.mock("@/components/Download/ChecksumModal", () => ({
   default: ({
     open,
     setOpen,
@@ -20,7 +20,7 @@ vi.mock("@/components/ChecksumModal", () => ({
     ) : null,
 }));
 
-vi.mock("@/components/AnimatedPlaceholder", () => ({
+vi.mock("@/components/Common/AnimatedPlaceholder", () => ({
   default: ({ children }: { children: React.ReactNode }) => (
     <div>{children}</div>
   ),

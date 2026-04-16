@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection"
-import LogoCarousel from "@/components/LogoCarousel"
+import LogoCarousel from "@/components/Logos/Carousel"
 import PowerOfTemurin from "@/components/PowerOfTemurin"
-import InstallationGuideCard from "@/components/InstallationGuideCard"
+import InstallationGuideCard from "@/components/Download/GuideCard"
 import ImageText from "@/components/ImageText"
 import ContactUs from "@/components/ContactUs"
 

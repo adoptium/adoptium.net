@@ -7,11 +7,13 @@ import {
 import type { components as marketplaceComponents } from "@/types/marketplaceApiTypes";
 
 type Distribution = marketplaceComponents["schemas"]["Distribution"];
-type OperatingSystem =
+export type OperatingSystem =
   | marketplaceComponents["schemas"]["OperatingSystem"]
   | "any";
-type Architecture = marketplaceComponents["schemas"]["Architecture"] | "any";
-type ImageType = marketplaceComponents["schemas"]["ImageType"] | "any";
+export type Architecture =
+  | marketplaceComponents["schemas"]["Architecture"]
+  | "any";
+export type ImageType = marketplaceComponents["schemas"]["ImageType"] | "any";
 
 export type MarketplaceRelease = MarketplaceBinaryAssetView;
 
@@ -23,26 +25,17 @@ export interface MarketplaceReleaseAsset {
 
 export async function getAllPkgsForVersion(
   version: number,
-  os: string,
-  architecture: string,
-  package_type: string,
-  vendors: string[] = [],
+  os: OperatingSystem,
+  architecture: Architecture,
+  package_type: ImageType,
+  vendors: MarketplaceVendor[] = [],
 ): Promise<MarketplaceRelease[] | null> {
   return fetchMarketplaceReleases({
     version,
-    os:
-      os !== "any"
-        ? (os as marketplaceComponents["schemas"]["OperatingSystem"])
-        : undefined,
-    architecture:
-      architecture !== "any"
-        ? (architecture as marketplaceComponents["schemas"]["Architecture"])
-        : undefined,
-    package_type:
-      package_type !== "any"
-        ? (package_type as marketplaceComponents["schemas"]["ImageType"])
-        : undefined,
-    vendors: vendors as MarketplaceVendor[],
+    os: os !== "any" ? os : undefined,
+    architecture: architecture !== "any" ? architecture : undefined,
+    package_type: package_type !== "any" ? package_type : undefined,
+    vendors,
   }) as Promise<MarketplaceRelease[] | null>;
 }
 

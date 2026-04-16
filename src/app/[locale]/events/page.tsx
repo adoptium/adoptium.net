@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 import React from "react"
 import PageHeader from "@/components/Common/PageHeader"
-import Timeline from "@/components/Timeline"
-import Calendar from "@/components/Calendar"
+import Timeline from "@/components/Events/Timeline"
+import Calendar from "@/components/Events/Calendar"
 
 export const metadata: Metadata = {
     title: "Events",

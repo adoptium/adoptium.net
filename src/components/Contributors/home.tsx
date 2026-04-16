@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import RandomContributor from "@/components/RandomContributor";
+import RandomContributor from "@/components/Contributors/RandomContributor";
 import { motion } from "framer-motion";
 import "./styles.css";
 

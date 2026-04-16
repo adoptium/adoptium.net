@@ -13,7 +13,7 @@ import ReleaseLinks from "@/components/Temurin/Releases/ReleaseLinks";
 import OneClickDownload from "@/components/Temurin/Releases/OneClickDownload";
 import DownloadMethods from "@/components/Temurin/DownloadMethods";
 import VersionSelector from "@/components/VersionSelector";
-import ChecksumModal from "@/components/ChecksumModal";
+import ChecksumModal from "@/components/Download/ChecksumModal";
 
 interface AvailableReleases {
   available_lts_releases: number[];

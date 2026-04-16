@@ -13,7 +13,7 @@ vi.mock("@/components/News/LatestNews", () => {
   };
 });
 
-vi.mock("@/components/BannerMiddle/announcements", () => ({
+vi.mock("@/components/Banner/Middle/announcements", () => ({
   currentAnnouncements: [
     {
       title: "Fake Banner for Testing",

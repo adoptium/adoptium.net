@@ -12,16 +12,16 @@ import {
 } from "@/services/asciidocService";
 import Image from "next/image";
 import PageHeader from "@/components/Common/PageHeader";
-import AsciiDocFormatter from "@/components/AsciiDocFormatter";
-import AuthorList from "@/components/Asciidoc/AuthorList";
-import EditLink from "@/components/Asciidoc/EditLink";
-import SyntaxHighlighter from "@/components/SyntaxHighlighter";
-import InstallTabs from "@/components/InstallTabs";
-import LinkText from "@/components/LinkText";
+import AsciiDocFormatter from "@/components/Content/AsciiDocFormatter";
+import AuthorList from "@/components/Content/Asciidoc/AuthorList";
+import EditLink from "@/components/Content/Asciidoc/EditLink";
+import SyntaxHighlighter from "@/components/Content/SyntaxHighlighter";
+import InstallTabs from "@/components/Content/InstallTabs";
+import LinkText from "@/components/Common/LinkText";
 import DocSidebar from "@/components/DocSidebar";
 import DocTableOfContents from "@/components/DocTableOfContents";
 import DocThemeToggle from "@/components/DocThemeToggle";
-import DocumentationSearch from "@/components/Documentation/Search";
+import DocumentationSearch from "@/components/Content/Documentation/Search";
 
 // Base directory for AsciiDoc content - same as in asciidocService.ts
 const CONTENT_BASE_DIR = path.join(process.cwd(), "content/asciidoc-pages");

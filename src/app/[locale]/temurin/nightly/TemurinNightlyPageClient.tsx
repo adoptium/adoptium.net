@@ -2,7 +2,7 @@ import React from "react"
 import { useTranslations } from "next-intl"
 import { FaArrowCircleRight } from "react-icons/fa"
 import PageHeader from "@/components/Common/PageHeader"
-import LinkText from "@/components/LinkText"
+import LinkText from "@/components/Common/LinkText"
 import NightlyVersionSelector from "@/components/Temurin/NightlyVersionSelector"
 import { Link } from "@/i18n/navigation"
 
