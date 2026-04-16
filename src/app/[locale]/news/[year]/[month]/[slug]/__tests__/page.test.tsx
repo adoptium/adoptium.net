@@ -6,7 +6,7 @@ import * as markdownUtils from '@/utils/markdown';
 import * as dateUtils from '@/utils/date';
 import { notFound } from 'next/navigation';
 
-vi.mock('@/components/CustomMDX', () => ({
+vi.mock('@/components/Content/MDX', () => ({
   CustomMDX: () => <div>MDX Content</div>
 }));
 vi.mock('@/utils/markdown');

@@ -2,8 +2,8 @@
 
 import React from "react"
 import { useSearchParams } from "next/navigation"
-import ReleaseNotesRender from "@/components/ReleaseNotesRender"
-import ReleaseNotesVersionSelector from "@/components/ReleaseNotesVersionSelector"
+import ReleaseNotesRender from "@/components/Content/ReleaseNotes"
+import ReleaseNotesVersionSelector from "@/components/Content/ReleaseNotesVersionSelector"
 
 interface AvailableReleases {
     available_lts_releases: number[]

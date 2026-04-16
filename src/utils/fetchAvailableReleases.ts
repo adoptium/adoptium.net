@@ -1,18 +1,15 @@
-type AvailableReleasesResponse = {
-  available_lts_releases: number[];
-  available_releases: number[];
-  most_recent_feature_release: number;
-  most_recent_feature_version: number;
-  most_recent_lts: number;
-  tip_version: number;
-};
+import type { operations } from "@/types/adoptiumApiTypes";
+
+type AvailableReleasesResponse = NonNullable<
+  operations["getAvailableReleases"]["responses"][200]["content"]["application/json"]
+>;
 
 export async function fetchAvailableReleases(): Promise<AvailableReleasesResponse> {
   const res = await fetch(
     "https://api.adoptium.net/v3/info/available_releases",
     {
       next: { revalidate: 3600 }, // Cache for 1 hour
-    }
+    },
   );
   if (!res.ok) {
     throw new Error("Network response was not ok");

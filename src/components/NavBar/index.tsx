@@ -16,7 +16,7 @@ import {
 import { FaChevronDown, FaRegBell } from "react-icons/fa";
 import { BsXLg, BsList } from "react-icons/bs";
 
-import IconSocial from "@/components/IconSocial";
+import IconSocial from "@/components/Common/IconSocial";
 import LanguageSelector from "@/components/LanguageSelector";
 import Announcements from "@/components/Announcements";
 import ClickAwayListener from "@mui/material/ClickAwayListener";

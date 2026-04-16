@@ -5,9 +5,9 @@ import PageHeader from "@/components/Common/PageHeader";
 import ContactUs from "@/components/ContactUs";
 import Logos, { LogoType } from "@/components/Logos";
 import KeyInitiatives from "@/components/Sustainers/KeyInitiatives";
-import MembershipLevels from "@/components/MembershipLevels";
+import MembershipLevels from "@/components/Membership/Levels";
 import CommonButton from "@/components/Common/CommonButton";
-import MemberBenefits from "@/components/MemberBenefits";
+import MemberBenefits from "@/components/Membership/Benefits";
 
 export const metadata: Metadata = {
   title: "Become a Member",

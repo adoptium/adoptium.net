@@ -7,8 +7,8 @@ import { useTranslations, useLocale } from "next-intl";
 import { BsCopy } from "react-icons/bs";
 import { FiDownload } from "react-icons/fi";
 import { FaRedo } from "react-icons/fa";
-import ChecksumModal from "@/components/ChecksumModal";
-import AnimatedPlaceholder from "@/components/AnimatedPlaceholder";
+import ChecksumModal from "@/components/Download/ChecksumModal";
+import AnimatedPlaceholder from "@/components/Common/AnimatedPlaceholder";
 import type { MarketplaceRelease } from "@/hooks";
 
 type Binary = NonNullable<MarketplaceRelease["binary"]>;

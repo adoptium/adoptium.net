@@ -1,12 +1,12 @@
 import HeroSection from "@/components/HeroSection";
 import PowerOfTemurin from "@/components/PowerOfTemurin";
-import DownloadCounter from "@/components/DownloadCounter";
+import DownloadCounter from "@/components/Download/Counter";
 import BentoGrid from "@/components/TemurinFeatures/BentoGrid";
-import WGProjects from "@/components/WGProjects";
+import WGProjects from "@/components/WorkingGroup/Projects";
 import Testimonials from "@/components/Testimonials";
 import LatestNews from "@/components/News/LatestNews";
 import ContributorsHome from "@/components/Contributors/home";
-import BannerMiddle from "@/components/BannerMiddle";
+import BannerMiddle from "@/components/Banner/Middle";
 import Link from "next/link";
 
 export default function HomePageClient({

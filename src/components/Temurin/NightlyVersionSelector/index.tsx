@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { getAssetsForVersion } from "@/hooks";
 import type { Release } from "@/types/temurin";
 import TemurinNightlyTable from "@/components/Temurin/NightlyTable";
-import ChecksumModal from "@/components/ChecksumModal";
+import ChecksumModal from "@/components/Download/ChecksumModal";
 const BUILD_NUMS = [1, 5, 10, 20, 50];
 
 interface NightlyVersionSelectorProps {

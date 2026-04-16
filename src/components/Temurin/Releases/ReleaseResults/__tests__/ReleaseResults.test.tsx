@@ -62,7 +62,7 @@ vi.mock("@/i18n/navigation", () => ({
   ),
 }));
 
-vi.mock("@/components/AnimatedPlaceholder", () => ({
+vi.mock("@/components/Common/AnimatedPlaceholder", () => ({
   default: ({ children }: { children: React.ReactNode }) => (
     <div data-testid="animated-placeholder">{children}</div>
   ),

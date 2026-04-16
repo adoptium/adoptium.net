@@ -1,5 +1,5 @@
 import React from "react";
-import EventCard from "@/components/EventCard";
+import EventCard from "@/components/Events/EventCard";
 import Pagination from "@/components/News/Pagination";
 
 type Post = {

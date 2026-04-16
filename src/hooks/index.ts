@@ -10,7 +10,6 @@ export * from "./fetchReleaseNotes";
 export * from "./fetchTemurinNightly";
 export * from "./fetchLatestEvents";
 export * from "./useAdoptiumContributorsApi";
-export * from "./fetchConstants";
 export type {
   BinaryAssetView,
   TemurinAssets,

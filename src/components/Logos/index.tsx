@@ -2,7 +2,7 @@ import * as React from "react";
 
 import MemberList from "../../data/members.json";
 import Adopters from "../../data/adopters.json";
-import LogosGrid from "../LogosGrid";
+import LogosGrid from "./Grid";
 
 import { shuffle } from "../../utils/shuffle";
 

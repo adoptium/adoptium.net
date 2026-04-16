@@ -21,7 +21,7 @@ vi.mock("next/image", () => ({
   }: any) => <img src={src} alt={alt} {...props} />,
 }));
 
-vi.mock("@/components/IconSocial", () => ({
+vi.mock("@/components/Common/IconSocial", () => ({
   default: () => <div>IconSocial</div>,
 }));
 
