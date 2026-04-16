@@ -69,10 +69,10 @@ export async function getAsciidocContent(
     const content = fs.readFileSync(filePath, "utf8");
 
     // Fetch latest LTS version from Adoptium API for AsciiDoc attribute substitution
-    let latestLts = 21; // fallback
+    let latestLts = 25; // fallback
     try {
       const releases = await fetchAvailableReleases();
-      latestLts = releases.most_recent_lts;
+      latestLts = releases.most_recent_lts ?? latestLts;
     } catch {
       // Use fallback if API is unavailable
     }
