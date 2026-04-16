@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { describe, afterEach, expect, it, vi } from "vitest";
 import ReleaseNotesRender, { fetchTitle, sortReleaseNotesBy } from "../index";
 import type { ReleaseNoteAPIResponse } from "@/hooks";
@@ -148,5 +148,196 @@ describe("ReleaseNotesRender component", () => {
     expect(result.release_notes[0].id).toBe("300");
     expect(result.release_notes[1].id).toBe("200");
     expect(result.release_notes[2].id).toBe("100");
+  });
+
+  it("toggles sort direction when clicking priority header", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: createMockReleaseNotesAPI(2),
+      isValid: true,
+    });
+
+    const { container } = render(<ReleaseNotesRender />);
+
+    // Initially ascending (▲)
+    const header = container.querySelector("th") as HTMLElement;
+    expect(header.textContent).toContain("▲");
+
+    // Click to toggle to descending
+    fireEvent.click(header);
+    expect(header.textContent).toContain("▼");
+  });
+
+  it("filters by priority via select", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    const mockData = createMockReleaseNotesAPI(3);
+    mockData.release_notes[0].priority = "1";
+    mockData.release_notes[1].priority = "2";
+    mockData.release_notes[2].priority = "1";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: mockData,
+      isValid: true,
+    });
+
+    const { container } = render(<ReleaseNotesRender />);
+    const prioritySelect = container.querySelector(
+      'select[aria-label="Filter by priority"]',
+    ) as HTMLSelectElement;
+
+    fireEvent.change(prioritySelect, { target: { value: "2" } });
+
+    expect(container.querySelectorAll("[data-row]")).toHaveLength(1);
+  });
+
+  it("filters by component via select", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    const mockData = createMockReleaseNotesAPI(2);
+    mockData.release_notes[0].component = "core-libs";
+    mockData.release_notes[1].component = "hotspot";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: mockData,
+      isValid: true,
+    });
+
+    const { container } = render(<ReleaseNotesRender />);
+    const componentSelect = container.querySelector(
+      'select[aria-label="Filter by component"]',
+    ) as HTMLSelectElement;
+
+    fireEvent.change(componentSelect, { target: { value: "hotspot" } });
+
+    expect(container.querySelectorAll("[data-row]")).toHaveLength(1);
+  });
+
+  it("exports CSV when export button is clicked", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: createMockReleaseNotesAPI(2),
+      isValid: true,
+    });
+
+    const clickSpy = vi.fn();
+    const originalCreateElement = document.createElement.bind(document);
+    vi.spyOn(document, "createElement").mockImplementation((tag: string) => {
+      const el = originalCreateElement(tag);
+      if (tag === "a") {
+        el.click = clickSpy;
+      }
+      return el;
+    });
+
+    const mockCreateObjectURL = vi.fn(() => "blob:mock-url");
+    const mockRevokeObjectURL = vi.fn();
+    global.URL.createObjectURL = mockCreateObjectURL;
+    global.URL.revokeObjectURL = mockRevokeObjectURL;
+
+    const { container } = render(<ReleaseNotesRender />);
+
+    const exportBtn = container.querySelector("button") as HTMLButtonElement;
+    fireEvent.click(exportBtn);
+
+    expect(mockCreateObjectURL).toHaveBeenCalled();
+    expect(mockRevokeObjectURL).toHaveBeenCalled();
+    expect(clickSpy).toHaveBeenCalled();
+
+    vi.restoreAllMocks();
+  });
+
+  it("changes page size via select", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: createMockReleaseNotesAPI(5),
+      isValid: true,
+    });
+
+    const { container } = render(<ReleaseNotesRender />);
+
+    // Change page size to 50
+    const pageSizeSelect = container.querySelector(
+      "select:not([aria-label])",
+    ) as HTMLSelectElement;
+    fireEvent.change(pageSizeSelect, { target: { value: "50" } });
+
+    // All 5 rows should still be visible on one page
+    expect(container.querySelectorAll("[data-row]")).toHaveLength(5);
+  });
+
+  it("shows no results when filter eliminates all rows", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    const mockData = createMockReleaseNotesAPI(2);
+    mockData.release_notes[0].priority = "1";
+    mockData.release_notes[1].priority = "1";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: mockData,
+      isValid: true,
+    });
+
+    const { container } = render(<ReleaseNotesRender />);
+
+    // Filter by priority "2" which none of the rows have
+    const prioritySelect = container.querySelector(
+      'select[aria-label="Filter by priority"]',
+    ) as HTMLSelectElement;
+    // First add the option to the select (simulating a valid filter)
+    const opt = document.createElement("option");
+    opt.value = "2";
+    prioritySelect.appendChild(opt);
+    fireEvent.change(prioritySelect, { target: { value: "2" } });
+
+    expect(container.querySelectorAll("[data-row]")).toHaveLength(0);
+    expect(container.textContent).toContain("No results found");
+  });
+
+  it("shows 0 of 0 in pagination when no results", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    const mockData = createMockReleaseNotesAPI(1);
+    mockData.release_notes[0].priority = "1";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue({
+      releaseNoteAPIResponse: mockData,
+      isValid: true,
+    });
+
+    const { container } = render(<ReleaseNotesRender />);
+
+    // Filter by priority "2" which the single row doesn't have
+    const prioritySelect = container.querySelector(
+      'select[aria-label="Filter by priority"]',
+    ) as HTMLSelectElement;
+    const opt = document.createElement("option");
+    opt.value = "2";
+    prioritySelect.appendChild(opt);
+    fireEvent.change(prioritySelect, { target: { value: "2" } });
+
+    expect(container.textContent).toContain("0 of 0");
+  });
+
+  it("renders loading spinner when data is not yet available", () => {
+    mockVersionParam = "jdk-17.0.1+12";
+
+    // @ts-expect-error - mockReturnValue is used to simulate the useFetchReleaseNotesForVersion hook
+    useFetchReleaseNotesForVersion.mockReturnValue(undefined);
+
+    const { container } = render(<ReleaseNotesRender />);
+    expect(
+      container.querySelector('[aria-label="loading spinner"]'),
+    ).toBeTruthy();
   });
 });
