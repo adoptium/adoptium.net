@@ -1,8 +1,10 @@
-import { ReleaseNoteAPIResponse } from "@/hooks"
+import { ReleaseNoteAPIResponse } from "@/hooks";
 
-export const createMockReleaseNotesAPI = (number: number): ReleaseNoteAPIResponse => ({
+export const createMockReleaseNotesAPI = (
+  number: number,
+): ReleaseNoteAPIResponse => ({
   id: "id_mock",
-  vendor: "vendor_mock",
+  vendor: "eclipse",
   version_data: {
     major: 0,
     minor: 0,
@@ -16,10 +18,12 @@ export const createMockReleaseNotesAPI = (number: number): ReleaseNoteAPIRespons
   // return an array of length number with the same release notes
   release_notes: Array.from({ length: number }, (v, i) => ({
     id: i.toString(),
-    link: new URL("https://link_mock"),
+    link: "https://link_mock",
     title: "title_mock",
     priority: "1",
     type: "Bug",
     component: "component_mock",
+    subcomponent: null,
+    backportOf: null,
   })),
-})
+});

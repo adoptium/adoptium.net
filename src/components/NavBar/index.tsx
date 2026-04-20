@@ -19,7 +19,6 @@ import { BsXLg, BsList } from "react-icons/bs";
 import IconSocial from "@/components/Common/IconSocial";
 import LanguageSelector from "@/components/LanguageSelector";
 import Announcements from "@/components/Announcements";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 interface NavItem {
   name: string;
@@ -228,6 +227,22 @@ const NavBar = ({ locale }: { locale: string }) => {
     };
   }, []);
 
+  // Close desktop dropdown menus on click outside
+  useEffect(() => {
+    if (!openedMenu) return;
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (
+        target.closest("[data-dropdown-menu]") ||
+        target.closest("[data-menu-button]")
+      )
+        return;
+      setOpenedMenu(undefined);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [openedMenu]);
+
   const navItemFocusClasses =
     "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]";
 
@@ -270,6 +285,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                     >
                       <div>
                         <MenuButton
+                          data-menu-button
                           className={classNames(
                             "inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer",
                             navItemFocusClasses,
@@ -299,107 +315,104 @@ const NavBar = ({ locale }: { locale: string }) => {
                         show={openedMenu === item.name}
                       >
                         <MenuItems
+                          data-dropdown-menu
                           className="fixed  left-1/2 -translate-x-1/2 top-[80px] mt-4  min-w-[700px] max-w-[1000px] 
   py-5 pl-7 pr-1  bg-[#0E002A] shadow-lg rounded-md z-50 outline-none border-none focus:outline-none "
                         >
-                          <ClickAwayListener
-                            onClickAway={() => setOpenedMenu(undefined)}
-                          >
-                            <div className="flex flex-col gap-3">
-                              {/* Grid */}
-                              <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-5 gap-y-3 ">
-                                <div>
-                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
-                                    Membership
-                                  </h3>
-                                  <div className="space-y-1">
-                                    <MobileLink
-                                      href="/members"
-                                      name="Become a Member"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                    <MobileLink
-                                      href="/members#strategic-sec"
-                                      name="Our Members"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                  </div>
-                                </div>
-
-                                <div>
-                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
-                                    Sponsorship
-                                  </h3>
-                                  <div className="space-y-1">
-                                    <MobileLink
-                                      href="https://www.eclipse.org/sponsor/adoptium/"
-                                      name="Become an Individual Sustainer"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                    <MobileLink
-                                      href="/sustainers"
-                                      name="Become a Corporate Sustainer"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                    <MobileLink
-                                      href="/sustainers#temurin-sustainers"
-                                      name="Our Sustainers"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                  </div>
-                                </div>
-
-                                <div>
-                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
-                                    Contribute
-                                  </h3>
-                                  <div className="space-y-1">
-                                    <MobileLink
-                                      href="/contributing"
-                                      name="Contribute to Adoptium"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                  </div>
-                                </div>
-
-                                <div>
-                                  <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
-                                    Adopt
-                                  </h3>
-                                  <div className="space-y-1">
-                                    <MobileLink
-                                      href="/adopters?open=adopter#become-adopter"
-                                      name="Become an Adopter"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                    <MobileLink
-                                      href="/adopters"
-                                      name="Our Adopters"
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                  </div>
+                          <div className="flex flex-col gap-3">
+                            {/* Grid */}
+                            <div className="grid grid-cols-[repeat(4,minmax(180px,1fr))] gap-x-5 gap-y-3 ">
+                              <div>
+                                <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
+                                  Membership
+                                </h3>
+                                <div className="space-y-1">
+                                  <MobileLink
+                                    href="/members"
+                                    name="Become a Member"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/members#strategic-sec"
+                                    name="Our Members"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
                                 </div>
                               </div>
-                              {/* CTA (NEW) */}
-                              <div className="pt-3  flex justify-center">
-                                <Link
-                                  href="/join-us"
-                                  className="text-[15px] font-semibold text-[#ff1365] hover:underline"
-                                  onClick={() => setOpenedMenu(undefined)}
-                                >
-                                  Join Us Overview →
-                                </Link>
+
+                              <div>
+                                <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
+                                  Sponsorship
+                                </h3>
+                                <div className="space-y-1">
+                                  <MobileLink
+                                    href="https://www.eclipse.org/sponsor/adoptium/"
+                                    name="Become an Individual Sustainer"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/sustainers"
+                                    name="Become a Corporate Sustainer"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/sustainers#temurin-sustainers"
+                                    name="Our Sustainers"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
+                                  Contribute
+                                </h3>
+                                <div className="space-y-1">
+                                  <MobileLink
+                                    href="/contributing"
+                                    name="Contribute to Adoptium"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <h3 className="text-sm font-semibold  text-[#ff1365] mb-2">
+                                  Adopt
+                                </h3>
+                                <div className="space-y-1">
+                                  <MobileLink
+                                    href="/adopters?open=adopter#become-adopter"
+                                    name="Become an Adopter"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                  <MobileLink
+                                    href="/adopters"
+                                    name="Our Adopters"
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                </div>
                               </div>
                             </div>
-                          </ClickAwayListener>
+                            {/* CTA (NEW) */}
+                            <div className="pt-3  flex justify-center">
+                              <Link
+                                href="/join-us"
+                                className="text-[15px] font-semibold text-[#ff1365] hover:underline"
+                                onClick={() => setOpenedMenu(undefined)}
+                              >
+                                Join Us Overview →
+                              </Link>
+                            </div>
+                          </div>
                         </MenuItems>
                       </Transition>
                     </Menu>
@@ -411,6 +424,7 @@ const NavBar = ({ locale }: { locale: string }) => {
                     >
                       <div>
                         <MenuButton
+                          data-menu-button
                           className={classNames(
                             "inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer",
                             navItemFocusClasses,
@@ -440,27 +454,24 @@ const NavBar = ({ locale }: { locale: string }) => {
                         show={openedMenu === item.name}
                       >
                         <MenuItems
+                          data-dropdown-menu
                           className="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-[#0E002A] shadow-lg ring-1 ring-black/5 focus:outline-hidden"
                           style={{ minWidth: "max-content" }}
                         >
-                          <ClickAwayListener
-                            onClickAway={() => setOpenedMenu(undefined)}
-                          >
-                            <div className="py-6 px-4">
-                              {item.children.map((child) => (
-                                <MenuItem key={child.name}>
-                                  {() => (
-                                    <MobileLink
-                                      href={child.href}
-                                      name={child.name}
-                                      activePaths={activePaths}
-                                      onClick={() => setOpenedMenu(undefined)}
-                                    />
-                                  )}
-                                </MenuItem>
-                              ))}
-                            </div>
-                          </ClickAwayListener>
+                          <div className="py-6 px-4">
+                            {item.children.map((child) => (
+                              <MenuItem key={child.name}>
+                                {() => (
+                                  <MobileLink
+                                    href={child.href}
+                                    name={child.name}
+                                    activePaths={activePaths}
+                                    onClick={() => setOpenedMenu(undefined)}
+                                  />
+                                )}
+                              </MenuItem>
+                            ))}
+                          </div>
                         </MenuItems>
                       </Transition>
                     </Menu>

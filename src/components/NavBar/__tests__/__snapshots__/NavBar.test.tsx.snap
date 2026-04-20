@@ -38,6 +38,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
+                data-menu-button="true"
                 id="headlessui-menu-button-_r_2_"
                 type="button"
               >
@@ -79,6 +80,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
+                data-menu-button="true"
                 id="headlessui-menu-button-_r_5_"
                 type="button"
               >
@@ -110,6 +112,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
+                data-menu-button="true"
                 id="headlessui-menu-button-_r_8_"
                 type="button"
               >
@@ -141,6 +144,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 aria-haspopup="menu"
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
+                data-menu-button="true"
                 id="headlessui-menu-button-_r_b_"
                 type="button"
               >
