@@ -85,7 +85,7 @@
     "openapi-typescript": "^7.13.0",
     "pagefind": "^1.5.2",
     "tailwindcss": "^4.2.1",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "vitest": "^4.0.15",
     "vitest-axe": "^0.1.0"
   },
