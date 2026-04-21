@@ -197,50 +197,68 @@ const ReleaseNotesRender = () => {
   return (
     <div
       ref={ref}
-      className="release-notes-container mx-auto w-full max-w-[1400px] px-4 lg:px-8 py-6 items-center text-center justify-center"
+      className="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
     >
-      <div className="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full mb-4">
-        <h2 className="text-4xl font-bold text-pink mb-2 tracking-tight drop-shadow-sm">
+      {/* Version title */}
+      <div className="text-center mb-10">
+        <h2 className="text-[42px] font-semibold tracking-tight text-white mb-1">
           {releaseNotesVersion}
         </h2>
       </div>
-      <div className="pt-3 w-full flex justify-center h-full">
+
+      <div className="w-full">
         {!releaseNoteDataBag ? (
-          <div className="flex-grow flex items-center justify-center">
-            <div
-              className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-pink"
-              aria-label="loading spinner"
-            />
+          <div className="flex items-center justify-center py-32">
+            <div className="flex flex-col items-center gap-4">
+              <div
+                className="h-8 w-8 rounded-full border-2 border-white/10 border-t-pink animate-spin"
+                aria-label="loading spinner"
+              />
+              <span className="text-sm text-white/30 tracking-wide">
+                Loading release notes…
+              </span>
+            </div>
           </div>
         ) : (
-          <div className="w-full flex-grow">
+          <div className="w-full">
             {!releaseNotesVersion || releaseNoteDataBag?.isValid === false ? (
-              <div className="bg-gradient-to-br from-[#200E46]/90 to-[#2B1A4F]/90 rounded-3xl border border-white/20 shadow-lg p-8 text-center">
-                <h2 className="text-3xl font-bold text-pink tracking-tight drop-shadow-sm mb-4">
+              <div className="rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] p-12 text-center">
+                <h2 className="text-2xl font-semibold text-white tracking-tight mb-3">
                   {t("couldnt-find-release-notes")}
                 </h2>
-                <span className="text-white/80 text-lg">
+                <span className="text-white/50 text-base">
                   {t("not-found-helper")}{" "}
-                  <code className="bg-[#14003c] px-2 py-1 rounded text-pink">
+                  <code className="bg-white/[0.06] px-2 py-1 rounded-md text-pink text-sm font-mono">
                     ?version=x.x.x
                   </code>
                 </span>
               </div>
             ) : (
               <>
-                <p className="release-notes-description">{t("description")}</p>
-                <p className="release-notes-description">
-                  <strong>{`The total number of fixes marked as P1 is: ${totalP1}`}</strong>
-                </p>
+                {/* Description + stats */}
+                <div className="text-center mb-10 max-w-2xl mx-auto">
+                  <p className="text-base text-white/50 leading-relaxed mb-4">
+                    {t("description")}
+                  </p>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-4 py-1.5">
+                    <span className="w-2 h-2 rounded-full bg-pink/80" />
+                    <span className="text-sm text-white/60">
+                      <span className="font-medium text-white/80">
+                        {totalP1}
+                      </span>{" "}
+                      P1 fixes
+                    </span>
+                  </div>
+                </div>
 
                 {/* Toolbar */}
-                <div className="flex items-center justify-between gap-4 mb-0 bg-[#2B1A4F]/90 rounded-t-2xl border border-white/10 px-4 py-3">
-                  <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <select
                       aria-label="Filter by priority"
                       value={filters.priority}
                       onChange={(e) => updateFilter("priority", e.target.value)}
-                      className="bg-[#231146]/60 text-white/90 text-sm border border-white/10 rounded-md px-3 py-1.5 focus:outline-none focus:border-pink"
+                      className="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
                     >
                       <option value="">All Priorities</option>
                       {priorities.map((p) => (
@@ -256,7 +274,7 @@ const ReleaseNotesRender = () => {
                         (isEnhancementDefault ? "Enhancement" : "")
                       }
                       onChange={(e) => updateFilter("type", e.target.value)}
-                      className="bg-[#231146]/60 text-white/90 text-sm border border-white/10 rounded-md px-3 py-1.5 focus:outline-none focus:border-pink"
+                      className="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
                     >
                       <option value="">All Types</option>
                       {types.map((ty) => (
@@ -271,7 +289,7 @@ const ReleaseNotesRender = () => {
                       onChange={(e) =>
                         updateFilter("component", e.target.value)
                       }
-                      className="bg-[#231146]/60 text-white/90 text-sm border border-white/10 rounded-md px-3 py-1.5 focus:outline-none focus:border-pink"
+                      className="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
                     >
                       <option value="">All Components</option>
                       {components.map((c) => (
@@ -283,37 +301,39 @@ const ReleaseNotesRender = () => {
                   </div>
                   <button
                     onClick={handleExport}
-                    className="text-sm font-medium text-white/80 hover:text-white bg-[#231146]/60 border border-white/10 rounded-md px-4 py-1.5 hover:bg-[#231146] transition-colors"
+                    className="text-sm font-medium text-white/50 hover:text-white bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-2 hover:bg-white/[0.08] hover:border-white/[0.14] transition-all duration-200"
                   >
                     Export CSV
                   </button>
                 </div>
 
                 {/* Table */}
-                <div className="overflow-x-auto rounded-b-2xl border border-t-0 border-white/10 bg-[#231146]/50 backdrop-blur-sm shadow-lg">
+                <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl">
                   <table
                     className="w-full text-left"
                     aria-label="Release Notes"
                   >
                     <thead>
-                      <tr className="bg-[#2B1A4F]/98 border-b-2 border-pink/40">
+                      <tr className="border-b border-white/[0.08]">
                         <th
-                          className="px-4 py-3 text-white font-bold text-xs uppercase tracking-wider cursor-pointer select-none hover:text-pink transition-colors w-[120px]"
+                          className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase cursor-pointer select-none hover:text-white/70 transition-colors duration-200 w-[100px]"
                           onClick={toggleSort}
                         >
                           Priority{" "}
-                          {sortDirection === "asc" ? "\u25B2" : "\u25BC"}
+                          <span className="text-white/20">
+                            {sortDirection === "asc" ? "\u25B2" : "\u25BC"}
+                          </span>
                         </th>
-                        <th className="px-4 py-3 text-white font-bold text-xs uppercase tracking-wider w-[130px]">
+                        <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[120px]">
                           Type
                         </th>
-                        <th className="px-4 py-3 text-white font-bold text-xs uppercase tracking-wider w-[170px]">
+                        <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[160px]">
                           Component
                         </th>
-                        <th className="px-4 py-3 text-white font-bold text-xs uppercase tracking-wider w-[150px]">
+                        <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[130px]">
                           Issue
                         </th>
-                        <th className="px-4 py-3 text-white font-bold text-xs uppercase tracking-wider min-w-[300px]">
+                        <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase min-w-[300px]">
                           Title
                         </th>
                       </tr>
@@ -323,19 +343,16 @@ const ReleaseNotesRender = () => {
                         <tr
                           key={row.id}
                           data-row
-                          className={`border-b border-white/5 transition-all duration-200 hover:bg-white/[0.08] hover:-translate-y-px hover:shadow-md ${
-                            idx % 2 === 0 ? "bg-white/[0.02]" : ""
+                          className={`border-b border-white/[0.04] transition-colors duration-150 hover:bg-white/[0.04] ${
+                            idx % 2 === 0 ? "" : "bg-white/[0.01]"
                           }`}
                         >
-                          <td
-                            data-field="priority"
-                            className="px-4 py-3 text-white/90"
-                          >
+                          <td data-field="priority" className="px-5 py-3.5">
                             <span
                               title={fetchTitle(
                                 (row.priority as string) || "6",
                               )}
-                              className={`badge bg-secondary priority-${row.priority}`}
+                              className={`badge priority-${row.priority}`}
                             >
                               {row.priority && row.priority !== "6"
                                 ? `P${row.priority}`
@@ -344,17 +361,17 @@ const ReleaseNotesRender = () => {
                           </td>
                           <td
                             data-field="type"
-                            className="px-4 py-3 text-white/90"
+                            className="px-5 py-3.5 text-white/60 text-sm"
                           >
                             {row.type || "Hidden"}
                           </td>
                           <td
                             data-field="component"
-                            className="px-4 py-3 text-white/90"
+                            className="px-5 py-3.5 text-white/60 text-sm"
                           >
                             {row.component || ""}
                           </td>
-                          <td data-field="id" className="px-4 py-3">
+                          <td data-field="id" className="px-5 py-3.5">
                             <a
                               target="_blank"
                               rel="noopener noreferrer"
@@ -366,7 +383,7 @@ const ReleaseNotesRender = () => {
                           </td>
                           <td
                             data-field="title"
-                            className="px-4 py-3 text-white/90 break-words"
+                            className="px-5 py-3.5 text-white/70 text-sm leading-relaxed break-words"
                           >
                             {row.title}
                           </td>
@@ -376,7 +393,7 @@ const ReleaseNotesRender = () => {
                         <tr>
                           <td
                             colSpan={5}
-                            className="px-4 py-8 text-center text-white/60"
+                            className="px-5 py-16 text-center text-white/30 text-sm"
                           >
                             No results found
                           </td>
@@ -387,16 +404,16 @@ const ReleaseNotesRender = () => {
                 </div>
 
                 {/* Pagination */}
-                <div className="flex items-center justify-between gap-4 mt-4 bg-[#231146]/30 rounded-lg border border-white/[0.08] p-3 shadow-md text-white/85">
-                  <div className="flex items-center gap-2 text-sm">
-                    <span>Rows per page:</span>
+                <div className="flex items-center justify-between gap-4 mt-4 px-1">
+                  <div className="flex items-center gap-2 text-sm text-white/40">
+                    <span>Rows</span>
                     <select
                       value={pageSize}
                       onChange={(e) => {
                         setPageSize(Number(e.target.value));
                         setPage(0);
                       }}
-                      className="bg-[#231146]/60 text-white/85 border border-white/10 rounded-md px-2 py-1 text-sm focus:outline-none focus:border-pink"
+                      className="appearance-none bg-white/[0.04] text-white/60 border border-white/[0.08] rounded-lg px-2 py-1 text-sm focus:outline-none focus:border-white/20 transition-all duration-200 cursor-pointer"
                     >
                       {[20, 50, 75].map((size) => (
                         <option key={size} value={size}>
@@ -405,28 +422,30 @@ const ReleaseNotesRender = () => {
                       ))}
                     </select>
                   </div>
-                  <div className="flex items-center gap-3 text-sm">
+                  <div className="flex items-center gap-4 text-sm text-white/40">
                     <span>
                       {totalRows > 0
                         ? `${safePage * pageSize + 1}\u2013${Math.min((safePage + 1) * pageSize, totalRows)} of ${totalRows}`
                         : "0 of 0"}
                     </span>
-                    <button
-                      onClick={() => setPage((p) => Math.max(0, p - 1))}
-                      disabled={safePage === 0}
-                      className="px-2 py-1 rounded bg-[#231146]/40 border border-white/5 hover:bg-pink/15 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-                    >
-                      &lsaquo;
-                    </button>
-                    <button
-                      onClick={() =>
-                        setPage((p) => Math.min(totalPages - 1, p + 1))
-                      }
-                      disabled={safePage >= totalPages - 1}
-                      className="px-2 py-1 rounded bg-[#231146]/40 border border-white/5 hover:bg-pink/15 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-                    >
-                      &rsaquo;
-                    </button>
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => setPage((p) => Math.max(0, p - 1))}
+                        disabled={safePage === 0}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
+                      >
+                        &lsaquo;
+                      </button>
+                      <button
+                        onClick={() =>
+                          setPage((p) => Math.min(totalPages - 1, p + 1))
+                        }
+                        disabled={safePage >= totalPages - 1}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
+                      >
+                        &rsaquo;
+                      </button>
+                    </div>
                   </div>
                 </div>
               </>
