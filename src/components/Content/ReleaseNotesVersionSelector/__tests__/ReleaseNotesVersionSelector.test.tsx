@@ -46,7 +46,8 @@ describe("ReleaseNotesVersionSelector", () => {
         availableLTSVersions={[21]}
       />,
     );
-    fireEvent.click(getAllByRole("button")[0]); // JDK 22 (non-LTS)
+    // LTS versions render first, so JDK 21 is button[0], JDK 22 is button[1]
+    fireEvent.click(getAllByRole("button")[1]); // JDK 22 (non-LTS)
     expect(mockPush).toHaveBeenCalledWith("?version=22");
   });
 
@@ -58,17 +59,25 @@ describe("ReleaseNotesVersionSelector", () => {
       />,
     );
     const buttons = container.querySelectorAll("button");
-    // JDK 21 (LTS) should have LTS badge text
-    expect(buttons[1].textContent).toContain("LTS");
-    // JDK 22 (non-LTS)
-    expect(buttons[0].textContent).toContain("Non-LTS");
+    // LTS versions render first: JDK 21 (LTS) is button[0]
+    expect(buttons[0].textContent).toContain("Long Term Support");
+    // JDK 22 (non-LTS) is button[1] and should not contain LTS text
+    expect(buttons[1].textContent).not.toContain("Long Term Support");
   });
 
-  it("renders legend for LTS and non-LTS", () => {
-    const { getByText } = render(
-      <ReleaseNotesVersionSelector {...defaultProps} />,
+  it("renders section headers for LTS", () => {
+    const { container } = render(
+      <ReleaseNotesVersionSelector
+        availableVersions={[22, 21]}
+        availableLTSVersions={[21]}
+      />,
     );
-    expect(getByText("LTS Version")).toBeTruthy();
-    expect(getByText("Non-LTS Version")).toBeTruthy();
+    // LTS badge in the section header
+    const ltsBadge = container.querySelector(".text-pink.uppercase");
+    expect(ltsBadge?.textContent).toBe("LTS");
+    // Feature Releases section header for non-LTS
+    const headers = container.querySelectorAll("h3");
+    const texts = Array.from(headers).map((h) => h.textContent);
+    expect(texts).toContain("Feature Releases");
   });
 });
