@@ -17,6 +17,7 @@ import AuthorList from "@/components/Content/Asciidoc/AuthorList";
 import EditLink from "@/components/Content/Asciidoc/EditLink";
 import SyntaxHighlighter from "@/components/Content/SyntaxHighlighter";
 import InstallTabs from "@/components/Content/InstallTabs";
+import SudoToggle from "@/components/Content/SudoToggle";
 import LinkText from "@/components/Common/LinkText";
 import DocSidebar from "@/components/DocSidebar";
 import DocTableOfContents from "@/components/DocTableOfContents";
@@ -275,6 +276,7 @@ export default async function AsciidocPage({
                 <InstallTabs />
               </section>
             )}
+            {slug === "installation/linux" && <SudoToggle />}
             <article className="doc-content prose prose-invert prose-base max-w-none">
               <AsciiDocFormatter content={asciidoc.content} />
               <SyntaxHighlighter />
