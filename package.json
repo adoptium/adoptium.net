@@ -56,7 +56,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
     "@octokit/types": "^16.0.0",
-    "@tailwindcss/postcss": "^4.2.3",
+    "@tailwindcss/postcss": "^4.2.4",
     "@tailwindcss/typography": "^0.5.19",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
