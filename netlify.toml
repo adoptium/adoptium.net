@@ -59,6 +59,18 @@
   force = true
 
 [[redirects]]
+  from = "/:locale/docs/migration"
+  to = "/:locale/temurin/migration"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/docs/migration"
+  to = "/temurin/migration"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/marketplace-policy"
   to = "/docs/marketplace-policy"
   status = 301

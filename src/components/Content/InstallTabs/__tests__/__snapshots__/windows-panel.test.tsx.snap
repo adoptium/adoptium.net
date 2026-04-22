@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for WindowsPanel component > renders correctly 1`] = `
+<div>
+  <div
+    class="install-panel"
+  >
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install the latest version
+      </div>
+      <pre
+        class="install-code text-xs sm:text-sm"
+      >
+        <code>
+          winget install EclipseAdoptium.Temurin.25.JDK
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install a different version
+      </div>
+      <pre
+        class="install-code text-xs sm:text-sm"
+      >
+        <code>
+          winget install EclipseAdoptium.Temurin.11.JDK
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Upgrade the Winget package
+      </div>
+      <pre
+        class="install-code text-xs sm:text-sm"
+      >
+        <code>
+          winget upgrade EclipseAdoptium.Temurin.25.JDK
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Uninstall the Winget package
+      </div>
+      <pre
+        class="install-code text-xs sm:text-sm"
+      >
+        <code>
+          winget uninstall EclipseAdoptium.Temurin.25.JDK
+        </code>
+      </pre>
+    </div>
+    <a
+      class="install__docs-button"
+      href="https://docs.microsoft.com/en-us/windows/package-manager/winget/"
+    >
+      Read documentation
+    </a>
+  </div>
+</div>
+`;

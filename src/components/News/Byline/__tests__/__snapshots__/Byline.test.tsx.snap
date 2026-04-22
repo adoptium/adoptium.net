@@ -3,7 +3,7 @@
 exports[`Byline component > should render correctly 1`] = `
 <div>
   <div
-    class="flex justify-center items-center gap-5"
+    class="flex items-center gap-4"
   >
     <img
       alt="Adoptium PMC"
@@ -12,22 +12,72 @@ exports[`Byline component > should render correctly 1`] = `
       src="/images/authors/pmc.jpg"
       width="30"
     />
-    <span
-      class="text-[16px] font-bold leading-[150%] text-white"
+    <div
+      class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm"
     >
       <a
+        class="font-semibold text-pink hover:underline transition-colors"
         href="/news/author/pmc"
       >
-        <span
-          class="text-primary pr-2"
-        >
-          Adoptium PMC
-          ,
-        </span>
-         
-        2021-07-01
+        Adoptium PMC
       </a>
-    </span>
+      <span
+        class="hidden sm:inline text-gray-600"
+      >
+        ·
+      </span>
+      <time
+        class="text-gray-400 light:text-gray-500"
+      >
+        2021-07-01
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Byline component > should render with reading time 1`] = `
+<div>
+  <div
+    class="flex items-center gap-4"
+  >
+    <img
+      alt="Adoptium PMC"
+      class="ml-2 mb-0 rounded-full"
+      height="30"
+      src="/images/authors/pmc.jpg"
+      width="30"
+    />
+    <div
+      class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm"
+    >
+      <a
+        class="font-semibold text-pink hover:underline transition-colors"
+        href="/news/author/pmc"
+      >
+        Adoptium PMC
+      </a>
+      <span
+        class="hidden sm:inline text-gray-600"
+      >
+        ·
+      </span>
+      <time
+        class="text-gray-400 light:text-gray-500"
+      >
+        2021-07-01
+      </time>
+      <span
+        class="hidden sm:inline text-gray-600"
+      >
+        ·
+      </span>
+      <span
+        class="text-gray-400 light:text-gray-500"
+      >
+        Text
+      </span>
+    </div>
   </div>
 </div>
 `;

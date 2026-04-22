@@ -67,6 +67,7 @@ export default async function TagsPage({
         title={`News tagged with "${tag}"`}
         description="Follow the latest updates from the Eclipse Adoptium Project"
         className="mx-auto max-w-[860px] px-2 w-full"
+        compact
       />
       <NewsCardList
         posts={posts}

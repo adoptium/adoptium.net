@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# search index (generated at build time)
+/public/pagefind/
+
+# intellij
+.idea/

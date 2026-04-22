@@ -110,6 +110,7 @@ export default async function AuthorNewsPage({
         title={authorData.name || `News by Author`}
         description={<AuthorBio author={authorData} identifier={author} />}
         className="mx-auto max-w-[860px] px-2 w-full"
+        compact
       />
       <NewsCardList
         posts={posts}

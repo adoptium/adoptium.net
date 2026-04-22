@@ -86,9 +86,9 @@ export default function NewsFilters({ tags, authors }: NewsFiltersProps) {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center px-4 mt-8 mb-10">
-      <div className="flex flex-wrap gap-2 mt-4 max-w-4xl w-full">
-        <div className="flex-1 min-w-0">
+    <div className="w-full flex flex-col items-center px-4 py-3">
+      <div className="flex flex-col sm:flex-row gap-2 max-w-4xl w-full">
+        <div className="sm:flex-1 sm:min-w-0">
           <FilterSelect
             label="All Sources"
             value={searchParams.get("source") || ""}
@@ -98,7 +98,7 @@ export default function NewsFilters({ tags, authors }: NewsFiltersProps) {
           />
         </div>
 
-        <div className="flex-1 min-w-0">
+        <div className="sm:flex-1 sm:min-w-0">
           <FilterSelect
             label="All Tags"
             value={searchParams.get("tag") || ""}
@@ -108,7 +108,7 @@ export default function NewsFilters({ tags, authors }: NewsFiltersProps) {
           />
         </div>
 
-        <div className="flex-1 min-w-0">
+        <div className="sm:flex-1 sm:min-w-0">
           <FilterSelect
             label="All Authors"
             value={searchParams.get("author") || ""}

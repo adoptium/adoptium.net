@@ -2,274 +2,306 @@
 
 exports[`NewsArticlePage > renders article when post exists 1`] = `
 <div>
-  <section>
+  <section
+    class="light:bg-white"
+  >
     <script
       type="application/ld+json"
     >
       {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Jane Doe","description":"No biography available","affiliation":{"@type":"Organization","name":"Eclipse Adoptium"},"url":"https://adoptium.net/news/author/jdoe"},{"@type":"BlogPosting","headline":"Test Article","datePublished":"2025-06-18T00:00:00.000Z","description":"desc","image":"https://adoptium.net/news/2025/06/test-article/opengraph-image","url":"https://adoptium.net/news/2025/06/test-article","author":{"@type":"Person","name":"Jane Doe","url":"https://adoptium.net/news/author/jdoe"},"publisher":{"@type":"Organization","name":"Eclipse Adoptium","logo":{"@type":"ImageObject","url":"https://adoptium.net/images/adoptium-icon.png"}}}]}
     </script>
     <div
-      class="pt-16 md:pt-24 pb-12"
+      class="relative pt-16 md:pt-24 pb-12 overflow-hidden light:bg-white"
     >
       <div
-        class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
+        class="absolute inset-0 bg-gradient-to-b from-purple/50 to-transparent pointer-events-none light:from-gray-50 light:to-transparent"
+      />
+      <div
+        class="relative mx-auto max-w-3xl w-full px-6 lg:px-0 flex flex-col items-center"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-6 flex pb-4"
+          class="flex items-center justify-between w-full mb-6"
         >
-          <div
-            class="self-stretch flex-col justify-center items-center gap-4 flex"
+          <nav
+            aria-label="Breadcrumb"
+            class="flex items-center gap-2"
           >
-            <div
-              class="justify-start items-center gap-3 inline-flex"
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 14 14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-              <div
-                class="text-rose-600 text-base font-bold leading-normal"
-              >
-                News article
-              </div>
-            </div>
-            <h1
-              class="self-stretch text-center text-white text-2xl md:text-5xl pb-4 font-semibold break-words"
-            >
-              <span
-                class="break-words whitespace-normal"
-              >
-                Test Article
-              </span>
-            </h1>
-          </div>
-          <div
-            class="self-stretch text-center text-grey text-grey-300 text-lg md:text-xl font-normal leading-7"
-          >
-            desc
-          </div>
-          <div
-            class="flex justify-center items-center gap-5"
-          >
-            <div
-              class="flex justify-center items-center gap-5"
-            >
-              <img
-                alt="Jane Doe"
-                class="ml-2 mb-0 rounded-full"
-                height="30"
-                src="/images/authors/jdoe.jpg"
-                width="30"
+              <rect
+                fill="#FF1464"
+                height="8"
+                rx="2"
+                width="8"
+                x="3"
+                y="3"
               />
-              <span
-                class="text-[16px] font-bold leading-[150%] text-white"
-              >
-                <a
-                  href="/news/author/jdoe"
-                >
-                  <span
-                    class="text-primary pr-2"
-                  >
-                    Jane Doe
-                    ,
-                  </span>
-                   
-                  June 18, 2025
-                </a>
-              </span>
-            </div>
+              <rect
+                height="11"
+                rx="3.5"
+                stroke="#FF1464"
+                stroke-opacity="0.25"
+                stroke-width="3"
+                width="11"
+                x="1.5"
+                y="1.5"
+              />
+            </svg>
+            <a
+              class="text-pink text-sm font-semibold uppercase tracking-wider underline hover:no-underline transition-colors"
+              href="/news"
+            >
+              News
+            </a>
+            <span
+              class="text-gray-500 text-sm"
+            >
+              /
+            </span>
+            <span
+              class="text-gray-400 light:text-gray-500 text-sm truncate max-w-[200px] md:max-w-xs"
+            >
+              Test Article
+            </span>
+          </nav>
+          <button
+            aria-label="Text"
+            class="flex items-center gap-2 text-xs transition-colors px-2 py-1 rounded-md border text-gray-400 hover:text-white border-white/10 hover:border-white/20"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            Text
+          </button>
+        </div>
+        <h1
+          class="text-center text-white light:text-gray-900 text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-6"
+        >
+          Test Article
+        </h1>
+        <p
+          class="text-center text-gray-400 light:text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl mb-8"
+        >
+          desc
+        </p>
+        <div
+          class="flex items-center gap-4"
+        >
+          <img
+            alt="Jane Doe"
+            class="ml-2 mb-0 rounded-full"
+            height="30"
+            src="/images/authors/jdoe.jpg"
+            width="30"
+          />
+          <div
+            class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm"
+          >
+            <a
+              class="font-semibold text-pink hover:underline transition-colors"
+              href="/news/author/jdoe"
+            >
+              Jane Doe
+            </a>
+            <span
+              class="hidden sm:inline text-gray-600"
+            >
+              ·
+            </span>
+            <time
+              class="text-gray-400 light:text-gray-500"
+            >
+              June 18, 2025
+            </time>
           </div>
         </div>
       </div>
     </div>
-    <section
-      class="w-full mx-auto p-0 md:p-6 lg:px-0 flex flex-col md:items-center justify-center"
+    <div
+      class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-0 pb-16 light:bg-white"
     >
       <div
-        class="w-full max-w-full m-2 md:m-4 md:max-w-4xl bg-white/5 rounded-2xl shadow-2xl p-2 md:p-12 relative z-10 overflow-x-auto"
+        class="rounded-2xl border border-white/10 light:border-gray-200 bg-white/[0.03] light:bg-white backdrop-blur-sm shadow-xl light:shadow-md overflow-hidden"
       >
-        <article>
-          <header
-            class="py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-white/10 mb-8 px-2 md:px-0"
+        <header
+          class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-6 md:px-10 py-5 border-b border-white/10 light:border-gray-200"
+        >
+          <div
+            class="flex flex-wrap gap-2"
           >
-            <div
-              id="share-buttons"
+            <a
+              class="px-3 py-1 text-xs font-medium bg-white/10 light:bg-gray-100 hover:bg-pink/20 text-gray-300 light:text-gray-600 hover:text-pink border border-white/10 light:border-gray-200 hover:border-pink/30 transition-all rounded-full"
+              href="/news?tag=temurin"
             >
-              <button
-                aria-label="Share on X (Twitter)"
-                class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
-                type="button"
-              >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Share on Linkedin"
-                class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
-                type="button"
-              >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 448 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Share on Facebook"
-                class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
-                type="button"
-              >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Share on Reddit"
-                class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
-                type="button"
-              >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Share on Bluesky"
-                class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
-                type="button"
-              >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"
-                  />
-                </svg>
-              </button>
-              <button
-                aria-label="Share via Email"
-                class="react-share__ShareButton mr-2"
-                style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
-                type="button"
-              >
-                <svg
-                  fill="currentColor"
-                  height="25"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 512 512"
-                  width="25"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              class="flex flex-wrap gap-2 mt-6"
+              #
+              temurin
+            </a>
+          </div>
+          <div
+            class="flex items-center gap-1 text-white/70 light:text-gray-500 [&>button:hover]:text-white light:[&>button:hover]:text-gray-900 [&>button]:transition-colors"
+            id="share-buttons"
+          >
+            <button
+              aria-label="Share on X (Twitter)"
+              class="react-share__ShareButton mr-2"
+              style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+              type="button"
             >
-              <a
-                class="px-3 py-1 text-sm bg-pink hover:bg-rose-800 transition-colors rounded-full text-white"
-                href="/news?tag=temurin"
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                #
-                temurin
-              </a>
-            </div>
-          </header>
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Linkedin"
+              class="react-share__ShareButton mr-2"
+              style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Facebook"
+              class="react-share__ShareButton mr-2"
+              style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Reddit"
+              class="react-share__ShareButton mr-2"
+              style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share on Bluesky"
+              class="react-share__ShareButton mr-2"
+              style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Share via Email"
+              class="react-share__ShareButton mr-2"
+              style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="25"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+            </button>
+          </div>
+        </header>
+        <div
+          class="px-6 md:px-10 py-8 md:py-12"
+        >
           <article
-            class="prose prose-invert lg:prose-lg max-w-full px-2 md:px-0"
+            class="prose prose-invert light:prose-gray lg:prose-lg max-w-none prose-headings:tracking-tight prose-a:text-pink prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-pre:rounded-xl prose-pre:border-0 prose-pre:bg-[rgb(255,255,255,0.03)] light:prose-pre:bg-gray-50 light:prose-pre:border light:prose-pre:border-gray-200"
           >
             <div>
               MDX Content
             </div>
           </article>
-        </article>
-        <div
-          class="mt-8 px-2 md:px-0"
-        >
-          <ul
-            class="flex flex-wrap justify-between list-none pt-5 md:p-0"
-          >
-            <li />
-            <li />
-          </ul>
         </div>
+        <nav
+          aria-label="Post navigation"
+          class="flex items-stretch border-t border-white/10 light:border-gray-200"
+        >
+          <div
+            class="flex-1 border-r border-white/10 light:border-gray-200"
+          />
+          <div
+            class="flex-1 text-right"
+          />
+        </nav>
       </div>
-    </section>
+    </div>
   </section>
 </div>
 `;

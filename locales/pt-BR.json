@@ -8,6 +8,34 @@
     "sustainer-cta-description": "Milhões confiam no Eclipse Temurin. Seu apoio o mantém funcionando",
     "sustainer-cta-button": "Reinvestir no Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "Obrigado por baixar",
+    "vendor-build": "Build da {vendor}",
+    "auto-start-p1": "O download do seu runtime OpenJDK deve começar automaticamente em alguns segundos.",
+    "auto-start-p2": "Se não começar, ",
+    "click-here": "clique aqui para reiniciar manualmente",
+    "community-action": "Ação da Comunidade Necessária",
+    "free-to-use": "Gratuito para usar,",
+    "not-free-to-build": "não gratuito para manter.",
+    "appeal-quote": "Gratuito para usar, mas não gratuito para manter. O patrocínio ajuda a manter o projeto saudável e em crescimento.",
+    "appeal-text": "O Eclipse Temurin tem a confiança de milhões de desenvolvedores em todo o mundo. Para garantir o futuro desses binários de código aberto de alta qualidade, precisamos do seu patrocínio para sustentabilidade a longo prazo.",
+    "github-sponsor-btn": "Patrocinador no GitHub",
+    "become-sustainer-btn": "Tornar-se um Patrocinador",
+    "corporate-sponsorship-btn": "Patrocinador Corporativo",
+    "vendor-alert": "Você está baixando uma versão da <vendorWrapper>{vendor}</vendorWrapper>, um membro do Eclipse Adoptium Working Group.",
+    "why-we-need-you": "Por que precisamos de você",
+    "infra-costs-title": "Custos de Infraestrutura",
+    "infra-costs-desc": "Testar em mais de 50 plataformas requer enorme poder computacional.",
+    "security-speed-title": "Segurança e Velocidade",
+    "security-speed-desc": "Atualizações rápidas e seguras exigem recursos dedicados.",
+    "open-source-title": "Verdadeiro Open Source",
+    "open-source-desc": "Manter os ambientes de execução Java de código aberto gratuitos para sempre significa financiá-los juntos.",
+    "resources-next-steps": "Recursos e Próximos Passos",
+    "installation-guide-title": "Guia de Instalação",
+    "installation-guide-desc": "Instruções passo a passo para começar a usar seu novo runtime Java.",
+    "documentation-title": "Documentação",
+    "documentation-desc": "Documentação abrangente para o Eclipse Temurin e o ecossistema Adoptium."
+  },
   "NotFoundPage": {
     "title": "Desculpe, não conseguimos encontrar esta página",
     "back-to-home": "Voltar para a Página Inicial"
@@ -111,6 +139,18 @@
     "help-us-make-these-docs-great": "Ajude-nos a melhorar esta documentação!",
     "all-adoptium-docs-are-open-source": "Toda a documentação do Adoptium é open source. Viu algo errado ou confuso?",
     "edit-this-page": "Edite esta página"
+  },
+  "DocThemeToggle": {
+    "light": "Claro",
+    "dark": "Escuro",
+    "switch-to-light": "Mudar para modo claro",
+    "switch-to-dark": "Mudar para modo escuro"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "Nesta página"
+  },
+  "DocumentationSearch": {
+    "placeholder": "Pesquisar documentação..."
   },
   "Asciidoc": {
     "table-of-contents": "Índice",
@@ -225,5 +265,24 @@
     "title": "Mapa do site",
     "subtitle": "Navegar no Adoptium",
     "description": "Visão geral completa de todas as páginas, documentação e recursos disponíveis no site Adoptium. Encontre rapidamente o que você está procurando."
+  },
+  "DocsPage": {
+    "home": "Início",
+    "documentation": "Documentação",
+    "title": "Documentação Adoptium®",
+    "subtitle": "Guias, referências e recursos para Eclipse Adoptium e Eclipse Temurin",
+    "getting-started": "Primeiros passos",
+    "explore-by-topic": "Explorar por tópico",
+    "install-temurin": "Instalar Temurin",
+    "install-temurin-desc": "Guia de instalação passo a passo para todas as plataformas",
+    "download-temurin": "Baixar Temurin",
+    "download-temurin-desc": "Obter as versões mais recentes do Eclipse Temurin",
+    "migration-guide": "Guia de migração",
+    "migration-guide-desc": "Migrar para o Eclipse Temurin de outros JDKs",
+    "supported-platforms": "Plataformas suportadas",
+    "supported-platforms-desc": "Matriz de compatibilidade de sistemas operacionais e arquiteturas"
+  },
+  "Byline": {
+    "reading-time": "{minutes} min de leitura"
   }
 }

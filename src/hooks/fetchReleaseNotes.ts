@@ -1,32 +1,27 @@
-import { VersionMetaData } from ".";
+import type { components, operations } from "@/types/adoptiumApiTypes";
 import { useEffect, useState } from "react";
-import axios from "axios";
-
-const baseUrl = "https://api.adoptium.net/v3/info/release_notes";
-const releaseNamesUrl =
-  "https://api.adoptium.net/v3/info/release_names?heap_size=normal&image_type=jdk&lts=true&page=0&page_size=1&project=jdk&release_type=ga&semver=false&sort_method=DEFAULT&sort_order=DESC&vendor=eclipse";
+import {
+  fetchReleaseNotes as apiFetchReleaseNotes,
+  fetchLatestReleaseName,
+  fetchLatestAssets,
+} from "@/services/adoptiumApi";
 
 // Function to get the latest version string for a major version
 async function getLatestVersionForMajor(
-  majorVersion: string
+  majorVersion: string,
 ): Promise<string | null> {
   try {
-    // Use the assets API to get the latest release for this major version
-    const url = `https://api.adoptium.net/v3/assets/latest/${majorVersion}/hotspot`;
-    const response = await axios.get(url);
-
-    if (
-      response.data &&
-      response.data.length > 0 &&
-      response.data[0].release_name
-    ) {
-      return response.data[0].release_name;
+    const data = (await fetchLatestAssets(majorVersion)) as Array<{
+      release_name: string;
+    }>;
+    if (data && data.length > 0 && data[0].release_name) {
+      return data[0].release_name;
     }
     return null;
   } catch (error) {
     console.error(
       `Failed to fetch latest version for major version ${majorVersion}:`,
-      error
+      error,
     );
     return null;
   }
@@ -35,10 +30,10 @@ async function getLatestVersionForMajor(
 export function useFetchReleaseNotesForVersion(
   isVisible: boolean,
   version: string | undefined,
-  sortReleaseNotesByCallback?: (result: ReleaseNoteAPIResponse) => void
+  sortReleaseNotesByCallback?: (result: ReleaseNoteAPIResponse) => void,
 ): ReleaseNoteDataBag | null {
   const [releaseNotes, setReleaseNotes] = useState<ReleaseNoteDataBag | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -47,39 +42,27 @@ export function useFetchReleaseNotesForVersion(
         let versionToDisplay = version;
 
         if (!versionToDisplay) {
-          // retrieve the last version as default Release notes
-          await axios
-            .get(releaseNamesUrl)
-            .then(function (response) {
-              versionToDisplay = response.data.releases[0];
-            })
-            .catch(function () {
-              // ignore
-            });
+          versionToDisplay = (await fetchLatestReleaseName()) ?? undefined;
         } else {
           // Check if the version is just a major version number (e.g., "8", "11", "17")
           const majorVersionRegex = /^\d+$/;
           if (majorVersionRegex.test(versionToDisplay)) {
-            // Get the latest release for this major version
-            const latestVersion = await getLatestVersionForMajor(
-              versionToDisplay
-            );
+            const latestVersion =
+              await getLatestVersionForMajor(versionToDisplay);
             if (latestVersion) {
               versionToDisplay = latestVersion;
             }
           }
         }
 
-        const url = `${baseUrl}/${versionToDisplay}`;
-
-        await axios
-          .get(url.toString())
-          .then(function (response) {
-            const result = response.data;
-            if (sortReleaseNotesByCallback) sortReleaseNotesByCallback(result);
+        await apiFetchReleaseNotes(versionToDisplay!)
+          .then(function (result: unknown) {
+            const response = result as ReleaseNoteAPIResponse;
+            if (sortReleaseNotesByCallback)
+              sortReleaseNotesByCallback(response);
             const releaseNoteDataBag: ReleaseNoteDataBag = {
-              releaseNoteAPIResponse: result,
-              isValid: result.release_notes !== null,
+              releaseNoteAPIResponse: response,
+              isValid: response.release_notes !== null,
             };
             setReleaseNotes(releaseNoteDataBag);
           })
@@ -101,21 +84,7 @@ export interface ReleaseNoteDataBag {
   isValid: boolean;
 }
 
-export interface ReleaseNoteAPIResponse {
-  id: string;
-  release_name: string;
-  release_notes: ReleaseNote[];
-  vendor: string;
-  version_data: VersionMetaData;
-}
+export type ReleaseNoteAPIResponse =
+  operations["getReleaseNotes"]["responses"][200]["content"]["application/json"];
 
-export interface ReleaseNote {
-  id: string;
-  link: URL;
-  title: string;
-  backportOf?: string;
-  priority?: string;
-  component?: string;
-  subcomponent?: string;
-  type?: string;
-}
+export type ReleaseNote = components["schemas"]["ReleaseNote"];

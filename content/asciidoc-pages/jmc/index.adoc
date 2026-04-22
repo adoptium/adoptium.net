@@ -1,6 +1,7 @@
 = Eclipse Mission Control
 :page-authors: reinhapa, thegreystone, gdams, karianna, jiekang, hendrikebbers, ggam, xavierfacq
-:stable: 9.1.1
+:page-logo: /images/projects/mission-control-logo.png
+:stable: 9.1.2
 :snapshot: 10.0.0-SNAPSHOT
 
 Eclipse Mission Control is a low-overhead profiling and diagnostics tools
@@ -52,7 +53,7 @@ https://github.com/thegreystone/jmc-tutorial[Marcus Hirt’s tutorial].
 
 |=======================================================================
 
-== Note (MacOS X)
+== Note (macOS)
 
 Please unpack the archive using:
 
@@ -76,4 +77,4 @@ the Eclipse IDE:
 
 == Older Releases
 
-include::old-releases.adoc[]
+include::_partials/old-releases.adoc[]

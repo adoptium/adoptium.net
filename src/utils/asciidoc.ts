@@ -15,7 +15,7 @@ interface AsciidoctorReader {
     file: string,
     target: string,
     line: number,
-    attributes: Record<string, unknown>
+    attributes: Record<string, unknown>,
   ): void;
 }
 
@@ -47,7 +47,7 @@ class CustomIncludeProcessor {
     doc: AsciidoctorDocument,
     reader: AsciidoctorReader,
     target: string,
-    attributes: AsciidoctorAttributes
+    attributes: AsciidoctorAttributes,
   ) {
     // Get current file directory to resolve relative includes correctly
     const currentDir = path.dirname(doc.getSourceLocation().getPath());
@@ -74,7 +74,7 @@ class CustomIncludeProcessor {
         target,
         target,
         1,
-        attributes
+        attributes,
       );
     }
   }
@@ -83,7 +83,7 @@ class CustomIncludeProcessor {
 export function processAsciiDoc(
   filePath: string,
   content: string,
-  options: Record<string, unknown> = {}
+  options: Record<string, unknown> = {},
 ) {
   const basePath = path.dirname(filePath);
   const registry = Asciidoctor.Extensions.create();
@@ -105,7 +105,7 @@ export function processAsciiDoc(
       doc: AsciidoctorDocument,
       reader: AsciidoctorReader,
       target: string,
-      attrs: AsciidoctorAttributes
+      attrs: AsciidoctorAttributes,
     ) {
       return customProcessor.process(doc, reader, target, attrs);
     };
@@ -132,8 +132,15 @@ export function processAsciiDoc(
     defaultOptions.extension_registry = registry;
   }
 
-  // Merge options
-  const mergedOptions = { ...defaultOptions, ...options };
+  // Merge options, deep-merging attributes
+  const mergedOptions = {
+    ...defaultOptions,
+    ...options,
+    attributes: {
+      ...(defaultOptions.attributes as Record<string, unknown>),
+      ...((options.attributes as Record<string, unknown>) || {}),
+    },
+  };
 
   // Convert AsciiDoc to HTML - use the processor without extension registration
   // if we're having issues with extensions
@@ -142,7 +149,7 @@ export function processAsciiDoc(
     // Post-process image src paths: replace src="filename.png" with src="/docs/filename.png" if not already absolute or external
     html = html.replace(
       /<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi,
-      '<img$1src="/docs/$2"'
+      '<img$1src="/docs/$2"',
     );
     return html;
   } catch (error) {
@@ -156,7 +163,7 @@ export function processAsciiDoc(
     let html = Asciidoctor.convert(content, fallbackOptions) as string;
     html = html.replace(
       /<img([^>]+)src=["'](?![a-z]+:|\/)([^"'>]+)["']/gi,
-      '<img$1src="/docs/$2"'
+      '<img$1src="/docs/$2"',
     );
     return html;
   }
@@ -174,14 +181,17 @@ export function decodeHtmlEntities(text: string): string {
  */
 export function extractMetadata(
   filePath: string,
-  content: string
+  content: string,
 ): {
   title: string;
   description: string;
   authors: string[];
   attributes: Record<string, unknown>;
 } {
-  const doc = Asciidoctor.load(content, { safe: "server" });
+  const doc = Asciidoctor.load(content, {
+    safe: "server",
+    base_dir: path.dirname(filePath),
+  });
 
   // Get the title and ensure it's a string
   const docTitle = doc.getDocumentTitle();
@@ -227,7 +237,7 @@ export function fileExists(filePath: string): boolean {
  */
 export function getLanguageVariants(
   basePath: string,
-  fileName: string
+  fileName: string,
 ): string[] {
   const dir = path.dirname(basePath);
   const baseFileName = path.basename(fileName, ".adoc");
@@ -241,7 +251,7 @@ export function getLanguageVariants(
   return files.map((file) => {
     // Format: index.de.adoc -> de
     const match = file.match(
-      new RegExp(`${baseFileName}(?:\\.([\\w-]+))?\\.adoc$`)
+      new RegExp(`${baseFileName}(?:\\.([\\w-]+))?\\.adoc$`),
     );
     return match && match[1] ? match[1] : "en";
   });

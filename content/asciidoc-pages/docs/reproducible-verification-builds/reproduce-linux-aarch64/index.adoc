@@ -3,7 +3,7 @@
 :keywords: Reproducible Builds Secure Supply Chain
 :orgname: Eclipse Adoptium
 :lang: en
-:page-authors: andrew-m-leonard
+:page-authors: andrew-m-leonard, gdams
 
 The following instructions detail the process of rebuilding identically from "source" in a secure build environment, a reproducible build for a given Eclipse Temurin release on the Linux aarch64 platform. The process is performed in a secure manner, using only the upstream sources and securely verified build tooling, so as to provide a mechanism to securely verify the given Eclipse Temurin release binary. This verification then helps determine the security of the supply chains used to build the Eclipse Temurin official release binaries.
 
@@ -25,28 +25,28 @@ To re-build identically Eclipse Temurin on Linux aarch64, a suitable Centos or R
 +
 Centos7/8:
 +
-[source,]
+[source,bash]
 ----
 yum install epel-release
 ----
 +
 RHEL7:
 +
-[source,]
+[source,bash]
 ----
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 ----
 +
 RHEL8:
 +
-[source,]
+[source,bash]
 ----
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
 
 . Install Build Tools
 +
-[source,]
+[source,bash]
 ----
 yum install -y tar git patch gcc gcc-c++ wget bison texinfo lbzip2 zip unzip glibc glibc-devel libgcc
 yum install -y autoconf systemtap systemtap-sdt-devel
@@ -58,14 +58,14 @@ GNU make must be at least version 4, in order to build the gcc DevKit.
 +
 Check the GNU make version
 +
-[source,]
+[source,bash]
 ----
 make --version
 ----
 +
 If not at least version 4, then download and build GNU make 4.3 as follows:
 +
-[source,]
+[source,bash]
 ----
 curl -O -L https://ftp.gnu.org/gnu/make/make-4.3.tar.gz
 curl -O -L https://ftp.gnu.org/gnu/make/make-4.3.tar.gz.sig
@@ -84,7 +84,7 @@ ln -s /usr/local/bin/make /usr/local/bin/gmake
 +
 For identical builds, the build timezone must be UTC to ensure exact binary build output
 +
-[source,]
+[source,bash]
 ----
 timedatectl set-timezone UTC
 ----
@@ -94,7 +94,7 @@ timedatectl set-timezone UTC
 In order to securely and identically build a gcc DevKit Toolchain, securely download the following scripts from the Eclipse Adoptium repository. These scripts
 and patches enable the DevKit make process to build with a Centos sysroot and also enables GPG verified downloading of the Centos RPMs for additional integrity checking.
 +
-[source,]
+[source,bash]
 ----
 curl -L -O https://raw.githubusercontent.com/adoptium/ci-jenkins-pipelines/master/pipelines/build/devkit/make_devkit.sh
 curl -L -O https://raw.githubusercontent.com/adoptium/ci-jenkins-pipelines/master/pipelines/build/devkit/Tools.gmk.patch
@@ -103,7 +103,7 @@ curl -L -O https://raw.githubusercontent.com/adoptium/ci-jenkins-pipelines/maste
 
 . Build the gcc DevKit Toolchain from source
 +
-[source,]
+[source,bash]
 ----
 bash ./make_devkit.sh jdk21u aarch64 Centos 7.6.1810
 ----
@@ -112,16 +112,16 @@ The built "DevKit path" will be in folder jdk21u/build/devkit/result/aarch64-lin
 +
 Set LD_LIBRARY_PATH to locate the newly built DevKit libraries
 +
-[source,]
+[source,bash]
 ----
-        export LD_LIBRARY_PATH=<DevKit path>/lib64:<DevKit path>/lib
+export LD_LIBRARY_PATH=<DevKit path>/lib64:<DevKit path>/lib
 ----
 
 . Download SBOM of Eclipse Temurin build to be verified
 +
 For example, to download the SBOM and SBOM-metadata for release jdk-21.0.4+7
 +
-[source,]
+[source,bash]
 ----
 curl -L -O https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.4%2B7/OpenJDK21U-sbom_aarch64_linux_hotspot_21.0.4_7.json
 curl -L -O https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.4%2B7/OpenJDK21U-sbom_aarch64_linux_hotspot_21.0.4_7-metadata.json
@@ -131,12 +131,12 @@ curl -L -O https://github.com/adoptium/temurin21-binaries/releases/download/jdk-
 +
 Open the SBOM json file and determine the "SCM Ref" the release was built from
 +
-[source,]
+[source,json]
 ----
-        {
-          "name" : "SCM Ref",
-          "value" : "jdk-21.0.4+7_adopt"
-        },
+{
+  "name" : "SCM Ref",
+  "value" : "jdk-21.0.4+7_adopt"
+},
 ----
 +
 The upstream OpenJDK tag is this value without the "_adopt", eg. "jdk-21.0.4+7"
@@ -145,17 +145,17 @@ The upstream OpenJDK tag is this value without the "_adopt", eg. "jdk-21.0.4+7"
 +
 To build Temurin you need a suitable Boot JDK, open the SBOM json file and determine the version used to build the release
 +
-[source,]
+[source,json]
 ----
-      {
-        "name" : "BOOTJDK",
-        "version" : "20.0.2+9"
-      },
+{
+  "name" : "BOOTJDK",
+  "version" : "20.0.2+9"
+},
 ----
 +
 Securely download and verify the required version from the https://github.com/adoptium/temurin<NN>-binaries/releases
 +
-[source,]
+[source,bash]
 ----
 # Download JDK tar.gz
 curl -L -O https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20.0.2%2B9/OpenJDK20U-jdk_aarch64_linux_hotspot_20.0.2_9.tar.gz
@@ -171,14 +171,14 @@ Ensure "Good signature from Adoptium GPG Key (DEB/RPM Signing Key)"
 +
 Unpack into a suitable folder
 +
-[source,]
+[source,bash]
 ----
 tar -xf OpenJDK20U-jdk_aarch64_linux_hotspot_20.0.2_9.tar.gz
 ----
 +
 Add to PATH environment
 +
-[source,]
+[source,bash]
 ----
 export PATH=<bootjdk>/bin:$PATH
 ----
@@ -187,7 +187,7 @@ export PATH=<bootjdk>/bin:$PATH
 +
 Replace jdk21u with the upstream release being built
 +
-[source,]
+[source,bash]
 ----
 git clone https://github.com/openjdk/jdk21u.git jdk21u_bld
 # Checkout required tag to build
@@ -196,7 +196,7 @@ git clone https://github.com/openjdk/jdk21u.git jdk21u_bld
 
 . Create a local build directory
 +
-[source,]
+[source,bash]
 ----
 mkdir openjdk_build
 ----
@@ -209,7 +209,7 @@ Determine and edit the "configure args" to match your local environment
 +
 Use the following grep to find the required configure arguments from the SBOM-metadata.json
 +
-[source,]
+[source,bash]
 ----
 grep "using configure arguments" <SBOM-metadata.json> | sed -n -e "s/^.*using configure arguments '\(.*\)'\..*/\1/p"
 ----
@@ -219,7 +219,7 @@ grep "using configure arguments" <SBOM-metadata.json> | sed -n -e "s/^.*using co
 +
 Configure from the "openjdk_build" directory
 +
-[source,]
+[source,bash]
 ----
 cd openjdk_build
 bash ../jdk21u_bld/configure <edited configure args>
@@ -227,7 +227,7 @@ bash ../jdk21u_bld/configure <edited configure args>
 
 . Build Temurin
 +
-[source,]
+[source,bash]
 ----
 make images
 ----
@@ -239,7 +239,7 @@ make images
 .. “demo” : Temurin does not ship the “demo” example files
 .. “debuginfo” : Temurin JDK tarball does not contain debuginfo
 +
-[source,]
+[source,bash]
 ----
 rm -f images/jdk/lib/security/cacerts
 rm -f images/jdk/release
@@ -255,7 +255,7 @@ cd ..
 +
 Download and unpack the Temurin JDK to be verified:
 +
-[source,]
+[source,bash]
 ----
 curl -L -o temurin-linux-aarch64-jdk-21.0.4+7.tar.gz https://api.adoptium.net/v3/binary/version/jdk-21.0.4+7/linux/aarch64/jdk/hotspot/normal/adoptium
 tar -xf temurin-linux-aarch64-jdk-21.0.4+7.tar.gz
@@ -263,7 +263,7 @@ tar -xf temurin-linux-aarch64-jdk-21.0.4+7.tar.gz
 
 . Remove the same non-relevant files
 +
-[source,]
+[source,bash]
 ----
 rm -f jdk-21.0.4+7/lib/security/cacerts
 rm -f jdk-21.0.4+7/release
@@ -276,7 +276,7 @@ rm -f jdk-21.0.4+7/jmods/java.base_expanded/lib/security/cacerts
 +
 Compare the two images
 +
-[source,]
+[source,bash]
 ----
 diff -r openjdk_build/images/jdk jdk-21.0.4+7
 ----

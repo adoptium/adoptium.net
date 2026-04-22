@@ -4,7 +4,7 @@ exports[`NewsPage (paginated) > renders header and passes correct props to NewsP
 <div>
   <div>
     <div
-      class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+      class="relative overflow-hidden pt-14 pb-8 md:pt-20"
     >
       <div
         class="w-full relative"
@@ -23,10 +23,10 @@ exports[`NewsPage (paginated) > renders header and passes correct props to NewsP
         class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-6 flex"
+          class="self-stretch flex-col justify-center items-center flex gap-1"
         >
           <div
-            class="self-stretch flex-col justify-center items-center gap-4 flex"
+            class="self-stretch flex-col justify-center items-center flex gap-1"
           >
             <div
               class="justify-start items-center gap-3 inline-flex"
@@ -64,13 +64,13 @@ exports[`NewsPage (paginated) > renders header and passes correct props to NewsP
               </div>
             </div>
             <div
-              class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+              class="self-stretch text-center text-white font-semibold text-2xl md:text-4xl leading-tight"
             >
               News & Updates
             </div>
           </div>
           <div
-            class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] mx-auto max-w-[860px] px-2 w-full"
+            class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-sm mx-auto max-w-[860px] px-2 w-full"
           >
             Follow the latest updates from the Eclipse Adoptium Project
           </div>

@@ -1,9 +1,9 @@
-= Adoptium marketing criteria
+= Adoptium(R) Marketing Criteria
 :description: Adoptium Marketing Criteria
 :keywords: adoptium marketing
 :orgname: Eclipse Adoptium
 :lang: en
-:page-authors: Ndacyayisenga-droid
+:page-authors: Ndacyayisenga-droid, gdams
 
 Adoptium Working Group has defined how to share and publish an event, news, or social media post; the final decision on posting is made and managed by the Adoptium marketing committee. The committee uses the Adoptium Slack channel #marketing, and this information is also shared using #community and #buzz channels.
 
@@ -23,7 +23,7 @@ The goal of this part is to define proper criteria to publish and share an event
 
 4. Remember to share the event on the https://adoptium.slack.com/archives/C01BUN6GJUB[#community^] channel as well.
 
-== Share a news
+== Share news
 
 The goal of this document is to define proper criteria to publish and share a piece of news at the Adoptium / news and event https://adoptium.net/news/
 

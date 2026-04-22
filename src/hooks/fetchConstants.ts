@@ -1,49 +1,45 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { capitalize } from "@/utils/capitalize";
-
-const baseUrl = "https://api.adoptium.net/v3";
+import type { components } from "@/types/adoptiumApiTypes";
+import {
+  fetchOperatingSystems,
+  fetchArchitectures,
+} from "@/services/adoptiumApi";
 
 export function useOses(isVisible: boolean): OperatingSystem[] {
   const [oses, setOses] = useState<OperatingSystem[]>([]);
 
   useEffect(() => {
     let isMounted = true;
-    const cancelToken = axios.CancelToken.source();
+    const controller = new AbortController();
 
     if (isVisible) {
-      (async () => {
-        const url = `${baseUrl}/types/operating_systems`;
-
-        axios
-          .get(url, { cancelToken: cancelToken.token })
-          .then(function (response) {
-            if (!isMounted) return;
-
-            const newOses = response.data
-              .map((s: string) => {
-                const o: OperatingSystem = {
-                  name: capitalize(s),
-                  value: s.toLowerCase(),
-                };
-                return o;
-              })
-              .sort((o1: OperatingSystem, o2: OperatingSystem) =>
-                o1.name.localeCompare(o2.name)
-              );
-
-            setOses(newOses);
-          })
-          .catch(function (error) {
-            if (!isMounted || axios.isCancel(error)) return;
-            setOses([]);
-          });
-      })();
+      fetchOperatingSystems(controller.signal)
+        .then((data: string[]) => {
+          if (!isMounted) return;
+          const newOses = data
+            .map((s: string) => {
+              const o: OperatingSystem = {
+                name: capitalize(s),
+                value:
+                  s.toLowerCase() as components["schemas"]["OperatingSystem"],
+              };
+              return o;
+            })
+            .sort((o1: OperatingSystem, o2: OperatingSystem) =>
+              o1.name.localeCompare(o2.name),
+            );
+          setOses(newOses);
+        })
+        .catch(() => {
+          if (!isMounted) return;
+          setOses([]);
+        });
     }
 
     return () => {
       isMounted = false;
-      cancelToken.cancel("Component unmounted");
+      controller.abort();
     };
   }, [isVisible]);
 
@@ -55,39 +51,35 @@ export function useArches(isVisible: boolean): Architecture[] {
 
   useEffect(() => {
     let isMounted = true;
-    const cancelToken = axios.CancelToken.source();
+    const controller = new AbortController();
 
     if (isVisible) {
-      (async () => {
-        const url = `${baseUrl}/types/architectures`;
-
-        axios
-          .get(url, { cancelToken: cancelToken.token })
-          .then(function (response) {
-            if (!isMounted) return;
-
-            const newArches = response.data
-              .map((s: string) => {
-                const a: Architecture = { name: s, value: s.toLowerCase() };
-                if (a.name === "x32") a.name = "x86";
-                return a;
-              })
-              .sort((a1: Architecture, a2: Architecture) =>
-                a1.name.localeCompare(a2.name)
-              );
-
-            setArches(newArches);
-          })
-          .catch(function (error) {
-            if (!isMounted || axios.isCancel(error)) return;
-            setArches([]);
-          });
-      })();
+      fetchArchitectures(controller.signal)
+        .then((data: string[]) => {
+          if (!isMounted) return;
+          const newArches = data
+            .map((s: string) => {
+              const a: Architecture = {
+                name: s,
+                value: s.toLowerCase() as components["schemas"]["Architecture"],
+              };
+              if (a.name === "x32") a.name = "x86";
+              return a;
+            })
+            .sort((a1: Architecture, a2: Architecture) =>
+              a1.name.localeCompare(a2.name),
+            );
+          setArches(newArches);
+        })
+        .catch(() => {
+          if (!isMounted) return;
+          setArches([]);
+        });
     }
 
     return () => {
       isMounted = false;
-      cancelToken.cancel("Component unmounted");
+      controller.abort();
     };
   }, [isVisible]);
 
@@ -96,10 +88,10 @@ export function useArches(isVisible: boolean): Architecture[] {
 
 export interface OperatingSystem {
   name: string;
-  value: string;
+  value: components["schemas"]["OperatingSystem"];
 }
 
 export interface Architecture {
   name: string;
-  value: string;
+  value: components["schemas"]["Architecture"];
 }

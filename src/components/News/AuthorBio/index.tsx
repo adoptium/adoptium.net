@@ -1,7 +1,7 @@
 import React from "react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import ProfilePic from "@/components/ProfilePic"
+import ProfilePic from "@/components/Common/ProfilePic"
 
 
 interface GitHubLinkProps {

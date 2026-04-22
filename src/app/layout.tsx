@@ -78,7 +78,7 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <head>
         <link rel="sitemap" type="application/xml" href="/sitemap.xml"></link>
         <link

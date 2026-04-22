@@ -8,6 +8,34 @@
     "sustainer-cta-description": "Millions Rely on Eclipse Temurin. Your Support Keeps It Going",
     "sustainer-cta-button": "Reinvest in Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "Thank you for downloading",
+    "vendor-build": "{vendor} Build",
+    "vendor-alert": "You are downloading a build from <vendorWrapper>{vendor}</vendorWrapper>, a member of the Eclipse Adoptium Working Group.",
+    "auto-start-p1": "Your OpenJDK runtime download should start automatically in a few seconds.",
+    "auto-start-p2": "If it doesn't, ",
+    "click-here": "click here to restart it manually",
+    "community-action": "Community Action Required",
+    "free-to-use": "Free to use,",
+    "not-free-to-build": "not free to maintain.",
+    "appeal-quote": "Free to use, but not free to maintain. Sponsorship helps keep the project healthy and growing.",
+    "appeal-text": "Eclipse Temurin is trusted by millions of developers worldwide. To ensure the future of these high-quality, open-source binaries, we need your sponsorship for long-term sustainability.",
+    "github-sponsor-btn": "GitHub Sponsor",
+    "become-sustainer-btn": "Become a Sponsor",
+    "corporate-sponsorship-btn": "Corporate Sponsor",
+    "why-we-need-you": "Why we need you",
+    "infra-costs-title": "Infrastructure Costs",
+    "infra-costs-desc": "Testing on 50+ platforms requires massive compute power.",
+    "security-speed-title": "Security & Speed",
+    "security-speed-desc": "Fast, secure updates require dedicated resources.",
+    "open-source-title": "True Open Source",
+    "open-source-desc": "Keeping open source Java Runtimes free forever means funding it together.",
+    "resources-next-steps": "Resources & Next Steps",
+    "installation-guide-title": "Installation Guide",
+    "installation-guide-desc": "Step-by-step instructions for getting up and running with your new Java runtime.",
+    "documentation-title": "Documentation",
+    "documentation-desc": "Comprehensive documentation for Eclipse Temurin and the Adoptium ecosystem."
+  },
   "NotFoundPage": {
     "title": "Sorry, we couldn't find this page",
     "back-to-home": "Back to Home"
@@ -111,6 +139,18 @@
     "help-us-make-these-docs-great": "Help us make these docs great!",
     "all-adoptium-docs-are-open-source": "All Adoptium docs are open source. See something that's wrong or unclear?",
     "edit-this-page": "Edit this page"
+  },
+  "DocThemeToggle": {
+    "light": "Light",
+    "dark": "Dark",
+    "switch-to-light": "Switch to light mode",
+    "switch-to-dark": "Switch to dark mode"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "On this page"
+  },
+  "DocumentationSearch": {
+    "placeholder": "Search documentation..."
   },
   "Asciidoc": {
     "table-of-contents": "Table of Contents",
@@ -217,5 +257,24 @@
     "title": "Site Map",
     "subtitle": "Navigate Adoptium",
     "description": "Complete overview of all pages, documentation, and resources available on the Adoptium website. Find what you're looking for quickly and easily."
+  },
+  "DocsPage": {
+    "home": "Home",
+    "documentation": "Documentation",
+    "title": "Adoptium® Documentation",
+    "subtitle": "Guides, references, and resources for Eclipse Adoptium and Eclipse Temurin",
+    "getting-started": "Getting Started",
+    "explore-by-topic": "Explore by topic",
+    "install-temurin": "Install Temurin",
+    "install-temurin-desc": "Step-by-step installation guide for all platforms",
+    "download-temurin": "Download Temurin",
+    "download-temurin-desc": "Get the latest Eclipse Temurin releases",
+    "migration-guide": "Migration Guide",
+    "migration-guide-desc": "Migrate to Eclipse Temurin from other JDKs",
+    "supported-platforms": "Supported Platforms",
+    "supported-platforms-desc": "OS and architecture compatibility matrix"
+  },
+  "Byline": {
+    "reading-time": "{minutes} min read"
   }
 }

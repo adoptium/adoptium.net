@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 import DownloadButton from "./DownloadButton";
-import LogoCarousel from "@/components/LogoCarousel";
+import LogoCarousel from "@/components/Logos/Carousel";
 import Image from "next/image";
 
 type HeroSectionProps = {
@@ -44,6 +44,7 @@ const HeroSection = ({ latestLTS }: HeroSectionProps) => {
             src="/images/backgrounds/temurin-hero-img.png"
             alt="Temurin Logo Background"
             fill
+            sizes="1000px"
             className="object-contain"
             priority
           />

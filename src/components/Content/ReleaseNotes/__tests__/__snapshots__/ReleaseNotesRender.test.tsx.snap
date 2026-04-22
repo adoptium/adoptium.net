@@ -1,0 +1,661 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ReleaseNotesRender component > should render correctly - no release notes 1`] = `
+<div>
+  <div
+    class="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+  >
+    <div
+      class="text-center mb-10"
+    >
+      <h2
+        class="text-[42px] font-semibold tracking-tight text-white mb-1"
+      >
+        release_name_mock
+      </h2>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="w-full"
+      >
+        <div
+          class="rounded-2xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] p-12 text-center"
+        >
+          <h2
+            class="text-2xl font-semibold text-white tracking-tight mb-3"
+          >
+            Text
+          </h2>
+          <span
+            class="text-white/50 text-base"
+          >
+            Text
+             
+            <code
+              class="bg-white/[0.06] px-2 py-1 rounded-md text-pink text-sm font-mono"
+            >
+              ?version=x.x.x
+            </code>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ReleaseNotesRender component > should render correctly - version not defined 1`] = `
+<div>
+  <div
+    class="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+  >
+    <div
+      class="text-center mb-10"
+    >
+      <h2
+        class="text-[42px] font-semibold tracking-tight text-white mb-1"
+      >
+        release_name_mock
+      </h2>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="w-full"
+      >
+        <div
+          class="text-center mb-10 max-w-2xl mx-auto"
+        >
+          <p
+            class="text-base text-white/50 leading-relaxed mb-4"
+          >
+            Text
+          </p>
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-4 py-1.5"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-pink/80"
+            />
+            <span
+              class="text-sm text-white/60"
+            >
+              <span
+                class="font-medium text-white/80"
+              >
+                2
+              </span>
+               
+              P1 fixes
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6"
+        >
+          <div
+            class="flex items-center gap-2 flex-wrap"
+          >
+            <select
+              aria-label="Filter by priority"
+              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value=""
+              >
+                All Priorities
+              </option>
+              <option
+                value="1"
+              >
+                P
+                1
+              </option>
+            </select>
+            <select
+              aria-label="Filter by type"
+              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value=""
+              >
+                All Types
+              </option>
+              <option
+                value="Bug"
+              >
+                Bug
+              </option>
+            </select>
+            <select
+              aria-label="Filter by component"
+              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value=""
+              >
+                All Components
+              </option>
+              <option
+                value="component_mock"
+              >
+                component_mock
+              </option>
+            </select>
+          </div>
+          <button
+            class="text-sm font-medium text-white/50 hover:text-white bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-2 hover:bg-white/[0.08] hover:border-white/[0.14] transition-all duration-200"
+          >
+            Export CSV
+          </button>
+        </div>
+        <div
+          class="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl"
+        >
+          <table
+            aria-label="Release Notes"
+            class="w-full text-left"
+          >
+            <thead>
+              <tr
+                class="border-b border-white/[0.08]"
+              >
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase cursor-pointer select-none hover:text-white/70 transition-colors duration-200 w-[100px]"
+                >
+                  Priority
+                   
+                  <span
+                    class="text-white/20"
+                  >
+                    ▲
+                  </span>
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[120px]"
+                >
+                  Type
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[160px]"
+                >
+                  Component
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[130px]"
+                >
+                  Issue
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase min-w-[300px]"
+                >
+                  Title
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="border-b border-white/[0.04] transition-colors duration-150 hover:bg-white/[0.04] "
+                data-row="true"
+              >
+                <td
+                  class="px-5 py-3.5"
+                  data-field="priority"
+                >
+                  <span
+                    class="badge priority-1"
+                    title="P1 - Blocks development and/or testing work, production could not run."
+                  >
+                    P1
+                  </span>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="type"
+                >
+                  Bug
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="component"
+                >
+                  component_mock
+                </td>
+                <td
+                  class="px-5 py-3.5"
+                  data-field="id"
+                >
+                  <a
+                    class="issue-link"
+                    href="https://link_mock"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    0
+                  </a>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/70 text-sm leading-relaxed break-words"
+                  data-field="title"
+                >
+                  title_mock
+                </td>
+              </tr>
+              <tr
+                class="border-b border-white/[0.04] transition-colors duration-150 hover:bg-white/[0.04] bg-white/[0.01]"
+                data-row="true"
+              >
+                <td
+                  class="px-5 py-3.5"
+                  data-field="priority"
+                >
+                  <span
+                    class="badge priority-1"
+                    title="P1 - Blocks development and/or testing work, production could not run."
+                  >
+                    P1
+                  </span>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="type"
+                >
+                  Bug
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="component"
+                >
+                  component_mock
+                </td>
+                <td
+                  class="px-5 py-3.5"
+                  data-field="id"
+                >
+                  <a
+                    class="issue-link"
+                    href="https://link_mock"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    1
+                  </a>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/70 text-sm leading-relaxed break-words"
+                  data-field="title"
+                >
+                  title_mock
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="flex items-center justify-between gap-4 mt-4 px-1"
+        >
+          <div
+            class="flex items-center gap-2 text-sm text-white/40"
+          >
+            <span>
+              Rows
+            </span>
+            <select
+              class="appearance-none bg-white/[0.04] text-white/60 border border-white/[0.08] rounded-lg px-2 py-1 text-sm focus:outline-none focus:border-white/20 transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value="20"
+              >
+                20
+              </option>
+              <option
+                value="50"
+              >
+                50
+              </option>
+              <option
+                value="75"
+              >
+                75
+              </option>
+            </select>
+          </div>
+          <div
+            class="flex items-center gap-4 text-sm text-white/40"
+          >
+            <span>
+              1–2 of 2
+            </span>
+            <div
+              class="flex items-center gap-1"
+            >
+              <button
+                class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
+                disabled=""
+              >
+                ‹
+              </button>
+              <button
+                class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
+                disabled=""
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ReleaseNotesRender component > should render correctly 1`] = `
+<div>
+  <div
+    class="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+  >
+    <div
+      class="text-center mb-10"
+    >
+      <h2
+        class="text-[42px] font-semibold tracking-tight text-white mb-1"
+      >
+        release_name_mock
+      </h2>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="w-full"
+      >
+        <div
+          class="text-center mb-10 max-w-2xl mx-auto"
+        >
+          <p
+            class="text-base text-white/50 leading-relaxed mb-4"
+          >
+            Text
+          </p>
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-4 py-1.5"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-pink/80"
+            />
+            <span
+              class="text-sm text-white/60"
+            >
+              <span
+                class="font-medium text-white/80"
+              >
+                2
+              </span>
+               
+              P1 fixes
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6"
+        >
+          <div
+            class="flex items-center gap-2 flex-wrap"
+          >
+            <select
+              aria-label="Filter by priority"
+              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value=""
+              >
+                All Priorities
+              </option>
+              <option
+                value="1"
+              >
+                P
+                1
+              </option>
+            </select>
+            <select
+              aria-label="Filter by type"
+              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value=""
+              >
+                All Types
+              </option>
+              <option
+                value="Bug"
+              >
+                Bug
+              </option>
+            </select>
+            <select
+              aria-label="Filter by component"
+              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value=""
+              >
+                All Components
+              </option>
+              <option
+                value="component_mock"
+              >
+                component_mock
+              </option>
+            </select>
+          </div>
+          <button
+            class="text-sm font-medium text-white/50 hover:text-white bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-2 hover:bg-white/[0.08] hover:border-white/[0.14] transition-all duration-200"
+          >
+            Export CSV
+          </button>
+        </div>
+        <div
+          class="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl"
+        >
+          <table
+            aria-label="Release Notes"
+            class="w-full text-left"
+          >
+            <thead>
+              <tr
+                class="border-b border-white/[0.08]"
+              >
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase cursor-pointer select-none hover:text-white/70 transition-colors duration-200 w-[100px]"
+                >
+                  Priority
+                   
+                  <span
+                    class="text-white/20"
+                  >
+                    ▲
+                  </span>
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[120px]"
+                >
+                  Type
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[160px]"
+                >
+                  Component
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[130px]"
+                >
+                  Issue
+                </th>
+                <th
+                  class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase min-w-[300px]"
+                >
+                  Title
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="border-b border-white/[0.04] transition-colors duration-150 hover:bg-white/[0.04] "
+                data-row="true"
+              >
+                <td
+                  class="px-5 py-3.5"
+                  data-field="priority"
+                >
+                  <span
+                    class="badge priority-1"
+                    title="P1 - Blocks development and/or testing work, production could not run."
+                  >
+                    P1
+                  </span>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="type"
+                >
+                  Bug
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="component"
+                >
+                  component_mock
+                </td>
+                <td
+                  class="px-5 py-3.5"
+                  data-field="id"
+                >
+                  <a
+                    class="issue-link"
+                    href="https://link_mock"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    0
+                  </a>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/70 text-sm leading-relaxed break-words"
+                  data-field="title"
+                >
+                  title_mock
+                </td>
+              </tr>
+              <tr
+                class="border-b border-white/[0.04] transition-colors duration-150 hover:bg-white/[0.04] bg-white/[0.01]"
+                data-row="true"
+              >
+                <td
+                  class="px-5 py-3.5"
+                  data-field="priority"
+                >
+                  <span
+                    class="badge priority-1"
+                    title="P1 - Blocks development and/or testing work, production could not run."
+                  >
+                    P1
+                  </span>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="type"
+                >
+                  Bug
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/60 text-sm"
+                  data-field="component"
+                >
+                  component_mock
+                </td>
+                <td
+                  class="px-5 py-3.5"
+                  data-field="id"
+                >
+                  <a
+                    class="issue-link"
+                    href="https://link_mock"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    1
+                  </a>
+                </td>
+                <td
+                  class="px-5 py-3.5 text-white/70 text-sm leading-relaxed break-words"
+                  data-field="title"
+                >
+                  title_mock
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="flex items-center justify-between gap-4 mt-4 px-1"
+        >
+          <div
+            class="flex items-center gap-2 text-sm text-white/40"
+          >
+            <span>
+              Rows
+            </span>
+            <select
+              class="appearance-none bg-white/[0.04] text-white/60 border border-white/[0.08] rounded-lg px-2 py-1 text-sm focus:outline-none focus:border-white/20 transition-all duration-200 cursor-pointer"
+            >
+              <option
+                value="20"
+              >
+                20
+              </option>
+              <option
+                value="50"
+              >
+                50
+              </option>
+              <option
+                value="75"
+              >
+                75
+              </option>
+            </select>
+          </div>
+          <div
+            class="flex items-center gap-4 text-sm text-white/40"
+          >
+            <span>
+              1–2 of 2
+            </span>
+            <div
+              class="flex items-center gap-1"
+            >
+              <button
+                class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
+                disabled=""
+              >
+                ‹
+              </button>
+              <button
+                class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
+                disabled=""
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

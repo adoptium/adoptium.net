@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for LinuxPanel component > renders correctly 1`] = `
+<div>
+  <div
+    class="install-panel"
+  >
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install the latest LTS version (Debian or Ubuntu)
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          apt-get install temurin-25-jdk
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install the latest LTS version (CentOS/RHEL/Fedora)
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          yum install temurin-25-jdk
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install the latest LTS version (openSUSE/SLES)
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          zypper install temurin-25-jdk
+        </code>
+      </pre>
+    </div>
+    <a
+      class="install__docs-button"
+      href="/installation/linux"
+    >
+      Read documentation
+    </a>
+  </div>
+</div>
+`;

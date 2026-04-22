@@ -1,163 +1,137 @@
 = Instalación de Archivo
 :page-authors: gdams, tellison, NickJavaDev88
+:page-based-on: 8d3e6bb8724190dec8e19e3c79ffd3ee5c45855d
 :toc:
+:icons: font
+
+Los archivos proporcionan una forma sencilla de instalar Eclipse Temurin sin un
+gestor de paquetes. Descargue el archivo adecuado desde la
+link:/temurin/releases[página de versiones] y siga las instrucciones para su
+plataforma a continuación.
+
+[NOTE]
+====
+Para la mayoría de los usuarios, recomendamos usar un
+link:/installation/linux[gestor de paquetes] o una
+link:/installation/github-actions[integración CI/CD] en lugar de la
+instalación manual por archivo. Los archivos son más adecuados para entornos
+personalizados o plataformas sin soporte de gestor de paquetes.
+====
+
+== Verificación de su descarga
+
+Todos los archivos de Eclipse Temurin incluyen un archivo de suma de
+verificación SHA-256. Recomendamos encarecidamente verificar su descarga antes
+de la instalación.
+
+=== Linux / macOS / AIX / Solaris
+
+[source, bash]
+----
+# Ejecute esto en el mismo directorio que el binario descargado
+wget -O- -q -T 1 -t 1 <url_del_archivo_checksum> | sha256sum -c
+----
+
+=== Windows
+
+[source, powershell]
+----
+certutil -hashfile <archivo_descargado>.zip SHA256
+----
+
+TIP: Los archivos de suma de verificación están disponibles junto a cada
+binario en la link:/temurin/releases[página de versiones]. También puede
+verificar las descargas a través de la
+link:https://api.adoptium.net/q/swagger-ui/[API de Adoptium].
 
 == Linux
 
-. Asegúrate de haber descargado el último link:/download[binario de Linux] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
-. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
-+
 [source, bash]
 ----
-# El comando debe estar en el mismo directorio que el archivo binario descargado
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
-+
-[source, bash]
-----
-tar xzf <openjdk_binary>.tar.gz
-----
-+
-. Añade esta versión de Java a tu `PATH`
-+
-[source, bash]
-----
-export PATH=$PWD/<extracted_directory>/bin:$PATH
-----
-+
-. Comprueba que Java se ha instalado correctamente:
-+
-[source, bash]
-----
+# Extraer el archivo
+tar xzf <binario_openjdk>.tar.gz
+
+# Agregar al PATH
+export PATH=$PWD/<directorio_extraido>/bin:$PATH
+
+# Verificar
 java -version
 ----
+
+Para hacer esto permanente, agregue la línea `export PATH` a su `~/.bashrc`,
+`~/.zshrc`, o perfil de shell equivalente.
 
 == macOS
 
-. Asegúrate de haber descargado el último link:/download[binario de macOS] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
-. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
-+
 [source, bash]
 ----
-# El comando debe estar en el mismo directorio que el archivo binario descargado
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
-+
-[source, bash]
-----
-tar xzf <openjdk_binary>.tar.gz
-----
-+
-. Añade esta versión de Java a tu `PATH`
-+
-[source, bash]
-----
-export PATH=$PWD/<extracted_directory>/Contents/Home/bin:$PATH
-----
-+
-. Comprueba que Java se ha instalado correctamente:
-+
-[source, bash]
-----
+# Extraer el archivo
+tar xzf <binario_openjdk>.tar.gz
+
+# Agregar al PATH (note el subdirectorio Contents/Home)
+export PATH=$PWD/<directorio_extraido>/Contents/Home/bin:$PATH
+
+# Verificar
 java -version
 ----
+
+NOTE: Los archivos de macOS incluyen una estructura de directorios
+`Contents/Home` que refleja el diseño estándar del JDK en macOS.
 
 == Windows
 
-. Asegúrate de haber descargado el último link:/download[binario de Windows] a un directorio que no se moverá ni eliminará, y usa el Símbolo del sistema para acceder a él (cd).
-. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
-+
 [source, powershell]
 ----
-certutil -hashfile <downloaded_file>.zip SHA256
-----
-+
-. Extrae el .zip. Puedes usar el siguiente comando:
-+
-[source, powershell]
-----
-Expand-Archive -Path .\<downloaded_file>.zip -DestinationPath .
-----
-+
-. Añade esta versión de Java a tu `PATH`:
-+
-[source, powershell]
-----
-set PATH=%cd%\<extracted_directory>\bin;%PATH%
-----
-+
-. Comprueba que Java se ha instalado correctamente:
-+
-[source, powershell]
-----
+# Extraer el archivo
+Expand-Archive -Path .\<archivo_descargado>.zip -DestinationPath .
+
+# Agregar al PATH (Símbolo del sistema)
+set PATH=%cd%\<directorio_extraido>\bin;%PATH%
+
+# Verificar
 java -version
 ----
 
+TIP: Para configurar `JAVA_HOME` y actualizar `PATH` de forma permanente en
+Windows, use *Propiedades del Sistema > Variables de Entorno*, o ejecute:
+`setx JAVA_HOME "C:\ruta\a\<directorio_extraido>"` y
+`setx PATH "%JAVA_HOME%\bin;%PATH%"`.
+
 == AIX
 
-. Las últimas versiones de Eclipse Temurin capaces de ejecutarse en AIX 7.1 fueron 8u362, 11.0.18 y 17.0.8. Las versiones posteriores requieren el paquete de tiempo de ejecución IBM XL C/C++, disponible con el compilador o de forma independiente, para link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[XLC 13.1] para JDK8, y link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[XLC 16.1] para JDK11, 17 y 21, y link:https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.2?topic=reference-open-xl-cc-runtime-environment-filesets[OpenXL 17] (que también requiere AIX 7.2 TL5 SP3 o posterior).
-. Asegúrate de haber descargado el último link:/download[binario de AIX] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
-. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
-+
+[WARNING]
+====
+Las últimas versiones de Eclipse Temurin capaces de ejecutarse en AIX 7.1
+fueron 8u362, 11.0.18 y 17.0.8. Las versiones posteriores requieren el
+paquete de runtime IBM XL C/C++:
+
+* link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-131[XLC 13.1] para JDK 8
+* link:https://www.ibm.com/support/pages/ibm-xl-cc-runtime-aix-161[XLC 16.1] para JDK 11, 17 y 21
+* link:https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.2?topic=reference-open-xl-cc-runtime-environment-filesets[OpenXL 17] (requiere AIX 7.2 TL5 SP3 o posterior)
+====
+
 [source, bash]
 ----
-# El comando debe estar en el mismo directorio que el archivo binario descargado
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
-+
-[source, bash]
-----
-gunzip -c <openjdk_binary>.tar.gz | tar xf -
-----
-+
-. Añade esta versión de Java a tu `PATH`
-+
-[source, bash]
-----
-export PATH=$PWD/<extracted_directory>/bin:$PATH
-----
-+
-. Comprueba que Java se ha instalado correctamente:
-+
-[source, bash]
-----
+# Extraer el archivo (tar de AIX no soporta la opción z)
+gunzip -c <binario_openjdk>.tar.gz | tar xf -
+
+# Agregar al PATH
+export PATH=$PWD/<directorio_extraido>/bin:$PATH
+
+# Verificar
 java -version
 ----
 
 == Solaris
 
-. Asegúrate de haber descargado el último link:/download[binario de Solaris] a un directorio que no se moverá ni eliminará, y usa la Terminal para acceder a él (cd).
-. Opcional: usa estas instrucciones de suma de comprobación (checksum) para asegurar la autenticidad de tu binario:
-+
 [source, bash]
 ----
-# El comando debe estar en el mismo directorio que el archivo binario descargado
-wget -O- -q -T 1 -t 1 <url_to_checksum_file> | sha256sum -c
-----
-+
-. Extrae el `.tar.gz.` Puedes usar el siguiente comando:
-+
-[source, bash]
-----
-gunzip -c <openjdk_binary>.tar.gz | tar xf -
-----
-+
-. Añade esta versión de Java a tu `PATH`
-+
-[source, bash]
-----
-export PATH=$PWD/<extracted_directory>/bin:$PATH
-----
-+
-. Comprueba que Java se ha instalado correctamente:
-+
-[source, bash]
-----
+# Extraer el archivo
+gunzip -c <binario_openjdk>.tar.gz | tar xf -
+
+# Agregar al PATH
+export PATH=$PWD/<directorio_extraido>/bin:$PATH
+
+# Verificar
 java -version
 ----

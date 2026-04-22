@@ -1,12 +1,13 @@
 import HeroSection from "@/components/HeroSection";
 import PowerOfTemurin from "@/components/PowerOfTemurin";
-import DownloadCounter from "@/components/DownloadCounter";
+import DownloadCounter from "@/components/Download/Counter";
 import BentoGrid from "@/components/TemurinFeatures/BentoGrid";
-import WGProjects from "@/components/WGProjects";
+import WGProjects from "@/components/WorkingGroup/Projects";
 import Testimonials from "@/components/Testimonials";
 import LatestNews from "@/components/News/LatestNews";
 import ContributorsHome from "@/components/Contributors/home";
-import BannerMiddle from "@/components/BannerMiddle";
+import BannerMiddle from "@/components/Banner/Middle";
+import Link from "next/link";
 
 export default function HomePageClient({
   latestLTS,
@@ -24,6 +25,14 @@ export default function HomePageClient({
       <BentoGrid />
       <WGProjects />
       <Testimonials type="member" />
+      <div className="flex justify-center my-10">
+        <Link
+          href="/join-us"
+          className="flex items-center justify-center w-[280px] h-[56px] rounded-2xl text-[#FF1464] text-lg font-medium gradient-border border-2 border-pink-500/0 transition-all duration-300 hover:border-pink-500/100 hover:text-pink hover:scale-105"
+        >
+          Join Us
+        </Link>
+      </div>
       <LatestNews />
       <ContributorsHome />
     </div>

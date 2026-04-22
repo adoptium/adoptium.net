@@ -25,6 +25,7 @@ exports[`TemurinIndex page > renders correctly 1`] = `
         <img
           alt="Temurin Logo Background"
           class="object-contain"
+          sizes="1000px"
           src="/images/backgrounds/temurin-hero-img.png"
         />
       </div>
@@ -107,126 +108,126 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             class="mt-6"
             data-testid="react-slick-mock"
           >
-            <span
-              class="px-4"
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Arm"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-arm-white.svg"
                 style="padding: 1em;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Atlassian"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-atlassian-white.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Dynatrace"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-dynatrace-white.png"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Mercedes-Benz Tech Innovation GmbH"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-mercedes-benz-white.png"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Michelin"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-michelin-white.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Microsoft"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-microsoft-white.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="MongoDB"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-mongodb-white.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Red Hat"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="Societe Generale"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-societe-generale-white.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
-            <span
-              class="px-4"
+            </div>
+            <div
+              class="!flex items-center justify-center h-[100px] px-4"
             >
               <img
                 alt="T-Systems"
-                class="h-[100px] w-auto object-contain mx-auto"
+                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
                 height="100"
                 src="/images/adopters/logo-t-systems-white.svg"
                 style="padding: 0px;"
                 width="200"
               />
-            </span>
+            </div>
           </div>
         </div>
       </div>
@@ -244,126 +245,126 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       class="mt-6"
       data-testid="react-slick-mock"
     >
-      <span
-        class="px-4"
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Arm"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-arm-white.svg"
           style="padding: 1em;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Atlassian"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-atlassian-white.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Dynatrace"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-dynatrace-white.png"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Mercedes-Benz Tech Innovation GmbH"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-mercedes-benz-white.png"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Michelin"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-michelin-white.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Microsoft"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-microsoft-white.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="MongoDB"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-mongodb-white.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Red Hat"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="Societe Generale"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-societe-generale-white.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
-      <span
-        class="px-4"
+      </div>
+      <div
+        class="!flex items-center justify-center h-[100px] px-4"
       >
         <img
           alt="T-Systems"
-          class="h-[100px] w-auto object-contain mx-auto"
+          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
           height="100"
           src="/images/adopters/logo-t-systems-white.svg"
           style="padding: 0px;"
           width="200"
         />
-      </span>
+      </div>
     </div>
   </div>
   <div

@@ -12,7 +12,7 @@ const AQAvit = () => {
       <div className="aqavit-card gap-4 md:gap-10 flex flex-col md:flex-row justify-between md:items-center max-w-[1000px] mx-auto p-[32px] md:p-[64px]">
         <div className="max-w-[110px] ">
           <Image
-            className="w-full"
+            className="w-full h-auto"
             src="/images/projects/aqavit-project.svg"
             alt="AQAvit Logo"
             width={110}

@@ -26,7 +26,7 @@ exports[`LineChart > matches snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <desc>
-          Created with Highcharts 12.5.0
+          Created with Highcharts 12.6.0
         </desc>
         <defs>
           <filter
@@ -394,7 +394,7 @@ exports[`LineChart > matches snapshot 1`] = `
                 />
                 <path
                   class="highcharts-point"
-                  d="M 8 4 A 0 0 0 1 1 8 4 Z"
+                  d="M 8 4 A 0 0 0 1 1 8.001 4 Z"
                   fill="#fff"
                   opacity="1"
                   stroke="#6ba4e7"

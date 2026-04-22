@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { FooterIcon } from "@/components/Common/Icon";
-import IconSocial from "@/components/IconSocial";
+import IconSocial from "@/components/Common/IconSocial";
 import { useState } from "react";
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 
@@ -312,7 +312,7 @@ const Footer: React.FC = () => {
                               if (
                                 link.disclaimerMessage &&
                                 window.confirm(
-                                  link.disclaimerMessage.defaultText
+                                  link.disclaimerMessage.defaultText,
                                 )
                               ) {
                                 window.open(link.url, "_blank");
@@ -372,6 +372,7 @@ const Footer: React.FC = () => {
                   alt="Deploys by Netlify"
                   width={80}
                   height={25}
+                  className="w-auto h-auto"
                 />
               </a>
             </div>
@@ -416,6 +417,7 @@ const Footer: React.FC = () => {
                   alt="Deploys by Netlify"
                   width={80}
                   height={25}
+                  className="w-auto h-auto"
                 />
               </a>
             </div>

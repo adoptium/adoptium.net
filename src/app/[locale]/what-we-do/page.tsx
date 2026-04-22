@@ -1,13 +1,13 @@
 import React from "react"
 import { Metadata } from "next"
 import PageHeader from "@/components/Common/PageHeader"
-import WGProjects from "@/components/WGProjects"
+import WGProjects from "@/components/WorkingGroup/Projects"
 import ContactUs from "@/components/ContactUs"
 import WaysToSupport from "@/components/WaysToSupport"
 import Testimonials from "@/components/Testimonials"
 import LatestNews from '@/components/News/LatestNews'
 import License from "@/components/License"
-import GetOtherPlatformsAndVersions from "@/components/GetOtherPlatformsAndVersions"
+import GetOtherPlatformsAndVersions from "@/components/Download/OtherPlatforms"
 import MediaAndPromotion from "@/components/Support/MediaAndPromotion"
 
 export const metadata: Metadata = {

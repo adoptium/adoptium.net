@@ -10,9 +10,6 @@ updates:
           - "next"
           - "eslint-config-next"
           - "@next/third-parties"
-      mui-dependencies:
-        patterns:
-          - "@mui/*"
       vitest:
         patterns:
           - "vitest"

@@ -3,7 +3,7 @@
 exports[`Members page > renders correctly 1`] = `
 <div>
   <div
-    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
   >
     <div
       class="w-full relative"
@@ -22,10 +22,10 @@ exports[`Members page > renders correctly 1`] = `
       class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="self-stretch flex-col justify-center items-center gap-6 flex"
+        class="self-stretch flex-col justify-center items-center flex gap-6"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-4 flex"
+          class="self-stretch flex-col justify-center items-center flex gap-4"
         >
           <div
             class="justify-start items-center gap-3 inline-flex"
@@ -63,13 +63,13 @@ exports[`Members page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
           >
             Join the Adoptium Working Group
           </div>
         </div>
         <div
-          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
         >
           Support the future of open, secure, enterprise-ready Java runtimes.
         </div>
@@ -592,7 +592,7 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="text-3xl font-bold text-white mb-2"
             >
-              $10,000 - $50,000
+              €9,000 - €45,000
             </div>
             <p
               class="text-sm text-grey"
@@ -652,7 +652,7 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="text-3xl font-bold text-white mb-2"
             >
-              $12,000 - $32,000
+              €6,500 - €30,000
             </div>
             <p
               class="text-sm text-grey"
@@ -712,7 +712,7 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="text-3xl font-bold text-white mb-2"
             >
-              $0 - $15,000
+              €0 - €12,500
             </div>
             <p
               class="text-sm text-grey"

@@ -28,20 +28,44 @@ exports[`NavBar > should match the snapshot 1`] = `
         <div
           class="hidden lg:flex lg:gap-6 xl:gap-x-12"
         >
-          <a
-            class="text-sm font-semibold leading-6 text-white-900"
-            href="/join-us"
+          <div
+            class="relative inline-block text-left"
+            data-headlessui-state=""
           >
-            Join Us
-          </a>
+            <div>
+              <button
+                aria-expanded="false"
+                aria-haspopup="menu"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
+                data-headlessui-state=""
+                data-menu-button="true"
+                id="headlessui-menu-button-_r_2_"
+                type="button"
+              >
+                Join Us
+                <svg
+                  class="-mr-1 mt-1"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
           <a
-            class="text-sm font-semibold leading-6 text-white-900"
             href="/temurin/releases"
           >
             Latest Releases
           </a>
           <a
-            class="text-sm font-semibold leading-6 text-white-900"
             href="/marketplace"
           >
             Marketplace
@@ -54,14 +78,14 @@ exports[`NavBar > should match the snapshot 1`] = `
               <button
                 aria-expanded="false"
                 aria-haspopup="menu"
-                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
-                id="headlessui-menu-button-_r_2_"
+                data-menu-button="true"
+                id="headlessui-menu-button-_r_5_"
                 type="button"
               >
                 Projects
                 <svg
-                  aria-hidden="true"
                   class="-mr-1 mt-1"
                   fill="currentColor"
                   height="1em"
@@ -86,14 +110,14 @@ exports[`NavBar > should match the snapshot 1`] = `
               <button
                 aria-expanded="false"
                 aria-haspopup="menu"
-                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
-                id="headlessui-menu-button-_r_5_"
+                data-menu-button="true"
+                id="headlessui-menu-button-_r_8_"
                 type="button"
               >
                 Resources
                 <svg
-                  aria-hidden="true"
                   class="-mr-1 mt-1"
                   fill="currentColor"
                   height="1em"
@@ -118,14 +142,14 @@ exports[`NavBar > should match the snapshot 1`] = `
               <button
                 aria-expanded="false"
                 aria-haspopup="menu"
-                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer"
+                class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
-                id="headlessui-menu-button-_r_8_"
+                data-menu-button="true"
+                id="headlessui-menu-button-_r_b_"
                 type="button"
               >
                 Community
                 <svg
-                  aria-hidden="true"
                   class="-mr-1 mt-1"
                   fill="currentColor"
                   height="1em"
@@ -149,43 +173,8 @@ exports[`NavBar > should match the snapshot 1`] = `
           <div
             class="hidden sm:block"
           >
-            <div
-              class="relative inline-block text-left"
-              data-headlessui-state=""
-            >
-              <div>
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="menu"
-                  class="inline-flex w-full justify-center gap-3 rounded-3xl bg-transparent h-full px-4 py-3 text-sm text-white shadow-xs border-2 border-gray-700"
-                  data-headlessui-state=""
-                  id="headlessui-menu-button-_r_b_"
-                  type="button"
-                >
-                  <img
-                    class="mb-0 h-5"
-                    src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 7410 3900'%3e%3cpath fill='%23b22234' d='M0 0h7410v3900H0z'/%3e%3cpath stroke='%23fff' stroke-width='300' d='M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0'/%3e%3cpath fill='%233c3b6e' d='M0 0h2964v2100H0z'/%3e%3cg fill='%23fff'%3e%3cg id='d'%3e%3cg id='c'%3e%3cg id='e'%3e%3cg id='b'%3e%3cpath id='a' d='m247 90 70.534 217.082-184.66-134.164h228.253L176.466 307.082z'/%3e%3cuse xlink:href='%23a' y='420'/%3e%3cuse xlink:href='%23a' y='840'/%3e%3cuse xlink:href='%23a' y='1260'/%3e%3c/g%3e%3cuse xlink:href='%23a' y='1680'/%3e%3c/g%3e%3cuse xlink:href='%23b' x='247' y='210'/%3e%3c/g%3e%3cuse xlink:href='%23c' x='494'/%3e%3c/g%3e%3cuse xlink:href='%23d' x='988'/%3e%3cuse xlink:href='%23c' x='1976'/%3e%3cuse xlink:href='%23e' x='2470'/%3e%3c/g%3e%3c/svg%3e"
-                  />
-                  <span>
-                    English
-                  </span>
-                  <svg
-                    aria-hidden="true"
-                    class="-mr-1 h-5 w-5 text-white"
-                    fill="currentColor"
-                    height="15"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 448 512"
-                    width="15"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                    />
-                  </svg>
-                </button>
-              </div>
+            <div>
+              LanguageSelector
             </div>
           </div>
           <div

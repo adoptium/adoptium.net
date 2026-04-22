@@ -3,7 +3,7 @@
 exports[`TemurinReleases page > renders correctly 1`] = `
 <div>
   <div
-    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
   >
     <div
       class="w-full relative"
@@ -22,10 +22,10 @@ exports[`TemurinReleases page > renders correctly 1`] = `
       class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="self-stretch flex-col justify-center items-center gap-6 flex"
+        class="self-stretch flex-col justify-center items-center flex gap-6"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-4 flex"
+          class="self-stretch flex-col justify-center items-center flex gap-4"
         >
           <div
             class="justify-start items-center gap-3 inline-flex"
@@ -63,13 +63,13 @@ exports[`TemurinReleases page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
           >
             Text
           </div>
         </div>
         <div
-          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
         >
           Text
         </div>
@@ -153,184 +153,48 @@ exports[`TemurinReleases page > renders correctly 1`] = `
       </div>
     </section>
     <section
-      class="py-4"
-      data-testid="release-results-loading"
+      class="py-8"
+      data-testid="release-results-empty"
     >
       <div
-        class="space-y-4"
+        class="flex justify-center items-center min-h-[400px] border border-[#554772] rounded-[24px] bg-[#200E46] p-8"
       >
         <div
-          class="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
-          data-testid="loading-skeleton-1"
+          class="text-center space-y-6 max-w-md"
         >
           <div
-            class="w-full lg:w-[45%] flex flex-col"
+            class="w-24 h-24 mx-auto bg-gradient-to-br from-[#2B1A4F] to-[#3E3355] rounded-full flex items-center justify-center"
           >
-            <div
-              class="_animatedPlaceholder_283780"
+            <svg
+              class="w-12 h-12 text-gray-400"
+              data-testid="empty-state-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <div
-                class="p-4 bg-[#2B1A4F] flex flex-col rounded-[16px] gap-4"
-              >
-                <div
-                  class="flex justify-between items-center"
-                >
-                  <div
-                    class="flex gap-3 justify-start items-center"
-                  >
-                    <div
-                      class="w-6 h-6 bg-gray-600 rounded-full animate-pulse"
-                    />
-                    <div
-                      class="h-5 bg-gray-600 rounded w-20 animate-pulse"
-                    />
-                  </div>
-                  <div
-                    class="flex gap-3"
-                  >
-                    <div
-                      class="h-5 bg-gray-600 rounded w-14 animate-pulse"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="h-8 bg-gray-600 rounded-full animate-pulse"
-                />
-              </div>
-            </div>
+              <path
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
           </div>
           <div
-            class="flex flex-col w-full lg:w-[50%] mt-6 lg:mt-0"
+            class="space-y-2"
           >
-            <div
-              class="h-5 bg-gray-600 rounded w-48 mb-4 animate-pulse"
-            />
-            <div
-              class="space-y-3"
+            <h3
+              class="text-2xl font-semibold text-white"
+              data-testid="empty-state-title"
             >
-              <div
-                class="h-12 bg-gray-600 rounded-xl animate-pulse"
-              />
-              <div
-                class="h-12 bg-gray-600 rounded-xl animate-pulse"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
-          data-testid="loading-skeleton-2"
-        >
-          <div
-            class="w-full lg:w-[45%] flex flex-col"
-          >
-            <div
-              class="_animatedPlaceholder_283780"
+              Text
+            </h3>
+            <p
+              class="text-gray-400 leading-relaxed"
+              data-testid="empty-state-description"
             >
-              <div
-                class="p-4 bg-[#2B1A4F] flex flex-col rounded-[16px] gap-4"
-              >
-                <div
-                  class="flex justify-between items-center"
-                >
-                  <div
-                    class="flex gap-3 justify-start items-center"
-                  >
-                    <div
-                      class="w-6 h-6 bg-gray-600 rounded-full animate-pulse"
-                    />
-                    <div
-                      class="h-5 bg-gray-600 rounded w-20 animate-pulse"
-                    />
-                  </div>
-                  <div
-                    class="flex gap-3"
-                  >
-                    <div
-                      class="h-5 bg-gray-600 rounded w-14 animate-pulse"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="h-8 bg-gray-600 rounded-full animate-pulse"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col w-full lg:w-[50%] mt-6 lg:mt-0"
-          >
-            <div
-              class="h-5 bg-gray-600 rounded w-48 mb-4 animate-pulse"
-            />
-            <div
-              class="space-y-3"
-            >
-              <div
-                class="h-12 bg-gray-600 rounded-xl animate-pulse"
-              />
-              <div
-                class="h-12 bg-gray-600 rounded-xl animate-pulse"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex justify-between border flex-wrap border-[#554772] rounded-[16px] !bg-[#200E46] items-start p-4 lg:p-5 animate-pulse"
-          data-testid="loading-skeleton-3"
-        >
-          <div
-            class="w-full lg:w-[45%] flex flex-col"
-          >
-            <div
-              class="_animatedPlaceholder_283780"
-            >
-              <div
-                class="p-4 bg-[#2B1A4F] flex flex-col rounded-[16px] gap-4"
-              >
-                <div
-                  class="flex justify-between items-center"
-                >
-                  <div
-                    class="flex gap-3 justify-start items-center"
-                  >
-                    <div
-                      class="w-6 h-6 bg-gray-600 rounded-full animate-pulse"
-                    />
-                    <div
-                      class="h-5 bg-gray-600 rounded w-20 animate-pulse"
-                    />
-                  </div>
-                  <div
-                    class="flex gap-3"
-                  >
-                    <div
-                      class="h-5 bg-gray-600 rounded w-14 animate-pulse"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="h-8 bg-gray-600 rounded-full animate-pulse"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col w-full lg:w-[50%] mt-6 lg:mt-0"
-          >
-            <div
-              class="h-5 bg-gray-600 rounded w-48 mb-4 animate-pulse"
-            />
-            <div
-              class="space-y-3"
-            >
-              <div
-                class="h-12 bg-gray-600 rounded-xl animate-pulse"
-              />
-              <div
-                class="h-12 bg-gray-600 rounded-xl animate-pulse"
-              />
-            </div>
+              Text
+            </p>
           </div>
         </div>
       </div>

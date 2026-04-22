@@ -23,16 +23,16 @@ jobs:
 
       - name: Lint Code Base
         uses: github/super-linter/slim@b807e99ddd37e444d189cfd2c2ca1274d8ae8ef1 # v7
-
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Markdown lint complains about the issue templates
-          FILTER_REGEX_EXCLUDE: .github/ISSUE_TEMPLATE/*
+          # Exclude issue templates, gh-aw lock files, and gh-aw workflow markdown
+          FILTER_REGEX_EXCLUDE: '.*(\.github/ISSUE_TEMPLATE/|\.lock\.yml|\.github/workflows/update-translations\.md|\.github/workflows/agentics-maintenance\.yml).*'
           VALIDATE_YAML: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false
           VALIDATE_TYPESCRIPT_PRETTIER: false
           VALIDATE_TSX: false
           VALIDATE_JSON: false
+          VALIDATE_CSS_PRETTIER: false

@@ -83,11 +83,11 @@ This is test content.`;
       const slug = "about";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/about/index.en.adoc"
+        "content/asciidoc-pages/about/index.en.adoc",
       );
       const fallbackPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/about/index.adoc"
+        "content/asciidoc-pages/about/index.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -103,15 +103,20 @@ This is test content.`;
       expect(mockFs.readFileSync).toHaveBeenCalledWith(fallbackPath, "utf8");
       expect(mockProcessAsciiDoc).toHaveBeenCalledWith(
         fallbackPath,
-        mockContent
+        mockContent,
+        {
+          attributes: {
+            "latest-lts": "25",
+          },
+        },
       );
       expect(mockExtractMetadata).toHaveBeenCalledWith(
         fallbackPath,
-        mockContent
+        mockContent,
       );
       expect(mockGetLanguageVariants).toHaveBeenCalledWith(
         fallbackPath,
-        "index"
+        "index",
       );
 
       expect(result).toEqual({
@@ -129,7 +134,7 @@ This is test content.`;
       const locale = "zh-CN";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/about/index.zh-CN.adoc"
+        "content/asciidoc-pages/about/index.zh-CN.adoc",
       );
 
       mockFileExists.mockReturnValue(true);
@@ -149,11 +154,11 @@ This is test content.`;
       const slug = "docs/installation/guide";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/docs/installation/guide/index.en.adoc"
+        "content/asciidoc-pages/docs/installation/guide/index.en.adoc",
       );
       const fallbackPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/docs/installation/guide/index.adoc"
+        "content/asciidoc-pages/docs/installation/guide/index.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -195,7 +200,7 @@ This is test content.`;
       expect(result).toBeNull();
       expect(consoleSpy).toHaveBeenCalledWith(
         expect.stringContaining("Error processing AsciiDoc file"),
-        expect.any(Error)
+        expect.any(Error),
       );
 
       consoleSpy.mockRestore();
@@ -225,7 +230,7 @@ This is test content.`;
       const slug = "/docs//installation/";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/docs/installation/index.en.adoc"
+        "content/asciidoc-pages/docs/installation/index.en.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -243,7 +248,7 @@ This is test content.`;
       const slug = "";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/index.en.adoc"
+        "content/asciidoc-pages/index.en.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -352,7 +357,7 @@ This is test content.`;
       ];
 
       (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(
-        mockDirEntries
+        mockDirEntries,
       );
 
       const result = await getAllAsciidocPaths();
@@ -481,8 +486,8 @@ This is test content.`;
       expect(result.length).toBeGreaterThan(0);
       expect(
         result.every(
-          (page) => page.slug.startsWith("docs") && page.slug !== "docs"
-        )
+          (page) => page.slug.startsWith("docs") && page.slug !== "docs",
+        ),
       ).toBe(true);
     });
 
@@ -581,7 +586,7 @@ This is test content.`;
       const slug = "very/deep/nested/path/structure";
       const expectedPath = path.join(
         process.cwd(),
-        "content/asciidoc-pages/very/deep/nested/path/structure/index.en.adoc"
+        "content/asciidoc-pages/very/deep/nested/path/structure/index.en.adoc",
       );
 
       mockFileExists.mockReturnValueOnce(false).mockReturnValueOnce(true);
@@ -618,6 +623,190 @@ This is test content.`;
       const result = await getAsciidocContent(slug);
 
       expect(result?.slug).toBe(slug);
+    });
+  });
+
+  describe("getSidebarData", () => {
+    // We need to import getSidebarData
+    let getSidebarData: typeof import("../asciidocService").getSidebarData;
+
+    beforeEach(async () => {
+      ({ getSidebarData } = await import("../asciidocService"));
+    });
+
+    it("returns null for invalid section names with special characters", async () => {
+      const result = await getSidebarData("../etc/passwd");
+      expect(result).toBeNull();
+    });
+
+    it("returns null for invalid locale with special characters", async () => {
+      const result = await getSidebarData("docs", "../etc");
+      expect(result).toBeNull();
+    });
+
+    it("returns null if section directory does not exist", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(false);
+      const mockLstatSync = vi.fn();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      const result = await getSidebarData("nonexistent");
+      expect(result).toBeNull();
+    });
+
+    it("returns sidebar data with known section title", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
+
+      const mockDirEntries: MockDirent[] = [
+        { name: "page1", isDirectory: () => true, isFile: () => false },
+      ];
+      const mockPage1Entries: MockDirent[] = [
+        { name: "index.adoc", isDirectory: () => false, isFile: () => true },
+      ];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock)
+        .mockReturnValueOnce(mockDirEntries)
+        .mockReturnValueOnce(mockPage1Entries);
+
+      // Mock fileExists for root index check (no root index)
+      mockFileExists.mockReturnValue(false);
+      mockFileExists.mockReturnValueOnce(false); // locale-specific
+      mockFileExists.mockReturnValueOnce(false); // default
+
+      mockFs.readFileSync.mockReturnValue("= Page One\n:description: Test\n");
+      mockExtractMetadata.mockReturnValue({
+        title: "Page One",
+        description: "Test",
+        authors: [],
+        attributes: {},
+      });
+
+      const result = await getSidebarData("installation");
+      expect(result?.title).toBe("Installation");
+      expect(result?.basePath).toBe("/installation");
+    });
+
+    it("uses capitalized section name for unknown sections", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce([]);
+
+      mockFileExists.mockReturnValue(false);
+
+      const result = await getSidebarData("customsection");
+      expect(result?.title).toBe("Customsection");
+    });
+
+    it("includes Overview item when root index exists", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce([]);
+
+      // Root index exists
+      mockFileExists.mockReturnValueOnce(false); // locale-specific not found
+      mockFileExists.mockReturnValueOnce(true); // default found
+      mockFs.readFileSync.mockReturnValue("= Section Overview\n");
+      mockExtractMetadata.mockReturnValue({
+        title: "Section Overview",
+        description: "",
+        authors: [],
+        attributes: {},
+      });
+
+      const result = await getSidebarData("docs");
+      expect(result?.items.some((i) => i.title === "Overview")).toBe(true);
+    });
+
+    it("skips _partials subdirectories", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
+
+      const mockDirEntries: MockDirent[] = [
+        { name: "_partials", isDirectory: () => true, isFile: () => false },
+        { name: "page1", isDirectory: () => true, isFile: () => false },
+      ];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(
+        mockDirEntries,
+      );
+
+      mockFileExists.mockReturnValue(false); // no root or child index
+
+      const result = await getSidebarData("docs");
+      expect(result?.items).toHaveLength(0);
+    });
+
+    it("uses page-sidebar-title attribute when available", async () => {
+      const mockExistsSync = vi.fn().mockReturnValue(true);
+      const mockLstatSync = vi
+        .fn()
+        .mockReturnValue({ isDirectory: () => true });
+
+      const mockDirEntries: MockDirent[] = [
+        { name: "subpage", isDirectory: () => true, isFile: () => false },
+      ];
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).existsSync = mockExistsSync;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (fs as any).lstatSync = mockLstatSync;
+
+      (mockFs.readdirSync as unknown as Mock).mockReturnValueOnce(
+        mockDirEntries,
+      );
+
+      // no root index
+      mockFileExists.mockReturnValueOnce(false);
+      mockFileExists.mockReturnValueOnce(false);
+      // child index exists
+      mockFileExists.mockReturnValueOnce(false); // locale-specific
+      mockFileExists.mockReturnValueOnce(true); // default
+
+      mockFs.readFileSync.mockReturnValue(
+        "= Subpage Title\n:page-sidebar-title: Short Title\n",
+      );
+      mockExtractMetadata.mockReturnValue({
+        title: "Subpage Title",
+        description: "",
+        authors: [],
+        attributes: { "page-sidebar-title": "Short Title" },
+      });
+
+      const result = await getSidebarData("docs");
+      expect(result?.items.some((i) => i.title === "Short Title")).toBe(true);
     });
   });
 });

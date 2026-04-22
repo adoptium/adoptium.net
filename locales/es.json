@@ -8,6 +8,34 @@
     "sustainer-cta-description": "Millones confían en Eclipse Temurin. Su apoyo lo mantiene funcionando",
     "sustainer-cta-button": "Reinvertir en Eclipse Temurin"
   },
+  "DownloadPage": {
+    "thank-you": "Gracias por descargar",
+    "vendor-build": "Compilación de {vendor}",
+    "auto-start-p1": "La descarga del runtime de OpenJDK debería comenzar automáticamente en unos segundos.",
+    "auto-start-p2": "Si no es así, ",
+    "click-here": "haz clic aquí para reiniciarla manualmente",
+    "community-action": "Acción Comunitaria Requerida",
+    "free-to-use": "Gratis de usar,",
+    "not-free-to-build": "pero con costes de ejecución.",
+    "appeal-quote": "Gratis de usar, pero no gratis de mantener. El patrocinio ayuda a mantener el proyecto saludable y en crecimiento.",
+    "appeal-text": "Eclipse Temurin cuenta con la confianza de millones de desarrolladores en todo el mundo. Para asegurar el futuro de estos binarios de código abierto de alta calidad, necesitamos tu ayuda hoy.",
+    "github-sponsor-btn": "Patrocinador en GitHub",
+    "become-sustainer-btn": "Convertirse en Patrocinador",
+    "corporate-sponsorship-btn": "Patrocinador Corporativo",
+    "vendor-alert": "Está descargando una compilación de <vendorWrapper>{vendor}</vendorWrapper>, miembro del Grupo de Trabajo Eclipse Adoptium.",
+    "why-we-need-you": "Por qué su ayuda es importante",
+    "infra-costs-title": "Costes de Infraestructura",
+    "infra-costs-desc": "Probar en más de 50 plataformas requiere una potencia de cómputo masiva.",
+    "security-speed-title": "Seguridad y Velocidad",
+    "security-speed-desc": "Las actualizaciones rápidas y seguras requieren recursos dedicados.",
+    "open-source-title": "Código Abierto Verdadero",
+    "open-source-desc": "Mantener los runtimes de Java en código abierto gratuitos para siempre requiere financiarlo juntos.",
+    "resources-next-steps": "Recursos y Próximos Pasos",
+    "installation-guide-title": "Guía de Instalación",
+    "installation-guide-desc": "Instrucciones paso a paso para poner en marcha su nuevo runtime de Java.",
+    "documentation-title": "Documentación",
+    "documentation-desc": "Documentación completa para Eclipse Temurin y el ecosistema Adoptium."
+  },
   "NotFoundPage": {
     "title": "Lo sentimos, no pudimos encontrar esta página",
     "back-to-home": "Volver a la página principal"
@@ -111,6 +139,18 @@
     "help-us-make-these-docs-great": "¡Ayúdanos a mejorar esta documentación!",
     "all-adoptium-docs-are-open-source": "Toda la documentación de Adoptium es de código abierto. ¿Has encontrado algo incorrecto o confuso?",
     "edit-this-page": "Editar esta página"
+  },
+  "DocThemeToggle": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "switch-to-light": "Cambiar a modo claro",
+    "switch-to-dark": "Cambiar a modo oscuro"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "En esta página"
+  },
+  "DocumentationSearch": {
+    "placeholder": "Buscar documentación..."
   },
   "Asciidoc": {
     "table-of-contents": "Tabla de contenidos",
@@ -225,5 +265,24 @@
     "title": "Mapa del sitio",
     "subtitle": "Navegar Adoptium",
     "description": "Descripción completa de todas las páginas, documentación y recursos disponibles en el sitio web de Adoptium. Encuentre rápidamente lo que busca."
+  },
+  "DocsPage": {
+    "home": "Inicio",
+    "documentation": "Documentación",
+    "title": "Documentación de Adoptium®",
+    "subtitle": "Guías, referencias y recursos para Eclipse Adoptium y Eclipse Temurin",
+    "getting-started": "Primeros pasos",
+    "explore-by-topic": "Explorar por tema",
+    "install-temurin": "Instalar Temurin",
+    "install-temurin-desc": "Guía de instalación paso a paso para todas las plataformas",
+    "download-temurin": "Descargar Temurin",
+    "download-temurin-desc": "Obtener las últimas versiones de Eclipse Temurin",
+    "migration-guide": "Guía de migración",
+    "migration-guide-desc": "Migrar a Eclipse Temurin desde otros JDKs",
+    "supported-platforms": "Plataformas compatibles",
+    "supported-platforms-desc": "Matriz de compatibilidad de sistemas operativos y arquitecturas"
+  },
+  "Byline": {
+    "reading-time": "{minutes} min de lectura"
   }
 }

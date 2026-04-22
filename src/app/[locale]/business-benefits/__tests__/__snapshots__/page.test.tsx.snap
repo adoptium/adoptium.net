@@ -3,7 +3,7 @@
 exports[`Business Benefits page > renders correctly 1`] = `
 <div>
   <div
-    class="relative pt-20 pb-8 md:pb-16 md:pt-32 overflow-hidden"
+    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
   >
     <div
       class="w-full relative"
@@ -22,10 +22,10 @@ exports[`Business Benefits page > renders correctly 1`] = `
       class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
     >
       <div
-        class="self-stretch flex-col justify-center items-center gap-6 flex"
+        class="self-stretch flex-col justify-center items-center flex gap-6"
       >
         <div
-          class="self-stretch flex-col justify-center items-center gap-4 flex"
+          class="self-stretch flex-col justify-center items-center flex gap-4"
         >
           <div
             class="justify-start items-center gap-3 inline-flex"
@@ -63,13 +63,13 @@ exports[`Business Benefits page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="self-stretch text-center text-white text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%] font-semibold"
+            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
           >
             How Temurin can benefit your business
           </div>
         </div>
         <div
-          class="self-stretch text-center text-lightgrey text-[20px] font-normal leading-[140%] undefined"
+          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </div>
@@ -222,10 +222,6 @@ exports[`Business Benefits page > renders correctly 1`] = `
             aria-label="Go to testimonial 3"
             class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
           />
-          <button
-            aria-label="Go to testimonial 4"
-            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
-          />
         </div>
         <button
           aria-label="Next Testimonial"
@@ -263,7 +259,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
           >
             <img
               alt="Microsoft"
-              class="max-h-full max-w-full object-contain brightness-0 invert"
+              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
               height="48"
               src="/images/members/microsoft.svg"
               width="128"
@@ -279,25 +275,9 @@ exports[`Business Benefits page > renders correctly 1`] = `
           >
             <img
               alt="Alibaba Cloud"
-              class="max-h-full max-w-full object-contain brightness-0 invert"
+              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
               height="48"
               src="/images/members/alibaba.png"
-              width="128"
-            />
-          </div>
-        </button>
-        <button
-          aria-label="Azul Systems Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
-          >
-            <img
-              alt="Azul Systems"
-              class="max-h-full max-w-full object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/azul.svg"
               width="128"
             />
           </div>
@@ -311,7 +291,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
           >
             <img
               alt="Red Hat"
-              class="max-h-full max-w-full object-contain brightness-0 invert"
+              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
               height="48"
               src="/images/members/redhat.svg"
               width="128"

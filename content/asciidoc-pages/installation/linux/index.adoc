@@ -11,24 +11,14 @@ your favourite Linux distribution.
 See link:/supported-platforms[Supported Platforms] for a list of our officially supported installers by Linux distribution / version. Other Linux distributions / versions are supported on a best-effort basis.
 ====
 
-[TIP]
-====
-Please note that on most Linux systems, superuser privileges are required to install packages such as Temurin. To ensure successful execution of the commands below, you may need to prefix them with `sudo`. Additionally, when adding the repository, consider using `sudo tee` to avoid potential permission issues. For example:
-====
-
-[source, bash]
-----
-echo "deb [arch=amd64] https://some.repository.url focal main" | sudo tee /etc/apt/sources.list.d/adoptium.list > /dev/null
-----
-By using `sudo tee`, you can write the repository entry to the appropriate file with elevated privileges, preventing any write permission errors. This ensures a smooth installation process."
-
 == Eclipse Temurin Package Names
 
 The following name schema is being used:
 
+[subs="attributes"]
 ....
-temurin-<version>-jdk
-e.g temurin-17-jdk or temurin-8-jdk
+temurin-&lt;version&gt;-jdk
+e.g temurin-{latest-lts}-jdk or temurin-8-jdk
 ....
 
 == Deb installation on Debian or Ubuntu
@@ -37,30 +27,30 @@ e.g temurin-17-jdk or temurin-8-jdk
 +
 [source, bash]
 ----
-apt install -y wget apt-transport-https gpg
+sudo apt install -y wget apt-transport-https gpg
 ----
 +
 . Download the Eclipse Adoptium GPG key:
 +
 [source, bash]
 ----
-wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
+wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
 ----
 +
 . Configure the Eclipse Adoptium apt repository. To check the full list of versions supported take a look at the list in the tree at https://packages.adoptium.net/ui/native/deb/dists/.
 +
 [source, bash]
 ----
-echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
 ----
 TIP: For Linux Mint (based on Ubuntu) you have to replace `VERSION_CODENAME` with `UBUNTU_CODENAME`.
 +
 . Install the Temurin version you require:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-apt update # update if you haven't already
-apt install temurin-17-jdk
+sudo apt update # update if you haven't already
+sudo apt install temurin-{latest-lts}-jdk
 ----
 
 == CentOS/RHEL/Fedora Instructions
@@ -72,7 +62,7 @@ apt install temurin-17-jdk
 # Uncomment and change the distribution name if you are not using CentOS/RHEL/Fedora
 # DISTRIBUTION_NAME=centos
 
-cat <<EOF > /etc/yum.repos.d/adoptium.repo
+sudo cat <<EOF > /etc/yum.repos.d/adoptium.repo
 [Adoptium]
 name=Adoptium
 baseurl=https://packages.adoptium.net/artifactory/rpm/${DISTRIBUTION_NAME:-$(. /etc/os-release; echo $ID)}/\$releasever/\$basearch
@@ -84,15 +74,15 @@ EOF
 +
 . Install the Temurin version you require using `dnf`:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-dnf install temurin-17-jdk
+sudo dnf install temurin-{latest-lts}-jdk
 ----
 Alternatively, if you are using `yum`:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-yum install temurin-17-jdk
+sudo yum install temurin-{latest-lts}-jdk
 ----
 
 ==== Installing the JRE
@@ -158,14 +148,14 @@ https://packages.adoptium.net/ui/native/rpm/. The repositories may work with oth
 +
 [source, bash]
 ----
-zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
+sudo zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
 ----
 +
 . Install the Temurin version you require:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-zypper install temurin-17-jdk
+sudo zypper install temurin-{latest-lts}-jdk
 ----
 
 
@@ -175,21 +165,21 @@ zypper install temurin-17-jdk
 +
 [source, bash]
 ----
-wget -O /etc/apk/keys/adoptium.rsa.pub https://packages.adoptium.net/artifactory/api/security/keypair/public/repositories/apk
+sudo wget -O /etc/apk/keys/adoptium.rsa.pub https://packages.adoptium.net/artifactory/api/security/keypair/public/repositories/apk
 ----
 +
 . Configure the Eclipse Adoptium APK repository:
 +
 [source, bash]
 ----
-echo 'https://packages.adoptium.net/artifactory/apk/alpine/main' >> /etc/apk/repositories
+echo 'https://packages.adoptium.net/artifactory/apk/alpine/main' | sudo tee -a /etc/apk/repositories
 ----
 +
 . Install the Temurin version you require:
 +
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-apk add temurin-17-jdk
+sudo apk add temurin-{latest-lts}-jdk
 ----
 
 Please raise any issues over at

@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tests for MacOSPanel component > renders correctly 1`] = `
+<div>
+  <div
+    class="install-panel"
+  >
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install the latest LTS version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          brew install --cask temurin@25
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Install a specific version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          brew install --cask temurin@8
+brew install --cask temurin@25
+        </code>
+      </pre>
+    </div>
+    <div
+      class="install-block"
+    >
+      <div
+        class="install-block-title"
+      >
+        Uninstall a specific version
+      </div>
+      <pre
+        class="install-code"
+      >
+        <code>
+          brew uninstall --cask temurin@25
+        </code>
+      </pre>
+    </div>
+    <a
+      class="install__docs-button"
+      href="https://docs.brew.sh/Manpage"
+    >
+      Read documentation
+    </a>
+  </div>
+</div>
+`;

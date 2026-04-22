@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import axios from "axios";
 import type { Attestation, AttestationLookup } from "@/types/temurin";
-
-const BASE_URL = "https://api.adoptium.net/v3";
+import { fetchAttestations as apiFetchAttestations } from "@/services/adoptiumApi";
 
 interface UseAttestationsResult {
   attestations: AttestationLookup;
@@ -34,7 +32,7 @@ interface UseAttestationsResult {
 
 export function useAttestations(
   releaseName: string | undefined,
-  checksums: string[]
+  checksums: string[],
 ): UseAttestationsResult {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | undefined>(undefined);
@@ -50,10 +48,17 @@ export function useAttestations(
    * - reduce processing
    * - avoid redundant joins
    * - make batching predictable
+   *
+   * We serialise the array to a string key so that useMemo produces
+   * a stable reference even when callers pass a new array literal
+   * on every render. Without this, the effect dependency would change
+   * every render and cause an infinite fetch loop on errors.
    */
+  const checksumKey = checksums.join("\0");
   const uniqueChecksums = useMemo(() => {
     return Array.from(new Set(checksums)).filter(Boolean);
-  }, [checksums]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [checksumKey]);
 
   useEffect(() => {
     if (!releaseName || uniqueChecksums.length === 0) {
@@ -61,7 +66,7 @@ export function useAttestations(
     }
 
     const unresolvedChecksums = uniqueChecksums.filter(
-      (checksum) => !(checksum in cacheRef.current)
+      (checksum) => !(checksum in cacheRef.current),
     );
 
     if (unresolvedChecksums.length === 0) {
@@ -75,33 +80,38 @@ export function useAttestations(
       setError(undefined);
 
       try {
-        const response = await axios.get<Attestation[]>(
-          `${BASE_URL}/attestations/release_name/${encodeURIComponent(
-            releaseName
-          )}`,
-          { params: { project: "jdk" } }
-        );
+        const attestations = (await apiFetchAttestations(
+          releaseName,
+        )) as Attestation[];
 
         if (cancelled) return;
 
         const attestationMap: AttestationLookup = {};
 
-        for (const attestation of response.data) {
+        for (const attestation of attestations) {
           attestationMap[attestation.target_checksum] = attestation;
         }
 
         unresolvedChecksums.forEach((checksum) => {
           cacheRef.current[checksum] = attestationMap[checksum] ?? undefined;
         });
-      } catch (err: any) {
+      } catch (err: unknown) {
         if (cancelled) return;
 
-        if (axios.isAxiosError(err) && err.response?.status === 404) {
+        // openapi-fetch throws on non-2xx; treat 404 as "no attestations".
+        // The API layer should already handle 404 (returns []), but we guard
+        // here as a safety net for any future refactoring.
+        const status =
+          err instanceof Response
+            ? err.status
+            : ((err as { response?: { status?: number }; status?: number })
+                ?.response?.status ?? (err as { status?: number })?.status);
+        if (status === 404) {
           unresolvedChecksums.forEach((checksum) => {
             cacheRef.current[checksum] = undefined;
           });
         } else {
-          setError(err);
+          setError(err instanceof Error ? err : new Error(String(err)));
         }
       } finally {
         if (!cancelled) {
