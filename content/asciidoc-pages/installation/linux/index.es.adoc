@@ -1,6 +1,6 @@
 = Linux (RPM/DEB/APK) installer packages
-:page-authors: rocketxz, NickJavaDev88, gdams, github-actions[bot]
-:page-based-on: 458cf9f5dd23978e1f2dbe2bdfc68f35a6016a79
+:page-authors: rocketxz, NickJavaDev88, gdams
+:page-based-on: 8b914e3acf93b00b855ef1918e8c5eba0fdfcbb4
 :toc:
 :icons: font
 
