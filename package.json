@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "postbuild": "node scripts/build-search-index.mjs",
     "start": "next start",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "update-snapshots": "vitest --run -u",
-    "lint": "next lint",
+    "lint": "eslint .",
     "generate:api-types": "openapi-typescript https://api.adoptium.net/q/openapi -o src/types/adoptiumApiTypes.ts && openapi-typescript https://marketplace-api.adoptium.net/q/openapi -o src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
@@ -54,7 +54,6 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.5",
     "@octokit/types": "^16.0.0",
     "@tailwindcss/postcss": "^4.2.4",
     "@tailwindcss/typography": "^0.5.19",
@@ -73,6 +72,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/coverage-v8": "^4.1.5",
     "axios-mock-adapter": "^2.1.0",
+    "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^10.2.1",
     "eslint-config-next": "16.2.4",
     "jsdom": "^29.0.2",

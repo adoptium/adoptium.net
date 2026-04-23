@@ -2,7 +2,7 @@
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css";
-import { Inter } from "next/font/google";
+import { Inter, Hanken_Grotesk } from "next/font/google";
 import { Metadata } from "next";
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -23,7 +23,11 @@ const organizationSchema: WithContext<Organization> = {
 
 const sanitizedOrganizationSchema = sanitizeObject(organizationSchema);
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-hanken-grotesk",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://adoptium.net"),
@@ -107,7 +111,7 @@ export default async function RootLayout({
         <script src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js"></script>
         {/* End of Eclipse Foundation Cookie Consent Banner */}
       </head>
-      <body className={inter.className}>
+      <body className={`${hankenGrotesk.variable} ${inter.variable}`}>
         {/* Google Tag Manager (noscript) - used for people who have JavaScript disabled */}
         <noscript>
           <iframe
