@@ -1,6 +1,6 @@
 = Linux (RPM/DEB/APK) 安装包
 :page-authors: gdams, karianna, perlun, TheCrazyLex, TobiX, topaussie, sxa, tellison, luozhenyu, Ndacyayisenga-droid, ecspresso, NickJavaDev88
-:page-based-on: 8b914e3acf93b00b855ef1918e8c5eba0fdfcbb4
+:page-based-on: 458cf9f5dd23978e1f2dbe2bdfc68f35a6016a79
 :toc:
 :icons: font
 :page-description: 在 Linux (RPM/DEB/APK) 上下载并安装 Eclipse Temurin。
@@ -85,6 +85,59 @@ sudo dnf install temurin-{latest-lts}-jdk
 [source, bash, subs="attributes"]
 ----
 sudo yum install temurin-{latest-lts}-jdk
+----
+
+==== 安装 JRE
+
+如果您只需要 Java 运行环境（用于运行应用程序，而非编译），请安装 JRE 包：
+
+[source,bash]
+----
+sudo dnf install temurin-<version>-jre
+----
+
+示例：
+
+[source,bash]
+----
+sudo dnf install temurin-21-jre
+----
+
+==== 安装无头 JRE
+
+对于不需要图形组件的服务器环境，还提供了无头 JRE 包。该包不包含与 GUI 相关的库（如 AWT），可减少整体安装占用空间。
+
+[source,bash]
+----
+sudo dnf install temurin-<version>-jre-headless
+----
+
+示例：
+
+[source,bash]
+----
+sudo dnf install temurin-21-jre-headless
+----
+
+`jre-headless` 包适用于：
+
+- 容器镜像
+- 最小化服务器安装
+- CI/CD 构建代理
+- 无头生产工作负载
+
+==== 验证安装
+
+[source,bash]
+----
+java -version
+----
+
+您还可以使用以下命令确认已安装的包：
+
+[source,bash]
+----
+rpm -qa | grep temurin
 ----
 
 == openSUSE/SLES 说明
