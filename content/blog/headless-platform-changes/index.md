@@ -1,5 +1,5 @@
 ---
-title: Exploring Changes to Temurin Runtime Packaging on Selected Platforms
+title: Exploring Packaging Changes to Temurin JDK on AIX, Linux ppc64le and Linux s390x
 date: "2026-04-22"
 author: pmc
 description: We are proposing changes to how Eclipse Temurin runtimes are packaged on selected platforms and are seeking community feedback.
@@ -18,9 +18,9 @@ We are opening a discussion on a proposal to evolve runtime packaging for a smal
 
 This proposal specifically targets:
 
-- **AIX (PPC64)**
-- **Linux on ppc64le (pLinux)**
-- **Linux on s390x (zLinux)**
+- **AIX ppc64**
+- **Linux ppc64le**
+- **Linux s390x**
 
 These platforms are predominantly used for server-side and enterprise workloads, where GUI support is rarely required.
 
@@ -42,7 +42,7 @@ Across the Java ecosystem, usage has shifted toward:
 - Backend services with no GUI requirements
 - Increased emphasis on smaller, more efficient runtime images
 
-Maintaining multiple overlapping runtime variants introduces additional build, test, and maintenance overhead. As seen in previous platform decisions, focusing effort where it delivers the most value helps improve overall quality and sustainability.
+Maintaining multiple overlapping runtime variants introduces additional build, test, and maintenance overhead. As seen in previous platform decisions, focusing effort where it delivers the most value helps improve overall quality and sustainability. As this proposal involves removing the gui related components, such as libawt_xawt.so on the Linux platforms, it would align these builds more closely with the existing Alpine Linux distributions, which already exclude this library. In practice, this means the resulting runtimes would be comparable in functionality to Alpine-based Temurin builds. For typical backend workloads, including those using ImageIO, no impact is expected. However, this will be validated through targeted testing to ensure compatibility and avoid regressions.
 
 ## What This Means
 
@@ -51,7 +51,6 @@ No decisions have been made at this stage. This is an early proposal intended to
 If adopted, the changes would aim to:
 
 - Simplify the set of runtime packages on these platforms
-- Reduce footprint and complexity for common deployments
 - Improve maintainability of build and test pipelines
 
 Full-featured runtimes would continue to be considered where there is a clear need.
@@ -76,6 +75,6 @@ See: https://github.com/adoptium/adoptium/issues/273
 
 This proposal reflects an ongoing effort to align Eclipse Temurin distributions with modern deployment patterns, while ensuring that project resources are focused where they provide the greatest benefit.
 
-By starting with AIX (PPC64), Linux on ppc64le (pLinux), and Linux on s390x (zLinux), we aim to evaluate this approach on platforms where it is most applicable.
+By starting with AIX ppc64, Linux ppc64le, and Linux s390x, we aim to evaluate this approach on platforms where it is most applicable.
 
 We welcome your feedback.
