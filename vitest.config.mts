@@ -9,6 +9,7 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    css: false,
     setupFiles: ["./vitest-setup.tsx"],
     testTimeout: 30000,
   },
