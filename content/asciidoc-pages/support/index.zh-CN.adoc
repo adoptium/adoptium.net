@@ -3,6 +3,27 @@
 :page-based-on: 8d3e6bb8724190dec8e19e3c79ffd3ee5c45855d
 :toc:
 :partialDir: _partials
+// Table column headers
+:col-java-version: Java 版本
+:col-first-availability: 首次发布
+:col-latest-release: 最新版本
+:col-next-release-due: 下次发布计划
+:col-end-of-availability: 可用期结束
+// Month abbreviations
+:month-jan: 1月
+:month-feb: 2月
+:month-mar: 3月
+:month-apr: 4月
+:month-may: 5月
+:month-jun: 6月
+:month-jul: 7月
+:month-aug: 8月
+:month-sep: 9月
+:month-oct: 10月
+:month-nov: 11月
+:month-dec: 12月
+// Other translatable strings
+:at-least: 至少
 
 == 社区支持
 

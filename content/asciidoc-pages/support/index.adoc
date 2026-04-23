@@ -2,6 +2,27 @@
 :page-authors: gdams, karianna, sxa, tellison, SueChaplain, mvitz, ParkerM, M-Davies, Malax, lasombra, jeffalder, hendrikebbers, douph1, andrew-m-leonard, mr-david-owens, DanHeidinga, sophia-guo, zdtsw, adamfarley, garydgregory, mtughan, xavierfacq
 :toc:
 :partialDir: _partials
+// Table column headers
+:col-java-version: Java Version
+:col-first-availability: First Availability
+:col-latest-release: Latest Release
+:col-next-release-due: Next Release Due
+:col-end-of-availability: End of Availability
+// Month abbreviations
+:month-jan: Jan
+:month-feb: Feb
+:month-mar: Mar
+:month-apr: Apr
+:month-may: May
+:month-jun: Jun
+:month-jul: Jul
+:month-aug: Aug
+:month-sep: Sep
+:month-oct: Oct
+:month-nov: Nov
+:month-dec: Dec
+// Other translatable strings
+:at-least: At least
 
 == Community Support
 

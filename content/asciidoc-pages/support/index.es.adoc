@@ -3,6 +3,27 @@
 :page-based-on: 8d3e6bb8724190dec8e19e3c79ffd3ee5c45855d
 :toc:
 :partialDir: _partials
+// Table column headers
+:col-java-version: Versión de Java
+:col-first-availability: Primera disponibilidad
+:col-latest-release: Última versión
+:col-next-release-due: Próxima versión prevista
+:col-end-of-availability: Fin de disponibilidad
+// Month abbreviations
+:month-jan: Ene
+:month-feb: Feb
+:month-mar: Mar
+:month-apr: Abr
+:month-may: May
+:month-jun: Jun
+:month-jul: Jul
+:month-aug: Ago
+:month-sep: Sep
+:month-oct: Oct
+:month-nov: Nov
+:month-dec: Dic
+// Other translatable strings
+:at-least: Al menos
 
 == Soporte de la Comunidad
 
