@@ -1,6 +1,6 @@
 = Linux (RPM/DEB/APK) installer packages
 :page-authors: rocketxz, NickJavaDev88, gdams
-:page-based-on: 8b914e3acf93b00b855ef1918e8c5eba0fdfcbb4
+:page-based-on: 458cf9f5dd23978e1f2dbe2bdfc68f35a6016a79
 :toc:
 :icons: font
 
@@ -83,6 +83,62 @@ Alternativamente, si está utilizando `yum`:
 [source, bash, subs="attributes"]
 ----
 sudo yum install temurin-{latest-lts}-jdk
+----
+
+==== Instalación del JRE
+
+Si solo necesita el Entorno de Ejecución de Java (para ejecutar aplicaciones, no compilarlas),
+instale el paquete JRE:
+
+[source,bash]
+----
+sudo dnf install temurin-<version>-jre
+----
+
+Ejemplo:
+
+[source,bash]
+----
+sudo dnf install temurin-21-jre
+----
+
+==== Instalación del JRE sin interfaz gráfica
+
+Para entornos de servidor donde no se requieren componentes gráficos, también está disponible
+un paquete JRE sin interfaz gráfica. Este excluye las bibliotecas relacionadas con la GUI,
+como AWT, y reduce el tamaño total de la instalación.
+
+[source,bash]
+----
+sudo dnf install temurin-<version>-jre-headless
+----
+
+Ejemplo:
+
+[source,bash]
+----
+sudo dnf install temurin-21-jre-headless
+----
+
+El paquete `jre-headless` es recomendado para:
+
+- Imágenes de contenedores
+- Instalaciones mínimas de servidor
+- Agentes de compilación CI/CD
+- Cargas de trabajo de producción sin interfaz gráfica
+
+==== Verificación de la instalación
+
+[source,bash]
+----
+java -version
+----
+
+También puede confirmar los paquetes instalados con:
+
+[source,bash]
+----
+rpm -qa | grep temurin
 ----
 
 == Instrucciones para openSUSE/SLES
