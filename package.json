@@ -10,7 +10,7 @@
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "update-snapshots": "vitest --run -u",
-    "lint": "eslint .",
+    "lint": "next lint",
     "generate:api-types": "openapi-typescript https://api.adoptium.net/q/openapi -o src/types/adoptiumApiTypes.ts && openapi-typescript https://marketplace-api.adoptium.net/q/openapi -o src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
