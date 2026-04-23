@@ -43,8 +43,8 @@ safe-outputs:
     title-prefix: "[translation] "
     labels: [translation, help wanted]
     draft: true
-    max: 3
-    expires: 30
+    max: 5
+    expires: 30d
 
 checkout:
   fetch-depth: 0
@@ -53,7 +53,7 @@ concurrency:
   group: update-translations
   cancel-in-progress: true
 
-timeout-minutes: 30
+timeout-minutes: 60
 
 jobs:
   pre-activation:
