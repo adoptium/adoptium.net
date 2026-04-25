@@ -2,7 +2,7 @@
 :description: Adoptium 安全软件工程和供应链管理实践
 :keywords: 安全性 SSDF SLSA 供应链
 :orgname: Eclipse Adoptium
-:lang: zh-CN
+ zh-CN
 :page-authors: tellison, gdams, NickJavaDev88
 :page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 

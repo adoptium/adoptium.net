@@ -3,7 +3,7 @@
 :description: Wie man GPG-Signaturen von Eclipse Temurin-Binärdateien mit dem öffentlichen Adoptium-Schlüssel verifiziert
 :keywords: GPG Signatur Verifizierung Sicherheit Temurin
 :orgname: Eclipse Adoptium
-:lang: de
+ de
 :page-authors: gdams
 :page-based-on: 8d3e6bb8724190dec8e19e3c79ffd3ee5c45855d
 :toc:

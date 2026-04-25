@@ -1,8 +1,6 @@
-= Verifying GPG Signatures for Eclipse Temurin Downloads
 :description: How to verify GPG signatures of Eclipse Temurin binaries using the Adoptium public key
 :keywords: GPG signature verification security Temurin
 :orgname: Eclipse Adoptium
-:lang: en
 :page-authors: sxa, gdams
 :toc:
 :icons: font

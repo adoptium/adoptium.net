@@ -2,7 +2,7 @@
 :description: Política del Mercado de Adoptium
 :keywords: política del mercado de adoptium
 :orgname: Eclipse Adoptium
-:lang: es
+ es
 :page-authors: tellison, gdams, NickJavaDev88
 :page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 

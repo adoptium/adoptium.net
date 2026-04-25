@@ -2,7 +2,6 @@
 :page-authors: gdams, smlambert, llxia, tellison, NickJavaDev88, xavierfacq
 :page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 :aqavit-branch: v0.9.6-release
-:lang: es
 Versión 0.2, 02.03.2022
 
 El proyecto AQAvit fue creado para "hacer que la calidad sea una certeza". La verificación AQAvit se logra a través del proceso de ejecutar y superar un conjunto prescrito y versionado de pruebas en la suite de pruebas AQAvit. La https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Licencia de Software de Verificación de Calidad de la Fundación Eclipse (QVSL)^] requiere que aquellos que deseen verificar su producto compartan un resumen de los resultados de las pruebas mediante los cuales se logró la verificación. Este documento describe cómo ejecutar las pruebas de verificación AQAvit, comprobar que la verificación se ha superado y recopilar los resultados de las pruebas requeridas para su publicación.
