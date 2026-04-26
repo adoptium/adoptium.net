@@ -29,8 +29,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Exclude issue templates, gh-aw lock/md files, and generated workflows
           FILTER_REGEX_EXCLUDE: ".*(\\.github/ISSUE_TEMPLATE/|\\.lock\\.(yml|json)|\\.git\
-            hub/workflows/.*\\.md|\\.github/copilot-setup-steps\\.yml|\\.github\
-            /agents/.*\\.agent\\.md).*"
+            hub/workflows/.*\\.md|\\.github/workflows/agentics-maintenance\\.ym\
+            l|\\.github/copilot-setup-steps\\.yml|\\.github/agents/.*\\.agent\\\
+            .md).*"
           VALIDATE_YAML: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false
