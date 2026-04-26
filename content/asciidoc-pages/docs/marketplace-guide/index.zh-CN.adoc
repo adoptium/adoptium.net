@@ -3,7 +3,7 @@
 :keywords: Adoptium 市场
 :orgname: Eclipse Adoptium
 :page-authors: tellison, gdams, jiekang, NickJavaDev88
-:page-based-on: 5eff0d1e706616675fd76358673e3ea64cdb66cb
+:page-based-on: f2e6e929f64dd6ef7bd7f452d2aed14095705a31
 
 == 简介
 
