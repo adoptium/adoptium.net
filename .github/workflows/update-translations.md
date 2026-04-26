@@ -42,8 +42,8 @@ safe-outputs:
   create-pull-request:
     title-prefix: "[translation] "
     labels: [translation, help wanted]
-    draft: true
-    max: 5
+    draft: false
+    max: 1
     expires: 30d
 
 checkout:
@@ -82,6 +82,7 @@ SHA becomes stale.
 
 Assign PRs for review to the appropriate locale lead:
 
+- **en-GB** (British English): @gdams
 - **de** (German): @hendrikebbers
 - **fr** (French): @xavierfacq
 - **zh-CN** (Simplified Chinese): @zdtsw
@@ -112,10 +113,11 @@ Assign PRs for review to the appropriate locale lead:
 
 4. **Update the `:page-based-on:` attribute** to the new English commit SHA.
 
-5. **Create one PR per locale** with the title format:
-   `[translation] Update <LOCALE> translation for <path>`
-   Request review from the appropriate locale lead listed above.
+5. **Create a single PR containing all locale updates** with the title format:
+   `[translation] Update outdated translations`
+   Request review from all relevant locale leads listed above (only those whose locales were updated).
    In the PR description, include:
+   - A list of which locales and files were updated
    - A summary of what changed in the English source
    - The diff of the English changes for reference
    - A note that this is an AI-generated translation that needs human review
