@@ -3,7 +3,7 @@
 :keywords: Seguridad SSDF SLSA Cadena de Suministro
 :orgname: Eclipse Adoptium
 :page-authors: tellison, gdams, NickJavaDev88
-:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
+:page-based-on: f2e6e929f64dd6ef7bd7f452d2aed14095705a31
 
 El proyecto Adoptium produce entornos de ejecución de Java de alta calidad para su uso en entornos críticos. Es importante para el proyecto y para nuestros usuarios que el software que entregamos sea seguro y confiable. Adoptium sigue un conjunto de prácticas de desarrollo de software fundamentales, sólidas y seguras, basadas en prácticas establecidas de desarrollo de software seguro que pueden ser verificadas para establecer la integridad de nuestros productos finales.
 

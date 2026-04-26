@@ -3,7 +3,7 @@
 :keywords: 安全性 SSDF SLSA 供应链
 :orgname: Eclipse Adoptium
 :page-authors: tellison, sxa, gdams, NickJavaDev88
-:page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
+:page-based-on: f2e6e929f64dd6ef7bd7f452d2aed14095705a31
 
 
 https://slsa.dev/[软件产物的供应链级别 (SLSA)^] 是一个安全框架，旨在帮助人们确信源码、库和软件包等一系列输入能产生诸如二进制文件和软件物料清单等定义明确的输出。它是一套结构化的技术要求，旨在帮助生产者信任其直接控制的供应链部分，并增强对构建过程的信心，以捕获任何上游供应链攻击。
