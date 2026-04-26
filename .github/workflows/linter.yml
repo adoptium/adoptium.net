@@ -2,7 +2,7 @@ name: Linter
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -28,7 +28,8 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Exclude issue templates, gh-aw lock/md files, and generated workflows
-          FILTER_REGEX_EXCLUDE: ".*(\\.github/ISSUE_TEMPLATE/|\\.lock\\.(yml|json)|\\.git\
+          FILTER_REGEX_EXCLUDE:
+            ".*(\\.github/ISSUE_TEMPLATE/|\\.lock\\.(yml|json)|\\.git\
             hub/workflows/.*\\.md|\\.github/workflows/agentics-maintenance\\.ym\
             l|\\.github/copilot-setup-steps\\.yml|\\.github/agents/.*\\.agent\\\
             .md).*"
