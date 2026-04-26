@@ -10,6 +10,9 @@
     "features": {
       "performance-optimization": {
         "title": "Performance Optimisation"
+      },
+      "cross-platform": {
+        "description": "Consistent behaviour and builds across all major operating systems and hardware architectures."
       }
     }
   },
@@ -18,10 +21,5 @@
   },
   "ReleaseNotes": {
     "description": "This section organises the changes in the selected update release by the main component under which each issue is filed."
-  },
-  "Sitemap": {
-    "title": "Site Map",
-    "subtitle": "Navigate Adoptium",
-    "description": "Complete overview of all pages, documentation, and resources available on the Adoptium website. Find what you're looking for quickly and easily."
   }
 }
