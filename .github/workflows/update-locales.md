@@ -62,7 +62,7 @@ if: needs.pre_activation.outputs.has_missing == 'true'
 
 # Update Missing Locale Keys
 
-You are a translation maintenance agent for the Eclipse Adoptium website. Your job
+You are a translation maintenance agent for the Eclipse Adoptium site. Your job
 is to keep the JSON locale files in `locales/` in sync with the English source
 (`locales/en.json`).
 
@@ -127,7 +127,7 @@ Request review from the appropriate locale leads for the locales you update:
    - American spelling that differs in British English (e.g. "optimize" → "optimise",
      "color" → "colour", "center" → "centre", "license" → "licence" (noun),
      "artifact" → "artefact", "organize" → "organise")
-   - American terminology that differs in British English (e.g. "zip code" → "postcode")
+   - American terminology that differs in British English (e.g. "ZIP code" → "postcode")
    - Do NOT add keys to `en-GB.json` just because they are new — only if the
      American English wording genuinely requires a British English variant.
    - Remove any `en-GB.json` keys whose `en.json` value no longer contains

@@ -2,7 +2,6 @@
 :description: Adoptium Marketplace Publisher Guide
 :keywords: adoptium marketplace
 :orgname: Eclipse Adoptium
- en
 :page-authors: tellison, gdams, jiekang
 
 == Introduction

@@ -2,7 +2,6 @@
 :description: Adoptium Secure Supply Chain Management
 :keywords: Security SSDF SLSA Supply Chain
 :orgname: Eclipse Adoptium
- en
 :page-authors: tellison, sxa, gdams
 
 

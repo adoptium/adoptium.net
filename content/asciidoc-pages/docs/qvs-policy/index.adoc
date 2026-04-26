@@ -2,7 +2,6 @@
 :description: Adoptium QVS Policy
 :keywords: adoptium AQAvit quality policy
 :orgname: Eclipse Adoptium
- en
 :page-authors: tellison, gdams, HanSolo
 
 == Overview

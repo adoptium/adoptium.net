@@ -2,7 +2,6 @@
 :description: Adoptium Marketplace Publisher Product Listing Guide
 :keywords: adoptium marketplace publisher listing guide
 :orgname: Eclipse Adoptium
- en
 :page-authors: johnoliver, tellison, gdams
 
 
