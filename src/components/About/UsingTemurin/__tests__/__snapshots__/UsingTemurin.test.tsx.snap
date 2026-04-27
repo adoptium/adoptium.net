@@ -26,7 +26,7 @@ exports[`UsingTemurin component > should render correctly 1`] = `
         alt="scroll-divider"
         class="mb-0"
         height="400"
-        src="/images/icons/experience.png"
+        src="/images/icons/experience.webp"
         width="400"
       />
     </div>

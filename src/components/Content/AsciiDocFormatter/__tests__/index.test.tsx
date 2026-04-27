@@ -66,8 +66,10 @@ describe("AsciiDocFormatter", () => {
     expect(link).toHaveAttribute("target", "_blank");
     expect(link).toHaveAttribute("rel", "noopener noreferrer");
 
-    // Check for the external link icon
-    const icon = container.querySelector(".fa-external-link");
+    // Check for the external link icon (rendered as an inline SVG by Icon component)
+    const icon = container.querySelector(
+      'a[href="https://example.com"] span svg',
+    );
     expect(icon).toBeInTheDocument();
   });
 
@@ -75,7 +77,7 @@ describe("AsciiDocFormatter", () => {
     const content = '<p><i class="fa fa-docker"></i></p>';
     const { container } = render(<AsciiDocFormatter content={content} />);
 
-    const icon = container.querySelector(".fab.fa-docker");
+    const icon = container.querySelector("span svg");
     expect(icon).toBeInTheDocument();
   });
 
@@ -173,8 +175,8 @@ describe("AsciiDocFormatter", () => {
     expect(h2Anchor).toBeInTheDocument();
     expect(h2Anchor).toHaveAttribute("aria-label", "Link to h2 section");
 
-    // Check that anchor icons are present
-    const linkIcons = container.querySelectorAll(".fa-link");
+    // Check that anchor icons are present (rendered as inline SVGs by Icon component)
+    const linkIcons = container.querySelectorAll("a[aria-label] span svg");
     expect(linkIcons).toHaveLength(2); // Only h1 and h2 should have anchors (h3 has no ID)
 
     // Check that heading without ID doesn't have an anchor

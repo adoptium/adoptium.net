@@ -57,8 +57,9 @@ describe("AsciiDocFormatter", () => {
     const { container } = render(
       <AsciiDocFormatter content='<i class="fa fa-docker"></i>' />,
     );
-    const icon = container.querySelector("i");
-    expect(icon?.className).toContain("fab");
+    // Icon component renders a <span> wrapping an inline SVG
+    const icon = container.querySelector("span svg");
+    expect(icon).toBeInTheDocument();
   });
 
   it("renders note admonition block as github-callout", () => {
