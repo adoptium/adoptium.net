@@ -95,12 +95,8 @@ exactly as-is in all translations.
 
 ## Locale Leads
 
-Request review from the appropriate locale leads for the locales you update:
-
-- **en-GB** (British English): @gdams
-- **de** (German): @hendrikebbers
-- **fr** (French): @xavierfacq
-- **zh-CN** (Simplified Chinese): @zdtsw
+Request review from the appropriate locale leads for the locales you update.
+See [locales/README.md](../../locales/README.md#locale-leads) for the current list.
 
 ## Instructions
 

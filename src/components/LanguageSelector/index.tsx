@@ -1,45 +1,53 @@
-'use client'
+"use client";
 
-import React, { Fragment } from "react"
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react"
-import { FaChevronDown } from "react-icons/fa"
-import Flag from "react-world-flags"
-import ISO6391 from "iso-639-1"
-import { useRouter, usePathname } from '@/i18n/navigation';
-import { routing } from "@/i18n/routing"
+import React, { Fragment } from "react";
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Transition,
+} from "@headlessui/react";
+import { FaChevronDown } from "react-icons/fa";
+import Flag from "react-world-flags";
+import ISO6391 from "iso-639-1";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
 function classNames(...classes: (string | boolean | undefined | null)[]) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 // Helper functions for locale display
 function getCountryCode(locale: string): string {
   switch (locale) {
     case "en":
-      return "us"
+      return "us";
     case "en-GB":
-      return "gb"
+      return "gb";
     case "zh-CN":
-      return "cn"
+      return "cn";
+    case "ja":
+      return "jp";
     case "de":
-      return "de"
+      return "de";
     case "pt-BR":
-      return "br"
+      return "br";
     default:
-      return locale
+      return locale;
   }
 }
 
 function getLanguageCode(locale: string): string {
   switch (locale) {
     case "zh-CN":
-      return "zh"
+      return "zh";
     case "en-GB":
-      return "en"
+      return "en";
     case "pt-BR":
-      return "pt"
+      return "pt";
     default:
-      return locale
+      return locale;
   }
 }
 
@@ -53,7 +61,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ locale }) => {
 
   // Function to change the language - uses next-intl router
   const changeLanguage = (newLocale: string) => {
-
     // Navigate to the same pathname but with the new locale
     router.push(pathname, { locale: newLocale });
   };
@@ -94,12 +101,18 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ locale }) => {
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       lng === locale ? "font-bold" : "",
-                      "block w-full text-left px-4 py-2 text-sm"
+                      "block w-full text-left px-4 py-2 text-sm",
                     )}
                   >
                     <div className="flex items-center space-x-2">
-                      <Flag className="mb-0" code={getCountryCode(lng)} width="35" />
-                      <span className="ml-2">{ISO6391.getNativeName(getLanguageCode(lng))}</span>
+                      <Flag
+                        className="mb-0"
+                        code={getCountryCode(lng)}
+                        width="35"
+                      />
+                      <span className="ml-2">
+                        {ISO6391.getNativeName(getLanguageCode(lng))}
+                      </span>
                     </div>
                   </button>
                 )}
