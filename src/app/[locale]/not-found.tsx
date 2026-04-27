@@ -9,14 +9,14 @@ export default function CatchAllPage() {
     <div className="relative pt-24 pb-24 md:pt-32 md:pb-32 flex flex-col justify-center items-center">
       <Image
         className="absolute top-0 left-0 w-full h-full -z-10 hidden md:block"
-        src="/images/backgrounds/404-error-bg.png"
+        src="/images/backgrounds/404-error-bg.webp"
         alt="Background 404 image"
         fill
         sizes="100vw"
       />
       <Image
         className="absolute top-0 left-0 w-full h-full -z-10 block md:hidden"
-        src="/images/backgrounds/404-error-bg-mobile.png"
+        src="/images/backgrounds/404-error-bg-mobile.webp"
         alt="Background 404 image"
         fill
         sizes="100vw"

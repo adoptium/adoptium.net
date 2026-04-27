@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
   },
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -39,11 +40,38 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/favicon.ico",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=604800, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
         source: "/images/:path*",
         headers: [
           {
             key: "Cache-Control",
             value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/pagefind/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/docs/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=604800, stale-while-revalidate=604800",
           },
         ],
       },

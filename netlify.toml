@@ -10,6 +10,26 @@
     includeSubDomains;
     preload'''
 
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/pagefind/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/docs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
+
 [[redirects]]
   from = "https://blog.adoptium.net/:locale/*"
   to = "https://adoptium.net/:locale/news/:splat"

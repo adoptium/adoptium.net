@@ -10,6 +10,7 @@ import parse, {
   DOMNode,
 } from "html-react-parser";
 import AccordionItem from "@/components/Content/Asciidoc/AccordionItem";
+import Icon from "@/components/Icon";
 
 function isElement(node: { type?: string }): node is Element {
   return node.type === "tag";
@@ -47,7 +48,9 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
               className={node.attribs.class}
             >
               {domToReact(node.children as DOMNode[], options)}
-              {!wrapsImage && <i className="fa fa-external-link fa-xs p-1" />}
+              {!wrapsImage && (
+                <Icon name="external-link" className="w-3 h-3 p-1" />
+              )}
             </a>
           );
         } else {
@@ -81,7 +84,7 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
                 className="absolute -left-6 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-pink dark:text-purple-400 hover:text-pink-600 dark:hover:text-purple-300 no-underline"
                 aria-label={`Link to ${node.name} section`}
               >
-                <i className="fa fa-link text-sm" aria-hidden="true" />
+                <Icon name="link" className="w-3.5 h-3.5" />
               </a>
             )}
           </>
@@ -90,13 +93,29 @@ const AsciiDocFormatter: React.FC<AsciiDocFormatterProps> = ({ content }) => {
         return React.createElement(node.name, headingProps, headingContent);
       }
 
-      // Transform <i> tags
+      // Transform <i> tags with FontAwesome classes to inline SVG icons
       if (
         node.name === "i" &&
         node.attribs?.class &&
-        node.attribs.class.includes("fa-docker")
+        node.attribs.class.includes("fa")
       ) {
-        return <i className={node.attribs.class.replace("fa", "fab")} />;
+        const classes = node.attribs.class;
+        if (classes.includes("fa-docker")) {
+          return <Icon name="docker" className="w-4 h-4 inline-block" />;
+        }
+        if (classes.includes("fa-check")) {
+          return (
+            <Icon
+              name="check"
+              className="w-4 h-4 inline-block text-green-500"
+            />
+          );
+        }
+        if (classes.includes("fa-times")) {
+          return (
+            <Icon name="times" className="w-4 h-4 inline-block text-red-500" />
+          );
+        }
       }
 
       // Transform admonition blocks into GitHub-style callouts

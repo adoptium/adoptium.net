@@ -85,7 +85,7 @@ Alternatively, if you are using `yum`:
 sudo yum install temurin-{latest-lts}-jdk
 ----
 
-==== Installing the JRE
+=== Installing the JRE
 
 If you only require the Java Runtime Environment (for running applications,
 not compiling them), install the JRE package:
@@ -102,7 +102,7 @@ Example:
 sudo dnf install temurin-21-jre
 ----
 
-==== Installing the Headless JRE
+=== Installing the Headless JRE
 
 For server environments where no graphical components are required, a
 headless JRE package is also available. This excludes GUI-related libraries
@@ -127,7 +127,7 @@ The `jre-headless` package is recommended for:
 - CI/CD build agents
 - Headless production workloads
 
-==== Verifying Installation
+=== Verifying Installation
 
 [source,bash]
 ----

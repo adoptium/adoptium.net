@@ -8,13 +8,21 @@
   position: absolute;
   bottom: -450px;
   right: 0;
-  background-size: 100% 100%;
-  background-position: center;
   width: 100%;
   height: 200%;
-  background-repeat: no-repeat;
   z-index: -1;
-  background-image: url("/images/backgrounds/linear-bg.png");
+  background:
+    radial-gradient(
+      ellipse at 30% 20%,
+      rgba(255, 19, 101, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 70% 60%,
+      rgba(100, 40, 180, 0.15) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #14003c 0%, #0d002a 50%, #14003c 100%);
 }
 
 .mySwiperbase .swiper-slide {
