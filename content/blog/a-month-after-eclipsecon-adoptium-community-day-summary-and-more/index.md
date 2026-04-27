@@ -76,7 +76,7 @@ _Shelley explaining what is an SBOM_
 
 The day closed with the Jakarta EE reception sponsored by IBM, and they invited me to give some words on behalf of the community we represented. It was also a good moment to meet other sponsors and working group members.
 
-![Jakarta EE IBM receptiom](/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/jakartaee-ibm-reception.webp)
+![Jakarta EE IBM reception](/images/news/a-month-after-eclipsecon-adoptium-community-day-summary-and-more/jakartaee-ibm-reception.webp)
 _Carmen giving a thank you toast to both Jakarta EE and IBM team_
 
 ## Thursday 26: Closure and Hackathon
