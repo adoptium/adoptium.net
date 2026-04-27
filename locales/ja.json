@@ -1,0 +1,280 @@
+{
+  "HomePage": {
+    "the-power": "Eclipse Temurin®の力",
+    "download-temurin-for": "{userOSName} {arch} 用 Temurin {defaultVersion} をダウンロード",
+    "download-temurin-short": "Temurin {defaultVersion} をダウンロード",
+    "other-downloads": "その他のダウンロード",
+    "download-temurin-button": "Temurin®をダウンロード",
+    "sustainer-cta-description": "数百万人がEclipse Temurinに依存しています。あなたのサポートが継続を支えます",
+    "sustainer-cta-button": "Eclipse Temurinに再投資する"
+  },
+  "DownloadPage": {
+    "thank-you": "ダウンロードいただきありがとうございます",
+    "vendor-build": "{vendor} ビルド",
+    "vendor-alert": "Eclipse Adoptiumワーキンググループのメンバーである<vendorWrapper>{vendor}</vendorWrapper>からビルドをダウンロードしています。",
+    "auto-start-p1": "OpenJDKランタイムのダウンロードは数秒後に自動的に開始されます。",
+    "auto-start-p2": "開始されない場合は、",
+    "click-here": "こちらをクリックして手動で再開してください",
+    "community-action": "コミュニティアクションが必要です",
+    "free-to-use": "無料で使えますが、",
+    "not-free-to-build": "維持は無料ではありません。",
+    "appeal-quote": "無料で使えますが、維持は無料ではありません。スポンサーシップがプロジェクトの健全な成長を支えます。",
+    "appeal-text": "Eclipse Temurinは世界中の数百万人の開発者に信頼されています。これらの高品質なオープンソースバイナリの将来を確保するために、長期的な持続可能性のためのスポンサーシップが必要です。",
+    "github-sponsor-btn": "GitHubスポンサー",
+    "become-sustainer-btn": "スポンサーになる",
+    "corporate-sponsorship-btn": "企業スポンサー",
+    "why-we-need-you": "あなたの支援が必要な理由",
+    "infra-costs-title": "インフラコスト",
+    "infra-costs-desc": "50以上のプラットフォームでのテストには膨大なコンピューティングパワーが必要です。",
+    "security-speed-title": "セキュリティと速度",
+    "security-speed-desc": "迅速で安全なアップデートには専用のリソースが必要です。",
+    "open-source-title": "真のオープンソース",
+    "open-source-desc": "オープンソースのJavaランタイムを永遠に無料に保つためには、共同での資金提供が必要です。",
+    "resources-next-steps": "リソースと次のステップ",
+    "installation-guide-title": "インストールガイド",
+    "installation-guide-desc": "新しいJavaランタイムのセットアップ手順を段階的に説明します。",
+    "documentation-title": "ドキュメント",
+    "documentation-desc": "Eclipse TemurinとAdoptiumエコシステムの包括的なドキュメント。"
+  },
+  "NotFoundPage": {
+    "title": "申し訳ありません。このページは見つかりませんでした",
+    "back-to-home": "ホームに戻る"
+  },
+  "Marketplace": {
+    "title": "Adoptium® マーケットプレイス",
+    "subtitle": "マーケットプレイス",
+    "description": "Java™は世界をリードするプログラミング言語およびプラットフォームです。Adoptiumマーケットプレイスは、Javaエコシステム全体で使用するための高品質でTCK認定済み、AQAvit検証済みのランタイムを提供しています。",
+    "VendorSelector": {
+      "vendors-selected": "{total}社中{selected}社のベンダーが選択されています"
+    },
+    "Releases": {
+      "download": "ダウンロード",
+      "build-date": "ビルド日",
+      "vendor": "ベンダー"
+    }
+  },
+  "PowerOfTemurin": {
+    "title": "Eclipse Temurinの力",
+    "description": "OpenJDKベース：Eclipse Temurinは、Javaエコシステムでの一般的な使用向けに、高性能でクロスプラットフォーム、オープンソースライセンスのJava™ランタイムバイナリを提供します。エンタープライズ対応で、Java SE TCK認定済み、AQAvit検証済みです。",
+    "button": "ビジネス上のメリット",
+    "benefits": {
+      "performance": {
+        "title": "パフォーマンスと信頼性",
+        "description": "安全で高性能なJavaランタイムであるEclipse Temurinを使用して、エンタープライズアプリケーションを安心して実行できます。安定性のために厳密にテストされ、多様な環境でシームレスに動作するよう最適化されています。"
+      },
+      "cost": {
+        "title": "コスト効率の高いイノベーション",
+        "description": "ライセンス料なしで高品質なオープンソースJavaを採用できます。長期的な持続可能性とエンタープライズ対応のランタイムパフォーマンスを確保する堅牢なエコシステムの恩恵を受けながら、コストを削減できます。"
+      },
+      "developers": {
+        "title": "開発者の強化",
+        "description": "Eclipse Temurinの一貫したクロスプラットフォームビルドで開発者の生産性を向上させます。世界中の数百万人に信頼される、信頼性の高い高品質ランタイムに頼りながら、イノベーションに集中できます。"
+      }
+    }
+  },
+  "TemurinFeatures": {
+    "title": "無料のビルド済みOpenJDKバイナリ！",
+    "description": "Java™は世界をリードするプログラミング言語およびプラットフォームです。Adoptiumワーキンググループは、Javaエコシステム全体で使用するための高品質でTCK認定済みのランタイムと関連技術を推進・サポートしています。Eclipse Temurinは、AdoptiumによるOpenJDKディストリビューションの名称です。",
+    "features": {
+      "secure-supply-chain": {
+        "title": "セキュアなサプライチェーン",
+        "description": "堅牢なセキュリティ基準で構築され、信頼性が高く、透明で、脆弱性のないサプライチェーンを保証します。"
+      },
+      "aqavit-verification": {
+        "title": "AQAvit検証",
+        "description": "AQAvitを使用して徹底的にテストされ、すべてのビルドでパフォーマンス、信頼性、セキュリティを保証します。"
+      },
+      "performance-optimization": {
+        "title": "パフォーマンス最適化",
+        "description": "最適なパフォーマンスのために設計され、多様な環境で速度、効率、安定性を提供します。"
+      },
+      "cross-platform": {
+        "title": "クロスプラットフォームの一貫性",
+        "description": "すべての主要なオペレーティングシステムとハードウェアアーキテクチャで一貫した動作とビルドを提供します。"
+      },
+      "community-driven": {
+        "title": "コミュニティ主導の開発",
+        "description": "Eclipse Adoptiumプロジェクトは、継続的に改善とイノベーションを行う活気あるグローバルコミュニティによって形作られています。"
+      },
+      "enterprise-ready": {
+        "title": "エンタープライズ対応サポート",
+        "description": "エンタープライズグレードの商用サポーターに支えられ、シームレスな統合、スケーラビリティ、長期的な持続可能性を保証します。"
+      }
+    }
+  },
+  "RandomContributors": {
+    "thank-you": "<highlight>300人以上</highlight>のコントリビューターに感謝します",
+    "thank-you-mobile": "<highlight>300人以上</highlight>の<linebreak></linebreak>コントリビューターに<linebreak></linebreak>感謝します"
+  },
+  "RandomContributor": {
+    "thank-you": "<name></name>さん、<repo></repo>への<contributions></contributions>ありがとうございます",
+    "contribution-singular": "件のコントリビューション",
+    "contribution-plural": "件のコントリビューション"
+  },
+  "DownloadCounter": {
+    "title": "Eclipse Temurinで世界中の数百万人を支える",
+    "total-download-docker-pulls-ever": "累計ダウンロード数/Dockerプル数",
+    "loading": "読み込み中..."
+  },
+  "WaysToSupport": {
+    "title": "サポートの方法",
+    "description": "Eclipseテクノロジーに価値を感じている方は、Eclipse Foundationを通じてスポンサーになることをご検討ください。ユーザーからの寄付はAdoptiumワーキンググループの運営資金に使われます。Eclipse Foundationに寄付されたすべての資金は、Adoptiumワーキンググループを通じてEclipseコミュニティの支援に使用されます。",
+    "contribute": {
+      "how-to-contribute": "コントリビュートの方法",
+      "description": "技術的・非技術的な開発でプロジェクトに貢献してください。Javaランタイムの将来を形作るために私たちのコミュニティに参加してください。"
+    },
+    "sustainers": {
+      "title": "サステイナーになる",
+      "description": "Eclipse Temurinの未来を共に強化しましょう"
+    },
+    "member": {
+      "title": "メンバーになる",
+      "description": "Eclipse Adoptiumの未来を共に形作りましょう"
+    }
+  },
+  "AuthorList": {
+    "documentation-authors": "ドキュメント著者"
+  },
+  "EditLink": {
+    "help-us-make-these-docs-great": "このドキュメントの改善にご協力ください！",
+    "all-adoptium-docs-are-open-source": "すべてのAdoptiumドキュメントはオープンソースです。誤りや不明な点がありましたらお知らせください。",
+    "edit-this-page": "このページを編集する"
+  },
+  "DocThemeToggle": {
+    "light": "ライト",
+    "dark": "ダーク",
+    "switch-to-light": "ライトモードに切り替える",
+    "switch-to-dark": "ダークモードに切り替える"
+  },
+  "DocTableOfContents": {
+    "on-this-page": "このページの内容"
+  },
+  "DocumentationSearch": {
+    "placeholder": "ドキュメントを検索..."
+  },
+  "Asciidoc": {
+    "table-of-contents": "目次",
+    "warn-default-locale": "このページはお使いの言語では利用できないため、<englishVersionLink>英語版</englishVersionLink>を表示しています。このページをお使いの言語に翻訳するにはご協力ください。詳細は<translationGuideLink>翻訳ガイド</translationGuideLink>をご覧ください。",
+    "warn-outdated": "このローカライズされたページは<previousEnglishVersionLink>英語ページの以前のバージョン</previousEnglishVersionLink>に基づいており、正確でない可能性があります。<lastEnglishVersionLink>英語ページの最新バージョン</lastEnglishVersionLink>に合わせてこのページを更新するにはご協力ください。詳細は<translationGuideLink>翻訳ガイド</translationGuideLink>をご覧ください。"
+  },
+  "LatestNews": {
+    "latest-news-and-updates": "最新ニュースとアップデート",
+    "subtitle": "Eclipse Adoptiumプロジェクトの最新情報をフォロー",
+    "see-all-news": "すべてのニュースを見る",
+    "read-more": "続きを読む"
+  },
+  "WGProjects": {
+    "discover-all-our-projects": "すべてのプロジェクトを発見する",
+    "description": "Eclipse Adoptiumは、高性能でエンタープライズグレード、クロスプラットフォーム、オープンソースライセンス、Java SE TCKテスト済みで準拠した、Javaエコシステムでの一般使用向けランタイムバイナリを提供します。Eclipse Adoptiumはまた、オープンソースのInfrastructure as Code、包括的な継続的インテグレーションビルドおよびテストファーム、広範な品質保証テストなどの成果物も提供します。これらの成果物は、Eclipse Adoptiumプロジェクトやその他のランタイムテクノロジービルダーが、セキュアでJava SE TCKテスト済みで準拠した本番環境対応ランタイムの提供を確保するために使用できます。"
+  },
+  "LogoCarousel": {
+    "title": "Temurinは、これらの主要な採用企業を含む数百万人に信頼されています："
+  },
+  "ChecksumModal": {
+    "compare-the-checksum": "ダウンロードしたファイルが完全で変更されていないことを確認するために、以下のチェックサムと比較してください。",
+    "verify-using": "次を使用して検証：",
+    "replace-file": "\"file\"をダウンロードした実際のファイル名に置き換えてください",
+    "close": "閉じる",
+    "copied": "コピーしました",
+    "copy": "コピー"
+  },
+  "TemurinReleases": {
+    "title": "Temurin® JDKをダウンロード",
+    "latest-releases": "最新リリース",
+    "description": "バージョン、パッケージタイプ、JDK/JREを選択してバイナリをダウンロードしてください。"
+  },
+  "Temurin": {
+    "Releases": {
+      "ReleaseFilters": {
+        "reset-to-defaults": "デフォルトにリセット",
+        "loading-versions": "バージョンを読み込み中...",
+        "filter-releases": "リリースをフィルター",
+        "version": "バージョン",
+        "operating-system": "オペレーティングシステム",
+        "architecture": "アーキテクチャ",
+        "package-type": "パッケージタイプ",
+        "any-os": "すべてのOS",
+        "any-architecture": "すべてのアーキテクチャ",
+        "any-package-type": "すべてのパッケージタイプ"
+      },
+      "ReleaseLinks": {
+        "release-notes": "リリースノート",
+        "installation-guide": "インストールガイド",
+        "supported-platforms": "サポートプラットフォーム",
+        "source-code": "ソースコード"
+      },
+      "ReleaseResults": {
+        "this-build-is-jck-certified": "このビルドはJCK認定済みです",
+        "this-build-is-aqavit-verified": "このビルドはAQAvit検証済みです",
+        "checksum": "チェックサム",
+        "no-releases-found": "リリースが見つかりません",
+        "no-releases-found-description": "現在のフィルター条件に一致するリリースはありません。選択を調整するか、すべてのフィルターをリセットして利用可能なリリースを表示してください。"
+      }
+    },
+    "Nightly": {
+      "title": "ナイトリービルド",
+      "subtitle": "早期アクセス",
+      "description": "テストおよび開発目的の最新ナイトリービルドを入手できます。",
+      "be-aware": "このアーカイブには、<fullReleaseLink>正式リリース</fullReleaseLink>に向けた開発段階として作成された中間ビルドが含まれていることにご注意ください。中間ビルドは一時的なものであり、将来削除される可能性があります。",
+      "notice-title": "中間ビルドには以下の注意事項が適用されます：",
+      "quoted-notice": "これはテスト目的のみで提供される中間ビルドです。コードはテストされておらず、Java SE仕様と互換性がないと推定されます。このコードにデプロイまたは書き込みを行わず、テスト済みで認定されたJava SE互換バージョンのコードを使用してください。このビルドの再配布にはこの通知を含める必要があります。",
+      "unsupported-in-production": "これらのビルドはサポートされておらず、本番環境での使用は想定されていません。",
+      "latest-releases": "最新リリース",
+      "download-not-available": "利用不可",
+      "no-results": "選択されたバージョンのナイトリービルドはありません。",
+      "checksum": "チェックサム",
+      "select-options-filter": "オプションを選択してナイトリービルドのリストをフィルターしてください",
+      "version": "バージョン",
+      "number-of-builds": "ビルド数",
+      "builds-prior-to": "以前のビルド",
+      "platform": "プラットフォーム",
+      "architecture": "アーキテクチャ",
+      "type": "タイプ",
+      "build-tag": "ビルド/タグ",
+      "date": "日付",
+      "binary": "バイナリ",
+      "installer": "インストーラー",
+      "release-name": "リリース名"
+    },
+    "VersionSelector": {
+      "all-versions": "すべてのバージョン"
+    },
+    "DownloadMethods": {
+      "other-ways-to-download-temurin": "Temurinのその他のダウンロード方法",
+      "description": "直接ダウンロード以外にもEclipse Temurinを入手する方法は複数あります。以下の厳選されたリストは、高性能でクロスプラットフォームのオープンソースOpenJDKランタイムバイナリをインストールするためのオプションの一部を示しています。"
+    }
+  },
+  "ReleaseNotes": {
+    "title": "リリースノート",
+    "couldnt-find-release-notes": "申し訳ありません...リリースノートが見つかりませんでした",
+    "not-found-helper": "バージョンURLパラメータを使用してバージョンを指定してください：",
+    "description": "このセクションでは、選択されたアップデートリリースの変更を、各課題が登録されているメインコンポーネントごとに整理しています。",
+    "selectVersion": "Temurinバージョンを選択",
+    "selectVersionDescription": "Temurinバージョンを選択して最新のリリースノートを表示：",
+    "viewReleaseNotes": "リリースノートを表示 →"
+  },
+  "Sitemap": {
+    "title": "サイトマップ",
+    "subtitle": "Adoptiumをナビゲート",
+    "description": "Adoptiumウェブサイトで利用可能なすべてのページ、ドキュメント、リソースの完全な概要です。探しているものを素早く簡単に見つけることができます。"
+  },
+  "DocsPage": {
+    "home": "ホーム",
+    "documentation": "ドキュメント",
+    "title": "Adoptium® ドキュメント",
+    "subtitle": "Eclipse AdoptiumとEclipse Temurinのガイド、リファレンス、リソース",
+    "getting-started": "はじめに",
+    "explore-by-topic": "トピックで探す",
+    "install-temurin": "Temurinのインストール",
+    "install-temurin-desc": "すべてのプラットフォーム向けのステップバイステップのインストールガイド",
+    "download-temurin": "Temurinのダウンロード",
+    "download-temurin-desc": "最新のEclipse Temurinリリースを入手",
+    "migration-guide": "移行ガイド",
+    "migration-guide-desc": "他のJDKからEclipse Temurinへの移行",
+    "supported-platforms": "サポートプラットフォーム",
+    "supported-platforms-desc": "OSとアーキテクチャの互換性マトリックス"
+  },
+  "Byline": {
+    "reading-time": "{minutes}分で読めます"
+  }
+}

@@ -80,12 +80,8 @@ SHA becomes stale.
 
 ## Locale Leads
 
-Assign PRs for review to the appropriate locale lead:
-
-- **en-GB** (British English): @gdams
-- **de** (German): @hendrikebbers
-- **fr** (French): @xavierfacq
-- **zh-CN** (Simplified Chinese): @zdtsw
+Assign PRs for review to the appropriate locale lead.
+See [locales/README.md](../../locales/README.md#locale-leads) for the current list.
 
 ## Instructions
 

@@ -22,6 +22,7 @@ Each language is represented by a JSON file following the [BCP 47](https://en.wi
 - `de.json` - German
 - `es.json` - Spanish
 - `fr.json` - French
+- `ja.json` - Japanese
 - `pt-BR.json` - Brazilian Portuguese
 - `zh-CN.json` - Simplified Chinese
 
@@ -129,6 +130,18 @@ export const routing = defineRouting({
 ```
 
 3. Translate all keys from `en.json` to the new language
+
+## Locale Leads
+
+Each locale has a lead responsible for reviewing translation PRs:
+
+- **en-GB** (British English): @gdams
+- **de** (German): @hendrikebbers
+- **es** (Spanish): _Seeking volunteer — open an issue to help!_
+- **fr** (French): @xavierfacq
+- **ja** (Japanese): _Seeking volunteer — open an issue to help!_
+- **pt-BR** (Brazilian Portuguese): _Seeking volunteer — open an issue to help!_
+- **zh-CN** (Simplified Chinese): @zdtsw
 
 ## Best Practices
 
