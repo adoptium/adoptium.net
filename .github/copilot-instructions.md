@@ -73,6 +73,7 @@ content/
 ### CSS & Styling
 
 - **Primary approach**: Tailwind CSS classes
+- **Alpha values**: Use percentage notation for alpha values in CSS (e.g., `rgba(255, 19, 101, 12%)` not `rgba(255, 19, 101, 0.12)`). This is enforced by the `alpha-value-notation` stylelint rule.
 - **Custom CSS custom properties** defined in `globals.css`:
   - `--purple: #14003c` (primary brand color)
   - `--pink: #ff1365` (accent color)

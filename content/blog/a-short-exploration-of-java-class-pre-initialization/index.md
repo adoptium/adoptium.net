@@ -56,7 +56,7 @@ The native class pre-initialization mechanism requires explicit insertions of ob
 
 At the same time, we have added a security check mechanism of class pre-initialization to the JVM to ensure the virtual machine can still work normally in the worst case. The whole workflow is shown in the figure below:
 
-![workflow](/images/news/a-short-exploration-of-java-class-pre-initialization/workflow.jpg)
+![workflow](/images/news/a-short-exploration-of-java-class-pre-initialization/workflow.webp)
 
 ### 2.3 Evaluation
 

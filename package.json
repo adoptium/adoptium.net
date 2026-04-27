@@ -14,7 +14,6 @@
     "generate:api-types": "openapi-typescript https://api.adoptium.net/q/openapi -o src/types/adoptiumApiTypes.ts && openapi-typescript https://marketplace-api.adoptium.net/q/openapi -o src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.2.0",
     "@headlessui/react": "^2.2.10",
     "@next/third-parties": "16.2.4",
     "asciidoctor": "^3.0.4",

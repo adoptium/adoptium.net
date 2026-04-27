@@ -1,10 +1,11 @@
-import React from "react"
+import React from "react";
+import Icon from "@/components/Icon";
 
-import "./ShellBox.css"
+import "./ShellBox.css";
 
 interface Props {
-  children: React.ReactNode
-  textToCopy?: string
+  children: React.ReactNode;
+  textToCopy?: string;
 }
 
 const ShellBox = ({ children, textToCopy }: Props): React.ReactNode => {
@@ -19,13 +20,13 @@ const ShellBox = ({ children, textToCopy }: Props): React.ReactNode => {
       <div className="shell-box-top">
         {textToCopy && (
           <button onClick={handleCopy} aria-label="Copy to clipboard">
-            <i className="fa fa-copy" />
+            <Icon name="copy" className="w-4 h-4" />
           </button>
         )}
       </div>
       <code className="shell-box-code">{children}</code>
     </pre>
-  )
-}
+  );
+};
 
-export default ShellBox
+export default ShellBox;

@@ -1,21 +1,26 @@
-import React from "react"
-import Image from "next/image"
-import { Link } from "@/i18n/navigation"
+import React from "react";
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 type ImageTextProps = {
-  title: string,
-  description: string,
-  link: string,
-  linkText: string,
-}
+  title: string;
+  description: string;
+  link: string;
+  linkText: string;
+};
 
-const ImageText: React.FC<ImageTextProps> = ({ title, description, link, linkText }) => {
+const ImageText: React.FC<ImageTextProps> = ({
+  title,
+  description,
+  link,
+  linkText,
+}) => {
   return (
     <>
       <section className="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6">
         <div className="max-w-[400px] w-full hidden lg:block">
           <Image
-            src="/images/icons/experience.png"
+            src="/images/icons/experience.webp"
             className="mb-0"
             alt="scroll-divider"
             width={400}
@@ -42,7 +47,7 @@ const ImageText: React.FC<ImageTextProps> = ({ title, description, link, linkTex
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ImageText
+export default ImageText;
