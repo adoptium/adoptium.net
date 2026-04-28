@@ -8,6 +8,8 @@ import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 /**
  * MDX options configuration for next-mdx-remote
@@ -84,6 +86,21 @@ export async function processMarkdown(content: string): Promise<string> {
     .use(remarkGfm) // Add GitHub Flavored Markdown support (tables, strikethrough, task lists, etc.)
     .use(remarkRehype) // Convert to HTML
     .use(rehypeStringify) // Stringify HTML
+    .process(content);
+
+  return result.toString();
+}
+
+// Compile MDX content to HTML with full GFM support, syntax highlighting,
+// heading slugs, and autolink headings — no eval() required at runtime
+export async function compileMdxToHtml(content: string): Promise<string> {
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings, { behavior: "prepend" })
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);
 
   return result.toString();
