@@ -20,7 +20,8 @@ vi.mock("fs", () => ({
   existsSync: vi.fn(),
 }));
 
-const mockedFs = vi.mocked(fs);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const mockedFs = fs as any;
 
 describe("markdown utilities", () => {
   beforeEach(() => {
