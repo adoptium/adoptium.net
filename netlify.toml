@@ -2,34 +2,7 @@
   publish = ".next"
   command = "npm run build"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = '''
-    max-age=63072000;
-    includeSubDomains;
-    preload'''
-
-[[headers]]
-  for = "/favicon.ico"
-  [headers.values]
-    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
-
-[[headers]]
-  for = "/pagefind/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
-
-[[headers]]
-  for = "/docs/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800, stale-while-revalidate=604800"
-
+# Cross-domain redirects (cannot be ported to next.config.ts)
 [[redirects]]
   from = "https://blog.adoptium.net/:locale/*"
   to = "https://adoptium.net/:locale/news/:splat"
@@ -39,18 +12,6 @@
 [[redirects]]
   from = "https://blog.adoptium.net/*"
   to = "https://adoptium.net/news/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:locale/blog/*"
-  to = "/:locale/news/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blog/*"
-  to = "/news/:splat"
   status = 301
   force = true
 
@@ -75,41 +36,5 @@
 [[redirects]]
   from = "https://dash.adoptium.net/*"
   to = "https://adoptium.net/stats"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:locale/docs/migration"
-  to = "/:locale/temurin/migration"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/docs/migration"
-  to = "/temurin/migration"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/marketplace-policy"
-  to = "/docs/marketplace-policy"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/qvs-policy"
-  to = "/docs/qvs-policy"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:locale/support-us"
-  to = "/:locale/join-us"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/support-us"
-  to = "/join-us"
   status = 301
   force = true

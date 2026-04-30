@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
   },
   images: {
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
@@ -35,10 +36,59 @@ const nextConfig: NextConfig = {
         destination: "/:locale/sustainers",
         permanent: true,
       },
+      {
+        source: "/:locale/blog/:path*",
+        destination: "/:locale/news/:path*",
+        permanent: true,
+      },
+      {
+        source: "/blog/:path*",
+        destination: "/news/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:locale/docs/migration",
+        destination: "/:locale/temurin/migration",
+        permanent: true,
+      },
+      {
+        source: "/docs/migration",
+        destination: "/temurin/migration",
+        permanent: true,
+      },
+      {
+        source: "/marketplace-policy",
+        destination: "/docs/marketplace-policy",
+        permanent: true,
+      },
+      {
+        source: "/qvs-policy",
+        destination: "/docs/qvs-policy",
+        permanent: true,
+      },
+      {
+        source: "/:locale/support-us",
+        destination: "/:locale/join-us",
+        permanent: true,
+      },
+      {
+        source: "/support-us",
+        destination: "/join-us",
+        permanent: true,
+      },
     ];
   },
   async headers() {
     return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+        ],
+      },
       {
         source: "/favicon.ico",
         headers: [
@@ -81,3 +131,5 @@ const nextConfig: NextConfig = {
 
 const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);
+
+import("@opennextjs/cloudflare").then((m) => m.initOpenNextCloudflareForDev());

@@ -1,9 +1,14 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 import React from "react";
-import { mdxOptions } from "@/utils/markdown";
+import { compileMdxToHtml } from "@/utils/markdown";
+import parse, {
+  domToReact,
+  HTMLReactParserOptions,
+  Element,
+  DOMNode,
+} from "html-react-parser";
 
 interface TableProps {
   data: {
@@ -72,7 +77,7 @@ const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
         {children}
       </a>
     );
-  }
+  },
 );
 CustomLink.displayName = "CustomLink";
 
@@ -136,7 +141,7 @@ function createHeading(level: number) {
           className: "anchor",
         }),
       ],
-      children
+      children,
     );
   };
 
@@ -164,15 +169,80 @@ interface MDXProps {
   components?: Record<string, React.ComponentType<unknown>>; // Custom components
 }
 
-export function CustomMDX(props: MDXProps) {
-  return (
-    <MDXRemote
-      source={props.source}
-      options={mdxOptions}
-      components={
-        // eslint-disable-next-line
-        { ...components, ...(props.components || {}) } as any
+function isElement(node: { type?: string }): node is Element {
+  return node.type === "tag";
+}
+
+export async function CustomMDX(props: MDXProps) {
+  const html = await compileMdxToHtml(props.source);
+
+  const options: HTMLReactParserOptions = {
+    replace: (node) => {
+      if (!isElement(node)) return undefined;
+
+      // Custom links
+      if (node.name === "a" && node.attribs?.href) {
+        const href = node.attribs.href;
+        if (href.startsWith("/")) {
+          return (
+            <Link href={href}>
+              {domToReact(node.children as DOMNode[], options)}
+            </Link>
+          );
+        }
+        if (href.startsWith("http")) {
+          return (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              {domToReact(node.children as DOMNode[], options)}
+            </a>
+          );
+        }
       }
-    />
-  );
+
+      // Rounded images
+      if (node.name === "img" && node.attribs?.src) {
+        return (
+          <Image
+            className="rounded-lg"
+            src={node.attribs.src}
+            alt={node.attribs.alt || "blog image"}
+            width={Number(node.attribs.width) || 800}
+            height={Number(node.attribs.height) || 400}
+          />
+        );
+      }
+
+      // Code highlighting
+      if (node.name === "code" && node.children?.[0]) {
+        const text = (node.children[0] as unknown as { data?: string }).data;
+        if (text && !node.attribs?.class) {
+          const codeHTML = highlight(text);
+          return <code dangerouslySetInnerHTML={{ __html: codeHTML }} />;
+        }
+      }
+
+      // Headings with anchor links
+      if (/^h[1-6]$/.test(node.name)) {
+        const children = domToReact(node.children as DOMNode[], options);
+        const text = node.children
+          .map((child) => ("data" in child ? child.data : ""))
+          .join("");
+        const slug = slugify(text);
+        return React.createElement(
+          node.name,
+          { id: slug },
+          React.createElement("a", {
+            href: `#${slug}`,
+            key: `link-${slug}`,
+            className: "anchor",
+          }),
+          children,
+        );
+      }
+
+      return undefined;
+    },
+  };
+
+  return <>{parse(html, options)}</>;
 }

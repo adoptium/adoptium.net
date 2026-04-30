@@ -1,16 +1,18 @@
-import createProxy from "next-intl/middleware";
+import createMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
 
+export const runtime = "experimental-edge";
+
 // Create the standard next-intl middleware
-const intlMiddleware = createProxy({
+const intlMiddleware = createMiddleware({
   ...routing,
   // Enable automatic locale detection
   localeDetection: true,
 });
 
-// Extend the proxy to handle non-existent routes
-export default async function proxy(request: NextRequest) {
+// Extend the middleware to handle non-existent routes
+export default async function middleware(request: NextRequest) {
   // Let the intl middleware do its job for locale handling
   return intlMiddleware(request);
 }
