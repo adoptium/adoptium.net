@@ -12,16 +12,18 @@
     "update-snapshots": "vitest --run -u",
     "lint": "eslint .",
     "generate:api-types": "openapi-typescript https://api.adoptium.net/q/openapi -o src/types/adoptiumApiTypes.ts && openapi-typescript https://marketplace-api.adoptium.net/q/openapi -o src/types/marketplaceApiTypes.ts",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy:cf": "opennextjs-cloudflare build && cp -r .open-next/server-functions/default/content .open-next/content && wrangler deploy",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf:build": "opennextjs-cloudflare build && cp -r .open-next/server-functions/default/content .open-next/content",
+    "preview": "npm run cf:build && opennextjs-cloudflare preview",
+    "deploy:cf": "npm run cf:build && wrangler deploy",
+    "deploy": "npm run cf:build && opennextjs-cloudflare deploy",
+    "upload": "npm run cf:build && opennextjs-cloudflare upload",
+    "versions:upload": "npm run cf:build && wrangler versions upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
     "@next/third-parties": "16.2.4",
-    "@opennextjs/cloudflare": "^1.19.4",
+    "@opennextjs/cloudflare": "^1.19.5",
     "asciidoctor": "^3.0.4",
     "axios": "^1.15.2",
     "framer-motion": "^12.38.0",
@@ -90,7 +92,7 @@
     "typescript": "^6.0.3",
     "vitest": "^4.0.15",
     "vitest-axe": "^0.1.0",
-    "wrangler": "^4.85.0"
+    "wrangler": "^4.87.0"
   },
   "overrides": {
     "openapi-typescript": {
