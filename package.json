@@ -25,7 +25,7 @@
     "@next/third-parties": "16.2.4",
     "@opennextjs/cloudflare": "^1.19.5",
     "asciidoctor": "^3.0.4",
-    "axios": "^1.15.2",
+    "axios": "^1.16.0",
     "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
