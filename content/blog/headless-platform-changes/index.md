@@ -42,7 +42,7 @@ Across the Java ecosystem, usage has shifted toward:
 - Backend services with no GUI requirements
 - Increased emphasis on smaller, more efficient runtime images
 
-Maintaining multiple overlapping runtime variants introduces additional build, test, and maintenance overhead. As seen in previous platform decisions, focusing effort where it delivers the most value helps improve overall quality and sustainability. As this proposal involves removing the gui related components, such as libawt_xawt.so on the Linux platforms, it would align these builds more closely with the existing Alpine Linux distributions, which already exclude this library. In practice, this means the resulting runtimes would be comparable in functionality to Alpine-based Temurin builds. For typical backend workloads, including those using ImageIO, no impact is expected. However, this will be validated through targeted testing to ensure compatibility and avoid regressions.
+Maintaining multiple overlapping runtime variants introduces additional build, test, and maintenance overhead. As seen in previous platform decisions, focusing effort where it delivers the most value helps improve overall quality and sustainability. As this proposal involves removing the GUI related components, such as libawt_xawt.so on the Linux platforms, it would align these builds more closely with the existing Alpine Linux distributions, which already exclude this library. In practice, this means the resulting runtimes would be comparable in functionality to Alpine-based Temurin builds. For typical backend workloads, including those using ImageIO, no impact is expected. However, this will be validated through targeted testing to ensure compatibility and avoid regressions.
 
 ## What This Means
 
