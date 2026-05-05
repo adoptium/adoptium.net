@@ -383,7 +383,7 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                             </Link>
                             {hasAttestation(pkgChecksum) && (
                               <Image
-                                src="/images/icons/reproduced-verified.svg"
+                                src="/images/icons/transparent.svg"
                                 width={25}
                                 height={25}
                                 alt="Reproducibility Verified"
@@ -491,7 +491,7 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
                             </Link>
                             {hasAttestation(instChecksum) && (
                               <Image
-                                src="/images/icons/reproduced-verified.svg"
+                                src="/images/icons/transparent.svg"
                                 width={25}
                                 height={25}
                                 alt="Reproducibility Verified"
