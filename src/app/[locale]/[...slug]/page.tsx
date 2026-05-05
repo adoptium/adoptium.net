@@ -1,4 +1,5 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -15,7 +16,6 @@ import PageHeader from "@/components/Common/PageHeader";
 import AsciiDocFormatter from "@/components/Content/AsciiDocFormatter";
 import AuthorList from "@/components/Content/Asciidoc/AuthorList";
 import EditLink from "@/components/Content/Asciidoc/EditLink";
-import SyntaxHighlighter from "@/components/Content/SyntaxHighlighter";
 import InstallTabs from "@/components/Content/InstallTabs";
 import SudoToggle from "@/components/Content/SudoToggle";
 import LinkText from "@/components/Common/LinkText";
@@ -23,6 +23,10 @@ import DocSidebar from "@/components/DocSidebar";
 import DocTableOfContents from "@/components/DocTableOfContents";
 import DocThemeToggle from "@/components/DocThemeToggle";
 import DocumentationSearch from "@/components/Content/Documentation/Search";
+
+const SyntaxHighlighter = dynamic(
+  () => import("@/components/Content/SyntaxHighlighter"),
+);
 
 // Base directory for AsciiDoc content - same as in asciidocService.ts
 const CONTENT_BASE_DIR = path.join(process.cwd(), "content/asciidoc-pages");

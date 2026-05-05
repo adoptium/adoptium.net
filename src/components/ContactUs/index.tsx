@@ -1,12 +1,12 @@
-import { Link } from "@/i18n/navigation"
-import Image from "next/image"
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 interface ContactUsProps {
-  title: string
-  className?: string
-  buttontitle: string
-  description?: string | React.ReactNode
-  linkTo: string
+  title: string;
+  className?: string;
+  buttontitle: string;
+  description?: string | React.ReactNode;
+  linkTo: string;
 }
 
 const ContactUs: React.FC<ContactUsProps> = ({
@@ -14,26 +14,21 @@ const ContactUs: React.FC<ContactUsProps> = ({
   className = "",
   buttontitle,
   description,
-  linkTo
+  linkTo,
 }) => {
   return (
     <section className={`relative xl:px-0 px-6 md:py-32 py-16 ${className}`}>
-      {/* Background gradient overlays */}
-      <Image
-        className="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-        src="/images/backgrounds/gradient-overlay.png"
-        alt="gradient overlay"
-        fill
-        priority
-        sizes="100vw"
-      />
-      <Image
-        className="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-        src="/images/backgrounds/gradient-overlay-mobile.png"
-        alt="gradient overlay mobile"
-        fill
-        priority
-        sizes="100vw"
+      {/* CSS gradient background */}
+      <div
+        className="absolute inset-0 z-[-10]"
+        style={{
+          background: [
+            "radial-gradient(ellipse at 20% 50%, rgba(255, 19, 101, 0.18) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 80% 30%, rgba(100, 40, 180, 0.2) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 50% 80%, rgba(20, 0, 60, 0.4) 0%, transparent 70%)",
+            "linear-gradient(180deg, #14003c 0%, #0d002a 100%)",
+          ].join(", "),
+        }}
       />
 
       <div className="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12">
@@ -64,7 +59,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

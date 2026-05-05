@@ -42,9 +42,9 @@ safe-outputs:
   create-pull-request:
     title-prefix: "[translation] "
     labels: [translation, help wanted]
-    draft: true
-    max: 3
-    expires: 30
+    draft: false
+    max: 1
+    expires: 30d
 
 checkout:
   fetch-depth: 0
@@ -53,7 +53,7 @@ concurrency:
   group: update-translations
   cancel-in-progress: true
 
-timeout-minutes: 30
+timeout-minutes: 60
 
 jobs:
   pre-activation:
@@ -80,11 +80,8 @@ SHA becomes stale.
 
 ## Locale Leads
 
-Assign PRs for review to the appropriate locale lead:
-
-- **de** (German): @hendrikebbers
-- **fr** (French): @xavierfacq
-- **zh-CN** (Simplified Chinese): @zdtsw
+Assign PRs for review to the appropriate locale lead.
+See [locales/README.md](../../locales/README.md#locale-leads) for the current list.
 
 ## Instructions
 
@@ -112,10 +109,11 @@ Assign PRs for review to the appropriate locale lead:
 
 4. **Update the `:page-based-on:` attribute** to the new English commit SHA.
 
-5. **Create one PR per locale** with the title format:
-   `[translation] Update <LOCALE> translation for <path>`
-   Request review from the appropriate locale lead listed above.
+5. **Create a single PR containing all locale updates** with the title format:
+   `[translation] Update outdated translations`
+   Request review from all relevant locale leads listed above (only those whose locales were updated).
    In the PR description, include:
+   - A list of which locales and files were updated
    - A summary of what changed in the English source
    - The diff of the English changes for reference
    - A note that this is an AI-generated translation that needs human review

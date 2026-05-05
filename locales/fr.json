@@ -178,14 +178,6 @@
     "copied": "Copié",
     "copy": "Copier"
   },
-  "ReleaseFilters": {
-    "reset-to-defaults": "Réinitialiser par défaut",
-    "loading-versions": "Chargement des versions...",
-    "filter-releases": "Filtrer les versions",
-    "version": "Version",
-    "operating-system": "Système d’exploitation",
-    "architecture": "Architecture"
-  },
   "TemurinReleases": {
     "title": "Télécharger le JDK Temurin®",
     "latest-releases": "Dernières versions",

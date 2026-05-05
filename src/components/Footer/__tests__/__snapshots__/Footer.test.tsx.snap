@@ -1392,6 +1392,15 @@ exports[`Footer component > renders correctly 1`] = `
         </div>
       </div>
     </div>
+    <img
+      alt=""
+      aria-hidden="true"
+      class="absolute"
+      height="1"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://static.scarf.sh/a.png?x-pxid=2cc7c2fc-7b2f-4b4d-8efc-0c140e3b7e8e"
+      width="1"
+    />
   </footer>
 </div>
 `;

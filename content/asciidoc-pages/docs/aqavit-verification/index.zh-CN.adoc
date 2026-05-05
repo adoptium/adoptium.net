@@ -2,7 +2,6 @@
 :page-authors: gdams, smlambert, llxia, tellison, NickJavaDev88, xavierfacq
 :page-based-on: 0e4cf731021aa6b80ca14281a511b2ce0584a64c
 :aqavit-branch: v0.9.6-release
-:lang: zh-CN
 版本 0.2, 2022.03.02
 
 AQAvit 项目的创建是为了“确保质量的发生”。AQAvit 验证是通过在 AQAvit 测试套件中运行并通过一组规定的、版本化的测试流程来实现的。https://www.eclipse.org/legal/eclipse-foundation-quality-verification-suite-license.php[Eclipse 基金会质量验证软件许可证 (QVSL)^] 要求那些希望验证其产品的人分享实现验证的测试结果摘要。本文档描述了如何运行 AQAvit 验证测试、检查验证是否通过，以及收集所需的测试结果以供发布。

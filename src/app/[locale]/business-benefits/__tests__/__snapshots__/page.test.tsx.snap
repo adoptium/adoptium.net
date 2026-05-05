@@ -100,7 +100,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         alt="scroll-divider"
         class="mb-0"
         height="400"
-        src="/images/icons/experience.png"
+        src="/images/icons/experience.webp"
         width="400"
       />
     </div>
@@ -311,7 +311,7 @@ exports[`Business Benefits page > renders correctly 1`] = `
         alt="scroll-divider"
         class="mb-0"
         height="400"
-        src="/images/icons/experience.png"
+        src="/images/icons/experience.webp"
         width="400"
       />
     </div>
@@ -352,17 +352,9 @@ exports[`Business Benefits page > renders correctly 1`] = `
   <section
     class="relative xl:px-0 px-6 md:py-32 py-16 "
   >
-    <img
-      alt="gradient overlay"
-      class="hidden md:block absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-      sizes="100vw"
-      src="/images/backgrounds/gradient-overlay.png"
-    />
-    <img
-      alt="gradient overlay mobile"
-      class="block md:hidden absolute bg-center top-0 left-0 right-0 w-full h-full z-[-10]"
-      sizes="100vw"
-      src="/images/backgrounds/gradient-overlay-mobile.png"
+    <div
+      class="absolute inset-0 z-[-10]"
+      style="background: radial-gradient(at 20% 50%, rgba(255, 19, 101, 0.18) 0%, transparent 60%), radial-gradient(at 80% 30%, rgba(100, 40, 180, 0.2) 0%, transparent 55%), radial-gradient(at 50% 80%, rgba(20, 0, 60, 0.4) 0%, transparent 70%), linear-gradient(180deg, rgb(20, 0, 60) 0%, rgb(13, 0, 42) 100%);"
     />
     <div
       class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"

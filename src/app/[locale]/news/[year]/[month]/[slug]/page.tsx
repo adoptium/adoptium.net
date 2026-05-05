@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
 import { Link } from "@/i18n/navigation";
 import { getBlogPosts } from "@/utils/markdown";
 import { formatDate } from "@/utils/date";
@@ -10,9 +11,12 @@ import Byline from "@/components/News/Byline";
 import ShareButton from "@/components/News/ShareButton";
 import Tags from "@/components/News/Tags";
 import RelatedArticles from "@/components/News/RelatedArticles";
-import SyntaxHighlighter from "@/components/Content/SyntaxHighlighter";
 import DocThemeToggle from "@/components/DocThemeToggle";
 import type { BlogPosting, Person, Graph } from "schema-dts";
+
+const SyntaxHighlighter = dynamic(
+  () => import("@/components/Content/SyntaxHighlighter"),
+);
 import { metadata } from "@/utils/metadata";
 
 export async function generateStaticParams() {

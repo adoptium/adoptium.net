@@ -2,7 +2,6 @@
 :description: Adoptium Marketing Criteria
 :keywords: adoptium marketing
 :orgname: Eclipse Adoptium
-:lang: en
 :page-authors: Ndacyayisenga-droid, gdams
 
 Adoptium Working Group has defined how to share and publish an event, news, or social media post; the final decision on posting is made and managed by the Adoptium marketing committee. The committee uses the Adoptium Slack channel #marketing, and this information is also shared using #community and #buzz channels.

@@ -2,26 +2,40 @@
 
 Most static pages on this site are written as [asciidoc](https://asciidoctor.org/docs/what-is-asciidoc/) pages. These are similar to Markdown in format but give us more flexibility.
 
-The directory layout of these files is very important as it determines the path to the file in the site. For example a documnet in `/foo/bar/index.adoc` will be served up as `/foo/bar` on the site. You could also store the same document as `/foo/bar.adoc` but we generally discourage this as we need a parent folder to store localised versions of the page.
+The directory layout of these files is very important as it determines the path to the file in the site. Every page must use the `directory/index.adoc` convention — for example, `/docs/faq/index.adoc` will be served as `/docs/faq` on the site. This structure is required so that localised versions of a page can live alongside the English source in the same directory.
 
 ```tree
 .
-├── about.adoc
-├── docs
-│   ├── aqavit-verification.adoc
-│   ├── faq
-│   │   ├── index.adoc
-│   │   └── index.de.adoc
-│   ├── first-timer-support
-│   │   ├── index.adoc
-│   │   └── index.de.adoc
-│   └── qvs-policy
-│       ├── index.adoc
-│       └── index.de.adoc
-├── installation
-│   ├── archives.adoc
-│   └── windows.adoc
-└── supported-platforms.adoc
+├── about/
+│   ├── index.adoc
+│   ├── index.de.adoc
+│   ├── index.es.adoc
+│   ├── index.fr.adoc
+│   └── index.zh-CN.adoc
+├── docs/
+│   ├── faq/
+│   │   ├── index.adoc
+│   │   ├── index.de.adoc
+│   │   ├── index.es.adoc
+│   │   ├── index.fr.adoc
+│   │   └── index.zh-CN.adoc
+│   └── qvs-policy/
+│       ├── index.adoc
+│       ├── index.de.adoc
+│       ├── index.es.adoc
+│       └── index.zh-CN.adoc
+├── installation/
+│   ├── index.adoc
+│   ├── linux/
+│   │   ├── index.adoc
+│   │   └── index.de.adoc
+│   └── windows/
+│       ├── index.adoc
+│       └── index.de.adoc
+└── support/
+    ├── index.adoc
+    ├── index.de.adoc
+    └── index.es.adoc
 ```
 
 ## Required Attributes
@@ -37,15 +51,31 @@ There may be other attributes that are required for your particular piece of doc
 
 ## Localising Documentation
 
-The site has multi-language support which means that documentation can be served up in the users local language. By default, the English version if served if a localised version doesn't exit.
+The site has multi-language support which means that documentation can be served up in the user's local language. By default, the English version is served if a localised version doesn't exist.
 
 Localised documentation is named with the language key in the name so a German version would be `index.de.adoc` and a Spanish version would be `index.es.adoc`.
 
+Localised files must include a `:page-based-on:` attribute set to the Git commit SHA of the English `index.adoc` they were translated from. This allows the automated translation workflow to detect when the English source has changed and the translation needs updating.
+
+```adoc
+:page-authors: gdams, karianna, sxa
+:page-based-on: abc123def456
+```
+
 If you want to modify an existing translation you can locate the file most easily using the `Edit this page` button at the bottom of the page:
 
-![Edit this page](https://user-images.githubusercontent.com/20224954/157446389-2293e3cc-82b4-4375-96e8-7c60b8d5de56.png)
+![Edit this page](/public/docs/edit-this-page.png)
 
-To add a newly translated document you must first ensure that the english version is inside a parent folder. E.g to translate `docs/foo.adoc` to German firstly create a directory called `foo` and move the `foo.adoc` file to `/docs/foo/index.adoc`. Once the directory is correctly laid-out you can create a file called `/docs/foo/index.de.adoc` which contains the translated documentation.
+To add a new translation, create a file named `index.<locale>.adoc` alongside the English `index.adoc` in the same directory. For example, to translate `docs/faq/index.adoc` to German, create `docs/faq/index.de.adoc`.
+
+### Automated Translation Updates
+
+When the English source file (`index.adoc`) is updated on the `main` branch, an [agentic workflow](https://github.com/adoptium/adoptium.net/blob/main/.github/workflows/update-translations.lock.yml) automatically detects outdated translations by comparing each localised file's `:page-based-on:` SHA against the latest English commit. It then opens a draft pull request per locale with the updated translation and assigns the appropriate locale lead for review:
+
+- **en-GB** (British English): @gdams
+- **de** (German): @hendrikebbers
+- **fr** (French): @xavierfacq
+- **zh-CN** (Simplified Chinese): @zdtsw
 
 ## Adding Images
 

@@ -178,14 +178,6 @@
     "copied": "已复制",
     "copy": "复制"
   },
-  "ReleaseFilters": {
-    "reset-to-defaults": "重置为默认值",
-    "loading-versions": "正在加载版本...",
-    "filter-releases": "筛选版本",
-    "version": "版本",
-    "operating-system": "操作系统",
-    "architecture": "架构"
-  },
   "TemurinReleases": {
     "title": "下载 Temurin® JDK",
     "latest-releases": "最新版本",
