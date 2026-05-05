@@ -1,6 +1,6 @@
 ---
 title: Exploring Packaging Changes to Temurin JDK on AIX, Linux ppc64le and Linux s390x
-date: "2026-04-22"
+date: "2026-05-05"
 author: pmc
 description: We are proposing changes to how Eclipse Temurin runtimes are packaged on selected platforms and are seeking community feedback.
 tags:
