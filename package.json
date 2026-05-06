@@ -92,7 +92,7 @@
     "typescript": "^6.0.3",
     "vitest": "^4.0.15",
     "vitest-axe": "^0.1.0",
-    "wrangler": "^4.87.0"
+    "wrangler": "^4.88.0"
   },
   "overrides": {
     "openapi-typescript": {
