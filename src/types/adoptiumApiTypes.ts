@@ -81,66 +81,6 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
-  "/v3/attestations/release_name/{release_name}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * Returns attestations for the given release
-     * @description Return the list of attestations that match the given release name
-     */
-    get: operations["listAttestationsForRelease"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/v3/attestations/release_name/{release_name}/{os}/{arch}/{image_type}/{jvm_impl}/{vendor}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * Returns matching attestations
-     * @description Return the attestations that matches the given query
-     */
-    get: operations["listAttestationsForAssetBinary"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  "/v3/attestations/target_checksum/{target_checksum}": {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * Returns attestations that target the given SHA256 checksum
-     * @description Return the list of attestations that have the matching target binary SHA256 checksum
-     */
-    get: operations["listAttestationsForTargetChecksum"];
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
   "/v3/binary/latest/{feature_version}/{release_type}/{os}/{arch}/{image_type}/{jvm_impl}/{heap_size}/{vendor}": {
     parameters: {
       query?: never;
@@ -173,6 +113,66 @@ export interface paths {
      * @description Redirects to the binary that matches your current query
      */
     get: operations["getBinaryByVersion"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v3/cdxas/release_name/{release_name}": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    /**
+     * Returns cdxas for the given release
+     * @description Return the list of cdxas that match the given release name
+     */
+    get: operations["listCdxasForRelease"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v3/cdxas/release_name/{release_name}/{os}/{arch}/{image_type}/{jvm_impl}/{vendor}": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    /**
+     * Returns matching cdxas
+     * @description Return the cdxas that matches the given query
+     */
+    get: operations["listCdxasForAssetBinary"];
+    put?: never;
+    post?: never;
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/v3/cdxas/target_checksum/{target_checksum}": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    /**
+     * Returns cdxas that target the given SHA256 checksum
+     * @description Return the list of cdxas that have the matching target binary SHA256 checksum
+     */
+    get: operations["listCdxasForTargetChecksum"];
     put?: never;
     post?: never;
     delete?: never;
@@ -407,32 +407,6 @@ export interface components {
       | "arm"
       | "sparcv9"
       | "riscv64";
-    Attestation: {
-      id?: string;
-      filename?: string;
-      /** Format: int32 */
-      featureVersion?: number;
-      /** @example jdk-21.0.5+11 */
-      release_name?: string | null;
-      os?: components["schemas"]["OperatingSystem"];
-      architecture?: components["schemas"]["Architecture"];
-      image_type?: components["schemas"]["ImageType"];
-      jvm_impl?: components["schemas"]["JvmImpl"];
-      vendor?: components["schemas"]["Vendor"];
-      committedDate?: components["schemas"]["Instant"] | null;
-      /** @description Assessor checksum of attested target */
-      target_checksum?: string | null;
-      /** @example Acme Ltd */
-      assessor_org?: string | null;
-      /** @example We claim a verified reproducible build. */
-      assessor_affirmation?: string | null;
-      /** @example VERIFIED_REPRODUCIBLE_BUILD */
-      assessor_claim_predicate?: string | null;
-      /** @example https://github.com/adoptium/temurin-attestations/blob/main/21/jdk_21_0_6_7_x64-linux_MyOrgLtd.xml */
-      attestation_link?: string | null;
-      /** @example https://github.com/adoptium/temurin-attestations/blob/main/21/jdk_21_0_6_7_x64-linux_MyOrgLtd.xml.sign.pub */
-      attestation_public_signing_key_link?: string | null;
-    };
     Binary: {
       os?: components["schemas"]["OperatingSystem"];
       architecture?: components["schemas"]["Architecture"];
@@ -463,6 +437,38 @@ export interface components {
     };
     /** @enum {string} */
     CLib: "musl" | "glibc";
+    Cdxa: {
+      id?: string;
+      filename?: string;
+      /** Format: int32 */
+      featureVersion?: number;
+      /** @example jdk-21.0.5+11 */
+      release_name?: string | null;
+      os?: components["schemas"]["OperatingSystem"];
+      architecture?: components["schemas"]["Architecture"];
+      image_type?: components["schemas"]["ImageType"];
+      jvm_impl?: components["schemas"]["JvmImpl"];
+      vendor?: components["schemas"]["Vendor"];
+      committedDate?: components["schemas"]["Instant"] | null;
+      /** @description Assessor checksum of attested target */
+      target_checksum?: string | null;
+      /** @example Acme Ltd */
+      assessor_org?: string | null;
+      /** @example We claim a verified reproducible build. */
+      assessor_affirmation?: string | null;
+      /** @example VERIFIED_REPRODUCIBLE_BUILD */
+      assessor_claim_predicate?: string | null;
+      /** @example https://github.com/adoptium/temurin-cdxa/blob/main/21/jdk_21_0_6_7_x64-linux_MyOrgLtd.xml */
+      cdxa_link?: string | null;
+      /** @example https://github.com/adoptium/temurin-cdxa/blob/main/21/jdk_21_0_6_7_x64-linux_MyOrgLtd.xml.sig */
+      cdxa_sig_link?: string | null;
+      /** @example VERIFICATION_LOG */
+      evidence_propertyName?: string | null;
+      /** @example log */
+      evidence_data_name?: string | null;
+      /** @example Reproducible script output... */
+      evidence_data_contents_attachment_text?: string | null;
+    };
     /** @description <p>Date/time. When only a date is given the time is set to the end of the given day. <ul> <li>2020-01-21</li> <li>2020-01-21T10:15:30</li> <li>20200121</li> <li>2020-12-21T10:15:30Z</li> <li>2020-12-21+01:00</li> </ul></p> */
     DateTime: string;
     /**
@@ -899,133 +905,6 @@ export interface operations {
       };
     };
   };
-  listAttestationsForRelease: {
-    parameters: {
-      query?: {
-        /** @description Project */
-        project?: components["schemas"]["project"] | null;
-      };
-      header?: never;
-      path: {
-        /**
-         * @description <p>
-         *         Name of the release as displayed in github or <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a> e.g
-         *         <code>jdk-11.0.4+11, jdk8u172-b00-201807161800</code>.
-         *     </p>
-         *     <p>
-         *         A list of release names can be obtained from
-         *         <a href="https://api.adoptium.net/v3/info/release_names">https://api.adoptium.net/v3/info/release_names</a>
-         *     </p>
-         */
-        release_name: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      /** @description Attestations for the given release name */
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content: {
-          "application/json": components["schemas"]["Attestation"][];
-        };
-      };
-      /** @description No matching attestations found */
-      404: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  listAttestationsForAssetBinary: {
-    parameters: {
-      query?: {
-        /** @description Project */
-        project?: components["schemas"]["project"] | null;
-      };
-      header?: never;
-      path: {
-        /** @description Architecture */
-        arch: components["schemas"]["Architecture"];
-        /** @description Image Type */
-        image_type: components["schemas"]["ImageType"];
-        /** @description JVM Implementation */
-        jvm_impl: components["schemas"]["JvmImpl"];
-        /** @description Operating System */
-        os: components["schemas"]["OperatingSystem"];
-        /**
-         * @description <p>
-         *         Name of the release as displayed in github or <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a> e.g
-         *         <code>jdk-11.0.4+11, jdk8u172-b00-201807161800</code>.
-         *     </p>
-         *     <p>
-         *         A list of release names can be obtained from
-         *         <a href="https://api.adoptium.net/v3/info/release_names">https://api.adoptium.net/v3/info/release_names</a>
-         *     </p>
-         */
-        release_name: string;
-        /** @description <p>Vendor of the binary. This is the organisation that produced the binary package.</p> */
-        vendor: components["schemas"]["Vendor"];
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      /** @description Attestations for the given asset binary */
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content: {
-          "application/json": components["schemas"]["Attestation"][];
-        };
-      };
-      /** @description No matching attestations found */
-      404: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
-  listAttestationsForTargetChecksum: {
-    parameters: {
-      query?: {
-        /** @description Project */
-        project?: components["schemas"]["project"] | null;
-      };
-      header?: never;
-      path: {
-        /** @description Target binary SHA256 checksum */
-        target_checksum: string;
-      };
-      cookie?: never;
-    };
-    requestBody?: never;
-    responses: {
-      /** @description Attestations for the given target binary SHA256 checksum */
-      200: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content: {
-          "application/json": components["schemas"]["Attestation"][];
-        };
-      };
-      /** @description No matching attestations found */
-      404: {
-        headers: {
-          [name: string]: unknown;
-        };
-        content?: never;
-      };
-    };
-  };
   getBinary: {
     parameters: {
       query?: {
@@ -1141,6 +1020,133 @@ export interface operations {
         content?: never;
       };
       /** @description No matching binary found */
+      404: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
+    };
+  };
+  listCdxasForRelease: {
+    parameters: {
+      query?: {
+        /** @description Project */
+        project?: components["schemas"]["project"] | null;
+      };
+      header?: never;
+      path: {
+        /**
+         * @description <p>
+         *         Name of the release as displayed in github or <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a> e.g
+         *         <code>jdk-11.0.4+11, jdk8u172-b00-201807161800</code>.
+         *     </p>
+         *     <p>
+         *         A list of release names can be obtained from
+         *         <a href="https://api.adoptium.net/v3/info/release_names">https://api.adoptium.net/v3/info/release_names</a>
+         *     </p>
+         */
+        release_name: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Cdxas for the given release name */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["Cdxa"][];
+        };
+      };
+      /** @description No matching cdxas found */
+      404: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
+    };
+  };
+  listCdxasForAssetBinary: {
+    parameters: {
+      query?: {
+        /** @description Project */
+        project?: components["schemas"]["project"] | null;
+      };
+      header?: never;
+      path: {
+        /** @description Architecture */
+        arch: components["schemas"]["Architecture"];
+        /** @description Image Type */
+        image_type: components["schemas"]["ImageType"];
+        /** @description JVM Implementation */
+        jvm_impl: components["schemas"]["JvmImpl"];
+        /** @description Operating System */
+        os: components["schemas"]["OperatingSystem"];
+        /**
+         * @description <p>
+         *         Name of the release as displayed in github or <a href="https://adoptopenjdk.net/">https://adoptopenjdk.net/</a> e.g
+         *         <code>jdk-11.0.4+11, jdk8u172-b00-201807161800</code>.
+         *     </p>
+         *     <p>
+         *         A list of release names can be obtained from
+         *         <a href="https://api.adoptium.net/v3/info/release_names">https://api.adoptium.net/v3/info/release_names</a>
+         *     </p>
+         */
+        release_name: string;
+        /** @description <p>Vendor of the binary. This is the organisation that produced the binary package.</p> */
+        vendor: components["schemas"]["Vendor"];
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Cdxas for the given asset binary */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["Cdxa"][];
+        };
+      };
+      /** @description No matching cdxas found */
+      404: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content?: never;
+      };
+    };
+  };
+  listCdxasForTargetChecksum: {
+    parameters: {
+      query?: {
+        /** @description Project */
+        project?: components["schemas"]["project"] | null;
+      };
+      header?: never;
+      path: {
+        /** @description Target binary SHA256 checksum */
+        target_checksum: string;
+      };
+      cookie?: never;
+    };
+    requestBody?: never;
+    responses: {
+      /** @description Cdxas for the given target binary SHA256 checksum */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["Cdxa"][];
+        };
+      };
+      /** @description No matching cdxas found */
       404: {
         headers: {
           [name: string]: unknown;
