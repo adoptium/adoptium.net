@@ -47,7 +47,7 @@ safe-outputs:
   create-pull-request:
     title-prefix: "[translation] "
     labels: [translation, help wanted]
-    draft: false
+    draft: true
     max: 1
     expires: 30d
 
