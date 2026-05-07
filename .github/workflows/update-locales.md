@@ -42,7 +42,7 @@ safe-outputs:
   create-pull-request:
     title-prefix: "[i18n] "
     labels: [translation, help wanted]
-    draft: false
+    draft: true
     max: 1
     expires: 30d
 
