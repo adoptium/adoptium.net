@@ -34,7 +34,7 @@ export type MarketplaceBinaryAssetView =
   marketplaceComponents["schemas"]["BinaryAssetView"];
 export type MarketplaceVendor = marketplaceComponents["schemas"]["Vendor"];
 export type BinaryAssetView = components["schemas"]["BinaryAssetView"];
-export type Attestation = components["schemas"]["Attestation"];
+export type Cdxa = components["schemas"]["Cdxa"];
 export type ReleaseType = components["schemas"]["ReleaseType"];
 export type Architecture = components["schemas"]["Architecture"];
 export type OperatingSystem = components["schemas"]["OperatingSystem"];
@@ -188,18 +188,18 @@ export async function fetchArchitectures(
 }
 
 // ---------------------------------------------------------------------------
-// Attestations
+// CycloneDX Attestations (CDXAs)
 // ---------------------------------------------------------------------------
 
 /**
- * listAttestationsForRelease — GET /v3/attestations/release_name/{release_name}
+ * listCdxasForRelease — GET /v3/cdxas/release_name/{release_name}
  */
-export async function fetchAttestations(
+export async function fetchCdxas(
   release_name: string,
   project: components["schemas"]["project"] = "jdk",
-): Promise<Attestation[]> {
+): Promise<Cdxa[]> {
   const { data, error, response } = await adoptiumClient.GET(
-    "/v3/attestations/release_name/{release_name}",
+    "/v3/cdxas/release_name/{release_name}",
     {
       params: {
         path: { release_name },
@@ -207,7 +207,7 @@ export async function fetchAttestations(
       },
     },
   );
-  // 404 means no attestations exist for this release — not an error
+  // 404 means no CDXAs exist for this release — not an error
   if (response.status === 404) return [];
   if (error) throw error;
   return data ?? [];

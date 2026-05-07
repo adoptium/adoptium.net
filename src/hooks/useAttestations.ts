@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { Attestation, AttestationLookup } from "@/types/temurin";
-import { fetchAttestations as apiFetchAttestations } from "@/services/adoptiumApi";
+import type { CdxaLookup } from "@/types/temurin";
+import { fetchCdxas } from "@/services/adoptiumApi";
 
 interface UseAttestationsResult {
-  attestations: AttestationLookup;
+  attestations: CdxaLookup;
   isLoading: boolean;
   error?: Error;
 }
@@ -41,7 +41,7 @@ export function useAttestations(
    * Cache persists across renders but does not trigger rerenders.
    * This avoids refetching the same checksum repeatedly.
    */
-  const cacheRef = useRef<AttestationLookup>({});
+  const cacheRef = useRef<CdxaLookup>({});
 
   /**
    * Deduplicate checksums early to:
@@ -75,30 +75,30 @@ export function useAttestations(
 
     let cancelled = false;
 
-    async function fetchAttestations(releaseName: string) {
+    async function fetchReleaseCdxas(releaseName: string) {
       setIsLoading(true);
       setError(undefined);
 
       try {
-        const attestations = (await apiFetchAttestations(
-          releaseName,
-        )) as Attestation[];
+        const cdxas = await fetchCdxas(releaseName);
 
         if (cancelled) return;
 
-        const attestationMap: AttestationLookup = {};
+        const cdxaMap: CdxaLookup = {};
 
-        for (const attestation of attestations) {
-          attestationMap[attestation.target_checksum] = attestation;
+        for (const cdxa of cdxas) {
+          if (cdxa.target_checksum) {
+            cdxaMap[cdxa.target_checksum] = cdxa;
+          }
         }
 
         unresolvedChecksums.forEach((checksum) => {
-          cacheRef.current[checksum] = attestationMap[checksum] ?? undefined;
+          cacheRef.current[checksum] = cdxaMap[checksum] ?? undefined;
         });
       } catch (err: unknown) {
         if (cancelled) return;
 
-        // openapi-fetch throws on non-2xx; treat 404 as "no attestations".
+        // openapi-fetch throws on non-2xx; treat 404 as "no CDXAs".
         // The API layer should already handle 404 (returns []), but we guard
         // here as a safety net for any future refactoring.
         const status =
@@ -120,7 +120,7 @@ export function useAttestations(
       }
     }
 
-    fetchAttestations(releaseName);
+    fetchReleaseCdxas(releaseName);
 
     return () => {
       cancelled = true;

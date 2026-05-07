@@ -7,7 +7,7 @@ import {
   fetchLatestReleaseName,
   fetchOperatingSystems,
   fetchArchitectures,
-  fetchAttestations,
+  fetchCdxas,
   fetchDownloadStats,
   fetchMarketplaceReleases,
 } from "../adoptiumApi";
@@ -290,10 +290,10 @@ describe("fetchArchitectures", () => {
 });
 
 // ---------------------------------------------------------------------------
-// fetchAttestations
+// fetchCdxas
 // ---------------------------------------------------------------------------
-describe("fetchAttestations", () => {
-  it("returns attestations on success", async () => {
+describe("fetchCdxas", () => {
+  it("returns CDXAs on success", async () => {
     const mockData = [{ release_name: "jdk-21+35" }];
     mockAdoptiumGet.mockResolvedValue({
       data: mockData,
@@ -301,7 +301,7 @@ describe("fetchAttestations", () => {
       response: { status: 200 },
     });
 
-    const result = await fetchAttestations("jdk-21+35");
+    const result = await fetchCdxas("jdk-21+35");
     expect(result).toEqual(mockData);
   });
 
@@ -312,7 +312,7 @@ describe("fetchAttestations", () => {
       response: { status: 404 },
     });
 
-    const result = await fetchAttestations("jdk-21+35");
+    const result = await fetchCdxas("jdk-21+35");
     expect(result).toEqual([]);
   });
 
@@ -323,7 +323,7 @@ describe("fetchAttestations", () => {
       response: { status: 500 },
     });
 
-    await expect(fetchAttestations("jdk-21+35")).rejects.toEqual({
+    await expect(fetchCdxas("jdk-21+35")).rejects.toEqual({
       message: "server error",
     });
   });
@@ -335,7 +335,7 @@ describe("fetchAttestations", () => {
       response: { status: 200 },
     });
 
-    const result = await fetchAttestations("jdk-21+35");
+    const result = await fetchCdxas("jdk-21+35");
     expect(result).toEqual([]);
   });
 
@@ -346,7 +346,7 @@ describe("fetchAttestations", () => {
       response: { status: 200 },
     });
 
-    await fetchAttestations("jdk-21+35");
+    await fetchCdxas("jdk-21+35");
     const callArgs = mockAdoptiumGet.mock.calls[0][1];
     expect(callArgs.params.query.project).toBe("jdk");
   });
