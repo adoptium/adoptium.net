@@ -1,0 +1,9 @@
+apis:
+  adoptium@v1:
+    root: https://api.adoptium.net/q/openapi
+    x-openapi-ts:
+      output: ./src/types/adoptiumApiTypes.ts
+  marketplace@v1:
+    root: https://marketplace-api.adoptium.net/q/openapi
+    x-openapi-ts:
+      output: ./src/types/marketplaceApiTypes.ts

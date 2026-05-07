@@ -3,12 +3,12 @@ import { renderHook, waitFor } from "@testing-library/react";
 import { describe, it, expect, vi, afterEach } from "vitest";
 
 import { useAttestations } from "../useAttestations";
-import { fetchAttestations } from "@/services/adoptiumApi";
+import { fetchCdxas } from "@/services/adoptiumApi";
 
 vi.mock("@/services/adoptiumApi", () => ({
-  fetchAttestations: vi.fn(),
+  fetchCdxas: vi.fn(),
 }));
-const mockedFetchAttestations = vi.mocked(fetchAttestations);
+const mockedFetchCdxas = vi.mocked(fetchCdxas);
 
 afterEach(() => {
   vi.clearAllMocks();
@@ -24,12 +24,12 @@ const mockAttestations = [
 // Test 1 Guard clause (no release name))
 it("does not fetch when releaseName is undefined", async () => {
   renderHook(() => useAttestations(undefined, ["checksum-1"]));
-  expect(mockedFetchAttestations).not.toHaveBeenCalled();
+  expect(mockedFetchCdxas).not.toHaveBeenCalled();
 });
 
 //Test 2 fetch and normalize
 it("fetches attestations and normalizes by checksum", async () => {
-  mockedFetchAttestations.mockResolvedValue([
+  mockedFetchCdxas.mockResolvedValue([
     { target_checksum: "checksum-1" },
   ] as any);
 
@@ -46,7 +46,7 @@ it("fetches attestations and normalizes by checksum", async () => {
 
 // Test 3 partial matches
 it("sets undefined for checksums not returned by the API", async () => {
-  mockedFetchAttestations.mockResolvedValue([
+  mockedFetchCdxas.mockResolvedValue([
     { target_checksum: "checksum-1" },
   ] as any);
 
@@ -65,7 +65,7 @@ it("sets undefined for checksums not returned by the API", async () => {
 //Test 4 404 is NOT an error
 it("handles 404 responses by caching undefined attestations", async () => {
   const err = Object.assign(new Error("Not Found"), { status: 404 });
-  mockedFetchAttestations.mockRejectedValue(err);
+  mockedFetchCdxas.mockRejectedValue(err);
 
   const { result } = renderHook(() =>
     useAttestations("release_name_mock", ["checksum-1"]),
@@ -81,7 +81,7 @@ it("handles 404 responses by caching undefined attestations", async () => {
 
 //Test 5 non-404 error surfaces
 it("exposes error for non-404 failures", async () => {
-  mockedFetchAttestations.mockRejectedValue(new Error("Server Error"));
+  mockedFetchCdxas.mockRejectedValue(new Error("Server Error"));
 
   const { result } = renderHook(() =>
     useAttestations("release_name_mock", ["checksum-1"]),
@@ -94,7 +94,7 @@ it("exposes error for non-404 failures", async () => {
 
 //Test 6 caching prevents refetch
 it("does not refetch attestations for cached checksums", async () => {
-  mockedFetchAttestations.mockResolvedValue([
+  mockedFetchCdxas.mockResolvedValue([
     { target_checksum: "checksum-1" },
   ] as any);
 
@@ -107,10 +107,10 @@ it("does not refetch attestations for cached checksums", async () => {
 
   // Wait until at least one fetch has happened
   await waitFor(() => {
-    expect(mockedFetchAttestations).toHaveBeenCalled();
+    expect(mockedFetchCdxas).toHaveBeenCalled();
   });
 
-  const callsAfterFirstFetch = mockedFetchAttestations.mock.calls.length;
+  const callsAfterFirstFetch = mockedFetchCdxas.mock.calls.length;
 
   // Rerender with the same checksum
   rerender({ checksums: ["checksum-1"] });
@@ -118,5 +118,5 @@ it("does not refetch attestations for cached checksums", async () => {
   // Allow effects to flush
   await new Promise((r) => setTimeout(r, 0));
 
-  expect(mockedFetchAttestations.mock.calls.length).toBe(callsAfterFirstFetch);
+  expect(mockedFetchCdxas.mock.calls.length).toBe(callsAfterFirstFetch);
 });

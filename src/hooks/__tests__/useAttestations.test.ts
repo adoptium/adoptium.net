@@ -2,12 +2,12 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { renderHook, waitFor } from "@testing-library/react";
 import { useAttestations } from "../useAttestations";
-import { fetchAttestations } from "@/services/adoptiumApi";
+import { fetchCdxas } from "@/services/adoptiumApi";
 
 vi.mock("@/services/adoptiumApi", () => ({
-  fetchAttestations: vi.fn(),
+  fetchCdxas: vi.fn(),
 }));
-const mockedFetchAttestations = vi.mocked(fetchAttestations);
+const mockedFetchCdxas = vi.mocked(fetchCdxas);
 
 describe("useAttestations", () => {
   beforeEach(() => {
@@ -36,7 +36,7 @@ describe("useAttestations", () => {
       { target_checksum: "def456", statement: "test-statement-2" },
     ];
 
-    mockedFetchAttestations.mockResolvedValue(mockAttestations as any);
+    mockedFetchCdxas.mockResolvedValue(mockAttestations as any);
 
     const { result } = renderHook(() =>
       useAttestations("jdk-21+35", ["abc123", "def456"]),
@@ -46,7 +46,7 @@ describe("useAttestations", () => {
       expect(result.current.isLoading).toBe(false);
     });
 
-    expect(mockedFetchAttestations).toHaveBeenCalledWith("jdk-21+35");
+    expect(mockedFetchCdxas).toHaveBeenCalledWith("jdk-21+35");
 
     expect(result.current.attestations["abc123"]).toEqual(mockAttestations[0]);
     expect(result.current.attestations["def456"]).toEqual(mockAttestations[1]);
@@ -54,7 +54,7 @@ describe("useAttestations", () => {
 
   it("handles 404 error by caching undefined for checksums", async () => {
     const err = Object.assign(new Error("Not Found"), { status: 404 });
-    mockedFetchAttestations.mockRejectedValue(err);
+    mockedFetchCdxas.mockRejectedValue(err);
 
     const { result } = renderHook(() =>
       useAttestations("jdk-21+35", ["abc123"]),
@@ -69,7 +69,7 @@ describe("useAttestations", () => {
 
   it("sets error on non-404 errors", async () => {
     const err = new Error("Server Error");
-    mockedFetchAttestations.mockRejectedValue(err);
+    mockedFetchCdxas.mockRejectedValue(err);
 
     const { result } = renderHook(() =>
       useAttestations("jdk-21+35", ["abc123"]),
@@ -83,14 +83,14 @@ describe("useAttestations", () => {
   });
 
   it("deduplicates checksums", async () => {
-    mockedFetchAttestations.mockResolvedValue([] as any);
+    mockedFetchCdxas.mockResolvedValue([] as any);
 
     renderHook(() =>
       useAttestations("jdk-21+35", ["abc123", "abc123", "abc123"]),
     );
 
     await waitFor(() => {
-      expect(mockedFetchAttestations).toHaveBeenCalledTimes(1);
+      expect(mockedFetchCdxas).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -98,6 +98,6 @@ describe("useAttestations", () => {
     const { result } = renderHook(() => useAttestations("jdk-21+35", ["", ""]));
 
     expect(result.current.isLoading).toBe(false);
-    expect(mockedFetchAttestations).not.toHaveBeenCalled();
+    expect(mockedFetchCdxas).not.toHaveBeenCalled();
   });
 });

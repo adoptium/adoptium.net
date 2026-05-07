@@ -2,9 +2,8 @@ import React from "react";
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import ReleaseResults from "../index";
-import type { BinaryAssetView } from "@/types/temurin";
+import type { BinaryAssetView, Cdxa } from "@/types/temurin";
 import { useAttestations } from "@/hooks/useAttestations";
-import type { Attestation } from "@/types/temurin";
 
 // Mock next-intl's useTranslations and useLocale
 vi.mock("next-intl", () => ({
@@ -640,7 +639,7 @@ describe("ReleaseResults component", () => {
       attestations: {
         abc123: {
           target_checksum: "abc123",
-        } as Attestation,
+        } as Cdxa,
       },
       isLoading: false,
       error: undefined,
