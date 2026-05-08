@@ -24,7 +24,7 @@ This release contains the following fixes and updates:
 For server environments where no graphical components are required, a new headless JRE package is also available. This excludes GUI-related libraries such as AWT and reduces the overall installation footprint.
 
 ```bash
-sudo dnf install temurin-26-jre
+sudo dnf install temurin-26-jre-headless
 ```
 
 ### Coexistenance of JDK & JRE (via RPM installation) Is Now Prevented
