@@ -11,6 +11,11 @@ your favourite Linux distribution.
 See link:/supported-platforms[Supported Platforms] for a list of our officially supported installers by Linux distribution / version. Other Linux distributions / versions are supported on a best-effort basis.
 ====
 
+[IMPORTANT]
+====
+Repository URLs under `https://packages.adoptium.net/artifactory/` are intended for package manager configuration (`apt`, `dnf`, `yum`, `zypper`, `apk`) and may return `404` when opened directly in a browser. To browse available package trees manually, use the `https://packages.adoptium.net/ui/native/` links shown in each section below.
+====
+
 == Eclipse Temurin Package Names
 
 The following name schema is being used:
