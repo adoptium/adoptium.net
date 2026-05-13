@@ -202,6 +202,12 @@ exports[`Supported Platforms page > renders correctly 1`] = `
           JDK 
           25
         </div>
+        <div
+          class="text-lg font-semibold text-white/90 text-center"
+        >
+          JDK 
+          26
+        </div>
       </div>
       <div
         class="md:hidden bg-gradient-to-r from-purple-900/50 to-indigo-900/50 border-b border-white/10"
