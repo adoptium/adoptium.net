@@ -208,7 +208,11 @@
         "this-build-is-aqavit-verified": "Dieser Build ist AQAvit-verifiziert",
         "checksum": "Prüfsumme",
         "no-releases-found": "Keine Versionen gefunden",
-        "no-releases-found-description": "Keine Versionen entsprechen Ihren aktuellen Filterkriterien. Versuchen Sie, Ihre Auswahl anzupassen oder setzen Sie alle Filter zurück, um verfügbare Versionen anzuzeigen."
+        "no-releases-found-description": "Keine Versionen entsprechen Ihren aktuellen Filterkriterien. Versuchen Sie, Ihre Auswahl anzupassen oder setzen Sie alle Filter zurück, um verfügbare Versionen anzuzeigen.",
+        "unsupported-platform": "Nicht unterstützte Plattform",
+        "unsupported-platform-description": "Diese Plattform wird nicht mehr unterstützt und erhält keine Sicherheitsupdates mehr. Nutzung auf eigene Gefahr.",
+        "unsupported-platform-learn-more": "Mehr über diese Änderung erfahren",
+        "unsupported-platform-show-downloads": "Downloads trotzdem anzeigen"
       }
     },
     "Nightly": {

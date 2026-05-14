@@ -16,6 +16,13 @@ vi.mock("next-intl", () => ({
       return "This build is JCK certified";
     if (key === "this-build-is-aqavit-verified")
       return "This build is AQAvit verified";
+    if (key === "unsupported-platform") return "Unsupported Platform";
+    if (key === "unsupported-platform-description")
+      return "This platform is no longer supported and does not receive security updates. Use at your own risk.";
+    if (key === "unsupported-platform-learn-more")
+      return "Learn more about this change";
+    if (key === "unsupported-platform-show-downloads")
+      return "Show downloads anyway";
     return key;
   },
   useLocale: () => "en",
@@ -680,5 +687,170 @@ describe("ReleaseResults component", () => {
     expect(
       screen.queryByAltText("Reproducibility Verified"),
     ).not.toBeInTheDocument();
+  });
+
+  describe("unsupported platform warnings", () => {
+    it("should show unsupported warning for Solaris releases", () => {
+      const releases = [createMockRelease("solaris", "x64", "11.0.28+6")];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      expect(
+        screen.getByTestId("unsupported-warning-solaris-x64"),
+      ).toBeInTheDocument();
+      expect(screen.getByText("Unsupported Platform")).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          "This platform is no longer supported and does not receive security updates. Use at your own risk.",
+        ),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText("Learn more about this change"),
+      ).toBeInTheDocument();
+      // Downloads should be hidden
+      expect(
+        screen.queryByTestId("release-header-solaris"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("should show unsupported warning for Windows x32 releases", () => {
+      const releases = [createMockRelease("windows", "x32", "11.0.28+6")];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      expect(
+        screen.getByTestId("unsupported-warning-windows-x32"),
+      ).toBeInTheDocument();
+      expect(screen.getByText("Unsupported Platform")).toBeInTheDocument();
+      // Downloads should be hidden
+      expect(
+        screen.queryByTestId("release-header-windows"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("should NOT show unsupported warning for Windows x64 releases", () => {
+      const releases = [createMockRelease("windows", "x64", "11.0.28+6")];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      expect(
+        screen.queryByTestId("unsupported-warning-windows-x64"),
+      ).not.toBeInTheDocument();
+      expect(screen.getByTestId("release-header-windows")).toBeInTheDocument();
+    });
+
+    it("should NOT show unsupported warning for Linux releases", () => {
+      const releases = [createMockRelease("linux", "x64", "11.0.28+6")];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      expect(
+        screen.queryByTestId("unsupported-warning-linux-x64"),
+      ).not.toBeInTheDocument();
+      expect(screen.getByTestId("release-header-linux")).toBeInTheDocument();
+    });
+
+    it("should dismiss warning and show downloads when 'Show downloads anyway' is clicked", () => {
+      const releases = [createMockRelease("solaris", "x64", "11.0.28+6")];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      // Warning should be visible
+      expect(
+        screen.getByTestId("unsupported-warning-solaris-x64"),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByTestId("release-header-solaris"),
+      ).not.toBeInTheDocument();
+
+      // Click "Show downloads anyway"
+      fireEvent.click(screen.getByTestId("show-downloads-solaris-x64"));
+
+      // Warning should be dismissed, downloads visible
+      expect(
+        screen.queryByTestId("unsupported-warning-solaris-x64"),
+      ).not.toBeInTheDocument();
+      expect(screen.getByTestId("release-header-solaris")).toBeInTheDocument();
+    });
+
+    it("should show warning for Windows x32 when switching architecture from x64 to x32", () => {
+      const releases = [
+        createMockRelease("windows", "x64", "11.0.28+6"),
+        createMockRelease("windows", "x32", "11.0.28+6"),
+      ];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      // x64 is default, no warning
+      expect(
+        screen.queryByTestId("unsupported-warning-windows-x64"),
+      ).not.toBeInTheDocument();
+      expect(screen.getByTestId("release-header-windows")).toBeInTheDocument();
+
+      // Switch to x32
+      fireEvent.click(screen.getByTestId("arch-tab-windows-x32"));
+
+      // Warning should appear
+      expect(
+        screen.getByTestId("unsupported-warning-windows-x32"),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByTestId("release-header-windows"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("should link to the removal announcement page", () => {
+      const releases = [createMockRelease("solaris", "x64", "11.0.28+6")];
+
+      render(
+        <ReleaseResults
+          releases={releases}
+          isLoading={false}
+          openModalWithChecksum={mockOpenModalWithChecksum}
+        />,
+      );
+
+      const learnMoreLink = screen.getByText("Learn more about this change");
+      expect(learnMoreLink).toHaveAttribute(
+        "href",
+        "/news/2025/12/solaris-win32-removal",
+      );
+    });
   });
 });
