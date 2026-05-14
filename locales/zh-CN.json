@@ -208,7 +208,11 @@
         "this-build-is-aqavit-verified": "此版本已通过 AQAvit 验证",
         "checksum": "校验和",
         "no-releases-found": "未找到版本",
-        "no-releases-found-description": "没有符合当前筛选条件的版本。请尝试调整您的选择，或重置所有筛选器以查看可用版本。"
+        "no-releases-found-description": "没有符合当前筛选条件的版本。请尝试调整您的选择，或重置所有筛选器以查看可用版本。",
+        "unsupported-platform": "不受支持的平台",
+        "unsupported-platform-description": "该平台已不再受支持，且不会收到安全更新。使用风险自负。",
+        "unsupported-platform-learn-more": "了解有关此更改的更多信息",
+        "unsupported-platform-show-downloads": "仍然显示下载"
       }
     },
     "Nightly": {

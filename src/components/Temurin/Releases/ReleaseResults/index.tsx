@@ -16,6 +16,11 @@ import { BsCopy, BsDownload } from "react-icons/bs";
 import AnimatedPlaceholder from "@/components/Common/AnimatedPlaceholder";
 import { MdVerifiedUser } from "react-icons/md";
 import { useAttestations } from "@/hooks/useAttestations";
+import { IoWarningOutline } from "react-icons/io5";
+
+function isUnsupportedPlatform(os: string, arch: string): boolean {
+  return os === "solaris" || (os === "windows" && arch === "x32");
+}
 
 interface ReleaseResultsProps {
   releases: BinaryAssetView[];
@@ -45,6 +50,9 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
   >({});
   const [selectedPackageTypes, setSelectedPackageTypes] = useState<
     Record<string, string>
+  >({});
+  const [dismissedWarnings, setDismissedWarnings] = useState<
+    Record<string, boolean>
   >({});
 
   const allChecksums = React.useMemo(() => {
@@ -292,234 +300,280 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
               </div>
 
               <div className="flex flex-col w-full lg:w-[50%] mt-8 lg:mt-0">
-                <h5
-                  className="pb-6 border-b-[1px] text-2xl font-semibold border-[#3E3355]"
-                  data-testid={`release-header-${os}`}
-                >
-                  {`Temurin ${firstView?.release_name ?? ""} - ${
-                    releaseDate
-                      ? new Date(releaseDate).toLocaleDateString(locale, {
-                          day: "2-digit",
-                          month: "2-digit",
-                          year: "numeric",
-                        })
-                      : ""
-                  }`}
-                </h5>
+                {isUnsupportedPlatform(os, selectedArch) &&
+                !dismissedWarnings[`${os}-${selectedArch}`] ? (
+                  <div
+                    className="flex flex-col items-center justify-center p-4 text-center"
+                    data-testid={`unsupported-warning-${os}-${selectedArch}`}
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <IoWarningOutline size={24} className="text-amber-400" />
+                      <h5 className="text-lg font-semibold text-amber-400">
+                        {t("unsupported-platform")}
+                      </h5>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-2 max-w-md">
+                      {t("unsupported-platform-description")}
+                    </p>
+                    <Link
+                      href="/news/2025/12/solaris-win32-removal"
+                      className="text-pink underline text-sm mb-3"
+                    >
+                      {t("unsupported-platform-learn-more")}
+                    </Link>
+                    <button
+                      onClick={() =>
+                        setDismissedWarnings((prev) => ({
+                          ...prev,
+                          [`${os}-${selectedArch}`]: true,
+                        }))
+                      }
+                      className="px-3 py-1.5 text-sm font-medium rounded-full border border-gray-500 text-gray-300 hover:border-gray-300 transition-colors"
+                      data-testid={`show-downloads-${os}-${selectedArch}`}
+                    >
+                      {t("unsupported-platform-show-downloads")}
+                    </button>
+                  </div>
+                ) : (
+                  <>
+                    <h5
+                      className="pb-6 border-b-[1px] text-2xl font-semibold border-[#3E3355]"
+                      data-testid={`release-header-${os}`}
+                    >
+                      {`Temurin ${firstView?.release_name ?? ""} - ${
+                        releaseDate
+                          ? new Date(releaseDate).toLocaleDateString(locale, {
+                              day: "2-digit",
+                              month: "2-digit",
+                              year: "numeric",
+                            })
+                          : ""
+                      }`}
+                    </h5>
 
-                {/* Package download rows */}
-                {viewGroup
-                  .filter((view) => {
-                    const imgType = (
-                      view.binary?.image_type ?? ""
-                    ).toLowerCase();
-                    const selected = getPackageType(
-                      os,
-                      selectedArch,
-                    ).toLowerCase();
-                    return selected === "any" || imgType === selected;
-                  })
-                  .map((view, idx) => {
-                    const b = view.binary;
-                    const pkgLink = (b?.package?.link ?? "") as string;
-                    const pkgChecksum = b?.package?.checksum ?? "";
-                    const pkgSize = getSizeMB(b?.package?.size);
-                    const pkgExt = getExtension(b?.package?.name).toUpperCase();
-                    const imgType = (b?.image_type ?? "").toUpperCase();
+                    {/* Package download rows */}
+                    {viewGroup
+                      .filter((view) => {
+                        const imgType = (
+                          view.binary?.image_type ?? ""
+                        ).toLowerCase();
+                        const selected = getPackageType(
+                          os,
+                          selectedArch,
+                        ).toLowerCase();
+                        return selected === "any" || imgType === selected;
+                      })
+                      .map((view, idx) => {
+                        const b = view.binary;
+                        const pkgLink = (b?.package?.link ?? "") as string;
+                        const pkgChecksum = b?.package?.checksum ?? "";
+                        const pkgSize = getSizeMB(b?.package?.size);
+                        const pkgExt = getExtension(
+                          b?.package?.name,
+                        ).toUpperCase();
+                        const imgType = (b?.image_type ?? "").toUpperCase();
 
-                    return (
-                      <div
-                        key={`${os}-${selectedArch}-${imgType}-${idx}`}
-                        className="text-white w-[100%] py-6 border-b-[1px] border-[#3E3355]"
-                        data-testid={`binary-row-${os}-${selectedArch}-${imgType}-${idx}`}
-                      >
-                        <div className="flex justify-between w-full items-center">
-                          <div className="flex items-center gap-2">
-                            <span className="cursor-pointer group">
-                              <Link
-                                href={{
-                                  pathname: "/download",
-                                  query: { link: pkgLink, vendor: "Adoptium" },
-                                }}
-                                onClick={() =>
-                                  sendDownloadEvent({
-                                    link: pkgLink,
-                                    os,
-                                    arch: selectedArch,
-                                    pkg_type: imgType,
-                                    version: view.release_name ?? "",
-                                    vendor: "temurin",
-                                  })
-                                }
-                                data-testid={`download-link-${os}-${selectedArch}-${imgType}-${idx}`}
-                              >
-                                <BsDownload size={20} />
-                              </Link>
-                            </span>
-                            <h5
-                              className="text-base font-normal"
-                              data-testid={`binary-info-${os}-${selectedArch}-${imgType}-${idx}`}
-                            >
-                              {`${pkgExt}, ${pkgSize} MB`}
-                            </h5>
-                            <MdVerifiedUser
-                              size={30}
-                              style={{ color: "rgb(83, 127, 185)" }}
-                              data-toggle="tooltip"
-                              data-placement="bottom"
-                              title={t("this-build-is-jck-certified")}
-                            />
-                            <Link href="/aqavit/">
-                              <Image
-                                src="/images/icons/aqavit-icon.png"
-                                width="25"
-                                height="25"
-                                alt="AQAvit logo"
-                                data-toggle="tooltip"
-                                data-placement="bottom"
-                                title={t("this-build-is-aqavit-verified")}
-                                className="img-fluid mb-0"
-                              />
-                            </Link>
-                            {hasAttestation(pkgChecksum) && (
-                              <Image
-                                src="/images/icons/transparent.svg"
-                                width={25}
-                                height={25}
-                                alt="Reproducibility Verified"
-                                data-toggle="tooltip"
-                                data-placement="bottom"
-                                title="This build is reproduced by a 3rd party"
-                                className="img-fluid mb-0"
-                              />
-                            )}
+                        return (
+                          <div
+                            key={`${os}-${selectedArch}-${imgType}-${idx}`}
+                            className="text-white w-[100%] py-6 border-b-[1px] border-[#3E3355]"
+                            data-testid={`binary-row-${os}-${selectedArch}-${imgType}-${idx}`}
+                          >
+                            <div className="flex justify-between w-full items-center">
+                              <div className="flex items-center gap-2">
+                                <span className="cursor-pointer group">
+                                  <Link
+                                    href={{
+                                      pathname: "/download",
+                                      query: {
+                                        link: pkgLink,
+                                        vendor: "Adoptium",
+                                      },
+                                    }}
+                                    onClick={() =>
+                                      sendDownloadEvent({
+                                        link: pkgLink,
+                                        os,
+                                        arch: selectedArch,
+                                        pkg_type: imgType,
+                                        version: view.release_name ?? "",
+                                        vendor: "temurin",
+                                      })
+                                    }
+                                    data-testid={`download-link-${os}-${selectedArch}-${imgType}-${idx}`}
+                                  >
+                                    <BsDownload size={20} />
+                                  </Link>
+                                </span>
+                                <h5
+                                  className="text-base font-normal"
+                                  data-testid={`binary-info-${os}-${selectedArch}-${imgType}-${idx}`}
+                                >
+                                  {`${pkgExt}, ${pkgSize} MB`}
+                                </h5>
+                                <MdVerifiedUser
+                                  size={30}
+                                  style={{ color: "rgb(83, 127, 185)" }}
+                                  data-toggle="tooltip"
+                                  data-placement="bottom"
+                                  title={t("this-build-is-jck-certified")}
+                                />
+                                <Link href="/aqavit/">
+                                  <Image
+                                    src="/images/icons/aqavit-icon.png"
+                                    width="25"
+                                    height="25"
+                                    alt="AQAvit logo"
+                                    data-toggle="tooltip"
+                                    data-placement="bottom"
+                                    title={t("this-build-is-aqavit-verified")}
+                                    className="img-fluid mb-0"
+                                  />
+                                </Link>
+                                {hasAttestation(pkgChecksum) && (
+                                  <Image
+                                    src="/images/icons/transparent.svg"
+                                    width={25}
+                                    height={25}
+                                    alt="Reproducibility Verified"
+                                    data-toggle="tooltip"
+                                    data-placement="bottom"
+                                    title="This build is reproduced by a 3rd party"
+                                    className="img-fluid mb-0"
+                                  />
+                                )}
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <span className="cursor-pointer group">
+                                  <a
+                                    href="#"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      if (pkgChecksum)
+                                        openModalWithChecksum(pkgChecksum);
+                                    }}
+                                    data-testid={`checksum-link-${os}-${selectedArch}-${imgType}-${idx}`}
+                                  >
+                                    <BsCopy size={20} />
+                                  </a>
+                                </span>
+                                <h5 className="text-base font-normal">
+                                  {t("checksum")}
+                                </h5>
+                              </div>
+                            </div>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <span className="cursor-pointer group">
-                              <a
-                                href="#"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  if (pkgChecksum)
-                                    openModalWithChecksum(pkgChecksum);
-                                }}
-                                data-testid={`checksum-link-${os}-${selectedArch}-${imgType}-${idx}`}
-                              >
-                                <BsCopy size={20} />
-                              </a>
-                            </span>
-                            <h5 className="text-base font-normal">
-                              {t("checksum")}
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
+                        );
+                      })}
 
-                {/* Installer rows */}
-                {viewGroup
-                  .filter((view) => {
-                    if (!view.binary?.installer?.link) return false;
-                    const imgType = (
-                      view.binary?.image_type ?? ""
-                    ).toLowerCase();
-                    const selected = getPackageType(
-                      os,
-                      selectedArch,
-                    ).toLowerCase();
-                    return selected === "any" || imgType === selected;
-                  })
-                  .map((view, idx) => {
-                    const b = view.binary;
-                    const instLink = (b?.installer?.link ?? "") as string;
-                    const instChecksum = b?.installer?.checksum ?? "";
-                    const instSize = getSizeMB(b?.installer?.size);
-                    const instExt =
-                      getExtension(b?.installer?.name).toUpperCase() ||
-                      "INSTALLER";
-                    const imgType = (b?.image_type ?? "").toUpperCase();
+                    {/* Installer rows */}
+                    {viewGroup
+                      .filter((view) => {
+                        if (!view.binary?.installer?.link) return false;
+                        const imgType = (
+                          view.binary?.image_type ?? ""
+                        ).toLowerCase();
+                        const selected = getPackageType(
+                          os,
+                          selectedArch,
+                        ).toLowerCase();
+                        return selected === "any" || imgType === selected;
+                      })
+                      .map((view, idx) => {
+                        const b = view.binary;
+                        const instLink = (b?.installer?.link ?? "") as string;
+                        const instChecksum = b?.installer?.checksum ?? "";
+                        const instSize = getSizeMB(b?.installer?.size);
+                        const instExt =
+                          getExtension(b?.installer?.name).toUpperCase() ||
+                          "INSTALLER";
+                        const imgType = (b?.image_type ?? "").toUpperCase();
 
-                    return (
-                      <div
-                        key={`${os}-${selectedArch}-${imgType}-installer-${idx}`}
-                        className="text-white w-[100%] py-6 border-b-[1px] border-[#3E3355]"
-                      >
-                        <div className="flex justify-between w-full items-center">
-                          <div className="flex items-center gap-2">
-                            <span className="cursor-pointer group">
-                              <Link
-                                href={{
-                                  pathname: "/download",
-                                  query: { link: instLink, vendor: "Adoptium" },
-                                }}
-                                onClick={() =>
-                                  sendDownloadEvent({
-                                    link: instLink,
-                                    os,
-                                    arch: selectedArch,
-                                    pkg_type: "installer",
-                                    version: view.release_name ?? "",
-                                    vendor: "temurin",
-                                  })
-                                }
-                              >
-                                <BsDownload size={20} />
-                              </Link>
-                            </span>
-                            <h5 className="text-base font-normal">
-                              {`${instExt}, ${instSize} MB`}
-                            </h5>
-                            <MdVerifiedUser
-                              size={30}
-                              style={{ color: "rgb(83, 127, 185)" }}
-                              data-toggle="tooltip"
-                              data-placement="bottom"
-                              title={t("this-build-is-jck-certified")}
-                            />
-                            <Link href="/aqavit/">
-                              <Image
-                                src="/images/icons/aqavit-icon.png"
-                                width="25"
-                                height="25"
-                                alt="AQAvit logo"
-                                data-toggle="tooltip"
-                                data-placement="bottom"
-                                title="This build is AQAvit Verified"
-                                className="img-fluid mb-0"
-                              />
-                            </Link>
-                            {hasAttestation(instChecksum) && (
-                              <Image
-                                src="/images/icons/transparent.svg"
-                                width={25}
-                                height={25}
-                                alt="Reproducibility Verified"
-                                title="This build is reproduced by a 3rd party"
-                              />
-                            )}
+                        return (
+                          <div
+                            key={`${os}-${selectedArch}-${imgType}-installer-${idx}`}
+                            className="text-white w-[100%] py-6 border-b-[1px] border-[#3E3355]"
+                          >
+                            <div className="flex justify-between w-full items-center">
+                              <div className="flex items-center gap-2">
+                                <span className="cursor-pointer group">
+                                  <Link
+                                    href={{
+                                      pathname: "/download",
+                                      query: {
+                                        link: instLink,
+                                        vendor: "Adoptium",
+                                      },
+                                    }}
+                                    onClick={() =>
+                                      sendDownloadEvent({
+                                        link: instLink,
+                                        os,
+                                        arch: selectedArch,
+                                        pkg_type: "installer",
+                                        version: view.release_name ?? "",
+                                        vendor: "temurin",
+                                      })
+                                    }
+                                  >
+                                    <BsDownload size={20} />
+                                  </Link>
+                                </span>
+                                <h5 className="text-base font-normal">
+                                  {`${instExt}, ${instSize} MB`}
+                                </h5>
+                                <MdVerifiedUser
+                                  size={30}
+                                  style={{ color: "rgb(83, 127, 185)" }}
+                                  data-toggle="tooltip"
+                                  data-placement="bottom"
+                                  title={t("this-build-is-jck-certified")}
+                                />
+                                <Link href="/aqavit/">
+                                  <Image
+                                    src="/images/icons/aqavit-icon.png"
+                                    width="25"
+                                    height="25"
+                                    alt="AQAvit logo"
+                                    data-toggle="tooltip"
+                                    data-placement="bottom"
+                                    title="This build is AQAvit Verified"
+                                    className="img-fluid mb-0"
+                                  />
+                                </Link>
+                                {hasAttestation(instChecksum) && (
+                                  <Image
+                                    src="/images/icons/transparent.svg"
+                                    width={25}
+                                    height={25}
+                                    alt="Reproducibility Verified"
+                                    title="This build is reproduced by a 3rd party"
+                                  />
+                                )}
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <span className="cursor-pointer group">
+                                  <a
+                                    href="#"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      if (instChecksum)
+                                        openModalWithChecksum(instChecksum);
+                                    }}
+                                  >
+                                    <BsCopy size={20} />
+                                  </a>
+                                </span>
+                                <h5 className="text-base font-normal">
+                                  {t("checksum")}
+                                </h5>
+                              </div>
+                            </div>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <span className="cursor-pointer group">
-                              <a
-                                href="#"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  if (instChecksum)
-                                    openModalWithChecksum(instChecksum);
-                                }}
-                              >
-                                <BsCopy size={20} />
-                              </a>
-                            </span>
-                            <h5 className="text-base font-normal">
-                              {t("checksum")}
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
+                        );
+                      })}
+                  </>
+                )}
               </div>
             </div>
           );
@@ -530,4 +584,3 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
 };
 
 export default ReleaseResults;
-

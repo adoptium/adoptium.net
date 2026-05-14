@@ -208,7 +208,11 @@
         "this-build-is-aqavit-verified": "このビルドはAQAvit検証済みです",
         "checksum": "チェックサム",
         "no-releases-found": "リリースが見つかりません",
-        "no-releases-found-description": "現在のフィルター条件に一致するリリースはありません。選択を調整するか、すべてのフィルターをリセットして利用可能なリリースを表示してください。"
+        "no-releases-found-description": "現在のフィルター条件に一致するリリースはありません。選択を調整するか、すべてのフィルターをリセットして利用可能なリリースを表示してください。",
+        "unsupported-platform": "サポートされていないプラットフォーム",
+        "unsupported-platform-description": "このプラットフォームはサポートが終了しており、セキュリティアップデートは提供されません。ご利用は自己責任でお願いします。",
+        "unsupported-platform-learn-more": "この変更について詳しく見る",
+        "unsupported-platform-show-downloads": "それでもダウンロードを表示"
       }
     },
     "Nightly": {
