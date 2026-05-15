@@ -99,47 +99,6 @@
       ]
     },
     {
-      "category": "Windows (x86)",
-      "footnotes": [
-        "Windows (x86) was deprecated in JDK21 and is no longer supported in newer versions: https://openjdk.org/jeps/449"
-      ],
-      "distros": [
-        {
-          "name": "Windows Server 2022",
-          "versions": {
-            "8": { "supported": true, "docker": false },
-            "11": { "supported": true, "docker": false },
-            "17": { "supported": true, "docker": false },
-            "21": { "supported": false, "docker": false },
-            "25": { "supported": false, "docker": false },
-            "26": { "supported": false, "docker": false }
-          }
-        },
-        {
-          "name": "Windows Server 2019",
-          "versions": {
-            "8": { "supported": true, "docker": false },
-            "11": { "supported": true, "docker": false },
-            "17": { "supported": true, "docker": false },
-            "21": { "supported": false, "docker": false },
-            "25": { "supported": false, "docker": false },
-            "26": { "supported": false, "docker": false }
-          }
-        },
-        {
-          "name": "Windows 10",
-          "versions": {
-            "8": { "supported": true, "docker": false },
-            "11": { "supported": true, "docker": false },
-            "17": { "supported": true, "docker": false },
-            "21": { "supported": false, "docker": false },
-            "25": { "supported": false, "docker": false },
-            "26": { "supported": false, "docker": false }
-          }
-        }
-      ]
-    },
-    {
       "category": "Linux (x64)",
       "footnotes": [
         "These builds should work on any distribution with glibc version 2.17 or higher. Versions up to 17 will work with glibc 2.12."
@@ -710,33 +669,6 @@
             "21": { "supported": true, "docker": false },
             "25": { "supported": true, "docker": false },
             "26": { "supported": true, "docker": false }
-          }
-        }
-      ]
-    },
-    {
-      "category": "Solaris (x64 and Sparc)",
-      "distros": [
-        {
-          "name": "Solaris 11",
-          "versions": {
-            "8": { "supported": true, "docker": false },
-            "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
-            "21": { "supported": false, "docker": false },
-            "25": { "supported": false, "docker": false },
-            "26": { "supported": false, "docker": false }
-          }
-        },
-        {
-          "name": "Solaris 10u11",
-          "versions": {
-            "8": { "supported": true, "docker": false },
-            "11": { "supported": false, "docker": false },
-            "17": { "supported": false, "docker": false },
-            "21": { "supported": false, "docker": false },
-            "25": { "supported": false, "docker": false },
-            "26": { "supported": false, "docker": false }
           }
         }
       ]
