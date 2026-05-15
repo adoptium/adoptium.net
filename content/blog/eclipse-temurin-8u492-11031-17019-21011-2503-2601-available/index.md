@@ -39,9 +39,10 @@ Container support has been added for Ubuntu 26.04 across the following architect
 - aarch64 (ARM 64-bit)
 - arm (ARM 32-bit)
 - ppc64le (PowerPC 64-bit Little Endian)
-- riscv64 (RISC-V 64-bit)
 - s390x (IBM Z)
 - x64 (x86-64)
+
+**Note for riscv64 users:** Due to upstream official images limitations, we are currently unable to build riscv64 images for Ubuntu 26.04. If you require riscv64 support, please continue using the `-noble` tag (Ubuntu 24.04) for now.
 
 Docker images are available for all supported JDK versions (8, 11, 17, 21, 25, 26) in both JDK and JRE variants:
 
