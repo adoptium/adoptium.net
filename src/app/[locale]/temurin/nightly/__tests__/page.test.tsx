@@ -9,8 +9,8 @@ const allVersions = [
   { value: "11", name: "11 - LTS" },
   { value: "17", name: "17 - LTS" },
   { value: "21", name: "21 - LTS" },
-  { value: "23", name: "23" },
   { value: "25", name: "25 - LTS" },
+  { value: "26", name: "26" },
 ]
 
 describe("TemurinNightly page", () => {
