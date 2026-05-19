@@ -36,6 +36,7 @@ Ubuntu 26.04 LTS (Resolute Ringtail) has been released with support until April 
 **Important:** With this release, the default Ubuntu base image for Eclipse Temurin containers has been updated from Ubuntu 24.04 (Noble) to Ubuntu 26.04 (Resolute). This means that untagged or version-only tags (e.g., `eclipse-temurin:26-jdk`) now point to Ubuntu 26.04-based images. If you need to continue using Ubuntu 24.04-based images, please use the explicit `noble` tag (e.g., `eclipse-temurin:26-jdk-noble`).
 
 Container support has been added for Ubuntu 26.04 across the following architectures:
+
 - aarch64 (ARM 64-bit)
 - arm (ARM 32-bit)
 - ppc64le (PowerPC 64-bit Little Endian)
@@ -44,24 +45,4 @@ Container support has been added for Ubuntu 26.04 across the following architect
 
 **Note for riscv64 users:** Due to upstream official images limitations, we are currently unable to build riscv64 images for Ubuntu 26.04. If you require riscv64 support, please continue using the `-noble` tag (Ubuntu 24.04) for now.
 
-Docker images are available for all supported JDK versions (8, 11, 17, 21, 25, 26) in both JDK and JRE variants:
-
-```bash
-# Default (now Ubuntu 26.04)
-docker pull eclipse-temurin:26-jdk
-docker pull eclipse-temurin:26-jre
-
-# Explicit Ubuntu 26.04
-docker pull eclipse-temurin:26-jdk-resolute
-docker pull eclipse-temurin:26-jre-resolute
-
-# Ubuntu 24.04 (if needed)
-docker pull eclipse-temurin:26-jdk-noble
-docker pull eclipse-temurin:26-jre-noble
-```
-
-**Note for CI/CD users:** If your pipelines rely on specific Ubuntu versions or tools that may not yet support Ubuntu 26.04 (such as certain versions of Playwright), you should explicitly specify the `noble` tag to continue using Ubuntu 24.04-based images.
-
-The Docker image tag aliases and base image configurations are managed in the [Temurin Docker repository](https://github.com/adoptium/containers). Specifically, the Ubuntu version mappings are defined in the `config/temurin.yml` file, where the default Ubuntu version and available variants are configured for each JDK version.
-
-For more information about our supported platforms, visit our [Supported Platforms](https://adoptium.net/supported-platforms) page.
+Docker images are available for all supported JDK versions (8, 11, 17, 21, 25, 26) in both JDK and JRE variants. For the full list of available tags and their respective Dockerfiles, please refer to the [official Eclipse Temurin Docker documentation](https://github.com/docker-library/docs/blob/master/eclipse-temurin/README.md#supported-tags-and-respective-dockerfile-links).
