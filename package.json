@@ -77,7 +77,7 @@
     "@types/react-world-flags": "^1.6.0",
     "@types/rss": "^0.0.32",
     "@vitejs/plugin-react": "^6.0.2",
-    "@vitest/coverage-v8": "^4.1.6",
+    "@vitest/coverage-v8": "^4.1.7",
     "axios-mock-adapter": "^2.1.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^10.4.0",
