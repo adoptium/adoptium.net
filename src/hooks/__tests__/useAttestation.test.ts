@@ -16,7 +16,7 @@ afterEach(() => {
 
 const mockAttestations = [
   {
-    target_checksum: "checksum-1",
+    target_checksum: "CHECKSUM-1",
     predicate_type: "https://slsa.dev/provenance/v1",
   },
 ];
@@ -30,7 +30,7 @@ it("does not fetch when releaseName is undefined", async () => {
 //Test 2 fetch and normalize
 it("fetches attestations and normalizes by checksum", async () => {
   mockedFetchCdxas.mockResolvedValue([
-    { target_checksum: "checksum-1" },
+    { target_checksum: "CHECKSUM-1" },
   ] as any);
 
   const { result } = renderHook(() =>
@@ -41,7 +41,7 @@ it("fetches attestations and normalizes by checksum", async () => {
     expect(result.current.isLoading).toBe(false);
   });
 
-  expect(result.current.attestations["checksum-1"]).toBeDefined();
+  expect(result.current.attestations["CHECKSUM-1"]).toBeDefined();
 });
 
 // Test 3 partial matches
@@ -58,8 +58,8 @@ it("sets undefined for checksums not returned by the API", async () => {
     expect(result.current.isLoading).toBe(false);
   });
 
-  expect(result.current.attestations["checksum-1"]).toBeDefined();
-  expect(result.current.attestations["checksum-2"]).toBeUndefined();
+  expect(result.current.attestations["CHECKSUM-1"]).toBeDefined();
+  expect(result.current.attestations["CHECKSUM-2"]).toBeUndefined();
 });
 
 //Test 4 404 is NOT an error
@@ -76,7 +76,7 @@ it("handles 404 responses by caching undefined attestations", async () => {
   });
 
   expect(result.current.error).toBeUndefined();
-  expect(result.current.attestations["checksum-1"]).toBeUndefined();
+  expect(result.current.attestations["CHECKSUM-1"]).toBeUndefined();
 });
 
 //Test 5 non-404 error surfaces
@@ -95,13 +95,13 @@ it("exposes error for non-404 failures", async () => {
 //Test 6 caching prevents refetch
 it("does not refetch attestations for cached checksums", async () => {
   mockedFetchCdxas.mockResolvedValue([
-    { target_checksum: "checksum-1" },
+    { target_checksum: "CHECKSUM-1" },
   ] as any);
 
   const { rerender } = renderHook(
     ({ checksums }) => useAttestations("release_name_mock", checksums),
     {
-      initialProps: { checksums: ["checksum-1"] },
+      initialProps: { checksums: ["CHECKSUM-1"] },
     },
   );
 
@@ -113,7 +113,7 @@ it("does not refetch attestations for cached checksums", async () => {
   const callsAfterFirstFetch = mockedFetchCdxas.mock.calls.length;
 
   // Rerender with the same checksum
-  rerender({ checksums: ["checksum-1"] });
+  rerender({ checksums: ["CHECKSUM-1"] });
 
   // Allow effects to flush
   await new Promise((r) => setTimeout(r, 0));

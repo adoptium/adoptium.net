@@ -75,7 +75,11 @@ const ReleaseResults: React.FC<ReleaseResultsProps> = ({
 
   const hasAttestation = (checksum?: string | null): boolean => {
     if (attestationsLoading || !checksum) return false;
-    return attestations[checksum] !== undefined;
+
+    // Normalize checksum to uppercase for case-insensitive matching
+    const normalizedChecksum = checksum.toUpperCase();
+
+    return attestations[normalizedChecksum] !== undefined;
   };
 
   if (isLoading) {
