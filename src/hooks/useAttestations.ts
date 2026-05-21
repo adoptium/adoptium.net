@@ -112,7 +112,9 @@ export function useAttestations(
                 ?.response?.status ?? (err as { status?: number })?.status);
         if (status === 404) {
           unresolvedChecksums.forEach((checksum) => {
-            cacheRef.current[checksum] = undefined;
+            // Normalize checksum to uppercase for case-insensitive matching
+            const normalizedChecksum = checksum.toUpperCase();
+            cacheRef.current[normalizedChecksum] = undefined;
           });
         } else {
           setError(err instanceof Error ? err : new Error(String(err)));

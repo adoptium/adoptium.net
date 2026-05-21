@@ -32,8 +32,8 @@ describe("useAttestations", () => {
 
   it("fetches attestations for a valid release", async () => {
     const mockAttestations = [
-      { target_checksum: "abc123", statement: "test-statement-1" },
-      { target_checksum: "def456", statement: "test-statement-2" },
+      { target_checksum: "ABC123", statement: "test-statement-1" },
+      { target_checksum: "DEF456", statement: "test-statement-2" },
     ];
 
     mockedFetchCdxas.mockResolvedValue(mockAttestations as any);
@@ -48,8 +48,8 @@ describe("useAttestations", () => {
 
     expect(mockedFetchCdxas).toHaveBeenCalledWith("jdk-21+35");
 
-    expect(result.current.attestations["abc123"]).toEqual(mockAttestations[0]);
-    expect(result.current.attestations["def456"]).toEqual(mockAttestations[1]);
+    expect(result.current.attestations["ABC123"]).toEqual(mockAttestations[0]);
+    expect(result.current.attestations["DEF456"]).toEqual(mockAttestations[1]);
   });
 
   it("handles 404 error by caching undefined for checksums", async () => {
