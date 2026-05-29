@@ -644,8 +644,8 @@ describe("ReleaseResults component", () => {
   it("should render attestation icon when attestation exists for checksum", () => {
     vi.mocked(useAttestations).mockReturnValue({
       attestations: {
-        abc123: {
-          target_checksum: "abc123",
+        ABC123: {
+          target_checksum: "ABC123",
         } as Cdxa,
       },
       isLoading: false,
@@ -668,7 +668,7 @@ describe("ReleaseResults component", () => {
   it("should NOT render attestation icon when attestation is explicitly absent", () => {
     vi.mocked(useAttestations).mockReturnValue({
       attestations: {
-        abc123: undefined, // resolved, but no attestation
+        ABC123: undefined, // resolved, but no attestation
       },
       isLoading: false,
       error: undefined,
