@@ -206,6 +206,26 @@ vi.mock("@/hooks/useAdoptiumContributorsApi", () => ({
   useAdoptiumContributorsApi: () => null,
 }));
 
+// Mock adopters data so adding new logos doesn't break snapshots
+vi.mock("@/data/adopters.json", () => ({
+  default: [
+    {
+      name: "Mock Adopter",
+      logo: "adopters/mock-adopter.svg",
+      url: "https://mock-adopter.example.com",
+      tier: "adopters",
+      featured: true,
+      logo_white: "adopters/mock-adopter-white.svg",
+      logoPadding: "1em",
+    },
+  ],
+}));
+
+// Mock shuffle to return input unchanged for deterministic snapshots
+vi.mock("@/utils/shuffle", () => ({
+  shuffle: <T,>(arr: T[]) => arr,
+}));
+
 type SwiperProps = {
   children: React.ReactNode;
 };

@@ -1,5 +1,7 @@
 import { shuffle } from "../shuffle"
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
+
+vi.unmock("@/utils/shuffle")
 
 describe("shuffle", () => {
   const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

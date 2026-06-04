@@ -1,28 +1,35 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Slider from "react-slick"
-import { useTranslations } from "next-intl"
-import adoptersData from "@/data/adopters.json"
+import Image from "next/image";
+import Slider from "react-slick";
+import { useTranslations } from "next-intl";
+import { useMemo } from "react";
+import adoptersData from "@/data/adopters.json";
+import { shuffle } from "@/utils/shuffle";
 
 // Import the CSS for slick-carousel
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Adopter {
-  name: string
-  logo: string
-  url: string
-  tier: string
-  featured?: boolean
-  logo_white?: string
-  logoPadding?: string
+  name: string;
+  logo: string;
+  url: string;
+  tier: string;
+  featured?: boolean;
+  logo_white?: string;
+  logoPadding?: string;
 }
 
-const featuredAdopters = (adoptersData as Adopter[]).filter(adopter => adopter.featured)
-
 const LogoCarousel = () => {
-  const t = useTranslations("LogoCarousel")
+  const featuredAdopters = useMemo(
+    () =>
+      shuffle(
+        (adoptersData as Adopter[]).filter((adopter) => adopter.featured),
+      ),
+    [],
+  );
+  const t = useTranslations("LogoCarousel");
   const settings = {
     dots: false,
     infinite: true,
@@ -59,16 +66,19 @@ const LogoCarousel = () => {
         },
       },
     ],
-  }
+  };
 
   return (
     <div className="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8">
       <h2 className="text-center text-xl font-normal leading-7 text-grey">
-        {t('title')}
+        {t("title")}
       </h2>
       <Slider {...settings} className="mt-6">
         {featuredAdopters.map((adopter, index) => (
-            <div key={index} className="!flex items-center justify-center h-[100px] px-4">
+          <div
+            key={index}
+            className="!flex items-center justify-center h-[100px] px-4"
+          >
             <Image
               width={200}
               height={100}
@@ -77,11 +87,11 @@ const LogoCarousel = () => {
               className="w-auto h-auto object-contain mx-auto max-h-[100px]"
               style={{ padding: adopter.logoPadding || 0 }}
             />
-            </div>
+          </div>
         ))}
       </Slider>
     </div>
-  )
-}
+  );
+};
 
-export default LogoCarousel
+export default LogoCarousel;

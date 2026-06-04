@@ -1,5 +1,8 @@
 import Ajv from "ajv"
-import { describe, it, expect } from "vitest"
+import { describe, it, expect, vi } from "vitest"
+
+vi.unmock("@/data/adopters.json")
+
 import adopters from "../adopters.json"
 import adoptersSchema from "../members.schema.json"
 
