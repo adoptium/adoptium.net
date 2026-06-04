@@ -4,6 +4,7 @@
     "logo": "adopters/logo-accenture.svg",
     "url": "https://www.accenture.com",
     "tier": "adopter",
+    "featured": true,
     "logo_white": "adopters/logo-accenture-white.png"
   },
   {
