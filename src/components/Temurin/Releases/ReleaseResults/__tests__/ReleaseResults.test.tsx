@@ -662,7 +662,12 @@ describe("ReleaseResults component", () => {
       />,
     );
 
-    expect(screen.getByAltText("Reproducibility Verified")).toBeInTheDocument();
+    const attestationIcon = screen.getByAltText("Reproducibility Verified");
+    expect(attestationIcon).toBeInTheDocument();
+    expect(attestationIcon).toHaveAttribute(
+      "src",
+      "/images/icons/reproduced-verified.svg",
+    );
   });
 
   it("should NOT render attestation icon when attestation is explicitly absent", () => {
