@@ -27,7 +27,7 @@
     "framer-motion": "^12.40.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
-    "highcharts": "^12.6.0",
+    "highcharts": "^13.0.0",
     "highcharts-react-official": "^3.2.3",
     "html-entities": "^2.6.0",
     "html-react-parser": "^6.1.3",
