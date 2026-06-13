@@ -49,8 +49,9 @@ tools:
 
 safe-outputs:
   create-pull-request:
+  create-pull-request:
     title-prefix: "[modernize] "
-    labels: [modernization, tech debt]
+    labels: [agentic-workflows]
     draft: true
     max: 1
     if-no-changes: "error"
