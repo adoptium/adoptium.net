@@ -41,7 +41,7 @@ tools:
 safe-outputs:
   create-issue:
     title-prefix: "[modernize] "
-    labels: [modernization, tech debt, help wanted]
+    labels: [agentic-workflows]
     max: 1
     close-older-issues: true
 

@@ -49,7 +49,6 @@ tools:
 
 safe-outputs:
   create-pull-request:
-  create-pull-request:
     title-prefix: "[modernize] "
     labels: [agentic-workflows]
     draft: true
