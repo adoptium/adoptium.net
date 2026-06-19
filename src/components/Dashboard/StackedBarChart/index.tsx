@@ -3,7 +3,7 @@
 
 import React from "react";
 import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
+import { Chart, type ChartOptions } from "@highcharts/react";
 
 interface StackedBarChartProps {
   categories: string[];
@@ -22,7 +22,7 @@ const StackedBarChart: React.FC<StackedBarChartProps> = ({
 }) => {
   if (!series.length) return null;
 
-  const options: Highcharts.Options = {
+  const options: ChartOptions = {
     chart: {
       type: horizontal ? "bar" : "column",
       backgroundColor: "transparent",
@@ -60,7 +60,7 @@ const StackedBarChart: React.FC<StackedBarChartProps> = ({
           textOutline: "none",
           fontSize: "0.8rem",
         },
-        formatter: function (this: Highcharts.StackItemObject) {
+        formatter: function () {
           return Highcharts.numberFormat(this.total, 0, ".", " ");
         },
       },
@@ -122,7 +122,7 @@ const StackedBarChart: React.FC<StackedBarChartProps> = ({
 
   return (
     <div className="chart">
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <Chart options={options} />
     </div>
   );
 };

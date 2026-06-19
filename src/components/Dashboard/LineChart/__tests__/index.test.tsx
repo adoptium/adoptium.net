@@ -1,6 +1,13 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import { describe, it, expect, afterEach } from 'vitest';
+import { describe, it, expect, afterEach, vi } from 'vitest';
+
+vi.mock('@highcharts/react', () => ({
+    Chart: ({ options }: { options: { title?: { text?: string } } }) => (
+        <div data-testid="highcharts-react">{options?.title?.text}</div>
+    ),
+}));
+
 import LineChart from '../index';
 
 describe('LineChart', () => {
