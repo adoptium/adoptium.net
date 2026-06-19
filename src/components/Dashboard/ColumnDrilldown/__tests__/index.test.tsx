@@ -13,6 +13,12 @@ vi.mock("highcharts/modules/drilldown", () => ({
   default: vi.fn(),
 }));
 
+vi.mock("@highcharts/react", () => ({
+  Chart: ({ options }: { options: { title?: { text?: string } } }) => (
+    <div data-testid="highcharts-react">{options?.title?.text}</div>
+  ),
+}));
+
 describe("ColumnDrilldown", () => {
   const mockApiData = {
     "21": { linux: 100, windows: 200 },

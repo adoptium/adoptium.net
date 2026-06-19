@@ -23,7 +23,7 @@ This is the official site for Eclipse Adoptium, built with **Next.js 15** using 
 - `asciidoctor` - AsciiDoc processing
 - `next-mdx-remote` - MDX content rendering
 - `framer-motion` - Animations
-- `highcharts-react-official` - Charts and visualizations
+- `@highcharts/react` - Charts and visualizations
 - `prismjs` - Syntax highlighting
 
 ## Project Structure
