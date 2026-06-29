@@ -62,7 +62,7 @@ der folgenden Tabelle aufgeführt sind:
 
 |`FeatureJavaHome` |Aktualisierung der JAVA_HOME-Umgebungsvariable
 
-|`FeatureOracleJavaSoft` |Aktualisiert Registrierungsschlüssel HKLM|
+|`FeatureOracleJavaSoft` |Aktualisiert Registrierungsschlüssel HKLM
 |=======================================================================
 +
 Hinweis: `FeatureOracleJavaSoft` kann verwendet werden, um zu verhindern,
