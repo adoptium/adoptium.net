@@ -104,7 +104,7 @@ export const currentBanners: BannerProps[] = [
     releaseBanner: true,
   },
   {
-    title: "2026 Adoptium Summit-CFP is open!",
+    title: "2026 Adoptium Summit - CFP is open!",
     description:
       "Join us virtually on Tuesday, 29 September, and share how you're using, contributing to, and helping shape Adoptium technologies.",
     cta: "Submit Your Proposal!",
