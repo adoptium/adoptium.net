@@ -111,7 +111,7 @@ export const currentBanners: BannerProps[] = [
     ctaLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeiXJhqULaROe-EKASd-1iliwwkpJ_ym4Xeh8SGXhVgz11ZkQ/viewform",
     startDate: "2026-06-29T00:00:00Z",
-    endDate: "2026-11-29T23:59:59Z",
+    endDate: "2026-07-24T23:59:59Z",
   },
   {
     title: "September 2026 Feature Release Binaries - In Progress",
