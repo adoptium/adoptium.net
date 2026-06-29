@@ -41,7 +41,7 @@ Une installation silencieuse vous permet d'installer le paquet Windows avec des 
 
 |`FeatureJavaHome` |Mettre à jour la variable d'environnement JAVA_HOME
 
-|`FeatureOracleJavaSoft` |Met à jour les clés de registre HKLM|
+|`FeatureOracleJavaSoft` |Met à jour les clés de registre HKLM
 |=======================================================================
 +
 Remarque : `FeatureOracleJavaSoft` peut être utilisé pour empêcher le lancement d'Oracle Java depuis `PATH` lorsque Temurin est désinstallé. Réinstallez Oracle Java si vous devez restaurer les clés de registre Oracle.

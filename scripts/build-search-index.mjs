@@ -12,24 +12,25 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { createRequire } from "module";
+import { load, convert } from "@asciidoctor/core";
 
-const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const CONTENT_BASE_DIR = path.join(ROOT, "content/asciidoc-pages");
 const OUTPUT_DIR = path.join(ROOT, "public/pagefind");
 
 function getAllDocs() {
-  const Asciidoctor = require("@asciidoctor/core")();
   const docs = [];
 
-  function traverse(dir, currentPath = []) {
+  async function traverse(dir, currentPath = []) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
 
     for (const entry of entries) {
       if (entry.isDirectory() && entry.name !== "_partials") {
-        traverse(path.join(dir, entry.name), [...currentPath, entry.name]);
+        await traverse(path.join(dir, entry.name), [
+          ...currentPath,
+          entry.name,
+        ]);
       } else if (entry.isFile() && entry.name.endsWith(".adoc")) {
         const match = entry.name.match(/^index(?:\.([a-zA-Z0-9_-]+))?\.adoc$/);
         if (!match) continue;
@@ -41,7 +42,7 @@ function getAllDocs() {
         const filePath = path.join(dir, entry.name);
         const rawContent = fs.readFileSync(filePath, "utf8");
 
-        const doc = Asciidoctor.load(rawContent, {
+        const doc = await load(rawContent, {
           safe: "server",
           base_dir: path.dirname(filePath),
         });
@@ -55,7 +56,7 @@ function getAllDocs() {
           : "";
 
         // Convert to HTML for full-text indexing, stripping tags for plain text
-        const html = Asciidoctor.convert(rawContent, {
+        const html = await convert(rawContent, {
           safe: "server",
           base_dir: path.dirname(filePath),
         });
@@ -76,8 +77,7 @@ function getAllDocs() {
     }
   }
 
-  traverse(CONTENT_BASE_DIR);
-  return docs;
+  return traverse(CONTENT_BASE_DIR).then(() => docs);
 }
 
 async function main() {
@@ -88,7 +88,7 @@ async function main() {
     process.exit(1);
   }
 
-  const docs = getAllDocs();
+  const docs = await getAllDocs();
   console.log(`Indexing ${docs.length} documents...`);
 
   for (const doc of docs) {
