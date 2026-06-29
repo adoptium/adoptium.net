@@ -104,6 +104,16 @@ export const currentBanners: BannerProps[] = [
     releaseBanner: true,
   },
   {
+    title: "2026 Adoptium Summit-CFP is open!",
+    description:
+      "Join us virtually on Tuesday, 29 September, and share how you're using, contributing to, and helping shape Adoptium technologies.",
+    cta: "Submit Your Proposal!",
+    ctaLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeiXJhqULaROe-EKASd-1iliwwkpJ_ym4Xeh8SGXhVgz11ZkQ/viewform",
+    startDate: "2026-06-29T00:00:00Z",
+    endDate: "2026-11-29T23:59:59Z",
+  },
+  {
     title: "September 2026 Feature Release Binaries - In Progress",
     description:
       "We are creating the September 2026 feature release binaries for Eclipse Temurin",
