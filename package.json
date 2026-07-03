@@ -21,7 +21,7 @@
   "dependencies": {
     "@asciidoctor/core": "^4.0.1",
     "@headlessui/react": "^2.2.10",
-    "@highcharts/react": "^5.2.0",
+    "@highcharts/react": "^5.2.2",
     "@next/third-parties": "16.2.10",
     "@opennextjs/cloudflare": "^1.20.1",
     "axios": "^1.18.1",
