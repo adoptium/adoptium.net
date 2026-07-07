@@ -19,7 +19,7 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-    "@asciidoctor/core": "^4.0.1",
+    "@asciidoctor/core": "^4.0.2",
     "@headlessui/react": "^2.2.10",
     "@highcharts/react": "^5.2.2",
     "@next/third-parties": "16.2.10",
