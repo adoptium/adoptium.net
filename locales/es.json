@@ -25,7 +25,7 @@
     "vendor-alert": "Está descargando una compilación de <vendorWrapper>{vendor}</vendorWrapper>, miembro del Grupo de Trabajo Eclipse Adoptium.",
     "why-we-need-you": "Por qué su ayuda es importante",
     "infra-costs-title": "Costes de Infraestructura",
-    "infra-costs-desc": "Probar en más de 50 plataformas requiere una potencia de cómputo masiva.",
+    "infra-costs-desc": "Probar en más de 50 combinaciones de plataformas/versiones requiere una potencia de cómputo masiva.",
     "security-speed-title": "Seguridad y Velocidad",
     "security-speed-desc": "Las actualizaciones rápidas y seguras requieren recursos dedicados.",
     "open-source-title": "Código Abierto Verdadero",
