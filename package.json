@@ -56,7 +56,7 @@
     "schema-dts": "^2.0.0",
     "slick-carousel": "^1.8.1",
     "sugar-high": "^1.2.1",
-    "swiper": "^14.0.2",
+    "swiper": "^14.0.5",
     "unified": "^11.0.5"
   },
   "devDependencies": {
