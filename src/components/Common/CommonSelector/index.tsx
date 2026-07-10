@@ -102,10 +102,7 @@ export default function CommonSelector({
         </ListboxButton>
         <ListboxOptions
           transition
-          leave="transition ease-in duration-100"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-          className={`absolute overflow-auto left-0 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355] ${
+          className={`absolute overflow-auto left-0 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355] transition ease-in duration-100 data-[closed]:opacity-0 ${
             dropdownPosition === "top"
               ? "origin-bottom-left bottom-full mb-2"
               : "origin-top-left top-full mt-2"

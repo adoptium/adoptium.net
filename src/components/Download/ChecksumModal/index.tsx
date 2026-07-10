@@ -61,26 +61,14 @@ const ChecksumModal: React.FC<ChecksumModalProps> = ({
     >
       <DialogBackdrop
         transition
-        enter="ease-out duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="ease-in duration-200"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity duration-300 ease-out data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[leave]:ease-in"
       />
 
       <div className="fixed inset-0 z-10 overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
           <DialogPanel
             transition
-            enter="ease-out duration-300"
-            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enterTo="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            className="relative transform overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46] to-[#2B1A4F] text-left shadow-2xl transition-all w-full max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl my-4 sm:my-8"
+            className="relative transform overflow-hidden rounded-xl bg-gradient-to-br from-[#200E46] to-[#2B1A4F] text-left shadow-2xl transition-all w-full max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl my-4 sm:my-8 duration-300 ease-out data-[closed]:opacity-0 data-[closed]:translate-y-4 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 data-[enter]:duration-300 data-[leave]:duration-200 data-[leave]:ease-in"
           >
             <div className="px-4 pb-4 pt-4 sm:px-6 sm:pb-6 sm:pt-5 md:p-8">
               <div className="sm:flex sm:items-start">
