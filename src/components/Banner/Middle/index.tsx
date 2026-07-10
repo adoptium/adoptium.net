@@ -3,13 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { shuffle } from "@/utils/shuffle";
 import { filterByCurrentDate } from "@/utils/filterByDate";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { currentAnnouncements, BannerMiddleProps } from "./announcements";
 
 const BannerMiddle = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [announcement, setAnnouncement] = useState<BannerMiddleProps | null>(
-    null
+    null,
   );
 
   // Track when component mounts to prevent hydration issues
@@ -21,7 +21,7 @@ const BannerMiddle = () => {
     setAnnouncement(
       filteredAnnouncements.length > 0
         ? shuffle(filteredAnnouncements)[0]
-        : null
+        : null,
     );
     setIsMounted(true);
   }, []);

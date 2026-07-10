@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Highcharts from "highcharts";
+import * as Highcharts from "highcharts";
 import { Chart, type ChartOptions } from "@highcharts/react";
 
 if (!Highcharts.AST.allowedAttributes.includes("rel")) {

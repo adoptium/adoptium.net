@@ -5,6 +5,13 @@
 /* Custom variant for doc-light mode: use light:bg-white etc. */
 @custom-variant light (&:where(.doc-light, .doc-light * ));
 
+@theme {
+  --color-purple: #14003c;
+  --color-pink: #ff1365;
+  --color-blue: #0d002a;
+  --color-grey: #c4bfce;
+}
+
 @layer utilities {
   .bg-temurin-hero {
     background-image: url("/images/backgrounds/temurin-hero-img.png");
@@ -19,10 +26,6 @@
 
 /* CSS Variables */
 :root {
-  --purple: #14003c;
-  --pink: #ff1365;
-  --blue: #0d002a;
-  --grey: #c4bfce;
   --border-radius: 4px;
   --color-text: white;
   --color-primary: #7026b9;
@@ -78,39 +81,15 @@ pre tt::after {
 
 body {
   font-family: var(--font-hanken-grotesk), var(--font-inter), sans-serif;
-  background-color: var(--purple);
+  background-color: var(--color-purple);
   color: var(--color-text);
   line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-.bg-purple {
-  background-color: var(--purple);
-}
-
-.bg-pink {
-  background-color: var(--pink);
-}
-
-.bg-blue {
-  background-color: var(--blue);
-}
-
-.text-pink {
-  color: var(--pink);
-}
-
 .text-primary {
-  color: var(--pink);
-}
-
-.text-grey {
-  color: var(--grey);
-}
-
-.border-purple {
-  border-color: var(--purple);
+  color: var(--color-pink);
 }
 
 .highlight {

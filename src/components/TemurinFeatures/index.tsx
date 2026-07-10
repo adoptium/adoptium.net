@@ -1,72 +1,74 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef, useMemo } from "react"
-import { Link } from "@/i18n/navigation"
-import Image from "next/image"
-import { useTranslations } from "next-intl"
-import { Swiper, SwiperSlide, SwiperRef } from "swiper/react"
-import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi"
-import SwiperCore from "swiper"
-import { Navigation } from "swiper/modules"
+import React, { useEffect, useRef, useMemo } from "react";
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { Navigation } from "swiper/modules";
 
-import "swiper/swiper-bundle.css"
-import "./styles.css"
+import "swiper/css";
+import "swiper/css/navigation";
+import "./styles.css";
 
 const Features = () => {
-  SwiperCore.use([Navigation])
-  const t = useTranslations("TemurinFeatures")
-  const features = useMemo(() => [
-    {
-      heading: t("features.secure-supply-chain.title"),
-      content: t("features.secure-supply-chain.description"),
-      img: "/images/icons/lock.svg"
-    },
-    {
-      heading: t("features.aqavit-verification.title"),
-      content: t("features.aqavit-verification.description"),
-      img: "/images/initiatives/testing.svg"
-    },
-    {
-      heading: t("features.performance-optimization.title"),
-      content: t("features.performance-optimization.description"),
-      img: "/images/initiatives/deploy.svg"
-    },
-    {
-      heading: t("features.cross-platform.title"),
-      content: t("features.cross-platform.description"),
-      img: "/images/initiatives/release.svg"
-    },
-    {
-      heading: t("features.community-driven.title"),
-      content: t("features.community-driven.description"),
-      img: "/images/initiatives/community.svg"
-    },
-    {
-      heading: t("features.enterprise-ready.title"),
-      content: t("features.enterprise-ready.description"),
-      img: "/images/initiatives/security.svg"
-    }
-  ], [t])
+  const t = useTranslations("TemurinFeatures");
+  const features = useMemo(
+    () => [
+      {
+        heading: t("features.secure-supply-chain.title"),
+        content: t("features.secure-supply-chain.description"),
+        img: "/images/icons/lock.svg",
+      },
+      {
+        heading: t("features.aqavit-verification.title"),
+        content: t("features.aqavit-verification.description"),
+        img: "/images/initiatives/testing.svg",
+      },
+      {
+        heading: t("features.performance-optimization.title"),
+        content: t("features.performance-optimization.description"),
+        img: "/images/initiatives/deploy.svg",
+      },
+      {
+        heading: t("features.cross-platform.title"),
+        content: t("features.cross-platform.description"),
+        img: "/images/initiatives/release.svg",
+      },
+      {
+        heading: t("features.community-driven.title"),
+        content: t("features.community-driven.description"),
+        img: "/images/initiatives/community.svg",
+      },
+      {
+        heading: t("features.enterprise-ready.title"),
+        content: t("features.enterprise-ready.description"),
+        img: "/images/initiatives/security.svg",
+      },
+    ],
+    [t],
+  );
 
-  const swiperRef = useRef<SwiperRef>(null)
+  const swiperRef = useRef<SwiperRef>(null);
 
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.update()
+      swiperRef.current.swiper.update();
     }
-  }, [features])
+  }, [features]);
 
   const handlePrevbase = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev()
+      swiperRef.current.swiper.slidePrev();
     }
-  }
+  };
 
   const handleNextbase = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext()
+      swiperRef.current.swiper.slideNext();
     }
-  }
+  };
 
   return (
     <div className="temurin-features">
@@ -104,6 +106,7 @@ const Features = () => {
             </div>
           </div>
           <Swiper
+            modules={[Navigation]}
             loop={true}
             slidesPerView={"auto"}
             className="mySwiperbase w-full"
@@ -167,7 +170,7 @@ const Features = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
