@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { formatDate } from "@/utils/date";
 import { PinkIcon } from "@/components/Common/Icon";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 type Post = {
   slug: string;

@@ -1,13 +1,7 @@
 "use client";
 
-import React, { Fragment } from "react";
-import {
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  Transition,
-} from "@headlessui/react";
+import React from "react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { FaChevronDown } from "react-icons/fa";
 import Flag from "react-world-flags";
 import ISO6391 from "iso-639-1";
@@ -79,48 +73,47 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ locale }) => {
         </MenuButton>
       </div>
 
-      <Transition
-        as={Fragment}
+      <MenuItems
+        transition
         enter="transition ease-out duration-100"
         enterFrom="transform opacity-0 scale-95"
         enterTo="transform opacity-100 scale-100"
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
+        className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden"
       >
-        <MenuItems className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
-          <div className="py-1">
-            {routing.locales.map((lng) => (
-              <MenuItem key={lng}>
-                {({ active }) => (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      changeLanguage(lng);
-                    }}
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      lng === locale ? "font-bold" : "",
-                      "block w-full text-left px-4 py-2 text-sm",
-                    )}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <Flag
-                        className="mb-0"
-                        code={getCountryCode(lng)}
-                        width="35"
-                      />
-                      <span className="ml-2">
-                        {ISO6391.getNativeName(getLanguageCode(lng))}
-                      </span>
-                    </div>
-                  </button>
-                )}
-              </MenuItem>
-            ))}
-          </div>
-        </MenuItems>
-      </Transition>
+        <div className="py-1">
+          {routing.locales.map((lng) => (
+            <MenuItem key={lng}>
+              {({ active }) => (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changeLanguage(lng);
+                  }}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    lng === locale ? "font-bold" : "",
+                    "block w-full text-left px-4 py-2 text-sm",
+                  )}
+                >
+                  <div className="flex items-center space-x-2">
+                    <Flag
+                      className="mb-0"
+                      code={getCountryCode(lng)}
+                      width="35"
+                    />
+                    <span className="ml-2">
+                      {ISO6391.getNativeName(getLanguageCode(lng))}
+                    </span>
+                  </div>
+                </button>
+              )}
+            </MenuItem>
+          ))}
+        </div>
+      </MenuItems>
     </Menu>
   );
 };

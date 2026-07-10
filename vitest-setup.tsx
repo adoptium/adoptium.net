@@ -88,8 +88,8 @@ vi.mock("next-intl", () => ({
   ),
 }));
 
-// Mock framer-motion
-vi.mock("framer-motion", () => {
+// Mock motion/react
+vi.mock("motion/react", () => {
   const filterMotionProps = (props: any) => {
     const {
       initial,

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 
 interface SubText {
@@ -83,9 +83,9 @@ const FeatureImage = ({
     index === 0
       ? [start, end - overlap, end + overlap]
       : index === total - 1
-      ? [start - overlap, start + overlap, end]
-      : [start - overlap, start + overlap, end - overlap, end + overlap],
-    index === 0 ? [1, 1, 0] : index === total - 1 ? [0, 1, 1] : [0, 1, 1, 0]
+        ? [start - overlap, start + overlap, end]
+        : [start - overlap, start + overlap, end - overlap, end + overlap],
+    index === 0 ? [1, 1, 0] : index === total - 1 ? [0, 1, 1] : [0, 1, 1, 0],
   );
 
   // Slight scale effect
@@ -94,9 +94,9 @@ const FeatureImage = ({
     index === 0
       ? [start, end + overlap]
       : index === total - 1
-      ? [start - overlap, end]
-      : [start - overlap, start + step * 0.5, end + overlap],
-    index === 0 ? [1, 0.8] : index === total - 1 ? [0.8, 1] : [0.8, 1, 0.8]
+        ? [start - overlap, end]
+        : [start - overlap, start + step * 0.5, end + overlap],
+    index === 0 ? [1, 0.8] : index === total - 1 ? [0.8, 1] : [0.8, 1, 0.8],
   );
 
   return (
@@ -155,9 +155,9 @@ const FeatureText = ({
     index === 0
       ? [start, end - overlap, end + overlap]
       : index === total - 1
-      ? [start - overlap, start + overlap, end]
-      : [start - overlap, start + overlap, end - overlap, end + overlap],
-    index === 0 ? [1, 1, 0] : index === total - 1 ? [0, 1, 1] : [0, 1, 1, 0]
+        ? [start - overlap, start + overlap, end]
+        : [start - overlap, start + overlap, end - overlap, end + overlap],
+    index === 0 ? [1, 1, 0] : index === total - 1 ? [0, 1, 1] : [0, 1, 1, 0],
   );
 
   const y = useTransform(
@@ -165,9 +165,9 @@ const FeatureText = ({
     index === 0
       ? [start, end + overlap]
       : index === total - 1
-      ? [start - overlap, end]
-      : [start - overlap, end + overlap],
-    index === 0 ? [0, -100] : index === total - 1 ? [100, 0] : [100, -100]
+        ? [start - overlap, end]
+        : [start - overlap, end + overlap],
+    index === 0 ? [0, -100] : index === total - 1 ? [100, 0] : [100, -100],
   );
 
   return (

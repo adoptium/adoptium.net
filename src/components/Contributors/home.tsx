@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import RandomContributor from "@/components/Contributors/RandomContributor";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import "./styles.css";
 
 const ContributorsHome = () => {

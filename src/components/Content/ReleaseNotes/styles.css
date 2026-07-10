@@ -87,7 +87,7 @@
 }
 
 .issue-link {
-  color: var(--pink);
+  color: var(--color-pink);
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -114,7 +114,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, var(--pink), transparent);
+  background: linear-gradient(to right, var(--color-pink), transparent);
   transition: width 0.3s ease;
 }
 

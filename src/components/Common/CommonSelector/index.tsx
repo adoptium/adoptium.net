@@ -1,18 +1,23 @@
-"use client"
+"use client";
 
-import React, { Fragment, useMemo, useState, useEffect, useRef } from "react"
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions, Transition } from "@headlessui/react"
-import { FaChevronDown } from "react-icons/fa"
+import React, { useMemo, useState, useEffect, useRef } from "react";
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from "@headlessui/react";
+import { FaChevronDown } from "react-icons/fa";
 
 export interface ListItem {
-  name: string
-  value: string
+  name: string;
+  value: string;
 }
 
 interface ListBoxSelectProps {
-  list: ListItem[]
-  defaultValue?: ListItem | undefined
-  selectorUpdater: (value: string) => void
+  list: ListItem[];
+  defaultValue?: ListItem | undefined;
+  selectorUpdater: (value: string) => void;
 }
 
 export default function CommonSelector({
@@ -20,67 +25,70 @@ export default function CommonSelector({
   defaultValue,
   selectorUpdater,
 }: ListBoxSelectProps) {
-
   const initialSelected = useMemo(() => {
     // First try to use defaultValue if provided
-    if (defaultValue) return defaultValue
+    if (defaultValue) return defaultValue;
     // If list has items, use the first one as default
-    if (list && list.length > 0) return list[0]
+    if (list && list.length > 0) return list[0];
     // Fallback to a safe default
-    return { name: "Select an option", value: "" }
-  }, [defaultValue, list])
+    return { name: "Select an option", value: "" };
+  }, [defaultValue, list]);
 
-  const [selected, setSelected] = useState<ListItem | undefined>(initialSelected)
-  const [dropdownPosition, setDropdownPosition] = useState<'bottom' | 'top'>('bottom')
-  const buttonRef = useRef<HTMLButtonElement>(null)
+  const [selected, setSelected] = useState<ListItem | undefined>(
+    initialSelected,
+  );
+  const [dropdownPosition, setDropdownPosition] = useState<"bottom" | "top">(
+    "bottom",
+  );
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   // Update selected when defaultValue changes (controlled from parent)
   useEffect(() => {
     if (defaultValue && selected && defaultValue.value !== selected.value) {
-      setSelected(defaultValue)
+      setSelected(defaultValue);
     } else if (defaultValue && !selected) {
-      setSelected(defaultValue)
+      setSelected(defaultValue);
     }
-  }, [defaultValue, selected])
+  }, [defaultValue, selected]);
 
   const handleChange = (newValue: ListItem) => {
-    setSelected(newValue)
+    setSelected(newValue);
     if (newValue && newValue.value !== undefined) {
-      selectorUpdater(newValue.value)
+      selectorUpdater(newValue.value);
     }
-  }
+  };
 
   const handleButtonClick = () => {
     if (buttonRef.current) {
-      const rect = buttonRef.current.getBoundingClientRect()
-      const viewportHeight = window.innerHeight
-      const spaceBelow = viewportHeight - rect.bottom
-      const spaceAbove = rect.top
-      const dropdownHeight = 320 // max-h-80 = 320px
+      const rect = buttonRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const spaceBelow = viewportHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      const dropdownHeight = 320; // max-h-80 = 320px
 
       // Determine if dropdown should open upward or downward
       if (spaceBelow < dropdownHeight && spaceAbove > spaceBelow) {
-        setDropdownPosition('top')
+        setDropdownPosition("top");
       } else {
-        setDropdownPosition('bottom')
+        setDropdownPosition("bottom");
       }
 
       // Scroll the button into view with some padding
       // Use 'center' to ensure there's space both above and below
       buttonRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'nearest'
-      })
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
     }
-  }
+  };
 
-  if (list.length === 0) return null
+  if (list.length === 0) return null;
 
   return (
     <Listbox value={selected} onChange={handleChange}>
       <div className="relative mt-1">
-        <ListboxButton 
+        <ListboxButton
           ref={buttonRef}
           onClick={handleButtonClick}
           className="relative w-full flex items-center justify-between  rounded-[80px] border-[2px] bg-transparent py-3 pl-8 pr-4 border-[#3E3355]"
@@ -92,45 +100,44 @@ export default function CommonSelector({
             <FaChevronDown />
           </span>
         </ListboxButton>
-        <Transition
-          as={Fragment}
+        <ListboxOptions
+          transition
           leave="transition ease-in duration-100"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
+          className={`absolute overflow-auto left-0 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355] ${
+            dropdownPosition === "top"
+              ? "origin-bottom-left bottom-full mb-2"
+              : "origin-top-left top-full mt-2"
+          }`}
         >
-          <ListboxOptions 
-            className={`absolute overflow-auto left-0 w-full max-h-60 sm:max-h-80 rounded-[16px] bg-[#200D46] border-[2px] text-white z-10 border-[#3E3355] ${
-              dropdownPosition === 'top' 
-                ? 'origin-bottom-left bottom-full mb-2' 
-                : 'origin-top-left top-full mt-2'
-            }`}
-          >
-            {list.map((obj, index) => (
-              <ListboxOption
-                key={index}
-                className={({ active }) =>
-                  `relative cursor-pointer select-none py-1 px-3 sm:py-2 sm:px-4 text-sm sm:text-base ${active
+          {list.map((obj, index) => (
+            <ListboxOption
+              key={index}
+              className={({ active }) =>
+                `relative cursor-pointer select-none py-1 px-3 sm:py-2 sm:px-4 text-sm sm:text-base ${
+                  active
                     ? "text-white bg-[#3E3355]"
                     : "text-white hover:bg-[#2a223a]"
-                  }`
-                }
-                value={obj}
-              >
-                {({ selected }) => (
-                  <>
-                    <span
-                      className={`block truncate ${selected ? "font-medium" : "font-normal"
-                        }`}
-                    >
-                      {obj.name}
-                    </span>
-                  </>
-                )}
-              </ListboxOption>
-            ))}
-          </ListboxOptions>
-        </Transition>
+                }`
+              }
+              value={obj}
+            >
+              {({ selected }) => (
+                <>
+                  <span
+                    className={`block truncate ${
+                      selected ? "font-medium" : "font-normal"
+                    }`}
+                  >
+                    {obj.name}
+                  </span>
+                </>
+              )}
+            </ListboxOption>
+          ))}
+        </ListboxOptions>
       </div>
     </Listbox>
-  )
+  );
 }
