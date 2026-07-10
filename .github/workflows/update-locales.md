@@ -8,7 +8,7 @@ on:
     contents: read
   steps:
     - name: Checkout repository
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       with:
         persist-credentials: false
     - name: Detect missing or stale locale keys
@@ -35,9 +35,7 @@ permissions:
   issues: read
   pull-requests: read
 
-features:
-  copilot-requests: true
-
+  copilot-requests: write
 safe-outputs:
   create-pull-request:
     title-prefix: "[i18n] "
@@ -105,9 +103,9 @@ See [locales/README.md](../../locales/README.md#locale-leads) for the current li
    in the target locale file. You can use `jq` to extract all key paths:
 
    ```bash
-   jq -r '[paths(scalars)] | map(join(".")) | .[]' locales/en.json | sort > /tmp/en_keys.txt
-   jq -r '[paths(scalars)] | map(join(".")) | .[]' locales/de.json | sort > /tmp/de_keys.txt
-   comm -23 /tmp/en_keys.txt /tmp/de_keys.txt
+   jq -r '[paths(scalars)] | map(join(".")) | .[]' locales/en.json | sort > /tmp/gh-aw/agent/en_keys.txt
+   jq -r '[paths(scalars)] | map(join(".")) | .[]' locales/de.json | sort > /tmp/gh-aw/agent/de_keys.txt
+   comm -23 /tmp/gh-aw/agent/en_keys.txt /tmp/gh-aw/agent/de_keys.txt
    ```
 
 2. **Translate missing keys**: For each missing key, translate the English value

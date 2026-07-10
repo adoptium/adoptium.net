@@ -31,8 +31,8 @@ jobs:
           FILTER_REGEX_EXCLUDE:
             ".*(\\.github/ISSUE_TEMPLATE/|\\.lock\\.(yml|json)|\\.git\
             hub/workflows/.*\\.md|\\.github/workflows/agentics-maintenance\\.ym\
-            l|\\.github/copilot-setup-steps\\.yml|\\.github/agents/.*\\.agent\\\
-            .md).*"
+            l|\\.github/copilot-setup-steps\\.yml|\\.github/agents/.*\\.md|\\\
+            .github/skills/.*\\.md).*"
           VALIDATE_YAML: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_ES: false

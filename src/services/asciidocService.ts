@@ -78,14 +78,14 @@ export async function getAsciidocContent(
     }
 
     // Process AsciiDoc to HTML
-    const htmlContent = processAsciiDoc(filePath, content, {
+    const htmlContent = await processAsciiDoc(filePath, content, {
       attributes: {
         "latest-lts": String(latestLts),
       },
     });
 
     // Extract metadata
-    const metadata = extractMetadata(filePath, content);
+    const metadata = await extractMetadata(filePath, content);
 
     // Get available locales for this page
     const availableLocales = getLanguageVariants(filePath, "index");
@@ -204,7 +204,7 @@ export async function getSidebarData(
 
   if (rootIndex) {
     const content = fs.readFileSync(rootIndex, "utf8");
-    const meta = extractMetadata(rootIndex, content);
+    const meta = await extractMetadata(rootIndex, content);
     items.push({ title: "Overview", href: `/${section}` });
     // Use "Overview" as the label for the root page to keep it short
     void meta; // title available if needed later
@@ -226,7 +226,7 @@ export async function getSidebarData(
     if (!childFile) continue;
 
     const content = fs.readFileSync(childFile, "utf8");
-    const meta = extractMetadata(childFile, content);
+    const meta = await extractMetadata(childFile, content);
     const sidebarTitle = meta.attributes["page-sidebar-title"];
     items.push({
       title: sidebarTitle ? String(sidebarTitle) : meta.title,
@@ -255,7 +255,7 @@ export async function getSidebarData(
         : null;
     if (rootIndex) {
       const rootContent = fs.readFileSync(rootIndex, "utf8");
-      const rootMeta = extractMetadata(rootIndex, rootContent);
+      const rootMeta = await extractMetadata(rootIndex, rootContent);
       sectionTitle = rootMeta.title;
     } else {
       sectionTitle =
