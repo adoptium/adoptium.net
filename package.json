@@ -85,7 +85,7 @@
     "jsdom-testing-mocks": "^1.16.0",
     "openapi-typescript": "^7.13.0",
     "pagefind": "^1.5.2",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "vitest": "^4.0.15",
