@@ -87,7 +87,7 @@
     "pagefind": "^1.5.2",
     "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vitest": "^4.0.15",
     "vitest-axe": "^0.1.0",
     "wrangler": "^4.113.0"
