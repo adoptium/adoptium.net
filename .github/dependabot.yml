@@ -27,7 +27,10 @@ updates:
     schedule:
       interval: daily
     ignore:
-      - dependency-name: "github/gh-aw-actions*"
+      - dependency-name: "github/gh-aw-actions*" # Managed by gh aw compile. Version-locked to the gh-aw compiler; do not bump.
+    exclude-paths:
+      - .github/workflows/*.lock.yml # Managed by gh aw compile. Version-locked to the gh-aw compiler; do not bump.
+      - .github/workflows/copilot-setup-steps.yml # Managed by gh aw compile. Version-locked to the gh-aw compiler; do not bump.
     open-pull-requests-limit: 10
     groups:
       codeql-action:
