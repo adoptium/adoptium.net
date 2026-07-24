@@ -6,20 +6,27 @@
 
 | {col-java-version}  | {col-first-availability} | {col-latest-release} | {col-next-release-due} | {col-end-of-availability} ^[1]^
 
+| Java 27
+| {month-sep} 2026
+| None, yet.
+| {month-jul} 2026 +
+[.small]#jdk-27#
+| {month-mar} 2027
+
 | Java 26
 | {month-mar} 2026
-| {month-apr} 2026 +
-[.small]#jdk-26.0.1+8#
 | {month-jul} 2026 +
-[.small]#jdk-26.0.2#
+[.small]#jdk-26.0.2+10
+| {month-aug} 2026 +
+[.small]#jdk-26.0.2.1
 | {month-sep} 2026
 
 | Java 25 (LTS)
 | {month-sep} 2025
-| {month-apr} 2026 +
-[.small]#jdk-25.0.3+9#
 | {month-jul} 2026 +
-[.small]#jdk-25.0.4#
+[.small]#jdk-25.0.4+7#
+| {month-aug} 2026 +
+[.small]#jdk-25.0.4.1#
 | {at-least} {month-sep} 2031
 
 | Java 24
@@ -45,10 +52,10 @@
 
 | Java 21 (LTS)
 | {month-sep} 2023
-| {month-apr} 2026 +
-[.small]#jdk-21.0.11+10#
 | {month-jul} 2026 +
-[.small]#jdk-21.0.12#
+[.small]#jdk-21.0.12+8#
+| {month-aug} 2026 +
+[.small]#jdk-21.0.12.1#
 | {at-least} {month-dec} 2029
 
 | Java 20
@@ -74,10 +81,10 @@
 
 | Java 17 (LTS)
 | {month-sep} 2021
-| {month-apr} 2026 +
-[.small]#jdk-17.0.19+10#
 | {month-jul} 2026 +
-[.small]#jdk-17.0.20#
+[.small]#jdk-17.0.20+8#
+| {month-aug} 2026 +
+[.small]#jdk-17.0.20.1#
 | {at-least} {month-oct} 2027
 
 | Java 16
@@ -89,18 +96,18 @@
 
 | Java 11 (LTS)
 | {month-sep} 2018
-| {month-apr} 2026 +
-[.small]#jdk-11.0.31+11#
 | {month-jul} 2026 +
-[.small]#jdk-11.0.32#
+[.small]#jdk-11.0.32+9#
+| {month-aug} 2026 +
+[.small]#jdk-11.0.32.1#
 | {at-least} {month-oct} 2027
 
 | Java 8 (LTS)
 | {month-mar} 2014
-| {month-apr} 2026 +
-[.small]#jdk8u492-b09#
 | {month-jul} 2026 +
-[.small]#jdk8u501#
+[.small]#jdk8u502-b07#
+| {month-aug} 2026 +
+[.small]#jdk8u503#
 | {at-least} {month-dec} 2030
 
 |===
