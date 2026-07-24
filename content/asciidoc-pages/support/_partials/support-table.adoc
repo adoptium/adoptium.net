@@ -9,7 +9,7 @@
 | Java 27
 | {month-sep} 2026
 | None, yet.
-| {month-jul} 2026 +
+| {month-sep} 2026 +
 [.small]#jdk-27#
 | {month-mar} 2027
 
