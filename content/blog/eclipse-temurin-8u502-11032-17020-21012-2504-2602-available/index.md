@@ -52,3 +52,7 @@ Several improvements have been made to the reproducible-build verification tooli
 ### Build Reliability: Boot JDK Download Retry Logic
 
 The build tooling now retries failed `curl` commands when downloading the boot JDK. This reduces transient build failures caused by temporary network issues in CI environments, improving overall release reliability.
+
+### Linux arm32 Not Included for JDK 8
+
+Eclipse Temurin will not be shipping a JDK 8 build for Linux Arm32 during this release cycle due to concerns raised during the quality assurance process. We hope to resolve these concerns as soon as possible.
