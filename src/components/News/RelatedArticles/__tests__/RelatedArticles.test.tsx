@@ -17,6 +17,7 @@ const mockPosts = [
     year: "2024",
     month: "01",
     content: "",
+    readingTime: 1,
     metadata: {
       title: "Post One",
       date: "2024-01-15",
@@ -31,6 +32,7 @@ const mockPosts = [
     year: "2024",
     month: "02",
     content: "",
+    readingTime: 1,
     metadata: {
       title: "Post Two",
       date: "2024-02-20",
@@ -45,6 +47,7 @@ const mockPosts = [
     year: "2024",
     month: "03",
     content: "",
+    readingTime: 1,
     metadata: {
       title: "Post Three",
       date: "2024-03-10",
@@ -59,6 +62,7 @@ const mockPosts = [
     year: "2024",
     month: "04",
     content: "",
+    readingTime: 1,
     metadata: {
       title: "Current Post",
       date: "2024-04-01",
@@ -82,6 +86,7 @@ describe("RelatedArticles", () => {
         year: "2024",
         month: "04",
         content: "",
+        readingTime: 1,
         metadata: {
           title: "Current Post",
           date: "2024-04-01",
