@@ -24,7 +24,7 @@ const CHECK_ICON = renderToStaticMarkup(<FaCheck />);
 
 const WRAPPER_CLASSES = "relative group";
 const BUTTON_CLASSES =
-  "absolute top-1/2 right-2 -translate-y-1/2 p-1.5 bg-black/35 border border-white/15 rounded text-white/45 cursor-pointer opacity-0 transition-all duration-150 leading-[0] flex items-center justify-center group-hover:opacity-100 focus-visible:opacity-100 hover:text-[#ff1365] hover:border-[#ff1365]/50 hover:bg-[#ff1365]/10";
+  "absolute top-1/2 right-2 -translate-y-1/2 p-1.5 bg-black/35 border border-white/15 rounded text-white/45 cursor-pointer opacity-0 transition-all duration-150 leading-[0] flex items-center justify-center group-hover:opacity-100 focus-visible:opacity-100 hover:text-pink hover:border-pink/50 hover:bg-pink/10";
 const COPIED_ADD = ["!text-[#4ade80]", "!border-[#4ade80]/50", "!opacity-100"];
 
 // Export the highlighting function so it can be called directly

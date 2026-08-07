@@ -2,16 +2,16 @@
 
 exports[`Index page > renders correctly 1`] = `
 <div
-  class="bg-[#14003c]"
+  class="bg-purple"
 >
   <section
-    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#14003c] pt-20 pb-10"
+    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-purple pt-20 pb-10"
   >
     <div
       class="absolute inset-0 z-0"
     >
       <div
-        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#ff1365] rounded-full blur-[120px] opacity-10 animate-pulse"
+        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-pink rounded-full blur-[120px] opacity-10 animate-pulse"
       />
       <div
         class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#7026b9] rounded-full blur-[120px] opacity-10 animate-pulse delay-1000"
@@ -47,7 +47,7 @@ exports[`Index page > renders correctly 1`] = `
             Text
           </span>
           <span
-            class="text-[#ff1365]"
+            class="text-pink"
           >
             .
           </span>
@@ -82,7 +82,7 @@ exports[`Index page > renders correctly 1`] = `
             </a>
           </div>
           <a
-            class="text-sm text-gray-400 hover:text-[#ff1365] transition-colors duration-300 flex items-center gap-2 group"
+            class="text-sm text-gray-400 hover:text-pink transition-colors duration-300 flex items-center gap-2 group"
             href="/temurin/releases"
           >
             Text
@@ -128,7 +128,7 @@ exports[`Index page > renders correctly 1`] = `
     </div>
   </section>
   <section
-    class="w-full bg-[#14003c] py-12 relative z-20"
+    class="w-full bg-purple py-12 relative z-20"
   >
     <div
       class="container mx-auto px-4"
@@ -137,7 +137,7 @@ exports[`Index page > renders correctly 1`] = `
         class="relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 md:p-12 shadow-2xl backdrop-blur-sm"
       >
         <div
-          class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-10"
+          class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-10"
         />
         <div
           class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-[#7026b9] rounded-full blur-[100px] opacity-10"
@@ -163,7 +163,7 @@ exports[`Index page > renders correctly 1`] = `
             class="flex-shrink-0 pt-2 md:pt-0"
           >
             <a
-              class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-300 bg-[#ff1365] rounded-full hover:bg-[#ff1365]/90 hover:scale-105 shadow-lg hover:shadow-[#ff1365]/25 group"
+              class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-300 bg-pink rounded-full hover:bg-pink/90 hover:scale-105 shadow-lg hover:shadow-pink/25 group"
               href="https://example.com"
               rel="noopener noreferrer"
               target="_blank"
@@ -474,7 +474,7 @@ exports[`Index page > renders correctly 1`] = `
     </div>
   </div>
   <section
-    class="py-24 bg-[#14003c] text-white"
+    class="py-24 bg-purple text-white"
   >
     <div
       class="container mx-auto px-4"
@@ -529,11 +529,11 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
           />
         </div>
         <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          class="md:col-span-1 bg-blue rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -565,11 +565,11 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
           />
         </div>
         <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          class="md:col-span-1 bg-blue rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -601,7 +601,7 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
           />
         </div>
         <div
@@ -637,11 +637,11 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
           />
         </div>
         <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          class="md:col-span-1 bg-blue rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -673,11 +673,11 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
           />
         </div>
         <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
+          class="md:col-span-1 bg-blue rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
         >
           <div
             class="relative z-10 h-full flex flex-col justify-between"
@@ -709,14 +709,14 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
           />
         </div>
       </div>
     </div>
   </section>
   <div
-    class="bg-[#0d002a] py-24 sm:py-28"
+    class="bg-blue py-24 sm:py-28"
   >
     <div
       class="mx-auto max-w-3xl md:max-w-7xl w-full px-6 xl:px-0"
