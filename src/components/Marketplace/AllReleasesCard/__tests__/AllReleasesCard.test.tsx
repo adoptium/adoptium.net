@@ -40,7 +40,7 @@ vi.mock("@/utils/fetchExtension", () => ({
 
 const mockRelease: MarketplaceRelease = {
   release_name: "jdk-21.0.3+9",
-  vendor: "eclipse",
+  vendor: "adoptium",
   binary: {
     architecture: "x64",
     distribution: "temurin",
@@ -48,16 +48,16 @@ const mockRelease: MarketplaceRelease = {
     jvm_impl: "hotspot",
     os: "linux",
     scm_ref: "abc123",
-    timestamp: new Date("2024-04-01T00:00:00Z"),
+    openjdk_scm_ref: "def456",
+    timestamp: "2024-04-01T00:00:00Z",
+    aqavit_results_link: "https://example.com/aqavit-results",
     package: {
-      link: new URL("https://example.com/download.tar.gz"),
+      link: "https://example.com/download.tar.gz",
       name: "OpenJDK21U-jdk_x64_linux.tar.gz",
       sha256sum: "sha256abc123",
-      sha256sum_link: new URL("https://example.com/sha256"),
-      signature_link: new URL("https://example.com/sig"),
-      size: 200000000,
+      sha256sum_link: "https://example.com/sha256",
+      signature_link: "https://example.com/sig",
     },
-    download_count: 1000,
   },
 };
 
