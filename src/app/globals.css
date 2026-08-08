@@ -228,6 +228,8 @@ body {
   & pre[class*="language-"] {
     padding: 1rem;
     border: 0;
+    background: #1e1e3f;
+    overflow-x: auto;
     font-size: 0.8rem !important;
   }
 
@@ -451,6 +453,19 @@ body {
 .doc-light .doc-content pre {
   background: #f3f4f6 !important;
   border-color: #d1d5db;
+
+  /* Light mode syntax highlighting palette (higher contrast) — sugar-high
+     reads these CSS variables via inline `color: var(--sh-*)` on its token
+     spans. */
+  --sh-class: #8250df;
+  --sh-identifier: #1f2328;
+  --sh-sign: #24292f;
+  --sh-string: #0a3069;
+  --sh-keyword: #cf222e;
+  --sh-comment: #57606a;
+  --sh-jsxliterals: #0a3069;
+  --sh-property: #0550ae;
+  --sh-entity: #6f42c1;
 }
 
 .doc-light .doc-content pre,
@@ -465,20 +480,6 @@ body {
   background: #f3f4f6 !important;
   box-shadow: none !important;
   text-shadow: none !important;
-}
-
-/* Light mode syntax highlighting palette (higher contrast) — sugar-high reads
-   these CSS variables via inline `color: var(--sh-*)` on its token spans. */
-.doc-light .doc-content pre {
-  --sh-class: #8250df;
-  --sh-identifier: #1f2328;
-  --sh-sign: #24292f;
-  --sh-string: #0a3069;
-  --sh-keyword: #cf222e;
-  --sh-comment: #57606a;
-  --sh-jsxliterals: #0a3069;
-  --sh-property: #0550ae;
-  --sh-entity: #6f42c1;
 }
 
 .prose pre {
