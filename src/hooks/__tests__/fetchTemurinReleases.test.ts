@@ -8,7 +8,7 @@ import { getVersionAsString } from "../index";
 let mockResponse = [createMockTemurinReleaseAPI(false, "jdk")];
 
 afterEach(() => {
-  vi.clearAllMocks();
+  vi.restoreAllMocks();
 });
 
 describe("loadLatestAssets", () => {

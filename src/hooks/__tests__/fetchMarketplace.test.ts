@@ -16,7 +16,7 @@ const selectedVendorIdentifiers = vendors.map(
 );
 
 afterEach(() => {
-  vi.clearAllMocks();
+  vi.restoreAllMocks();
 });
 
 describe("getAllPkgsForVersion", () => {
