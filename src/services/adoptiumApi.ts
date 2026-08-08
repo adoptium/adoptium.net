@@ -9,7 +9,7 @@
  *   npm run generate:api-types
  *
  * All hooks in src/hooks/ call these functions instead of making raw
- * axios/fetch calls directly.
+ * fetch calls directly.
  */
 import createClient from "openapi-fetch";
 import type { paths, components } from "@/types/adoptiumApiTypes";

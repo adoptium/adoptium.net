@@ -2,7 +2,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import axios from "axios";
 import type { Endpoints } from "@octokit/types";
 
 export type ContributorApiResponse =
@@ -78,13 +77,11 @@ async function getMaxContributors(
 
   // this call is used to know how many contributors there are in this repo
   // check the Link header to compute first and last
-  const linksHeaderValue = await axios
-    .get(repositoryURI)
+  const linksHeaderValue = await fetch(repositoryURI)
     .then(function (response) {
-      return response.headers.link;
+      return response.headers.get("link") ?? undefined;
     })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    .catch(function (error) {
+    .catch(function () {
       return undefined;
     });
 
@@ -109,13 +106,14 @@ async function getContributor(
 ): Promise<Contributor | null> {
   const repositoryURI = `https://api.github.com/repos/adoptium/${repository}/contributors?per_page=1&page=${randomPage}`;
 
-  const contributor = await axios
-    .get(repositoryURI)
+  const contributor = await fetch(repositoryURI)
     .then(function (response) {
-      return response.data[0] as ContributorApiResponse;
+      return response.json();
     })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    .catch(function (error) {
+    .then(function (data) {
+      return data[0] as ContributorApiResponse;
+    })
+    .catch(function () {
       return undefined;
     });
 

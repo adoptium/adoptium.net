@@ -8,23 +8,20 @@ import {
 import { createMockTemurinFeatureReleaseAPI } from "@/hooks/__fixtures__/hooks";
 import vendors from "@/data/marketplace.json";
 import getVendorIdentifier from "@/utils/vendors";
-import AxiosInstance from "axios";
-import MockAdapter from "axios-mock-adapter";
 import type { MarketplaceVendor } from "@/services/adoptiumApi";
 
-const mock = new MockAdapter(AxiosInstance);
 let mockResponse = [createMockTemurinFeatureReleaseAPI(false)];
 const selectedVendorIdentifiers = vendors.map(
   (vendor) => getVendorIdentifier(vendor) as MarketplaceVendor,
 );
 
 afterEach(() => {
-  vi.clearAllMocks();
+  vi.restoreAllMocks();
 });
 
 describe("getAllPkgsForVersion", () => {
   it("returns valid JSON", async () => {
-    mock.onGet().reply(200, mockResponse);
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({ ok: true, json: async () => mockResponse } as Response);
 
     renderHook(async () => {
       await getAllPkgsForVersion(
@@ -40,7 +37,7 @@ describe("getAllPkgsForVersion", () => {
   });
 
   it("returns valid JSON - Alpine Linux", async () => {
-    mock.onGet().reply(200, mockResponse);
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({ ok: true, json: async () => mockResponse } as Response);
 
     renderHook(async () => {
       await getAllPkgsForVersion(
@@ -58,7 +55,7 @@ describe("getAllPkgsForVersion", () => {
   it("returns valid JSON - installer", async () => {
     mockResponse = [createMockTemurinFeatureReleaseAPI(true)];
 
-    mock.onGet().reply(200, mockResponse);
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({ ok: true, json: async () => mockResponse } as Response);
 
     renderHook(async () => {
       await getAllPkgsForVersion(
@@ -92,7 +89,7 @@ describe("getAllPkgsForVersion", () => {
   });
 
   it("MarketplaceReleases to be null on error", async () => {
-    mock.onGet().reply(500);
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({ ok: false, status: 500, json: async () => [] } as Response);
 
     await renderHook(async () => {
       await getAllPkgsForVersion(

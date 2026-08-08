@@ -7,6 +7,12 @@ vi.mock("next-intl/server", () => ({
   getTranslations: vi.fn().mockResolvedValue((key: string) => key),
 }));
 
+// DocumentationHeader is an async Server Component; stub it so the page tree
+// renders synchronously under react-dom (which cannot render async children).
+vi.mock("@/components/Content/Documentation/Header", () => ({
+  default: () => <div data-testid="documentation-header" />,
+}));
+
 import Docs from "../page";
 
 describe("Docs page", () => {

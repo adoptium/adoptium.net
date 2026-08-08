@@ -3,23 +3,10 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, act, cleanup } from "@testing-library/react";
 import SyntaxHighlighter, { highlightCode, addCopyButtons } from "../index";
 
-// Mock Prism
-vi.mock("prismjs", () => ({
-  default: {
-    highlightElement: vi.fn(),
-  },
+// Mock sugar-high
+vi.mock("sugar-high", () => ({
+  highlight: vi.fn((code: string) => `<span class="sh__line">${code}</span>`),
 }));
-
-// Mock Prism language imports
-vi.mock("prismjs/components/prism-java", () => ({}));
-vi.mock("prismjs/components/prism-bash", () => ({}));
-vi.mock("prismjs/components/prism-powershell", () => ({}));
-vi.mock("prismjs/components/prism-json", () => ({}));
-vi.mock("prismjs/components/prism-batch", () => ({}));
-vi.mock("prismjs/components/prism-yaml", () => ({}));
-vi.mock("prismjs/components/prism-markup", () => ({}));
-vi.mock("prismjs/components/prism-docker", () => ({}));
-vi.mock("prism-themes/themes/prism-shades-of-purple.css", () => ({}));
 
 // Mock react-icons
 vi.mock("react-icons/fa", () => ({
@@ -55,7 +42,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  cleanup(); // unmounts React components, disconnecting MutationObserver
+  cleanup(); // unmounts React components
   document.body.innerHTML = "";
   vi.useRealTimers();
 });
@@ -65,23 +52,23 @@ afterEach(() => {
 // ---------------------------------------------------------------------------
 
 describe("highlightCode", () => {
-  it("calls Prism.highlightElement for each code block", async () => {
-    const Prism = (await import("prismjs")).default;
+  it("calls sugar-high highlight for each code block", async () => {
+    const { highlight } = await import("sugar-high");
     makeCodeBlock("bash");
     makeCodeBlock("java");
 
     highlightCode();
 
-    expect(Prism.highlightElement).toHaveBeenCalledTimes(2);
+    expect(highlight).toHaveBeenCalledTimes(2);
   });
 
   it("skips pre blocks with the no-highlight class", async () => {
-    const Prism = (await import("prismjs")).default;
+    const { highlight } = await import("sugar-high");
     makeCodeBlock(undefined, "no-highlight");
 
     highlightCode();
 
-    expect(Prism.highlightElement).not.toHaveBeenCalled();
+    expect(highlight).not.toHaveBeenCalled();
   });
 
   it("does nothing when there are no code blocks", () => {
@@ -90,13 +77,25 @@ describe("highlightCode", () => {
   });
 
   it("highlights blocks without no-highlight alongside those with it", async () => {
-    const Prism = (await import("prismjs")).default;
+    const { highlight } = await import("sugar-high");
     makeCodeBlock("bash");
     makeCodeBlock(undefined, "no-highlight");
 
     highlightCode();
 
-    expect(Prism.highlightElement).toHaveBeenCalledTimes(1);
+    expect(highlight).toHaveBeenCalledTimes(1);
+  });
+
+  it("injects the highlighted markup into the code block", async () => {
+    const { highlight } = await import("sugar-high");
+    (highlight as unknown as { mockClear: () => void }).mockClear?.();
+    const pre = makeCodeBlock("bash");
+    const code = pre.querySelector("code")!;
+    code.textContent = "echo hi";
+
+    highlightCode();
+
+    expect(code.querySelector(".sh__line")).not.toBeNull();
   });
 });
 
@@ -249,74 +248,15 @@ describe("SyntaxHighlighter component", () => {
   });
 
   it("calls highlightCode and addCopyButtons on mount", async () => {
-    const Prism = (await import("prismjs")).default;
+    const { highlight } = await import("sugar-high");
     makeCodeBlock("bash");
 
     await act(async () => {
       render(<SyntaxHighlighter />);
     });
 
-    expect(Prism.highlightElement).toHaveBeenCalled();
+    expect(highlight).toHaveBeenCalled();
     const button = document.body.querySelector("button");
     expect(button).not.toBeNull();
-  });
-
-  it("does not trigger highlight when a non-code element is mutated", async () => {
-    const Prism = (await import("prismjs")).default;
-
-    const { unmount } = render(<SyntaxHighlighter />);
-    vi.clearAllMocks();
-
-    // Add a plain div with no pre/code — shouldHighlight stays false
-    await act(async () => {
-      const div = document.createElement("div");
-      div.textContent = "plain text";
-      document.body.appendChild(div);
-      await Promise.resolve();
-      await Promise.resolve();
-    });
-
-    expect(Prism.highlightElement).not.toHaveBeenCalled();
-    unmount();
-  });
-
-  it("triggers highlight when a node containing a code block is mutated", async () => {
-    const Prism = (await import("prismjs")).default;
-
-    const { unmount } = render(<SyntaxHighlighter />);
-    vi.clearAllMocks();
-
-    // Add a wrapper div that *contains* a pre>code (querySelector branch)
-    await act(async () => {
-      const wrapper = document.createElement("div");
-      const pre = document.createElement("pre");
-      const code = document.createElement("code");
-      code.textContent = "hello";
-      pre.appendChild(code);
-      wrapper.appendChild(pre);
-      document.body.appendChild(wrapper);
-      await Promise.resolve();
-      await Promise.resolve();
-    });
-
-    expect(Prism.highlightElement).toHaveBeenCalled();
-    unmount();
-  });
-
-  it("reacts to dynamically added code blocks via MutationObserver", async () => {
-    const Prism = (await import("prismjs")).default;
-
-    const { unmount } = render(<SyntaxHighlighter />);
-    vi.clearAllMocks();
-
-    // Add a code block — MutationObserver fires asynchronously as a microtask
-    makeCodeBlock("java");
-    await act(async () => {
-      await Promise.resolve();
-      await Promise.resolve(); // two ticks to ensure observer callback + highlightCode run
-    });
-
-    expect(Prism.highlightElement).toHaveBeenCalled();
-    unmount();
   });
 });

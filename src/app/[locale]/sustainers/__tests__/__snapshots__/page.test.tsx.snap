@@ -127,7 +127,7 @@ exports[`Sustainers page > renders correctly 1`] = `
           Eclipse Temurin Sustainer Program
         </h2>
         <p
-          class="text-center text-[#c4bfce] px-4 py-6 max-w-[900px] mx-auto text-lg leading-relaxed"
+          class="text-center text-grey px-4 py-6 max-w-[900px] mx-auto text-lg leading-relaxed"
         >
           The Eclipse Temurin Sustainer Program invites enterprises to invest in the long-term sustainment of Eclipse Temurin and other Adoptium projects. By becoming a Sustainer, your company ensures that Temurin remains the industry's leading community-driven open source JDK for mission-critical Java workloads. This program supports the vendor-neutral development of runtimes and development kits, infrastructure and tools, quality assurance, enhanced security practices, community engagement, and more.
         </p>
@@ -150,7 +150,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             />
           </div>
           <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
+            class="text-center text-grey text-base leading-relaxed"
           >
             Runtime binaries High performance Cross-platform Open source licenses (GPLv2 + CE) Spec compliant
           </p>
@@ -170,7 +170,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             />
           </div>
           <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
+            class="text-center text-grey text-base leading-relaxed"
           >
             Verification program, running a large pool of tests Assuring security durability, scalability, and performance requirements
           </p>
@@ -190,7 +190,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             />
           </div>
           <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
+            class="text-center text-grey text-base leading-relaxed"
           >
             This migration toolkit helps organizations with the migration from Java 8 to 11+
           </p>
@@ -210,7 +210,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             />
           </div>
           <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
+            class="text-center text-grey text-base leading-relaxed"
           >
             Low-overhead monitoring and management of running Java applications
           </p>
@@ -579,7 +579,7 @@ exports[`Sustainers page > renders correctly 1`] = `
       </div>
     </div>
     <p
-      class="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
+      class="text-[16px] text-grey p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
     >
       Join the Eclipse Temurin Sustainer Program and play a crucial role in maintaining the vitality and reliability of the world's fastest-growing open source Java SE runtime. Your support accelerates our initiatives, driving greater impact and innovation within the Java ecosystem.
     </p>
@@ -613,7 +613,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             The average company* using Eclipse Temurin saves more than $1.6M annually. Isn't it time you invest in sustaining your savings?
           </p>
           <p
-            class="text-xs text-[#c4bfce] my-5"
+            class="text-xs text-grey my-5"
           >
             *Self-reported number of employees, n = 211
           </p>
@@ -622,7 +622,7 @@ exports[`Sustainers page > renders correctly 1`] = `
             data-project="temurin-calculator"
           />
           <p
-            class="text-[#c4bfce] max-w-[900px] text-center mt-8 leading-relaxed"
+            class="text-grey max-w-[900px] text-center mt-8 leading-relaxed"
           >
             With the recent increase in licensing costs for paid Java SE options, we've seen Temurin downloads surge—from over 75M in 2023 to over 250M by the end of 2023, and doubling again to more than 500M by the end of 2024. This growth strongly indicates a significant transition away from paid Java options toward open-source solutions like Temurin. If your organization has made this migration, you've likely experienced significant cost savings. Dedicate a portion of your savings to Temurin to invest in your corporate software supply chain by ensuring Temurin's long-term viability, enhance security, and accelerate faster releases for the Java community.
           </p>
@@ -954,7 +954,7 @@ exports[`Sustainers page > renders correctly 1`] = `
                           Diamond
                         </h2>
                         <p
-                          class="text-3xl text-[#ff1365] font-mono"
+                          class="text-3xl text-pink font-mono"
                         >
                           €100k/year
                         </p>
@@ -980,7 +980,7 @@ exports[`Sustainers page > renders correctly 1`] = `
                           Platinum
                         </h2>
                         <p
-                          class="text-3xl text-[#ff1365] font-mono"
+                          class="text-3xl text-pink font-mono"
                         >
                           €75k/year
                         </p>
@@ -1006,7 +1006,7 @@ exports[`Sustainers page > renders correctly 1`] = `
                           Gold
                         </h2>
                         <p
-                          class="text-3xl text-[#ff1365] font-mono"
+                          class="text-3xl text-pink font-mono"
                         >
                           €50k/year
                         </p>
@@ -1032,7 +1032,7 @@ exports[`Sustainers page > renders correctly 1`] = `
                           Silver
                         </h2>
                         <p
-                          class="text-3xl text-[#ff1365] font-mono"
+                          class="text-3xl text-pink font-mono"
                         >
                           €30k/year
                         </p>
@@ -1058,7 +1058,7 @@ exports[`Sustainers page > renders correctly 1`] = `
                           Bronze
                         </h2>
                         <p
-                          class="text-3xl text-[#ff1365] font-mono"
+                          class="text-3xl text-pink font-mono"
                         >
                           €10k/year
                         </p>
