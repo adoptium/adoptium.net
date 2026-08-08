@@ -31,6 +31,18 @@
   --color-primary: #7026b9;
   --color-code-bg: rgb(110, 118, 129, 40%);
   --color-code: white;
+
+  /* sugar-high syntax highlighting palette (dark, default) — replaces the
+     former prism-themes "shades of purple" theme after the move off PrismJS */
+  --sh-class: #fad000;
+  --sh-identifier: #e6e6e6;
+  --sh-sign: rgb(255, 255, 255, 80%);
+  --sh-string: #a5ff90;
+  --sh-keyword: #ff9d00;
+  --sh-comment: #8b7fa8;
+  --sh-jsxliterals: #ff628c;
+  --sh-property: #9effff;
+  --sh-entity: #9effff;
 }
 
 /* Global styles */
@@ -43,7 +55,7 @@ section[id] {
   scroll-margin-top: 4rem;
 }
 
-/* Inline code blocks (not processed by Prism) */
+/* Inline code blocks (not processed by the syntax highlighter) */
 :not(pre) > code:not(.install-row-cmd) {
   background: var(--color-code-bg);
   color: var(--color-code);
@@ -455,125 +467,18 @@ body {
   text-shadow: none !important;
 }
 
-/* Light mode token color overrides (higher contrast) */
-.doc-light .doc-content pre .token.comment,
-.doc-light .doc-content pre .token.prolog,
-.doc-light .doc-content pre .token.doctype,
-.doc-light .doc-content pre .token.cdata,
-.doc-light .doc-content pre .hljs-comment,
-.doc-light .doc-content pre .hljs-quote {
-  color: #57606a !important;
-}
-
-.doc-light .doc-content pre .token.keyword,
-.doc-light .doc-content pre .token.boolean,
-.doc-light .doc-content pre .token.operator,
-.doc-light .doc-content pre .hljs-keyword,
-.doc-light .doc-content pre .hljs-selector-tag,
-.doc-light .doc-content pre .hljs-literal,
-.doc-light .doc-content pre .hljs-type {
-  color: #cf222e !important;
-}
-
-.doc-light .doc-content pre .token.parameter,
-.doc-light .doc-content pre .token.parameter.variable {
-  color: #1f2328 !important;
-}
-
-.doc-light .doc-content pre .token.string,
-.doc-light .doc-content pre .token.char,
-.doc-light .doc-content pre .token.builtin,
-.doc-light .doc-content pre .hljs-string,
-.doc-light .doc-content pre .hljs-doctag {
-  color: #1f2328 !important;
-}
-
-.doc-light .doc-content pre .token.function,
-.doc-light .doc-content pre .token.class-name,
-.doc-light .doc-content pre .hljs-title,
-.doc-light .doc-content pre .hljs-function,
-.doc-light .doc-content pre .hljs-name {
-  color: #8250df !important;
-}
-
-.doc-light .doc-content pre .token.number,
-.doc-light .doc-content pre .token.constant,
-.doc-light .doc-content pre .token.symbol,
-.doc-light .doc-content pre .hljs-number,
-.doc-light .doc-content pre .hljs-attribute {
-  color: #0550ae !important;
-}
-
-.doc-light .doc-content pre .token.regex,
-.doc-light .doc-content pre .token.important,
-.doc-light .doc-content pre .token.variable,
-.doc-light .doc-content pre .hljs-variable,
-.doc-light .doc-content pre .hljs-params,
-.doc-light .doc-content pre .hljs-regexp {
-  color: #bc4c00 !important;
-}
-
-.doc-light .doc-content pre .token.punctuation {
-  color: #24292f !important;
-}
-
-.doc-light .doc-content pre .token.property,
-.doc-light .doc-content pre .token.tag,
-.doc-light .doc-content pre .token.boolean,
-.doc-light .doc-content pre .token.number,
-.doc-light .doc-content pre .token.constant,
-.doc-light .doc-content pre .token.symbol,
-.doc-light .doc-content pre .token.deleted {
-  color: #005cc5;
-}
-
-.doc-light .doc-content pre .token.selector,
-.doc-light .doc-content pre .token.attr-name,
-.doc-light .doc-content pre .token.string,
-.doc-light .doc-content pre .token.char,
-.doc-light .doc-content pre .token.builtin,
-.doc-light .doc-content pre .token.inserted {
-  color: #032f62;
-}
-
-.doc-light .doc-content pre .token.operator,
-.doc-light .doc-content pre .token.entity,
-.doc-light .doc-content pre .token.url,
-.doc-light .doc-content pre .token.variable {
-  color: #d73a49;
-}
-
-.doc-light .doc-content pre .token.atrule,
-.doc-light .doc-content pre .token.attr-value,
-.doc-light .doc-content pre .token.function,
-.doc-light .doc-content pre .token.class-name {
-  color: #6f42c1;
-}
-
-.doc-light .doc-content pre .token.keyword {
-  color: #d73a49;
-}
-
-.doc-light .doc-content pre .token.regex,
-.doc-light .doc-content pre .token.important {
-  color: #e36209;
-}
-
-.doc-light .doc-content pre .token.property,
-.doc-light .doc-content pre .token.tag,
-.doc-light .doc-content pre .token.boolean,
-.doc-light .doc-content pre .token.number,
-.doc-light .doc-content pre .token.constant,
-.doc-light .doc-content pre .token.symbol {
-  color: #005cc5;
-}
-
-.doc-light .doc-content pre .token.selector,
-.doc-light .doc-content pre .token.attr-name,
-.doc-light .doc-content pre .token.string,
-.doc-light .doc-content pre .token.char,
-.doc-light .doc-content pre .token.builtin {
-  color: #032f62;
+/* Light mode syntax highlighting palette (higher contrast) — sugar-high reads
+   these CSS variables via inline `color: var(--sh-*)` on its token spans. */
+.doc-light .doc-content pre {
+  --sh-class: #8250df;
+  --sh-identifier: #1f2328;
+  --sh-sign: #24292f;
+  --sh-string: #0a3069;
+  --sh-keyword: #cf222e;
+  --sh-comment: #57606a;
+  --sh-jsxliterals: #0a3069;
+  --sh-property: #0550ae;
+  --sh-entity: #6f42c1;
 }
 
 .prose pre {

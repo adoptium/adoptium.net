@@ -2,22 +2,9 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Prism from "prismjs";
+import { highlight } from "sugar-high";
 import { renderToStaticMarkup } from "react-dom/server";
 import { FaClipboard, FaCheck } from "react-icons/fa";
-
-// Load specific languages as needed from Prism's components directory
-import "prismjs/components/prism-java";
-import "prismjs/components/prism-bash";
-import "prismjs/components/prism-powershell";
-import "prismjs/components/prism-json";
-import "prismjs/components/prism-batch";
-import "prismjs/components/prism-yaml";
-import "prismjs/components/prism-markup";
-import "prismjs/components/prism-docker";
-
-// Import the Shades of Purple theme
-import "prism-themes/themes/prism-shades-of-purple.css";
 
 const COPY_ICON = renderToStaticMarkup(<FaClipboard />);
 const CHECK_ICON = renderToStaticMarkup(<FaCheck />);
@@ -27,6 +14,13 @@ const BUTTON_CLASSES =
   "absolute top-1/2 right-2 -translate-y-1/2 p-1.5 bg-black/35 border border-white/15 rounded text-white/45 cursor-pointer opacity-0 transition-all duration-150 leading-[0] flex items-center justify-center group-hover:opacity-100 focus-visible:opacity-100 hover:text-pink hover:border-pink/50 hover:bg-pink/10";
 const COPIED_ADD = ["!text-[#4ade80]", "!border-[#4ade80]/50", "!opacity-100"];
 
+// Highlight a single code block with sugar-high. The raw source is read from
+// textContent so re-highlighting an already-highlighted block is idempotent.
+function highlightElement(codeBlock: Element) {
+  const code = codeBlock.textContent || "";
+  codeBlock.innerHTML = highlight(code);
+}
+
 // Export the highlighting function so it can be called directly
 export function highlightCode() {
   const codeBlocks = document.querySelectorAll("pre code");
@@ -35,9 +29,7 @@ export function highlightCode() {
     if (codeBlock.parentElement?.classList.contains("no-highlight")) {
       return;
     }
-    if (typeof codeBlock === "object") {
-      Prism.highlightElement(codeBlock);
-    }
+    highlightElement(codeBlock);
   });
 }
 
@@ -85,51 +77,14 @@ export function addCopyButtons() {
   });
 }
 
-// Client component that enhances code blocks with PrismJS
+// Client component that enhances code blocks with sugar-high highlighting.
+// AsciiDoc content is server-rendered and present on mount, so a single pass
+// is sufficient — no MutationObserver required.
 export default function SyntaxHighlighter() {
   useEffect(() => {
-    // Run highlighting and copy buttons on every render, just like in the Gatsby implementation
     highlightCode();
     addCopyButtons();
-
-    // Set up MutationObserver to catch dynamically added code blocks
-    const observer = new MutationObserver((mutations) => {
-      let shouldHighlight = false;
-
-      mutations.forEach((mutation) => {
-        if (mutation.type === "childList" && mutation.addedNodes.length) {
-          // Check if any added nodes contain code blocks
-          mutation.addedNodes.forEach((node) => {
-            // Make sure we're dealing with an Element node before accessing Element-specific properties
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              // TypeScript needs us to cast to Element to access tagName
-              const element = node as Element;
-              if (
-                element.tagName === "PRE" ||
-                element.tagName === "CODE" ||
-                element.querySelector("pre, code")
-              ) {
-                shouldHighlight = true;
-              }
-            }
-          });
-        }
-      });
-
-      if (shouldHighlight) {
-        highlightCode();
-        addCopyButtons();
-      }
-    });
-
-    // Start observing the document with the configured parameters
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    return () => observer.disconnect();
-  }); // No dependency array means this runs on every render
+  }, []);
 
   return null; // This component doesn't render anything
 }
