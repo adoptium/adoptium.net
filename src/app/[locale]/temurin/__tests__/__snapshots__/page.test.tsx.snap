@@ -3,13 +3,13 @@
 exports[`TemurinIndex page > renders correctly 1`] = `
 <div>
   <section
-    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#14003c] pt-20 pb-10"
+    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-purple pt-20 pb-10"
   >
     <div
       class="absolute inset-0 z-0"
     >
       <div
-        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#ff1365] rounded-full blur-[120px] opacity-10 animate-pulse"
+        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-pink rounded-full blur-[120px] opacity-10 animate-pulse"
       />
       <div
         class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#7026b9] rounded-full blur-[120px] opacity-10 animate-pulse delay-1000"
@@ -45,7 +45,7 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             Text
           </span>
           <span
-            class="text-[#ff1365]"
+            class="text-pink"
           >
             .
           </span>
@@ -80,7 +80,7 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             </a>
           </div>
           <a
-            class="text-sm text-gray-400 hover:text-[#ff1365] transition-colors duration-300 flex items-center gap-2 group"
+            class="text-sm text-gray-400 hover:text-pink transition-colors duration-300 flex items-center gap-2 group"
             href="/temurin/releases"
           >
             Text
@@ -105,20 +105,23 @@ exports[`TemurinIndex page > renders correctly 1`] = `
             Text
           </h2>
           <div
-            class="mt-6"
-            data-testid="react-slick-mock"
+            data-testid="Swiper"
           >
             <div
-              class="!flex items-center justify-center h-[100px] px-4"
+              data-testid="SwiperSlide"
             >
-              <img
-                alt="Mock Adopter"
-                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
-                height="100"
-                src="/images/adopters/mock-adopter-white.svg"
-                style="padding: 1em;"
-                width="200"
-              />
+              <div
+                class="flex items-center justify-center h-[100px] px-4"
+              >
+                <img
+                  alt="Mock Adopter"
+                  class="w-auto h-auto object-contain mx-auto max-h-[100px]"
+                  height="100"
+                  src="/images/adopters/mock-adopter-white.svg"
+                  style="padding: 1em;"
+                  width="200"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -134,20 +137,23 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       Text
     </h2>
     <div
-      class="mt-6"
-      data-testid="react-slick-mock"
+      data-testid="Swiper"
     >
       <div
-        class="!flex items-center justify-center h-[100px] px-4"
+        data-testid="SwiperSlide"
       >
-        <img
-          alt="Mock Adopter"
-          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
-          height="100"
-          src="/images/adopters/mock-adopter-white.svg"
-          style="padding: 1em;"
-          width="200"
-        />
+        <div
+          class="flex items-center justify-center h-[100px] px-4"
+        >
+          <img
+            alt="Mock Adopter"
+            class="w-auto h-auto object-contain mx-auto max-h-[100px]"
+            height="100"
+            src="/images/adopters/mock-adopter-white.svg"
+            style="padding: 1em;"
+            width="200"
+          />
+        </div>
       </div>
     </div>
   </div>

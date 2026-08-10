@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Prism from "prismjs";
+import { highlight } from "sugar-high";
 
 /**
  * Strip `sudo ` from the start of lines and `| sudo tee` → `| tee`.
@@ -154,8 +154,7 @@ const SudoToggle: React.FC = () => {
         const rootTab = makeTab("root", false);
 
         const applyText = (text: string) => {
-          (codeEl as HTMLElement).textContent = text;
-          Prism.highlightElement(codeEl);
+          (codeEl as HTMLElement).innerHTML = highlight(text);
         };
 
         tabBar.appendChild(userTab);
@@ -203,7 +202,7 @@ const SudoToggle: React.FC = () => {
       });
     };
 
-    // Run after Prism has had time to highlight
+    // Run after the code blocks have been highlighted on mount
     const timer = setTimeout(processBlocks, 300);
     return () => clearTimeout(timer);
   }, []);

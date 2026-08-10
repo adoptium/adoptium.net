@@ -10,6 +10,12 @@ vi.mock("next/navigation", () => ({
   notFound: vi.fn(),
 }));
 
+// AuthorList is an async Server Component; stub it so the page tree renders
+// synchronously under react-dom (which cannot render async children).
+vi.mock("@/components/Content/Asciidoc/AuthorList", () => ({
+  default: () => <div data-testid="author-list" />,
+}));
+
 vi.mock("next-intl/server", () => ({
   getTranslations: vi.fn().mockResolvedValue({
     rich: vi.fn(() => <div>Translated warning</div>),

@@ -356,32 +356,8 @@ exports[`AsciidocPage > renders correctly for installation page 1`] = `
             </a>
           </div>
           <div
-            class="mt-10 flex-col justify-center items-start gap-4"
-          >
-            <div
-              class="doc-authors-title self-stretch text-white my-5 text-lg font-semibold leading-normal"
-            >
-              Text
-            </div>
-            <div
-              class="flex flex-wrap justify-start items-center space-x-[-12px]"
-            >
-              <a
-                aria-label="Author"
-                href="https://github.com/Author"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  alt="Author"
-                  class="doc-author-avatar rounded-full border-solid border-4 border-purple mb-6"
-                  height="55"
-                  src="https://github.com/Author.png?size=55"
-                  width="55"
-                />
-              </a>
-            </div>
-          </div>
+            data-testid="author-list"
+          />
           <div
             class="doc-community-banner inline-flex items-center gap-3 flex-wrap pt-4"
           >
@@ -660,32 +636,8 @@ exports[`AsciidocPage > renders correctly with English locale 1`] = `
             </a>
           </div>
           <div
-            class="mt-10 flex-col justify-center items-start gap-4"
-          >
-            <div
-              class="doc-authors-title self-stretch text-white my-5 text-lg font-semibold leading-normal"
-            >
-              Text
-            </div>
-            <div
-              class="flex flex-wrap justify-start items-center space-x-[-12px]"
-            >
-              <a
-                aria-label="Author"
-                href="https://github.com/Author"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  alt="Author"
-                  class="doc-author-avatar rounded-full border-solid border-4 border-purple mb-6"
-                  height="55"
-                  src="https://github.com/Author.png?size=55"
-                  width="55"
-                />
-              </a>
-            </div>
-          </div>
+            data-testid="author-list"
+          />
           <div
             class="doc-community-banner inline-flex items-center gap-3 flex-wrap pt-4"
           >
@@ -999,32 +951,8 @@ exports[`AsciidocPage > renders correctly with non-English locale 1`] = `
             </a>
           </div>
           <div
-            class="mt-10 flex-col justify-center items-start gap-4"
-          >
-            <div
-              class="doc-authors-title self-stretch text-white my-5 text-lg font-semibold leading-normal"
-            >
-              Text
-            </div>
-            <div
-              class="flex flex-wrap justify-start items-center space-x-[-12px]"
-            >
-              <a
-                aria-label="Author"
-                href="https://github.com/Author"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  alt="Author"
-                  class="doc-author-avatar rounded-full border-solid border-4 border-purple mb-6"
-                  height="55"
-                  src="https://github.com/Author.png?size=55"
-                  width="55"
-                />
-              </a>
-            </div>
-          </div>
+            data-testid="author-list"
+          />
           <div
             class="doc-community-banner inline-flex items-center gap-3 flex-wrap pt-4"
           >

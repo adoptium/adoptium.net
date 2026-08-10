@@ -3,13 +3,8 @@ import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
 import { describe, it, expect, afterEach, vi } from "vitest";
 
-vi.mock("next-intl", () => ({
-  useTranslations: () => {
-    const t = (key: string) => key;
-    t.rich = (key: string) => key;
-    return t;
-  },
-  useLocale: () => "en",
+vi.mock("next-intl/server", () => ({
+  getTranslations: vi.fn().mockResolvedValue((key: string) => key),
 }));
 
 import DocumentationHeader from "../index";
@@ -29,26 +24,26 @@ describe("DocumentationHeader", () => {
     cleanup();
   });
 
-  it("renders the Documentation title and subtitle", () => {
-    render(<DocumentationHeader />);
+  it("renders the Documentation title and subtitle", async () => {
+    render(await DocumentationHeader());
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
       "title",
     );
     expect(screen.getByText("subtitle")).toBeInTheDocument();
   });
 
-  it("renders the DocumentationSearch component", () => {
-    render(<DocumentationHeader />);
+  it("renders the DocumentationSearch component", async () => {
+    render(await DocumentationHeader());
     expect(screen.getByTestId("doc-search")).toBeInTheDocument();
   });
 
-  it("renders the DocThemeToggle component", () => {
-    render(<DocumentationHeader />);
+  it("renders the DocThemeToggle component", async () => {
+    render(await DocumentationHeader());
     expect(screen.getByTestId("doc-theme-toggle")).toBeInTheDocument();
   });
 
-  it("renders the breadcrumb navigation", () => {
-    render(<DocumentationHeader />);
+  it("renders the breadcrumb navigation", async () => {
+    render(await DocumentationHeader());
     expect(screen.getByText("home")).toBeInTheDocument();
     expect(screen.getByLabelText("Breadcrumb")).toBeInTheDocument();
   });

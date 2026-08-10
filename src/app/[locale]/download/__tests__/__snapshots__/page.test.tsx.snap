@@ -2,7 +2,7 @@
 
 exports[`Download page > renders correctly 1`] = `
 <div
-  class="bg-[#14003c] min-h-screen text-white font-sans flex flex-col items-center"
+  class="bg-purple min-h-screen text-white font-sans flex flex-col items-center"
 >
   <div
     class="w-full max-w-5xl px-6 py-12 md:py-16 text-center"
@@ -32,13 +32,13 @@ exports[`Download page > renders correctly 1`] = `
        
       <br />
       <span
-        class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff1365] to-[#ff6b9d]"
+        class="text-transparent bg-clip-text bg-gradient-to-r from-pink to-[#ff6b9d]"
       >
         Eclipse Temurin
       </span>
     </h1>
     <p
-      class="text-lg md:text-xl text-[#c4bfce] max-w-2xl mx-auto mb-8 leading-relaxed"
+      class="text-lg md:text-xl text-grey max-w-2xl mx-auto mb-8 leading-relaxed"
     >
       Text
       <br
@@ -49,7 +49,7 @@ exports[`Download page > renders correctly 1`] = `
       >
         Text
         <a
-          class="text-[#ff1365] hover:text-white underline decoration-[#ff1365] underline-offset-4 transition-colors"
+          class="text-pink hover:text-white underline decoration-pink underline-offset-4 transition-colors"
           href="https://github.com/adoptium/temurin-1-binaries/download"
         >
           Text
@@ -62,10 +62,10 @@ exports[`Download page > renders correctly 1`] = `
     class="w-full max-w-6xl px-4 md:px-6 mb-20 relative z-10"
   >
     <div
-      class="relative overflow-hidden rounded-[2.5rem] bg-[#0d002a] border border-[#ff1365]/30 shadow-[0_0_80px_-20px_rgba(255,19,101,0.4)] group hover:shadow-[0_0_100px_-10px_rgba(255,19,101,0.5)] transition-all duration-500"
+      class="relative overflow-hidden rounded-[2.5rem] bg-blue border border-pink/30 shadow-[0_0_80px_-20px_rgba(255,19,101,0.4)] group hover:shadow-[0_0_100px_-10px_rgba(255,19,101,0.5)] transition-all duration-500"
     >
       <div
-        class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-[#ff1365] opacity-[0.07] blur-[100px] rounded-full pointer-events-none"
+        class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-pink opacity-[0.07] blur-[100px] rounded-full pointer-events-none"
       />
       <div
         class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-purple-600 opacity-[0.07] blur-[100px] rounded-full pointer-events-none"
@@ -77,7 +77,7 @@ exports[`Download page > renders correctly 1`] = `
           class="flex-1 text-center lg:text-left"
         >
           <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff1365]/10 border border-[#ff1365]/20 text-[#ff1365] text-sm font-bold uppercase tracking-wider mb-6"
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink/10 border border-pink/20 text-pink text-sm font-bold uppercase tracking-wider mb-6"
           >
             <svg
               class="text-sm"
@@ -101,20 +101,20 @@ exports[`Download page > renders correctly 1`] = `
             Text
             <br />
             <span
-              class="text-[#c4bfce]"
+              class="text-grey"
             >
               Text
             </span>
           </h2>
           <p
-            class="text-xl md:text-2xl font-bold text-[#ff1365] mb-6 italic"
+            class="text-xl md:text-2xl font-bold text-pink mb-6 italic"
           >
             “
             Text
             ”
           </p>
           <p
-            class="text-[#c4bfce] text-lg leading-relaxed mb-8 max-w-xl"
+            class="text-grey text-lg leading-relaxed mb-8 max-w-xl"
           >
             Text
           </p>
@@ -122,7 +122,7 @@ exports[`Download page > renders correctly 1`] = `
             class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start"
           >
             <a
-              class="inline-flex items-center justify-center gap-3 bg-[#ff1365] hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-[#ff1365]/20"
+              class="inline-flex items-center justify-center gap-3 bg-pink hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-pink/20"
               href="https://github.com/sponsors/adoptium"
               rel="noopener noreferrer"
               target="_blank"
@@ -144,7 +144,7 @@ exports[`Download page > renders correctly 1`] = `
               Text
             </a>
             <a
-              class="inline-flex items-center justify-center gap-3 bg-[#ff1365] hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-[#ff1365]/20"
+              class="inline-flex items-center justify-center gap-3 bg-pink hover:bg-[#ff4f8b] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-lg shadow-pink/20"
               href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=thank-you-page"
               rel="noopener noreferrer"
               target="_blank"
@@ -188,7 +188,7 @@ exports[`Download page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="w-full lg:w-[400px] bg-[#14003c]/50 rounded-2xl p-8 border border-white/5 backdrop-blur-sm lg:self-stretch flex flex-col justify-center"
+          class="w-full lg:w-[400px] bg-purple/50 rounded-2xl p-8 border border-white/5 backdrop-blur-sm lg:self-stretch flex flex-col justify-center"
         >
           <h3
             class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4"
@@ -202,10 +202,10 @@ exports[`Download page > renders correctly 1`] = `
               class="flex items-start gap-4"
             >
               <div
-                class="mt-1 w-6 h-6 rounded-full bg-[#ff1365]/20 flex items-center justify-center shrink-0"
+                class="mt-1 w-6 h-6 rounded-full bg-pink/20 flex items-center justify-center shrink-0"
               >
                 <div
-                  class="w-2 h-2 rounded-full bg-[#ff1365]"
+                  class="w-2 h-2 rounded-full bg-pink"
                 />
               </div>
               <div>
@@ -215,7 +215,7 @@ exports[`Download page > renders correctly 1`] = `
                   Text
                 </strong>
                 <span
-                  class="text-sm text-[#c4bfce]"
+                  class="text-sm text-grey"
                 >
                   Text
                 </span>
@@ -225,10 +225,10 @@ exports[`Download page > renders correctly 1`] = `
               class="flex items-start gap-4"
             >
               <div
-                class="mt-1 w-6 h-6 rounded-full bg-[#ff1365]/20 flex items-center justify-center shrink-0"
+                class="mt-1 w-6 h-6 rounded-full bg-pink/20 flex items-center justify-center shrink-0"
               >
                 <div
-                  class="w-2 h-2 rounded-full bg-[#ff1365]"
+                  class="w-2 h-2 rounded-full bg-pink"
                 />
               </div>
               <div>
@@ -238,7 +238,7 @@ exports[`Download page > renders correctly 1`] = `
                   Text
                 </strong>
                 <span
-                  class="text-sm text-[#c4bfce]"
+                  class="text-sm text-grey"
                 >
                   Text
                 </span>
@@ -248,10 +248,10 @@ exports[`Download page > renders correctly 1`] = `
               class="flex items-start gap-4"
             >
               <div
-                class="mt-1 w-6 h-6 rounded-full bg-[#ff1365]/20 flex items-center justify-center shrink-0"
+                class="mt-1 w-6 h-6 rounded-full bg-pink/20 flex items-center justify-center shrink-0"
               >
                 <div
-                  class="w-2 h-2 rounded-full bg-[#ff1365]"
+                  class="w-2 h-2 rounded-full bg-pink"
                 />
               </div>
               <div>
@@ -261,7 +261,7 @@ exports[`Download page > renders correctly 1`] = `
                   Text
                 </strong>
                 <span
-                  class="text-sm text-[#c4bfce]"
+                  class="text-sm text-grey"
                 >
                   Text
                 </span>
@@ -273,7 +273,7 @@ exports[`Download page > renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="w-full bg-[#0d002a] border-t border-white/5 py-16"
+    class="w-full bg-blue border-t border-white/5 py-16"
   >
     <div
       class="max-w-5xl mx-auto px-6 text-center"
@@ -287,14 +287,14 @@ exports[`Download page > renders correctly 1`] = `
         class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
       >
         <a
-          class="group p-6 bg-[#14003c] rounded-2xl border border-white/5 hover:border-[#ff1365]/50 transition-all text-left"
+          class="group p-6 bg-purple rounded-2xl border border-white/5 hover:border-pink/50 transition-all text-left"
           href="/installation"
         >
           <div
             class="flex items-center gap-4 mb-3"
           >
             <div
-              class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-300 group-hover:text-[#ff1365] transition-colors"
+              class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-300 group-hover:text-pink transition-colors"
             >
               <svg
                 fill="currentColor"
@@ -317,20 +317,20 @@ exports[`Download page > renders correctly 1`] = `
             </h4>
           </div>
           <p
-            class="text-[#c4bfce] text-sm"
+            class="text-grey text-sm"
           >
             Text
           </p>
         </a>
         <a
-          class="group p-6 bg-[#14003c] rounded-2xl border border-white/5 hover:border-[#ff1365]/50 transition-all text-left"
+          class="group p-6 bg-purple rounded-2xl border border-white/5 hover:border-pink/50 transition-all text-left"
           href="/docs"
         >
           <div
             class="flex items-center gap-4 mb-3"
           >
             <div
-              class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-300 group-hover:text-[#ff1365] transition-colors"
+              class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-300 group-hover:text-pink transition-colors"
             >
               <svg
                 fill="currentColor"
@@ -353,7 +353,7 @@ exports[`Download page > renders correctly 1`] = `
             </h4>
           </div>
           <p
-            class="text-[#c4bfce] text-sm"
+            class="text-grey text-sm"
           >
             Text
           </p>

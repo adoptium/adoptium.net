@@ -20,7 +20,7 @@ export default async function HomePage() {
   const availableReleases = await fetchAvailableReleases();
   const latestLTS = availableReleases.most_recent_lts ?? 25;
   return (
-    <div className="bg-[#14003c]">
+    <div className="bg-purple">
       <HeroSection latestLTS={latestLTS} />
       <BannerMiddle />
       <PowerOfTemurin />

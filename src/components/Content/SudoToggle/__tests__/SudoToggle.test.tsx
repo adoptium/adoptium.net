@@ -4,11 +4,9 @@ import { render, cleanup, act, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import SudoToggle, { stripSudo, containsSudo } from "../index";
 
-// Mock Prism so highlightElement is a no-op
-vi.mock("prismjs", () => ({
-  default: {
-    highlightElement: vi.fn(),
-  },
+// Mock sugar-high so highlight is a no-op returning the input wrapped in a span
+vi.mock("sugar-high", () => ({
+  highlight: vi.fn((code: string) => `<span class="sh__line">${code}</span>`),
 }));
 
 // ─── Unit tests for pure functions ───
