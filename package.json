@@ -79,7 +79,7 @@
     "@vitest/coverage-v8": "^4.1.10",
     "axios-mock-adapter": "^2.1.0",
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint": "^10.8.0",
+    "eslint": "^10.8.1",
     "eslint-config-next": "16.3.0",
     "jsdom": "^30.0.1",
     "jsdom-testing-mocks": "^1.16.0",
