@@ -1,5 +1,5 @@
 ---
-title: Eclipse Temurin Reproducible Verification Builds — 2026 Update
+title: Eclipse Temurin Reproducible Verification Builds — July 2026 Update
 date: "2026-07-29T12:00:00+00:00"
 author: andrewleonard
 description:
