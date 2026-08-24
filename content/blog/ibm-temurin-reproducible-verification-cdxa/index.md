@@ -223,9 +223,9 @@ Every Temurin binary carries trust badges alongside its download entry. With IBM
 
 | Badge | Meaning |
 |---|---|
-| **JCK Certified** | The build has passed the Java SE Technology Compatibility Kit |
-| **AQAvit Verified** | The build has passed the Eclipse AQAvit quality verification suite |
-| **Reproduced by a 3rd party** ⭐ | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
+| <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="rgb(83,127,185)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> **JCK Certified** | The build has passed the Java SE Technology Compatibility Kit |
+| <img src="/images/icons/aqavit-icon.png" width="25" height="25" alt="AQAvit logo" title="This build is AQAvit Verified"/> **AQAvit Verified** | The build has passed the Eclipse AQAvit quality verification suite |
+| <img src="/images/icons/reproduced-verified.svg" width="25" height="25" alt="Reproduced by a 3rd party" title="This build is reproduced by a 3rd party"/> **Reproduced by a 3rd party** | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
 
 The badge is **entirely data-driven**: it appears automatically on any download row for which a
 merged CDXA attestation in `temurin-cdxa` matches the binary's SHA-256 checksum — no website
