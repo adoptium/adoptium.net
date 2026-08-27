@@ -71,7 +71,7 @@
     "@types/node": "^26.2.0",
     "@types/prismjs": "^1.26.6",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
+    "@types/react-dom": "19.2.5",
     "@types/react-slick": "^0.23.13",
     "@types/react-world-flags": "^1.6.0",
     "@types/rss": "^0.0.32",
