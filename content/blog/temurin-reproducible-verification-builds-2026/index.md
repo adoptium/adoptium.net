@@ -160,15 +160,15 @@ live on [adoptium.net](https://adoptium.net/temurin/releases?version=25).
 
 ## Summary of Resources
 
-| Resource                         | Link                                                                                                                                                |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| All platform verification guides | [temurin-build wiki](https://github.com/adoptium/temurin-build/wiki/Temurin-3rd-Party-Reproducible-Verification-Guides)                             |
-| Windows x64 step-by-step guide   | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
-| Verification scripts             | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible)                                               |
-| CDXA generation tooling          | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib)                                                             |
-| Public CDXA attestations repository    | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa)                                                                                            |
-| CDXA contribution guide          | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md)                                                               |
-| Adoptium binary & SBOM API       | [api.adoptium.net](https://api.adoptium.net)                                                                                                        |
+| Resource                            | Link                                                                                                                                                |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| All platform verification guides    | [temurin-build wiki](https://github.com/adoptium/temurin-build/wiki/Temurin-3rd-Party-Reproducible-Verification-Guides)                             |
+| Windows x64 step-by-step guide      | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
+| Verification scripts                | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible)                                               |
+| CDXA generation tooling             | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib)                                                             |
+| Public CDXA attestations repository | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa)                                                                                            |
+| CDXA contribution guide             | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md)                                                               |
+| Adoptium binary & SBOM API          | [api.adoptium.net](https://api.adoptium.net)                                                                                                        |
 
 ### Summary
 
