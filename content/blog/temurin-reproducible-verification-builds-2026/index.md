@@ -65,11 +65,11 @@ To perform your own reproducible verification build of an Eclipse Temurin JDK 21
 in the [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible) directory of the
 `temurin-build` repository:
 
-| Script | Platform |
-|---|---|
-| `linux_repro_build_compare.sh` | Linux (x64, aarch64, ppc64le, s390x) |
-| `macos_repro_build_compare.sh` | macOS (x64, aarch64) |
-| `windows_repro_build_compare.sh` | Windows x64 |
+| Script                           | Platform                             |
+| -------------------------------- | ------------------------------------ |
+| `linux_repro_build_compare.sh`   | Linux (x64, aarch64, ppc64le, s390x) |
+| `macos_repro_build_compare.sh`   | macOS (x64, aarch64)                 |
+| `windows_repro_build_compare.sh` | Windows x64                          |
 
 Each script reads the SBOM published alongside the official Temurin release to determine the exact compiler toolchain, SDK versions,
 build flags, and environment settings used by the Eclipse build infrastructure. It then rebuilds the JDK from upstream OpenJDK community
@@ -82,7 +82,7 @@ Full step-by-step guides for setting up your independent toolchain and running t
 
 A successful run produces a `reproducible_evidence.log` confirming 100% reproducibility:
 
-```
+```text
 Number of differences: 0
 ReproduciblePercent = 100 %
 Successful 100% Reproducible Verification
@@ -131,7 +131,7 @@ The generated `CDXA.xml` must be cryptographically signed (producing an accompan
 file) and submitted via Pull Request to [`adoptium/temurin-cdxa`](https://github.com/adoptium/temurin-cdxa),
 filed under a path convention that embeds the JDK version, architecture, and OS:
 
-```
+```text
 <major>/<jdk-tag>/<jdk-tag_arch_os_OrgName>.xml
 <major>/<jdk-tag>/<jdk-tag_arch_os_OrgName>.xml.sig
 ```
@@ -141,18 +141,18 @@ Full submission requirements and conventions are described in the repository's
 The attestation record is then permanently associated with the Temurin release for anyone to
 inspect and verify.
 
-## The "Reproduced by a 3rd Party" Icon on adoptium.net
+## The "Reproduced by a third-party" Icon on adoptium.net
 
 Every Temurin binary on the [Temurin Releases page](https://adoptium.net/temurin/releases) carries
 trust badges alongside its download entry. When a signed CDXA attestation is merged into
 `temurin-cdxa` and its SHA-256 matches a downloadable binary, that release automatically gains the
-**"Reproduced by a 3rd party"** badge — no website deployment required.
+**"Reproduced by a third-party"** badge — no site deployment required.
 
-| Badge | Meaning |
-|---|---|
-| <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="rgb(83,127,185)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> **JCK Certified** | The build has passed the Java SE Technology Compatibility Kit |
-| <img src="/images/icons/aqavit-icon.png" width="25" height="25" alt="AQAvit logo" title="This build is AQAvit Verified"/> **AQAvit Verified** | The build has passed the Eclipse AQAvit quality verification suite |
-| <img src="/images/icons/reproduced-verified.svg" width="25" height="25" alt="Reproduced by a 3rd party" title="This build is reproduced by a 3rd party"/> **Reproduced by a 3rd party** | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
+| Badge                                                                                                                                                                                                                                                             | Meaning                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="rgb(83,127,185)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> **JCK Certified** | The build has passed the Java SE Technology Compatibility Kit                                                                           |
+| <img src="/images/icons/aqavit-icon.png" width="25" height="25" alt="AQAvit logo" title="This build is AQAvit Verified"/> **AQAvit Verified**                                                                                                                     | The build has passed the Eclipse AQAvit quality verification suite                                                                      |
+| <img src="/images/icons/reproduced-verified.svg" width="25" height="25" alt="Reproduced by a third-party" title="This build is reproduced by a third-party"/> **Reproduced by a third-party**                                                                     | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
 
 IBM and Red Hat are the first Working Group members to have submitted CDXA attestations, covering
 JDK 21 and JDK 25 releases on Linux x64 and Windows x64. The verified releases now carry the badge
@@ -160,15 +160,15 @@ live on [adoptium.net](https://adoptium.net/temurin/releases?version=25).
 
 ## Summary of Resources
 
-| Resource | Link |
-|---|---|
-| All platform verification guides | [temurin-build wiki](https://github.com/adoptium/temurin-build/wiki/Temurin-3rd-Party-Reproducible-Verification-Guides) |
-| Windows x64 step-by-step guide | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
-| Verification scripts | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible) |
-| CDXA generation tooling | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib) |
-| Public attestation repository | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa) |
-| CDXA contribution guide | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md) |
-| Adoptium binary & SBOM API | [api.adoptium.net](https://api.adoptium.net) |
+| Resource                         | Link                                                                                                                                                |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| All platform verification guides | [temurin-build wiki](https://github.com/adoptium/temurin-build/wiki/Temurin-3rd-Party-Reproducible-Verification-Guides)                             |
+| Windows x64 step-by-step guide   | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
+| Verification scripts             | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible)                                               |
+| CDXA generation tooling          | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib)                                                             |
+| Public attestation repository    | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa)                                                                                            |
+| CDXA contribution guide          | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md)                                                               |
+| Adoptium binary & SBOM API       | [api.adoptium.net](https://api.adoptium.net)                                                                                                        |
 
 ### Summary
 
