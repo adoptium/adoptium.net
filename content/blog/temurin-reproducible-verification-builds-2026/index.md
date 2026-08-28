@@ -92,7 +92,7 @@ Eclipse Temurin version: jdk-21.0.11+10
                  sha256: 51111aa918a1b3e4f59e1ce3179f1a17345a7024825ce98d634820c38d9a46a2
 ```
 
-## Publishing Your Attestation: CycloneDX Attestation (CDXA)
+## Publishing Your CycloneDX Attestation (CDXA)
 
 A successful verification is only as useful as the evidence you publish. To give the community a
 permanent, auditable record of third-party verifications, Adoptium has created the
@@ -100,7 +100,7 @@ permanent, auditable record of third-party verifications, Adoptium has created t
 signed **CycloneDX Attestation (CDXA)** documents.
 
 [CycloneDX](https://cyclonedx.org) is the open SBOM standard already used by Temurin to publish
-build provenance for every release. The **Attestation** format (CDXA, schema version 1.6) extends
+build provenance for every release. The **CycloneDX Attestation** format (CDXA, schema version 1.6) extends
 this by allowing a third party to formally record a verifiable claim — `VERIFIED_REPRODUCIBLE_BUILD`
 — against a specific Temurin binary, backed by the `reproducible_evidence.log` produced by the
 verification scripts.
@@ -138,7 +138,7 @@ filed under a path convention that embeds the JDK version, architecture, and OS:
 
 Full submission requirements and conventions are described in the repository's
 [`CONTRIBUTING.md`](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md).
-The attestation record is then permanently associated with the Temurin release for anyone to
+The CycloneDX Attestation record is then permanently associated with the Temurin release for anyone to
 inspect and verify.
 
 ## The "Reproduced by a third-party" Icon on adoptium.net
@@ -166,7 +166,7 @@ live on [adoptium.net](https://adoptium.net/temurin/releases?version=25).
 | Windows x64 step-by-step guide   | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
 | Verification scripts             | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible)                                               |
 | CDXA generation tooling          | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib)                                                             |
-| Public attestation repository    | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa)                                                                                            |
+| Public CDXA attestations repository    | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa)                                                                                            |
 | CDXA contribution guide          | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md)                                                               |
 | Adoptium binary & SBOM API       | [api.adoptium.net](https://api.adoptium.net)                                                                                                        |
 
