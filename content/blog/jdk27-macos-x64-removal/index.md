@@ -16,13 +16,11 @@ The Adoptium community is committed to providing high-quality, open-source build
 There are two main reasons behind this decision:
 
 - **Availability of machines.** Apple has transitioned its entire Mac lineup to Apple Silicon (aarch64), and Intel-based Mac hardware is becoming increasingly difficult to source and maintain for our build, test, and release infrastructure. Without reliable access to this hardware, we cannot sustain the quality bar our community expects.
-- **The upstream port is going to be [deprecated for JDK 28.](https://openjdk.org/jeps/541)** The OpenJDK macOS x64 port itself will no longer be actively maintained starting with JDK 28 upstream. Since the upstream maintenance is going to end for the macOS x64 port upstream for JDK 28, we propose to stop building that port a release early: JDK 27. Users are advised to use the macOS aarch64 JDK 27 port instead.
+- **The upstream port is going to be [deprecated for JDK 28.](https://openjdk.org/jeps/541)** The OpenJDK macOS x64 port itself will no longer be actively maintained starting with JDK 28 upstream. Given the likely concerns with availability of machines during the lifecycle of LTS releases we propose to stop building that port a release early: JDK 27. Users are advised to use the macOS aarch64 JDK 27 port instead.
 
 ## What this means for you
 
-Temurin JDK 27 will continue to be available for macOS on Apple Silicon (aarch64). Existing releases of earlier JDK versions on macOS x64 are unaffected by this announcement.
-
-If you are running on an Intel-based Mac, macOS provides the [Rosetta 2](https://support.apple.com/en-us/HT211861) translation layer, but we encourage users to plan their transition to Apple Silicon where possible.
+Temurin JDK 27 will continue to be available for macOS on Apple Silicon (aarch64). For now, existing releases of earlier JDK versions on macOS x64 are unaffected by this announcement.
 
 ## Your feedback matters
 
