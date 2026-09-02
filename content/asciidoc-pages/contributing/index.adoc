@@ -69,7 +69,7 @@ git checkout -b my_new_branch
 git remote add upstream https://github.com/adoptium/aqa-tests.git
 ----
 
-Before you start working on the issue, plese make sure the local branch is up to date:
+Before you start working on the issue, please make sure the local branch is up to date:
 
 [source, bash]
 ----
