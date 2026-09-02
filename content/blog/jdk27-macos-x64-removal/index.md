@@ -16,7 +16,7 @@ The Adoptium community is committed to providing high-quality, open-source build
 There are two main reasons behind this decision:
 
 - **Availability of machines.** Apple has transitioned its entire Mac lineup to Apple Silicon (aarch64), and Intel-based Mac hardware is becoming increasingly difficult to source and maintain for our build, test, and release infrastructure. Without reliable access to this hardware, we cannot sustain the quality bar our community expects.
-- **The upstream port is going to be [deprecated for JDK 28.](https://openjdk.org/jeps/541)** The OpenJDK macOS x64 port itself will no longer be actively maintained starting with JDK 28 upstream. Since the upstream maintenance is going to end for the macos x64 port upstream for JDK 28, we propose to stop building that port a release early: JDK 27. Users are advised to use the macos aarch64 JDK 27 port instead.
+- **The upstream port is going to be [deprecated for JDK 28.](https://openjdk.org/jeps/541)** The OpenJDK macOS x64 port itself will no longer be actively maintained starting with JDK 28 upstream. Since the upstream maintenance is going to end for the macOS x64 port upstream for JDK 28, we propose to stop building that port a release early: JDK 27. Users are advised to use the macOS aarch64 JDK 27 port instead.
 
 ## What this means for you
 
