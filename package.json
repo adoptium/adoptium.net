@@ -76,7 +76,7 @@
     "@types/react-world-flags": "^1.6.0",
     "@types/rss": "^0.0.32",
     "@vitejs/plugin-react": "^6.1.1",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/coverage-v8": "^5.0.0",
     "axios-mock-adapter": "^2.1.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^10.10.0",
@@ -88,7 +88,7 @@
     "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "vitest": "^4.0.15",
+    "vitest": "^5.0.0",
     "vitest-axe": "^0.1.0",
     "wrangler": "^4.131.0"
   },
