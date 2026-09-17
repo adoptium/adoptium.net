@@ -66,6 +66,12 @@ support LTS releases for at least four years. This assurance will allow
 you to stay on a well-defined code stream, and give you time to migrate
 to the next, new, stable, LTS release when it becomes available.
 
+When OpenJDK chooses to produce a CSPU release in order to address security
+issues, Adoptium will also produce a release. These will typically take
+place on the third Tuesday of a month that does not already contain a
+release. Expected CSPUs are listed [here](https://ops.java/releases/), where
+the version strings have four numbers each (e.g. 25.0.5.1) instead of three.
+
 Based upon this roadmap, here is the timetable showing the current release
 dates of the various OpenJDK releases used to build Eclipse Temurin.  Note
 that the dates below are from the
@@ -73,10 +79,8 @@ https://www.java.com/releases[upstream OpenJDK project page] and should
 not be considered the date which the Adoptium project will have binaries
 available - there will be a short delay relative to these dates while we
 complete our extensive build and test cycles which can take up to three
-weeks.  Our
-https://calendar.google.com/calendar/embed?src=c_56d7263c0ceda87a1678f6144426f23fb53721480b5ff71b073afb51091e5492%40group.calendar.google.com[Google Calendar with our release cycles] shows the expected cycle lengths for each
-of our releases.  We always prioritise the most popular platforms which
-will typically appear within a few days of these dates.
+weeks. We always prioritise the most popular platforms which will
+typically appear within a few days of these dates.
 
 include::{partialDir}/support-table.adoc[]
 
