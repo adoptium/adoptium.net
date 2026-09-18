@@ -54,7 +54,7 @@
     "remark-rehype": "^11.1.2",
     "rss": "^1.2.2",
     "schema-dts": "^2.0.0",
-    "slick-carousel": "^1.8.1",
+    "slick-carousel": "^2.0.0",
     "sugar-high": "^2.4.1",
     "swiper": "^14.2.0",
     "unified": "^11.0.5"
