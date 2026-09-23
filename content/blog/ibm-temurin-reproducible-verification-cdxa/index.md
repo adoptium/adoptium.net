@@ -1,12 +1,12 @@
 ---
-title: "IBM's Independent Verification of Eclipse Temurin Reproducible Builds: A 3rd Party CDXA Attestation Story"
+title: "IBM's Independent Verification of Eclipse Temurin Reproducible Builds: A Third-Party CDXA Attestation Story"
 date: "2026-09-25T12:00:00+00:00"
 author: andrewleonard
 description:
   IBM, as a member of the Eclipse Adoptium Working Group, has independently verified Eclipse Temurin
   JDK 21 and JDK 25 releases on Windows x64 and Linux x64, publishing signed CycloneDX Attestation
   (CDXA) documents to the temurin-cdxa repository — alongside Red Hat — as one of the first
-  3rd party verifiers of the new Reproducible Verification Builds capability.
+  third-party verifiers of the new Reproducible Verification Builds capability.
 tags:
   - temurin
   - reproducible
@@ -17,7 +17,7 @@ tags:
 ## Background
 
 With the **July 2026 release of Eclipse Temurin**, the Adoptium project launched its new
-[**3rd Party Reproducible Verification Builds**](https://adoptium.net/blog/2026/07/adoptium-reproducible-verification-builds/)
+[**Third-Party Reproducible Verification Builds**](https://adoptium.net/blog/2026/07/adoptium-reproducible-verification-builds/)
 capability — enabling any motivated third party to independently confirm that an official Temurin
 binary is a byte-for-byte match for what you would get if you rebuilt it yourself from the same
 source and toolchain recipe encoded in its published SBOM.
@@ -56,7 +56,7 @@ providing an additional, independently sourced layer of trust.
 
 ## IBM's Independently Secured Toolchains
 
-A core requirement for a meaningful 3rd party verification is that the verifier's toolchain is
+A core requirement for a meaningful third-party verification is that the verifier's toolchain is
 **independently secured** — not obtained from Adoptium, but built or installed from primary sources
 and verified against the SBOM specifications.
 
@@ -117,7 +117,7 @@ the following end-to-end workflow:
 
 A successful pipeline run produces output confirming 100% reproducibility:
 
-```
+```text
 Number of files: 108721
 
 2026-04-17T21:26:20+0000 : Comparing expanded JDKs from jdk-21.0.11+9-ea-beta
@@ -169,14 +169,14 @@ The resulting `CDXA.xml` is then **manually cryptographically signed** with the 
 GPG key, producing the accompanying `.xml.sig` file, and filed under the path convention required
 by the `temurin-cdxa` repository:
 
-```
+```text
 <major>/<jdk-tag>/<jdk-tag_arch_os_IBM>.xml
 <major>/<jdk-tag>/<jdk-tag_arch_os_IBM>.xml.sig
 ```
 
 For example:
 
-```
+```text
 21/jdk-21.0.11+10/jdk_21_0_11_10_x64_linux_IBM.xml
 21/jdk-21.0.11+10/jdk_21_0_11_10_x64_linux_IBM.xml.sig
 25/jdk-25.0.4+7/jdk_25_0_4_7_x64_windows_IBM.xml
@@ -198,22 +198,27 @@ chain from the official SBOM through to the IBM verification evidence.
 
 IBM and Red Hat have submitted verified attestations for the following releases:
 
-| JDK Version | Platform | Architecture | IBM | Red Hat |
-|---|---|---|---|---|
-| jdk-21.0.11+10 | Linux | x64 | ✅ | — |
-| jdk-21.0.11+10 | Windows | x64 | ✅ | — |
-| jdk-21.0.11+10 | Windows | aarch64 | ✅ | — |
-| jdk-21.0.12+8 | Linux | x64 | ✅ | — |
-| jdk-21.0.12+8 | Windows | x64 | ✅ | — |
-| jdk-25.0.2+10 | Windows | x64 | ✅ | ✅ |
-| jdk-25.0.3+9 | Linux | x64 | ✅ | — |
-| jdk-25.0.3+9 | Windows | x64 | ✅ | ✅ |
-| jdk-25.0.4+7 | Linux | x64 | ✅ | — |
-| jdk-25.0.4+7 | Windows | x64 | ✅ | — |
+| JDK Version    | Platform | Architecture | IBM | Red Hat |
+| -------------- | -------- | ------------ | --- | ------- |
+| jdk-21.0.11+10 | Linux    | x64          | ✅  | —       |
+| jdk-21.0.11+10 | Windows  | x64          | ✅  | —       |
+| jdk-21.0.11+10 | Windows  | aarch64      | ✅  | —       |
+| jdk-21.0.12+8  | Linux    | x64          | ✅  | —       |
+| jdk-21.0.12+8  | Windows  | x64          | ✅  | —       |
+| jdk-25.0.2+10  | Windows  | x64          | ✅  | ✅      |
+| jdk-25.0.3+9   | Linux    | x64          | ✅  | —       |
+| jdk-25.0.3+9   | Windows  | x64          | ✅  | ✅      |
+| jdk-25.0.4+7   | Linux    | x64          | ✅  | —       |
+| jdk-25.0.4+7   | Windows  | x64          | ✅  | —       |
 
 ---
 
+<!-- vale off -->
+<!-- alex ignore 3rd-party -->
+
 ## Visibility on adoptium.net: The "Reproduced by a 3rd Party" Icon
+
+<!-- vale on -->
 
 One of the most immediately user-visible outcomes of IBM's verification work is the new badge that
 now appears on the [Temurin Releases page](https://adoptium.net/temurin/releases).
@@ -221,14 +226,19 @@ now appears on the [Temurin Releases page](https://adoptium.net/temurin/releases
 Every Temurin binary carries trust badges alongside its download entry. With IBM's submissions to
 `temurin-cdxa`, the releases we have verified now display the third badge:
 
-| Badge | Meaning |
-|---|---|
-| <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="rgb(83,127,185)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> **JCK Certified** | The build has passed the Java SE Technology Compatibility Kit |
-| <img src="/images/icons/aqavit-icon.png" width="25" height="25" alt="AQAvit logo" title="This build is AQAvit Verified"/> **AQAvit Verified** | The build has passed the Eclipse AQAvit quality verification suite |
-| <img src="/images/icons/reproduced-verified.svg" width="25" height="25" alt="Reproduced by a 3rd party" title="This build is reproduced by a 3rd party"/> **Reproduced by a 3rd party** | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
+<!-- vale off -->
+<!-- alex ignore 3rd-party -->
+
+| Badge                                                                                                                                                                                                                                                             | Meaning                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="rgb(83,127,185)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> **JCK Certified** | The build has passed the Java SE Technology Compatibility Kit                                                                           |
+| <img src="/images/icons/aqavit-icon.png" width="25" height="25" alt="AQAvit logo" title="This build is AQAvit Verified"/> **AQAvit Verified**                                                                                                                     | The build has passed the Eclipse AQAvit quality verification suite                                                                      |
+| <img src="/images/icons/reproduced-verified.svg" width="25" height="25" alt="Reproduced by a 3rd party" title="This build is reproduced by a 3rd party"/> **Reproduced by a 3rd party**                                                                           | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
+
+<!-- vale on -->
 
 The badge is **entirely data-driven**: it appears automatically on any download row for which a
-merged CDXA attestation in `temurin-cdxa` matches the binary's SHA-256 checksum — no website
+merged CDXA attestation in `temurin-cdxa` matches the binary's SHA-256 checksum — no site
 deployment required. IBM's verified JDK 21 and JDK 25 releases on Windows x64 and Linux x64 now
 carry this badge.
 
@@ -282,15 +292,15 @@ before opening an issue.
 
 ## Summary of Resources
 
-| Resource | Link |
-|---|---|
-| All platform verification guides | [temurin-build wiki](https://github.com/adoptium/temurin-build/wiki/Temurin-3rd-Party-Reproducible-Verification-Guides) |
-| Windows x64 step-by-step guide | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
-| Verification scripts | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible) |
-| CDXA generation tooling | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib) |
-| Public attestation repository | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa) |
-| CDXA contribution guide | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md) |
-| Adoptium binary & SBOM API | [api.adoptium.net](https://api.adoptium.net) |
+| Resource                         | Link                                                                                                                                                |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| All platform verification guides | [temurin-build wiki](https://github.com/adoptium/temurin-build/wiki/Temurin-3rd-Party-Reproducible-Verification-Guides)                             |
+| Windows x64 step-by-step guide   | [wiki](https://github.com/adoptium/temurin-build/wiki/Step%E2%80%90by%E2%80%90step:-Temurin-reproducible-verification-instructions-for-Windows-x64) |
+| Verification scripts             | [`tooling/reproducible/`](https://github.com/adoptium/temurin-build/tree/master/tooling/reproducible)                                               |
+| CDXA generation tooling          | [`cyclonedx-lib/`](https://github.com/adoptium/temurin-build/tree/master/cyclonedx-lib)                                                             |
+| Public attestation repository    | [temurin-cdxa](https://github.com/adoptium/temurin-cdxa)                                                                                            |
+| CDXA contribution guide          | [CONTRIBUTING.md](https://github.com/adoptium/temurin-cdxa/blob/main/CONTRIBUTING.md)                                                               |
+| Adoptium binary & SBOM API       | [api.adoptium.net](https://api.adoptium.net)                                                                                                        |
 
 ---
 
@@ -299,4 +309,3 @@ before opening an issue.
 **Andrew Leonard** is the Eclipse Temurin Build & Distribution Lead at IBM and a member of the
 Eclipse Adoptium PMC. He leads the engineering work on Temurin's build pipelines, reproducible
 build tooling, and supply chain security initiatives.
-
