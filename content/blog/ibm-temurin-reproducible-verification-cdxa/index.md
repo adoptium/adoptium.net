@@ -213,11 +213,13 @@ IBM and Red Hat have submitted verified attestations for the following releases:
 
 ---
 
+<!-- textlint-disable -->
 <!-- vale off -->
 <!-- alex ignore 3rd-party -->
 
 ## Visibility on adoptium.net: The "Reproduced by a 3rd Party" Icon
 
+<!-- textlint-enable -->
 <!-- vale on -->
 
 One of the most immediately user-visible outcomes of IBM's verification work is the new badge that
@@ -226,6 +228,7 @@ now appears on the [Temurin Releases page](https://adoptium.net/temurin/releases
 Every Temurin binary carries trust badges alongside its download entry. With IBM's submissions to
 `temurin-cdxa`, the releases we have verified now display the third badge:
 
+<!-- textlint-disable -->
 <!-- vale off -->
 <!-- alex ignore 3rd-party -->
 
@@ -235,6 +238,7 @@ Every Temurin binary carries trust badges alongside its download entry. With IBM
 | <img src="/images/icons/aqavit-icon.png" width="25" height="25" alt="AQAvit logo" title="This build is AQAvit Verified"/> **AQAvit Verified**                                                                                                                     | The build has passed the Eclipse AQAvit quality verification suite                                                                      |
 | <img src="/images/icons/reproduced-verified.svg" width="25" height="25" alt="Reproduced by a 3rd party" title="This build is reproduced by a 3rd party"/> **Reproduced by a 3rd party**                                                                           | At least one independent third party has successfully reproduced this binary byte-for-byte and published a signed CycloneDX Attestation |
 
+<!-- textlint-enable -->
 <!-- vale on -->
 
 The badge is **entirely data-driven**: it appears automatically on any download row for which a
