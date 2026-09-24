@@ -50,7 +50,7 @@ exports[`Download page > renders correctly 1`] = `
         Text
         <a
           class="text-[#ff1365] hover:text-white underline decoration-[#ff1365] underline-offset-4 transition-colors"
-          href="https://github.com/adoptium/temurin-1-binaries/download"
+          href="https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.3%2B9/OpenJDK21U.tar.gz"
         >
           Text
         </a>
