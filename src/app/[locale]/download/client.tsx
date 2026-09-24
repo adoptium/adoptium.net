@@ -23,26 +23,51 @@ export default function DownloadPageClient() {
     redirect("/temurin/releases");
   }
 
-  // Validate allowed download link origins for security
-  const allowedOrigins = [
-    "https://github.com/adoptium/temurin",
-    "https://cdn.azul.com/zulu/",
-    "https://aka.ms/download-jdk/",
-    "https://github.com/ibmruntimes/",
-    "https://github.com/dragonwell-project/",
-    "https://developers.redhat.com/",
+  // Parse the URL first so that dot-segment normalisation (WHATWG URL Standard
+  // §4.4) is applied before any validation. Comparing the raw string with
+  // startsWith() would allow a path-traversal bypass such as:
+  //   https://github.com/adoptium/temurin/../../attacker/repo/...
+  // which passes a prefix check but resolves to an attacker-controlled path.
+  let parsedLink: URL;
+  try {
+    parsedLink = new URL(link);
+  } catch {
+    redirect("/temurin/releases");
+    // redirect() throws in Next.js — this return is unreachable at runtime but
+    // keeps TypeScript's control-flow analysis happy.
+    return null;
+  }
+
+  // Allowlist entries are [origin, pathname prefix] pairs.  Both origin and
+  // the normalised pathname must match so that a traversal cannot escape the
+  // trusted path prefix on a shared host (e.g. github.com).
+  const allowedPrefixes: [string, string][] = [
+    ["https://github.com", "/adoptium/temurin"],
+    ["https://cdn.azul.com", "/zulu/"],
+    ["https://aka.ms", "/download-jdk/"],
+    ["https://github.com", "/ibmruntimes/"],
+    ["https://github.com", "/dragonwell-project/"],
+    ["https://developers.redhat.com", "/"],
   ];
 
-  const isValidLink = allowedOrigins.some((origin) => link.startsWith(origin));
+  const isValidLink = allowedPrefixes.some(
+    ([origin, pathPrefix]) =>
+      parsedLink.origin === origin &&
+      parsedLink.pathname.startsWith(pathPrefix),
+  );
   if (!isValidLink) {
-    console.error("Invalid download link:", link);
+    console.error("Invalid download link:", parsedLink.href);
     redirect("/temurin/releases");
   }
+
+  // Use the normalised href from here on so the guard and the browser agree on
+  // the destination URL.
+  const safeLink = parsedLink.href;
 
   return (
     <div className="bg-[#14003c] min-h-screen text-white font-sans flex flex-col items-center">
       {/* Meta Redirect for Auto-Download */}
-      {link && <meta httpEquiv="refresh" content={`0; url=${link}`} />}
+      {safeLink && <meta httpEquiv="refresh" content={`0; url=${safeLink}`} />}
 
       {/* Hero Section: Download Confirmation */}
       <div className="w-full max-w-5xl px-6 py-12 md:py-16 text-center">
@@ -76,7 +101,7 @@ export default function DownloadPageClient() {
           <span className="text-sm mt-2 block opacity-70">
             {t("auto-start-p2")}
             <a
-              href={link}
+              href={safeLink}
               className="text-[#ff1365] hover:text-white underline decoration-[#ff1365] underline-offset-4 transition-colors"
             >
               {t("click-here")}
