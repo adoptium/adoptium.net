@@ -585,7 +585,8 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "25": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false },
+            "27": { "supported": false, "docker": false }
           }
         },
         {
@@ -595,7 +596,8 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "25": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false },
+            "27": { "supported": false, "docker": false }
           }
         },
         {
@@ -605,7 +607,8 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "25": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false },
+            "27": { "supported": false, "docker": false }
           }
         },
         {
@@ -615,7 +618,8 @@
             "11": { "supported": true, "docker": false },
             "17": { "supported": true, "docker": false },
             "21": { "supported": true, "docker": false },
-            "25": { "supported": true, "docker": false }
+            "25": { "supported": true, "docker": false },
+            "27": { "supported": false, "docker": false }
           }
         }
       ]
