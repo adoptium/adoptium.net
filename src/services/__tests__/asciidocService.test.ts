@@ -8,7 +8,7 @@ import {
   afterEach,
   type Mock,
 } from "vitest";
-import fs from "fs";
+import fs from "@/utils/fs";
 import path from "path";
 import {
   getAsciidocContent,
@@ -17,7 +17,7 @@ import {
 } from "../asciidocService";
 
 // Mock the filesystem
-vi.mock("fs");
+vi.mock("@/utils/fs");
 const mockFs = vi.mocked(fs) as {
   readFileSync: Mock;
   readdirSync: Mock;

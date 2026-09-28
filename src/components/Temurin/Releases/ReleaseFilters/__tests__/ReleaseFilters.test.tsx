@@ -68,14 +68,6 @@ describe("ReleaseFilters component", () => {
         // Setup mock implementations
         vi.mocked(fetchConstants.useOses).mockReturnValue(mockOSOptions)
         vi.mocked(fetchConstants.useArches).mockReturnValue(mockArchOptions)
-
-        // Mock window.location for setURLParam
-        Object.defineProperty(window, 'location', {
-            value: {
-                href: 'http://localhost:3000/',
-            },
-            writable: true,
-        })
     })
 
     afterEach(() => {
