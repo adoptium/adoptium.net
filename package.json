@@ -53,7 +53,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "rss": "^1.2.2",
-    "schema-dts": "^2.0.0",
+    "schema-dts": "^2.1.0",
     "slick-carousel": "^2.0.0",
     "sugar-high": "^2.5.1",
     "swiper": "^14.3.0",
