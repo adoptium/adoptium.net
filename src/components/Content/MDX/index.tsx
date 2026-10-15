@@ -39,46 +39,46 @@ const Table: React.FC<TableProps> = ({ data }) => {
   );
 };
 
-type CustomLinkProps = React.ComponentProps<"a">;
+type CustomLinkProps = React.ComponentProps<"a"> & {
+  ref?: React.Ref<HTMLAnchorElement>;
+};
 
-const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
-  ({ href, children, ...props }, ref) => {
-    const hrefValue = href ?? "";
+const CustomLink = ({ href, children, ref, ...props }: CustomLinkProps) => {
+  const hrefValue = href ?? "";
 
-    // Internal Next.js route
-    if (hrefValue.startsWith("/")) {
-      // Filter out props that might not be compatible with the Link component
-      const { popover, ...filteredProps } = props;
-      return (
-        <Link href={hrefValue} ref={ref} {...filteredProps}>
-          {children}
-        </Link>
-      );
-    }
-
-    // In-page anchor or no href
-    if (hrefValue.startsWith("#") || hrefValue === "") {
-      return (
-        <a ref={ref} {...props}>
-          {children}
-        </a>
-      );
-    }
-
-    // External link
+  // Internal Next.js route
+  if (hrefValue.startsWith("/")) {
+    // Filter out props that might not be compatible with the Link component
+    const { popover, ...filteredProps } = props;
     return (
-      <a
-        ref={ref}
-        href={hrefValue}
-        target="_blank"
-        rel="noopener noreferrer"
-        {...props}
-      >
+      <Link href={hrefValue} ref={ref} {...filteredProps}>
+        {children}
+      </Link>
+    );
+  }
+
+  // In-page anchor or no href
+  if (hrefValue.startsWith("#") || hrefValue === "") {
+    return (
+      <a ref={ref} {...props}>
         {children}
       </a>
     );
-  },
-);
+  }
+
+  // External link
+  return (
+    <a
+      ref={ref}
+      href={hrefValue}
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    >
+      {children}
+    </a>
+  );
+};
 CustomLink.displayName = "CustomLink";
 
 interface ImageProps {

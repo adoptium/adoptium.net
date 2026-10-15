@@ -34,6 +34,7 @@ const mockBlogPosts = [
     year: "2024",
     month: "01",
     content: "content",
+    readingTime: 1,
     metadata: {
       title: "First Post",
       date: "2024-01-15",
@@ -48,6 +49,7 @@ const mockBlogPosts = [
     year: "2024",
     month: "03",
     content: "content",
+    readingTime: 1,
     metadata: {
       title: "Second Post",
       date: "2024-03-20",
@@ -62,6 +64,7 @@ const mockBlogPosts = [
     year: "2023",
     month: "12",
     content: "content",
+    readingTime: 1,
     metadata: {
       title: "Third Post",
       date: "2023-12-01",
@@ -227,6 +230,7 @@ describe("news utils", () => {
           year: "2024",
           month: "04",
           content: "content",
+          readingTime: 1,
           metadata: {
             title: "EF Post",
             date: "2024-04-01",
@@ -252,6 +256,7 @@ describe("news utils", () => {
           year: "2024",
           month: "04",
           content: "content",
+          readingTime: 1,
           metadata: {
             title: "EF Post",
             date: "2024-04-01",

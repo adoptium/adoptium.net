@@ -1,22 +1,22 @@
-'use client'
+"use client";
 
-import Image from "next/image"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { motion } from "motion/react";
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 interface LogoData {
-  name: string
-  logo: string
-  url: string
-  tier?: string
+  name: string;
+  logo: string;
+  url: string;
+  tier?: string;
 }
 
 interface LogosGridProps {
-  logos: LogoData[]
-  type: string
+  logos: LogoData[];
+  type: string;
 }
 
 const LogosGrid = ({ logos, type }: LogosGridProps) => {
@@ -27,21 +27,22 @@ const LogosGrid = ({ logos, type }: LogosGridProps) => {
           <div className="overflow-hidden px-2">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {logos.map((data, index) => (
-                <motion.a 
-                  key={data.name} 
-                  href={data.url} 
-                  target="_blank" 
+                <motion.a
+                  key={data.name}
+                  href={data.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
+                  transition={{
+                    duration: 0.5,
                     delay: index * 0.1,
-                    ease: "easeOut" 
+                    ease: "easeOut",
                   }}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" 
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow:
+                      "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
                   }}
                   className="flex"
                 >
@@ -62,7 +63,7 @@ const LogosGrid = ({ logos, type }: LogosGridProps) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LogosGrid
+export default LogosGrid;

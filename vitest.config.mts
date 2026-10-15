@@ -9,8 +9,33 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    pool: "vmThreads",
     css: false,
     setupFiles: ["./vitest-setup.tsx"],
     testTimeout: 30000,
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "lcov", "html"],
+      reportOnFailure: true,
+      exclude: [
+        "**/node_modules/**",
+        "**/__tests__/**",
+        "**/__mocks__/**",
+        "**/*.test.{ts,tsx}",
+        "**/*.spec.{ts,tsx}",
+        "**/*.d.ts",
+        "**/*.config.{js,mjs,ts,mts}",
+        ".next/**",
+        "coverage/**",
+        "scripts/**",
+        "vitest-setup.tsx",
+      ],
+      thresholds: {
+        lines: 0,
+        functions: 0,
+        branches: 0,
+        statements: 0,
+      },
+    },
   },
 });

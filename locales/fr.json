@@ -25,7 +25,7 @@
     "vendor-alert": "Vous téléchargez une version de <vendorWrapper>{vendor}</vendorWrapper>, membre du groupe de travail Eclipse Adoptium.",
     "why-we-need-you": "Pourquoi nous avons besoin de vous",
     "infra-costs-title": "Coûts d'infrastructure",
-    "infra-costs-desc": "Tester sur plus de 50 plateformes nécessite une puissance de calcul massive.",
+    "infra-costs-desc": "Tester sur plus de 50 combinaisons plateforme/version nécessite une puissance de calcul massive.",
     "security-speed-title": "Sécurité et rapidité",
     "security-speed-desc": "Des mises à jour rapides et sécurisées nécessitent des ressources dédiées.",
     "open-source-title": "Véritable Open Source",

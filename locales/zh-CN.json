@@ -25,7 +25,7 @@
     "vendor-alert": "您正在下载 <vendorWrapper>{vendor}</vendorWrapper> 的构建版，它是 Eclipse Adoptium 工作组的成员。",
     "why-we-need-you": "为什么我们需要您",
     "infra-costs-title": "基础设施成本",
-    "infra-costs-desc": "在 50+ 个平台上进行测试需要巨大的计算能力。",
+    "infra-costs-desc": "在 50+ 个平台/版本组合上进行测试需要巨大的计算能力。",
     "security-speed-title": "安全与速度",
     "security-speed-desc": "快速、安全的更新需要专用资源。",
     "open-source-title": "真正的开源",

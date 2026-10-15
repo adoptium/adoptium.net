@@ -17,6 +17,7 @@ EXCLUDED_USERS = {
     "adoptium-bot",
     "eclipse-temurin-bot",
     "github-actions[bot]",
+    "dependabot[bot]",
     "Copilot",
     "sxa555",
 }

@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { PinkIcon } from "@/components/Common/Icon";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface Project {
   title: string;

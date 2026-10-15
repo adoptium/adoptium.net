@@ -33,6 +33,6 @@ describe("DocumentationSearch", () => {
     const input = screen.getByRole("textbox");
     fireEvent.focus(input);
     fireEvent.mouseDown(document.body);
-    expect(screen.queryById?.("doc-search-dropdown")).toBeFalsy();
+    expect(document.getElementById("doc-search-dropdown")).toBeNull();
   });
 });

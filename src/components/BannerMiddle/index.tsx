@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { shuffle } from "@/utils/shuffle";
 import { filterByCurrentDate } from "@/utils/filterByDate";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { currentAnnouncements, BannerMiddleProps } from "./announcements";
 
 const BannerMiddle = () => {

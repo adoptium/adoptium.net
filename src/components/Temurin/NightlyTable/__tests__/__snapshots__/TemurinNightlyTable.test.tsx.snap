@@ -66,7 +66,128 @@ exports[`TemurinNightlyTable component > renders correctly 1`] = `
       </thead>
       <tbody
         class="bg-[#1B1132] divide-y divide-[#3E3355]"
-      />
+      >
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Linux
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            x64
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Jdk
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+          >
+            release_name_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Jan 1, 2020
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <a
+              href="https://link_mock"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              tar.gz
+               (
+              0
+               MB)
+            </a>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <span
+              class="text-gray-500"
+            >
+              Text
+            </span>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            <button
+              class="text-pink"
+            >
+              Text
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Linux
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            x64
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Jdk
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-200"
+          >
+            release_name_installer_mock
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            Jan 1, 2020
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <a
+              href="https://link_mock"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              tar.gz
+               (
+              0
+               MB)
+            </a>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-pink"
+          >
+            <a
+              href="https://installer_link_mock"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              msi
+            </a>
+          </td>
+          <td
+            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"
+          >
+            <button
+              class="text-pink"
+            >
+              Text
+            </button>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>

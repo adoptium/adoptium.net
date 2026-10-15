@@ -1,6 +1,6 @@
 import React from "react"
 import userEvent from "@testing-library/user-event"
-import { render, screen, act, cleanup } from "@testing-library/react"
+import { render, screen, cleanup } from "@testing-library/react"
 import { describe, expect, it, vi, afterEach } from "vitest"
 import ChecksumModal from ".."
 
@@ -14,13 +14,6 @@ vi.mock("next-intl", () => ({
   }
 }))
 
-// Setup for navigator.clipboard mock
-Object.assign(navigator, {
-  clipboard: {
-    writeText: vi.fn(),
-  },
-})
-
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: vi.fn().mockImplementation(() => ({
@@ -30,13 +23,11 @@ Object.defineProperty(window, "matchMedia", {
   })),
 })
 
-const navigatorClipboardSpy = vi.spyOn(navigator.clipboard, "writeText")
-
 describe("ChecksumModal component", () => {
   // Clean up after each test to remove rendered components
   afterEach(() => {
     cleanup();
-    navigatorClipboardSpy.mockClear();
+    vi.restoreAllMocks();
   });
 
   // Providing the required props for the component to render correctly
@@ -66,9 +57,10 @@ describe("ChecksumModal component", () => {
   })
 
   it("ChecksumModal copies correctly", async () => {
-    // Reset and set up the navigator.clipboard mock for this test
-    navigatorClipboardSpy.mockReset();
-    navigatorClipboardSpy.mockResolvedValue(undefined);
+    const user = userEvent.setup();
+    const navigatorClipboardSpy = vi
+      .spyOn(navigator.clipboard, "writeText")
+      .mockResolvedValue(undefined);
 
     render(<ChecksumModal {...requiredProps} />)
 
@@ -77,10 +69,7 @@ describe("ChecksumModal component", () => {
     const mainCopyButtons = screen.getAllByTestId("main-copy-button");
     const mainCopyButton = mainCopyButtons[0];
 
-    // Using act to wait for all state updates and effects to finish
-    await act(async () => {
-      userEvent.click(mainCopyButton)
-    })
+    await user.click(mainCopyButton)
 
     // Since the text changes to "Copied" after the button is clicked and state is updated,
     // we need to ensure the component has re-rendered with the new state
@@ -88,23 +77,19 @@ describe("ChecksumModal component", () => {
     const copiedButtons = await screen.findAllByText("Copied");
     expect(copiedButtons.length).toBeGreaterThan(0);
 
-    // Wait a tick to ensure async events have completed
-    await new Promise(resolve => setTimeout(resolve, 0));
-
     expect(navigatorClipboardSpy).toHaveBeenCalledTimes(1)
     expect(navigatorClipboardSpy).toHaveBeenCalledWith("exampleChecksumValue")
   })
 
   it("Main copy button changes text when clicked", async () => {
+    const user = userEvent.setup();
+
     render(<ChecksumModal {...requiredProps} />)
 
     // First test is stable, so let's keep it simple to verify the component works correctly
     const mainCopyButton = screen.getAllByTestId("main-copy-button")[0];
 
-    // Click the button
-    await act(async () => {
-      userEvent.click(mainCopyButton);
-    });
+    await user.click(mainCopyButton);
 
     // Wait for the button text to change to "Copied"
     const copiedText = await screen.findByText("Copied");

@@ -25,7 +25,7 @@
     "corporate-sponsorship-btn": "企業スポンサー",
     "why-we-need-you": "あなたの支援が必要な理由",
     "infra-costs-title": "インフラコスト",
-    "infra-costs-desc": "50以上のプラットフォームでのテストには膨大なコンピューティングパワーが必要です。",
+    "infra-costs-desc": "50以上のプラットフォーム/バージョンの組み合わせでのテストには膨大なコンピューティングパワーが必要です。",
     "security-speed-title": "セキュリティと速度",
     "security-speed-desc": "迅速で安全なアップデートには専用のリソースが必要です。",
     "open-source-title": "真のオープンソース",

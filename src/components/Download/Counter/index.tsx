@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { DiGithubFull } from "react-icons/di";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface DownloadCounterProps {
   total: number;

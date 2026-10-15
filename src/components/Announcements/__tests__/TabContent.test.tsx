@@ -51,4 +51,22 @@ describe('TabContent', () => {
         expect(screen.getByText('Short Event')).toBeInTheDocument();
         expect(screen.getByText('Short desc')).toBeInTheDocument();
     });
+
+    it('shows "Today" for a post dated today even if its timestamp is later in the day', () => {
+        const futureToday = new Date(Date.now() + 60 * 60 * 1000).toISOString();
+        const posts = [
+            {
+                slug: 'today-news',
+                year: '2025',
+                month: '06',
+                metadata: {
+                    title: 'Today News',
+                    description: 'A news item from today',
+                    date: futureToday,
+                },
+            },
+        ];
+        render(<TabContent posts={posts} />);
+        expect(screen.getByText('Today')).toBeInTheDocument();
+    });
 });

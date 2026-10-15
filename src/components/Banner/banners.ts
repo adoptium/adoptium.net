@@ -114,6 +114,16 @@ export const currentBanners: BannerProps[] = [
     endDate: "2026-07-24T23:59:59Z",
   },
   {
+    title: "Register for Adoptium Summit 2026",
+    description:
+      "Explore the latest in Eclipse Temurin, Adoptium technologies, and the Java ecosystem with project leaders and community experts.",
+    cta: "Register now",
+    ctaLink:
+      "https://hubs.la/Q04s62wR0",
+    startDate: "2026-08-07T00:00:00Z",
+    endDate: "2026-09-29T23:59:59Z",
+  },
+  {
     title: "September 2026 Feature Release Binaries - In Progress",
     description:
       "We are creating the September 2026 feature release binaries for Eclipse Temurin",
