@@ -11,19 +11,13 @@
     "coverage": "vitest run --coverage",
     "update-snapshots": "vitest --run -u",
     "lint": "eslint .",
-    "generate:api-types": "openapi-typescript && prettier --write src/types/adoptiumApiTypes.ts src/types/marketplaceApiTypes.ts",
-    "cf:build": "opennextjs-cloudflare build && cp -r .open-next/server-functions/default/content .open-next/content",
-    "preview": "npm run cf:build && opennextjs-cloudflare preview",
-    "deploy": "wrangler deploy",
-    "versions:upload": "wrangler versions upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "generate:api-types": "openapi-typescript && prettier --write src/types/adoptiumApiTypes.ts src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
     "@asciidoctor/core": "^4.1.1",
     "@headlessui/react": "^2.2.10",
     "@highcharts/react": "^5.3.0",
     "@next/third-parties": "16.4.0",
-    "@opennextjs/cloudflare": "^1.20.10",
     "axios": "^1.20.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
