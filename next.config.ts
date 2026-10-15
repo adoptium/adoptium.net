@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["@asciidoctor/core"],
   experimental: {
     turbopackFileSystemCacheForDev: true,
+    useTypeScriptCli: true,
   },
   images: {
     unoptimized: true,
