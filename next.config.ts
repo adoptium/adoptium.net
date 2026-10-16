@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["@asciidoctor/core"],
   experimental: {
     turbopackFileSystemCacheForDev: true,
+    useTypeScriptCli: true,
   },
   images: {
     unoptimized: true,
@@ -131,5 +132,3 @@ const nextConfig: NextConfig = {
 
 const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);
-
-import("@opennextjs/cloudflare").then((m) => m.initOpenNextCloudflareForDev());

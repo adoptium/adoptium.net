@@ -105,7 +105,6 @@ opportunities. At minimum cover, where present:
 - `@headlessui/react`
 - `swiper`
 - `highcharts` and `highcharts-react-official`
-- `@opennextjs/cloudflare`
 - `next-mdx-remote`
 - `gsap`
 - `react-slick` / `slick-carousel`

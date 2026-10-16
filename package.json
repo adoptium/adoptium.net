@@ -7,23 +7,18 @@
     "dev": "next dev",
     "postbuild": "node scripts/build-search-index.mjs",
     "start": "next start",
+    "typecheck": "node node_modules/typescript7/bin/tsc --noEmit",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "update-snapshots": "vitest --run -u",
     "lint": "eslint .",
-    "generate:api-types": "openapi-typescript && prettier --write src/types/adoptiumApiTypes.ts src/types/marketplaceApiTypes.ts",
-    "cf:build": "opennextjs-cloudflare build && cp -r .open-next/server-functions/default/content .open-next/content",
-    "preview": "npm run cf:build && opennextjs-cloudflare preview",
-    "deploy": "wrangler deploy",
-    "versions:upload": "wrangler versions upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "generate:api-types": "openapi-typescript && prettier --write src/types/adoptiumApiTypes.ts src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
     "@asciidoctor/core": "^4.1.1",
     "@headlessui/react": "^2.2.10",
     "@highcharts/react": "^5.3.0",
     "@next/third-parties": "16.4.0",
-    "@opennextjs/cloudflare": "^1.20.10",
     "axios": "^1.20.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
@@ -88,13 +83,15 @@
     "prettier": "^3.9.10",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
+    "typescript7": "npm:typescript@^7.0.2",
     "vitest": "^5.0.2",
     "vitest-axe": "^0.1.0",
     "wrangler": "^4.149.0"
   },
   "overrides": {
     "openapi-typescript": {
-      "typescript": "^6.0.0"
-    }
+      "typescript": "^6.0.3"
+    },
+    "whatwg-url": "17.2.0"
   }
 }
