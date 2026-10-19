@@ -23,7 +23,7 @@
     "@headlessui/react": "^2.2.10",
     "@highcharts/react": "^5.4.0",
     "@next/third-parties": "16.4.2",
-    "@opennextjs/cloudflare": "^1.20.10",
+    "@opennextjs/cloudflare": "^1.20.12",
     "axios": "^1.20.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.15.0",
