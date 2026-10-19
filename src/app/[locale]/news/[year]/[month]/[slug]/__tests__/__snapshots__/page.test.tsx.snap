@@ -179,7 +179,6 @@ exports[`NewsArticlePage > renders article when post exists 1`] = `
             <button
               aria-label="Share on Linkedin"
               class="react-share__ShareButton mr-2"
-              source="https://adoptium.net"
               style="background-color: transparent; border: medium; padding: 0px; display: inline-flex; border-radius: 0px; outline-offset: 2px; font: inherit; color: inherit; cursor: pointer;"
               type="button"
             >

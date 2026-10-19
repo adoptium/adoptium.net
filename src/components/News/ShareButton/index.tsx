@@ -47,7 +47,7 @@ const ShareButton: React.FC<ShareButtonProps> = (props) => {
         aria-label="Share on X (Twitter)"
         url={url}
         className="mr-2"
-        title={post.title}
+        text={post.title}
         hashtags={post.tags}
         related={twitter}
       >
@@ -58,8 +58,6 @@ const ShareButton: React.FC<ShareButtonProps> = (props) => {
         aria-label="Share on Linkedin"
         url={url}
         className="mr-2"
-        title={post.title}
-        source={siteMetadata.siteUrl}
       >
         <FaLinkedin size={25} />
       </LinkedinShareButton>
@@ -76,7 +74,7 @@ const ShareButton: React.FC<ShareButtonProps> = (props) => {
         aria-label="Share on Reddit"
         url={url}
         className="mr-2"
-        title={post.title}
+        shareTitle={post.title}
       >
         <FaReddit size={25} />
       </RedditShareButton>
@@ -85,7 +83,7 @@ const ShareButton: React.FC<ShareButtonProps> = (props) => {
         aria-label="Share on Bluesky"
         url={url}
         className="mr-2"
-        title={post.title}
+        text={post.title}
       >
         <FaBluesky size={25} />
       </BlueskyShareButton>
