@@ -65,9 +65,7 @@ If you cannot upgrade right away, the OpenJDK advisory describes interim mitigat
 
 Full details for each release are in the [Temurin release notes](https://adoptium.net/temurin/release-notes/).
 
-
 > When available, download and install an updated runtime from your preferred vendor. The runtime’s release note should document that it fixes issue JDK-8395690, CVE 2026-114820.
-
 
 ## How Can You Help
 
