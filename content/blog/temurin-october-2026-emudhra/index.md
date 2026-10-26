@@ -15,7 +15,7 @@ The private keys of several eMudhra intermediate CA certificates have been compr
 
 If you can wait for these releases, upgrading is the simplest and recommended mitigation.  However, there is other helpful guidance to mitigate this issue.  Please see the guidance at https://openjdk.org/emudhra with a caveat regarding the CheckCerts.java file provided.  It is specific to a particular implementation of a fix and checks for roots that were not compromised.
 
-```
+```java
 // Other eMudhra roots, not related to the compromised intermediates
         "emSign Root CA - G1",
         "emSign Root CA - G2"
@@ -43,6 +43,7 @@ You can also use the `CheckCerts` tool from the [OpenJDK advisory](https://openj
 ## Which Temurin versions contain the fix?
 
 Releases produced as part of the October 2026 release activities have a fix for the eMudhra issue.  The versions of Temurin with a fix are:
+
 - JDK 27.0.1.0.2+1
 - JDK 25.0.5+8
 - JDK 21.0.13+9
@@ -53,19 +54,20 @@ Releases produced as part of the October 2026 release activities have a fix for 
 The Temurin binaries that we released last week for JDK 25 and JDK 21 have been fixed by updating our certdata.txt to the NSS_3_131_1_RTM nss tag via [temurin-build/pull/4587](https://github.com/adoptium/temurin-build/pull/4587).  Temurin differs from upstream OpenJDK in that Temurin binaries use Mozilla certs and with the 3.131.1 nss release of the certs data, the root certs that signed compromised intermediate certs have been removed from the trust store.
 
 We will be delivering binaries out of our various distribution channels:
+
 - Binaries are available from the [Temurin download page](https://adoptium.net/temurin/releases)
 - Installable packages are updated at the same time as the binaries, follow instructions from [Adoptium package repositories](https://adoptium.net/installation/) documentation.
 - Container images are available once all of the binaries of a particular JDK version are published and can be found at [Docker Hub](https://hub.docker.com/_/eclipse-temurin).
 
-If you cannot upgrade right away, the OpenJDK advisory describes interim mitigations. 
+If you cannot upgrade right away, the OpenJDK advisory describes interim mitigations.
 
 ## Release notes
 
 Full details for each release are in the [Temurin release notes](https://adoptium.net/temurin/release-notes/).
 
-```
-When available, download and install an updated runtime from your preferred vendor. The runtime’s release note should document that it fixes issue JDK-8395690, CVE 2026-114820.
-```
+
+> When available, download and install an updated runtime from your preferred vendor. The runtime’s release note should document that it fixes issue JDK-8395690, CVE 2026-114820.
+
 
 ## How Can You Help
 
