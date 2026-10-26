@@ -9,7 +9,7 @@ tags:
   - announcement
 ---
 
-The private keys of several eMudhra intermediate CA certificates have been compromised. Details are in the [public disclosure](https://we-have-a-problem.com) and the [OpenJDK advisory](https://openjdk.org/emudhra). Java runtimes that still trust the affected roots could accept fraudulent certificates for TLS connections, and potentially signed code.
+The private keys of several eMudhra intermediate CA certificates have been compromised. Details are in the [public disclosure](https://emudhra.we-have-a-problem.com/) and the [OpenJDK advisory](https://openjdk.org/emudhra). Java runtimes that still trust the affected roots could accept fraudulent certificates for TLS connections, and potentially signed code.
 
 **The October 2026 Eclipse Temurin releases address this issue.** We are actively releasing binaries with the fix for the eMudhra compromise. JDK 27, JDK 25, JDK 21, and JDK 17 release pipelines have been launched and binaries are published as testing completes.  You can keep track of the progress by following the [October 2026 release status issue](https://github.com/adoptium/temurin/issues/317).  As of October 26, 2026, we are awaiting the upstream build tags to be available in order to launch release pipelines for JDK 8 and JDK 11.
 
@@ -36,7 +36,7 @@ The updated OpenJDK advisory and its `CheckCerts` tool now flag four eMudhra-rel
 
 ## Verifying your runtime
 
-Run the Temurin installation that runs your application against the test hosts documented at [we-have-a-problem.com](https://we-have-a-problem.com). A protected runtime must reject every test certificate chain. Also confirm that ordinary HTTPS connections still succeed. These checks cover the TLS-issuing intermediates. They do not independently validate Java signed-code handling of the two code-signing intermediates.
+Run the Temurin installation that runs your application against the test hosts documented at [emudhra.we-have-a-problem.com](https://emudhra.we-have-a-problem.com/). A protected runtime must reject every test certificate chain. Also confirm that ordinary HTTPS connections still succeed. These checks cover the TLS-issuing intermediates. They do not independently validate Java signed-code handling of the two code-signing intermediates.
 
 You can also use the `CheckCerts` tool from the [OpenJDK advisory](https://openjdk.org/emudhra) to list any affected roots in your runtime's trust store, bearing in mind the note regarding the eMudhra root, `emSign Root CA - G1`, not related to the compromised intermediates.
 
