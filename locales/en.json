@@ -41,6 +41,9 @@
     "back-to-home": "Back to Home"
   },
   "Marketplace": {
+    "intro": "Compare and download Java builds from trusted vendors.",
+    "load-error": "We couldn't load the Java distributions. Please try again.",
+    "retry": "Try again",
     "title": "Adoptium® Marketplace",
     "subtitle": "Marketplace",
     "description": "Java™ is the world's leading programming language and platform. The Adoptium Marketplace promotes high-quality, TCK certified and AQAvit verified runtimes for use across the Java ecosystem.",
@@ -48,6 +51,12 @@
       "vendors-selected": "{selected} of {total} vendors selected"
     },
     "Releases": {
+      "loading": "Loading Java distributions...",
+      "empty-title": "No distributions found",
+      "empty-description": "No Java distributions match your filters. Try another combination or reset the filters.",
+      "reset-filters": "Reset filters",
+      "view-checksum": "View checksum",
+      "result-count": "{count, plural, one {# distribution} other {# distributions}}",
       "download": "Download",
       "build-date": "Build Date",
       "vendor": "Vendor"
@@ -163,11 +172,32 @@
     "see-all-news": "See all news",
     "read-more": "Read More"
   },
+  "Testimonials": {
+    "title": "Built together. Trusted worldwide."
+  },
   "WGProjects": {
+    "intro": "From your first build to production insights. Meet the open source projects behind the Java experience.",
+    "explore-project": "Explore project",
+    "projects": {
+      "temurin": {
+        "category": "Run",
+        "description": "Production-ready OpenJDK builds. Free to use, rigorously tested, and trusted by millions."
+      },
+      "aqavit": {
+        "category": "Verify",
+        "description": "Open source quality testing that puts Java runtimes through their paces."
+      },
+      "mission-control": {
+        "category": "Understand",
+        "description": "Profile, monitor, and understand your Java applications with powerful diagnostic tools."
+      }
+    },
     "discover-all-our-projects": "Discover all our projects",
     "description": "Eclipse Adoptium provides runtime binaries that are high performance, enterprise-caliber, cross-platform, open-source licensed, Java SE TCK-tested and compliant for general use across the Java ecosystem. Eclipse Adoptium also provides artifacts including open-source infrastructure as code, a comprehensive continuous integration build and test farm, and extensive quality assurance tests. These artifacts may be used by Eclipse Adoptium projects and other runtime technology builders to ensure the provision of secure, Java SE TCK-tested and compliant, production-ready runtimes."
   },
   "LogoCarousel": {
+    "pause": "Pause logo carousel",
+    "play": "Play logo carousel",
     "title": "Temurin is trusted by millions, including these leading adopters:"
   },
   "ChecksumModal": {
@@ -179,6 +209,15 @@
     "copy": "Copy"
   },
   "TemurinReleases": {
+    "quick-downloads": "Quick downloads",
+    "all-builds": "All platforms and packages",
+    "download-package": "Download {os} package",
+    "download": "Download",
+    "load-error": "We couldn't load the releases. Please try again.",
+    "retry": "Try again",
+    "invalid-filters": "Some filters are unavailable. Showing supported options instead.",
+    "loading": "Loading releases...",
+    "no-downloads": "No downloads are available for this package type.",
     "title": "Download Temurin® JDK",
     "latest-releases": "Latest Releases",
     "description": "Pick a version, package type, JDK/JRE, and download the binaries."

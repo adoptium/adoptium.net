@@ -1,64 +1,52 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`VersionSelector component > renders correctly 1`] = `
+exports[`Version selection > renders correctly 1`] = `
 <div>
   <div
-    class="w-full max-w-[1264px] mx-auto "
+    aria-label="Text"
+    class="flex flex-wrap gap-2"
+    role="group"
   >
-    <div
-      class="relative min-w-full w-full overflow-auto md:overflow-visible"
+    <button
+      aria-pressed="false"
+      class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+      data-testid="version-tab"
+      type="button"
     >
-      <span
-        class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-0 z-[-1]"
-      />
-      <div
-        class="flex space-x-10 whitespace-nowrap lg:justify-center py-3"
-      >
-        <button
-          data-testid="version-tab"
-        >
-          <span
-            class="py-3 w-full text-base font-normal leading-6 
-            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
-          >
-            All Versions
-          </span>
-        </button>
-        <button
-          data-testid="version-tab"
-        >
-          <span
-            class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-          >
-            JDK 
-            8
-          </span>
-        </button>
-        <button
-          data-testid="version-tab"
-        >
-          <span
-            class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-          >
-            JDK 
-            11
-          </span>
-        </button>
-        <button
-          data-testid="version-tab"
-        >
-          <span
-            class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-          >
-            JDK 
-            17
-          </span>
-        </button>
-      </div>
-    </div>
+      <span>
+        Text
+      </span>
+    </button>
+    <button
+      aria-pressed="false"
+      class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+      data-testid="version-tab"
+      type="button"
+    >
+      <span>
+        JDK 25 - LTS
+      </span>
+    </button>
+    <button
+      aria-pressed="true"
+      class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-pink/50 bg-pink/10 text-[#ff91b7]"
+      data-testid="version-tab"
+      type="button"
+    >
+      <span>
+        JDK 21 - LTS
+      </span>
+    </button>
+    <button
+      aria-pressed="false"
+      class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+      data-testid="version-tab"
+      type="button"
+    >
+      <span>
+        JDK 17 - LTS
+      </span>
+    </button>
   </div>
 </div>
 `;

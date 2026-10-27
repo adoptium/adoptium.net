@@ -1,6 +1,7 @@
 [
   {
     "name": "Accenture",
+    "logoDisplay": { "maxWidth": 128 },
     "logo": "adopters/logo-accenture.svg",
     "url": "https://www.accenture.com",
     "tier": "adopter",
@@ -22,6 +23,7 @@
   },
   {
     "name": "Arm",
+    "logoDisplay": { "maxWidth": 88 },
     "logo": "adopters/logo-arm.svg",
     "logoPadding": "1em",
     "url": "https://www.arm.com/",
@@ -142,6 +144,7 @@
   },
   {
     "name": "Michelin",
+    "logoDisplay": { "height": 64 },
     "logo": "adopters/logo-michelin.svg",
     "url": "https://opensource.michelin.io/",
     "tier": "adopter",
@@ -150,6 +153,7 @@
   },
   {
     "name": "Microsoft",
+    "logoDisplay": { "src": "members/microsoft.svg", "monochrome": true },
     "logo": "adopters/logo-microsoft.svg",
     "url": "https://microsoft.com/",
     "tier": "adopter",
@@ -165,6 +169,7 @@
   },
   {
     "name": "MongoDB",
+    "logoDisplay": { "maxWidth": 128 },
     "logo": "adopters/logo-mongodb.svg",
     "url": "https://mongodb.com/",
     "tier": "adopter",
@@ -194,6 +199,7 @@
   },
   {
     "name": "Red Hat",
+    "logoDisplay": { "maxWidth": 128 },
     "logo": "adopters/Logo-RedHat-A-Color-RGB.svg",
     "url": "https://developers.redhat.com",
     "tier": "adopter",
@@ -224,6 +230,7 @@
   },
   {
     "name": "T-Systems",
+    "logoDisplay": { "maxWidth": 128 },
     "logo": "adopters/logo-t-systems.svg",
     "url": "https://www.t-systems.com/",
     "tier": "adopter",

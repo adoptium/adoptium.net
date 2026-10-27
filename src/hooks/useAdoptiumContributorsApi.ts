@@ -28,7 +28,7 @@ const repositories = [
 ];
 
 // List of users to exclude from random contributor
-const excludedContributors = [
+const excludedContributors = new Set([
   "dependabot-preview[bot]",
   "dependabot[bot]",
   "github-actions[bot]",
@@ -36,7 +36,9 @@ const excludedContributors = [
   "eclipse-otterdog[bot]",
   "copilot[bot]",
   "github-copilot[bot]",
-];
+  "copilot",
+  "github-copilot",
+]);
 
 /**
  * Parses "Link" response header from node/contributors API
@@ -78,21 +80,16 @@ async function getMaxContributors(
 
   // this call is used to know how many contributors there are in this repo
   // check the Link header to compute first and last
-  const linksHeaderValue = await axios
-    .get(repositoryURI)
-    .then(function (response) {
-      return response.headers.link;
-    })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    .catch(function (error) {
-      return undefined;
-    });
+  const response = await axios.get<ContributorApiResponse[]>(repositoryURI);
+  const linksHeaderValue = response.headers.link;
 
-  if (linksHeaderValue) {
+  if (typeof linksHeaderValue === "string") {
     const links = linkParser(linksHeaderValue);
-    const randomPage =
-      Math.floor(Math.random() * Math.floor(links.last.page)) + 1;
-    return [randomPage, links.last.page];
+    if (links.last) {
+      const randomPage =
+        Math.floor(Math.random() * Math.floor(links.last.page)) + 1;
+      return [randomPage, links.last.page];
+    }
   }
 
   throw new Error("Failed to get amount of max contributors");
@@ -109,21 +106,23 @@ async function getContributor(
 ): Promise<Contributor | null> {
   const repositoryURI = `https://api.github.com/repos/adoptium/${repository}/contributors?per_page=1&page=${randomPage}`;
 
-  const contributor = await axios
-    .get(repositoryURI)
-    .then(function (response) {
-      return response.data[0] as ContributorApiResponse;
-    })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    .catch(function (error) {
-      return undefined;
-    });
+  const { data } = await axios.get<ContributorApiResponse[]>(repositoryURI);
+  const contributor = data[0];
 
   if (
     !contributor ||
     !contributor.login ||
     !contributor.avatar_url ||
     !contributor.html_url
+  ) {
+    return null;
+  }
+
+  if (
+    contributor.type !== "User" ||
+    /\[bot\]$/i.test(contributor.login) ||
+    excludedContributors.has(contributor.login.toLowerCase()) ||
+    contributor.html_url.startsWith("https://github.com/apps/")
   ) {
     return null;
   }
@@ -182,7 +181,7 @@ async function fetchRandomContributor() {
       // get fresh data
       const [randomPageUpdate, lastPageUpdate] =
         await getMaxContributors(repository);
-      if (!randomPageUpdate || !lastPageUpdate) return null;
+      maxContributors = lastPageUpdate;
 
       if (window.localStorage) {
         window.localStorage.setItem(wlsFetchDate, String(Date.now()));
@@ -197,20 +196,24 @@ async function fetchRandomContributor() {
     // get a random contributor from the repo
     let contributor = await getContributor(repository, randomPage);
 
-    // retry if the contributor is in the excluded list (or an error occurred)
+    // Retry filtered accounts without ever returning an ineligible candidate.
     let maxAttempts = 2;
 
-    while (
-      (!contributor || excludedContributors.includes(contributor.login)) &&
-      maxAttempts-- > 0
-    ) {
+    while (!contributor && maxAttempts-- > 0) {
       randomPage =
         Math.floor(Math.random() * Math.floor(maxContributors || 1)) + 1;
       contributor = await getContributor(repository, randomPage);
     }
 
+    if (!contributor) {
+      console.warn(
+        "No eligible human contributor found for repository:",
+        repository,
+      );
+    }
     return contributor;
-  } catch {
+  } catch (error) {
+    console.error("Error fetching contributor:", error);
     return null;
   }
 }

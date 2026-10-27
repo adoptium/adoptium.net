@@ -6,9 +6,6 @@ exports[`Footer component > renders correctly 1`] = `
     class="bg-[#0b0024] border-t border-white/10 relative overflow-hidden"
   >
     <div
-      class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink via-purple to-blue opacity-50"
-    />
-    <div
       class="absolute -top-[400px] -right-[400px] w-[800px] h-[800px] bg-purple/20 rounded-full blur-3xl pointer-events-none"
     />
     <div

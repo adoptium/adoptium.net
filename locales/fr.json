@@ -41,6 +41,9 @@
     "back-to-home": "Retour à l'accueil"
   },
   "Marketplace": {
+    "intro": "Comparez et téléchargez des distributions Java de fournisseurs de confiance.",
+    "load-error": "Impossible de charger les distributions Java. Veuillez réessayer.",
+    "retry": "Réessayer",
     "title": "Marketplace Adoptium®",
     "subtitle": "Marketplace",
     "description": "Java™ est le principal langage et plateforme de programmation au monde. Le Marketplace Adoptium promeut des runtimes de haute qualité, certifiés TCK et vérifiés AQAvit pour une utilisation dans l’écosystème Java.",
@@ -48,6 +51,12 @@
       "vendors-selected": "{selected} sur {total} fournisseurs sélectionnés"
     },
     "Releases": {
+      "loading": "Chargement des distributions Java...",
+      "empty-title": "Aucune distribution trouvée",
+      "empty-description": "Aucune distribution Java ne correspond à vos filtres. Essayez une autre combinaison ou réinitialisez les filtres.",
+      "reset-filters": "Réinitialiser les filtres",
+      "view-checksum": "Afficher la somme de contrôle",
+      "result-count": "{count, plural, one {# distribution} other {# distributions}}",
       "download": "Télécharger",
       "build-date": "Date de création",
       "vendor": "Fournisseur"
@@ -163,11 +172,32 @@
     "see-all-news": "Voir toutes les actualités",
     "read-more": "Lire la suite"
   },
+  "Testimonials": {
+    "title": "Développé ensemble. Reconnu dans le monde entier."
+  },
   "WGProjects": {
+    "intro": "De votre première compilation à l'analyse en production. Découvrez les projets open source qui accompagnent votre expérience Java.",
+    "explore-project": "Explorer le projet",
+    "projects": {
+      "temurin": {
+        "category": "Exécuter",
+        "description": "Des distributions OpenJDK prêtes pour la production. Gratuites, rigoureusement testées et utilisées par des millions de personnes."
+      },
+      "aqavit": {
+        "category": "Vérifier",
+        "description": "Des tests de qualité open source qui mettent les environnements d'exécution Java à l'épreuve."
+      },
+      "mission-control": {
+        "category": "Comprendre",
+        "description": "Analysez, surveillez et comprenez vos applications Java grâce à de puissants outils de diagnostic."
+      }
+    },
     "discover-all-our-projects": "Découvrez tous nos projets",
     "description": "Eclipse Adoptium fournit des binaires d'exécution haute performance, de niveau entreprise, multiplateformes, sous licence open source, testés et conformes au TCK de Java SE pour une utilisation générale dans l'écosystème Java. Eclipse Adoptium fournit également des artefacts tels que de l'infrastructure en tant que code open source, une ferme complète d'intégration continue pour la construction et les tests, ainsi que de nombreux tests d'assurance qualité. Ces artefacts peuvent être utilisés par les projets Eclipse Adoptium ou par d'autres fournisseurs de technologies d'exécution afin d'assurer des runtimes sécurisés, testés avec le TCK de Java SE et prêts pour la production."
   },
   "LogoCarousel": {
+    "pause": "Mettre le carrousel de logos en pause",
+    "play": "Lancer le carrousel de logos",
     "title": "Temurin est approuvé par des millions d'utilisateurs, y compris ces principaux adopteurs :"
   },
   "ChecksumModal": {
@@ -179,6 +209,15 @@
     "copy": "Copier"
   },
   "TemurinReleases": {
+    "quick-downloads": "Téléchargements rapides",
+    "all-builds": "Toutes les plateformes et tous les paquets",
+    "download-package": "Télécharger le paquet pour {os}",
+    "download": "Télécharger",
+    "load-error": "Impossible de charger les versions. Veuillez réessayer.",
+    "retry": "Réessayer",
+    "invalid-filters": "Certains filtres ne sont pas disponibles. Les options compatibles sont affichées.",
+    "loading": "Chargement des versions...",
+    "no-downloads": "Aucun téléchargement n'est disponible pour ce type de paquet.",
     "title": "Télécharger le JDK Temurin®",
     "latest-releases": "Dernières versions",
     "description": "Choisissez une version, un type de paquet, JDK/JRE, et téléchargez les binaires."

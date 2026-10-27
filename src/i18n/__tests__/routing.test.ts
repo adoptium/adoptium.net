@@ -11,15 +11,16 @@ const expectedLocales = JSON.parse(
 
 // Mock next-intl functions
 const mockDefineRouting = vi.fn();
-const mockCreateNavigation = vi.fn();
 
 vi.mock("next-intl/routing", () => ({
   defineRouting: mockDefineRouting,
 }));
 
-vi.mock("next-intl/navigation", () => ({
-  createNavigation: mockCreateNavigation,
-}));
+vi.mock("next-intl/navigation", () => {
+  throw new Error(
+    "Shared routing configuration must not import navigation helpers",
+  );
+});
 
 describe("i18n/routing", () => {
   beforeAll(() => {
@@ -29,24 +30,16 @@ describe("i18n/routing", () => {
       defaultLocale: "en",
       localePrefix: "as-needed",
     });
-
-    mockCreateNavigation.mockReturnValue({
-      Link: "MockedLink",
-      redirect: vi.fn(),
-      usePathname: vi.fn(),
-      useRouter: vi.fn(),
-    });
   });
 
-  it("should initialize routing and navigation", async () => {
-    const routingModule = await import("../routing");
+  it("initializes routing without importing navigation", async () => {
+    await import("../routing");
 
     expect(mockDefineRouting).toHaveBeenCalledWith({
       locales: expectedLocales,
       defaultLocale: "en",
       localePrefix: "as-needed",
     });
-    expect(mockCreateNavigation).toHaveBeenCalledWith(routingModule.routing);
   });
 
   it("should export routing configuration", async () => {
@@ -60,14 +53,9 @@ describe("i18n/routing", () => {
     expect(routing.localePrefix).toBe("as-needed");
   });
 
-  it("should export navigation functions", async () => {
-    const { Link, redirect, usePathname, useRouter } =
-      await import("../routing");
-
-    expect(Link).toBeDefined();
-    expect(redirect).toBeDefined();
-    expect(usePathname).toBeDefined();
-    expect(useRouter).toBeDefined();
+  it("exports only shared routing configuration", async () => {
+    const routingModule = await import("../routing");
+    expect(Object.keys(routingModule)).toEqual(["routing"]);
   });
 
   it("should include all expected locales", async () => {

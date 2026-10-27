@@ -281,7 +281,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0b0024] border-t border-white/10 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink via-purple to-blue opacity-50"></div>
       <div className="absolute -top-[400px] -right-[400px] w-[800px] h-[800px] bg-purple/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="mx-auto max-w-screen-xl px-4 py-12 md:py-20 sm:px-6 lg:px-8 relative z-10">

@@ -41,6 +41,9 @@
     "back-to-home": "ホームに戻る"
   },
   "Marketplace": {
+    "intro": "信頼できるベンダーのJavaビルドを比較してダウンロードできます。",
+    "load-error": "Javaディストリビューションを読み込めませんでした。もう一度お試しください。",
+    "retry": "再試行",
     "title": "Adoptium® マーケットプレイス",
     "subtitle": "マーケットプレイス",
     "description": "Java™は世界をリードするプログラミング言語およびプラットフォームです。Adoptiumマーケットプレイスは、Javaエコシステム全体で使用するための高品質でTCK認定済み、AQAvit検証済みのランタイムを提供しています。",
@@ -48,6 +51,12 @@
       "vendors-selected": "{total}社中{selected}社のベンダーが選択されています"
     },
     "Releases": {
+      "loading": "Javaディストリビューションを読み込み中...",
+      "empty-title": "ディストリビューションが見つかりません",
+      "empty-description": "フィルターに一致するJavaディストリビューションはありません。別の組み合わせを試すか、フィルターをリセットしてください。",
+      "reset-filters": "フィルターをリセット",
+      "view-checksum": "チェックサムを表示",
+      "result-count": "{count} 件のディストリビューション",
       "download": "ダウンロード",
       "build-date": "ビルド日",
       "vendor": "ベンダー"
@@ -163,11 +172,32 @@
     "see-all-news": "すべてのニュースを見る",
     "read-more": "続きを読む"
   },
+  "Testimonials": {
+    "title": "共に築き、世界に信頼される。"
+  },
   "WGProjects": {
+    "intro": "最初のビルドから本番環境の分析まで。Java体験を支えるオープンソースプロジェクトをご紹介します。",
+    "explore-project": "プロジェクトを見る",
+    "projects": {
+      "temurin": {
+        "category": "実行",
+        "description": "本番環境に対応したOpenJDKビルド。無料で利用でき、厳格なテストを経て、世界中の多くのユーザーに信頼されています。"
+      },
+      "aqavit": {
+        "category": "検証",
+        "description": "Javaランタイムを徹底的に検証するオープンソースの品質テスト。"
+      },
+      "mission-control": {
+        "category": "分析",
+        "description": "強力な診断ツールでJavaアプリケーションをプロファイリング、監視、分析できます。"
+      }
+    },
     "discover-all-our-projects": "すべてのプロジェクトを発見する",
     "description": "Eclipse Adoptiumは、高性能でエンタープライズグレード、クロスプラットフォーム、オープンソースライセンス、Java SE TCKテスト済みで準拠した、Javaエコシステムでの一般使用向けランタイムバイナリを提供します。Eclipse Adoptiumはまた、オープンソースのInfrastructure as Code、包括的な継続的インテグレーションビルドおよびテストファーム、広範な品質保証テストなどの成果物も提供します。これらの成果物は、Eclipse Adoptiumプロジェクトやその他のランタイムテクノロジービルダーが、セキュアでJava SE TCKテスト済みで準拠した本番環境対応ランタイムの提供を確保するために使用できます。"
   },
   "LogoCarousel": {
+    "pause": "ロゴのカルーセルを一時停止",
+    "play": "ロゴのカルーセルを再生",
     "title": "Temurinは、これらの主要な採用企業を含む数百万人に信頼されています："
   },
   "ChecksumModal": {
@@ -179,6 +209,15 @@
     "copy": "コピー"
   },
   "TemurinReleases": {
+    "quick-downloads": "クイックダウンロード",
+    "all-builds": "すべてのプラットフォームとパッケージ",
+    "download-package": "{os}用パッケージをダウンロード",
+    "download": "ダウンロード",
+    "load-error": "リリースを読み込めませんでした。もう一度お試しください。",
+    "retry": "再試行",
+    "invalid-filters": "一部のフィルターは利用できません。対応するオプションを表示しています。",
+    "loading": "リリースを読み込み中...",
+    "no-downloads": "このパッケージタイプのダウンロードはありません。",
     "title": "Temurin® JDKをダウンロード",
     "latest-releases": "最新リリース",
     "description": "バージョン、パッケージタイプ、JDK/JREを選択してバイナリをダウンロードしてください。"

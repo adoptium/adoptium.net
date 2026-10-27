@@ -3,154 +3,480 @@
 exports[`TemurinIndex page > renders correctly 1`] = `
 <div>
   <section
-    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#14003c] pt-20 pb-10"
+    class="relative isolate overflow-hidden bg-purple text-white"
   >
     <div
-      class="absolute inset-0 z-0"
-    >
-      <div
-        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#ff1365] rounded-full blur-[120px] opacity-10 animate-pulse"
-      />
-      <div
-        class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#7026b9] rounded-full blur-[120px] opacity-10 animate-pulse delay-1000"
-      />
-    </div>
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_15%,#7026b933,transparent_55%),radial-gradient(ellipse_at_10%_35%,#ff136514,transparent_50%)]"
+    />
     <div
-      class="absolute inset-0 z-0 hidden md:flex items-start justify-center pointer-events-none"
-      style="y: 0px; opacity: 0; scale: 0;"
+      class="mx-auto max-w-7xl px-6 pt-10 sm:px-8 lg:pt-12"
     >
       <div
-        class="relative w-[1000px] h-[1000px] -mt-32"
+        class="grid items-center gap-10 pb-12 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:pb-16"
       >
-        <img
-          alt="Temurin Logo Background"
-          class="object-contain"
-          sizes="1000px"
-          src="/images/backgrounds/temurin-hero-img.png"
-        />
-      </div>
-    </div>
-     
-    <div
-      class="container mx-auto px-4 z-10 flex flex-col items-center text-center justify-center"
-    >
-      <div>
-        <h1
-          class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-[20ch] mx-auto leading-tight"
-          style="text-wrap: balance;"
-        >
-          <span
-            class="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70"
+        <div>
+          <div
+            class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium tracking-wide text-grey"
+          >
+            <span
+              class="h-1.5 w-1.5 rounded-full bg-pink"
+            />
+            <span>
+              Eclipse Adoptium
+            </span>
+            <span
+              class="text-white/25"
+            >
+              /
+            </span>
+            <span>
+              OpenJDK
+            </span>
+          </div>
+          <h1
+            class="mb-5 text-6xl font-semibold leading-[0.98] tracking-[-0.06em] sm:text-7xl xl:text-[88px]"
+          >
+            Eclipse
+            <br />
+            <span
+              class="bg-gradient-to-r from-[#ff6b9e] via-[#ff1365] to-[#c770f0] bg-clip-text text-transparent"
+            >
+              Temurin
+            </span>
+            <sup
+              class="ml-1 align-top text-2xl leading-[2] tracking-normal text-pink"
+            >
+              ®
+            </sup>
+          </h1>
+          <p
+            class="mb-4 max-w-lg text-xl font-medium leading-snug text-white sm:text-2xl"
           >
             Text
-          </span>
-          <span
-            class="text-[#ff1365]"
+          </p>
+          <p
+            class="mb-6 hidden max-w-lg text-base leading-relaxed text-grey sm:block"
           >
-            .
-          </span>
-        </h1>
-      </div>
-      <p
-        class="text-2xl md:text-3xl text-gray-300 max-w-3xl mb-12 font-normal leading-relaxed"
-      >
-        Text
-      </p>
-      <div
-        class="relative z-10 mb-12"
-      >
+            Text
+          </p>
+        </div>
         <div
-          class="flex flex-col items-center gap-6"
+          class="relative min-w-0"
         >
           <div
-            class="relative"
+            aria-hidden="true"
+            class="absolute -inset-6 -z-10 rounded-full bg-pink/10 blur-3xl"
+          />
+          <div
+            class="overflow-hidden rounded-3xl border border-white/15 bg-[#1c1040] shadow-2xl shadow-black/30"
+          >
+            <div
+              class="flex items-center justify-between border-b border-white/10 px-6 py-3"
+            >
+              <span
+                class="flex items-center gap-2 font-mono text-xs text-grey"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="4 17 10 11 4 5"
+                  />
+                  <line
+                    x1="12"
+                    x2="20"
+                    y1="19"
+                    y2="19"
+                  />
+                </svg>
+                 java
+              </span>
+              <span
+                class="rounded-full border border-pink/30 bg-pink/10 px-3 py-1 font-mono text-xs text-[#ff91b7]"
+              >
+                JDK 21 LTS
+              </span>
+            </div>
+            <div
+              class="relative hidden overflow-hidden bg-[#0d002a] px-6 py-3 sm:block sm:px-8"
+            >
+              <div
+                aria-hidden="true"
+                class="absolute right-4 top-4 h-20 w-40 opacity-[0.08]"
+              >
+                <img
+                  alt=""
+                  class="object-contain"
+                  sizes="160px"
+                  src="/images/projects/temurin-project.svg"
+                />
+              </div>
+              <pre
+                aria-hidden="true"
+                class="relative m-0 overflow-x-auto bg-transparent p-0 text-xs leading-5 text-grey"
+              >
+                <code>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                    void
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                     main() {
+
+                  </span>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                        String
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                    [] facts = {
+
+                  </span>
+                  <span
+                    class="text-[#a5e8ce]"
+                  >
+                            "Open source. Production-ready.",
+
+                  </span>
+                  <span
+                    class="text-[#a5e8ce]"
+                  >
+                            "Free to use. Built on OpenJDK."
+
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                        };
+
+                  </span>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                        for
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                     (
+                  </span>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                    var
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                     fact : facts) IO.
+                  </span>
+                  <span
+                    class="text-[#ff91b7]"
+                  >
+                    println
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                    (fact);
+}
+                  </span>
+                </code>
+              </pre>
+              <div
+                aria-hidden="true"
+                class="mt-4 border-t border-white/10 pt-3 font-mono text-xs text-grey"
+              >
+                <span
+                  class="mr-3 text-pink"
+                >
+                  $
+                </span>
+                 java Temurin.java
+                <div
+                  class="mt-2 leading-4 text-[#a5e8ce]"
+                >
+                  <div>
+                    Open source. Production-ready.
+                  </div>
+                  <div>
+                    Free to use. Built on OpenJDK.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="px-6 py-4"
+            >
+              <div
+                class="flex w-full flex-col gap-4"
+              >
+                <a
+                  class="group flex w-full items-center justify-between gap-3 rounded-xl bg-pink px-5 py-4 font-semibold text-white shadow-lg shadow-pink/15 transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  href="/temurin/releases"
+                >
+                  <span
+                    class="flex min-w-0 items-center gap-3"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0"
+                    >
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        />
+                        <polyline
+                          points="7 10 12 15 17 10"
+                        />
+                        <line
+                          x1="12"
+                          x2="12"
+                          y1="15"
+                          y2="3"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="text-base sm:text-lg"
+                    >
+                      Text
+                    </span>
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="shrink-0"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                    />
+                    <polyline
+                      points="7 10 12 15 17 10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="15"
+                      y2="3"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="flex flex-wrap items-center justify-between gap-3 text-xs text-grey"
+                >
+                  <span
+                    class="font-mono"
+                  >
+                    JDK 21 LTS
+                  </span>
+                  <a
+                    class="inline-flex items-center gap-1.5 text-white hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                    href="/temurin/releases"
+                  >
+                    <span>
+                      Text
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="5"
+                        x2="19"
+                        y1="12"
+                        y2="12"
+                      />
+                      <polyline
+                        points="12 5 19 12 12 19"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-grey"
           >
             <a
-              class="relative flex items-center justify-center gap-4 bg-gray-800/50 text-gray-500 px-10 py-5 rounded-full ring-1 ring-white/5 cursor-not-allowed"
-              href="#"
+              class="inline-flex items-center gap-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="/docs"
             >
-              <span
-                class="w-8 h-8 flex items-center justify-center opacity-50"
-              />
-              <span
-                class="text-xl font-bold leading-none"
-              >
+              <span>
                 Text
               </span>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </a>
+            <a
+              class="inline-flex items-center gap-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="/installation"
+            >
+              <span>
+                Text
+              </span>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
             </a>
           </div>
-          <a
-            class="text-sm text-gray-400 hover:text-[#ff1365] transition-colors duration-300 flex items-center gap-2 group"
-            href="/temurin/releases"
-          >
-            Text
-            <span
-              aria-hidden="true"
-              class="group-hover:translate-x-0.5 transition-transform"
-            >
-              →
-            </span>
-          </a>
         </div>
       </div>
       <div
-        class="w-full max-w-7xl mx-auto"
+        class="border-t border-white/10"
       >
         <div
-          class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
+          class="mx-auto w-full max-w-6xl py-8 lg:py-10"
         >
-          <h2
-            class="text-center text-xl font-normal leading-7 text-grey"
-          >
-            Text
-          </h2>
           <div
-            class="mt-6"
+            class="relative flex min-h-11 items-center justify-center px-12"
+          >
+            <h2
+              class="mb-0 text-center text-sm font-normal text-grey"
+            >
+              Text
+            </h2>
+            <button
+              aria-label="Text"
+              class="absolute right-0 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-grey transition-colors hover:border-white/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="16"
+                  width="4"
+                  x="6"
+                  y="4"
+                />
+                <rect
+                  height="16"
+                  width="4"
+                  x="14"
+                  y="4"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="mt-4"
             data-testid="react-slick-mock"
           >
-            <div
-              class="!flex items-center justify-center h-[100px] px-4"
-            >
-              <img
-                alt="Mock Adopter"
-                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
-                height="100"
-                src="/images/adopters/mock-adopter-white.svg"
-                style="padding: 1em;"
-                width="200"
-              />
+            <div>
+              <a
+                class="flex h-16 items-center justify-center rounded px-3 opacity-60 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink"
+                href="https://mock-adopter.example.com"
+              >
+                <span
+                  class="relative block w-full"
+                  style="max-width: 144px; height: 48px;"
+                >
+                  <img
+                    alt="Mock Adopter"
+                    class="object-contain"
+                    sizes="(max-width: 639px) 40vw, 144px"
+                    src="/images/adopters/mock-adopter-white.svg"
+                  />
+                </span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <div
-    class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
-  >
-    <h2
-      class="text-center text-xl font-normal leading-7 text-grey"
-    >
-      Text
-    </h2>
-    <div
-      class="mt-6"
-      data-testid="react-slick-mock"
-    >
-      <div
-        class="!flex items-center justify-center h-[100px] px-4"
-      >
-        <img
-          alt="Mock Adopter"
-          class="w-auto h-auto object-contain mx-auto max-h-[100px]"
-          height="100"
-          src="/images/adopters/mock-adopter-white.svg"
-          style="padding: 1em;"
-          width="200"
-        />
-      </div>
-    </div>
-  </div>
   <div
     class="bg-purple pt-16 pb-0"
   >

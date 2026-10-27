@@ -16,6 +16,27 @@
       "logoPadding": {
         "type": "string"
       },
+      "logoDisplay": {
+        "type": "object",
+        "description": "Optical sizing and asset overrides for featured adopter logos.",
+        "properties": {
+          "src": {
+            "type": "string"
+          },
+          "maxWidth": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "monochrome": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "url": {
         "type": "string",
         "pattern": "^https://[^\\s/$.?#].[^\\s]*$"

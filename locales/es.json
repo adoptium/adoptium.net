@@ -41,6 +41,9 @@
     "back-to-home": "Volver a la página principal"
   },
   "Marketplace": {
+    "intro": "Compara y descarga compilaciones de Java de proveedores de confianza.",
+    "load-error": "No se pudieron cargar las distribuciones de Java. Inténtalo de nuevo.",
+    "retry": "Intentar de nuevo",
     "title": "Marketplace Adoptium®",
     "subtitle": "Marketplace",
     "description": "Java™ es el principal lenguaje de programación y plataforma del mundo. El Marketplace de Adoptium promueve runtimes de alta calidad, certificados por TCK y verificados por AQAvit para su uso en todo el ecosistema Java.",
@@ -48,6 +51,12 @@
       "vendors-selected": "{selected} de {total} proveedores seleccionados"
     },
     "Releases": {
+      "loading": "Cargando distribuciones de Java...",
+      "empty-title": "No se encontraron distribuciones",
+      "empty-description": "Ninguna distribución de Java coincide con los filtros. Prueba otra combinación o restablece los filtros.",
+      "reset-filters": "Restablecer filtros",
+      "view-checksum": "Ver suma de comprobación",
+      "result-count": "{count, plural, one {# distribución} other {# distribuciones}}",
       "download": "Descargar",
       "build-date": "Fecha de compilación",
       "vendor": "Proveedor"
@@ -163,11 +172,32 @@
     "see-all-news": "Ver todas las noticias",
     "read-more": "Leer más"
   },
+  "Testimonials": {
+    "title": "Construido en comunidad. Reconocido en todo el mundo."
+  },
   "WGProjects": {
+    "intro": "Desde tu primera compilación hasta el análisis en producción. Conoce los proyectos de código abierto detrás de la experiencia Java.",
+    "explore-project": "Explorar proyecto",
+    "projects": {
+      "temurin": {
+        "category": "Ejecutar",
+        "description": "Compilaciones de OpenJDK listas para producción. Gratuitas, rigurosamente probadas y utilizadas por millones."
+      },
+      "aqavit": {
+        "category": "Verificar",
+        "description": "Pruebas de calidad de código abierto que evalúan a fondo los entornos de ejecución Java."
+      },
+      "mission-control": {
+        "category": "Comprender",
+        "description": "Analiza, supervisa y comprende tus aplicaciones Java con potentes herramientas de diagnóstico."
+      }
+    },
     "discover-all-our-projects": "Descubre todos nuestros proyectos",
     "description": "Eclipse Adoptium proporciona binarios de tiempo de ejecución que son de alto rendimiento, de nivel empresarial, multiplataforma, con licencia de código abierto, probados y compatibles con el TCK de Java SE para su uso general en todo el ecosistema Java. Eclipse Adoptium también proporciona artefactos como infraestructura como código de código abierto, un sistema integral de integración continua y pruebas, y pruebas exhaustivas de aseguramiento de calidad. Estos artefactos pueden ser utilizados por los proyectos de Eclipse Adoptium y otros desarrolladores de tecnologías de tiempo de ejecución para garantizar entornos seguros, probados con el TCK de Java SE y listos para producción."
   },
   "LogoCarousel": {
+    "pause": "Pausar el carrusel de logotipos",
+    "play": "Reproducir el carrusel de logotipos",
     "title": "Temurin cuenta con la confianza de millones de usuarios, incluidos estos líderes en adopción:"
   },
   "ChecksumModal": {
@@ -179,6 +209,15 @@
     "copy": "Copiar"
   },
   "TemurinReleases": {
+    "quick-downloads": "Descargas rápidas",
+    "all-builds": "Todas las plataformas y paquetes",
+    "download-package": "Descargar paquete para {os}",
+    "download": "Descargar",
+    "load-error": "No se pudieron cargar las versiones. Inténtalo de nuevo.",
+    "retry": "Intentar de nuevo",
+    "invalid-filters": "Algunos filtros no están disponibles. Se muestran opciones compatibles.",
+    "loading": "Cargando versiones...",
+    "no-downloads": "No hay descargas disponibles para este tipo de paquete.",
     "title": "Descargar Temurin® JDK",
     "latest-releases": "Últimas versiones",
     "description": "Elige una versión, tipo de paquete, JDK/JRE y descarga los binarios."
