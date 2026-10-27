@@ -3,7 +3,6 @@ import React from "react";
 import { Metadata } from "next";
 import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases";
 import HeroSection from "@/components/HeroSection";
-import LogoCarousel from "@/components/Logos/Carousel";
 import PowerOfTemurin from "@/components/PowerOfTemurin";
 import InstallationGuideCard from "@/components/Download/GuideCard";
 import ImageText from "@/components/ImageText";
@@ -21,7 +20,6 @@ export default async function TemurinPage() {
   return (
     <div>
       <HeroSection latestLTS={latestLTS} />
-      <LogoCarousel />
       <PowerOfTemurin />
       <InstallationGuideCard />
       <ImageText
