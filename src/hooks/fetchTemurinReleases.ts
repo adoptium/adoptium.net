@@ -13,11 +13,8 @@ export async function loadLatestAssets(
   if (os !== "any") params.os = os;
   if (architecture !== "any") params.architecture = architecture;
 
-  const raw: BinaryAssetView[] = await fetchLatestAssets(versionToUse, params)
-    .then((data) => data as unknown as BinaryAssetView[])
-    .catch(() => []);
-
-  const assets: TemurinAssets = [] as unknown as TemurinAssets;
+  const raw = await fetchLatestAssets(versionToUse, params);
+  const assets: TemurinAssets = [];
 
   raw.forEach((view) => {
     const imgType = (view.binary?.image_type ?? "").toUpperCase();

@@ -41,6 +41,9 @@
     "back-to-home": "返回首页"
   },
   "Marketplace": {
+    "intro": "比较并下载可信供应商提供的 Java 构建。",
+    "load-error": "无法加载 Java 发行版，请重试。",
+    "retry": "重试",
     "title": "Adoptium® 市场",
     "subtitle": "市场",
     "description": "Java™ 是全球领先的编程语言和平台。Adoptium 市场推广高质量、通过 TCK 认证且通过 AQAvit 验证的运行时，广泛用于 Java 生态系统。",
@@ -48,6 +51,12 @@
       "vendors-selected": "已选择 {selected} 个，共 {total} 个供应商"
     },
     "Releases": {
+      "loading": "正在加载 Java 发行版...",
+      "empty-title": "未找到发行版",
+      "empty-description": "没有符合筛选条件的 Java 发行版。请尝试其他组合或重置筛选条件。",
+      "reset-filters": "重置筛选条件",
+      "view-checksum": "查看校验和",
+      "result-count": "{count} 个发行版",
       "download": "下载",
       "build-date": "构建日期",
       "vendor": "供应商"
@@ -163,11 +172,32 @@
     "see-all-news": "查看所有新闻",
     "read-more": "阅读更多"
   },
+  "Testimonials": {
+    "title": "携手共建，全球信赖。"
+  },
   "WGProjects": {
+    "intro": "从首次构建到生产环境分析，了解支撑 Java 体验的开源项目。",
+    "explore-project": "探索项目",
+    "projects": {
+      "temurin": {
+        "category": "运行",
+        "description": "适用于生产环境的 OpenJDK 构建。免费使用、经过严格测试，深受数百万用户信赖。"
+      },
+      "aqavit": {
+        "category": "验证",
+        "description": "全面检验 Java 运行时的开源质量测试。"
+      },
+      "mission-control": {
+        "category": "分析",
+        "description": "使用强大的诊断工具对 Java 应用进行性能分析、监控和深入了解。"
+      }
+    },
     "discover-all-our-projects": "探索我们所有的项目",
     "description": "Eclipse Adoptium 提供高性能、企业级、跨平台、开源许可的运行时二进制文件，这些文件已通过 Java SE TCK 测试并符合规范，可广泛应用于 Java 生态系统中。Eclipse Adoptium 还提供包括开源基础设施即代码、全面的持续集成构建和测试环境以及广泛的质量保障测试等制品。这些制品可供 Eclipse Adoptium 项目及其他运行时技术构建者使用，以提供安全、通过 Java SE TCK 测试并符合规范、可用于生产环境的运行时。"
   },
   "LogoCarousel": {
+    "pause": "暂停标志轮播",
+    "play": "播放标志轮播",
     "title": "Temurin 深受数百万用户信赖，包括以下主要采用者："
   },
   "ChecksumModal": {
@@ -179,6 +209,15 @@
     "copy": "复制"
   },
   "TemurinReleases": {
+    "quick-downloads": "快速下载",
+    "all-builds": "所有平台和软件包",
+    "download-package": "下载 {os} 软件包",
+    "download": "下载",
+    "load-error": "无法加载发行版，请重试。",
+    "retry": "重试",
+    "invalid-filters": "部分筛选条件不可用，现显示支持的选项。",
+    "loading": "正在加载发行版...",
+    "no-downloads": "此软件包类型没有可用的下载。",
     "title": "下载 Temurin® JDK",
     "latest-releases": "最新版本",
     "description": "选择版本、软件包类型和 JDK/JRE，下载相应的二进制文件。"

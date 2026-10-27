@@ -4,6 +4,50 @@ import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { describe, it, expect, vi, afterEach } from "vitest";
 import AllReleaseCard from "../index";
 import type { MarketplaceRelease } from "@/hooks";
+import { axe } from "vitest-axe";
+import { sendDownloadEvent } from "@/utils/gtag";
+
+vi.mock("next-intl", () => ({
+  useLocale: () => "en",
+  useTranslations: () => (key: string, values?: { count: number }) => {
+    if (key === "Marketplace.Releases.empty-title")
+      return "No distributions found";
+    if (key === "Marketplace.Releases.reset-filters") return "Reset filters";
+    if (key === "Marketplace.Releases.view-checksum") return "View checksum";
+    if (key === "Marketplace.Releases.download") return "Download";
+    if (key === "Marketplace.Releases.result-count")
+      return `${values?.count} distributions`;
+    return key;
+  },
+}));
+
+vi.mock("@/i18n/navigation", () => ({
+  Link: ({
+    children,
+    href,
+    onClick,
+    ...props
+  }: {
+    children: React.ReactNode;
+    href: string | { pathname: string; query: Record<string, string> };
+    onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+  }) => (
+    <a
+      {...props}
+      href={
+        typeof href === "string"
+          ? href
+          : `${href.pathname}?${new URLSearchParams(href.query)}`
+      }
+      onClick={(event) => {
+        event.preventDefault();
+        onClick?.(event);
+      }}
+    >
+      {children}
+    </a>
+  ),
+}));
 
 vi.mock("@/components/Download/ChecksumModal", () => ({
   default: ({
@@ -69,9 +113,10 @@ describe("AllReleaseCard", () => {
   it("renders loading state when results is null", () => {
     const { container } = render(<AllReleaseCard results={null} />);
     expect(container.firstChild).not.toBeNull();
-    // Should show skeleton/animated placeholders
-    const pulseElements = container.querySelectorAll(".animate-pulse");
-    expect(pulseElements.length).toBeGreaterThan(0);
+    expect(screen.getByTestId("marketplace-loading")).toBeInTheDocument();
+    expect(
+      screen.queryByText("No distributions found"),
+    ).not.toBeInTheDocument();
   });
 
   it("renders no results state when results is empty array", () => {
@@ -116,7 +161,43 @@ describe("AllReleaseCard", () => {
       { ...mockRelease, release_name: "jdk-17.0.10+7" },
     ];
     const { container } = render(<AllReleaseCard results={releases} />);
-    const cards = container.querySelectorAll(".rounded-xl");
-    expect(cards.length).toBeGreaterThan(0);
+    expect(
+      container.querySelectorAll('[data-testid="marketplace-release"]'),
+    ).toHaveLength(2);
+  });
+
+  it("uses one responsive card and one set of actions per result", () => {
+    render(<AllReleaseCard results={[mockRelease]} />);
+    expect(screen.getAllByRole("article")).toHaveLength(1);
+    expect(
+      screen.getAllByRole("heading", { name: mockRelease.release_name }),
+    ).toHaveLength(1);
+    expect(
+      screen.getAllByRole("button", { name: "View checksum" }),
+    ).toHaveLength(1);
+    expect(screen.getAllByRole("link", { name: /Download/ })).toHaveLength(1);
+  });
+
+  it("preserves download URLs and tracking", () => {
+    render(<AllReleaseCard results={[mockRelease]} />);
+    const link = screen.getByRole("link", { name: /Download/ });
+    expect(link).toHaveAttribute(
+      "href",
+      "/download?link=https%3A%2F%2Fexample.com%2Fdownload.tar.gz&vendor=Adoptium",
+    );
+    fireEvent.click(link);
+    expect(sendDownloadEvent).toHaveBeenCalledWith({
+      link: "https://example.com/download.tar.gz",
+      os: "linux",
+      arch: "x64",
+      pkg_type: "jdk",
+      version: mockRelease.release_name,
+      vendor: "Adoptium",
+    });
+  });
+
+  it("has no accessibility violations", async () => {
+    const { container } = render(<AllReleaseCard results={[mockRelease]} />);
+    expect(await axe(container)).toHaveNoViolations();
   });
 });

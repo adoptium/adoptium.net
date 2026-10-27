@@ -107,198 +107,137 @@ exports[`Business Benefits page > renders correctly 1`] = `
   </section>
   <div />
   <section
-    class="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden"
+    class="border-y border-white/10 bg-[#10052d] py-16 text-white sm:py-20"
   >
     <div
-      class="absolute inset-0 opacity-5"
+      class="mx-auto grid max-w-7xl gap-10 px-6 sm:px-8 lg:grid-cols-[280px_1fr] lg:gap-16"
     >
-      <div
-        class="absolute inset-0 bg-repeat"
-        style="background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");"
-      />
-    </div>
-    <div
-      class="relative max-w-7xl px-6 py-16 mx-auto text-center lg:py-24"
-    >
-      <div
-        class="relative max-w-5xl mx-auto"
-      >
-        <div
-          class="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl"
+      <div>
+        <p
+          class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
         >
-          <figure>
-            <div
-              class="mb-8"
-            >
-              <svg
-                class="h-12 w-12 mx-auto text-pink opacity-60"
-                fill="none"
-                viewBox="0 0 24 27"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <blockquote
-              class="animate-slideInRight mb-8"
-            >
-              <div
-                class="min-h-[200px] md:min-h-[180px] flex items-center justify-center"
-              >
-                <p
-                  class="text-xl md:text-2xl leading-relaxed font-medium text-white/90 italic"
-                >
-                  “
-                  Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
-                  ”
-                </p>
-              </div>
-            </blockquote>
-            <figcaption
-              class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          ECLIPSE ADOPTIUM
+        </p>
+        <h2
+          class="mb-7 max-w-sm text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+          id="_r_0_"
+        >
+          Text
+        </h2>
+        <div
+          aria-labelledby="_r_0_"
+          class="grid grid-cols-3 gap-2 lg:grid-cols-1 lg:gap-3"
+          role="group"
+        >
+          <button
+            aria-controls="_r_1_"
+            aria-label="Microsoft"
+            aria-pressed="true"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-pink/50 bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-100"
             >
               <img
-                alt="Martijn Verburg"
-                class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
-                height="64"
-                src="/images/authors/martijnverburg.jpg"
-                width="64"
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/microsoft.svg"
               />
-              <div
-                class="text-center sm:text-left"
-              >
-                <div
-                  class="text-lg font-semibold text-white"
-                >
-                  Martijn Verburg
-                </div>
-                <div
-                  class="text-pink font-medium"
-                >
-                  Principal Group Manager - Java & Go @ Microsoft
-                </div>
-              </div>
-            </figcaption>
-          </figure>
+            </span>
+          </button>
+          <button
+            aria-controls="_r_1_"
+            aria-label="Alibaba Cloud"
+            aria-pressed="false"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-50"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/alibaba.png"
+              />
+            </span>
+          </button>
+          <button
+            aria-controls="_r_1_"
+            aria-label="Red Hat"
+            aria-pressed="false"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-50"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
+              />
+            </span>
+          </button>
         </div>
       </div>
-      <div
-        class="flex justify-center items-center mt-12 space-x-6"
+      <figure
+        aria-atomic="true"
+        aria-live="polite"
+        class="m-0 min-w-0 border-t border-white/10 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
+        id="_r_1_"
       >
-        <button
-          aria-label="Previous Testimonial"
-          class="group p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300"
+        <svg
+          aria-hidden="true"
+          class="mb-6 h-9 w-9 text-pink"
+          fill="currentColor"
+          viewBox="0 0 24 27"
         >
-          <svg
-            class="w-5 h-5 text-white group-hover:text-pink transition-colors"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 448 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <path
+            d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+          />
+        </svg>
+        <blockquote
+          class="mb-8"
+        >
+          <p
+            class="mb-0 text-xl font-normal leading-relaxed tracking-tight text-white/90 sm:text-2xl lg:min-h-[216px]"
           >
-            <path
-              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-            />
-          </svg>
-        </button>
-        <div
-          class="flex space-x-2"
+            “
+            Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
+            ”
+          </p>
+        </blockquote>
+        <figcaption
+          class="flex items-center gap-4 border-t border-white/10 pt-6"
         >
-          <button
-            aria-label="Go to testimonial 1"
-            class="h-2 rounded-full transition-all duration-300 w-8 bg-pink-400"
+          <img
+            alt=""
+            class="h-12 w-12 shrink-0 rounded-full object-cover"
+            height="48"
+            src="/images/authors/martijnverburg.jpg"
+            width="48"
           />
-          <button
-            aria-label="Go to testimonial 2"
-            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
-          />
-          <button
-            aria-label="Go to testimonial 3"
-            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
-          />
-        </div>
-        <button
-          aria-label="Next Testimonial"
-          class="group relative p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300 overflow-hidden"
-        >
-          <svg
-            class="w-5 h-5 text-white group-hover:text-pink transition-colors relative z-10"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 448 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-            />
-          </svg>
           <div
-            class="absolute inset-0 rounded-full border-2 border-transparent border-t-pink-400 animate-spin opacity-60"
-            style="animation-duration: 8s;"
-          />
-        </button>
-      </div>
-      <div
-        class="flex justify-center items-center mt-12 space-x-8"
-      >
-        <button
-          aria-label="Microsoft Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 opacity-100 scale-110"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
+            class="min-w-0"
           >
-            <img
-              alt="Microsoft"
-              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/microsoft.svg"
-              width="128"
-            />
+            <p
+              class="mb-1 text-sm font-semibold text-white"
+            >
+              Martijn Verburg
+            </p>
+            <p
+              class="mb-0 text-xs leading-relaxed text-grey"
+            >
+              Principal Group Manager - Java & Go @ Microsoft
+            </p>
           </div>
-        </button>
-        <button
-          aria-label="Alibaba Cloud Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
-          >
-            <img
-              alt="Alibaba Cloud"
-              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/alibaba.png"
-              width="128"
-            />
-          </div>
-        </button>
-        <button
-          aria-label="Red Hat Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
-          >
-            <img
-              alt="Red Hat"
-              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/redhat.svg"
-              width="128"
-            />
-          </div>
-        </button>
-      </div>
+        </figcaption>
+      </figure>
     </div>
   </section>
   <section

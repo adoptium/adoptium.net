@@ -5,1162 +5,1319 @@ exports[`Index page > renders correctly 1`] = `
   class="bg-[#14003c]"
 >
   <section
-    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#14003c] pt-20 pb-10"
+    class="relative isolate overflow-hidden bg-purple text-white"
   >
     <div
-      class="absolute inset-0 z-0"
-    >
-      <div
-        class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#ff1365] rounded-full blur-[120px] opacity-10 animate-pulse"
-      />
-      <div
-        class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#7026b9] rounded-full blur-[120px] opacity-10 animate-pulse delay-1000"
-      />
-    </div>
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_15%,#7026b933,transparent_55%),radial-gradient(ellipse_at_10%_35%,#ff136514,transparent_50%)]"
+    />
     <div
-      class="absolute inset-0 z-0 hidden md:flex items-start justify-center pointer-events-none"
-      style="y: 0px; opacity: 0; scale: 0;"
+      class="mx-auto max-w-7xl px-6 pt-10 sm:px-8 lg:pt-12"
     >
       <div
-        class="relative w-[1000px] h-[1000px] -mt-32"
+        class="grid items-center gap-10 pb-12 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:pb-16"
       >
-        <img
-          alt="Temurin Logo Background"
-          class="object-contain"
-          sizes="1000px"
-          src="/images/backgrounds/temurin-hero-img.png"
-        />
-      </div>
-    </div>
-     
-    <div
-      class="container mx-auto px-4 z-10 flex flex-col items-center text-center justify-center"
-    >
-      <div>
-        <h1
-          class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-[20ch] mx-auto leading-tight"
-          style="text-wrap: balance;"
-        >
-          <span
-            class="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70"
-          >
-            Text
-          </span>
-          <span
-            class="text-[#ff1365]"
-          >
-            .
-          </span>
-        </h1>
-      </div>
-      <p
-        class="text-2xl md:text-3xl text-gray-300 max-w-3xl mb-12 font-normal leading-relaxed"
-      >
-        Text
-      </p>
-      <div
-        class="relative z-10 mb-12"
-      >
-        <div
-          class="flex flex-col items-center gap-6"
-        >
+        <div>
           <div
-            class="relative"
+            class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium tracking-wide text-grey"
           >
-            <a
-              class="relative flex items-center justify-center gap-4 bg-gray-800/50 text-gray-500 px-10 py-5 rounded-full ring-1 ring-white/5 cursor-not-allowed"
-              href="#"
-            >
-              <span
-                class="w-8 h-8 flex items-center justify-center opacity-50"
-              />
-              <span
-                class="text-xl font-bold leading-none"
-              >
-                Text
-              </span>
-            </a>
-          </div>
-          <a
-            class="text-sm text-gray-400 hover:text-[#ff1365] transition-colors duration-300 flex items-center gap-2 group"
-            href="/temurin/releases"
-          >
-            Text
             <span
-              aria-hidden="true"
-              class="group-hover:translate-x-0.5 transition-transform"
-            >
-              →
+              class="h-1.5 w-1.5 rounded-full bg-pink"
+            />
+            <span>
+              Eclipse Adoptium
             </span>
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-full max-w-7xl mx-auto"
-      >
-        <div
-          class="max-w-[1160px] w-full mx-auto py-8 lg:py-16 xl:px-0 px-8"
-        >
-          <h2
-            class="text-center text-xl font-normal leading-7 text-grey"
-          >
-            Text
-          </h2>
-          <div
-            class="mt-6"
-            data-testid="react-slick-mock"
-          >
-            <div
-              class="!flex items-center justify-center h-[100px] px-4"
+            <span
+              class="text-white/25"
             >
-              <img
-                alt="Mock Adopter"
-                class="w-auto h-auto object-contain mx-auto max-h-[100px]"
-                height="100"
-                src="/images/adopters/mock-adopter-white.svg"
-                style="padding: 1em;"
-                width="200"
-              />
-            </div>
+              /
+            </span>
+            <span>
+              OpenJDK
+            </span>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    class="w-full bg-[#14003c] py-12 relative z-20"
-  >
-    <div
-      class="container mx-auto px-4"
-    >
-      <div
-        class="relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 md:p-12 shadow-2xl backdrop-blur-sm"
-      >
-        <div
-          class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-10"
-        />
-        <div
-          class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-[#7026b9] rounded-full blur-[100px] opacity-10"
-        />
-        <div
-          class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
-        >
-          <div
-            class="max-w-3xl"
+          <h1
+            class="mb-5 text-6xl font-semibold leading-[0.98] tracking-[-0.06em] sm:text-7xl xl:text-[88px]"
           >
-            <h2
-              class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight"
+            Eclipse
+            <br />
+            <span
+              class="bg-gradient-to-r from-[#ff6b9e] via-[#ff1365] to-[#c770f0] bg-clip-text text-transparent"
             >
-              Fake Banner for Testing
-            </h2>
-            <p
-              class="text-lg text-gray-300 leading-relaxed font-light"
+              Temurin
+            </span>
+            <sup
+              class="ml-1 align-top text-2xl leading-[2] tracking-normal text-pink"
             >
-              This is a fake banner used for testing purposes only.
-            </p>
-          </div>
-          <div
-            class="flex-shrink-0 pt-2 md:pt-0"
-          >
-            <a
-              class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-300 bg-[#ff1365] rounded-full hover:bg-[#ff1365]/90 hover:scale-105 shadow-lg hover:shadow-[#ff1365]/25 group"
-              href="https://example.com"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Read the Case Study
-              <svg
-                class="w-5 h-5 ml-2 -mr-1 transition-transform duration-300 group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div
-    class="bg-purple pt-16 pb-0"
-  >
-    <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
-    >
-      <h2
-        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
-      >
-        Text
-      </h2>
-      <h3
-        class="text-center text-base leading-6 font-normal text-grey mt-6"
-      >
-        Text
-      </h3>
-      <a
-        href="/business-benefits"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border hover:scale-105 transition-transform duration-300"
-        >
-          Text
-        </button>
-      </a>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        height="366"
-        src="/images/icons/feature-layers.svg"
-        width="366"
-      />
-      <img
-        alt="scroll divider"
-        class="mb-0"
-        height="80"
-        src="/images/icons/scroll-divider.svg"
-        width="16"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Text
-        </h1>
-        <div
-          class="text-base text-grey"
-        >
-          Text
-        </div>
-      </div>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        height="366"
-        src="/images/icons/feature-layers.svg"
-        width="366"
-      />
-      <img
-        alt="scroll divider"
-        class="mb-0"
-        height="80"
-        src="/images/icons/scroll-divider.svg"
-        width="16"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Text
-        </h1>
-        <div
-          class="text-base text-grey"
-        >
-          Text
-        </div>
-      </div>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        height="366"
-        src="/images/icons/feature-layers.svg"
-        width="366"
-      />
-      <img
-        alt="scroll divider"
-        class="mb-0"
-        height="80"
-        src="/images/icons/scroll-divider.svg"
-        width="16"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Text
-        </h1>
-        <div
-          class="text-base text-grey"
-        >
-          Text
-        </div>
-      </div>
-    </div>
-    <div
-      class="lg:block hidden open-animation-wrapper"
-    >
-      <div
-        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        style="height: 400vh;"
-      >
-        <div
-          class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
-        >
-          <div
-            class="relative w-full h-full flex items-center justify-between"
-          >
-            <div
-              class="w-1/2 h-full flex items-center justify-center relative"
-            >
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; scale: 0;"
-              >
-                <div
-                  class="relative w-full max-w-[500px] aspect-square"
-                >
-                  <img
-                    alt="Text"
-                    class="object-contain drop-shadow-2xl"
-                    src="/images/icons/feature-layers.svg"
-                  />
-                </div>
-              </div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; scale: 0;"
-              >
-                <div
-                  class="relative w-full max-w-[500px] aspect-square"
-                >
-                  <img
-                    alt="Text"
-                    class="object-contain drop-shadow-2xl"
-                    src="/images/icons/feature-layers.svg"
-                  />
-                </div>
-              </div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; scale: 0;"
-              >
-                <div
-                  class="relative w-full max-w-[500px] aspect-square"
-                >
-                  <img
-                    alt="Text"
-                    class="object-contain drop-shadow-2xl"
-                    src="/images/icons/feature-layers.svg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-1/2 h-full flex items-center justify-center relative pl-12"
-            >
-              <div
-                class="absolute w-full max-w-lg"
-                style="opacity: 0; y: 0px;"
-              >
-                <h2
-                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                >
-                  Text
-                </h2>
-                <div
-                  class="text-xl text-gray-300 leading-relaxed font-light"
-                >
-                  Text
-                </div>
-              </div>
-              <div
-                class="absolute w-full max-w-lg"
-                style="opacity: 0; y: 0px;"
-              >
-                <h2
-                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                >
-                  Text
-                </h2>
-                <div
-                  class="text-xl text-gray-300 leading-relaxed font-light"
-                >
-                  Text
-                </div>
-              </div>
-              <div
-                class="absolute w-full max-w-lg"
-                style="opacity: 0; y: 0px;"
-              >
-                <h2
-                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                >
-                  Text
-                </h2>
-                <div
-                  class="text-xl text-gray-300 leading-relaxed font-light"
-                >
-                  Text
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="bg-purple py-8 lg:py-16"
-  >
-    <div
-      class="mx-auto max-w-[832px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <h2
-        class="text-center text-[36px] sm:text-5xl font-semibold leading-[44px] sm:leading-[56px] text-white"
-      >
-        Text
-      </h2>
-      <h3
-        class="text-center text-[64px] lg:text-[104px] leading-[72px] lg:leading-[120px] font-semibold my-8"
-        style="color: rgb(255, 19, 101);"
-      >
-        0
-      </h3>
-      <div
-        class="flex items-center gap-4 flex-wrap sm:gap-6 justify-center"
-      >
-        <a
-          class="flex items-center gap-4 flex-wrap sm:gap-6 justify-center cursor-pointer"
-          href="https://adoptium.net/stats/download"
-          rel="noopener noreferrer"
-        >
-          <span>
-            <svg
-              fill="currentColor"
-              height="70"
-              stroke="currentColor"
-              stroke-width="0"
-              version="1.1"
-              viewBox="0 0 32 32"
-              width="70"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.368 15.671h-2.653c-0.068 0-0.124 0.055-0.124 0.124v1.296c0 0.069 0.055 0.124 0.124 0.124h1.035v1.612c0 0-0.232 0.078-0.874 0.078-0.758 0-1.817-0.278-1.817-2.604 0-2.328 1.102-2.634 2.137-2.634 0.896 0 1.282 0.157 1.527 0.234 0.077 0.024 0.147-0.053 0.147-0.122l0.296-1.253c0-0.032-0.011-0.071-0.047-0.097-0.1-0.070-0.708-0.411-2.245-0.411-1.771 0-3.588 0.753-3.588 4.375s2.079 4.16 3.832 4.16c1.451 0 2.332-0.62 2.332-0.62 0.036-0.020 0.040-0.070 0.040-0.093v-4.045c-0.001-0.069-0.056-0.124-0.124-0.124zM19.783 12.327h-1.493c-0.069 0-0.124 0.056-0.124 0.124v2.886h-2.328v-2.886c0-0.069-0.056-0.124-0.123-0.124h-1.494c-0.067 0-0.122 0.056-0.122 0.124v7.814c0 0.069 0.055 0.125 0.122 0.125h1.494c0.068 0 0.123-0.056 0.123-0.125v-3.342h2.328l-0.005 3.342c0 0.069 0.055 0.124 0.122 0.124h1.494c0.069 0 0.122-0.056 0.122-0.124l0.005-7.815c0.001-0.069-0.055-0.124-0.122-0.124zM8.152 12.504c-0.532 0-0.963 0.435-0.963 0.972s0.431 0.973 0.963 0.973 0.963-0.435 0.963-0.973c0-0.537-0.431-0.972-0.963-0.972zM9.009 15.011c0-0.068-0.055-0.125-0.122-0.125h-1.489c-0.070 0-0.129 0.070-0.129 0.139 0 0 0 4.341 0 5.168 0 0.151 0.094 0.197 0.217 0.197 0 0 0.635 0 1.342 0 0.146 0 0.185-0.072 0.185-0.2-0.001-0.277-0.001-1.362-0.001-1.572-0.001-0.2-0.001-3.607-0.001-3.607zM25.564 14.898h-1.482c-0.068 0-0.122 0.056-0.122 0.125v3.831c0 0-0.376 0.277-0.912 0.277-0.534 0-0.677-0.242-0.677-0.767 0-0.523 0-3.342 0-3.342 0-0.069-0.056-0.125-0.123-0.125h-1.503c-0.069 0-0.123 0.056-0.123 0.125 0 0 0 2.040 0 3.595s0.866 1.935 2.057 1.935c0.977 0 1.767-0.54 1.767-0.54s0.037 0.284 0.055 0.317c0.016 0.034 0.060 0.068 0.108 0.068h0.952c0.068 0 0.123-0.056 0.123-0.125l0.004-5.25c-0.003-0.068-0.059-0.124-0.126-0.124zM29.622 14.722c-0.842 0-1.414 0.376-1.414 0.376v-2.646c0-0.069-0.056-0.124-0.122-0.124h-1.499c-0.067 0-0.122 0.056-0.122 0.124l-0.004 7.815c0 0.069 0.056 0.124 0.123 0.124 0 0 1.043 0 1.044 0 0.046 0 0.081-0.024 0.108-0.066s0.063-0.361 0.063-0.361 0.611 0.581 1.771 0.581c1.362 0 2.142-0.691 2.142-3.101-0-2.407-1.247-2.722-2.089-2.722zM29.038 19.126c-0.514-0.016-0.862-0.249-0.862-0.249v-2.476c0 0 0.344-0.211 0.767-0.249 0.534-0.047 1.050 0.114 1.050 1.387-0.003 1.342-0.235 1.607-0.954 1.586zM13.324 19.097c-0.066 0-0.233 0.026-0.405 0.026-0.549 0-0.737-0.256-0.737-0.587 0-0.332 0-2.198 0-2.198h1.121c0.069 0 0.123-0.055 0.123-0.125v-1.204c0.001-0.069-0.054-0.125-0.123-0.125h-1.121l-0.002-1.48c0-0.056-0.030-0.084-0.094-0.084h-1.526c-0.059 0-0.092 0.026-0.092 0.083v1.529c0 0-0.765 0.185-0.817 0.2s-0.088 0.063-0.088 0.119v0.962c0 0.069 0.056 0.125 0.123 0.125h0.782c0 0 0 1.005 0 2.312 0 1.717 1.205 1.886 2.018 1.886 0.371 0 0.815-0.121 0.889-0.147 0.045-0.016 0.070-0.062 0.070-0.111l0.001-1.057c0-0.069-0.058-0.125-0.122-0.125z"
-              />
-            </svg>
-          </span>
+              ®
+            </sup>
+          </h1>
           <p
-            class="text-[16px] font-normal leading-6 text-white mb-0"
+            class="mb-4 max-w-lg text-xl font-medium leading-snug text-white sm:text-2xl"
           >
             Text
           </p>
+          <p
+            class="mb-6 hidden max-w-lg text-base leading-relaxed text-grey sm:block"
+          >
+            Text
+          </p>
+        </div>
+        <div
+          class="relative min-w-0"
+        >
+          <div
+            aria-hidden="true"
+            class="absolute -inset-6 -z-10 rounded-full bg-pink/10 blur-3xl"
+          />
+          <div
+            class="overflow-hidden rounded-3xl border border-white/15 bg-[#1c1040] shadow-2xl shadow-black/30"
+          >
+            <div
+              class="flex items-center justify-between border-b border-white/10 px-6 py-3"
+            >
+              <span
+                class="flex items-center gap-2 font-mono text-xs text-grey"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="4 17 10 11 4 5"
+                  />
+                  <line
+                    x1="12"
+                    x2="20"
+                    y1="19"
+                    y2="19"
+                  />
+                </svg>
+                 java
+              </span>
+              <span
+                class="rounded-full border border-pink/30 bg-pink/10 px-3 py-1 font-mono text-xs text-[#ff91b7]"
+              >
+                JDK 21 LTS
+              </span>
+            </div>
+            <div
+              class="relative hidden overflow-hidden bg-[#0d002a] px-6 py-3 sm:block sm:px-8"
+            >
+              <div
+                aria-hidden="true"
+                class="absolute right-4 top-4 h-20 w-40 opacity-[0.08]"
+              >
+                <img
+                  alt=""
+                  class="object-contain"
+                  sizes="160px"
+                  src="/images/projects/temurin-project.svg"
+                />
+              </div>
+              <pre
+                aria-hidden="true"
+                class="relative m-0 overflow-x-auto bg-transparent p-0 text-xs leading-5 text-grey"
+              >
+                <code>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                    void
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                     main() {
+
+                  </span>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                        String
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                    [] facts = {
+
+                  </span>
+                  <span
+                    class="text-[#a5e8ce]"
+                  >
+                            "Open source. Production-ready.",
+
+                  </span>
+                  <span
+                    class="text-[#a5e8ce]"
+                  >
+                            "Free to use. Built on OpenJDK."
+
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                        };
+
+                  </span>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                        for
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                     (
+                  </span>
+                  <span
+                    class="text-[#c4a4ff]"
+                  >
+                    var
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                     fact : facts) IO.
+                  </span>
+                  <span
+                    class="text-[#ff91b7]"
+                  >
+                    println
+                  </span>
+                  <span
+                    class="text-white"
+                  >
+                    (fact);
+}
+                  </span>
+                </code>
+              </pre>
+              <div
+                aria-hidden="true"
+                class="mt-4 border-t border-white/10 pt-3 font-mono text-xs text-grey"
+              >
+                <span
+                  class="mr-3 text-pink"
+                >
+                  $
+                </span>
+                 java Temurin.java
+                <div
+                  class="mt-2 leading-4 text-[#a5e8ce]"
+                >
+                  <div>
+                    Open source. Production-ready.
+                  </div>
+                  <div>
+                    Free to use. Built on OpenJDK.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="px-6 py-4"
+            >
+              <div
+                class="flex w-full flex-col gap-4"
+              >
+                <a
+                  class="group flex w-full items-center justify-between gap-3 rounded-xl bg-pink px-5 py-4 font-semibold text-white shadow-lg shadow-pink/15 transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  href="/temurin/releases"
+                >
+                  <span
+                    class="flex min-w-0 items-center gap-3"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0"
+                    >
+                      <svg
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        />
+                        <polyline
+                          points="7 10 12 15 17 10"
+                        />
+                        <line
+                          x1="12"
+                          x2="12"
+                          y1="15"
+                          y2="3"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="text-base sm:text-lg"
+                    >
+                      Text
+                    </span>
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="shrink-0"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                    />
+                    <polyline
+                      points="7 10 12 15 17 10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="15"
+                      y2="3"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="flex flex-wrap items-center justify-between gap-3 text-xs text-grey"
+                >
+                  <span
+                    class="font-mono"
+                  >
+                    JDK 21 LTS
+                  </span>
+                  <a
+                    class="inline-flex items-center gap-1.5 text-white hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                    href="/temurin/releases"
+                  >
+                    <span>
+                      Text
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      fill="none"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="5"
+                        x2="19"
+                        y1="12"
+                        y2="12"
+                      />
+                      <polyline
+                        points="12 5 19 12 12 19"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-grey"
+          >
+            <a
+              class="inline-flex items-center gap-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="/docs"
+            >
+              <span>
+                Text
+              </span>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </a>
+            <a
+              class="inline-flex items-center gap-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="/installation"
+            >
+              <span>
+                Text
+              </span>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10"
+      >
+        <div
+          class="mx-auto w-full max-w-6xl py-8 lg:py-10"
+        >
+          <div
+            class="relative flex min-h-11 items-center justify-center px-12"
+          >
+            <h2
+              class="mb-0 text-center text-sm font-normal text-grey"
+            >
+              Text
+            </h2>
+            <button
+              aria-label="Text"
+              class="absolute right-0 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-grey transition-colors hover:border-white/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  height="16"
+                  width="4"
+                  x="6"
+                  y="4"
+                />
+                <rect
+                  height="16"
+                  width="4"
+                  x="14"
+                  y="4"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="mt-4"
+            data-testid="react-slick-mock"
+          >
+            <div>
+              <a
+                class="flex h-16 items-center justify-center rounded px-3 opacity-60 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink"
+                href="https://mock-adopter.example.com"
+              >
+                <span
+                  class="relative block w-full"
+                  style="max-width: 144px; height: 48px;"
+                >
+                  <img
+                    alt="Mock Adopter"
+                    class="object-contain"
+                    sizes="(max-width: 639px) 40vw, 144px"
+                    src="/images/adopters/mock-adopter-white.svg"
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="bg-purple py-10 sm:py-12"
+  >
+    <div
+      class="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-5 px-6 sm:flex-row sm:items-center sm:px-8"
+    >
+      <h2
+        class="max-w-sm text-2xl font-medium leading-snug tracking-tight text-white"
+      >
+        Text
+      </h2>
+      <a
+        class="group focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+        href="/stats/download"
+      >
+        <span
+          class="block text-4xl font-semibold tracking-tight text-[#ff78a6] sm:text-5xl"
+        >
+          0
+        </span>
+        <span
+          class="mt-2 flex items-center gap-2 text-xs text-grey"
+        >
+          Text
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="7"
+              x2="17"
+              y1="17"
+              y2="7"
+            />
+            <polyline
+              points="7 7 17 7 17 17"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-16 text-white sm:py-20"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
+    >
+      <div
+        class="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end"
+      >
+        <div
+          class="max-w-2xl"
+        >
+          <p
+            class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
+          >
+            ECLIPSE TEMURIN
+          </p>
+          <h2
+            class="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+          >
+            Text
+          </h2>
+        </div>
+        <a
+          class="inline-flex shrink-0 items-center gap-2 text-sm text-grey hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/business-benefits"
+        >
+          <span>
+            Text
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="7"
+              x2="17"
+              y1="17"
+              y2="7"
+            />
+            <polyline
+              points="7 7 17 7 17 17"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-pink/40 hover:bg-white/5"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="mb-5 flex items-center justify-between"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10"
+                >
+                  <img
+                    alt=""
+                    class="w-6 h-6"
+                    height="24"
+                    src="/images/icons/lock.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="font-mono text-xs text-white/30"
+                >
+                  0
+                  1
+                </span>
+              </div>
+              <h3
+                class="mb-2 text-lg font-semibold"
+              >
+                Text
+              </h3>
+              <p
+                class="mb-0 text-sm leading-relaxed text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-pink/40 hover:bg-white/5"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="mb-5 flex items-center justify-between"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10"
+                >
+                  <img
+                    alt=""
+                    class="w-6 h-6"
+                    height="24"
+                    src="/images/initiatives/testing.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="font-mono text-xs text-white/30"
+                >
+                  0
+                  2
+                </span>
+              </div>
+              <h3
+                class="mb-2 text-lg font-semibold"
+              >
+                Text
+              </h3>
+              <p
+                class="mb-0 text-sm leading-relaxed text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-pink/40 hover:bg-white/5"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="mb-5 flex items-center justify-between"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10"
+                >
+                  <img
+                    alt=""
+                    class="w-6 h-6"
+                    height="24"
+                    src="/images/initiatives/deploy.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="font-mono text-xs text-white/30"
+                >
+                  0
+                  3
+                </span>
+              </div>
+              <h3
+                class="mb-2 text-lg font-semibold"
+              >
+                Text
+              </h3>
+              <p
+                class="mb-0 text-sm leading-relaxed text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-pink/40 hover:bg-white/5"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="mb-5 flex items-center justify-between"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10"
+                >
+                  <img
+                    alt=""
+                    class="w-6 h-6"
+                    height="24"
+                    src="/images/initiatives/release.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="font-mono text-xs text-white/30"
+                >
+                  0
+                  4
+                </span>
+              </div>
+              <h3
+                class="mb-2 text-lg font-semibold"
+              >
+                Text
+              </h3>
+              <p
+                class="mb-0 text-sm leading-relaxed text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-pink/40 hover:bg-white/5"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="mb-5 flex items-center justify-between"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10"
+                >
+                  <img
+                    alt=""
+                    class="w-6 h-6"
+                    height="24"
+                    src="/images/initiatives/community.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="font-mono text-xs text-white/30"
+                >
+                  0
+                  5
+                </span>
+              </div>
+              <h3
+                class="mb-2 text-lg font-semibold"
+              >
+                Text
+              </h3>
+              <p
+                class="mb-0 text-sm leading-relaxed text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-colors hover:border-pink/40 hover:bg-white/5"
+        >
+          <div
+            class="relative z-10 h-full flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="mb-5 flex items-center justify-between"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10"
+                >
+                  <img
+                    alt=""
+                    class="w-6 h-6"
+                    height="24"
+                    src="/images/initiatives/security.svg"
+                    width="24"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="font-mono text-xs text-white/30"
+                >
+                  0
+                  6
+                </span>
+              </div>
+              <h3
+                class="mb-2 text-lg font-semibold"
+              >
+                Text
+              </h3>
+              <p
+                class="mb-0 text-sm leading-relaxed text-grey"
+              >
+                Text
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    aria-labelledby="projects-heading"
+    class="bg-purple py-16 text-white sm:py-20"
+  >
+    <div
+      class="mx-auto w-full max-w-7xl px-6 sm:px-8"
+    >
+      <div
+        class="mb-9 flex flex-col justify-between gap-5 lg:flex-row lg:items-end"
+      >
+        <div
+          class="max-w-2xl"
+        >
+          <p
+            class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
+          >
+            ECLIPSE ADOPTIUM
+          </p>
+          <h2
+            class="mb-0 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+            id="projects-heading"
+          >
+            Text
+          </h2>
+        </div>
+        <p
+          class="mb-0 max-w-sm text-sm leading-relaxed text-grey"
+        >
+          Text
+        </p>
+      </div>
+      <div
+        class="grid gap-4 md:grid-cols-3"
+      >
+        <a
+          aria-labelledby="project-temurin"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition-colors hover:border-pink/50 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:p-7"
+          href="/temurin"
+        >
+          <div
+            class="mb-7 flex items-start justify-between"
+          >
+            <div
+              class="relative h-14 w-14"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="56px"
+                src="/images/projects/temurin-project.svg"
+              />
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
+            >
+              0
+              1
+            </span>
+          </div>
+          <p
+            class="mb-2 text-xs font-medium text-[#ff91b7]"
+          >
+            Text
+          </p>
+          <h3
+            class="mb-3 text-xl font-semibold tracking-tight"
+            id="project-temurin"
+          >
+            Eclipse Temurin®
+          </h3>
+          <p
+            class="mb-7 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <div
+            class="mt-auto flex items-center justify-between border-t border-white/10 pt-4 text-sm"
+          >
+            <span>
+              Text
+            </span>
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-grey transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-white group-focus-visible:border-pink group-focus-visible:bg-pink group-focus-visible:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a
+          aria-labelledby="project-aqavit"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition-colors hover:border-pink/50 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:p-7"
+          href="/aqavit"
+        >
+          <div
+            class="mb-7 flex items-start justify-between"
+          >
+            <div
+              class="relative h-14 w-14"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="56px"
+                src="/images/projects/aqavit-project.svg"
+              />
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
+            >
+              0
+              2
+            </span>
+          </div>
+          <p
+            class="mb-2 text-xs font-medium text-[#ff91b7]"
+          >
+            Text
+          </p>
+          <h3
+            class="mb-3 text-xl font-semibold tracking-tight"
+            id="project-aqavit"
+          >
+            Eclipse AQAvit
+          </h3>
+          <p
+            class="mb-7 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <div
+            class="mt-auto flex items-center justify-between border-t border-white/10 pt-4 text-sm"
+          >
+            <span>
+              Text
+            </span>
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-grey transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-white group-focus-visible:border-pink group-focus-visible:bg-pink group-focus-visible:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a
+          aria-labelledby="project-mission-control"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition-colors hover:border-pink/50 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:p-7"
+          href="/jmc"
+        >
+          <div
+            class="mb-7 flex items-start justify-between"
+          >
+            <div
+              class="relative h-14 w-14"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="56px"
+                src="/images/projects/mc-project.svg"
+              />
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
+            >
+              0
+              3
+            </span>
+          </div>
+          <p
+            class="mb-2 text-xs font-medium text-[#ff91b7]"
+          >
+            Text
+          </p>
+          <h3
+            class="mb-3 text-xl font-semibold tracking-tight"
+            id="project-mission-control"
+          >
+            Eclipse Mission Control
+          </h3>
+          <p
+            class="mb-7 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <div
+            class="mt-auto flex items-center justify-between border-t border-white/10 pt-4 text-sm"
+          >
+            <span>
+              Text
+            </span>
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-grey transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-white group-focus-visible:border-pink group-focus-visible:bg-pink group-focus-visible:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+          </div>
         </a>
       </div>
     </div>
-  </div>
-  <section
-    class="py-24 bg-[#14003c] text-white"
-  >
-    <div
-      class="container mx-auto px-4"
-    >
-      <div
-        class="text-center mb-16"
-      >
-        <h2
-          class="text-4xl md:text-5xl font-bold mb-6"
-        >
-          Text
-        </h2>
-        <p
-          class="text-xl text-gray-400 max-w-2xl mx-auto"
-        >
-          Text
-        </p>
-      </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-      >
-        <div
-          class="md:col-span-2 bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-        >
-          <div
-            class="relative z-10 h-full flex flex-col justify-between"
-          >
-            <div
-              class="mb-6"
-            >
-              <div
-                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
-              >
-                <img
-                  alt="Text"
-                  class="w-6 h-6"
-                  height="24"
-                  src="/images/icons/lock.svg"
-                  width="24"
-                />
-              </div>
-              <h3
-                class="text-2xl font-bold mb-2"
-              >
-                Text
-              </h3>
-              <p
-                class="text-gray-400 leading-relaxed"
-              >
-                Text
-              </p>
-            </div>
-          </div>
-          <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-          />
-        </div>
-        <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-        >
-          <div
-            class="relative z-10 h-full flex flex-col justify-between"
-          >
-            <div
-              class="mb-6"
-            >
-              <div
-                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
-              >
-                <img
-                  alt="Text"
-                  class="w-6 h-6"
-                  height="24"
-                  src="/images/initiatives/testing.svg"
-                  width="24"
-                />
-              </div>
-              <h3
-                class="text-2xl font-bold mb-2"
-              >
-                Text
-              </h3>
-              <p
-                class="text-gray-400 leading-relaxed"
-              >
-                Text
-              </p>
-            </div>
-          </div>
-          <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-          />
-        </div>
-        <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-        >
-          <div
-            class="relative z-10 h-full flex flex-col justify-between"
-          >
-            <div
-              class="mb-6"
-            >
-              <div
-                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
-              >
-                <img
-                  alt="Text"
-                  class="w-6 h-6"
-                  height="24"
-                  src="/images/initiatives/deploy.svg"
-                  width="24"
-                />
-              </div>
-              <h3
-                class="text-2xl font-bold mb-2"
-              >
-                Text
-              </h3>
-              <p
-                class="text-gray-400 leading-relaxed"
-              >
-                Text
-              </p>
-            </div>
-          </div>
-          <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-          />
-        </div>
-        <div
-          class="md:col-span-2 bg-gradient-to-bl from-[#2d1b4e] to-[#1a0b2e] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-        >
-          <div
-            class="relative z-10 h-full flex flex-col justify-between"
-          >
-            <div
-              class="mb-6"
-            >
-              <div
-                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
-              >
-                <img
-                  alt="Text"
-                  class="w-6 h-6"
-                  height="24"
-                  src="/images/initiatives/release.svg"
-                  width="24"
-                />
-              </div>
-              <h3
-                class="text-2xl font-bold mb-2"
-              >
-                Text
-              </h3>
-              <p
-                class="text-gray-400 leading-relaxed"
-              >
-                Text
-              </p>
-            </div>
-          </div>
-          <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-          />
-        </div>
-        <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-        >
-          <div
-            class="relative z-10 h-full flex flex-col justify-between"
-          >
-            <div
-              class="mb-6"
-            >
-              <div
-                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
-              >
-                <img
-                  alt="Text"
-                  class="w-6 h-6"
-                  height="24"
-                  src="/images/initiatives/community.svg"
-                  width="24"
-                />
-              </div>
-              <h3
-                class="text-2xl font-bold mb-2"
-              >
-                Text
-              </h3>
-              <p
-                class="text-gray-400 leading-relaxed"
-              >
-                Text
-              </p>
-            </div>
-          </div>
-          <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-          />
-        </div>
-        <div
-          class="md:col-span-1 bg-[#0d002a] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 border border-white/5"
-        >
-          <div
-            class="relative z-10 h-full flex flex-col justify-between"
-          >
-            <div
-              class="mb-6"
-            >
-              <div
-                class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm"
-              >
-                <img
-                  alt="Text"
-                  class="w-6 h-6"
-                  height="24"
-                  src="/images/initiatives/security.svg"
-                  width="24"
-                />
-              </div>
-              <h3
-                class="text-2xl font-bold mb-2"
-              >
-                Text
-              </h3>
-              <p
-                class="text-gray-400 leading-relaxed"
-              >
-                Text
-              </p>
-            </div>
-          </div>
-          <div
-            class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#ff1365] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-          />
-        </div>
-      </div>
-    </div>
   </section>
-  <div
-    class="bg-[#0d002a] py-24 sm:py-28"
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-16 text-white sm:py-20"
   >
     <div
-      class="mx-auto max-w-3xl md:max-w-7xl w-full px-6 xl:px-0"
+      class="mx-auto grid max-w-7xl gap-10 px-6 sm:px-8 lg:grid-cols-[280px_1fr] lg:gap-16"
     >
-      <div
-        class="mx-auto max-w-4xl sm:text-center"
-      >
+      <div>
+        <p
+          class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
+        >
+          ECLIPSE ADOPTIUM
+        </p>
         <h2
-          class="text-center text-2xl md:text-5xl font-semibold text-white md:leading-[56px] leading-[44px] mb-4"
+          class="mb-7 max-w-sm text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+          id="_r_0_"
         >
           Text
         </h2>
-      </div>
-      <div
-        class="flex flex-col justify-center items-center"
-      >
-        <p
-          class="mt-6 max-w-2xl mb-0 text-base leading-6 text-lightgrey text-center md:text-justify md:[text-align-last:center]"
-        >
-          Text
-        </p>
-      </div>
-      <div
-        class="mt-16 mb-8 flex md:h-[30em] justify-around lg:justify-between flex-wrap lg:flex-nowrap gap-6 xl:gap-8"
-      >
         <div
-          class="max-w-xl w-full h-full"
+          aria-labelledby="_r_0_"
+          class="grid grid-cols-3 gap-2 lg:grid-cols-1 lg:gap-3"
+          role="group"
         >
-          <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
+          <button
+            aria-controls="_r_1_"
+            aria-label="Microsoft"
+            aria-pressed="true"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-pink/50 bg-white/5"
+            type="button"
           >
-            <img
-              alt="Eclipse Temurin® logo"
-              class="w-[140px] h-auto"
-              height="70"
-              src="/images/projects/temurin-project.svg"
-              width="140"
-            />
-            <div
-              class="flex-col justify-center items-start gap-2"
-            >
-              <div
-                class="justify-start items-center gap-3 inline-flex pt-4"
-              >
-                <svg
-                  fill="none"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  width="14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    fill="#FF1464"
-                    height="8"
-                    rx="2"
-                    width="8"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="11"
-                    rx="3.5"
-                    stroke="#FF1464"
-                    stroke-opacity="0.25"
-                    stroke-width="3"
-                    width="11"
-                    x="1.5"
-                    y="1.5"
-                  />
-                </svg>
-                <p
-                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
-                >
-                  Runtimes and Development Kits
-                </p>
-              </div>
-              <h2
-                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
-              >
-                Eclipse Temurin®
-              </h2>
-              <a
-                href="/temurin"
-              >
-                <button
-                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-white text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
-                >
-                  Learn More
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="max-w-xl w-full h-full"
-        >
-          <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
-          >
-            <img
-              alt="Eclipse AQAvit logo"
-              class="w-[140px] h-auto"
-              height="70"
-              src="/images/projects/aqavit-project.svg"
-              width="140"
-            />
-            <div
-              class="flex-col justify-center items-start gap-2"
-            >
-              <div
-                class="justify-start items-center gap-3 inline-flex pt-4"
-              >
-                <svg
-                  fill="none"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  width="14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    fill="#FF1464"
-                    height="8"
-                    rx="2"
-                    width="8"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="11"
-                    rx="3.5"
-                    stroke="#FF1464"
-                    stroke-opacity="0.25"
-                    stroke-width="3"
-                    width="11"
-                    x="1.5"
-                    y="1.5"
-                  />
-                </svg>
-                <p
-                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
-                >
-                  Quality Assurance
-                </p>
-              </div>
-              <h2
-                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
-              >
-                Eclipse AQAvit
-              </h2>
-              <a
-                href="/aqavit"
-              >
-                <button
-                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-white text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
-                >
-                  Learn More
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="max-w-xl w-full h-full"
-        >
-          <div
-            class="bg-white/5 flex justify-between h-full flex-col p-8 xl:p-12 rounded-3xl border-2 border-white/50 hover:border-pink-500/50 transition-colors duration-300"
-          >
-            <img
-              alt="Eclipse Mission Control logo"
-              class="w-[140px] h-auto"
-              height="70"
-              src="/images/projects/mc-project.svg"
-              width="140"
-            />
-            <div
-              class="flex-col justify-center items-start gap-2"
-            >
-              <div
-                class="justify-start items-center gap-3 inline-flex pt-4"
-              >
-                <svg
-                  fill="none"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  width="14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    fill="#FF1464"
-                    height="8"
-                    rx="2"
-                    width="8"
-                    x="3"
-                    y="3"
-                  />
-                  <rect
-                    height="11"
-                    rx="3.5"
-                    stroke="#FF1464"
-                    stroke-opacity="0.25"
-                    stroke-width="3"
-                    width="11"
-                    x="1.5"
-                    y="1.5"
-                  />
-                </svg>
-                <p
-                  class="text-rose-600 mb-0 text-base leading-6 font-bold"
-                >
-                  JDK Mission Control
-                </p>
-              </div>
-              <h2
-                class="text-white text-xl md:text-3xl leading-8 md:leading-10 font-semibold mt-2"
-              >
-                Eclipse Mission Control
-              </h2>
-              <a
-                href="/jmc"
-              >
-                <button
-                  class="bg-transparent border-2 mt-8 sm:mt-10 border-pink-500/0 text-white text-base leading-6 font-bold w-[148px] h-[48px] rounded-2xl gradient-border"
-                >
-                  Learn More
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section
-    class="relative bg-gradient-to-br from-[#0E002A] via-[#1A0B3D] to-[#0E002A] overflow-hidden"
-  >
-    <div
-      class="absolute inset-0 opacity-5"
-    >
-      <div
-        class="absolute inset-0 bg-repeat"
-        style="background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");"
-      />
-    </div>
-    <div
-      class="relative max-w-7xl px-6 py-16 mx-auto text-center lg:py-24"
-    >
-      <div
-        class="relative max-w-5xl mx-auto"
-      >
-        <div
-          class="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl"
-        >
-          <figure>
-            <div
-              class="mb-8"
-            >
-              <svg
-                class="h-12 w-12 mx-auto text-pink opacity-60"
-                fill="none"
-                viewBox="0 0 24 27"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <blockquote
-              class="animate-slideInRight mb-8"
-            >
-              <div
-                class="min-h-[200px] md:min-h-[180px] flex items-center justify-center"
-              >
-                <p
-                  class="text-xl md:text-2xl leading-relaxed font-medium text-white/90 italic"
-                >
-                  “
-                  Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
-                  ”
-                </p>
-              </div>
-            </blockquote>
-            <figcaption
-              class="flex flex-col sm:flex-row items-center justify-center gap-4"
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-100"
             >
               <img
-                alt="Martijn Verburg"
-                class="w-16 h-16 rounded-full border-2 border-pink-400/30 object-cover"
-                height="64"
-                src="/images/authors/martijnverburg.jpg"
-                width="64"
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/microsoft.svg"
               />
-              <div
-                class="text-center sm:text-left"
-              >
-                <div
-                  class="text-lg font-semibold text-white"
-                >
-                  Martijn Verburg
-                </div>
-                <div
-                  class="text-pink font-medium"
-                >
-                  Principal Group Manager - Java & Go @ Microsoft
-                </div>
-              </div>
-            </figcaption>
-          </figure>
+            </span>
+          </button>
+          <button
+            aria-controls="_r_1_"
+            aria-label="Alibaba Cloud"
+            aria-pressed="false"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-50"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/alibaba.png"
+              />
+            </span>
+          </button>
+          <button
+            aria-controls="_r_1_"
+            aria-label="Red Hat"
+            aria-pressed="false"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-50"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/adopters/Logo-RedHat-A-White-RGB.svg"
+              />
+            </span>
+          </button>
         </div>
       </div>
-      <div
-        class="flex justify-center items-center mt-12 space-x-6"
+      <figure
+        aria-atomic="true"
+        aria-live="polite"
+        class="m-0 min-w-0 border-t border-white/10 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
+        id="_r_1_"
       >
-        <button
-          aria-label="Previous Testimonial"
-          class="group p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300"
+        <svg
+          aria-hidden="true"
+          class="mb-6 h-9 w-9 text-pink"
+          fill="currentColor"
+          viewBox="0 0 24 27"
         >
-          <svg
-            class="w-5 h-5 text-white group-hover:text-pink transition-colors"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 448 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <path
+            d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+          />
+        </svg>
+        <blockquote
+          class="mb-8"
+        >
+          <p
+            class="mb-0 text-xl font-normal leading-relaxed tracking-tight text-white/90 sm:text-2xl lg:min-h-[216px]"
           >
-            <path
-              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-            />
-          </svg>
-        </button>
-        <div
-          class="flex space-x-2"
+            “
+            Microsoft is proud to be a Strategic Member of the Eclipse Adoptium Working Group, collaborating closely with industry partners to contribute to and benefit from a vibrant open-source ecosystem. Together, we are dedicated to delivering high-quality, secure, and performant Java runtimes that empower our customers and the developer community.
+            ”
+          </p>
+        </blockquote>
+        <figcaption
+          class="flex items-center gap-4 border-t border-white/10 pt-6"
         >
-          <button
-            aria-label="Go to testimonial 1"
-            class="h-2 rounded-full transition-all duration-300 w-8 bg-pink-400"
+          <img
+            alt=""
+            class="h-12 w-12 shrink-0 rounded-full object-cover"
+            height="48"
+            src="/images/authors/martijnverburg.jpg"
+            width="48"
           />
-          <button
-            aria-label="Go to testimonial 2"
-            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
-          />
-          <button
-            aria-label="Go to testimonial 3"
-            class="h-2 rounded-full transition-all duration-300 w-2 bg-white/30 hover:bg-white/50"
-          />
-        </div>
-        <button
-          aria-label="Next Testimonial"
-          class="group relative p-3 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 hover:border-pink-400/50 transition-all duration-300 overflow-hidden"
-        >
-          <svg
-            class="w-5 h-5 text-white group-hover:text-pink transition-colors relative z-10"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 448 512"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-            />
-          </svg>
           <div
-            class="absolute inset-0 rounded-full border-2 border-transparent border-t-pink-400 animate-spin opacity-60"
-            style="animation-duration: 8s;"
-          />
-        </button>
-      </div>
-      <div
-        class="flex justify-center items-center mt-12 space-x-8"
-      >
-        <button
-          aria-label="Microsoft Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 opacity-100 scale-110"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
+            class="min-w-0"
           >
-            <img
-              alt="Microsoft"
-              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/microsoft.svg"
-              width="128"
-            />
+            <p
+              class="mb-1 text-sm font-semibold text-white"
+            >
+              Martijn Verburg
+            </p>
+            <p
+              class="mb-0 text-xs leading-relaxed text-grey"
+            >
+              Principal Group Manager - Java & Go @ Microsoft
+            </p>
           </div>
-        </button>
-        <button
-          aria-label="Alibaba Cloud Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
-          >
-            <img
-              alt="Alibaba Cloud"
-              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/alibaba.png"
-              width="128"
-            />
-          </div>
-        </button>
-        <button
-          aria-label="Red Hat Testimonial"
-          class="transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
-        >
-          <div
-            class="h-12 w-32 flex items-center justify-center"
-          >
-            <img
-              alt="Red Hat"
-              class="max-h-full max-w-full w-auto h-auto object-contain brightness-0 invert"
-              height="48"
-              src="/images/members/redhat.svg"
-              width="128"
-            />
-          </div>
-        </button>
-      </div>
+        </figcaption>
+      </figure>
     </div>
   </section>
-  <div
-    class="flex justify-center my-10"
-  >
-    <a
-      class="flex items-center justify-center w-[280px] h-[56px] rounded-2xl text-[#FF1464] text-lg font-medium gradient-border border-2 border-pink-500/0 transition-all duration-300 hover:border-pink-500/100 hover:text-pink hover:scale-105"
-      href="/join-us"
-    >
-      Join Us
-    </a>
-  </div>
   <div
     data-testid="mocked-latest-news"
   >
     Latest News Content
   </div>
+  <aside
+    class="bg-purple py-4 sm:py-6"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
+    >
+      <div
+        class="relative isolate overflow-hidden rounded-2xl bg-[#ffe8f0] p-6 text-purple sm:p-8 lg:p-10"
+      >
+        <div
+          aria-hidden="true"
+          class="pointer-events-none absolute -right-20 -top-32 -z-10 h-80 w-80 rounded-full border-[40px] border-pink/10"
+        />
+        <div
+          class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center md:gap-10"
+        >
+          <div
+            class="max-w-3xl"
+          >
+            <p
+              class="mb-3 font-mono text-xs tracking-[0.2em] text-purple/70"
+            >
+              ECLIPSE ADOPTIUM
+            </p>
+            <h2
+              class="mb-3 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
+            >
+              Fake Banner for Testing
+            </h2>
+            <p
+              class="mb-0 text-sm leading-relaxed text-purple/80 sm:text-base"
+            >
+              This is a fake banner used for testing purposes only.
+            </p>
+          </div>
+          <a
+            class="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-purple px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
+            href="https://example.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span>
+              Read the Case Study
+            </span>
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="7"
+                x2="17"
+                y1="17"
+                y2="7"
+              />
+              <polyline
+                points="7 7 17 7 17 17"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
   <section
-    class="relative py-8 lg:py-40 overflow-hidden contributors min-h-[1000px] flex items-center justify-center"
+    class="relative py-8 lg:py-28 overflow-hidden contributors flex items-center justify-center"
   >
     <div
       class="absolute inset-0 pointer-events-none"
@@ -1176,11 +1333,11 @@ exports[`Index page > renders correctly 1`] = `
       class="max-w-7xl mx-auto px-6 lg:px-8 relative w-full h-full"
     >
       <div
-        class="relative z-20 flex flex-col items-center justify-center text-center max-w-3xl mx-auto h-full min-h-[400px]"
+        class="relative z-20 flex flex-col items-center justify-center text-center max-w-lg lg:max-w-sm xl:max-w-lg mx-auto h-full lg:min-h-[280px]"
       >
         <div>
           <h2
-            class="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8 tracking-tight"
+            class="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight mb-6 tracking-tight"
           >
             Text
           </h2>
@@ -1209,13 +1366,13 @@ exports[`Index page > renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="lg:absolute lg:inset-0 w-full h-full pointer-events-none"
+        class="mt-8 lg:mt-0 lg:absolute lg:inset-0 w-full h-full pointer-events-none"
       >
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:block lg:h-full"
+          class="grid grid-cols-1 gap-6 lg:block lg:h-full"
         >
           <div
-            class="pointer-events-auto lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-full w-full lg:w-auto flex justify-center"
+            class="pointer-events-auto lg:absolute lg:-top-24 lg:left-1/2 lg:-translate-x-1/2 lg:w-[280px] w-full flex justify-center"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1250,7 +1407,7 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="pointer-events-auto lg:absolute lg:top-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
+            class="pointer-events-auto lg:absolute lg:top-[12%] lg:right-3 lg:w-[270px] w-full hidden lg:flex justify-center"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1285,7 +1442,7 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:right-0 lg:translate-x-16 w-full lg:w-auto flex justify-center"
+            class="pointer-events-auto lg:absolute lg:bottom-[2%] lg:right-2 lg:w-[290px] w-full hidden lg:flex justify-center"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1320,7 +1477,7 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="pointer-events-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-full w-full lg:w-auto flex justify-center"
+            class="pointer-events-auto lg:absolute lg:-bottom-24 lg:left-1/2 lg:-translate-x-1/2 lg:w-[300px] w-full hidden lg:flex justify-center"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1355,7 +1512,7 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="pointer-events-auto lg:absolute lg:bottom-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
+            class="pointer-events-auto lg:absolute lg:bottom-[6%] lg:left-1 lg:w-[260px] w-full hidden lg:flex justify-center"
           >
             <div
               class="w-full max-w-[320px]"
@@ -1390,7 +1547,7 @@ exports[`Index page > renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="pointer-events-auto lg:absolute lg:top-[10%] lg:left-0 lg:-translate-x-16 w-full lg:w-auto flex justify-center"
+            class="pointer-events-auto lg:absolute lg:top-[6%] lg:left-2 lg:w-[280px] w-full hidden lg:flex justify-center"
           >
             <div
               class="w-full max-w-[320px]"

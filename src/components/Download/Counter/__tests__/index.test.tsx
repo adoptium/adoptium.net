@@ -19,11 +19,11 @@ describe("DownloadCounter", () => {
     expect(screen.getAllByText("Text").length).toBeGreaterThan(0);
   });
 
-  it("renders the GitHub stats link", () => {
+  it("links to locale-aware download statistics", () => {
     render(<DownloadCounter total={500000000} />);
     const links = screen.getAllByRole("link");
     const statsLink = links.find(
-      (link) => link.getAttribute("href") === "https://adoptium.net/stats/download"
+      (link) => link.getAttribute("href") === "/stats/download",
     );
     expect(statsLink).toBeDefined();
   });

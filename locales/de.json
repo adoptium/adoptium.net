@@ -41,6 +41,9 @@
     "back-to-home": "Zurück zur Startseite"
   },
   "Marketplace": {
+    "intro": "Java-Builds vertrauenswürdiger Anbieter vergleichen und herunterladen.",
+    "load-error": "Die Java-Distributionen konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+    "retry": "Erneut versuchen",
     "title": "Adoptium® Marktplatz",
     "subtitle": "Marktplatz",
     "description": "Java™ ist die führende Programmiersprache und Plattform der Welt. Der Adoptium-Marktplatz fördert hochwertige, TCK-zertifizierte und AQAvit-geprüfte Laufzeitumgebungen für den Einsatz im gesamten Java-Ökosystem.",
@@ -48,6 +51,12 @@
       "vendors-selected": "{selected} von {total} Anbieter ausgewählt"
     },
     "Releases": {
+      "loading": "Java-Distributionen werden geladen...",
+      "empty-title": "Keine Distributionen gefunden",
+      "empty-description": "Keine Java-Distribution entspricht Ihren Filtern. Versuchen Sie eine andere Kombination oder setzen Sie die Filter zurück.",
+      "reset-filters": "Filter zurücksetzen",
+      "view-checksum": "Prüfsumme anzeigen",
+      "result-count": "{count, plural, one {# Distribution} other {# Distributionen}}",
       "download": "Herunterladen",
       "build-date": "Build-Datum",
       "vendor": "Anbieter"
@@ -163,11 +172,32 @@
     "see-all-news": "Alle Nachrichten anzeigen",
     "read-more": "Weiterlesen"
   },
+  "Testimonials": {
+    "title": "Gemeinsam entwickelt. Weltweit geschätzt."
+  },
   "WGProjects": {
+    "intro": "Vom ersten Build bis zu Einblicken in den Produktivbetrieb. Entdecken Sie die Open-Source-Projekte hinter dem Java-Erlebnis.",
+    "explore-project": "Projekt entdecken",
+    "projects": {
+      "temurin": {
+        "category": "Ausführen",
+        "description": "Produktionsreife OpenJDK-Builds. Kostenlos nutzbar, gründlich getestet und von Millionen geschätzt."
+      },
+      "aqavit": {
+        "category": "Prüfen",
+        "description": "Open-Source-Qualitätstests, die Java-Laufzeitumgebungen auf Herz und Nieren prüfen."
+      },
+      "mission-control": {
+        "category": "Verstehen",
+        "description": "Analysieren, überwachen und verstehen Sie Ihre Java-Anwendungen mit leistungsstarken Diagnosewerkzeugen."
+      }
+    },
     "discover-all-our-projects": "Entdecken Sie all unsere Projekte",
     "description": "Eclipse Adoptium bietet Laufzeit-Binärdateien, die leistungsstark, unternehmensgerecht, plattformübergreifend, Open-Source-lizenziert sowie durch den Java SE TCK getestet und konform für den allgemeinen Einsatz im Java-Ökosystem sind. Eclipse Adoptium stellt außerdem Artefakte bereit, darunter Open-Source-Infrastruktur als Code, eine umfassende Continuous-Integration-Build- und Testfarm sowie umfangreiche Qualitätssicherungstests. Diese Artefakte können von Eclipse Adoptium-Projekten und anderen Anbietern von Laufzeittechnologien genutzt werden, um sichere, Java SE TCK-konforme, produktionsreife Laufzeiten bereitzustellen."
   },
   "LogoCarousel": {
+    "pause": "Logo-Karussell pausieren",
+    "play": "Logo-Karussell abspielen",
     "title": "Temurin wird von Millionen Nutzern vertraut – darunter diese führenden Anwender:"
   },
   "ChecksumModal": {
@@ -179,6 +209,15 @@
     "copy": "Kopieren"
   },
   "TemurinReleases": {
+    "quick-downloads": "Schnelle Downloads",
+    "all-builds": "Alle Plattformen und Pakete",
+    "download-package": "Paket für {os} herunterladen",
+    "download": "Herunterladen",
+    "load-error": "Die Versionen konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+    "retry": "Erneut versuchen",
+    "invalid-filters": "Einige Filter sind nicht verfügbar. Stattdessen werden unterstützte Optionen angezeigt.",
+    "loading": "Versionen werden geladen...",
+    "no-downloads": "Für diesen Pakettyp sind keine Downloads verfügbar.",
     "title": "Temurin® JDK herunterladen",
     "latest-releases": "Neueste Versionen",
     "description": "Wählen Sie eine Version, ein Paketformat, JDK oder JRE und laden Sie die Binärdateien herunter."

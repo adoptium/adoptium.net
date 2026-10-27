@@ -1,233 +1,206 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TemurinReleases page > renders correctly 1`] = `
-<div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+exports[`Temurin releases page > renders correctly 1`] = `
+<div
+  class="bg-purple text-white"
+>
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto max-w-7xl px-6 py-8 sm:px-8 sm:py-7"
     >
-      <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+      <p
+        class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
       >
-        <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+        ECLIPSE TEMURIN
+      </p>
+      <h1
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight sm:text-5xl"
+      >
+        Text
+      </h1>
+      <p
+        class="mb-0 max-w-2xl text-sm leading-relaxed text-grey sm:text-base"
+      >
+        Text
+      </p>
+    </div>
+  </header>
+  <div
+    class="mx-auto max-w-7xl px-6 pb-12 pt-6 sm:px-8 sm:pb-16"
+  >
+    <div
+      class="rounded-2xl border border-white/10 bg-white/[0.025] p-4"
+    >
+      <div
+        aria-label="Text"
+        class="flex flex-wrap gap-2"
+        role="group"
+      >
+        <button
+          aria-pressed="false"
+          class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+          data-testid="version-tab"
+          type="button"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Text
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
+          <span>
             Text
-          </div>
-        </div>
-        <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
+          </span>
+        </button>
+        <button
+          aria-pressed="false"
+          class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+          data-testid="version-tab"
+          type="button"
         >
-          Text
-        </div>
+          <span>
+            JDK 25 - LTS
+          </span>
+        </button>
+        <button
+          aria-pressed="false"
+          class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+          data-testid="version-tab"
+          type="button"
+        >
+          <span>
+            JDK 21 - LTS
+          </span>
+        </button>
+        <button
+          aria-pressed="true"
+          class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-pink/50 bg-pink/10 text-[#ff91b7]"
+          data-testid="version-tab"
+          type="button"
+        >
+          <span>
+            JDK 17 - LTS
+          </span>
+        </button>
+        <button
+          aria-pressed="false"
+          class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+          data-testid="version-tab"
+          type="button"
+        >
+          <span>
+            JDK 11 - LTS
+          </span>
+        </button>
+        <button
+          aria-pressed="false"
+          class="min-h-11 rounded-xl border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink border-transparent text-grey hover:border-white/10 hover:bg-white/5 hover:text-white"
+          data-testid="version-tab"
+          type="button"
+        >
+          <span>
+            JDK 8 - LTS
+          </span>
+        </button>
       </div>
     </div>
-  </div>
-  <div
-    class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 pb-20"
-  >
     <section
-      class="pt-8"
+      aria-label="Text"
+      class="mt-6"
     >
-      <div
-        class="w-full max-w-[1264px] mx-auto "
+      <h2
+        class="sr-only"
       >
-        <div
-          class="relative min-w-full w-full overflow-auto md:overflow-visible"
-        >
-          <span
-            class="h-[1px] w-full bg-[#3E3355] inline-block absolute bottom-0 z-[-1]"
-          />
-          <div
-            class="flex space-x-10 whitespace-nowrap lg:justify-center py-3"
-          >
-            <button
-              data-testid="version-tab"
-            >
-              <span
-                class="py-3 w-full text-base font-normal leading-6 
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-              >
-                Text
-              </span>
-            </button>
-            <button
-              data-testid="version-tab"
-            >
-              <span
-                class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-              >
-                JDK 
-                8 - LTS
-              </span>
-            </button>
-            <button
-              data-testid="version-tab"
-            >
-              <span
-                class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-              >
-                JDK 
-                11 - LTS
-              </span>
-            </button>
-            <button
-              data-testid="version-tab"
-            >
-              <span
-                class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out border-primary border-b-[2px] text-white"
-              >
-                JDK 
-                17 - LTS
-              </span>
-            </button>
-            <button
-              data-testid="version-tab"
-            >
-              <span
-                class="py-3 w-full text-base font-normal leading-6
-            outline-none cursor-pointer transition-all duration-200 ease-in-out text-[#8a809e] border-transparent border-b"
-              >
-                JDK 
-                21 - LTS
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
+        Text
+      </h2>
     </section>
+    <div
+      class="mb-4 mt-8 flex flex-wrap items-center justify-between gap-3"
+    >
+      <h2
+        class="mb-0 text-xl font-semibold tracking-tight"
+      >
+        Text
+      </h2>
+      <span
+        class="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-grey"
+      >
+        JDK 17 LTS
+      </span>
+    </div>
     <section
       class="py-8"
       data-testid="release-results-empty"
     >
       <div
-        class="flex justify-center items-center min-h-[400px] border border-[#554772] rounded-[24px] bg-[#200E46] p-8"
+        class="rounded-2xl border border-white/10 bg-white/[0.025] px-6 py-12 text-center"
       >
-        <div
-          class="text-center space-y-6 max-w-md"
+        <svg
+          aria-hidden="true"
+          class="mx-auto mb-4 text-grey"
+          data-testid="empty-state-icon"
+          fill="currentColor"
+          height="32"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="w-24 h-24 mx-auto bg-gradient-to-br from-[#2B1A4F] to-[#3E3355] rounded-full flex items-center justify-center"
-          >
-            <svg
-              class="w-12 h-12 text-gray-400"
-              data-testid="empty-state-icon"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
-          <div
-            class="space-y-2"
-          >
-            <h3
-              class="text-2xl font-semibold text-white"
-              data-testid="empty-state-title"
-            >
-              Text
-            </h3>
-            <p
-              class="text-gray-400 leading-relaxed"
-              data-testid="empty-state-description"
-            >
-              Text
-            </p>
-          </div>
-        </div>
+          <path
+            d="M85.57 446.25h340.86a32 32 0 0 0 28.17-47.17L284.18 82.58c-12.09-22.44-44.27-22.44-56.36 0L57.4 399.08a32 32 0 0 0 28.17 47.17"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="32"
+          />
+          <path
+            d="m250.26 195.39 5.74 122 5.73-121.95a5.74 5.74 0 0 0-5.79-6h0a5.74 5.74 0 0 0-5.68 5.95"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="32"
+          />
+          <path
+            d="M256 397.25a20 20 0 1 1 20-20 20 20 0 0 1-20 20"
+          />
+        </svg>
+        <h3
+          class="mb-3 text-xl font-semibold text-white"
+          data-testid="empty-state-title"
+        >
+          Text
+        </h3>
+        <p
+          class="mx-auto mb-0 max-w-md text-sm leading-relaxed text-grey"
+          data-testid="empty-state-description"
+        >
+          Text
+        </p>
       </div>
     </section>
   </div>
   <section
-    class="py-16 md:py-32 bg-[#0E002A] px-6"
+    class="border-t border-white/10 bg-[#10052d] py-16 text-white sm:py-20"
   >
     <div
-      class="text-center max-w-[680px] mx-auto"
+      class="mx-auto max-w-7xl px-6 sm:px-8"
     >
       <h2
-        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+        class="mb-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
       >
         Text
       </h2>
       <p
-        class="text-grey mt-6 font-normal text-base"
+        class="mb-8 max-w-3xl text-sm leading-relaxed text-grey"
       >
         Text
       </p>
-    </div>
-    <div
-      class=" mt-8 md:mt-16"
-    >
       <div
-        class=" justify-between max-w-[1064px] mx-auto grid  gap-8 md:gap-12 w-full grid-cols-1 md:grid-cols-2  lg:grid-cols-3 "
+        class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
       >
         <div
-          class="flex gap-4 max-w-[366px] xl:max-w-[322px]"
+          class="flex min-w-0 items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <span
-            class="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]"
+            aria-hidden="true"
+            class="flex h-10 w-10 shrink-0 items-center justify-center"
           >
             <svg
               color="#1D63ED"
@@ -247,15 +220,15 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </span>
           <div>
             <h3
-              class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
+              class="mb-2 text-base font-semibold"
             >
               Temurin Containers
             </h3>
             <div
-              class="flex gap-4 mt-2 "
+              class="flex flex-wrap gap-2"
             >
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="https://hub.docker.com/_/eclipse-temurin"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -266,10 +239,11 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-4 max-w-[366px] xl:max-w-[322px]"
+          class="flex min-w-0 items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <span
-            class="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]"
+            aria-hidden="true"
+            class="flex h-10 w-10 shrink-0 items-center justify-center"
           >
             <svg
               enable-background="new 0 2 48 48"
@@ -384,33 +358,33 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </span>
           <div>
             <h3
-              class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
+              class="mb-2 text-base font-semibold"
             >
               Linux Repositories
             </h3>
             <div
-              class="flex gap-4 mt-2 "
+              class="flex flex-wrap gap-2"
             >
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="/installation/linux/#_deb_installation_on_debian_or_ubuntu"
               >
                 Debian
               </a>
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="/installation/linux/#_centosrhelfedora_instructions"
               >
                 RPM
               </a>
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="/installation/linux/#_alpine_linux_instructions"
               >
                 Alpine
               </a>
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="/installation/linux/#_opensusesles_instructions"
               >
                 SLES
@@ -419,10 +393,11 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-4 max-w-[366px] xl:max-w-[322px]"
+          class="flex min-w-0 items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <span
-            class="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]"
+            aria-hidden="true"
+            class="flex h-10 w-10 shrink-0 items-center justify-center"
           >
             <svg
               enable-background="new 0 0 48 48"
@@ -447,15 +422,15 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </span>
           <div>
             <h3
-              class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
+              class="mb-2 text-base font-semibold"
             >
               Package Managers
             </h3>
             <div
-              class="flex gap-4 mt-2 "
+              class="flex flex-wrap gap-2"
             >
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="https://formulae.brew.sh/cask/temurin"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -463,7 +438,7 @@ exports[`TemurinReleases page > renders correctly 1`] = `
                 Homebrew
               </a>
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="https://sdkman.io/jdks/#tem"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -471,7 +446,7 @@ exports[`TemurinReleases page > renders correctly 1`] = `
                 SDKMAN
               </a>
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="https://docs.microsoft.com/en-us/windows/package-manager/winget/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -482,10 +457,11 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-4 max-w-[366px] xl:max-w-[322px]"
+          class="flex min-w-0 items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <span
-            class="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]"
+            aria-hidden="true"
+            class="flex h-10 w-10 shrink-0 items-center justify-center"
           >
             <svg
               fill="none"
@@ -522,15 +498,15 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </span>
           <div>
             <h3
-              class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
+              class="mb-2 text-base font-semibold"
             >
               REST API
             </h3>
             <div
-              class="flex gap-4 mt-2 "
+              class="flex flex-wrap gap-2"
             >
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="https://api.adoptium.net"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -538,7 +514,7 @@ exports[`TemurinReleases page > renders correctly 1`] = `
                 REST API
               </a>
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="https://api.adoptium.net/q/swagger-ui/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -549,10 +525,11 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-4 max-w-[366px] xl:max-w-[322px]"
+          class="flex min-w-0 items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <span
-            class="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]"
+            aria-hidden="true"
+            class="flex h-10 w-10 shrink-0 items-center justify-center"
           >
             <svg
               fill="currentColor"
@@ -570,18 +547,16 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </span>
           <div>
             <h3
-              class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
+              class="mb-2 text-base font-semibold"
             >
               GitHub Actions
             </h3>
             <div
-              class="flex gap-4 mt-2 "
+              class="flex flex-wrap gap-2"
             >
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
-                href="https://github.com/actions/setup-java"
-                rel="noopener noreferrer"
-                target="_blank"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+                href="/installation/github-actions"
               >
                 setup-java
               </a>
@@ -589,10 +564,11 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="flex gap-4 max-w-[366px] xl:max-w-[322px]"
+          class="flex min-w-0 items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <span
-            class="p-6 rounded-full cursor-pointer flex justify-center items-center w-fit bg-[#2B1A4F] border border-[#5A4D76]"
+            aria-hidden="true"
+            class="flex h-10 w-10 shrink-0 items-center justify-center"
           >
             <svg
               color="#FF1365"
@@ -612,15 +588,15 @@ exports[`TemurinReleases page > renders correctly 1`] = `
           </span>
           <div>
             <h3
-              class="max-w-[270px] text-xl font-normal xl:max-w-[226px]"
+              class="mb-2 text-base font-semibold"
             >
               Other Downloads
             </h3>
             <div
-              class="flex gap-4 mt-2 "
+              class="flex flex-wrap gap-2"
             >
               <a
-                class="text-[#FF1464] text-sm font-normal border-b-[1px] border-[#FF1464]"
+                class="inline-flex min-h-11 items-center rounded-lg border border-white/10 px-3 py-2 text-xs text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
                 href="/temurin/nightly"
               >
                 Nightly Builds
