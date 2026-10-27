@@ -1,6 +1,6 @@
 ---
 title: October 2026 Eclipse Temurin releases address the eMudhra CA compromise
-date: "2026-10-26"
+date: "2026-10-27"
 author: pmc
 description: The October 2026 Eclipse Temurin releases remove the roots that signed the compromised eMudhra intermediate CA certificates from the Temurin trust store. This post explains what changed, which versions to use, and how to verify your runtime.
 tags:
