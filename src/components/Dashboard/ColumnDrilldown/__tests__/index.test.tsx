@@ -9,11 +9,10 @@ const mockFetch = vi.fn();
 global.fetch = mockFetch;
 
 // Mock highcharts drilldown import
-vi.mock("highcharts/modules/drilldown", () => ({
-  default: vi.fn(),
-}));
+vi.mock("@highcharts/react/modules/Drilldown", () => ({}));
 
 vi.mock("@highcharts/react", () => ({
+  Highcharts: { AST: { allowedAttributes: [] }, numberFormat: vi.fn() },
   Chart: ({ options }: { options: { title?: { text?: string } } }) => (
     <div data-testid="highcharts-react">{options?.title?.text}</div>
   ),

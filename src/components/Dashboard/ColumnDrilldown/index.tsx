@@ -1,16 +1,19 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import * as Highcharts from "highcharts";
+import type * as Highcharts from "highcharts";
 import {
   Chart,
+  Highcharts as HC,
   type ChartOptions,
   type HighchartsReactRefObject,
 } from "@highcharts/react";
+// Registers the drilldown module on the Highcharts instance used by <Chart>
+import "@highcharts/react/modules/Drilldown";
 import { capitalize } from "@/utils/capitalize";
 
-if (!Highcharts.AST.allowedAttributes.includes("rel")) {
-  Highcharts.AST.allowedAttributes.push("rel");
+if (!HC.AST.allowedAttributes.includes("rel")) {
+  HC.AST.allowedAttributes.push("rel");
 }
 
 // Helper to split drilldown series by artifacts
@@ -84,27 +87,6 @@ const ColumnDrilldown: React.FC<ColumnDrilldownProps> = ({
   const [seriesData, setSeriesData] = useState<DrilldownData[]>([]);
   const [drilldownSeries, setDrilldownSeries] = useState<DrilldownSeries[]>([]);
   const chartComponentRef = useRef<HighchartsReactRefObject>(null);
-
-  // Dynamically load drilldown module on client only
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("highcharts/modules/drilldown").then((mod) => {
-        const drilldown = mod as unknown as
-          | { default?: (h: typeof Highcharts) => void }
-          | ((h: typeof Highcharts) => void);
-        if (typeof drilldown === "function") {
-          (drilldown as (h: typeof Highcharts) => void)(Highcharts);
-        } else if (
-          typeof (drilldown as { default?: (h: typeof Highcharts) => void })
-            .default === "function"
-        ) {
-          (drilldown as { default: (h: typeof Highcharts) => void }).default(
-            Highcharts,
-          );
-        }
-      });
-    }
-  }, []);
 
   useEffect(() => {
     const updateData = async () => {
@@ -262,7 +244,7 @@ const ColumnDrilldown: React.FC<ColumnDrilldownProps> = ({
           style: { color: "#fff", fontWeight: "bold", textOutline: "none" },
           formatter: function () {
             if (!this || typeof this.y !== "number") return "";
-            return Highcharts.numberFormat(this.y, 0, ".", " ");
+            return HC.numberFormat(this.y, 0, ".", " ");
           },
         },
         pointPadding: 0.2,
