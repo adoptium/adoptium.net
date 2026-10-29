@@ -2,92 +2,566 @@
 
 exports[`WhatWeDo page > renders correctly 1`] = `
 <div
-  class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+  class="bg-purple text-white"
 >
-  <div
-    class="w-full relative"
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-    />
-    <div
-      class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-    />
-    <div
-      class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-    />
-  </div>
-  <div
-    class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-  >
-    <div
-      class="self-stretch flex-col justify-center items-center flex gap-6"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="self-stretch flex-col justify-center items-center flex gap-4"
+        class="max-w-3xl"
       >
         <div
-          class="justify-start items-center gap-3 inline-flex"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <svg
-            fill="none"
-            height="14"
-            viewBox="0 0 14 14"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              fill="#FF1464"
-              height="8"
-              rx="2"
-              width="8"
-              x="3"
-              y="3"
-            />
-            <rect
-              height="11"
-              rx="3.5"
-              stroke="#FF1464"
-              stroke-opacity="0.25"
-              stroke-width="3"
-              width="11"
-              x="1.5"
-              y="1.5"
-            />
-          </svg>
-          <div
-            class="text-rose-600 text-base font-bold leading-normal"
-          >
-            What we do
-          </div>
+          What we do
         </div>
-        <div
-          class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
         >
           About Eclipse Adoptium®
+        </h1>
+        <div
+          class="max-w-2xl text-base leading-relaxed text-grey "
+        >
+          Adoptium champions open-source Java solutions, empowering businesses with cutting-edge technology and collaborative innovation.
         </div>
       </div>
       <div
-        class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
+        class="flex flex-wrap items-center gap-3 lg:pb-1"
       >
-        <div
-          class="text-center lg:text-justify flex flex-col ml-10 gap-3"
+        <a
+          class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-pink px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          href="/temurin/releases"
         >
-          <p>
-            Adoptium champions open-source Java solutions, empowering businesses with cutting-edge technology and collaborative innovation.
-          </p>
-          <p>
-            Founded on the principles of community-driven development, Adoptium has become a cornerstone of the Java ecosystem, driving forward-thinking solutions and fostering a culture of shared knowledge.
-          </p>
-          <p>
-            We achieve this through a set of Projects under the Adoptium PMC and a close working partnership with external projects, most notably OpenJDK for providing the Java SE runtime implementation.
-          </p>
-          <p>
-            The AdoptOpenJDK project was established in 2017 following years of discussions about the general lack of an open and reproducible build and test system for OpenJDK source across multiple platforms. Since then it has grown to become a leading provider of high-quality OpenJDK-based binaries used by enterprises in embedded systems, desktops, traditional servers, modern cloud platforms, and large mainframes. The Eclipse Adoptium project is the continuation of the original AdoptOpenJDK mission.
-          </p>
-        </div>
+          <span>
+            Text
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </a>
       </div>
     </div>
-  </div>
+  </header>
+  <section
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
+  >
+    <div
+      class="mb-8 max-w-3xl"
+    >
+      <h2
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+      >
+        Text
+      </h2>
+    </div>
+    <div
+      class="grid gap-4 md:grid-cols-2"
+    >
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6 sm:p-7"
+      >
+        <span
+          class="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10 text-[#ff91b7]"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+            />
+            <circle
+              cx="9"
+              cy="7"
+              r="4"
+            />
+            <path
+              d="M23 21v-2a4 4 0 0 0-3-3.87"
+            />
+            <path
+              d="M16 3.13a4 4 0 0 1 0 7.75"
+            />
+          </svg>
+        </span>
+        <h3
+          class="mb-4 text-xl font-semibold tracking-tight"
+        >
+          Text
+        </h3>
+        <p
+          class="mb-4 text-sm leading-relaxed text-grey"
+        >
+          Founded on the principles of community-driven development, Adoptium has become a cornerstone of the Java ecosystem, driving forward-thinking solutions and fostering a culture of shared knowledge.
+        </p>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          We achieve this through a set of Projects under the Adoptium PMC and a close working partnership with external projects, most notably OpenJDK for providing the Java SE runtime implementation.
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6 sm:p-7"
+      >
+        <span
+          class="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10 text-[#ff91b7]"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="6"
+              x2="6"
+              y1="3"
+              y2="15"
+            />
+            <circle
+              cx="18"
+              cy="6"
+              r="3"
+            />
+            <circle
+              cx="6"
+              cy="18"
+              r="3"
+            />
+            <path
+              d="M18 9a9 9 0 0 1-9 9"
+            />
+          </svg>
+        </span>
+        <h3
+          class="mb-4 text-xl font-semibold tracking-tight"
+        >
+          Text
+        </h3>
+        <p
+          class="mb-4 text-sm leading-relaxed text-grey"
+        >
+          The AdoptOpenJDK project was established in 2017 following years of discussions about the general lack of an open and reproducible build and test system for OpenJDK source across multiple platforms.
+        </p>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Since then it has grown to become a leading provider of high-quality OpenJDK-based binaries used by enterprises in embedded systems, desktops, traditional servers, modern cloud platforms, and large mainframes. The Eclipse Adoptium project is the continuation of the original AdoptOpenJDK mission.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section
+    aria-labelledby="projects-heading"
+    class="bg-purple py-16 text-white sm:py-20"
+  >
+    <div
+      class="mx-auto w-full max-w-7xl px-6 sm:px-8"
+    >
+      <div
+        class="mb-9 flex flex-col justify-between gap-5 lg:flex-row lg:items-end"
+      >
+        <div
+          class="max-w-2xl"
+        >
+          <p
+            class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
+          >
+            ECLIPSE ADOPTIUM
+          </p>
+          <h2
+            class="mb-0 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+            id="projects-heading"
+          >
+            Text
+          </h2>
+        </div>
+        <p
+          class="mb-0 max-w-sm text-sm leading-relaxed text-grey"
+        >
+          Text
+        </p>
+      </div>
+      <div
+        class="grid gap-4 md:grid-cols-3"
+      >
+        <a
+          aria-labelledby="project-temurin"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition-colors hover:border-pink/50 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:p-7"
+          href="/temurin"
+        >
+          <div
+            class="mb-7 flex items-start justify-between"
+          >
+            <div
+              class="relative h-14 w-14"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="56px"
+                src="/images/projects/temurin-project.svg"
+              />
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
+            >
+              0
+              1
+            </span>
+          </div>
+          <p
+            class="mb-2 text-xs font-medium text-[#ff91b7]"
+          >
+            Text
+          </p>
+          <h3
+            class="mb-3 text-xl font-semibold tracking-tight"
+            id="project-temurin"
+          >
+            Eclipse Temurin®
+          </h3>
+          <p
+            class="mb-7 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <div
+            class="mt-auto flex items-center justify-between border-t border-white/10 pt-4 text-sm"
+          >
+            <span>
+              Text
+            </span>
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-grey transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-white group-focus-visible:border-pink group-focus-visible:bg-pink group-focus-visible:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a
+          aria-labelledby="project-aqavit"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition-colors hover:border-pink/50 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:p-7"
+          href="/aqavit"
+        >
+          <div
+            class="mb-7 flex items-start justify-between"
+          >
+            <div
+              class="relative h-14 w-14"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="56px"
+                src="/images/projects/aqavit-project.svg"
+              />
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
+            >
+              0
+              2
+            </span>
+          </div>
+          <p
+            class="mb-2 text-xs font-medium text-[#ff91b7]"
+          >
+            Text
+          </p>
+          <h3
+            class="mb-3 text-xl font-semibold tracking-tight"
+            id="project-aqavit"
+          >
+            Eclipse AQAvit
+          </h3>
+          <p
+            class="mb-7 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <div
+            class="mt-auto flex items-center justify-between border-t border-white/10 pt-4 text-sm"
+          >
+            <span>
+              Text
+            </span>
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-grey transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-white group-focus-visible:border-pink group-focus-visible:bg-pink group-focus-visible:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a
+          aria-labelledby="project-mission-control"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.045] to-white/[0.01] p-6 transition-colors hover:border-pink/50 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:p-7"
+          href="/jmc"
+        >
+          <div
+            class="mb-7 flex items-start justify-between"
+          >
+            <div
+              class="relative h-14 w-14"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="56px"
+                src="/images/projects/mc-project.svg"
+              />
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
+            >
+              0
+              3
+            </span>
+          </div>
+          <p
+            class="mb-2 text-xs font-medium text-[#ff91b7]"
+          >
+            Text
+          </p>
+          <h3
+            class="mb-3 text-xl font-semibold tracking-tight"
+            id="project-mission-control"
+          >
+            Eclipse Mission Control
+          </h3>
+          <p
+            class="mb-7 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <div
+            class="mt-auto flex items-center justify-between border-t border-white/10 pt-4 text-sm"
+          >
+            <span>
+              Text
+            </span>
+            <span
+              class="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-grey transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-white group-focus-visible:border-pink group-focus-visible:bg-pink group-focus-visible:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16 "
+  >
+    <div
+      class="flex flex-col items-start justify-between gap-6 rounded-2xl bg-[#ffe8f0] p-6 text-purple sm:p-8 md:flex-row md:items-center"
+    >
+      <div
+        class="max-w-3xl"
+      >
+        <h2
+          class="mb-3 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
+        >
+          Get other platforms and versions
+        </h2>
+        <div
+          class="text-sm leading-relaxed text-purple/80"
+        />
+      </div>
+      <a
+        class="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-purple px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
+        href="/temurin/releases"
+      >
+        <span>
+          See all Releases
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="5"
+            x2="19"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 5 19 12 12 19"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-12 sm:py-16"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
+    >
+      <div
+        class="mb-8 max-w-3xl"
+      >
+        <h2
+          class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+        >
+          License(s)
+        </h2>
+      </div>
+      <ul
+        class="m-0 grid list-none gap-4 p-0 text-sm leading-relaxed text-grey md:grid-cols-2 [&_a]:text-[#ff91b7] [&_a]:underline [&_a]:underline-offset-4 [&_a]:focus-visible:outline-2 [&_a]:focus-visible:outline-offset-2 [&_a]:focus-visible:outline-pink"
+        role="list"
+      >
+        <li
+          class="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+        >
+          Build scripts and other code to produce the binaries, the website and other build infrastructure are licensed under
+           
+          <a
+            href="https://www.apache.org/licenses/LICENSE-2.0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Apache License, Version 2.0
+          </a>
+          .
+        </li>
+        <li
+          class="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+        >
+          OpenJDK code itself is licensed under
+           
+          <a
+            href="https://openjdk.java.net/legal/gplv2+ce.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            GPL v2 with Classpath Exception
+          </a>
+           
+          (GPLv2+CE) and
+           
+          <a
+            href="https://openjdk.java.net/legal/assembly-exception.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            GPL v2 with Assembly Exception
+          </a>
+           
+          (GPLv2+Assembly).
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
 `;

@@ -3,12 +3,12 @@ import React from "react";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import PageHeader from "@/components/Common/PageHeader";
-import ContactUs from "@/components/ContactUs";
 import Logos, { LogoType } from "@/components/Logos";
 import KeyInitiatives from "@/components/Sustainers/KeyInitiatives";
 import MembershipLevels from "@/components/Membership/Levels";
-import CommonButton from "@/components/Common/CommonButton";
 import MemberBenefits from "@/components/Membership/Benefits";
+import SectionHeading from "@/components/Common/SectionHeading";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export const metadata: Metadata = {
   title: "Become a Member",
@@ -141,19 +141,27 @@ const initiatives = [
 export default function MembersPage() {
   const headerButtons = (
     <>
-      <Link href="/join" className="w-full sm:w-auto">
-        <CommonButton>Join Us</CommonButton>
+      <Link
+        href="/join"
+        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-pink px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+      >
+        <span>Join Us</span>
+        <FiArrowUpRight aria-hidden="true" />
       </Link>
-      <Link href="#strategic-sec" className="w-full sm:w-auto">
-        <CommonButton>Our Members</CommonButton>
+      <Link
+        href="#strategic-sec"
+        className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-medium text-grey hover:border-white/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+      >
+        Our Members
       </Link>
     </>
   );
 
   return (
-    <div>
+    <div className="bg-purple text-white">
       <PageHeader
-        title="Join the Adoptium Working Group"
+        variant="modern"
+        title="Join the Adoptium® Working Group"
         subtitle="Become a Member"
         description="Support the future of open, secure, enterprise-ready Java runtimes."
         buttons={headerButtons}
@@ -164,99 +172,71 @@ export default function MembersPage() {
         description="The Adoptium Working Group brings together organizations to shape the future of Java by collaborating on the delivery of high-quality, TCK-certified OpenJDK binaries through Eclipse Temurin. As a member, your organization gains strategic influence, community leadership opportunities, and a voice in driving long-term innovation across the Java ecosystem."
       />
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link href="/join">
-            <CommonButton>Contact Us</CommonButton>
-          </Link>
-          {/* TODO add a real link */}
-          {/* <Link href="">
-            <CommonButton>Download Prospectus</CommonButton>
-          </Link> */}
-        </div>
-      </div>
-
       <MembershipLevels
         title="Membership Levels"
         description="Choose the membership level that best fits your organization's needs and engagement with the Adoptium community."
       />
 
-      <div className="w-full px-3 pt-2 pb-4 mb-4">
-        <div className="max-w-4xl mx-auto overflow-x-auto scrollbar-hide">
-          <div className="flex space-x-4 md:space-x-10 whitespace-nowrap justify-center py-2 min-w-max">
-            <Link href="#strategic-sec">
-              <span
-                className="px-3 py-2 text-base md:text-lg font-medium leading-6
-                  outline-none hover:text-white hover:border-b-2
-                  hover:border-[#ff1464] text-[#8a809e] border-b-2
-                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-              >
-                Strategic Members
-              </span>
-            </Link>
-            <Link href="#enterprise-sec">
-              <span
-                className="px-3 py-2 text-base md:text-lg font-medium leading-6
-                  outline-none hover:text-white hover:border-b-2
-                  hover:border-[#ff1464] text-[#8a809e] border-b-2
-                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-              >
-                Enterprise Members
-              </span>
-            </Link>
-            <Link href="#participant-sec">
-              <span
-                className="px-3 py-2 text-base md:text-lg font-medium leading-6
-                  outline-none hover:text-white hover:border-b-2
-                  hover:border-[#ff1464] text-[#8a809e] border-b-2
-                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-              >
-                Participant Members
-              </span>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <Logos
-        sectionId="strategic-sec"
-        members={LogoType.STRATEGIC}
-        title="Strategic Members"
-        // description="Strategic Members are organizations that view Adoptium working group managed technology as critical to their organization’s future, and are investing significant resources to sustain and define the core activities that are the responsibility of the working group."
-      />
-
-      <Logos
-        sectionId="enterprise-sec"
-        members={LogoType.ENTERPRISE}
-        title="Enterprise Members"
-        // description="Enterprise Members are typically organizations that view the Adoptium working group managed technology as a critical part of their organization‘s business operations. These organizations want to influence the direction and support the development of a runtime technology ecosystem through Eclipse Adoptium."
-      />
-
-      <Logos
-        sectionId="participant-sec"
-        members={LogoType.PARTICIPANT}
-        title="Participant Members"
-        // description="Participant Members are typically organizations that deliver products or services based on Adoptium technology. These organizations want to participate in the evolution of the Eclipse Adoptium ecosystem to ensure it continues to meet their needs."
-      />
-
       <MemberBenefits />
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4">
-        <p className="text-[20px] leading-[28px] text-white my-0 text-center">
-          Are you interested in becoming a member?
-        </p>
-        <Link href="/join" className="w-full sm:w-auto">
-          <button className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-            Become a Member
-          </button>
-        </Link>
-      </div>
+      <section className="border-y border-white/10 bg-[#10052d] py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8">
+          <SectionHeading title="Our Members" />
+          <nav aria-label="Our Members" className="mb-2 flex flex-wrap gap-2">
+            {[
+              { id: "strategic-sec", title: "Strategic Members" },
+              { id: "enterprise-sec", title: "Enterprise Members" },
+              { id: "participant-sec", title: "Participant Members" },
+            ].map(({ id, title }) => (
+              <Link
+                key={id}
+                href={`#${id}`}
+                className="inline-flex min-h-11 items-center rounded-xl border border-white/10 px-4 py-2 text-xs text-grey hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+              >
+                {title}
+              </Link>
+            ))}
+          </nav>
+          <Logos
+            compact
+            sectionId="strategic-sec"
+            members={LogoType.STRATEGIC}
+            title="Strategic Members"
+          />
+          <Logos
+            compact
+            sectionId="enterprise-sec"
+            members={LogoType.ENTERPRISE}
+            title="Enterprise Members"
+          />
+          <Logos
+            compact
+            sectionId="participant-sec"
+            members={LogoType.PARTICIPANT}
+            title="Participant Members"
+          />
+        </div>
+      </section>
 
-      <ContactUs
-        title="Speak to our team today"
-        buttontitle="Contact Us"
-        linkTo="/join"
-      />
+      <section className="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16">
+        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-[#ffe8f0] p-6 text-purple sm:p-8 md:flex-row md:items-center">
+          <div>
+            <h2 className="mb-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+              Speak to our team today
+            </h2>
+            <p className="mb-0 text-sm leading-relaxed text-purple/80">
+              Are you interested in becoming a member?
+            </p>
+          </div>
+          <Link
+            href="/join"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-purple px-5 py-3 text-sm font-semibold text-white hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
+          >
+            <span>Become a Member</span>
+            <FiArrowUpRight aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

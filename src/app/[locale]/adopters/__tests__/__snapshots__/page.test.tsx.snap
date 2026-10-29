@@ -1,127 +1,842 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Adopters page > renders correctly 1`] = `
-<div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+<div
+  class="bg-purple text-white"
+>
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+        class="max-w-3xl"
       >
         <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Our Adopters
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
-            Eclipse Temurin® Adopters
-          </div>
+          Our Adopters
         </div>
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
+        >
+          Eclipse Temurin® Adopters
+        </h1>
         <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
+          class="max-w-2xl text-base leading-relaxed text-grey "
         >
           Companies that use Eclipse Temurin in production.
         </div>
       </div>
+      <div
+        class="flex flex-wrap items-center gap-3 lg:pb-1"
+      >
+        <a
+          class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-pink px-5 py-3 text-sm font-semibold text-white hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          href="/adopters?open=adopter#become-adopter"
+        >
+          <span>
+            How can I get my logo displayed?
+          </span>
+          <svg
+            aria-hidden="true"
+            class="shrink-0"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
-  <div />
+  </header>
   <div
-    class="flex flex-col items-center justify-center"
-    id="become-adopter"
+    class="mx-auto max-w-7xl px-6 py-6 sm:px-8"
   >
-    <button
-      class="mx-auto mt-10 mb-6 bg-gradient-to-r from-[#FF1464] to-[#7F1CFF] text-white text-lg font-semibold w-full max-w-xs h-14 rounded-full shadow-lg hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-pink-400/50 border-none"
+    <section
+      class="scroll-mt-28 border-b border-white/10 py-6 last:border-b-0"
     >
-      How can I get my logo displayed?
-    </button>
+      <div
+        class="mb-4"
+      />
+      <div
+        class="w-full flex flex-col items-center justify-center mt-3"
+      >
+        <div
+          class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+          id="adopters"
+        >
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.accenture.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 128px; height: 48px;"
+            >
+              <img
+                alt="Accenture"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-accenture.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.aipsafe.cz/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="AiP Safe"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-aipsafe.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://skywalking.apache.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Apache SkyWalking"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-apache-skywalking.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.arm.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 88px; height: 48px;"
+            >
+              <img
+                alt="Arm"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-arm.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.atlassian.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Atlassian"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-atlassian.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://binero.com/en"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Binero Group"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-binero.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://blockbax.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Blockbax"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-blockbax.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.bloomberg.com/company/values/tech-at-bloomberg/open-source/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Bloomberg"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-bloomberg.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.cargurus.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="CarGurus"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-cargurus.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.cosmo-one.gr/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="cosmoONE"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-cosmoone.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.delphix.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Delphix"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-delphix.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://dopingtech.net"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Doping Technology"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-doping-tech.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.dynatrace.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Dynatrace"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-dynatrace.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.faktorzehn.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Faktor Zehn GmbH"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-faktorzehn.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.gematik.de/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="gematik GmbH"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-gematik.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.gocd.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="GoCD"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-gocd.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://jenkins.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Jenkins"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-jenkins.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://kestra.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Kestra"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-kestra.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://mms.tech/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="MediaMarktSaturn Technology"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-mediamarktsaturn.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://opensource.mercedes-benz.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Mercedes-Benz Tech Innovation GmbH"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-mercedes-benz.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://opensource.michelin.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 64px;"
+            >
+              <img
+                alt="Michelin"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-michelin.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://microsoft.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Microsoft"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/members/microsoft.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.mindus.co/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Mindus SARL"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-mindus.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://mongodb.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 128px; height: 48px;"
+            >
+              <img
+                alt="MongoDB"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-mongodb.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.open-elements.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="OpenElements"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-open-elements.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://r3mscore.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="R3m Score"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-r3m-score.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.radiantlogic.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Radiant Logic"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-radiant-logic.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://developers.redhat.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 128px; height: 48px;"
+            >
+              <img
+                alt="Red Hat"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/Logo-RedHat-A-Color-RGB.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.scentbird.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Scentbird"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-scentbird.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.societegenerale.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Societe Generale"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-societe-generale.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://starburst.io/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Starburst"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-starburst.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.t-systems.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 128px; height: 48px;"
+            >
+              <img
+                alt="T-Systems"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-t-systems.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://timefold.ai/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Timefold"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-timefold.png"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.tirasa.net/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Tirasa"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-tirasa.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.totalvalidator.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Total Validator"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-total-validator.svg"
+              />
+            </span>
+          </a>
+          <a
+            class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="https://www.trendmicro.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="relative block w-full"
+              style="max-width: 160px; height: 48px;"
+            >
+              <img
+                alt="Trend Micro"
+                class="object-contain"
+                sizes="(max-width: 639px) 40vw, 176px"
+                src="/images/adopters/logo-trend-micro.png"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
   <section
-    class="relative xl:px-0 px-6 md:py-32 py-16 "
+    class="scroll-mt-28 border-y border-white/10 bg-[#10052d] py-10 sm:py-12"
+    id="become-adopter"
   >
     <div
-      class="absolute inset-0 z-[-10]"
-      style="background: radial-gradient(at 20% 50%, rgba(255, 19, 101, 0.18) 0%, transparent 60%), radial-gradient(at 80% 30%, rgba(100, 40, 180, 0.2) 0%, transparent 55%), radial-gradient(at 50% 80%, rgba(20, 0, 60, 0.4) 0%, transparent 70%), linear-gradient(180deg, rgb(20, 0, 60) 0%, rgb(13, 0, 42) 100%);"
-    />
-    <div
-      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+      class="mx-auto max-w-7xl px-6 sm:px-8"
     >
-      <img
-        alt="message icon"
-        class="!mb-0"
-        height="120"
-        src="/images/icons/message.svg"
-        width="120"
-      />
-      <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
-      >
-        Speak to our team today
-      </p>
-      <span
-        class="text-gray-300 text-base leading-6"
-      >
-        Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
-      </span>
-      <a
-        href="/join"
+      <h2
+        class="mb-0"
       >
         <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+          aria-controls="_r_0_"
+          aria-expanded="false"
+          class="flex min-h-14 w-full items-center justify-between gap-5 rounded-xl text-left text-xl font-semibold leading-snug tracking-tight text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink sm:text-2xl"
+          type="button"
         >
-          Contact Us
+          <span>
+            How can I get my logo displayed?
+          </span>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] "
+            fill="none"
+            height="22"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="22"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
         </button>
+      </h2>
+      <div
+        class="mt-5 border-t border-white/10 pt-5"
+        hidden=""
+        id="_r_0_"
+      />
+    </div>
+  </section>
+  <section
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16 "
+  >
+    <div
+      class="flex flex-col items-start justify-between gap-6 rounded-2xl bg-[#ffe8f0] p-6 text-purple sm:p-8 md:flex-row md:items-center"
+    >
+      <div
+        class="max-w-3xl"
+      >
+        <h2
+          class="mb-3 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
+        >
+          Speak to our team today
+        </h2>
+        <div
+          class="text-sm leading-relaxed text-purple/80"
+        >
+          Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
+        </div>
+      </div>
+      <a
+        class="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-purple px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
+        href="/join"
+      >
+        <span>
+          Contact Us
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="5"
+            x2="19"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 5 19 12 12 19"
+          />
+        </svg>
       </a>
     </div>
   </section>

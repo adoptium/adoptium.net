@@ -40,6 +40,15 @@
     "title": "Désolé, nous n'avons pas pu trouver cette page",
     "back-to-home": "Retour à l'accueil"
   },
+  "WhatWeDo": {
+    "mission": "Un Java ouvert, développé ensemble",
+    "community": "Une collaboration portée par la communauté",
+    "history": "D'AdoptOpenJDK à Adoptium"
+  },
+  "MembershipBenefits": {
+    "included": "Inclus",
+    "not-included": "Non inclus"
+  },
   "Marketplace": {
     "intro": "Comparez et téléchargez des distributions Java de fournisseurs de confiance.",
     "load-error": "Impossible de charger les distributions Java. Veuillez réessayer.",

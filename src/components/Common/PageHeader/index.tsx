@@ -8,6 +8,7 @@ interface PageHeaderProps {
   className?: string;
   buttons?: React.ReactNode;
   compact?: boolean;
+  variant?: "default" | "modern";
 }
 
 export default function PageHeader({
@@ -17,13 +18,52 @@ export default function PageHeader({
   className,
   buttons,
   compact = false,
+  variant = "default",
 }: PageHeaderProps) {
   if (!title || !subtitle) {
     return null;
   }
 
+  if (variant === "modern") {
+    return (
+      <header className="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]">
+        <div className="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10">
+          <div className="max-w-3xl">
+            <div className="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]">
+              {subtitle}
+            </div>
+            {typeof title === "string" ? (
+              <h1
+                className="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+            ) : (
+              <h1 className="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
+                {title}
+              </h1>
+            )}
+            {description && (
+              <div
+                className={`max-w-2xl text-base leading-relaxed text-grey ${className ?? ""}`}
+              >
+                {description}
+              </div>
+            )}
+          </div>
+          {buttons && (
+            <div className="flex flex-wrap items-center gap-3 lg:pb-1">
+              {buttons}
+            </div>
+          )}
+        </div>
+      </header>
+    );
+  }
+
   return (
-    <div className={`relative overflow-hidden ${compact ? "pt-14 pb-8 md:pt-20" : "pt-20 pb-8 md:pb-16 md:pt-32"}`}>
+    <div
+      className={`relative overflow-hidden ${compact ? "pt-14 pb-8 md:pt-20" : "pt-20 pb-8 md:pb-16 md:pt-32"}`}
+    >
       <div className="w-full relative">
         <div className="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"></div>
         <div className="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"></div>
@@ -31,8 +71,12 @@ export default function PageHeader({
       </div>
 
       <div className="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center">
-        <div className={`self-stretch flex-col justify-center items-center flex ${compact ? "gap-1" : "gap-6"}`}>
-          <div className={`self-stretch flex-col justify-center items-center flex ${compact ? "gap-1" : "gap-4"}`}>
+        <div
+          className={`self-stretch flex-col justify-center items-center flex ${compact ? "gap-1" : "gap-6"}`}
+        >
+          <div
+            className={`self-stretch flex-col justify-center items-center flex ${compact ? "gap-1" : "gap-4"}`}
+          >
             <div className="justify-start items-center gap-3 inline-flex">
               <PinkIcon />
               <div className="text-rose-600 text-base font-bold leading-normal">
@@ -46,7 +90,9 @@ export default function PageHeader({
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             ) : (
-              <h1 className={`self-stretch text-center text-white font-semibold ${compact ? "text-2xl md:text-4xl pb-2" : "text-2xl md:text-5xl pb-4"}`}>
+              <h1
+                className={`self-stretch text-center text-white font-semibold ${compact ? "text-2xl md:text-4xl pb-2" : "text-2xl md:text-5xl pb-4"}`}
+              >
                 {title}
               </h1>
             )}

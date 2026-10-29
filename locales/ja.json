@@ -40,6 +40,15 @@
     "title": "申し訳ありません。このページは見つかりませんでした",
     "back-to-home": "ホームに戻る"
   },
+  "WhatWeDo": {
+    "mission": "共に築く、オープンなJava",
+    "community": "コミュニティ主導の協力",
+    "history": "AdoptOpenJDKからAdoptiumへ"
+  },
+  "MembershipBenefits": {
+    "included": "含まれる",
+    "not-included": "含まれない"
+  },
   "Marketplace": {
     "intro": "信頼できるベンダーのJavaビルドを比較してダウンロードできます。",
     "load-error": "Javaディストリビューションを読み込めませんでした。もう一度お試しください。",

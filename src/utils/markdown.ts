@@ -11,17 +11,6 @@ import rehypeStringify from "rehype-stringify";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-/**
- * MDX options configuration for next-mdx-remote
- * This adds GitHub Flavored Markdown support (tables, task lists, strikethrough, etc)
- */
-export const mdxOptions = {
-  mdxOptions: {
-    remarkPlugins: [remarkGfm],
-    // You can add more plugins here if needed
-  },
-};
-
 type Metadata = {
   title: string;
   date: string;

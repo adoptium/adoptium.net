@@ -23,7 +23,7 @@ This is the official site for Eclipse Adoptium, built with **Next.js 15** using 
 ### Key Dependencies
 
 - `asciidoctor` - AsciiDoc processing
-- `next-mdx-remote` - MDX content rendering
+- `unified` - Markdown content processing
 - `motion` - Animations
 - `@highcharts/react` - Charts and visualizations
 - `prismjs` - Syntax highlighting
@@ -196,7 +196,6 @@ export default ComponentName;
 - **Check existing mocks first**: Before adding `vi.mock()` statements to individual test files, check `vitest-setup.tsx` for existing global mocks. Common mocks already available include:
   - `@/i18n/navigation` (Link component, useRouter, etc.)
   - `next-intl` (useTranslations, useLocale, etc.)
-  - `gsap` and `gsap/ScrollTrigger`
   - `swiper/react`
   - `@/hooks/useAdoptiumContributorsApi`
   - `react-slick` and slick CSS files
