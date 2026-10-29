@@ -1,354 +1,311 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Support Us page > renders correctly 1`] = `
-<div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+<div
+  class="bg-purple text-white"
+>
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+        class="max-w-3xl"
       >
         <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Join Us
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
-            Join us in securing the future of your critical technologies
-          </div>
+          Join Us
         </div>
-        <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] max-w-[860px] mx-auto"
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
         >
-          Eclipse Adoptium is building world-class, open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java users worldwide.
+          Join us in securing the future of your critical technologies
+        </h1>
+        <div
+          class="max-w-2xl text-base leading-relaxed text-grey "
+        >
+          Eclipse Adoptium® is building world-class, open, enterprise-ready Java runtimes. By joining our community, you will drive the evolution of Eclipse Temurin, ensuring it remains secure, high-performance, and freely accessible for millions of Java users worldwide.
         </div>
       </div>
     </div>
-  </div>
+  </header>
   <section
-    class="py-16 md:py-32 mx-auto bg-[#14003C] max-w-[1264px] w-full lg:px-2   xl:px-0 px-8"
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
   >
     <div
-      class="text-center"
+      class="mb-8 max-w-3xl"
     >
       <h2
-        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
       >
         Ways to support us
       </h2>
       <p
-        class="text-grey mt-6 font-normal text-base"
+        class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
       >
         Your involvement keeps Eclipse Temurin enterprise-ready, secure, and accessible for all. Whether through contributions, sponsorship, or membership, together we can drive the evolution of Adoptium and strengthen the Java ecosystem for years to come.
       </p>
     </div>
     <div
-      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center "
+      class="grid gap-4 md:grid-cols-3"
     >
-      <div
-        class=""
+      <article
+        class="flex min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+        data-testid="common-card"
       >
-        <div
-          class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
-          data-testid="common-card"
+        <h3
+          class="mb-3 text-xl font-semibold leading-snug tracking-tight text-white"
         >
-          <div
-            class="grow"
+          Contribute to Adoptium Projects
+        </h3>
+        <p
+          class="mb-6 text-sm leading-relaxed text-grey"
+        >
+          Contribute to our projects with technical and non-technical development.
+        </p>
+        <a
+          class="mt-auto inline-flex min-h-11 items-center justify-between gap-4 border-t border-white/10 pt-4 text-sm font-medium text-white transition-colors hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/contributing/"
+        >
+          <span>
+            How to contribute
+          </span>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7]"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <h3
-              class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
-            >
-              Contribute to Adoptium Projects
-            </h3>
-            <p
-              class="mt-6 text-xl text-grey font-normal"
-            >
-              Contribute to our projects with technical and non-technical development.
-            </p>
-          </div>
-          <a
-            href="/contributing/"
-          >
-            <button
-              class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
-            >
-              How to contribute
-            </button>
-          </a>
-        </div>
-      </div>
-      <div
-        class=""
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </a>
+      </article>
+      <article
+        class="flex min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+        data-testid="common-card"
       >
-        <div
-          class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
-          data-testid="common-card"
+        <h3
+          class="mb-3 text-xl font-semibold leading-snug tracking-tight text-white"
         >
-          <div
-            class="grow"
+          Become a sustainer
+        </h3>
+        <p
+          class="mb-6 text-sm leading-relaxed text-grey"
+        >
+          Help ensure Temurin remains a trusted, high-performance runtime for users everywhere.
+        </p>
+        <a
+          class="mt-auto inline-flex min-h-11 items-center justify-between gap-4 border-t border-white/10 pt-4 text-sm font-medium text-white transition-colors hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/sustainers"
+        >
+          <span>
+            Become a sustainer
+          </span>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7]"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <h3
-              class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
-            >
-              Become a sustainer
-            </h3>
-            <p
-              class="mt-6 text-xl text-grey font-normal"
-            >
-              Help ensure Temurin remains a trusted, high-performance runtime for users everywhere.
-            </p>
-          </div>
-          <a
-            href="/sustainers"
-          >
-            <button
-              class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
-            >
-              Become a sustainer
-            </button>
-          </a>
-        </div>
-      </div>
-      <div
-        class=""
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </a>
+      </article>
+      <article
+        class="flex min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+        data-testid="common-card"
       >
-        <div
-          class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
-          data-testid="common-card"
+        <h3
+          class="mb-3 text-xl font-semibold leading-snug tracking-tight text-white"
         >
-          <div
-            class="grow"
+          Become a member
+        </h3>
+        <p
+          class="mb-6 text-sm leading-relaxed text-grey"
+        >
+          Membership connects you with industry leaders and the vibrant Adoptium ecosystem, shaping the future of our projects. Take an active role in driving innovation, gaining access to strategic and technical resources, and raising your organisation’s visibility.
+        </p>
+        <a
+          class="mt-auto inline-flex min-h-11 items-center justify-between gap-4 border-t border-white/10 pt-4 text-sm font-medium text-white transition-colors hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/members"
+        >
+          <span>
+            Become a member
+          </span>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7]"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <h3
-              class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
-            >
-              Become a member
-            </h3>
-            <p
-              class="mt-6 text-xl text-grey font-normal"
-            >
-              Membership connects you with industry leaders and the vibrant Adoptium ecosystem, shaping the future of our projects. Take an active role in driving innovation, gaining access to strategic and technical resources, and raising your organisation’s visibility.
-            </p>
-          </div>
-          <a
-            href="/members"
-          >
-            <button
-              class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
-            >
-              Become a member
-            </button>
-          </a>
-        </div>
-      </div>
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </a>
+      </article>
     </div>
   </section>
   <section
-    class="bg-[#0E002A] pt-16"
+    class="border-y border-white/10 bg-[#10052d] py-12 sm:py-16"
   >
     <div
-      class="pt-16   pb-8 md:pb-16 max-w-[1048px] flex-col lg:flex-row mx-auto w-full px-8 lg:px-2 xl:px-0 flex justify-center gap-16 items-center"
+      class="mx-auto grid max-w-7xl items-start gap-8 px-6 sm:px-8 lg:grid-cols-[1.4fr_1fr] lg:gap-12"
     >
       <div
-        class=" w-full lg:w-[55%] text-center lg:text-left"
+        class="min-w-0"
       >
-        <div>
+        <div
+          class="mb-8 max-w-3xl"
+        >
           <h2
-            class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+            class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
           >
             Help promote Temurin
           </h2>
           <p
-            class="text-grey mt-6 font-normal text-base"
+            class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
           >
             If you are one of the millions who download and use Temurin and would like to promote our project and our work, there are several ways you can help.
           </p>
         </div>
-        <div>
-          <div
-            class="text-grey justify-start inline-flex pt-4"
+        <ul
+          class="m-0 list-none space-y-4 p-0 text-sm leading-relaxed text-grey [&_a]:text-[#ff91b7] [&_a]:underline [&_a]:decoration-pink/30 [&_a]:underline-offset-4 [&_a]:focus-visible:outline-2 [&_a]:focus-visible:outline-offset-4 [&_a]:focus-visible:outline-pink"
+        >
+          <li
+            class="flex items-start gap-3"
           >
-            <div
-              class="pt-1"
+            <svg
+              aria-hidden="true"
+              class="mt-1 shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-4"
-            >
-              List your company on our 
+              <polyline
+                points="20 6 9 17 4 12"
+              />
+            </svg>
+            <div>
+              List your company on our
+               
               <a
-                class="text-pink"
                 href="/adopters"
               >
                 Adopters page
               </a>
               , which helps other companies see how Temurin can be used for many workloads in a diverse set of industries.
             </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-4"
+          </li>
+          <li
+            class="flex items-start gap-3"
           >
-            <div
-              class="pt-1"
+            <svg
+              aria-hidden="true"
+              class="mt-1 shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-4"
-            >
-              Write a blog post, article or 
+              <polyline
+                points="20 6 9 17 4 12"
+              />
+            </svg>
+            <div>
+              Write a blog post, article or
+               
               <a
-                class="text-pink"
                 href="https://www.meetup.com/adoptium-summit-series/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 conference talk
               </a>
-               about the story of your migration to or use of Temurin is helping your company.
+               
+              about the story of your migration to or use of Temurin is helping your company.
             </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-4"
+          </li>
+          <li
+            class="flex items-start gap-3"
           >
-            <div
-              class="pt-1"
+            <svg
+              aria-hidden="true"
+              class="mt-1 shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-4"
-            >
-              Participate in a 
+              <polyline
+                points="20 6 9 17 4 12"
+              />
+            </svg>
+            <div>
+              Participate in a
+               
               <a
-                class="text-pink"
                 href="https://forms.gle/WyZeYW7SNXpVYpKHA"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -357,126 +314,137 @@ exports[`Support Us page > renders correctly 1`] = `
               </a>
               , if you have a compelling use case that showcases one or more of the benefits of Temurin, such as a more secure supply chain or use of our early-access build to prepare your company to move to best-in-class newer versions of Java(TM).
             </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-4"
+          </li>
+          <li
+            class="flex items-start gap-3"
           >
-            <div
-              class="pt-1"
+            <svg
+              aria-hidden="true"
+              class="mt-1 shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-            </div>
-            <div
-              class="pl-4"
-            >
+              <polyline
+                points="20 6 9 17 4 12"
+              />
+            </svg>
+            <div>
               Follow us in social media, and share the stories you find interesting.
             </div>
-          </div>
-          <div
-            class="text-grey justify-start inline-flex pt-4"
-          >
-            <div>
-              We thank you for any of the creative ways you help promote Temurin.
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+        <p
+          class="mb-0 mt-6 text-sm leading-relaxed text-grey"
+        >
+          We thank you for any of the creative ways you help promote Temurin.
+        </p>
       </div>
       <div>
-        <div
-          class=""
+        <article
+          class="flex min-w-0 flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+          data-testid="common-card"
         >
-          <div
-            class="p-10 flex flex-col max-w-[400px] common-card h-[440px] md:h-[480px] bg-[#200E46]"
-            data-testid="common-card"
+          <h3
+            class="mb-3 text-xl font-semibold leading-snug tracking-tight text-white"
           >
-            <div
-              class="grow"
+            Media & Promotion
+          </h3>
+          <p
+            class="mb-6 text-sm leading-relaxed text-grey"
+          >
+            Follow and promote the latest updates from the Eclipse Adoptium Project
+          </p>
+          <a
+            class="mt-auto inline-flex min-h-11 items-center justify-between gap-4 border-t border-white/10 pt-4 text-sm font-medium text-white transition-colors hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+            href="/news/"
+          >
+            <span>
+              Learn More
+            </span>
+            <svg
+              aria-hidden="true"
+              class="shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <h3
-                class="text-white text-[30px] font-semibold whitespace-nowrap md:whitespace-normal leading-[120%] md:text-[40px]"
-              >
-                Media & Promotion
-              </h3>
-              <p
-                class="mt-6 text-xl text-grey font-normal"
-              >
-                Follow and promote the latest updates from the Eclipse Adoptium Project
-              </p>
-            </div>
-            <a
-              href="/news/"
-            >
-              <button
-                class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-[80px] gradient-border"
-              >
-                Learn More
-              </button>
-            </a>
-          </div>
-        </div>
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </a>
+        </article>
       </div>
     </div>
   </section>
   <section
-    class="relative xl:px-0 px-6 md:py-32 py-16 "
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16 "
   >
     <div
-      class="absolute inset-0 z-[-10]"
-      style="background: radial-gradient(at 20% 50%, rgba(255, 19, 101, 0.18) 0%, transparent 60%), radial-gradient(at 80% 30%, rgba(100, 40, 180, 0.2) 0%, transparent 55%), radial-gradient(at 50% 80%, rgba(20, 0, 60, 0.4) 0%, transparent 70%), linear-gradient(180deg, rgb(20, 0, 60) 0%, rgb(13, 0, 42) 100%);"
-    />
-    <div
-      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+      class="flex flex-col items-start justify-between gap-6 rounded-2xl bg-[#ffe8f0] p-6 text-purple sm:p-8 md:flex-row md:items-center"
     >
-      <img
-        alt="message icon"
-        class="!mb-0"
-        height="120"
-        src="/images/icons/message.svg"
-        width="120"
-      />
-      <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
+      <div
+        class="max-w-3xl"
       >
-        Connect with the community
-      </p>
-      <span
-        class="text-gray-300 text-base leading-6"
-      >
-        Join our Slack channel to discuss work and reach out to project maintainers.
-      </span>
+        <h2
+          class="mb-3 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
+        >
+          Connect with the community
+        </h2>
+        <div
+          class="text-sm leading-relaxed text-purple/80"
+        >
+          Join our Slack channel to discuss work and reach out to project maintainers.
+        </div>
+      </div>
       <a
+        class="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-purple px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
         href="/slack"
       >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
-        >
+        <span>
           Learn More
-        </button>
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="5"
+            x2="19"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 5 19 12 12 19"
+          />
+        </svg>
       </a>
     </div>
   </section>

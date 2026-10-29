@@ -40,6 +40,15 @@
     "title": "Lo sentimos, no pudimos encontrar esta página",
     "back-to-home": "Volver a la página principal"
   },
+  "WhatWeDo": {
+    "mission": "Java abierto, construido en comunidad",
+    "community": "Colaboración impulsada por la comunidad",
+    "history": "De AdoptOpenJDK a Adoptium"
+  },
+  "MembershipBenefits": {
+    "included": "Incluido",
+    "not-included": "No incluido"
+  },
   "Marketplace": {
     "intro": "Compara y descarga compilaciones de Java de proveedores de confianza.",
     "load-error": "No se pudieron cargar las distribuciones de Java. Inténtalo de nuevo.",

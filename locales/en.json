@@ -40,6 +40,15 @@
     "title": "Sorry, we couldn't find this page",
     "back-to-home": "Back to Home"
   },
+  "WhatWeDo": {
+    "mission": "Open Java, built together",
+    "community": "Community-led collaboration",
+    "history": "From AdoptOpenJDK to Adoptium"
+  },
+  "MembershipBenefits": {
+    "included": "Included",
+    "not-included": "Not included"
+  },
   "Marketplace": {
     "intro": "Compare and download Java builds from trusted vendors.",
     "load-error": "We couldn't load the Java distributions. Please try again.",

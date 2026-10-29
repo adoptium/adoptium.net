@@ -1,1439 +1,1629 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Sustainers page > renders correctly 1`] = `
-<div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+<div
+  class="bg-purple text-white"
+>
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+        class="max-w-3xl"
       >
         <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Become a Corporate Sustainer
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
-            Join us in strengthening the future of Eclipse Temurin
-          </div>
+          Become a Corporate Sustainer
         </div>
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
+        >
+          Join us in strengthening the future of Eclipse Temurin®
+        </h1>
+      </div>
+      <div
+        class="flex flex-wrap items-center gap-3 lg:pb-1"
+      >
         <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
-        />
-        <div
-          class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6"
+          class="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center "
         >
           <a
-            class="cursor-pointer w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+            class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-pink px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=become-sustainer"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Become an individual Sustainer
+            <span>
+              Become an Individual Sustainer
+            </span>
+            <svg
+              aria-hidden="true"
+              class="shrink-0"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="7"
+                x2="17"
+                y1="17"
+                y2="7"
+              />
+              <polyline
+                points="7 7 17 7 17 17"
+              />
+            </svg>
           </a>
           <a
-            class="cursor-pointer w-full sm:w-auto px-8 py-4 rounded-full border-2 border-white text-white hover:bg-pink-500 hover:text-white font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2"
+            class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-center text-sm font-medium text-grey transition-colors hover:border-white/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
             href="/become-a-sustainer"
           >
-            Become a corporate Sustainer
+            <span>
+              Become a Corporate Sustainer
+            </span>
+            <svg
+              aria-hidden="true"
+              class="shrink-0"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="7"
+                x2="17"
+                y1="17"
+                y2="7"
+              />
+              <polyline
+                points="7 7 17 7 17 17"
+              />
+            </svg>
           </a>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="w-full flex flex-col justify-center items-center pt-[240px] md:pt-[120px]"
+  </header>
+  <section
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
   >
     <div
-      class="w-full flex flex-col justify-center items-center relative"
-    >
-      <div
-        class="w-full "
-      >
-        <div
-          class="absolute z-[-1] w-full h-[20px] bottom-0 right-0 bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-        />
-        <div
-          class="absolute z-[-1] w-full h-[20px] bottom-0 right-0 bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-        />
-        <div
-          class="absolute z-[-1] w-full h-[20px] bottom-0 right-0 bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-        />
-      </div>
-      <div
-        class="w-full max-w-[1180px] px-6 py-8 relative"
-      >
-        <div
-          class="absolute -left-full -right-full -bottom-20 -z-10"
-        >
-          <div
-            class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"
-          />
-        </div>
-        <h2
-          class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-6"
-        >
-          Eclipse Temurin Sustainer Program
-        </h2>
-        <p
-          class="text-center text-[#c4bfce] px-4 py-6 max-w-[900px] mx-auto text-lg leading-relaxed"
-        >
-          The Eclipse Temurin Sustainer Program invites enterprises to invest in the long-term sustainment of Eclipse Temurin and other Adoptium projects. By becoming a Sustainer, your company ensures that Temurin remains the industry's leading community-driven open source JDK for mission-critical Java workloads. This program supports the vendor-neutral development of runtimes and development kits, infrastructure and tools, quality assurance, enhanced security practices, community engagement, and more.
-        </p>
-      </div>
-      <div
-        class="flex flex-wrap justify-center gap-10 w-full max-w-[1180px] px-4 mb-16"
-      >
-        <div
-          class="max-w-[250px] w-full flex flex-col justify-start items-center bg-gradient-to-b from-[#1e1133]/40 to-[#0d0129]/40 backdrop-blur-sm rounded-xl border border-[#39314a]/50 p-6 transform transition-all duration-300 hover:translate-y-[-8px] hover:border-[#ff1464]/30 hover:shadow-lg hover:shadow-[#ff1464]/10"
-        >
-          <div
-            class="flex flex-col justify-center items-center gap-[6px] bg-white rounded-2xl w-[140px] h-[140px] mb-6 shadow-lg"
-          >
-            <img
-              alt="project logo"
-              class="w-[110px] mb-0"
-              height="110"
-              src="/images/projects/temurin-light.png"
-              width="110"
-            />
-          </div>
-          <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
-          >
-            Runtime binaries High performance Cross-platform Open source licenses (GPLv2 + CE) Spec compliant
-          </p>
-        </div>
-        <div
-          class="max-w-[250px] w-full flex flex-col justify-start items-center bg-gradient-to-b from-[#1e1133]/40 to-[#0d0129]/40 backdrop-blur-sm rounded-xl border border-[#39314a]/50 p-6 transform transition-all duration-300 hover:translate-y-[-8px] hover:border-[#ff1464]/30 hover:shadow-lg hover:shadow-[#ff1464]/10"
-        >
-          <div
-            class="flex flex-col justify-center items-center gap-[6px] bg-white rounded-2xl w-[140px] h-[140px] mb-6 shadow-lg"
-          >
-            <img
-              alt="project logo"
-              class="w-[110px] mb-0"
-              height="110"
-              src="/images/projects/aqavit-light.png"
-              width="110"
-            />
-          </div>
-          <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
-          >
-            Verification program, running a large pool of tests Assuring security durability, scalability, and performance requirements
-          </p>
-        </div>
-        <div
-          class="max-w-[250px] w-full flex flex-col justify-start items-center bg-gradient-to-b from-[#1e1133]/40 to-[#0d0129]/40 backdrop-blur-sm rounded-xl border border-[#39314a]/50 p-6 transform transition-all duration-300 hover:translate-y-[-8px] hover:border-[#ff1464]/30 hover:shadow-lg hover:shadow-[#ff1464]/10"
-        >
-          <div
-            class="flex flex-col justify-center items-center gap-[6px] bg-white rounded-2xl w-[140px] h-[140px] mb-6 shadow-lg"
-          >
-            <img
-              alt="project logo"
-              class="w-[110px] mb-0"
-              height="110"
-              src="/images/projects/emt4j.svg"
-              width="110"
-            />
-          </div>
-          <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
-          >
-            This migration toolkit helps organizations with the migration from Java 8 to 11+
-          </p>
-        </div>
-        <div
-          class="max-w-[250px] w-full flex flex-col justify-start items-center bg-gradient-to-b from-[#1e1133]/40 to-[#0d0129]/40 backdrop-blur-sm rounded-xl border border-[#39314a]/50 p-6 transform transition-all duration-300 hover:translate-y-[-8px] hover:border-[#ff1464]/30 hover:shadow-lg hover:shadow-[#ff1464]/10"
-        >
-          <div
-            class="flex flex-col justify-center items-center gap-[6px] bg-white rounded-2xl w-[140px] h-[140px] mb-6 shadow-lg"
-          >
-            <img
-              alt="project logo"
-              class="w-[110px] mb-0"
-              height="110"
-              src="/images/projects/mission-control.svg"
-              width="110"
-            />
-          </div>
-          <p
-            class="text-center text-[#c4bfce] text-base leading-relaxed"
-          >
-            Low-overhead monitoring and management of running Java applications
-          </p>
-        </div>
-      </div>
-    </div>
-    <div
-      class="p-4 mt-[60px] w-full"
+      class="mb-8 max-w-3xl"
     >
       <h2
-        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+      >
+        Eclipse Temurin Sustainer Program
+      </h2>
+      <p
+        class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
+      >
+        The Eclipse Temurin Sustainer Program invites enterprises to invest in the long-term sustainment of Eclipse Temurin and other Adoptium projects. By becoming a Sustainer, your company ensures that Temurin remains the industry's leading community-driven open source JDK for mission-critical Java workloads. This program supports the vendor-neutral development of runtimes and development kits, infrastructure and tools, quality assurance, enhanced security practices, community engagement, and more.
+      </p>
+    </div>
+    <div
+      class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+    >
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-5 sm:p-6"
+      >
+        <div
+          class="mb-5 flex h-16 w-24 items-center justify-center rounded-xl bg-white p-3"
+        >
+          <span
+            class="relative block h-10 w-full"
+          >
+            <img
+              alt=""
+              class="object-contain"
+              sizes="72px"
+              src="/images/projects/temurin-light.png"
+            />
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-base font-semibold text-white"
+        >
+          Eclipse Temurin
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          High-performance, cross-platform runtime binaries. Open source licensing (GPLv2 + CE) and specification compliance.
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-5 sm:p-6"
+      >
+        <div
+          class="mb-5 flex h-16 w-24 items-center justify-center rounded-xl bg-white p-3"
+        >
+          <span
+            class="relative block h-10 w-full"
+          >
+            <img
+              alt=""
+              class="object-contain"
+              sizes="72px"
+              src="/images/projects/aqavit-light.png"
+            />
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-base font-semibold text-white"
+        >
+          Eclipse AQAvit
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          A verification program with extensive testing for security, durability, scalability, and performance.
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-5 sm:p-6"
+      >
+        <div
+          class="mb-5 flex h-16 w-24 items-center justify-center rounded-xl bg-white p-3"
+        >
+          <span
+            class="relative block h-10 w-full"
+          >
+            <img
+              alt=""
+              class="object-contain"
+              sizes="72px"
+              src="/images/projects/emt4j.svg"
+            />
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-base font-semibold text-white"
+        >
+          Eclipse EMT4J
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          This migration toolkit helps organizations with the migration from Java 8 to 11+
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-5 sm:p-6"
+      >
+        <div
+          class="mb-5 flex h-16 w-24 items-center justify-center rounded-xl bg-white p-3"
+        >
+          <span
+            class="relative block h-10 w-full"
+          >
+            <img
+              alt=""
+              class="object-contain"
+              sizes="72px"
+              src="/images/projects/mission-control.svg"
+            />
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-base font-semibold text-white"
+        >
+          JDK Mission Control
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Low-overhead monitoring and management of running Java applications
+        </p>
+      </article>
+    </div>
+  </section>
+  <section
+    class="mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
+  >
+    <div
+      class="mb-8 max-w-3xl"
+    >
+      <h2
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
       >
         How Your Support Fuels Key Initiatives
       </h2>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]"
+      <p
+        class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
       >
-        <div
-          class="relative max-w-[382px] w-full"
-          id="card-container-0"
-        >
-          <input
-            class="peer hidden"
-            id="toggle-0"
-            type="checkbox"
-          />
-          <span
-            class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            +
-          </span>
-          <div
-            class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-          >
-            <label
-              for="toggle-0"
-            >
-              <div
-                class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-              >
-                <div
-                  class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-0 w-16 h-16"
-                    height="64"
-                    src="/images/initiatives/security.svg"
-                    width="64"
-                  />
-                </div>
-                <h3
-                  class="text-2xl font-medium text-center px-4 text-white"
-                >
-                  Enhanced Security
-                </h3>
-              </div>
-            </label>
-          </div>
-          <div
-            class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-          >
-            <div
-              class="text-white text-sm px-4 text-center leading-relaxed"
-            >
-              Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.
-            </div>
-            <span
-              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-            >
-              _
-            </span>
-          </div>
-        </div>
-        <div
-          class="relative max-w-[382px] w-full"
-          id="card-container-1"
-        >
-          <input
-            class="peer hidden"
-            id="toggle-1"
-            type="checkbox"
-          />
-          <span
-            class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            +
-          </span>
-          <div
-            class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-          >
-            <label
-              for="toggle-1"
-            >
-              <div
-                class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-              >
-                <div
-                  class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-0 w-16 h-16"
-                    height="64"
-                    src="/images/initiatives/release.svg"
-                    width="64"
-                  />
-                </div>
-                <h3
-                  class="text-2xl font-medium text-center px-4 text-white"
-                >
-                  Faster Release Cycles
-                </h3>
-              </div>
-            </label>
-          </div>
-          <div
-            class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-          >
-            <div
-              class="text-white text-sm px-4 text-center leading-relaxed"
-            >
-              Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.
-            </div>
-            <span
-              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-            >
-              _
-            </span>
-          </div>
-        </div>
-        <div
-          class="relative max-w-[382px] w-full"
-          id="card-container-2"
-        >
-          <input
-            class="peer hidden"
-            id="toggle-2"
-            type="checkbox"
-          />
-          <span
-            class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            +
-          </span>
-          <div
-            class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-          >
-            <label
-              for="toggle-2"
-            >
-              <div
-                class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-              >
-                <div
-                  class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-0 w-16 h-16"
-                    height="64"
-                    src="/images/initiatives/deploy.svg"
-                    width="64"
-                  />
-                </div>
-                <h3
-                  class="text-2xl font-medium text-center px-4 text-white"
-                >
-                  Ready-to-deploy Builds
-                </h3>
-              </div>
-            </label>
-          </div>
-          <div
-            class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-          >
-            <div
-              class="text-white text-sm px-4 text-center leading-relaxed"
-            >
-              Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures
-            </div>
-            <span
-              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-            >
-              _
-            </span>
-          </div>
-        </div>
-        <div
-          class="relative max-w-[382px] w-full"
-          id="card-container-3"
-        >
-          <input
-            class="peer hidden"
-            id="toggle-3"
-            type="checkbox"
-          />
-          <span
-            class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            +
-          </span>
-          <div
-            class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-          >
-            <label
-              for="toggle-3"
-            >
-              <div
-                class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-              >
-                <div
-                  class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-0 w-16 h-16"
-                    height="64"
-                    src="/images/initiatives/innovation.svg"
-                    width="64"
-                  />
-                </div>
-                <h3
-                  class="text-2xl font-medium text-center px-4 text-white"
-                >
-                  Sustained Innovation
-                </h3>
-              </div>
-            </label>
-          </div>
-          <div
-            class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-          >
-            <div
-              class="text-white text-sm px-4 text-center leading-relaxed"
-            >
-              Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.
-            </div>
-            <span
-              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-            >
-              _
-            </span>
-          </div>
-        </div>
-        <div
-          class="relative max-w-[382px] w-full"
-          id="card-container-4"
-        >
-          <input
-            class="peer hidden"
-            id="toggle-4"
-            type="checkbox"
-          />
-          <span
-            class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            +
-          </span>
-          <div
-            class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-          >
-            <label
-              for="toggle-4"
-            >
-              <div
-                class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-              >
-                <div
-                  class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-0 w-16 h-16"
-                    height="64"
-                    src="/images/initiatives/testing.svg"
-                    width="64"
-                  />
-                </div>
-                <h3
-                  class="text-2xl font-medium text-center px-4 text-white"
-                >
-                  Quality Testing
-                </h3>
-              </div>
-            </label>
-          </div>
-          <div
-            class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-          >
-            <div
-              class="text-white text-sm px-4 text-center leading-relaxed"
-            >
-              Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.
-            </div>
-            <span
-              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-            >
-              _
-            </span>
-          </div>
-        </div>
-        <div
-          class="relative max-w-[382px] w-full"
-          id="card-container-5"
-        >
-          <input
-            class="peer hidden"
-            id="toggle-5"
-            type="checkbox"
-          />
-          <span
-            class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            +
-          </span>
-          <div
-            class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-          >
-            <label
-              for="toggle-5"
-            >
-              <div
-                class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-              >
-                <div
-                  class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    class="mb-0 w-16 h-16"
-                    height="64"
-                    src="/images/initiatives/community.svg"
-                    width="64"
-                  />
-                </div>
-                <h3
-                  class="text-2xl font-medium text-center px-4 text-white"
-                >
-                  Community Development and Engagement
-                </h3>
-              </div>
-            </label>
-          </div>
-          <div
-            class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-          >
-            <div
-              class="text-white text-sm px-4 text-center leading-relaxed"
-            >
-              Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.
-            </div>
-            <span
-              class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-            >
-              _
-            </span>
-          </div>
-        </div>
-      </div>
+        Join the Eclipse Temurin Sustainer Program and play a crucial role in maintaining the vitality and reliability of the world's fastest-growing open source Java SE runtime. Your support accelerates our initiatives, driving greater impact and innovation within the Java ecosystem.
+      </p>
     </div>
-    <p
-      class="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
-    >
-      Join the Eclipse Temurin Sustainer Program and play a crucial role in maintaining the vitality and reliability of the world's fastest-growing open source Java SE runtime. Your support accelerates our initiatives, driving greater impact and innovation within the Java ecosystem.
-    </p>
     <div
-      class="bg-[#0d0129] w-full py-[95px] relative overflow-hidden"
+      class="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/security.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Enhanced Security
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          Contribute to rigorous security practices, including regular audits and vulnerability management. Your support ensures the continuation of our Secure Development efforts, encompassing SBOM, reproducible builds, SLSA, OpenChain Conformance, security audits, and vulnerability reports.
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/release.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Faster Release Cycles
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          Ensure your Java environments stay up-to-date with the latest advancements by sponsoring additional infrastructure services. This support will enable us to publish feature and CPU releases within our ambitious delivery targets, keeping your systems at the forefront of innovation.
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/deploy.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Ready-to-deploy Builds
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          Ensure access to Java versions tailored to your specific architecture and operating system needs. Get the precise build for your software services and save money by avoiding the costs of creating your own builds. Your funding allows us to deliver across a broad range of platforms and architectures
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/innovation.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Sustained Innovation
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          Support the continuous improvement of Temurin and other Adoptium projects. We are leaders in Secure Development, Quality Assurance, Migration Tools, and many other areas where we have been developing bleeding-edge, innovative solutions. Your funding allows us to continue to develop improvements that benefit the entire Java ecosystem.
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/testing.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Quality Testing
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          Help us maintain and optimize our testing infrastructure across all necessary platforms and versions, ensuring robust and reliable releases. Your funding allows us to assess and include tests that your organization cares about and proactively discover and mitigate defects before they land in your domain.
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/community.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Community Development and Engagement
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          Support the growth of a diverse and vibrant Java community. Your sponsorship helps maintain and enhance Adoptium projects, ensuring a stable, scalable, and interoperable Java ecosystem. Additionally, you will have the opportunity to support events and marketing initiatives and actively participating in community activities, spreading awareness and fostering collaboration.
+        </div>
+      </details>
+    </div>
+  </section>
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-12 sm:py-16"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
     >
       <div
-        class="absolute inset-0 z-0"
+        class="mb-8 max-w-3xl"
       >
-        <div
-          class="absolute top-1/3 right-1/3 w-[600px] h-[600px] rounded-full bg-[#410170]/10 filter blur-[150px]"
-        />
-        <div
-          class="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] rounded-full bg-[#ff1464]/5 filter blur-[120px]"
-        />
+        <h2
+          class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+        >
+          Calculate your savings and Invest in Temurin's Future
+        </h2>
       </div>
       <div
-        class="max-w-[1180px] mx-auto w-full relative z-10"
+        class="grid items-start gap-6 lg:grid-cols-[1fr_1.2fr] lg:gap-10"
       >
         <div
-          class="w-full flex flex-col justify-center items-center p-8 bg-gradient-to-b from-[#1e1133]/30 to-[#0d0129]/30 backdrop-blur-sm rounded-2xl border border-[#39314a]/30"
+          class="rounded-2xl border border-pink/20 bg-pink/5 p-6"
         >
-          <h2
-            class="text-left max-w-[855px] md:text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
-          >
-            Calculate your savings and Invest in Temurin's Future
-          </h2>
           <p
-            class="text-[#ff1464] max-w-[740px] text-[20px] text-center font-bold mt-10 mb-6"
+            class="mb-4 text-xl font-medium leading-relaxed text-white"
           >
             The average company* using Eclipse Temurin saves more than $1.6M annually. Isn't it time you invest in sustaining your savings?
           </p>
           <p
-            class="text-xs text-[#c4bfce] my-5"
+            class="mb-0 text-xs leading-relaxed text-grey"
           >
             *Self-reported number of employees, n = 211
           </p>
+        </div>
+        <div
+          class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-4 sm:p-6"
+        >
           <div
-            class="involveme_embed w-full md:w-1/2 mb-5 md:mb-10"
+            class="involveme_embed w-full"
             data-project="temurin-calculator"
           />
-          <p
-            class="text-[#c4bfce] max-w-[900px] text-center mt-8 leading-relaxed"
-          >
-            With the recent increase in licensing costs for paid Java SE options, we've seen Temurin downloads surge—from over 75M in 2023 to over 250M by the end of 2023, and doubling again to more than 500M by the end of 2024. This growth strongly indicates a significant transition away from paid Java options toward open-source solutions like Temurin. If your organization has made this migration, you've likely experienced significant cost savings. Dedicate a portion of your savings to Temurin to invest in your corporate software supply chain by ensuring Temurin's long-term viability, enhance security, and accelerate faster releases for the Java community.
-          </p>
         </div>
       </div>
+      <p
+        class="mb-0 mt-6 max-w-4xl text-sm leading-relaxed text-grey"
+      >
+        With the recent increase in licensing costs for paid Java SE options, we've seen Temurin downloads surge—from over 75M in 2023 to over 250M by the end of 2023, and doubling again to more than 500M by the end of 2024. This growth strongly indicates a significant transition away from paid Java options toward open-source solutions like Temurin. If your organization has made this migration, you've likely experienced significant cost savings. Dedicate a portion of your savings to Temurin to invest in your corporate software supply chain by ensuring Temurin's long-term viability, enhance security, and accelerate faster releases for the Java community.
+      </p>
+    </div>
+  </section>
+  <section
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
+  >
+    <div
+      class="mb-8 max-w-3xl"
+    >
+      <h2
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+      >
+        Sustainer Levels
+      </h2>
     </div>
     <div
-      class="w-full max-w-[1180px] p-4"
+      class="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="cursor-pointer list-none rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden"
+        >
+          <div
+            class="mb-5 flex items-center justify-between gap-4"
+          >
+            <span
+              class="relative block h-12 w-12"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="48px"
+                src="/images/icons/diamond-layers.svg"
+              />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="text-[#ff91b7] group-open:rotate-45"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-3 text-xl font-semibold text-white"
+          >
+            Diamond
+          </h3>
+          <p
+            class="mb-0 font-mono text-lg text-[#ff91b7]"
+          >
+            €100k/year
+          </p>
+        </summary>
+        <div
+          class="mx-6 border-t border-white/10 py-5 text-sm leading-relaxed text-grey [&_ul]:ml-4 [&_ul]:list-disc [&_li]:mb-2"
+        >
+          <h4
+            class="mb-3 text-sm font-medium text-white"
+          >
+            Diamond Benefits
+          </h4>
+          <ul
+            class="text-left lg:list-disc lg:ml-4"
+          >
+            <li>
+              Logo (max size: 400x179) on our Sustainers page
+            </li>
+            <li>
+              Logo location: top section, rotating placement in a row
+            </li>
+            <li>
+              Use of the Diamond Sustainer logo for your site
+            </li>
+            <li>
+              Joint press release with the Eclipse Foundation
+            </li>
+            <li>
+              Listed in Eclipse Foundation Annual Reports
+            </li>
+            <li>
+              Listed in all Adoptium Working Group press releases
+            </li>
+            <li>
+              Sponsor a co-authored case study
+            </li>
+            <li>
+              Media testimonial placement, spokesperson opportunities
+            </li>
+            <li>
+              Speaking Opportunity at the Virtual Adoptium Summit
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="cursor-pointer list-none rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden"
+        >
+          <div
+            class="mb-5 flex items-center justify-between gap-4"
+          >
+            <span
+              class="relative block h-12 w-12"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="48px"
+                src="/images/icons/platinum-layers.svg"
+              />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="text-[#ff91b7] group-open:rotate-45"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-3 text-xl font-semibold text-white"
+          >
+            Platinum
+          </h3>
+          <p
+            class="mb-0 font-mono text-lg text-[#ff91b7]"
+          >
+            €75k/year
+          </p>
+        </summary>
+        <div
+          class="mx-6 border-t border-white/10 py-5 text-sm leading-relaxed text-grey [&_ul]:ml-4 [&_ul]:list-disc [&_li]:mb-2"
+        >
+          <h4
+            class="mb-3 text-sm font-medium text-white"
+          >
+            Platinum Benefits
+          </h4>
+          <ul
+            class="text-left lg:list-disc lg:ml-4"
+          >
+            <li>
+              Logo (max size: 300x134) on our Sustainers page
+            </li>
+            <li>
+              Logo location: upper-middle section, rotating placement in row
+            </li>
+            <li>
+              Use of the Platinum Sustainer logo for your site
+            </li>
+            <li>
+              Joint press release with the Eclipse Foundation
+            </li>
+            <li>
+              Listed in Eclipse Foundation Annual Reports
+            </li>
+            <li>
+              Listed in all Adoptium Working Group press releases
+            </li>
+            <li>
+              Media testimonial placement, spokesperson opportunities
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="cursor-pointer list-none rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden"
+        >
+          <div
+            class="mb-5 flex items-center justify-between gap-4"
+          >
+            <span
+              class="relative block h-12 w-12"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="48px"
+                src="/images/icons/gold-layers.svg"
+              />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="text-[#ff91b7] group-open:rotate-45"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-3 text-xl font-semibold text-white"
+          >
+            Gold
+          </h3>
+          <p
+            class="mb-0 font-mono text-lg text-[#ff91b7]"
+          >
+            €50k/year
+          </p>
+        </summary>
+        <div
+          class="mx-6 border-t border-white/10 py-5 text-sm leading-relaxed text-grey [&_ul]:ml-4 [&_ul]:list-disc [&_li]:mb-2"
+        >
+          <h4
+            class="mb-3 text-sm font-medium text-white"
+          >
+            Gold Benefits
+          </h4>
+          <ul
+            class="text-left lg:list-disc lg:ml-4"
+          >
+            <li>
+              Logo (max size: 223x100) on our Sustainers page
+            </li>
+            <li>
+              Logo location: middle section, rotating placement in a row
+            </li>
+            <li>
+              Use of the Gold Sustainer logo for your site
+            </li>
+            <li>
+              Personal quote for your press release
+            </li>
+            <li>
+              Listed in all Adoptium Working Group press releases
+            </li>
+            <li>
+              Media testimonial placement, spokesperson opportunities
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="cursor-pointer list-none rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden"
+        >
+          <div
+            class="mb-5 flex items-center justify-between gap-4"
+          >
+            <span
+              class="relative block h-12 w-12"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="48px"
+                src="/images/icons/silver-layers.svg"
+              />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="text-[#ff91b7] group-open:rotate-45"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-3 text-xl font-semibold text-white"
+          >
+            Silver
+          </h3>
+          <p
+            class="mb-0 font-mono text-lg text-[#ff91b7]"
+          >
+            €30k/year
+          </p>
+        </summary>
+        <div
+          class="mx-6 border-t border-white/10 py-5 text-sm leading-relaxed text-grey [&_ul]:ml-4 [&_ul]:list-disc [&_li]:mb-2"
+        >
+          <h4
+            class="mb-3 text-sm font-medium text-white"
+          >
+            Silver Benefits
+          </h4>
+          <ul
+            class="text-left lg:list-disc lg:ml-4"
+          >
+            <li>
+              Logo (max size: 150x67) on our Sustainers page
+            </li>
+            <li>
+              Logo location: lower-middle section, rotating placement in a row
+            </li>
+            <li>
+              Use of the Silver Sustainer logo for your site
+            </li>
+            <li>
+              Media testimonial placement, spokesperson opportunities
+            </li>
+            <li>
+              Listed in all Adoptium Working Group press releases
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="cursor-pointer list-none rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden"
+        >
+          <div
+            class="mb-5 flex items-center justify-between gap-4"
+          >
+            <span
+              class="relative block h-12 w-12"
+            >
+              <img
+                alt=""
+                class="object-contain"
+                sizes="48px"
+                src="/images/icons/bronze-layers.svg"
+              />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="text-[#ff91b7] group-open:rotate-45"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="12"
+                x2="12"
+                y1="5"
+                y2="19"
+              />
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+            </svg>
+          </div>
+          <h3
+            class="mb-3 text-xl font-semibold text-white"
+          >
+            Bronze
+          </h3>
+          <p
+            class="mb-0 font-mono text-lg text-[#ff91b7]"
+          >
+            €10k/year
+          </p>
+        </summary>
+        <div
+          class="mx-6 border-t border-white/10 py-5 text-sm leading-relaxed text-grey [&_ul]:ml-4 [&_ul]:list-disc [&_li]:mb-2"
+        >
+          <h4
+            class="mb-3 text-sm font-medium text-white"
+          >
+            Bronze Benefits
+          </h4>
+          <ul
+            class="text-left lg:list-disc lg:ml-4"
+          >
+            <li>
+              Logo (max size: 150x67) on our Sustainers page
+            </li>
+            <li>
+              Logo location: lower section, rotating placement in a row
+            </li>
+            <li>
+              Use of the Bronze Sustainer logo for your site
+            </li>
+            <li>
+              Listed in all Adoptium Working Group press releases
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+    <div
+      class="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center mt-8"
+    >
+      <a
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-pink px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+        href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=become-sustainer"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span>
+          Become an Individual Sustainer
+        </span>
+        <svg
+          aria-hidden="true"
+          class="shrink-0"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
+      </a>
+      <a
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-center text-sm font-medium text-grey transition-colors hover:border-white/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+        href="/become-a-sustainer"
+      >
+        <span>
+          Become a Corporate Sustainer
+        </span>
+        <svg
+          aria-hidden="true"
+          class="shrink-0"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section
+    class="scroll-mt-28 border-y border-white/10 bg-[#10052d] py-12 sm:py-16"
+    id="temurin-sustainers"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
     >
       <div
-        class="mb-16 mt-8 relative"
+        class="mb-8 max-w-3xl"
       >
-        <div
-          class="absolute -left-full -right-full -top-8 -z-10"
-        >
-          <div
-            class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"
-          />
-        </div>
         <h2
-          class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-10 mt-8"
+          class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
         >
-          Sustainer Levels
+          Temurin's Sustainers
         </h2>
-        <div
-          class="p-4"
-        >
-          <div
-            class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-          >
-            <img
-              alt="Description"
-              class="w-full mb-0 max-w-[366px] object-cover"
-              height="366"
-              src="/images/icons/diamond-layers.svg"
-              width="366"
-            />
-            <img
-              alt="scroll divider"
-              class="mb-0"
-              height="80"
-              src="/images/icons/scroll-divider.svg"
-              width="16"
-            />
-            <div
-              class="flex flex-col flex-1 px-4"
-            >
-              <h1
-                class="text-xl my-5 font-bold"
-              >
-                Diamond Benefits
-              </h1>
-              <div
-                class="text-base text-grey"
-              >
-                <ul
-                  class="text-left lg:list-disc lg:ml-4"
-                >
-                  <li>
-                    Logo (max size: 400x179) on our Sustainers page
-                  </li>
-                  <li>
-                    Logo location: top section, rotating placement in a row
-                  </li>
-                  <li>
-                    Use of the Diamond Sustainer logo for your site
-                  </li>
-                  <li>
-                    Joint press release with the Eclipse Foundation
-                  </li>
-                  <li>
-                    Listed in Eclipse Foundation Annual Reports
-                  </li>
-                  <li>
-                    Listed in all Adoptium Working Group press releases
-                  </li>
-                  <li>
-                    Sponsor a co-authored case study
-                  </li>
-                  <li>
-                    Media testimonial placement, spokesperson opportunities
-                  </li>
-                  <li>
-                    Speaking Opportunity at the Virtual Adoptium Summit
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-          >
-            <img
-              alt="Description"
-              class="w-full mb-0 max-w-[366px] object-cover"
-              height="366"
-              src="/images/icons/platinum-layers.svg"
-              width="366"
-            />
-            <img
-              alt="scroll divider"
-              class="mb-0"
-              height="80"
-              src="/images/icons/scroll-divider.svg"
-              width="16"
-            />
-            <div
-              class="flex flex-col flex-1 px-4"
-            >
-              <h1
-                class="text-xl my-5 font-bold"
-              >
-                Platinum Benefits
-              </h1>
-              <div
-                class="text-base text-grey"
-              >
-                <ul
-                  class="text-left lg:list-disc lg:ml-4"
-                >
-                  <li>
-                    Logo (max size: 300x134) on our Sustainers page
-                  </li>
-                  <li>
-                    Logo location: upper-middle section, rotating placement in row
-                  </li>
-                  <li>
-                    Use of the Platinum Sustainer logo for your site
-                  </li>
-                  <li>
-                    Joint press release with the Eclipse Foundation
-                  </li>
-                  <li>
-                    Listed in Eclipse Foundation Annual Reports
-                  </li>
-                  <li>
-                    Listed in all Adoptium Working Group press releases
-                  </li>
-                  <li>
-                    Media testimonial placement, spokesperson opportunities
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-          >
-            <img
-              alt="Description"
-              class="w-full mb-0 max-w-[366px] object-cover"
-              height="366"
-              src="/images/icons/gold-layers.svg"
-              width="366"
-            />
-            <img
-              alt="scroll divider"
-              class="mb-0"
-              height="80"
-              src="/images/icons/scroll-divider.svg"
-              width="16"
-            />
-            <div
-              class="flex flex-col flex-1 px-4"
-            >
-              <h1
-                class="text-xl my-5 font-bold"
-              >
-                Gold Benefits
-              </h1>
-              <div
-                class="text-base text-grey"
-              >
-                <ul
-                  class="text-left lg:list-disc lg:ml-4"
-                >
-                  <li>
-                    Logo (max size: 223x100) on our Sustainers page 
-                  </li>
-                  <li>
-                    Logo location: middle section, rotating placement in a row
-                  </li>
-                  <li>
-                    Use of the Gold Sustainer logo for your site
-                  </li>
-                  <li>
-                    Personal quote for your press release
-                  </li>
-                  <li>
-                    Listed in all Adoptium Working Group press releases
-                  </li>
-                  <li>
-                    Media testimonial placement, spokesperson opportunities
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-          >
-            <img
-              alt="Description"
-              class="w-full mb-0 max-w-[366px] object-cover"
-              height="366"
-              src="/images/icons/silver-layers.svg"
-              width="366"
-            />
-            <img
-              alt="scroll divider"
-              class="mb-0"
-              height="80"
-              src="/images/icons/scroll-divider.svg"
-              width="16"
-            />
-            <div
-              class="flex flex-col flex-1 px-4"
-            >
-              <h1
-                class="text-xl my-5 font-bold"
-              >
-                Silver Benefits
-              </h1>
-              <div
-                class="text-base text-grey"
-              >
-                <ul
-                  class="text-left lg:list-disc lg:ml-4"
-                >
-                  <li>
-                    Logo (max size: 150x67) on our Sustainers page
-                  </li>
-                  <li>
-                    Logo location: lower-middle section, rotating placement in a row
-                  </li>
-                  <li>
-                    Use of the Silver Sustainer logo for your site
-                  </li>
-                  <li>
-                    Media testimonial placement, spokesperson opportunities
-                  </li>
-                  <li>
-                    Listed in all Adoptium Working Group press releases
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-          >
-            <img
-              alt="Description"
-              class="w-full mb-0 max-w-[366px] object-cover"
-              height="366"
-              src="/images/icons/bronze-layers.svg"
-              width="366"
-            />
-            <img
-              alt="scroll divider"
-              class="mb-0"
-              height="80"
-              src="/images/icons/scroll-divider.svg"
-              width="16"
-            />
-            <div
-              class="flex flex-col flex-1 px-4"
-            >
-              <h1
-                class="text-xl my-5 font-bold"
-              >
-                Bronze Benefits
-              </h1>
-              <div
-                class="text-base text-grey"
-              >
-                <ul
-                  class="text-left lg:list-disc lg:ml-4"
-                >
-                  <li>
-                    Logo (max size: 150x67) on our Sustainers page
-                  </li>
-                  <li>
-                    Logo location: lower section, rotating placement in a row
-                  </li>
-                  <li>
-                    Use of the Bronze Sustainer logo for your site
-                  </li>
-                  <li>
-                    Listed in all Adoptium Working Group press releases
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="lg:block hidden open-animation-wrapper"
-          >
-            <div
-              class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-              style="height: 600vh;"
-            >
-              <div
-                class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
-              >
-                <div
-                  class="relative w-full h-full flex items-center justify-between"
-                >
-                  <div
-                    class="w-1/2 h-full flex items-center justify-center relative"
-                  >
-                    <div
-                      class="absolute inset-0 flex items-center justify-center"
-                      style="opacity: 0; scale: 0;"
-                    >
-                      <div
-                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
-                      >
-                        <img
-                          alt="Diamond Benefits"
-                          class="mb-6 drop-shadow-2xl"
-                          height="300"
-                          src="/images/icons/diamond-layers.svg"
-                          width="300"
-                        />
-                        <h2
-                          class="text-5xl font-bold text-white mb-2"
-                        >
-                          Diamond
-                        </h2>
-                        <p
-                          class="text-3xl text-[#ff1365] font-mono"
-                        >
-                          €100k/year
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute inset-0 flex items-center justify-center"
-                      style="opacity: 0; scale: 0;"
-                    >
-                      <div
-                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
-                      >
-                        <img
-                          alt="Platinum Benefits"
-                          class="mb-6 drop-shadow-2xl"
-                          height="300"
-                          src="/images/icons/platinum-layers.svg"
-                          width="300"
-                        />
-                        <h2
-                          class="text-5xl font-bold text-white mb-2"
-                        >
-                          Platinum
-                        </h2>
-                        <p
-                          class="text-3xl text-[#ff1365] font-mono"
-                        >
-                          €75k/year
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute inset-0 flex items-center justify-center"
-                      style="opacity: 0; scale: 0;"
-                    >
-                      <div
-                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
-                      >
-                        <img
-                          alt="Gold Benefits"
-                          class="mb-6 drop-shadow-2xl"
-                          height="300"
-                          src="/images/icons/gold-layers.svg"
-                          width="300"
-                        />
-                        <h2
-                          class="text-5xl font-bold text-white mb-2"
-                        >
-                          Gold
-                        </h2>
-                        <p
-                          class="text-3xl text-[#ff1365] font-mono"
-                        >
-                          €50k/year
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute inset-0 flex items-center justify-center"
-                      style="opacity: 0; scale: 0;"
-                    >
-                      <div
-                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
-                      >
-                        <img
-                          alt="Silver Benefits"
-                          class="mb-6 drop-shadow-2xl"
-                          height="300"
-                          src="/images/icons/silver-layers.svg"
-                          width="300"
-                        />
-                        <h2
-                          class="text-5xl font-bold text-white mb-2"
-                        >
-                          Silver
-                        </h2>
-                        <p
-                          class="text-3xl text-[#ff1365] font-mono"
-                        >
-                          €30k/year
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute inset-0 flex items-center justify-center"
-                      style="opacity: 0; scale: 0;"
-                    >
-                      <div
-                        class="flex flex-col justify-center items-center bg-[#1a0050]/50 backdrop-blur-md p-10 rounded-3xl border border-white/10"
-                      >
-                        <img
-                          alt="Bronze Benefits"
-                          class="mb-6 drop-shadow-2xl"
-                          height="300"
-                          src="/images/icons/bronze-layers.svg"
-                          width="300"
-                        />
-                        <h2
-                          class="text-5xl font-bold text-white mb-2"
-                        >
-                          Bronze
-                        </h2>
-                        <p
-                          class="text-3xl text-[#ff1365] font-mono"
-                        >
-                          €10k/year
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-1/2 h-full flex items-center justify-center relative pl-12"
-                  >
-                    <div
-                      class="absolute w-full max-w-lg"
-                      style="opacity: 0; y: 0px;"
-                    >
-                      <h2
-                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                      >
-                        Diamond Benefits
-                      </h2>
-                      <div
-                        class="text-xl text-gray-300 leading-relaxed font-light"
-                      >
-                        <ul
-                          class="text-left lg:list-disc lg:ml-4"
-                        >
-                          <li>
-                            Logo (max size: 400x179) on our Sustainers page
-                          </li>
-                          <li>
-                            Logo location: top section, rotating placement in a row
-                          </li>
-                          <li>
-                            Use of the Diamond Sustainer logo for your site
-                          </li>
-                          <li>
-                            Joint press release with the Eclipse Foundation
-                          </li>
-                          <li>
-                            Listed in Eclipse Foundation Annual Reports
-                          </li>
-                          <li>
-                            Listed in all Adoptium Working Group press releases
-                          </li>
-                          <li>
-                            Sponsor a co-authored case study
-                          </li>
-                          <li>
-                            Media testimonial placement, spokesperson opportunities
-                          </li>
-                          <li>
-                            Speaking Opportunity at the Virtual Adoptium Summit
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute w-full max-w-lg"
-                      style="opacity: 0; y: 0px;"
-                    >
-                      <h2
-                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                      >
-                        Platinum Benefits
-                      </h2>
-                      <div
-                        class="text-xl text-gray-300 leading-relaxed font-light"
-                      >
-                        <ul
-                          class="text-left lg:list-disc lg:ml-4"
-                        >
-                          <li>
-                            Logo (max size: 300x134) on our Sustainers page
-                          </li>
-                          <li>
-                            Logo location: upper-middle section, rotating placement in row
-                          </li>
-                          <li>
-                            Use of the Platinum Sustainer logo for your site
-                          </li>
-                          <li>
-                            Joint press release with the Eclipse Foundation
-                          </li>
-                          <li>
-                            Listed in Eclipse Foundation Annual Reports
-                          </li>
-                          <li>
-                            Listed in all Adoptium Working Group press releases
-                          </li>
-                          <li>
-                            Media testimonial placement, spokesperson opportunities
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute w-full max-w-lg"
-                      style="opacity: 0; y: 0px;"
-                    >
-                      <h2
-                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                      >
-                        Gold Benefits
-                      </h2>
-                      <div
-                        class="text-xl text-gray-300 leading-relaxed font-light"
-                      >
-                        <ul
-                          class="text-left lg:list-disc lg:ml-4"
-                        >
-                          <li>
-                            Logo (max size: 223x100) on our Sustainers page 
-                          </li>
-                          <li>
-                            Logo location: middle section, rotating placement in a row
-                          </li>
-                          <li>
-                            Use of the Gold Sustainer logo for your site
-                          </li>
-                          <li>
-                            Personal quote for your press release
-                          </li>
-                          <li>
-                            Listed in all Adoptium Working Group press releases
-                          </li>
-                          <li>
-                            Media testimonial placement, spokesperson opportunities
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute w-full max-w-lg"
-                      style="opacity: 0; y: 0px;"
-                    >
-                      <h2
-                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                      >
-                        Silver Benefits
-                      </h2>
-                      <div
-                        class="text-xl text-gray-300 leading-relaxed font-light"
-                      >
-                        <ul
-                          class="text-left lg:list-disc lg:ml-4"
-                        >
-                          <li>
-                            Logo (max size: 150x67) on our Sustainers page
-                          </li>
-                          <li>
-                            Logo location: lower-middle section, rotating placement in a row
-                          </li>
-                          <li>
-                            Use of the Silver Sustainer logo for your site
-                          </li>
-                          <li>
-                            Media testimonial placement, spokesperson opportunities
-                          </li>
-                          <li>
-                            Listed in all Adoptium Working Group press releases
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div
-                      class="absolute w-full max-w-lg"
-                      style="opacity: 0; y: 0px;"
-                    >
-                      <h2
-                        class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                      >
-                        Bronze Benefits
-                      </h2>
-                      <div
-                        class="text-xl text-gray-300 leading-relaxed font-light"
-                      >
-                        <ul
-                          class="text-left lg:list-disc lg:ml-4"
-                        >
-                          <li>
-                            Logo (max size: 150x67) on our Sustainers page
-                          </li>
-                          <li>
-                            Logo location: lower section, rotating placement in a row
-                          </li>
-                          <li>
-                            Use of the Bronze Sustainer logo for your site
-                          </li>
-                          <li>
-                            Listed in all Adoptium Working Group press releases
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex flex-col md:flex-row gap-6 justify-center absolute items-center mt-[30px] md:-mt-[72px] w-full z-10 md:mt-10 md:mx-auto"
-        >
-          <a
-            class="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 flex items-center justify-center gap-2"
-            href="https://www.eclipse.org/sponsor/adoptium/?scope=website&campaign=become-sustainer"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Become an Individual Sustainer
-          </a>
-          <a
-            class="cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-lg border border-white/20 hover:border-white/30 flex items-center justify-center gap-2"
-            href="/become-a-sustainer"
-          >
-            Become a Corporate Sustainer
-          </a>
-        </div>
       </div>
-      <h2
-        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900 mb-8 mt-40 relative"
-        id="temurin-sustainers"
+      <section
+        class="scroll-mt-28 border-b border-white/10 py-6 last:border-b-0"
       >
         <div
-          class="absolute -left-full -right-full -top-20 -z-10"
+          class="mb-4"
         >
-          <div
-            class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1464]/20 to-transparent"
-          />
-        </div>
-        Temurin's Sustainers
-      </h2>
-      <div
-        class="p-4 bg-gradient-to-b from-[#1e1133]/20 to-[#0d0129]/20 backdrop-blur-sm rounded-xl border border-[#39314a]/30"
-      >
-        <div />
-        <div />
-      </div>
-      <div
-        class="mt-16"
-      >
-        <section
-          class="border-y border-white/10 bg-[#10052d] py-16 text-white sm:py-20"
-        >
-          <div
-            class="mx-auto grid max-w-7xl gap-10 px-6 sm:px-8 lg:grid-cols-[280px_1fr] lg:gap-16"
+          <p
+            class="mb-0 max-w-3xl text-sm leading-relaxed text-grey"
           >
-            <div>
-              <p
-                class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
-              >
-                ECLIPSE ADOPTIUM
-              </p>
-              <h2
-                class="mb-7 max-w-sm text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
-                id="_r_0_"
-              >
-                Text
-              </h2>
-              <div
-                aria-labelledby="_r_0_"
-                class="grid grid-cols-3 gap-2 lg:grid-cols-1 lg:gap-3"
-                role="group"
-              >
-                <button
-                  aria-controls="_r_1_"
-                  aria-label="Kobalt"
-                  aria-pressed="true"
-                  class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-pink/50 bg-white/5"
-                  type="button"
-                >
-                  <span
-                    class="relative block h-8 w-28 max-w-full opacity-100"
-                  >
-                    <img
-                      alt=""
-                      class="object-contain brightness-0 invert lg:object-left"
-                      sizes="112px"
-                      src="/images/members/kobalt.png"
-                    />
-                  </span>
-                </button>
-                <button
-                  aria-controls="_r_1_"
-                  aria-label="MacStadium"
-                  aria-pressed="false"
-                  class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
-                  type="button"
-                >
-                  <span
-                    class="relative block h-8 w-28 max-w-full opacity-50"
-                  >
-                    <img
-                      alt=""
-                      class="object-contain brightness-0 invert lg:object-left"
-                      sizes="112px"
-                      src="/images/members/macstadium.svg"
-                    />
-                  </span>
-                </button>
-                <button
-                  aria-controls="_r_1_"
-                  aria-label="Open-Elements"
-                  aria-pressed="false"
-                  class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
-                  type="button"
-                >
-                  <span
-                    class="relative block h-8 w-28 max-w-full opacity-50"
-                  >
-                    <img
-                      alt=""
-                      class="object-contain brightness-0 invert lg:object-left"
-                      sizes="112px"
-                      src="/images/members/openelements.svg"
-                    />
-                  </span>
-                </button>
-              </div>
-            </div>
-            <figure
-              aria-atomic="true"
-              aria-live="polite"
-              class="m-0 min-w-0 border-t border-white/10 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
-              id="_r_1_"
+            Adoptium is proud to receive financial donations both one-off and regularly from the following companies.
+          </p>
+        </div>
+        <div
+          class="w-full flex flex-col items-center justify-center mt-3"
+        >
+          <div
+            class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+            id="sponsor"
+          >
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.cargurus.com"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <svg
-                aria-hidden="true"
-                class="mb-6 h-9 w-9 text-pink"
-                fill="currentColor"
-                viewBox="0 0 24 27"
-              >
-                <path
-                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                />
-              </svg>
-              <blockquote
-                class="mb-8"
-              >
-                <p
-                  class="mb-0 text-xl font-normal leading-relaxed tracking-tight text-white/90 sm:text-2xl lg:min-h-[216px]"
-                >
-                  “
-                  We are a software company based in Lyon, France. We use open source software, components and libraries to create and operate reliable, durable and fancy web-based applications when no software editor provides a solution matching our custom requirements. As our activity focuses on providing long-lived (10 years), highly specialized applications, built and operated by small teams (1-5 persons), we need to find the good options to maintain our application up-to-date and allow regular releases despite constrained roadmap. Software strategy (tools, libraries) is essential to ensure the quality and productivity level needed to keep the rhythm without burning developers. As we commit, as individuals and as a company, to common interest, we choose to dedicate a significant part of our profit to the environment and to the open-source projects that support our activity. Beyond our own activity, we consider open source as a key part for computer science education and software innovation.
-                  ”
-                </p>
-              </blockquote>
-              <figcaption
-                class="flex items-center gap-4 border-t border-white/10 pt-6"
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
               >
                 <img
-                  alt=""
-                  class="h-12 w-12 shrink-0 rounded-full object-cover"
-                  height="48"
-                  src="/images/quotes/laurentalmeras.jpeg"
-                  width="48"
+                  alt="CarGurus"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/cargurus.svg"
                 />
-                <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="mb-1 text-sm font-semibold text-white"
-                  >
-                    Laurent Almeras
-                  </p>
-                  <p
-                    class="mb-0 text-xs leading-relaxed text-grey"
-                  >
-                    CTO, Kobalt
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://bedag.ch"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Bedag"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/bedag.png"
+                />
+              </span>
+            </a>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section
+        class="scroll-mt-28 border-b border-white/10 py-6 last:border-b-0"
+      >
+        <div
+          class="mb-4"
+        >
+          <p
+            class="mb-0 max-w-3xl text-sm leading-relaxed text-grey"
+          >
+            The Adoptium Working Group collaborates with the following companies who contribute various kinds of cloud and physical hardware.
+          </p>
+        </div>
+        <div
+          class="w-full flex flex-col items-center justify-center mt-3"
+        >
+          <div
+            class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+            id="infra"
+          >
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://azure.microsoft.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 80px;"
+              >
+                <img
+                  alt="Microsoft Azure"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/azure.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://skytap.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Skytap"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/skytap.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://ibm.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="IBM"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/ibm-logo.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.macstadium.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="MacStadium"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/macstadium.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://osuosl.org"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="OSUOSL"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/osuosl.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.marist.edu"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Marist College"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/marist.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://macincloud.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 176px; height: 64px;"
+              >
+                <img
+                  alt="Macincloud"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/macincloud.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.netlify.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Netlify"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/netlify-light.svg"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://jfrog.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 64px;"
+              >
+                <img
+                  alt="JFrog"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/jfrog.svg"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://fastly.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Fastly"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/fastly.svg"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://riseproject.dev"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Rise"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/rise.svg"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.cloudflare.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Cloudflare"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/cloudflare.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://heroku.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 80px;"
+              >
+                <img
+                  alt="Heroku"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/sustainers/heroku.svg"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
+  </section>
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-16 text-white sm:py-20"
+  >
+    <div
+      class="mx-auto grid max-w-7xl gap-10 px-6 sm:px-8 lg:grid-cols-[280px_1fr] lg:gap-16"
+    >
+      <div>
+        <p
+          class="mb-3 font-mono text-xs tracking-[0.2em] text-[#ff91b7]"
+        >
+          ECLIPSE ADOPTIUM
+        </p>
+        <h2
+          class="mb-7 max-w-sm text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+          id="_r_0_"
+        >
+          Text
+        </h2>
+        <div
+          aria-labelledby="_r_0_"
+          class="grid grid-cols-3 gap-2 lg:grid-cols-1 lg:gap-3"
+          role="group"
+        >
+          <button
+            aria-controls="_r_1_"
+            aria-label="Kobalt"
+            aria-pressed="true"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-pink/50 bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-100"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/kobalt.png"
+              />
+            </span>
+          </button>
+          <button
+            aria-controls="_r_1_"
+            aria-label="MacStadium"
+            aria-pressed="false"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-50"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/macstadium.svg"
+              />
+            </span>
+          </button>
+          <button
+            aria-controls="_r_1_"
+            aria-label="Open-Elements"
+            aria-pressed="false"
+            class="flex min-h-16 min-w-0 items-center justify-center rounded-xl border p-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink lg:justify-start lg:px-5 border-transparent hover:border-white/15 hover:bg-white/5"
+            type="button"
+          >
+            <span
+              class="relative block h-8 w-28 max-w-full opacity-50"
+            >
+              <img
+                alt=""
+                class="object-contain brightness-0 invert lg:object-left"
+                sizes="112px"
+                src="/images/members/openelements.svg"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <figure
+        aria-atomic="true"
+        aria-live="polite"
+        class="m-0 min-w-0 border-t border-white/10 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
+        id="_r_1_"
+      >
+        <svg
+          aria-hidden="true"
+          class="mb-6 h-9 w-9 text-pink"
+          fill="currentColor"
+          viewBox="0 0 24 27"
+        >
+          <path
+            d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+          />
+        </svg>
+        <blockquote
+          class="mb-8"
+        >
+          <p
+            class="mb-0 text-xl font-normal leading-relaxed tracking-tight text-white/90 sm:text-2xl lg:min-h-[216px]"
+          >
+            “
+            We are a software company based in Lyon, France. We use open source software, components and libraries to create and operate reliable, durable and fancy web-based applications when no software editor provides a solution matching our custom requirements. As our activity focuses on providing long-lived (10 years), highly specialized applications, built and operated by small teams (1-5 persons), we need to find the good options to maintain our application up-to-date and allow regular releases despite constrained roadmap. Software strategy (tools, libraries) is essential to ensure the quality and productivity level needed to keep the rhythm without burning developers. As we commit, as individuals and as a company, to common interest, we choose to dedicate a significant part of our profit to the environment and to the open-source projects that support our activity. Beyond our own activity, we consider open source as a key part for computer science education and software innovation.
+            ”
+          </p>
+        </blockquote>
+        <figcaption
+          class="flex items-center gap-4 border-t border-white/10 pt-6"
+        >
+          <img
+            alt=""
+            class="h-12 w-12 shrink-0 rounded-full object-cover"
+            height="48"
+            src="/images/quotes/laurentalmeras.jpeg"
+            width="48"
+          />
+          <div
+            class="min-w-0"
+          >
+            <p
+              class="mb-1 text-sm font-semibold text-white"
+            >
+              Laurent Almeras
+            </p>
+            <p
+              class="mb-0 text-xs leading-relaxed text-grey"
+            >
+              CTO, Kobalt
+            </p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 </div>
 `;

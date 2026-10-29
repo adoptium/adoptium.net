@@ -1,601 +1,544 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Members page > renders correctly 1`] = `
-<div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+<div
+  class="bg-purple text-white"
+>
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+        class="max-w-3xl"
       >
         <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Become a Member
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
-            Join the Adoptium Working Group
-          </div>
+          Become a Member
         </div>
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
+        >
+          Join the Adoptium® Working Group
+        </h1>
         <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
+          class="max-w-2xl text-base leading-relaxed text-grey "
         >
           Support the future of open, secure, enterprise-ready Java runtimes.
         </div>
-        <div
-          class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6"
+      </div>
+      <div
+        class="flex flex-wrap items-center gap-3 lg:pb-1"
+      >
+        <a
+          class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-pink px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#df0b54] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          href="/join"
         >
-          <a
-            class="w-full sm:w-auto"
-            href="/join"
+          <span>
+            Join Us
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <button
-              class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
-            >
-              Join Us
-            </button>
-          </a>
-          <a
-            class="w-full sm:w-auto"
-            href="#strategic-sec"
-          >
-            <button
-              class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
-            >
-              Our Members
-            </button>
-          </a>
-        </div>
+            <line
+              x1="7"
+              x2="17"
+              y1="17"
+              y2="7"
+            />
+            <polyline
+              points="7 7 17 7 17 17"
+            />
+          </svg>
+        </a>
+        <a
+          class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/15 px-5 py-3 text-sm font-medium text-grey hover:border-white/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="#strategic-sec"
+        >
+          Our Members
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="p-4 mt-[60px] w-full"
-  >
-    <h2
-      class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
-    >
-      Why Join Adoptium?
-    </h2>
-    <p
-      class="text-[16px] text-[#c4bfce] p-6 max-w-[900px] text-center mx-auto mt-6 leading-relaxed"
-    >
-      The Adoptium Working Group brings together organizations to shape the future of Java by collaborating on the delivery of high-quality, TCK-certified OpenJDK binaries through Eclipse Temurin. As a member, your organization gains strategic influence, community leadership opportunities, and a voice in driving long-term innovation across the Java ecosystem.
-    </p>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full item-center mt-10 p-4 mx-auto max-w-[1180px]"
-    >
-      <div
-        class="relative max-w-[382px] w-full"
-        id="card-container-0"
-      >
-        <input
-          class="peer hidden"
-          id="toggle-0"
-          type="checkbox"
-        />
-        <span
-          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-        >
-          +
-        </span>
-        <div
-          class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-        >
-          <label
-            for="toggle-0"
-          >
-            <div
-              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-            >
-              <div
-                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  class="mb-0 w-16 h-16"
-                  height="64"
-                  src="/images/initiatives/lead.svg"
-                  width="64"
-                />
-              </div>
-              <h3
-                class="text-2xl font-medium text-center px-4 text-white"
-              >
-                Lead the Future of Java
-              </h3>
-            </div>
-          </label>
-        </div>
-        <div
-          class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-        >
-          <div
-            class="text-white text-sm px-4 text-center leading-relaxed"
-          >
-            <ul
-              class="list-disc list-inside space-y-2 text-left"
-            >
-              <li>
-                Define the technical vision and shape the roadmap of the most widely adopted OpenJDK builds.
-              </li>
-              <li>
-                Influence strategic decisions on default settings, security responses, and platform configurations.
-              </li>
-              <li>
-                Align project priorities with your own by contributing to test suites, developer engagement, version support, and key metrics.
-              </li>
-            </ul>
-          </div>
-          <span
-            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            _
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative max-w-[382px] w-full"
-        id="card-container-1"
-      >
-        <input
-          class="peer hidden"
-          id="toggle-1"
-          type="checkbox"
-        />
-        <span
-          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-        >
-          +
-        </span>
-        <div
-          class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-        >
-          <label
-            for="toggle-1"
-          >
-            <div
-              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-            >
-              <div
-                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  class="mb-0 w-16 h-16"
-                  height="64"
-                  src="/images/initiatives/strengthen.svg"
-                  width="64"
-                />
-              </div>
-              <h3
-                class="text-2xl font-medium text-center px-4 text-white"
-              >
-                Strengthen Your Open Source Strategy
-              </h3>
-            </div>
-          </label>
-        </div>
-        <div
-          class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-        >
-          <div
-            class="text-white text-sm px-4 text-center leading-relaxed"
-          >
-            <ul
-              class="list-disc list-inside space-y-2 text-left"
-            >
-              <li>
-                Join a global, innovative open source ecosystem committed to improving Java for enterprise use.
-              </li>
-              <li>
-                Benefit from stable licensing, predictable development frameworks, and open collaboration.
-              </li>
-              <li>
-                Gain the support of a thriving community to evolve your open source practices.
-              </li>
-            </ul>
-          </div>
-          <span
-            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            _
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative max-w-[382px] w-full"
-        id="card-container-2"
-      >
-        <input
-          class="peer hidden"
-          id="toggle-2"
-          type="checkbox"
-        />
-        <span
-          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-        >
-          +
-        </span>
-        <div
-          class="relative transform  false  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-        >
-          <label
-            for="toggle-2"
-          >
-            <div
-              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-            >
-              <div
-                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  class="mb-0 w-16 h-16"
-                  height="64"
-                  src="/images/initiatives/governance.svg"
-                  width="64"
-                />
-              </div>
-              <h3
-                class="text-2xl font-medium text-center px-4 text-white"
-              >
-                Rely on Open, Vendor-Neutral Governance
-              </h3>
-            </div>
-          </label>
-        </div>
-        <div
-          class="hidden transform false lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-        >
-          <div
-            class="text-white text-sm px-4 text-center leading-relaxed"
-          >
-            <ul
-              class="list-disc list-inside space-y-2 text-left"
-            >
-              <li>
-                Trust in transparent, community-led governance under the Eclipse Foundation.
-              </li>
-              <li>
-                Ensure long-term stability and vendor neutrality to avoid lock-in and reduce operational risk.
-              </li>
-            </ul>
-          </div>
-          <span
-            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            _
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative max-w-[382px] w-full"
-        id="card-container-3"
-      >
-        <input
-          class="peer hidden"
-          id="toggle-3"
-          type="checkbox"
-        />
-        <span
-          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-        >
-          +
-        </span>
-        <div
-          class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-        >
-          <label
-            for="toggle-3"
-          >
-            <div
-              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-            >
-              <div
-                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  class="mb-0 w-16 h-16"
-                  height="64"
-                  src="/images/initiatives/community.svg"
-                  width="64"
-                />
-              </div>
-              <h3
-                class="text-2xl font-medium text-center px-4 text-white"
-              >
-                Join the Leaders Driving Java Forward
-              </h3>
-            </div>
-          </label>
-        </div>
-        <div
-          class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-        >
-          <div
-            class="text-white text-sm px-4 text-center leading-relaxed"
-          >
-            <ul
-              class="list-disc list-inside space-y-2 text-left"
-            >
-              <li>
-                Collaborate with leading Java vendors like Microsoft, Red Hat, IBM, and Alibaba.
-              </li>
-              <li>
-                Ensure your enterprise use cases shape the future quality standards of Java.
-              </li>
-              <li>
-                Engage directly with OpenJDK distributors to guide development and distribution.
-              </li>
-            </ul>
-          </div>
-          <span
-            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            _
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative max-w-[382px] w-full"
-        id="card-container-4"
-      >
-        <input
-          class="peer hidden"
-          id="toggle-4"
-          type="checkbox"
-        />
-        <span
-          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-        >
-          +
-        </span>
-        <div
-          class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-        >
-          <label
-            for="toggle-4"
-          >
-            <div
-              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-            >
-              <div
-                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  class="mb-0 w-16 h-16"
-                  height="64"
-                  src="/images/initiatives/cut.svg"
-                  width="64"
-                />
-              </div>
-              <h3
-                class="text-2xl font-medium text-center px-4 text-white"
-              >
-                Cut Costs and Share Infrastructure
-              </h3>
-            </div>
-          </label>
-        </div>
-        <div
-          class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-        >
-          <div
-            class="text-white text-sm px-4 text-center leading-relaxed"
-          >
-            <ul
-              class="list-disc list-inside space-y-2 text-left"
-            >
-              <li>
-                Share infrastructure costs and reduce duplication across build, test, and release pipelines.
-              </li>
-              <li>
-                Improve delivery speed and operational efficiency through shared systems and practices.
-              </li>
-            </ul>
-          </div>
-          <span
-            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            _
-          </span>
-        </div>
-      </div>
-      <div
-        class="relative max-w-[382px] w-full"
-        id="card-container-5"
-      >
-        <input
-          class="peer hidden"
-          id="toggle-5"
-          type="checkbox"
-        />
-        <span
-          class="hidden lg:peer-checked:hidden lg:block absolute bottom-[10px] right-[20px] text-[#ff1464]"
-        >
-          +
-        </span>
-        <div
-          class="relative transform  lg:peer-checked:translate-y-[-236px]  group h-[212px] w-full border-[1px] border-[#39314a] hover:border-[#ff1464]/40 rounded-[20px] cursor-pointer overflow-visible transition-all duration-300 lg:peer-checked:border-[#ff1464]/70 lg:peer-checked:border-b-0 lg:peer-checked:rounded-bl-none lg:peer-checked:rounded-br-none bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 lg:peer-checked:backdrop-blur-sm shadow-lg hover:shadow-[#ff1464]/5"
-        >
-          <label
-            for="toggle-5"
-          >
-            <div
-              class="flex flex-col justify-center items-center gap-6 h-full cursor-pointer p-6"
-            >
-              <div
-                class="bg-gradient-to-br from-[#281645] to-[#39194d] p-4 rounded-full"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  class="mb-0 w-16 h-16"
-                  height="64"
-                  src="/images/initiatives/narrative.svg"
-                  width="64"
-                />
-              </div>
-              <h3
-                class="text-2xl font-medium text-center px-4 text-white"
-              >
-                Define the Narrative for Open Java
-              </h3>
-            </div>
-          </label>
-        </div>
-        <div
-          class="hidden transform lg:peer-checked:translate-y-[-236px] lg:peer-checked:block absolute backdrop-blur-xl h-auto min-h-[236px] top-full left-0 w-full mt-[-1px] border-[1px] border-t-0 border-[#ff1464]/70 rounded-b-[20px] z-10 p-6 bg-gradient-to-b from-[#1e1133]/60 to-[#0d0129]/60 shadow-lg shadow-[#ff1464]/10"
-        >
-          <div
-            class="text-white text-sm px-4 text-center leading-relaxed"
-          >
-            <ul
-              class="list-disc list-inside space-y-2 text-left"
-            >
-              <li>
-                Shape the messaging, content, and marketing of Adoptium projects.
-              </li>
-              <li>
-                Contribute to how Java is positioned for global enterprises and developer communities.
-              </li>
-            </ul>
-          </div>
-          <span
-            class="absolute bottom-[10px] right-[20px] text-[#ff1464]"
-          >
-            _
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4"
-  >
-    <div
-      class="flex flex-col sm:flex-row gap-4"
-    >
-      <a
-        href="/join"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
-        >
-          Contact Us
-        </button>
-      </a>
-    </div>
-  </div>
+  </header>
   <section
-    class="py-16 px-4"
+    class="mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
   >
     <div
-      class="max-w-7xl mx-auto"
+      class="mb-8 max-w-3xl"
+    >
+      <h2
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+      >
+        Why Join Adoptium?
+      </h2>
+      <p
+        class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
+      >
+        The Adoptium Working Group brings together organizations to shape the future of Java by collaborating on the delivery of high-quality, TCK-certified OpenJDK binaries through Eclipse Temurin. As a member, your organization gains strategic influence, community leadership opportunities, and a voice in driving long-term innovation across the Java ecosystem.
+      </p>
+    </div>
+    <div
+      class="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/lead.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Lead the Future of Java
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          <ul
+            class="list-disc list-inside space-y-2 text-left"
+          >
+            <li>
+              Define the technical vision and shape the roadmap of the most widely adopted OpenJDK builds.
+            </li>
+            <li>
+              Influence strategic decisions on default settings, security responses, and platform configurations.
+            </li>
+            <li>
+              Align project priorities with your own by contributing to test suites, developer engagement, version support, and key metrics.
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/strengthen.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Strengthen Your Open Source Strategy
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          <ul
+            class="list-disc list-inside space-y-2 text-left"
+          >
+            <li>
+              Join a global, innovative open source ecosystem committed to improving Java for enterprise use.
+            </li>
+            <li>
+              Benefit from stable licensing, predictable development frameworks, and open collaboration.
+            </li>
+            <li>
+              Gain the support of a thriving community to evolve your open source practices.
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/governance.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Rely on Open, Vendor-Neutral Governance
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          <ul
+            class="list-disc list-inside space-y-2 text-left"
+          >
+            <li>
+              Trust in transparent, community-led governance under the Eclipse Foundation.
+            </li>
+            <li>
+              Ensure long-term stability and vendor neutrality to avoid lock-in and reduce operational risk.
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/community.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Join the Leaders Driving Java Forward
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          <ul
+            class="list-disc list-inside space-y-2 text-left"
+          >
+            <li>
+              Collaborate with leading Java vendors like Microsoft, Red Hat, IBM, and Alibaba.
+            </li>
+            <li>
+              Ensure your enterprise use cases shape the future quality standards of Java.
+            </li>
+            <li>
+              Engage directly with OpenJDK distributors to guide development and distribution.
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/cut.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Cut Costs and Share Infrastructure
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          <ul
+            class="list-disc list-inside space-y-2 text-left"
+          >
+            <li>
+              Share infrastructure costs and reduce duplication across build, test, and release pipelines.
+            </li>
+            <li>
+              Improve delivery speed and operational efficiency through shared systems and practices.
+            </li>
+          </ul>
+        </div>
+      </details>
+      <details
+        class="group min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] transition-colors open:border-pink/30 hover:border-white/25"
+      >
+        <summary
+          class="flex min-h-32 cursor-pointer list-none items-center gap-4 rounded-2xl p-5 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink [&::-webkit-details-marker]:hidden sm:p-6"
+        >
+          <span
+            class="relative h-10 w-10 shrink-0 rounded-xl bg-pink/10"
+          >
+            <img
+              alt=""
+              class="object-contain p-2"
+              sizes="40px"
+              src="/images/initiatives/narrative.svg"
+            />
+          </span>
+          <h3
+            class="mb-0 flex-1 text-base font-semibold leading-snug"
+          >
+            Define the Narrative for Open Java
+          </h3>
+          <svg
+            aria-hidden="true"
+            class="shrink-0 text-[#ff91b7] group-open:rotate-45"
+            fill="none"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="12"
+              x2="12"
+              y1="5"
+              y2="19"
+            />
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+        </summary>
+        <div
+          class="mx-5 border-t border-white/10 py-5 text-sm leading-relaxed text-grey sm:mx-6 [&_ul]:list-outside [&_ul]:pl-4"
+        >
+          <ul
+            class="list-disc list-inside space-y-2 text-left"
+          >
+            <li>
+              Shape the messaging, content, and marketing of Adoptium projects.
+            </li>
+            <li>
+              Contribute to how Java is positioned for global enterprises and developer communities.
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </section>
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-12 sm:py-16"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
     >
       <div
-        class="text-center mb-12"
+        class="mb-8 max-w-3xl"
       >
         <h2
-          class="text-4xl md:text-5xl font-bold text-white mb-4"
+          class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
         >
           Membership Levels
         </h2>
         <p
-          class="text-lg text-grey max-w-3xl mx-auto leading-relaxed"
+          class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
         >
           Choose the membership level that best fits your organization's needs and engagement with the Adoptium community.
         </p>
       </div>
       <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        class="grid grid-cols-1 gap-4 md:grid-cols-3"
       >
         <div
-          class="relative bg-gradient-to-b from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl border-rose-600 shadow-lg shadow-rose-600/20"
+          class="relative min-w-0 rounded-2xl border p-6 border-pink/40 bg-gradient-to-br from-pink/10 to-white/[0.025]"
         >
           <div
-            class="text-center mb-6"
+            class="mb-6 flex items-start justify-between gap-2"
           >
-            <h3
-              class="text-2xl font-bold text-white mb-1"
+            <div>
+              <p
+                class="mb-2 text-xs font-medium text-[#ff91b7]"
+              >
+                Member
+              </p>
+              <h3
+                class="mb-0 text-xl font-semibold text-white"
+              >
+                Strategic
+              </h3>
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
             >
-              Strategic
-            </h3>
-            <p
-              class="text-lg text-rose-600 font-medium"
-            >
-              Member
-            </p>
+              0
+              1
+            </span>
           </div>
           <div
-            class="text-center mb-8"
+            class="mb-5 border-b border-white/10 pb-5"
           >
             <div
-              class="text-3xl font-bold text-white mb-2"
+              class="mb-2 text-2xl font-semibold tracking-tight text-white"
             >
               €9,000 - €45,000
             </div>
             <p
-              class="text-sm text-grey"
+              class="mb-0 text-xs text-grey"
             >
               (Based on corporate revenue)
             </p>
@@ -606,23 +549,25 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="flex items-start gap-3"
             >
-              <div
-                class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full flex items-center justify-center mt-0.5"
+              <svg
+                aria-hidden="true"
+                class="mt-1 shrink-0 text-[#ff91b7]"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="w-3 h-3 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
               <p
-                class="text-white text-sm leading-relaxed"
+                class="mb-0 text-sm leading-relaxed text-grey"
               >
                 For organisations that view Adoptium as critical to their future and are looking to play a leading role in shaping its direction.
               </p>
@@ -630,32 +575,41 @@ exports[`Members page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="relative bg-gradient-to-b from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl border-purple-600/30 hover:border-rose-600/50"
+          class="relative min-w-0 rounded-2xl border p-6 border-white/10 bg-white/[0.025]"
         >
           <div
-            class="text-center mb-6"
+            class="mb-6 flex items-start justify-between gap-2"
           >
-            <h3
-              class="text-2xl font-bold text-white mb-1"
+            <div>
+              <p
+                class="mb-2 text-xs font-medium text-[#ff91b7]"
+              >
+                Member
+              </p>
+              <h3
+                class="mb-0 text-xl font-semibold text-white"
+              >
+                Enterprise
+              </h3>
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
             >
-              Enterprise
-            </h3>
-            <p
-              class="text-lg text-rose-600 font-medium"
-            >
-              Member
-            </p>
+              0
+              2
+            </span>
           </div>
           <div
-            class="text-center mb-8"
+            class="mb-5 border-b border-white/10 pb-5"
           >
             <div
-              class="text-3xl font-bold text-white mb-2"
+              class="mb-2 text-2xl font-semibold tracking-tight text-white"
             >
               €6,500 - €30,000
             </div>
             <p
-              class="text-sm text-grey"
+              class="mb-0 text-xs text-grey"
             >
               (Based on corporate revenue)
             </p>
@@ -666,23 +620,25 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="flex items-start gap-3"
             >
-              <div
-                class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full flex items-center justify-center mt-0.5"
+              <svg
+                aria-hidden="true"
+                class="mt-1 shrink-0 text-[#ff91b7]"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="w-3 h-3 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
               <p
-                class="text-white text-sm leading-relaxed"
+                class="mb-0 text-sm leading-relaxed text-grey"
               >
                 For organisations that rely on Adoptium in their business operations and are seeking to influence the ecosystem's direction.
               </p>
@@ -690,32 +646,41 @@ exports[`Members page > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="relative bg-gradient-to-b from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl border-purple-600/30 hover:border-rose-600/50"
+          class="relative min-w-0 rounded-2xl border p-6 border-white/10 bg-white/[0.025]"
         >
           <div
-            class="text-center mb-6"
+            class="mb-6 flex items-start justify-between gap-2"
           >
-            <h3
-              class="text-2xl font-bold text-white mb-1"
+            <div>
+              <p
+                class="mb-2 text-xs font-medium text-[#ff91b7]"
+              >
+                Member
+              </p>
+              <h3
+                class="mb-0 text-xl font-semibold text-white"
+              >
+                Participant
+              </h3>
+            </div>
+            <span
+              aria-hidden="true"
+              class="font-mono text-xs text-white/30"
             >
-              Participant
-            </h3>
-            <p
-              class="text-lg text-rose-600 font-medium"
-            >
-              Member
-            </p>
+              0
+              3
+            </span>
           </div>
           <div
-            class="text-center mb-8"
+            class="mb-5 border-b border-white/10 pb-5"
           >
             <div
-              class="text-3xl font-bold text-white mb-2"
+              class="mb-2 text-2xl font-semibold tracking-tight text-white"
             >
               €0 - €12,500
             </div>
             <p
-              class="text-sm text-grey"
+              class="mb-0 text-xs text-grey"
             >
               (Based on corporate revenue)
             </p>
@@ -726,23 +691,25 @@ exports[`Members page > renders correctly 1`] = `
             <div
               class="flex items-start gap-3"
             >
-              <div
-                class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-rose-500 to-rose-600 rounded-full flex items-center justify-center mt-0.5"
+              <svg
+                aria-hidden="true"
+                class="mt-1 shrink-0 text-[#ff91b7]"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="w-3 h-3 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
               <p
-                class="text-white text-sm leading-relaxed"
+                class="mb-0 text-sm leading-relaxed text-grey"
               >
                 For organisations that use or build on Adoptium technology and are looking to stay engaged as it evolves.
               </p>
@@ -751,1477 +718,2405 @@ exports[`Members page > renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="text-center mt-12"
+        class="mt-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-center"
       >
         <p
-          class="text-grey mb-6"
+          class="mb-0 text-sm leading-relaxed text-grey"
         >
           Questions about membership levels? We're here to help you choose the right tier.
         </p>
         <a
+          class="inline-flex min-h-11 shrink-0 items-center gap-2 text-sm text-white hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
           href="https://www.eclipse.org/org/workinggroups/adoptium-charter.php"
         >
-          <button
-            class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base  leading-6 font-normal w-[186px] h-[48px] rounded-[80px] gradient-border "
-          >
+          <span>
             Learn More
-          </button>
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="7"
+              x2="17"
+              y1="17"
+              y2="7"
+            />
+            <polyline
+              points="7 7 17 7 17 17"
+            />
+          </svg>
         </a>
       </div>
     </div>
   </section>
-  <div
-    class="w-full px-3 pt-2 pb-4 mb-4"
+  <section
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
   >
     <div
-      class="max-w-4xl mx-auto overflow-x-auto scrollbar-hide"
+      class="mb-8 max-w-3xl"
+    >
+      <h2
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+      >
+        Compare Membership Levels
+      </h2>
+    </div>
+    <div
+      aria-label="Compare Membership Levels"
+      class="relative overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.025] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+      role="region"
+      tabindex="0"
+    >
+      <table
+        class="w-full min-w-[640px] table-fixed border-collapse text-left"
+      >
+        <caption
+          class="sr-only"
+        >
+          Compare Membership Levels
+        </caption>
+        <thead>
+          <tr
+            class="border-b border-white/10 bg-white/[0.025] text-xs text-grey"
+          >
+            <th
+              class="w-[46%] px-5 py-5 font-medium"
+              scope="col"
+            >
+              Benefit Category
+            </th>
+            <th
+              class="px-2 py-5 text-center font-medium"
+              scope="col"
+            >
+              Strategic
+            </th>
+            <th
+              class="px-2 py-5 text-center font-medium"
+              scope="col"
+            >
+              Enterprise
+            </th>
+            <th
+              class="px-2 py-5 text-center font-medium"
+              scope="col"
+            >
+              Participant
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="border-b border-white/10"
+          >
+            <th
+              class="p-0"
+              colspan="4"
+              scope="rowgroup"
+            >
+              <button
+                aria-controls="_r_0_-0"
+                aria-expanded="true"
+                class="flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-white transition-colors hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink"
+                type="button"
+              >
+                Governance
+                <svg
+                  aria-hidden="true"
+                  class="shrink-0 text-[#ff91b7] rotate-45"
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="5"
+                    y2="19"
+                  />
+                  <line
+                    x1="5"
+                    x2="19"
+                    y1="12"
+                    y2="12"
+                  />
+                </svg>
+              </button>
+            </th>
+          </tr>
+        </tbody>
+        <tbody
+          id="_r_0_-0"
+        >
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              >
+                One guaranteed seat & one alternate representative
+              </strong>
+               on each of the Adoptium Steering, Specification & Marketing Committees
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              >
+                Eligible to participate in elections for
+              </strong>
+              1 member-level seats on each of Adoptium's Steering, Specification and Marketing Committees
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="border-b border-white/10"
+          >
+            <th
+              class="p-0"
+              colspan="4"
+              scope="rowgroup"
+            >
+              <button
+                aria-controls="_r_0_-1"
+                aria-expanded="false"
+                class="flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-white transition-colors hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink"
+                type="button"
+              >
+                Technical and infrastructure sharing
+                <svg
+                  aria-hidden="true"
+                  class="shrink-0 text-[#ff91b7] "
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="5"
+                    y2="19"
+                  />
+                  <line
+                    x1="5"
+                    x2="19"
+                    y1="12"
+                    y2="12"
+                  />
+                </svg>
+              </button>
+            </th>
+          </tr>
+        </tbody>
+        <tbody
+          hidden=""
+          id="_r_0_-1"
+        >
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Opportunity to list verified binaries on the high-visibility Adoptium marketplace
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Access to public test results and shared triage efforts
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Cross-enterprise collaboration via the Incubator projects
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="border-b border-white/10"
+          >
+            <th
+              class="p-0"
+              colspan="4"
+              scope="rowgroup"
+            >
+              <button
+                aria-controls="_r_0_-2"
+                aria-expanded="false"
+                class="flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-white transition-colors hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink"
+                type="button"
+              >
+                Visibility
+                <svg
+                  aria-hidden="true"
+                  class="shrink-0 text-[#ff91b7] "
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="5"
+                    y2="19"
+                  />
+                  <line
+                    x1="5"
+                    x2="19"
+                    y1="12"
+                    y2="12"
+                  />
+                </svg>
+              </button>
+            </th>
+          </tr>
+        </tbody>
+        <tbody
+          hidden=""
+          id="_r_0_-2"
+        >
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              >
+                Logo placement on Adoptium website
+              </strong>
+               and marketing collateral
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              >
+                Speaking opportunities
+              </strong>
+               at Adoptium-sponsored events and conferences
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr
+            class="border-b border-white/10"
+          >
+            <th
+              class="p-0"
+              colspan="4"
+              scope="rowgroup"
+            >
+              <button
+                aria-controls="_r_0_-3"
+                aria-expanded="false"
+                class="flex min-h-16 w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-white transition-colors hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink"
+                type="button"
+              >
+                Content & thought leadership
+                <svg
+                  aria-hidden="true"
+                  class="shrink-0 text-[#ff91b7] "
+                  fill="none"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="5"
+                    y2="19"
+                  />
+                  <line
+                    x1="5"
+                    x2="19"
+                    y1="12"
+                    y2="12"
+                  />
+                </svg>
+              </button>
+            </th>
+          </tr>
+        </tbody>
+        <tbody
+          hidden=""
+          id="_r_0_-3"
+        >
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Option to issue a joint press release upon joining
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Opportunity to appoint a spokesperson to participate in analyst briefings and media outreach
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Featured participation in success stories, case studies, or blog series
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Submit content to Adoptium community news
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Amplification of your Adoptium-related news and announcements across Adoptium channels
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Opportunity for co-branded marketing materials in the community booths at industry events or digital assets at virtual events
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Priority keynote session at Adoptium Summit events
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Priority keynote session at Adoptium Summit events
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-white/25"
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="5"
+                  x2="19"
+                  y1="12"
+                  y2="12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Amplification of your Adoptium-related events across Adoptium channels
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Participation in Adoptium or EF community booths at industry events
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+          <tr
+            class="border-b border-white/5 text-sm text-grey odd:bg-white/[0.02]"
+          >
+            <th
+              class="px-5 py-4 text-left font-normal leading-relaxed"
+              scope="row"
+            >
+              <strong
+                class="font-medium text-white"
+              />
+              Opportunity to host open community meetups or Adoptium Summit webinar series
+            </th>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+            <td
+              class="px-2 py-4 text-center"
+            >
+              <svg
+                aria-hidden="true"
+                class="mx-auto text-[#ff91b7]"
+                fill="none"
+                height="18"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="20 6 9 17 4 12"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Text
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section
+    class="border-y border-white/10 bg-[#10052d] py-12 sm:py-16"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 sm:px-8"
     >
       <div
-        class="flex space-x-4 md:space-x-10 whitespace-nowrap justify-center py-2 min-w-max"
+        class="mb-8 max-w-3xl"
+      >
+        <h2
+          class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
+        >
+          Our Members
+        </h2>
+      </div>
+      <nav
+        aria-label="Our Members"
+        class="mb-2 flex flex-wrap gap-2"
       >
         <a
+          class="inline-flex min-h-11 items-center rounded-xl border border-white/10 px-4 py-2 text-xs text-grey hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
           href="#strategic-sec"
         >
-          <span
-            class="px-3 py-2 text-base md:text-lg font-medium leading-6
-                  outline-none hover:text-white hover:border-b-2
-                  hover:border-[#ff1464] text-[#8a809e] border-b-2
-                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-          >
-            Strategic Members
-          </span>
+          Strategic Members
         </a>
         <a
+          class="inline-flex min-h-11 items-center rounded-xl border border-white/10 px-4 py-2 text-xs text-grey hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
           href="#enterprise-sec"
         >
-          <span
-            class="px-3 py-2 text-base md:text-lg font-medium leading-6
-                  outline-none hover:text-white hover:border-b-2
-                  hover:border-[#ff1464] text-[#8a809e] border-b-2
-                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
-          >
-            Enterprise Members
-          </span>
+          Enterprise Members
         </a>
         <a
+          class="inline-flex min-h-11 items-center rounded-xl border border-white/10 px-4 py-2 text-xs text-grey hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
           href="#participant-sec"
         >
-          <span
-            class="px-3 py-2 text-base md:text-lg font-medium leading-6
-                  outline-none hover:text-white hover:border-b-2
-                  hover:border-[#ff1464] text-[#8a809e] border-b-2
-                  border-transparent cursor-pointer transition-all duration-200 ease-in-out"
+          Participant Members
+        </a>
+      </nav>
+      <section
+        class="scroll-mt-28 border-b border-white/10 py-6 last:border-b-0"
+        id="strategic-sec"
+      >
+        <div
+          class="mb-4"
+        >
+          <h3
+            class="mb-0 text-lg font-semibold text-white"
+          >
+            Strategic Members
+          </h3>
+        </div>
+        <div
+          class="w-full flex flex-col items-center justify-center mt-3"
+        >
+          <div
+            class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+            id="strategic"
+          >
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://alibabacloud.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Alibaba"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/alibaba.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://opensource.microsoft.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Microsoft"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/microsoft.svg"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://ibm.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="IBM"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/ibm-logo.png"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="scroll-mt-28 border-b border-white/10 py-6 last:border-b-0"
+        id="enterprise-sec"
+      >
+        <div
+          class="mb-4"
+        >
+          <h3
+            class="mb-0 text-lg font-semibold text-white"
+          >
+            Enterprise Members
+          </h3>
+        </div>
+        <div
+          class="w-full flex flex-col items-center justify-center mt-3"
+        >
+          <div
+            class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+            id="enterprise"
+          >
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.techatbloomberg.com/opensource"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Bloomberg"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/bloomberg.svg"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://canonical.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Canonical"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/canonical.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.fujitsu.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Fujitsu"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/fujitsu-logo.png"
+                />
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.redhat.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
+              >
+                <img
+                  alt="Red Hat"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/redhat.svg"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="scroll-mt-28 border-b border-white/10 py-6 last:border-b-0"
+        id="participant-sec"
+      >
+        <div
+          class="mb-4"
+        >
+          <h3
+            class="mb-0 text-lg font-semibold text-white"
           >
             Participant Members
-          </span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div />
-  <div />
-  <div />
-  <section
-    class="max-w-[1264px] mx-auto px-6 py-18"
-  >
-    <h2
-      class="text-center text-5xl font-semibold leading-[56px] text-white mb-12"
-    >
-      Compare Membership Levels
-    </h2>
-    <div
-      class="bg-white/5 p-8 rounded-3xl overflow-hidden mb-12"
-    >
-      <div
-        class="grid items-center px-8 py-6 border-b border-[#3E3355]"
-        style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-      >
-        <div
-          class="text-[#C4BFCE] text-xl font-semibold leading-7"
-        >
-          Benefit Category
+          </h3>
         </div>
         <div
-          class="text-[#C4BFCE] text-xl font-semibold leading-7 text-center"
-        >
-          Strategic
-        </div>
-        <div
-          class="text-[#C4BFCE] text-xl font-semibold leading-7 text-center"
-        >
-          Enterprise
-        </div>
-        <div
-          class="text-[#C4BFCE] text-xl font-semibold leading-7 text-center"
-        >
-          Participant
-        </div>
-        <div />
-         
-      </div>
-      <div>
-        <div
-          class="grid items-center px-8 py-8 cursor-pointer "
-          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+          class="w-full flex flex-col items-center justify-center mt-3"
         >
           <div
-            class="text-white text-2xl font-semibold leading-8 col-span-4"
+            class="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+            id="participant"
           >
-            Governance
-          </div>
-          <div
-            class="flex justify-end"
-          >
-            <button
-              aria-label="Collapse section"
-              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://www.ijug.eu"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <svg
-                class="rotate-45"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
               >
-                <path
-                  d="M5 12h14"
+                <img
+                  alt="iJUG"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/ijug.png"
                 />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="grid transition-all duration-300 ease-in-out grid-rows-[1fr] opacity-100"
-        >
-          <div
-            class="overflow-hidden"
-          >
-            <div
-              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
+              </span>
+            </a>
+            <a
+              class="flex h-24 items-center justify-center rounded-xl border border-white/10 bg-white px-5 py-2 transition-colors hover:border-pink/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://open-elements.com"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
+              <span
+                class="relative block w-full"
+                style="max-width: 160px; height: 48px;"
               >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  >
-                    One guaranteed seat & one alternate representative
-                  </strong>
-                  <span
-                    class="font-normal"
-                  >
-                     on each of the Adoptium Steering, Specification & Marketing Committees
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  >
-                    Eligible to participate in elections for
-                  </strong>
-                  <span
-                    class="font-normal"
-                  >
-                    1 member-level seats on each of Adoptium's Steering, Specification and Marketing Committees
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="grid items-center px-8 py-8 cursor-pointer border-b border-[#3E3355]"
-          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-        >
-          <div
-            class="text-white text-2xl font-semibold leading-8 col-span-4"
-          >
-            Technical and infrastructure sharing
-          </div>
-          <div
-            class="flex justify-end"
-          >
-            <button
-              aria-label="Expand section"
-              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
-            >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 12h14"
+                <img
+                  alt="Open Elements"
+                  class="object-contain"
+                  sizes="(max-width: 639px) 40vw, 176px"
+                  src="/images/members/openelements.svg"
                 />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
+              </span>
+            </a>
           </div>
         </div>
-        <div
-          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
-        >
-          <div
-            class="overflow-hidden"
-          >
-            <div
-              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
-            >
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Opportunity to list verified binaries on the high-visibility Adoptium marketplace
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Access to build/test resources for OpenJDK feature work, especially for hard to resource platforms (upcoming via Trestle)
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Access to public test results and shared triage efforts
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Cross-enterprise collaboration via the Incubator projects
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="grid items-center px-8 py-8 cursor-pointer border-b border-[#3E3355]"
-          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-        >
-          <div
-            class="text-white text-2xl font-semibold leading-8 col-span-4"
-          >
-            Visibility
-          </div>
-          <div
-            class="flex justify-end"
-          >
-            <button
-              aria-label="Expand section"
-              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
-            >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
-        >
-          <div
-            class="overflow-hidden"
-          >
-            <div
-              class="pb-6 flex flex-col gap-2 border-b border-[#3E3355]"
-            >
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  >
-                    Logo placement on Adoptium website
-                  </strong>
-                  <span
-                    class="font-normal"
-                  >
-                     and marketing collateral
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  >
-                    Speaking opportunities
-                  </strong>
-                  <span
-                    class="font-normal"
-                  >
-                     at Adoptium-sponsored events and conferences
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="grid items-center px-8 py-8 cursor-pointer "
-          style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-        >
-          <div
-            class="text-white text-2xl font-semibold leading-8 col-span-4"
-          >
-            Content & thought leadership
-          </div>
-          <div
-            class="flex justify-end"
-          >
-            <button
-              aria-label="Expand section"
-              class="w-12 h-12 flex-shrink-0 rounded-full border-2 border-[#3E3355] bg-transparent flex items-center justify-center cursor-pointer transition-colors duration-200"
-            >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 12h14"
-                />
-                <path
-                  d="M12 5v14"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0"
-        >
-          <div
-            class="overflow-hidden"
-          >
-            <div
-              class="pb-6 flex flex-col gap-2 "
-            >
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Option to issue a joint press release upon joining
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Opportunity to appoint a spokesperson to participate in analyst briefings and media outreach
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Featured participation in success stories, case studies, or blog series
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Submit content to Adoptium community news
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Amplification of your Adoptium-related news and announcements across Adoptium channels
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Opportunity for co-branded marketing materials in the community booths at industry events or digital assets at virtual events
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Priority keynote session at Adoptium Summit events
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Priority keynote session at Adoptium Summit events
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <svg
-                    class="rotate-45 text-[#FF1464]"
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12h14"
-                    />
-                    <path
-                      d="M12 5v14"
-                    />
-                  </svg>
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Amplification of your Adoptium-related events across Adoptium channels
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Participation in Adoptium or EF community booths at industry events
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-              <div
-                class="grid items-center odd:bg-white/5 even:bg-transparent rounded-3xl px-6 py-4"
-                style="grid-template-columns: 1fr 220px 220px 220px 48px;"
-              >
-                <div
-                  class="text-white text-base leading-6 pr-4"
-                >
-                  <strong
-                    class="font-bold"
-                  />
-                  <span
-                    class="font-normal"
-                  >
-                    Opportunity to host open community meetups or Adoptium Summit webinar series
-                  </span>
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div
-                  class="flex justify-center items-center"
-                >
-                  <img
-                    alt="tick"
-                    height="24"
-                    src="/images/icons/tick.svg"
-                    width="24"
-                  />
-                </div>
-                <div />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   </section>
-  <div
-    class="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-8 my-12 px-4"
-  >
-    <p
-      class="text-[20px] leading-[28px] text-white my-0 text-center"
-    >
-      Are you interested in becoming a member?
-    </p>
-    <a
-      class="w-full sm:w-auto"
-      href="/join"
-    >
-      <button
-        class="w-full px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold text-lg shadow-lg hover:shadow-xl shadow-pink-500/30 hover:shadow-pink-500/40 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
-      >
-        Become a Member
-      </button>
-    </a>
-  </div>
   <section
-    class="relative xl:px-0 px-6 md:py-32 py-16 "
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
   >
     <div
-      class="absolute inset-0 z-[-10]"
-      style="background: radial-gradient(at 20% 50%, rgba(255, 19, 101, 0.18) 0%, transparent 60%), radial-gradient(at 80% 30%, rgba(100, 40, 180, 0.2) 0%, transparent 55%), radial-gradient(at 50% 80%, rgba(20, 0, 60, 0.4) 0%, transparent 70%), linear-gradient(180deg, rgb(20, 0, 60) 0%, rgb(13, 0, 42) 100%);"
-    />
-    <div
-      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
+      class="flex flex-col items-start justify-between gap-6 rounded-2xl bg-[#ffe8f0] p-6 text-purple sm:p-8 md:flex-row md:items-center"
     >
-      <img
-        alt="message icon"
-        class="!mb-0"
-        height="120"
-        src="/images/icons/message.svg"
-        width="120"
-      />
-      <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
-      >
-        Speak to our team today
-      </p>
-      <span
-        class="text-gray-300 text-base leading-6"
-      >
-        Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
-      </span>
+      <div>
+        <h2
+          class="mb-3 text-2xl font-semibold tracking-tight sm:text-3xl"
+        >
+          Speak to our team today
+        </h2>
+        <p
+          class="mb-0 text-sm leading-relaxed text-purple/80"
+        >
+          Are you interested in becoming a member?
+        </p>
+      </div>
       <a
+        class="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-purple px-5 py-3 text-sm font-semibold text-white hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
         href="/join"
       >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        <span>
+          Become a Member
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Contact Us
-        </button>
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
       </a>
     </div>
   </section>

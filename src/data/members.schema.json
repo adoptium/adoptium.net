@@ -18,7 +18,7 @@
       },
       "logoDisplay": {
         "type": "object",
-        "description": "Optical sizing and asset overrides for featured adopter logos.",
+        "description": "Optical sizing and asset overrides for adopter and member logos.",
         "properties": {
           "src": {
             "type": "string"

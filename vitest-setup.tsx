@@ -25,48 +25,6 @@ expect.extend(matchers);
 // This extends Vitest's expect with Jest-DOM matchers
 expect.extend(jestDomMatchers);
 
-// Mock GSAP and ScrollTrigger
-vi.mock("gsap", () => {
-  const mockGsap = {
-    registerPlugin: vi.fn(),
-    to: vi.fn(),
-    from: vi.fn(),
-    fromTo: vi.fn(),
-    set: vi.fn(),
-    timeline: vi.fn(() => ({
-      to: vi.fn(),
-      from: vi.fn(),
-      fromTo: vi.fn(),
-      add: vi.fn(),
-    })),
-  };
-
-  return {
-    gsap: mockGsap,
-    default: mockGsap,
-  };
-});
-
-// Create a mock for ScrollTrigger before other imports can use it
-const mockScrollTrigger = {
-  create: vi.fn(() => ({
-    kill: vi.fn(),
-    progress: 0,
-  })),
-  refresh: vi.fn(),
-  update: vi.fn(),
-  getAll: vi.fn(() => []),
-  killAll: vi.fn(),
-  addEventListener: vi.fn(),
-  removeEventListener: vi.fn(),
-};
-
-vi.mock("gsap/ScrollTrigger", () => {
-  return {
-    ScrollTrigger: mockScrollTrigger,
-  };
-});
-
 // Mock the useTranslations hook to return a simple text value with rich formatting support
 vi.mock("next-intl", () => ({
   useTranslations: () => {

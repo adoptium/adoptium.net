@@ -40,6 +40,15 @@
     "title": "很抱歉，无法找到此页面",
     "back-to-home": "返回首页"
   },
+  "WhatWeDo": {
+    "mission": "携手共建开放的 Java",
+    "community": "社区主导的协作",
+    "history": "从 AdoptOpenJDK 到 Adoptium"
+  },
+  "MembershipBenefits": {
+    "included": "包含",
+    "not-included": "不包含"
+  },
   "Marketplace": {
     "intro": "比较并下载可信供应商提供的 Java 构建。",
     "load-error": "无法加载 Java 发行版，请重试。",
