@@ -28,7 +28,7 @@ This release contains the following fixes and updates.
 
 If you would like more information regarding the CVE itself, please refer to https://openjdk.org/groups/vulnerability/advisories/2026-10-24.
 
-### Platform Availability and Delays
+### Version Availability and Delays
 
 This release covers JDK 17.0.21+9, JDK 21.0.13+9, JDK 25.0.5+8 and JDK 27.0.1.0.2+1. JDK 8 and JDK 11 upstream tags are still not available, resulting in a delay for those versions. For up-to-date status, refer to [temurin issue #317](https://github.com/adoptium/temurin/issues/317).
 
