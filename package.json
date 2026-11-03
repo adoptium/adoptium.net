@@ -18,7 +18,7 @@
     "@headlessui/react": "^2.2.10",
     "@highcharts/react": "^5.4.0",
     "@next/third-parties": "^16.4.2",
-    "axios": "^1.20.0",
+    "axios": "^1.21.0",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.6.0",
     "html-react-parser": "^6.1.8",
