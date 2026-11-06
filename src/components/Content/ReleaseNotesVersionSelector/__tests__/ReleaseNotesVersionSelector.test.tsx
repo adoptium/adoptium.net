@@ -3,6 +3,17 @@ import React from "react";
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import { describe, it, expect, vi, afterEach, beforeEach } from "vitest";
 
+vi.mock("next-intl", async () => {
+  const actual = await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
+  return {
+    ...actual,
+    useTranslations: (
+      namespace: "ReleaseNotes" | "ModernPages.release-notes",
+    ) => actual.createTranslator({ locale: "en", messages, namespace }),
+  };
+});
+
 const mockPush = vi.fn();
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ push: mockPush }),
@@ -60,24 +71,23 @@ describe("ReleaseNotesVersionSelector", () => {
     );
     const buttons = container.querySelectorAll("button");
     // LTS versions render first: JDK 21 (LTS) is button[0]
-    expect(buttons[0].textContent).toContain("Long Term Support");
+    expect(buttons[0].textContent).toContain("LTS");
     // JDK 22 (non-LTS) is button[1] and should not contain LTS text
-    expect(buttons[1].textContent).not.toContain("Long Term Support");
+    expect(buttons[1].textContent).not.toContain("LTS");
   });
 
   it("renders section headers for LTS", () => {
-    const { container } = render(
+    const { getByRole } = render(
       <ReleaseNotesVersionSelector
         availableVersions={[22, 21]}
         availableLTSVersions={[21]}
       />,
     );
-    // LTS badge in the section header
-    const ltsBadge = container.querySelector(".text-pink.uppercase");
-    expect(ltsBadge?.textContent).toBe("LTS");
-    // Feature Releases section header for non-LTS
-    const headers = container.querySelectorAll("h3");
-    const texts = Array.from(headers).map((h) => h.textContent);
-    expect(texts).toContain("Feature Releases");
+    expect(
+      getByRole("heading", { name: "Long-term support" }),
+    ).toBeInTheDocument();
+    expect(
+      getByRole("heading", { name: "Feature releases" }),
+    ).toBeInTheDocument();
   });
 });

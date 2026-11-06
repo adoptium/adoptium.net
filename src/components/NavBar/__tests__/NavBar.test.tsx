@@ -2,6 +2,24 @@
 import { vi } from "vitest";
 import { fireEvent } from "@testing-library/react";
 import { waitFor } from "@testing-library/react";
+import englishMessages from "../../../../locales/en.json";
+import frenchMessages from "../../../../locales/fr.json";
+
+const translationState = vi.hoisted(() => ({ locale: "en" }));
+
+vi.mock("next-intl", async (importOriginal) => {
+  const original = await importOriginal<typeof import("next-intl")>();
+  return {
+    ...original,
+    useTranslations: () =>
+      original.createTranslator({
+        locale: translationState.locale,
+        messages:
+          translationState.locale === "fr" ? frenchMessages : englishMessages,
+        namespace: "NavBar",
+      }),
+  };
+});
 
 vi.mock("@/i18n/navigation", () => ({
   usePathname: () => "/members",
@@ -53,7 +71,43 @@ import NavBar from "../index";
 describe("NavBar", () => {
   afterEach(() => {
     cleanup();
+    translationState.locale = "en";
   });
+
+  it("translates desktop dropdowns without changing membership destinations", () => {
+    translationState.locale = "fr";
+    const { getByRole, getByText } = render(<NavBar locale="fr" />);
+    fireEvent.click(getByRole("button", { name: "Nous rejoindre" }));
+    expect(getByText("Devenir membre").closest("a")).toHaveAttribute(
+      "href",
+      "/members",
+    );
+    expect(getByText("Nos membres").closest("a")).toHaveAttribute(
+      "href",
+      "/members#strategic-sec",
+    );
+    expect(getByText("Soutien financier")).toBeVisible();
+    expect(
+      getByRole("link", { name: "Comment nous rejoindre" }),
+    ).toHaveAttribute("href", "/join-us");
+  });
+
+  it.each(["de", "es", "fr", "pt-BR", "ja", "zh-CN"])(
+    "provides complete navigation and adopter translations in %s",
+    async (locale) => {
+      const messages = (await import(`../../../../locales/${locale}.json`))
+        .default;
+      expect(Object.keys(messages.NavBar).sort()).toEqual(
+        Object.keys(englishMessages.NavBar).sort(),
+      );
+      for (const value of Object.values(messages.NavBar))
+        expect(typeof value === "string" && value.trim().length > 0).toBe(true);
+      expect(messages.BusinessBenefits.adopters.title).toContain("Temurin®");
+      expect(
+        messages.BusinessBenefits.adopters.description.length,
+      ).toBeGreaterThan(0);
+    },
+  );
 
   it("should match the snapshot", () => {
     const { container } = render(<NavBar locale="en" />);

@@ -1267,7 +1267,7 @@ exports[`Index page > renders correctly 1`] = `
             <p
               class="mb-3 font-mono text-xs tracking-[0.2em] text-purple/70"
             >
-              ECLIPSE ADOPTIUM
+              Text
             </p>
             <h2
               class="mb-3 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
@@ -1348,7 +1348,9 @@ exports[`Index page > renders correctly 1`] = `
               rel="noopener noreferrer"
               target="_blank"
             >
-              Become a Contributor
+              <span>
+                Text
+              </span>
               <svg
                 class="w-5 h-5 ml-2 -mr-1 transition-transform duration-300 group-hover:translate-x-1"
                 fill="currentColor"

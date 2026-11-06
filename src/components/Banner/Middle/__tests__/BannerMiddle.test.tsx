@@ -3,6 +3,25 @@ import { render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { axe } from "vitest-axe";
 import BannerMiddle from "../index";
+import { currentAnnouncements } from "../announcements";
+import englishMessages from "../../../../../locales/en.json";
+import frenchMessages from "../../../../../locales/fr.json";
+
+const translationState = vi.hoisted(() => ({ locale: "en" }));
+
+vi.mock("next-intl", async (importOriginal) => {
+  const original = await importOriginal<typeof import("next-intl")>();
+  return {
+    ...original,
+    useTranslations: () =>
+      original.createTranslator({
+        locale: translationState.locale,
+        messages:
+          translationState.locale === "fr" ? frenchMessages : englishMessages,
+        namespace: "SupportingAnnouncement",
+      }),
+  };
+});
 
 vi.mock("../announcements", () => ({
   currentAnnouncements: [
@@ -26,6 +45,8 @@ vi.mock("../announcements", () => ({
 
 describe("Supporting homepage announcement", () => {
   beforeEach(() => {
+    translationState.locale = "en";
+    delete currentAnnouncements[0].translationKey;
     vi.useFakeTimers({
       now: new Date("2026-10-27T12:00:00Z"),
       shouldAdvanceTime: true,
@@ -56,5 +77,26 @@ describe("Supporting homepage announcement", () => {
   it("has no accessibility violations", async () => {
     const { container } = render(<BannerMiddle />);
     expect(await axe(container)).toHaveNoViolations();
+  });
+
+  it("translates the member callout and its action without changing the destination", () => {
+    translationState.locale = "fr";
+    currentAnnouncements[0].translationKey = "member";
+    render(<BannerMiddle />);
+    expect(
+      screen.getByRole("heading", { name: "Devenez membre d'Adoptium" }),
+    ).toBeVisible();
+    expect(
+      screen.getByText(
+        frenchMessages.SupportingAnnouncement.member.description,
+      ),
+    ).toBeVisible();
+    expect(
+      screen.getByRole("link", { name: "En savoir plus" }),
+    ).toHaveAttribute("href", "/sustainers/");
+    expect(screen.getByText("ECLIPSE ADOPTIUM")).toBeVisible();
+    expect(
+      screen.queryByText("Support Eclipse Temurin"),
+    ).not.toBeInTheDocument();
   });
 });

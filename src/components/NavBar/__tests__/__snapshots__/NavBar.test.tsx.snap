@@ -39,7 +39,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
                 data-menu-button="true"
-                id="headlessui-menu-button-_r_2_"
+                id="headlessui-menu-button-_r_h_"
                 type="button"
               >
                 Join Us
@@ -81,7 +81,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
                 data-menu-button="true"
-                id="headlessui-menu-button-_r_5_"
+                id="headlessui-menu-button-_r_k_"
                 type="button"
               >
                 Projects
@@ -113,7 +113,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
                 data-menu-button="true"
-                id="headlessui-menu-button-_r_8_"
+                id="headlessui-menu-button-_r_n_"
                 type="button"
               >
                 Resources
@@ -145,7 +145,7 @@ exports[`NavBar > should match the snapshot 1`] = `
                 class="inline-flex w-full gap-2 justify-center rounded-md text-sm font-semibold text-white-900 hover:bg-white-50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#86507E]"
                 data-headlessui-state=""
                 data-menu-button="true"
-                id="headlessui-menu-button-_r_b_"
+                id="headlessui-menu-button-_r_q_"
                 type="button"
               >
                 Community

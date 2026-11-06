@@ -2,204 +2,185 @@
 
 exports[`Events page > renders correctly 1`] = `
 <div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+        class="max-w-3xl"
       >
         <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Events
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
-            Eclipse  Foundation Events
-          </div>
+          Text
         </div>
-        <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] mx-auto max-w-[860px] px-2 w-full"
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
         >
-          Follow the latest Eclipse Foundation Events
+          Text
+        </h1>
+        <div
+          class="max-w-2xl text-base leading-relaxed text-grey "
+        >
+          Text
         </div>
       </div>
     </div>
-  </div>
+  </header>
   <div
-    class="bg-purple pt-8 px-4 max-w-[1000px] mx-auto"
+    class="mx-auto max-w-7xl px-6 py-10 sm:px-8 sm:py-12"
   >
+    <section
+      class="mb-10 rounded-2xl border border-pink/20 bg-pink/[0.04] p-6 sm:p-8"
+    >
+      <div
+        class="grid items-start gap-5 md:grid-cols-[auto_1fr]"
+      >
+        <svg
+          aria-hidden="true"
+          class="text-[#ff91b7]"
+          fill="none"
+          height="26"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="26"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="18"
+            rx="2"
+            ry="2"
+            width="18"
+            x="3"
+            y="4"
+          />
+          <line
+            x1="16"
+            x2="16"
+            y1="2"
+            y2="6"
+          />
+          <line
+            x1="8"
+            x2="8"
+            y1="2"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="10"
+            y2="10"
+          />
+        </svg>
+        <div>
+          <h2
+            class="mb-3 text-2xl font-semibold tracking-tight"
+          >
+            Text
+          </h2>
+          <p
+            class="text-grey mb-4 max-w-3xl text-sm leading-relaxed"
+          >
+            Text
+          </p>
+          <div
+            class="flex flex-wrap gap-3"
+          >
+            <a
+              class="inline-flex min-h-12 items-center gap-2 rounded-xl bg-pink px-5 py-3 text-sm font-semibold text-white hover:bg-pink/80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://calendar.google.com/calendar/embed?src=c_uannoums5ho0olhjk3ulecdkbc%40group.calendar.google.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>
+                Text
+              </span>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="7"
+                  x2="17"
+                  y1="17"
+                  y2="7"
+                />
+                <polyline
+                  points="7 7 17 7 17 17"
+                />
+              </svg>
+            </a>
+            <a
+              class="inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-sm font-medium hover:border-pink/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              href="https://calendar.google.com/calendar/ical/c_uannoums5ho0olhjk3ulecdkbc%40group.calendar.google.com/public/basic.ics"
+            >
+              <span>
+                Text
+              </span>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                />
+                <polyline
+                  points="7 10 12 15 17 10"
+                />
+                <line
+                  x1="12"
+                  x2="12"
+                  y1="15"
+                  y2="3"
+                />
+              </svg>
+            </a>
+          </div>
+          <p
+            class="mb-0 mt-4 max-w-3xl text-xs leading-relaxed text-grey"
+          >
+            Text
+          </p>
+        </div>
+      </div>
+    </section>
     <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-16"
+      class="mb-8 max-w-3xl"
     >
       <h2
-        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
       >
-        Upcoming Events
+        Text
       </h2>
     </div>
-    <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 mb-12"
-    >
+    <div>
       <div
-        class="bg-blue/20 border border-pink/30 rounded-lg p-8 backdrop-blur-sm"
-      >
-        <h3
-          class="text-2xl font-semibold text-white mb-4 flex items-center gap-3"
-        >
-          <svg
-            class="w-6 h-6 text-pink"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
-          Adoptium Community Calendar
-        </h3>
-        <p
-          class="text-grey mb-6 leading-relaxed"
-        >
-          Stay up to date with the Adoptium Community meetings, catch up with community members, and share your ideas and work-in-progress.
-        </p>
-        <div
-          class="flex flex-col sm:flex-row gap-4"
-        >
-          <a
-            class="inline-flex items-center justify-center px-6 py-3 bg-pink text-white font-semibold rounded-lg hover:bg-pink/80 transform hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-purple"
-            href="https://calendar.google.com/calendar/embed?src=c_uannoums5ho0olhjk3ulecdkbc%40group.calendar.google.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            View Calendar
-            <svg
-              class="ml-2 w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-          <a
-            class="inline-flex items-center justify-center px-6 py-3 border-2 border-pink/60 text-pink font-semibold rounded-lg hover:border-pink hover:bg-pink hover:text-white transform hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 focus:ring-offset-purple"
-            href="https://calendar.google.com/calendar/ical/c_uannoums5ho0olhjk3ulecdkbc%40group.calendar.google.com/public/basic.ics"
-          >
-            Subscribe to iCal
-            <svg
-              class="ml-2 w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
-        <p
-          class="text-sm text-grey/80 mt-4 leading-relaxed"
-        >
-          <strong
-            class="text-white"
-          >
-            What you'll find:
-          </strong>
-           What you will find: Community Calls: General, Security, AQAvit, Website, other technical team, Release dates, and other community online meetings.
-        </p>
-      </div>
-    </div>
-    <div
-      class="relative"
-    >
+        class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+      />
       <div
-        class="flex justify-center items-center gap-8 md:gap-14 my-8"
-      >
-        <button
-          class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
-          disabled=""
-        >
-          Previous
-        </button>
-        <div
-          class="flex items-center gap-5"
-        >
-          <div
-            class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
-          />
-        </div>
-        <button
-          class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
-        >
-          Next
-        </button>
-      </div>
-      <div
-        class="flex items-center gap-5 mb-15 justify-center"
+        class="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-[#ff91b7]"
       >
         <a
           class="flex items-center gap-3"
@@ -207,16 +188,63 @@ exports[`Events page > renders correctly 1`] = `
           rel="noopener noreferrer"
           target="_blank"
         >
-          View all Eclipse Foundation events
+          <span>
+            Text
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="7"
+              x2="17"
+              y1="17"
+              y2="7"
+            />
+            <polyline
+              points="7 7 17 7 17 17"
+            />
+          </svg>
         </a>
-        |
         <a
           class="flex items-center gap-3"
           href="https://newsroom.eclipse.org/node/add/events"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Submit an event
+          <span>
+            Text
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="7"
+              x2="17"
+              y1="17"
+              y2="7"
+            />
+            <polyline
+              points="7 7 17 7 17 17"
+            />
+          </svg>
         </a>
       </div>
     </div>

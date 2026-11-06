@@ -5,10 +5,13 @@ import NewsCardList from "../index";
 
 // Mock the useLocale hook for EventCard
 vi.mock("next-intl", async () => {
-  const actual = await vi.importActual("next-intl");
+  const actual = await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
   return {
-    ...actual as object,
+    ...actual,
     useLocale: () => "en",
+    useTranslations: (namespace: "ModernPages.news" | "ModernPages.common") =>
+      actual.createTranslator({ locale: "en", messages, namespace }),
   };
 });
 
@@ -49,25 +52,18 @@ describe("NewsCardList", () => {
 
   it("renders the Submit News link", () => {
     render(<NewsCardList {...defaultProps} />);
-    const submitLinks = screen.getAllByText("Submit News");
+    const submitLinks = screen.getAllByRole("link", { name: "Submit news" });
     expect(submitLinks.length).toBeGreaterThan(0);
   });
 
   it("renders with empty posts array", () => {
-    render(
-      <NewsCardList
-        {...defaultProps}
-        posts={[]}
-      />
-    );
-    const submitLinks = screen.getAllByText("Submit News");
+    render(<NewsCardList {...defaultProps} posts={[]} />);
+    const submitLinks = screen.getAllByRole("link", { name: "Submit news" });
     expect(submitLinks.length).toBeGreaterThan(0);
   });
 
   it("renders the component container", () => {
-    const { container } = render(
-      <NewsCardList {...defaultProps} />
-    );
+    const { container } = render(<NewsCardList {...defaultProps} />);
     expect(container.firstChild).toBeInTheDocument();
   });
 });
