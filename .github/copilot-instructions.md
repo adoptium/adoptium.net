@@ -196,7 +196,6 @@ export default ComponentName;
 - **Check existing mocks first**: Before adding `vi.mock()` statements to individual test files, check `vitest-setup.tsx` for existing global mocks. Common mocks already available include:
   - `@/i18n/navigation` (Link component, useRouter, etc.)
   - `next-intl` (useTranslations, useLocale, etc.)
-  - `swiper/react`
   - `@/hooks/useAdoptiumContributorsApi`
   - `react-slick` and slick CSS files
 - Only add component-specific mocks when they're not already covered globally

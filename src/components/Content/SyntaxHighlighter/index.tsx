@@ -46,7 +46,7 @@ export function addCopyButtons() {
   codeBlocks.forEach((codeBlock) => {
     const pre = codeBlock.parentElement;
     if (!pre) return;
-    // Skip no-highlight blocks (e.g. ShellBox)
+    // Skip no-highlight blocks
     if (pre.classList.contains("no-highlight")) return;
     // Skip output language blocks
     if (codeBlock.classList.contains("language-output")) return;

@@ -46,7 +46,7 @@ const NewsCardList: React.FC<NewsCardListProps> = ({
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post, index) => (
           <EventCard
-            key={post.slug}
+            key={`${post.year}/${post.month}/${post.slug}`}
             post={post}
             isEclipseNews={post.metadata.tags?.includes("eclipse-news")}
             priority={index < 3}
