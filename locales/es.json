@@ -40,6 +40,99 @@
     "title": "Lo sentimos, no pudimos encontrar esta página",
     "back-to-home": "Volver a la página principal"
   },
+  "BusinessBenefits": {
+    "support": {
+      "title": "¿Necesitas ayuda con Temurin?",
+      "description": "Eclipse Temurin cuenta con el apoyo de una comunidad activa de desarrolladores y usuarios. Si necesitas ayuda, contáctanos.",
+      "cta": "Obtener ayuda"
+    },
+    "contact": {
+      "title": "Contáctanos para saber cómo Temurin puede ayudar a tu empresa",
+      "description": "¿Quieres participar? Rellena nuestro formulario de membresía y da el primer paso para dar forma al futuro de Adoptium.",
+      "cta": "Contáctanos"
+    },
+    "usage": {
+      "title": "Cómo utilizan Temurin otras empresas",
+      "description": "Descubre cómo los líderes del sector aprovechan Temurin para mejorar el rendimiento e impulsar la innovación en sus procesos de desarrollo."
+    },
+    "adopters": {
+      "title": "Empresas que usan Eclipse Temurin®",
+      "description": "Empresas que utilizan Eclipse Temurin en producción."
+    },
+    "header": {
+      "title": "Cómo Eclipse Temurin® puede beneficiar a tu empresa",
+      "subtitle": "Ventajas para empresas",
+      "description": "Eclipse Temurin ofrece binarios de entornos de ejecución Java de código abierto, multiplataforma y de alto rendimiento, preparados para empresas y probados con el TCK de Java SE para uso general en el ecosistema Java.",
+      "contact": "Contáctanos"
+    }
+  },
+  "JoinPage": {
+    "title": "Únete al grupo de trabajo",
+    "subtitle": "Únete al grupo de trabajo Eclipse Adoptium®",
+    "form-title": "Ponte en contacto",
+    "form-description": "Cuéntanos sobre tu organización y cómo te gustaría participar en Eclipse Adoptium.",
+    "options-title": "Descubre cómo participar",
+    "options-description": "Conoce las opciones de membresía, patrocinio y contribución a nuestros proyectos."
+  },
+  "SupportingAnnouncement": {
+    "brand": "ECLIPSE ADOPTIUM",
+    "member": {
+      "title": "Hazte miembro de Adoptium",
+      "description": "Únete al grupo de trabajo Adoptium y apoya el futuro de Java de código abierto. Descubre nuestras opciones de membresía y sus ventajas.",
+      "cta": "Más información"
+    },
+    "sustainer": {
+      "title": "Conviértete en patrocinador",
+      "description": "Únete al programa de apoyo de Eclipse Temurin, el JDK de código abierto de más rápido crecimiento. Tu apoyo refuerza la seguridad y permite versiones más rápidas, compilaciones listas para usar, pruebas de calidad y desarrollo de la comunidad.",
+      "cta": "Más información"
+    },
+    "bloomberg": {
+      "title": "Caso de estudio: Bloomberg migra a Java de código abierto",
+      "description": "Descubre cómo Eclipse Temurin ayuda a impulsar la infraestructura financiera global.",
+      "cta": "Leer el caso de estudio"
+    }
+  },
+  "NavBar": {
+    "Join Us": "Participa",
+    "Become a Member": "Hazte miembro",
+    "Our Members": "Nuestros miembros",
+    "Become an Individual Sustainer": "Apoya como particular",
+    "Become a Corporate Sustainer": "Apoya como empresa",
+    "Our Sustainers": "Nuestros patrocinadores",
+    "Contribute to Adoptium": "Contribuye a Adoptium",
+    "Become an Adopter": "Da a conocer tu adopción",
+    "Our Adopters": "Nuestros usuarios",
+    "Latest Releases": "Últimas versiones",
+    "Marketplace": "Marketplace",
+    "Projects": "Proyectos",
+    "What We Do": "Qué hacemos",
+    "Eclipse Temurin": "Eclipse Temurin",
+    "Eclipse AQAvit": "Eclipse AQAvit",
+    "Eclipse Mission Control": "Eclipse Mission Control",
+    "Eclipse Migration Toolkit": "Eclipse Migration Toolkit",
+    "Resources": "Recursos",
+    "Status": "Estado del servicio",
+    "Release Notes": "Notas de versión",
+    "Installation Guide": "Guía de instalación",
+    "Documentation": "Documentación",
+    "FAQs": "Preguntas frecuentes",
+    "Brand & Promotion": "Marca y promoción",
+    "Community": "Comunidad",
+    "Support": "Ayuda",
+    "News": "Noticias",
+    "Events": "Eventos",
+    "Slack": "Slack",
+    "Membership": "Membresía",
+    "Sponsorship": "Patrocinio",
+    "Contribute": "Contribuir",
+    "Adopt": "Adoptar",
+    "Join Us Overview": "Cómo participar",
+    "Global": "Navegación principal",
+    "Adoptium Logo": "Logotipo de Adoptium",
+    "notifications": "notificaciones",
+    "Open main menu": "Abrir menú principal",
+    "Close menu": "Cerrar menú"
+  },
   "WhatWeDo": {
     "mission": "Java abierto, construido en comunidad",
     "community": "Colaboración impulsada por la comunidad",
@@ -121,6 +214,7 @@
     }
   },
   "RandomContributors": {
+    "become-contributor": "Conviértete en colaborador",
     "thank-you": "Gracias a nuestros <highlight>300+</highlight> colaboradores",
     "thank-you-mobile": "Gracias <linebreak></linebreak> a nuestros <highlight>300+</highlight> colaboradores"
   },
@@ -328,5 +422,156 @@
   },
   "Byline": {
     "reading-time": "{minutes} min de lectura"
+  },
+  "ModernPages": {
+    "common": {
+      "learn-more": "Más información",
+      "loading": "Cargando…",
+      "all": "Todos",
+      "previous": "Anterior",
+      "next": "Siguiente"
+    },
+    "temurin": {
+      "resources-title": "Primeros pasos con Temurin",
+      "resources-description": "Instala Temurin, consulta la documentación o ayuda a mantener el proyecto.",
+      "install-description": "Encuentra instrucciones de instalación para tu sistema operativo y tus herramientas de desarrollo.",
+      "docs-description": "Consulta las guías de configuración y uso de Eclipse Temurin.",
+      "sponsor-title": "Apoya el proyecto",
+      "sponsor-description": "Las contribuciones financian la infraestructura y la comunidad que hacen posible Eclipse Temurin.",
+      "contact-title": "Pon Temurin al servicio de tu empresa",
+      "contact-description": "Explora con nuestra comunidad cómo reducir costes, obtener soporte comercial y proteger la cadena de suministro de software.",
+      "contact": "Contáctanos",
+      "community": "Habla con la comunidad"
+    },
+    "platforms": {
+      "title": "Plataformas compatibles",
+      "description": "Consulta la compatibilidad con los sistemas operativos de las últimas versiones de Eclipse Temurin.",
+      "intro": "Despliega un sistema operativo para comparar las versiones del JDK y la disponibilidad de Docker.",
+      "supported": "Compatible",
+      "unsupported": "No compatible",
+      "docker": "Docker disponible",
+      "community-title": "¿Necesitas ayuda para elegir una plataforma?",
+      "community-description": "Comenta tu entorno con la comunidad de Adoptium.",
+      "community-cta": "Únete a la conversación"
+    },
+    "sustainer": {
+      "title": "Conviértete en patrocinador corporativo",
+      "subtitle": "Apoya Eclipse Temurin",
+      "description": "Ayuda a mantener la infraestructura, las pruebas y la distribución que hacen que Eclipse Temurin esté disponible para todos.",
+      "form-title": "Inicia una conversación",
+      "form-description": "Háblanos de tu organización y nuestro equipo te ayudará a encontrar la mejor forma de apoyar Temurin.",
+      "thanks-title": "Gracias por tu apoyo",
+      "thanks-description": "Hemos recibido tu consulta. Nuestro equipo se pondrá en contacto contigo para hablar sobre el patrocinio corporativo.",
+      "options-title": "Explora tus opciones",
+      "options-description": "Conoce las ventajas del patrocinio, la membresía y otras formas de participar."
+    },
+    "slack": {
+      "title": "Únete a la conversación",
+      "subtitle": "Comunidad de Adoptium",
+      "description": "Conecta con usuarios, colaboradores y responsables de mantenimiento de Eclipse Adoptium en Slack.",
+      "card-title": "Una comunidad en torno a Java de código abierto",
+      "card-description": "Haz preguntas, comparte tu experiencia y colabora en Eclipse Temurin y otros proyectos de Adoptium.",
+      "cta": "Unirse a Slack",
+      "hint": "Abre la invitación al Slack de Adoptium en una pestaña nueva.",
+      "support": "¿Buscas ayuda con Temurin?",
+      "support-description": "Explora las opciones de ayuda de la comunidad y de soporte comercial.",
+      "support-cta": "Obtener soporte"
+    },
+    "events": {
+      "title": "Conoce a la comunidad",
+      "subtitle": "Eventos y comunidad",
+      "description": "Encuentra reuniones de la comunidad de Adoptium y eventos de Eclipse Foundation, en línea y en todo el mundo.",
+      "upcoming": "Eventos de Eclipse Foundation",
+      "calendar-title": "Calendario de la comunidad de Adoptium",
+      "calendar-description": "Mantente al día de las reuniones de la comunidad, conoce a otros colaboradores y comparte tus proyectos en curso.",
+      "view-calendar": "Ver calendario",
+      "subscribe": "Suscribirse a iCal",
+      "calendar-hint": "Reuniones de la comunidad, de seguridad, de AQAvit y del sitio web, fechas de lanzamiento y otros encuentros en línea.",
+      "all-events": "Ver todos los eventos de Eclipse Foundation",
+      "submit": "Proponer un evento",
+      "empty": "No hay eventos disponibles en este momento. Consulta el calendario para ver las reuniones de la comunidad."
+    },
+    "news": {
+      "title": "Noticias y novedades",
+      "subtitle": "Desde la comunidad de Adoptium",
+      "description": "Anuncios del proyecto, noticias sobre lanzamientos e historias de todo el ecosistema Java.",
+      "filters": "Descubre las últimas noticias",
+      "sources": "Todas las fuentes",
+      "tags": "Todas las etiquetas",
+      "authors": "Todos los autores",
+      "remove-tag": "Eliminar etiqueta: {tag}",
+      "read-more": "Leer más",
+      "read-article": "Leer artículo",
+      "tag-title": "Artículos con la etiqueta {tag}",
+      "tag": "Etiqueta",
+      "source": "Fuente",
+      "author": "Autor",
+      "submit": "Enviar una noticia",
+      "empty": "Ningún artículo coincide con tus filtros.",
+      "empty-description": "Prueba a ajustar o borrar los filtros.",
+      "no-results": "No se han encontrado resultados"
+    },
+    "stats": {
+      "title": "Estadísticas de descargas de Adoptium",
+      "subtitle": "Datos del proyecto",
+      "description": "Explora las descargas de Eclipse Temurin y de imágenes de Docker por versión y plataforma.",
+      "trends-title": "Tendencias de descargas",
+      "trends-description": "Compara las descargas y las obtenciones de imágenes de Docker a lo largo del tiempo.",
+      "downloads": "Descargas",
+      "trends": "Tendencias",
+      "total": "Descargas totales",
+      "github": "Descargas de GitHub",
+      "docker": "Descargas de imágenes de Docker",
+      "popular": "Versiones del JDK más populares",
+      "github-version": "Descargas de GitHub por versión",
+      "daily": "Descargas diarias",
+      "monthly": "Descargas mensuales",
+      "version": "Versión del JDK",
+      "source": "Fuente",
+      "visible": "Mostrar series",
+      "type": "Tipo",
+      "days": "Días",
+      "series": "Serie {number}",
+      "daily-label": "Diario",
+      "monthly-label": "Mensual",
+      "total-label": "Total",
+      "docker-note": "Los filtros de versión del JDK no incluyen resultados del repositorio oficial de Docker.",
+      "by-source": "Descargas por fuente",
+      "drilldown": "Explorar descargas por lanzamiento"
+    },
+    "release-notes": {
+      "description": "Explora los cambios, las correcciones y las mejoras de las versiones de Eclipse Temurin.",
+      "lts": "Soporte a largo plazo",
+      "features": "Versiones con nuevas funcionalidades",
+      "back": "Todas las versiones",
+      "loading": "Cargando notas de la versión…",
+      "filters": "Filtrar cambios",
+      "export": "Exportar CSV",
+      "rows": "Filas por página",
+      "priority": "Prioridad",
+      "type": "Tipo",
+      "component": "Componente",
+      "issue": "Incidencia",
+      "summary": "Resumen",
+      "all-priorities": "Todas las prioridades",
+      "all-types": "Todos los tipos",
+      "all-components": "Todos los componentes",
+      "empty": "Ningún cambio coincide con estos filtros.",
+      "results": "{count} cambios",
+      "page": "Página {page} de {total}",
+      "p1": "{count} incidencias críticas",
+      "sort": "Ordenar por prioridad",
+      "view": "Ver notas de la versión",
+      "hidden": "No visible públicamente",
+      "priority-1": "Bloquea el desarrollo o las pruebas; el entorno de producción no puede funcionar.",
+      "priority-2": "Fallos, pérdida de datos o fugas graves de memoria.",
+      "priority-3": "Pérdida importante de funcionalidad.",
+      "priority-4": "Pérdida menor de funcionalidad o un problema con una solución alternativa sencilla.",
+      "priority-5": "Problemas estéticos, como errores de ortografía o alineación.",
+      "priority-6": "Esta incidencia no es visible públicamente."
+    },
+    "nightly": {
+      "filter-title": "Busca una compilación de acceso anticipado"
+    }
   }
 }

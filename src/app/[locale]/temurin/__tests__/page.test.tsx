@@ -5,6 +5,16 @@ import { describe, expect, it, vi } from "vitest";
 import { axe } from "vitest-axe";
 import TemurinPage from "../page";
 
+vi.mock("next-intl/server", async () => {
+  const { createTranslator } =
+    await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
+  return {
+    getTranslations: async (namespace: "ModernPages.temurin") =>
+      createTranslator({ locale: "en", messages, namespace }),
+  };
+});
+
 vi.mock("@/utils/fetchAvailableReleases", () => ({
   fetchAvailableReleases: vi.fn().mockResolvedValue({
     most_recent_lts: 21,

@@ -40,6 +40,99 @@
     "title": "申し訳ありません。このページは見つかりませんでした",
     "back-to-home": "ホームに戻る"
   },
+  "BusinessBenefits": {
+    "support": {
+      "title": "Temurinのサポートが必要ですか？",
+      "description": "Eclipse Temurinは、活発な開発者とユーザーのコミュニティに支えられています。サポートが必要な場合はお問い合わせください。",
+      "cta": "サポートを受ける"
+    },
+    "contact": {
+      "title": "Temurinのビジネス活用についてお問い合わせください",
+      "description": "参加しませんか？メンバーシップフォームにご記入のうえ、Adoptiumの未来を共に築く第一歩を踏み出しましょう。",
+      "cta": "お問い合わせ"
+    },
+    "usage": {
+      "title": "企業におけるTemurinの活用",
+      "description": "業界をリードする企業がTemurinを活用し、開発プロセスの性能向上とイノベーションを実現する方法をご紹介します。"
+    },
+    "adopters": {
+      "title": "Eclipse Temurin® 導入企業",
+      "description": "本番環境で Eclipse Temurin を利用している企業。"
+    },
+    "header": {
+      "title": "Eclipse Temurin® がビジネスにもたらすメリット",
+      "subtitle": "ビジネス上のメリット",
+      "description": "Eclipse Temurin は、高性能でクロスプラットフォームに対応したオープンソースの Java ランタイムバイナリを提供します。企業での利用に適しており、Java エコシステム全般での利用に向けて Java SE TCK によるテストを実施しています。",
+      "contact": "お問い合わせ"
+    }
+  },
+  "JoinPage": {
+    "title": "ワーキンググループへの参加",
+    "subtitle": "Eclipse Adoptium®ワーキンググループに参加する",
+    "form-title": "お問い合わせ",
+    "form-description": "ご所属の組織と、Eclipse Adoptiumへの参加方法についてお知らせください。",
+    "options-title": "参加方法を探す",
+    "options-description": "メンバーシップ、スポンサーシップ、プロジェクトへの貢献についてご覧ください。"
+  },
+  "SupportingAnnouncement": {
+    "brand": "ECLIPSE ADOPTIUM",
+    "member": {
+      "title": "Adoptiumのメンバーになる",
+      "description": "Adoptiumワーキンググループに参加し、オープンソースJavaの未来を支えましょう。メンバーシップの選択肢と特典をご覧ください。",
+      "cta": "詳しく見る"
+    },
+    "sustainer": {
+      "title": "支援者になる",
+      "description": "急成長するオープンソースJDK、Eclipse Temurinの支援プログラムに参加しませんか。皆様の支援がセキュリティ強化、迅速なリリース、導入可能なビルド、品質テスト、コミュニティの発展を支えます。",
+      "cta": "詳しく見る"
+    },
+    "bloomberg": {
+      "title": "導入事例：BloombergのオープンソースJavaへの移行",
+      "description": "Eclipse Temurinが世界の金融インフラをどのように支えているかをご紹介します。",
+      "cta": "導入事例を読む"
+    }
+  },
+  "NavBar": {
+    "Join Us": "参加する",
+    "Become a Member": "メンバーになる",
+    "Our Members": "メンバー一覧",
+    "Become an Individual Sustainer": "個人として支援する",
+    "Become a Corporate Sustainer": "企業として支援する",
+    "Our Sustainers": "支援者一覧",
+    "Contribute to Adoptium": "Adoptium に貢献する",
+    "Become an Adopter": "導入事例を登録する",
+    "Our Adopters": "導入企業一覧",
+    "Latest Releases": "最新リリース",
+    "Marketplace": "マーケットプレイス",
+    "Projects": "プロジェクト",
+    "What We Do": "活動内容",
+    "Eclipse Temurin": "Eclipse Temurin",
+    "Eclipse AQAvit": "Eclipse AQAvit",
+    "Eclipse Mission Control": "Eclipse Mission Control",
+    "Eclipse Migration Toolkit": "Eclipse Migration Toolkit",
+    "Resources": "リソース",
+    "Status": "サービス稼働状況",
+    "Release Notes": "リリースノート",
+    "Installation Guide": "インストールガイド",
+    "Documentation": "ドキュメント",
+    "FAQs": "よくある質問",
+    "Brand & Promotion": "ブランドと広報",
+    "Community": "コミュニティ",
+    "Support": "サポート",
+    "News": "ニュース",
+    "Events": "イベント",
+    "Slack": "Slack",
+    "Membership": "メンバーシップ",
+    "Sponsorship": "スポンサーシップ",
+    "Contribute": "貢献する",
+    "Adopt": "導入する",
+    "Join Us Overview": "参加方法",
+    "Global": "メインナビゲーション",
+    "Adoptium Logo": "Adoptium ロゴ",
+    "notifications": "お知らせ",
+    "Open main menu": "メインメニューを開く",
+    "Close menu": "メニューを閉じる"
+  },
   "WhatWeDo": {
     "mission": "共に築く、オープンなJava",
     "community": "コミュニティ主導の協力",
@@ -121,6 +214,7 @@
     }
   },
   "RandomContributors": {
+    "become-contributor": "コントリビューターになる",
     "thank-you": "<highlight>300人以上</highlight>のコントリビューターに感謝します",
     "thank-you-mobile": "<highlight>300人以上</highlight>の<linebreak></linebreak>コントリビューターに<linebreak></linebreak>感謝します"
   },
@@ -328,5 +422,156 @@
   },
   "Byline": {
     "reading-time": "{minutes}分で読めます"
+  },
+  "ModernPages": {
+    "common": {
+      "learn-more": "詳しく見る",
+      "loading": "読み込み中…",
+      "all": "すべて",
+      "previous": "前へ",
+      "next": "次へ"
+    },
+    "temurin": {
+      "resources-title": "Temurinを使い始める",
+      "resources-description": "Temurinのインストール、ドキュメントの閲覧、プロジェクトの継続的な支援についてご案内します。",
+      "install-description": "お使いのオペレーティングシステムや開発ツールに応じたインストール手順をご確認ください。",
+      "docs-description": "Eclipse Temurinの設定や使い方に関するガイドをご覧ください。",
+      "sponsor-title": "プロジェクトを支援する",
+      "sponsor-description": "皆さまからの支援は、Eclipse Temurinを支えるインフラとコミュニティの運営に役立てられます。",
+      "contact-title": "Temurinをビジネスに活用",
+      "contact-description": "コスト削減、商用サポート、ソフトウェアサプライチェーンのセキュリティについて、コミュニティとともに検討しましょう。",
+      "contact": "お問い合わせ",
+      "community": "コミュニティに相談する"
+    },
+    "platforms": {
+      "title": "対応プラットフォーム",
+      "description": "最新のEclipse Temurinリリースのオペレーティングシステム互換性をご確認ください。",
+      "intro": "オペレーティングシステムの項目を展開すると、JDKのバージョンとDockerの提供状況を比較できます。",
+      "supported": "対応",
+      "unsupported": "非対応",
+      "docker": "Dockerあり",
+      "community-title": "プラットフォーム選びでお困りですか？",
+      "community-description": "お使いの環境についてAdoptiumコミュニティにご相談ください。",
+      "community-cta": "会話に参加する"
+    },
+    "sustainer": {
+      "title": "継続支援企業になる",
+      "subtitle": "Eclipse Temurinを支援する",
+      "description": "Eclipse Temurinを誰もが利用できるようにするためのインフラ、テスト、配布を継続的に支える活動にご協力ください。",
+      "form-title": "まずはご相談ください",
+      "form-description": "貴組織についてお聞かせください。Temurinへの最適な支援方法をチームがご案内します。",
+      "thanks-title": "ご支援ありがとうございます",
+      "thanks-description": "お問い合わせを受け付けました。継続支援企業への参加について、担当チームからご連絡いたします。",
+      "options-title": "支援方法を探す",
+      "options-description": "継続支援の特典、メンバーシップ、その他の参加方法をご確認ください。"
+    },
+    "slack": {
+      "title": "会話に参加する",
+      "subtitle": "Adoptiumコミュニティ",
+      "description": "SlackでEclipse Adoptiumのユーザー、貢献者、メンテナーと交流しましょう。",
+      "card-title": "オープンソースJavaを中心としたコミュニティ",
+      "card-description": "質問や経験の共有を通じて、Eclipse Temurinやその他のAdoptiumプロジェクトで協力しましょう。",
+      "cta": "Slackに参加する",
+      "hint": "Adoptium Slackの招待ページが新しいタブで開きます。",
+      "support": "Temurinについてお困りですか？",
+      "support-description": "コミュニティによる支援や商用サポートをご確認ください。",
+      "support-cta": "サポートを受ける"
+    },
+    "events": {
+      "title": "コミュニティと交流する",
+      "subtitle": "イベントとコミュニティ",
+      "description": "オンラインや世界各地で開催されるAdoptiumコミュニティのミーティングやEclipse Foundationのイベントをご紹介します。",
+      "upcoming": "Eclipse Foundationのイベント",
+      "calendar-title": "Adoptiumコミュニティカレンダー",
+      "calendar-description": "コミュニティのミーティング情報をチェックして、他の貢献者と交流し、取り組みの進捗を共有しましょう。",
+      "view-calendar": "カレンダーを見る",
+      "subscribe": "iCalを購読する",
+      "calendar-hint": "コミュニティ、セキュリティ、AQAvit、ウェブサイトに関するミーティング、リリース日、その他のオンラインでの集まりを掲載しています。",
+      "all-events": "Eclipse Foundationのすべてのイベントを見る",
+      "submit": "イベントを投稿する",
+      "empty": "現在、掲載されているイベントはありません。コミュニティのミーティングについてはカレンダーをご確認ください。"
+    },
+    "news": {
+      "title": "ニュースと最新情報",
+      "subtitle": "Adoptiumコミュニティより",
+      "description": "プロジェクトのお知らせ、リリース情報、Javaエコシステム全体の話題をお届けします。",
+      "filters": "最新の記事を探す",
+      "sources": "すべての情報源",
+      "tags": "すべてのタグ",
+      "authors": "すべての著者",
+      "remove-tag": "タグを削除：{tag}",
+      "read-more": "続きを読む",
+      "read-article": "記事を読む",
+      "tag-title": "{tag}のタグが付いた記事",
+      "tag": "タグ",
+      "source": "情報源",
+      "author": "著者",
+      "submit": "ニュースを投稿する",
+      "empty": "フィルターに一致する記事はありません。",
+      "empty-description": "フィルターを変更するか解除してみてください。",
+      "no-results": "結果が見つかりませんでした"
+    },
+    "stats": {
+      "title": "Adoptiumのダウンロード統計",
+      "subtitle": "プロジェクトのデータ",
+      "description": "Eclipse Temurinのダウンロード数とDockerイメージのプル数を、バージョンやプラットフォーム別に確認できます。",
+      "trends-title": "ダウンロードの推移",
+      "trends-description": "ダウンロード数とDockerイメージのプル数の推移を比較できます。",
+      "downloads": "ダウンロード数",
+      "trends": "推移",
+      "total": "総ダウンロード数",
+      "github": "GitHubダウンロード数",
+      "docker": "Dockerプル数",
+      "popular": "人気のJDKバージョン",
+      "github-version": "バージョン別GitHubダウンロード数",
+      "daily": "日別ダウンロード数",
+      "monthly": "月別ダウンロード数",
+      "version": "JDKバージョン",
+      "source": "ダウンロード元",
+      "visible": "データ系列を表示",
+      "type": "種類",
+      "days": "日数",
+      "series": "系列 {number}",
+      "daily-label": "日別",
+      "monthly-label": "月別",
+      "total-label": "合計",
+      "docker-note": "JDKバージョンのフィルターには、Docker公式リポジトリの結果は含まれません。",
+      "by-source": "ダウンロード元別のダウンロード数",
+      "drilldown": "リリース別のダウンロード数を見る"
+    },
+    "release-notes": {
+      "description": "Eclipse Temurinの各リリースの変更、修正、改善をご確認ください。",
+      "lts": "長期サポート",
+      "features": "機能リリース",
+      "back": "すべてのバージョン",
+      "loading": "リリースノートを読み込み中…",
+      "filters": "変更を絞り込む",
+      "export": "CSVをエクスポート",
+      "rows": "1ページあたりの行数",
+      "priority": "優先度",
+      "type": "種類",
+      "component": "コンポーネント",
+      "issue": "課題",
+      "summary": "概要",
+      "all-priorities": "すべての優先度",
+      "all-types": "すべての種類",
+      "all-components": "すべてのコンポーネント",
+      "empty": "条件に一致する変更はありません。",
+      "results": "{count}件の変更",
+      "page": "{total}ページ中{page}ページ",
+      "p1": "{count}件の重大な問題",
+      "sort": "優先度で並べ替え",
+      "view": "リリースノートを見る",
+      "hidden": "非公開",
+      "priority-1": "開発またはテストを妨げ、本番環境での稼働が不可能。",
+      "priority-2": "クラッシュ、データ損失、または深刻なメモリリーク。",
+      "priority-3": "重大な機能の喪失。",
+      "priority-4": "軽微な機能の喪失、または簡単な回避策のある問題。",
+      "priority-5": "誤字や配置のずれなど、表示上の問題。",
+      "priority-6": "この課題は公開されていません。"
+    },
+    "nightly": {
+      "filter-title": "早期アクセスビルドを探す"
+    }
   }
 }

@@ -4,6 +4,17 @@ import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { describe, it, expect, vi, afterEach } from "vitest";
 import PlatformMatrix from "../index";
 
+vi.mock("next-intl", async () => {
+  const actual = await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
+  return {
+    ...actual,
+    useTranslations: (
+      namespace: "ModernPages.platforms" | "Temurin.Releases.ReleaseFilters",
+    ) => actual.createTranslator({ locale: "en", messages, namespace }),
+  };
+});
+
 vi.mock("@/data/supported-platforms.json", () => ({
   default: {
     platforms: [
@@ -62,8 +73,8 @@ describe("PlatformMatrix", () => {
   it("renders legend icons", () => {
     render(<PlatformMatrix />);
     expect(screen.getByText("Supported")).toBeTruthy();
-    expect(screen.getByText("Docker Available")).toBeTruthy();
-    expect(screen.getByText("Not Supported")).toBeTruthy();
+    expect(screen.getByText("Docker available")).toBeTruthy();
+    expect(screen.getByText("Not supported")).toBeTruthy();
   });
 
   it("toggles accordion on category click", () => {

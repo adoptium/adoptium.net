@@ -2,133 +2,121 @@
 
 exports[`TimeLine component > should render correctly with events 1`] = `
 <div>
-  <div
-    class="relative"
-  >
+  <div>
     <div
-      class="relative my-4 flex justify-between items-start w-full flex-row"
+      class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
     >
-      <div
-        class="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2"
-      />
-      <div
-        class="w-5/12"
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6"
       >
-        <div
-          class="text-right"
+        <time
+          class="text-xs font-medium text-[#ff91b7]"
+          datetime="2023-10-01T00:00:00Z"
         >
-          <span
-            class="text-base text-grey"
-          >
-            Oct 1, 2023
-          </span>
+          Oct 1, 2023
+        </time>
+        <h3
+          class="mb-3 mt-4 text-xl font-semibold leading-snug"
+        >
           <a
+            class="hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
             href="https://example.com/a"
-            style="text-decoration: underline; text-underline-offset: 5px;"
+            rel="noopener noreferrer"
             target="_blank"
           >
-            <h1
-              class="text-xl mt-5 mb-2 font-bold hover:transform hover:-translate-y-[2px] transition-transform duration-200"
+            <span
+              class="mr-1"
             >
               Event A
-            </h1>
+            </span>
+            <svg
+              aria-hidden="true"
+              class="inline"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="7"
+                x2="17"
+                y1="17"
+                y2="7"
+              />
+              <polyline
+                points="7 7 17 7 17 17"
+              />
+            </svg>
           </a>
-          <p
-            class="text-base text-grey "
-          >
-            This is a description for Event A.
-          </p>
-        </div>
-      </div>
-      <div
-        class="relative z-10 flex justify-center"
-      >
-        <div
-          class="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full"
-        />
-      </div>
-      <div
-        class="w-5/12"
-      />
-    </div>
-    <div
-      class="relative my-4 flex justify-between items-start w-full flex-row-reverse"
-    >
-      <div
-        class="absolute left-1/2 top-0 mt-[30px] bottom-0 w-0.5 bg-[#ff1464] -translate-x-1/2"
-      />
-      <div
-        class="w-5/12"
-      >
-        <div
-          class="text-left"
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
         >
-          <span
-            class="text-base text-grey"
-          >
-            Oct 3, 2023
-          </span>
+          This is a description for Event A.
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <time
+          class="text-xs font-medium text-[#ff91b7]"
+          datetime="2023-10-03T00:00:00Z"
+        >
+          Oct 3, 2023
+        </time>
+        <h3
+          class="mb-3 mt-4 text-xl font-semibold leading-snug"
+        >
           <a
+            class="hover:text-[#ff91b7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
             href="https://example.com/b"
-            style="text-decoration: underline; text-underline-offset: 5px;"
+            rel="noopener noreferrer"
             target="_blank"
           >
-            <h1
-              class="text-xl mt-5 mb-2 font-bold hover:transform hover:-translate-y-[2px] transition-transform duration-200"
+            <span
+              class="mr-1"
             >
               Event B
-            </h1>
+            </span>
+            <svg
+              aria-hidden="true"
+              class="inline"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="7"
+                x2="17"
+                y1="17"
+                y2="7"
+              />
+              <polyline
+                points="7 7 17 7 17 17"
+              />
+            </svg>
           </a>
-          <p
-            class="text-base text-grey "
-          >
-            This is a description for Event B.
-          </p>
-        </div>
-      </div>
-      <div
-        class="relative z-10 flex justify-center"
-      >
-        <div
-          class="w-4 h-4 border-4 border-[#ff1464] bg-purple rounded-full"
-        />
-      </div>
-      <div
-        class="w-5/12"
-      />
-    </div>
-    <div
-      class="flex justify-center items-center gap-8 md:gap-14 my-8"
-    >
-      <button
-        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
-        disabled=""
-      >
-        Previous
-      </button>
-      <div
-        class="flex items-center gap-5"
-      >
-        <div
-          class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
         >
-          <button
-            class="tab-button-text mb-0 px-2 font-bold text-pink"
-            disabled=""
-          >
-            1
-          </button>
-        </div>
-      </div>
-      <button
-        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
-        disabled=""
-      >
-        Next
-      </button>
+          This is a description for Event B.
+        </p>
+      </article>
     </div>
     <div
-      class="flex items-center gap-5 mb-15 justify-center"
+      class="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-[#ff91b7]"
     >
       <a
         class="flex items-center gap-3"
@@ -136,16 +124,63 @@ exports[`TimeLine component > should render correctly with events 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        View all Eclipse Foundation events
+        <span>
+          Text
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
       </a>
-      |
       <a
         class="flex items-center gap-3"
         href="https://newsroom.eclipse.org/node/add/events"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Submit an event
+        <span>
+          Text
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
       </a>
     </div>
   </div>
@@ -154,33 +189,17 @@ exports[`TimeLine component > should render correctly with events 1`] = `
 
 exports[`TimeLine component > should render correctly with no events 1`] = `
 <div>
-  <div
-    class="relative"
-  >
+  <div>
     <div
-      class="flex justify-center items-center gap-8 md:gap-14 my-8"
+      class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+    />
+    <p
+      class="rounded-2xl border border-white/10 p-6 text-sm text-grey"
     >
-      <button
-        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
-        disabled=""
-      >
-        Previous
-      </button>
-      <div
-        class="flex items-center gap-5"
-      >
-        <div
-          class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
-        />
-      </div>
-      <button
-        class="flex items-center gap-3 px-3 py-2 rounded disabled:opacity-50"
-      >
-        Next
-      </button>
-    </div>
+      Text
+    </p>
     <div
-      class="flex items-center gap-5 mb-15 justify-center"
+      class="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-[#ff91b7]"
     >
       <a
         class="flex items-center gap-3"
@@ -188,16 +207,63 @@ exports[`TimeLine component > should render correctly with no events 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        View all Eclipse Foundation events
+        <span>
+          Text
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
       </a>
-      |
       <a
         class="flex items-center gap-3"
         href="https://newsroom.eclipse.org/node/add/events"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Submit an event
+        <span>
+          Text
+        </span>
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="7"
+            x2="17"
+            y1="17"
+            y2="7"
+          />
+          <polyline
+            points="7 7 17 7 17 17"
+          />
+        </svg>
       </a>
     </div>
   </div>

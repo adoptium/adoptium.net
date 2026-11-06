@@ -5,6 +5,8 @@ import { useState, useSyncExternalStore } from "react";
 import { shuffle } from "@/utils/shuffle";
 import { filterByCurrentDate } from "@/utils/filterByDate";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { currentAnnouncements, BannerMiddleProps } from "./announcements";
 
 const subscribe = () => () => {};
@@ -12,6 +14,7 @@ const getClientSnapshot = () => true;
 const getServerSnapshot = () => false;
 
 const Announcement = () => {
+  const t = useTranslations("SupportingAnnouncement");
   const [announcement] = useState<BannerMiddleProps | null>(() => {
     const filteredAnnouncements = filterByCurrentDate(currentAnnouncements);
     return filteredAnnouncements.length > 0
@@ -22,6 +25,7 @@ const Announcement = () => {
   if (!announcement) {
     return null;
   }
+  const AnnouncementLink = announcement.ctaLink.startsWith("/") ? Link : "a";
 
   return (
     <aside className="bg-purple py-4 sm:py-6">
@@ -34,24 +38,32 @@ const Announcement = () => {
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center md:gap-10">
             <div className="max-w-3xl">
               <p className="mb-3 font-mono text-xs tracking-[0.2em] text-purple/70">
-                ECLIPSE ADOPTIUM
+                {t("brand")}
               </p>
               <h2 className="mb-3 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
-                {announcement.title}
+                {announcement.translationKey
+                  ? t(`${announcement.translationKey}.title`)
+                  : announcement.title}
               </h2>
               <p className="mb-0 text-sm leading-relaxed text-purple/80 sm:text-base">
-                {announcement.description}
+                {announcement.translationKey
+                  ? t(`${announcement.translationKey}.description`)
+                  : announcement.description}
               </p>
             </div>
-            <a
+            <AnnouncementLink
               href={announcement.ctaLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-purple px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#34145f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple"
             >
-              <span>{announcement.cta}</span>
+              <span>
+                {announcement.translationKey
+                  ? t(`${announcement.translationKey}.cta`)
+                  : announcement.cta}
+              </span>
               <FiArrowUpRight aria-hidden="true" />
-            </a>
+            </AnnouncementLink>
           </div>
         </div>
       </div>

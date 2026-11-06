@@ -186,34 +186,6 @@ vi.mock("@/utils/shuffle", () => ({
   shuffle: <T,>(arr: T[]) => arr,
 }));
 
-type SwiperProps = {
-  children: React.ReactNode;
-};
-
-vi.mock("swiper/react", () => ({
-  Swiper: React.forwardRef<HTMLDivElement, SwiperProps>(({ children }, ref) => {
-    // Create a mock swiper object with an init method
-    const mockSwiper = {
-      init: () => vi.fn(),
-      update: () => vi.fn(),
-      slideNext: () => vi.fn(),
-      slidePrev: () => vi.fn(),
-    };
-
-    // Use a callback ref to assign the mock swiper object to the ref
-    React.useEffect(() => {
-      if (ref && typeof ref !== "function") {
-        (ref as React.RefObject<any>).current = { swiper: mockSwiper };
-      }
-    }, [ref]);
-
-    return <div data-testid="Swiper">{children}</div>;
-  }),
-  SwiperSlide: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="SwiperSlide">{children}</div>
-  ),
-}));
-
 class IntersectionObserverMock {
   root: Element | Document | null = null;
   rootMargin: string = "0px";

@@ -5,10 +5,13 @@ import EventCard from "../index";
 
 // Mock the useLocale hook
 vi.mock("next-intl", async () => {
-  const actual = await vi.importActual("next-intl");
+  const actual = await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
   return {
-    ...actual as object,
+    ...actual,
     useLocale: () => "en",
+    useTranslations: (namespace: "ModernPages.news") =>
+      actual.createTranslator({ locale: "en", messages, namespace }),
   };
 });
 
@@ -34,7 +37,9 @@ describe("EventCard", () => {
 
   it("renders the post description", () => {
     render(<EventCard post={mockPost} />);
-    const descriptions = screen.getAllByText("This is a test description for the blog post.");
+    const descriptions = screen.getAllByText(
+      "This is a test description for the blog post.",
+    );
     expect(descriptions.length).toBeGreaterThan(0);
   });
 

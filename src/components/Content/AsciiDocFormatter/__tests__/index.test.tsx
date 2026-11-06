@@ -4,16 +4,6 @@ import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import AsciiDocFormatter from "..";
 
-// Mock next-intl's useTranslations hook
-vi.mock("next-intl", () => ({
-  useTranslations: () => (key: string) => {
-    const translations: Record<string, string> = {
-      "table-of-contents": "Table of Contents",
-    };
-    return translations[key] || key;
-  },
-}));
-
 // Mock AccordionItem component
 vi.mock("@/components/Content/Asciidoc/AccordionItem", () => ({
   __esModule: true,

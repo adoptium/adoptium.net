@@ -77,7 +77,7 @@ const ContributorsHome = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:scale-105 hover:border-pink-500/50 backdrop-blur-md shadow-lg hover:shadow-pink-500/20 group"
               >
-                Become a Contributor
+                <span>{t("become-contributor")}</span>
                 <svg
                   className="w-5 h-5 ml-2 -mr-1 transition-transform duration-300 group-hover:translate-x-1"
                   fill="currentColor"

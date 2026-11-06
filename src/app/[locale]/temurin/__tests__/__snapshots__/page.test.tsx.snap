@@ -477,410 +477,444 @@ exports[`TemurinIndex page > renders correctly 1`] = `
       </div>
     </div>
   </section>
-  <div
-    class="bg-purple pt-16 pb-0"
-  >
-    <div
-      class="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col items-center justify-center mb-0"
-    >
-      <h2
-        class="text-center text-4xl lg:text-5xl leading-[44px] lg:leading-[56px] font-semibold text-white-900"
-      >
-        Text
-      </h2>
-      <h3
-        class="text-center text-base leading-6 font-normal text-grey mt-6"
-      >
-        Text
-      </h3>
-      <a
-        href="/business-benefits"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border hover:scale-105 transition-transform duration-300"
-        >
-          Text
-        </button>
-      </a>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        height="366"
-        src="/images/icons/feature-layers.svg"
-        width="366"
-      />
-      <img
-        alt="scroll divider"
-        class="mb-0"
-        height="80"
-        src="/images/icons/scroll-divider.svg"
-        width="16"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Text
-        </h1>
-        <div
-          class="text-base text-grey"
-        >
-          Text
-        </div>
-      </div>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        height="366"
-        src="/images/icons/feature-layers.svg"
-        width="366"
-      />
-      <img
-        alt="scroll divider"
-        class="mb-0"
-        height="80"
-        src="/images/icons/scroll-divider.svg"
-        width="16"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Text
-        </h1>
-        <div
-          class="text-base text-grey"
-        >
-          Text
-        </div>
-      </div>
-    </div>
-    <div
-      class="lg:hidden max-w-[500px] mx-auto flex flex-col text-center items-center"
-    >
-      <img
-        alt="Description"
-        class="w-full mb-0 max-w-[366px] object-cover"
-        height="366"
-        src="/images/icons/feature-layers.svg"
-        width="366"
-      />
-      <img
-        alt="scroll divider"
-        class="mb-0"
-        height="80"
-        src="/images/icons/scroll-divider.svg"
-        width="16"
-      />
-      <div
-        class="flex flex-col flex-1 px-4"
-      >
-        <h1
-          class="text-xl my-5 font-bold"
-        >
-          Text
-        </h1>
-        <div
-          class="text-base text-grey"
-        >
-          Text
-        </div>
-      </div>
-    </div>
-    <div
-      class="lg:block hidden open-animation-wrapper"
-    >
-      <div
-        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        style="height: 400vh;"
-      >
-        <div
-          class="sticky top-0 h-screen flex items-center justify-center overflow-hidden pb-16"
-        >
-          <div
-            class="relative w-full h-full flex items-center justify-between"
-          >
-            <div
-              class="w-1/2 h-full flex items-center justify-center relative"
-            >
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; scale: 0;"
-              >
-                <div
-                  class="relative w-full max-w-[500px] aspect-square"
-                >
-                  <img
-                    alt="Text"
-                    class="object-contain drop-shadow-2xl"
-                    src="/images/icons/feature-layers.svg"
-                  />
-                </div>
-              </div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; scale: 0;"
-              >
-                <div
-                  class="relative w-full max-w-[500px] aspect-square"
-                >
-                  <img
-                    alt="Text"
-                    class="object-contain drop-shadow-2xl"
-                    src="/images/icons/feature-layers.svg"
-                  />
-                </div>
-              </div>
-              <div
-                class="absolute inset-0 flex items-center justify-center"
-                style="opacity: 0; scale: 0;"
-              >
-                <div
-                  class="relative w-full max-w-[500px] aspect-square"
-                >
-                  <img
-                    alt="Text"
-                    class="object-contain drop-shadow-2xl"
-                    src="/images/icons/feature-layers.svg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-1/2 h-full flex items-center justify-center relative pl-12"
-            >
-              <div
-                class="absolute w-full max-w-lg"
-                style="opacity: 0; y: 0px;"
-              >
-                <h2
-                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                >
-                  Text
-                </h2>
-                <div
-                  class="text-xl text-gray-300 leading-relaxed font-light"
-                >
-                  Text
-                </div>
-              </div>
-              <div
-                class="absolute w-full max-w-lg"
-                style="opacity: 0; y: 0px;"
-              >
-                <h2
-                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                >
-                  Text
-                </h2>
-                <div
-                  class="text-xl text-gray-300 leading-relaxed font-light"
-                >
-                  Text
-                </div>
-              </div>
-              <div
-                class="absolute w-full max-w-lg"
-                style="opacity: 0; y: 0px;"
-              >
-                <h2
-                  class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-                >
-                  Text
-                </h2>
-                <div
-                  class="text-xl text-gray-300 leading-relaxed font-light"
-                >
-                  Text
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <section
-    class="pb-16 pt-0 md:py-32 mx-auto max-w-[832px] w-full lg:px-2 flex flex-col items-center justify-center  xl:px-0 px-6"
+    class="mx-auto max-w-7xl px-6 py-10 sm:px-8 sm:py-14"
   >
     <div
-      class="text-center"
+      class="mb-8 max-w-3xl"
     >
       <h2
-        class="text-4xl leading-[122%] md:text-5xl md:[116%] text-white font-semibold"
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
       >
-        Become a Sponsor
+        Text
       </h2>
       <p
-        class="text-grey mt-6 font-normal text-base"
+        class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
       >
-        Contributions from users like you help fund critical operations of the Adoptium working group. All money contributed through the Eclipse Foundation ensures the survivability, continuity, and responsiveness of Adoptium projects.
+        Text
       </p>
+    </div>
+    <div
+      class="grid gap-4 md:grid-cols-3"
+    >
+      <article
+        class="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <svg
+          aria-hidden="true"
+          class="mb-5 text-[#ff91b7]"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="23 6 13.5 15.5 8.5 10.5 1 18"
+          />
+          <polyline
+            points="17 6 23 6 23 12"
+          />
+        </svg>
+        <h3
+          class="mb-3 text-xl font-semibold"
+        >
+          Text
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Text
+        </p>
+      </article>
+      <article
+        class="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <svg
+          aria-hidden="true"
+          class="mb-5 text-[#ff91b7]"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon
+            points="12 2 2 7 12 12 22 7 12 2"
+          />
+          <polyline
+            points="2 17 12 22 22 17"
+          />
+          <polyline
+            points="2 12 12 17 22 12"
+          />
+        </svg>
+        <h3
+          class="mb-3 text-xl font-semibold"
+        >
+          Text
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Text
+        </p>
+      </article>
+      <article
+        class="rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <svg
+          aria-hidden="true"
+          class="mb-5 text-[#ff91b7]"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline
+            points="16 18 22 12 16 6"
+          />
+          <polyline
+            points="8 6 2 12 8 18"
+          />
+        </svg>
+        <h3
+          class="mb-3 text-xl font-semibold"
+        >
+          Text
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Text
+        </p>
+      </article>
     </div>
     <a
-      href="/sustainers/"
+      class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#ff91b7] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+      href="/business-benefits"
     >
-      <button
-        class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+      <span>
+        Text
+      </span>
+      <svg
+        aria-hidden="true"
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        Learn more
-      </button>
+        <line
+          x1="5"
+          x2="19"
+          y1="12"
+          y2="12"
+        />
+        <polyline
+          points="12 5 19 12 12 19"
+        />
+      </svg>
     </a>
+  </section>
+  <section
+    class="border-y border-white/10 bg-white/[0.015]"
+  >
     <div
-      class="mt-16  gap-4 md:gap-8  flex flex-wrap justify-center items-center"
+      class="mx-auto max-w-7xl px-6 py-10 sm:px-8 sm:py-14"
     >
       <div
-        class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
+        class="mb-8 max-w-3xl"
       >
-        <div
-          class="grow"
+        <h2
+          class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
         >
-          <h3
-            class="text-white text-[30px] font-semibold  leading-[120%] md:text-[40px]"
-          >
-            Installation Guide
-          </h3>
-          <p
-            class="mt-6 text-xl text-lightgrey font-normal"
-          >
-            Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
-          </p>
-        </div>
+          Text
+        </h2>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
+        >
+          Text
+        </p>
+      </div>
+      <div
+        class="grid gap-4 md:grid-cols-3"
+      >
         <a
+          class="group flex flex-col rounded-2xl border border-white/10 bg-[#10052d] p-6 transition-colors hover:border-pink/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
           href="/installation"
         >
-          <button
-            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-2xl gradient-border"
+          <svg
+            aria-hidden="true"
+            class="mb-5 text-[#ff91b7]"
+            fill="none"
+            height="22"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="22"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Installation Guide
-          </button>
-        </a>
-      </div>
-      <div
-        class="p-10 flex flex-col max-w-[400px] newscard-2 h-[440px] md:h-[480px] bg-[#200E46]"
-      >
-        <div
-          class="grow"
-        >
+            <path
+              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+            />
+            <polyline
+              points="7 10 12 15 17 10"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="15"
+              y2="3"
+            />
+          </svg>
           <h3
-            class="text-white text-[30px] font-semibold  leading-[120%] md:text-[40px]"
+            class="mb-3 text-xl font-semibold"
           >
-            Documentation
+            Text
           </h3>
           <p
-            class="mt-6 text-xl text-lightgrey font-normal"
+            class="mb-6 text-sm leading-relaxed text-grey"
           >
-            Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime.
+            Text
           </p>
-        </div>
+          <span
+            class="mt-auto inline-flex items-center gap-2 text-sm text-[#ff91b7]"
+          >
+            <span>
+              Text
+            </span>
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </span>
+        </a>
         <a
+          class="group flex flex-col rounded-2xl border border-white/10 bg-[#10052d] p-6 transition-colors hover:border-pink/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
           href="/docs"
         >
-          <button
-            class="bg-transparent border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[180px] h-[48px] rounded-2xl gradient-border"
+          <svg
+            aria-hidden="true"
+            class="mb-5 text-[#ff91b7]"
+            fill="none"
+            height="22"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="22"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Documentation
-          </button>
+            <path
+              d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
+            />
+            <path
+              d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+            />
+          </svg>
+          <h3
+            class="mb-3 text-xl font-semibold"
+          >
+            Text
+          </h3>
+          <p
+            class="mb-6 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <span
+            class="mt-auto inline-flex items-center gap-2 text-sm text-[#ff91b7]"
+          >
+            <span>
+              Text
+            </span>
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </span>
+        </a>
+        <a
+          class="group flex flex-col rounded-2xl border border-white/10 bg-[#10052d] p-6 transition-colors hover:border-pink/40 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/sustainers/"
+        >
+          <svg
+            aria-hidden="true"
+            class="mb-5 text-[#ff91b7]"
+            fill="none"
+            height="22"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="22"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+          <h3
+            class="mb-3 text-xl font-semibold"
+          >
+            Text
+          </h3>
+          <p
+            class="mb-6 text-sm leading-relaxed text-grey"
+          >
+            Text
+          </p>
+          <span
+            class="mt-auto inline-flex items-center gap-2 text-sm text-[#ff91b7]"
+          >
+            <span>
+              Text
+            </span>
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </span>
         </a>
       </div>
     </div>
   </section>
   <section
-    class="py-16 max-w-[1048px] w-full mx-auto flex justify-center lg:justify-between xl:px-0 px-6"
+    class="mx-auto max-w-7xl px-6 py-10 sm:px-8 sm:py-14"
   >
     <div
-      class="max-w-[400px] w-full hidden lg:block"
+      class="flex flex-col gap-6 rounded-2xl border border-pink/20 bg-pink/[0.06] p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between"
     >
-      <img
-        alt="scroll-divider"
-        class="mb-0"
-        height="400"
-        src="/images/icons/experience.webp"
-        width="400"
-      />
-    </div>
-    <div
-      class="lg:max-w-[560px] w-full  "
-    >
-      <h2
-        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+      <div
+        class="max-w-2xl"
       >
-        Want to discuss how Temurin can positively impact your company?
-      </h2>
-      <p
-        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
-      >
-        Whether you are looking for opportunities for cost-savings, or a selection of choices for commercial support, or if you want to bolster security around your software supply chain, we would love to discuss how using Temurin brings a variety of benefits to your enterprise.
-      </p>
-      <a
-        href="/slack"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[150px] h-[48px] rounded-2xl gradient-border lg:block hidden"
+        <h2
+          class="mb-3 text-2xl font-semibold tracking-tight sm:text-3xl"
         >
-          Contact Us
-        </button>
-         
-      </a>
-      <a
-        href="/slack"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-normal w-[151px] h-[48px] rounded-2xl gradient-border block lg:hidden"
+          Put Temurin to work for your business
+        </h2>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
         >
-          Contact Us
-        </button>
-      </a>
-    </div>
-  </section>
-  <section
-    class="relative xl:px-0 px-6 md:py-32 py-16 "
-  >
-    <div
-      class="absolute inset-0 z-[-10]"
-      style="background: radial-gradient(at 20% 50%, rgba(255, 19, 101, 0.18) 0%, transparent 60%), radial-gradient(at 80% 30%, rgba(100, 40, 180, 0.2) 0%, transparent 55%), radial-gradient(at 50% 80%, rgba(20, 0, 60, 0.4) 0%, transparent 70%), linear-gradient(180deg, rgb(20, 0, 60) 0%, rgb(13, 0, 42) 100%);"
-    />
-    <div
-      class="max-w-[832px] w-full mx-auto md:py-0 py-8 flex justify-center items-center flex-col text-center bg-transparent rounded-3xl md:backdrop-blur-0 backdrop-blur-12"
-    >
-      <img
-        alt="message icon"
-        class="!mb-0"
-        height="120"
-        src="/images/icons/message.svg"
-        width="120"
-      />
-      <p
-        class="text-white text-4xl md:text-5xl leading-[122.222%] md:leading-[116.667%] font-normal mt-8 mb-6"
+          Explore cost savings, commercial support and software supply chain security with our community.
+        </p>
+      </div>
+      <div
+        class="flex shrink-0 flex-col items-start gap-4"
       >
-        Speak to our team today
-      </p>
-      <span
-        class="text-gray-300 text-base leading-6"
-      >
-        Ready to get involved? Fill out our membership form and take the first step in shaping the future of Adoptium.
-      </span>
-      <a
-        href="/join"
-      >
-        <button
-          class="bg-transparent mt-10 border-2 border-pink-500/0 text-white text-base leading-6 font-bold w-[191px] h-[48px] rounded-2xl gradient-border"
+        <a
+          class="inline-flex items-center gap-2 rounded-xl bg-pink px-5 py-3 text-sm font-semibold text-white hover:bg-pink/80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/join"
         >
-          Contact Us
-        </button>
-      </a>
+          <span>
+            Contact us
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="5"
+              x2="19"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 5 19 12 12 19"
+            />
+          </svg>
+        </a>
+        <a
+          class="text-sm text-[#ff91b7] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          href="/slack"
+        >
+          Talk to the community
+        </a>
+      </div>
     </div>
   </section>
 </div>
