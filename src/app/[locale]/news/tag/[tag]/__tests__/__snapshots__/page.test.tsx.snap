@@ -8,85 +8,44 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
     >
       {"@context":"https://schema.org","@type":"CollectionPage","@id":"https://adoptium.net/news/tag/temurin","name":"Posts tagged with &quot;temurin&quot;","url":"https://adoptium.net/news/tag/temurin","mainEntity":[{"@type":"BlogPosting","headline":"Tagged News","url":"https://adoptium.net/news/2025/06/tagged-news","datePublished":"2025-06-18T00:00:00.000Z"}]}
     </script>
-    <div
-      class="relative overflow-hidden pt-14 pb-8 md:pt-20"
+    <header
+      class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
     >
       <div
-        class="w-full relative"
+        class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
       >
         <div
-          class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-        />
-        <div
-          class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-        />
-        <div
-          class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-        />
-      </div>
-      <div
-        class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-      >
-        <div
-          class="self-stretch flex-col justify-center items-center flex gap-1"
+          class="max-w-3xl"
         >
           <div
-            class="self-stretch flex-col justify-center items-center flex gap-1"
+            class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
           >
-            <div
-              class="justify-start items-center gap-3 inline-flex"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 14 14"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  fill="#FF1464"
-                  height="8"
-                  rx="2"
-                  width="8"
-                  x="3"
-                  y="3"
-                />
-                <rect
-                  height="11"
-                  rx="3.5"
-                  stroke="#FF1464"
-                  stroke-opacity="0.25"
-                  stroke-width="3"
-                  width="11"
-                  x="1.5"
-                  y="1.5"
-                />
-              </svg>
-              <div
-                class="text-rose-600 text-base font-bold leading-normal"
-              >
-                News
-              </div>
-            </div>
-            <div
-              class="self-stretch text-center text-white font-semibold text-2xl md:text-4xl leading-tight"
-            >
-              News tagged with "temurin"
-            </div>
+            News & updates
           </div>
-          <div
-            class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-sm mx-auto max-w-[860px] px-2 w-full"
+          <h1
+            class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
           >
-            Follow the latest updates from the Eclipse Adoptium Project
+            Stories tagged with temurin
+          </h1>
+          <div
+            class="max-w-2xl text-base leading-relaxed text-grey "
+          >
+            Project announcements, release news and stories from across the Java ecosystem.
           </div>
         </div>
       </div>
-    </div>
+    </header>
     <div
-      class="max-w-[1264px] mx-auto px-6"
+      class="mx-auto max-w-7xl px-6 py-8 sm:px-8"
+      id="blog-section"
     >
+      <h2
+        class="sr-only"
+      >
+        Text
+      </h2>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center py-4 md:py-6"
+        class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
       >
         <div
           class="group flex flex-col w-full rounded-2xl border border-white/10 light:border-gray-200 bg-white/[0.03] light:bg-white backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-white/20 light:hover:border-gray-300 hover:shadow-xl hover:shadow-purple/10 light:hover:shadow-gray-200/50 light:shadow-sm"
@@ -142,7 +101,7 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
                 class="inline-flex items-center gap-1.5 text-sm font-medium text-pink hover:underline transition-colors"
                 href="[object Object]"
               >
-                Read more
+                Text
                 <svg
                   class="w-4 h-4 transition-transform group-hover:translate-x-0.5"
                   fill="none"
@@ -161,16 +120,18 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="flex justify-center items-center gap-8 md:gap-14 my-8"
+      <nav
+        class="my-8 flex flex-wrap items-center justify-center gap-3"
       >
         <div
           class="flex items-center gap-5"
         >
           <div
-            class="flex items-center justify-between gap-6 border border-[#3E3355] rounded-[80px] px-6 py-3"
+            class="flex flex-wrap items-center justify-center gap-1 rounded-xl border border-white/10 p-1"
           >
             <a
+              aria-current="page"
+              class="flex min-h-9 min-w-8 items-center justify-center rounded-lg px-1 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
               href="/news/tag/temurin"
             >
               <p
@@ -180,6 +141,7 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
               </p>
             </a>
             <a
+              class="flex min-h-9 min-w-8 items-center justify-center rounded-lg px-1 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
               href="/news/tag/temurin/page/2"
             >
               <p
@@ -191,13 +153,14 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
           </div>
         </div>
         <a
+          aria-label="Text"
           class="flex items-center gap-3"
           href="/news/tag/temurin/page/2"
         >
           <p
             class="tab-button-text mb-0 hidden md:block"
           >
-            Next
+            Text
           </p>
           <span
             class="cursor-pointer"
@@ -217,17 +180,17 @@ exports[`TagsPage (tag root) > renders header and news when posts exist 1`] = `
             </svg>
           </span>
         </a>
-      </div>
+      </nav>
       <div
-        class="flex justify-center items-center gap-5 mt-12"
+        class="mt-8 flex justify-end border-t border-white/10 pt-6"
       >
         <a
-          class="inline-flex items-center gap-2 bg-pink hover:bg-rose-700 text-white py-3 px-8 rounded-xl transition-colors duration-200 text-sm font-semibold shadow-lg shadow-pink/20"
+          class="inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-sm font-medium text-[#ff91b7] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
           href="https://newsroom.eclipse.org/node/add/news"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Submit News
+          Text
           <svg
             class="w-4 h-4"
             fill="none"

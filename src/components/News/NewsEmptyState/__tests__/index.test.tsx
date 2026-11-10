@@ -3,6 +3,16 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import NewsEmptyState from "../index";
 
+vi.mock("next-intl", async () => {
+  const actual = await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
+  return {
+    ...actual,
+    useTranslations: (namespace: "ModernPages.news") =>
+      actual.createTranslator({ locale: "en", messages, namespace }),
+  };
+});
+
 // Mock authors utility
 vi.mock("@/utils/authors", () => ({
   getFormattedAuthorData: (authorId: string) => {
@@ -20,7 +30,9 @@ describe("NewsEmptyState", () => {
 
   it("renders filter adjustment suggestion", () => {
     render(<NewsEmptyState />);
-    const suggestions = screen.getAllByText("Try adjusting or clearing your filters.");
+    const suggestions = screen.getAllByText(
+      "Try adjusting or clearing your filters.",
+    );
     expect(suggestions.length).toBeGreaterThan(0);
   });
 

@@ -1,88 +1,202 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Join page > renders correctly 1`] = `
-<div>
-  <div
-    class="relative overflow-hidden pt-20 pb-8 md:pb-16 md:pt-32"
+<div
+  class="bg-purple text-white"
+>
+  <header
+    class="border-b border-white/10 bg-[radial-gradient(ellipse_at_top_right,#7026b926,transparent_65%)]"
   >
     <div
-      class="w-full relative"
+      class="mx-auto grid max-w-7xl items-end gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[1fr_auto] lg:gap-10"
     >
       <div
-        class="absolute z-[-1] w-[2396px] h-[1340px] left-[23px] md:left-[112px] top-[21px] md:top-[71px] bg-[#410170] shadow-[0_0_400px_rgba(65,1,112,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[1487px] h-[893px] left-[120px] md:left-[676px] top-[60px] md:top-[195px] bg-[#B62987] shadow-[0_0_400px_rgba(182,41,135,1)] rounded-full blur-[400px]"
-      />
-      <div
-        class="absolute z-[-1] w-[688px] h-[446px] left-[400px] md:left-[1131px] top-[318px] bg-[#FE8492] shadow-[0_0_400px_rgba(254,132,146,1)] rounded-full blur-[400px]"
-      />
-    </div>
-    <div
-      class="mx-auto max-w-[1048px] w-full px-6 lg:px-0 flex flex-col items-center justify-center"
-    >
-      <div
-        class="self-stretch flex-col justify-center items-center flex gap-6"
+        class="max-w-3xl"
       >
         <div
-          class="self-stretch flex-col justify-center items-center flex gap-4"
+          class="mb-4 text-xs font-medium tracking-[0.16em] text-[#ff91b7]"
         >
-          <div
-            class="justify-start items-center gap-3 inline-flex"
-          >
-            <svg
-              fill="none"
-              height="14"
-              viewBox="0 0 14 14"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                fill="#FF1464"
-                height="8"
-                rx="2"
-                width="8"
-                x="3"
-                y="3"
-              />
-              <rect
-                height="11"
-                rx="3.5"
-                stroke="#FF1464"
-                stroke-opacity="0.25"
-                stroke-width="3"
-                width="11"
-                x="1.5"
-                y="1.5"
-              />
-            </svg>
-            <div
-              class="text-rose-600 text-base font-bold leading-normal"
-            >
-              Join the Eclipse Adoptium® Working Group
-            </div>
-          </div>
-          <div
-            class="self-stretch text-center text-white font-semibold text-[56px] lg:text-[80px] leading-[114.286%] md:leading-[120%]"
-          >
-            Joining the Working Group
-          </div>
+          Join the Eclipse Adoptium® Working Group
         </div>
+        <h1
+          class="mb-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl"
+        >
+          Joining the Working Group
+        </h1>
         <div
-          class="self-stretch text-center text-lightgrey font-normal leading-[140%] text-[20px] undefined"
+          class="max-w-2xl text-base leading-relaxed text-grey "
         >
           Eclipse Temurin offers high-performance, cross-platform, open-source Java runtime binaries that are enterprise-ready and Java SE TCK-tested for general use in the Java ecosystem.
         </div>
       </div>
     </div>
-  </div>
+  </header>
   <section
-    class="joinForm mx-auto max-w-4xl w-full p-6 lg:px-0 items-center justify-center"
+    class="mx-auto grid max-w-7xl items-start gap-6 px-6 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-8"
   >
     <div
-      class="hubspotForm"
-      id="hubspotForm"
-    />
+      aria-labelledby="join-form-heading"
+      class="joinForm min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-5 sm:p-8"
+    >
+      <div
+        class="mb-6 border-b border-white/10 pb-6"
+      >
+        <span
+          class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10 text-[#ff91b7]"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            height="20"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            />
+          </svg>
+        </span>
+        <h2
+          class="mb-3 text-2xl font-semibold tracking-tight"
+          id="join-form-heading"
+        >
+          Get in touch
+        </h2>
+        <p
+          class="mb-0 max-w-2xl text-sm leading-relaxed text-grey"
+        >
+          Tell us about your organisation and how you would like to get involved with Eclipse Adoptium.
+        </p>
+      </div>
+      <div
+        class="hubspotForm"
+        id="hubspotForm"
+      />
+    </div>
+    <aside
+      aria-labelledby="join-options-heading"
+      class="min-w-0 rounded-2xl border border-white/10 bg-[#10052d] p-5 sm:p-6"
+    >
+      <h2
+        class="mb-3 text-lg font-semibold"
+        id="join-options-heading"
+      >
+        Explore ways to get involved
+      </h2>
+      <p
+        class="mb-5 text-sm leading-relaxed text-grey"
+      >
+        Learn more about membership, sponsorship and contributing to our projects.
+      </p>
+      <ul
+        class="m-0 list-none space-y-2 p-0"
+      >
+        <li>
+          <a
+            class="flex min-h-12 items-center justify-between gap-3 rounded-xl border border-white/10 px-4 py-3 text-sm text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+            href="/members"
+          >
+            <span>
+              Become a Member
+            </span>
+            <svg
+              aria-hidden="true"
+              class="shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex min-h-12 items-center justify-between gap-3 rounded-xl border border-white/10 px-4 py-3 text-sm text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+            href="/sustainers"
+          >
+            <span>
+              Become a Corporate Sustainer
+            </span>
+            <svg
+              aria-hidden="true"
+              class="shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="flex min-h-12 items-center justify-between gap-3 rounded-xl border border-white/10 px-4 py-3 text-sm text-grey transition-colors hover:border-pink/30 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+            href="/contributing"
+          >
+            <span>
+              Contribute to Adoptium
+            </span>
+            <svg
+              aria-hidden="true"
+              class="shrink-0 text-[#ff91b7]"
+              fill="none"
+              height="1em"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                x2="19"
+                y1="12"
+                y2="12"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </aside>
   </section>
 </div>
 `;

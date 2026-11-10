@@ -19,7 +19,12 @@ const TemurinNightlyTable = ({
     );
   }
   return (
-    <div className="overflow-x-auto rounded-xl bg-[#1B1132]">
+    <div
+      className="relative overflow-x-auto rounded-2xl border border-white/10 bg-[#10052d]"
+      tabIndex={0}
+      role="region"
+      aria-label={t("title")}
+    >
       <table className="min-w-full divide-y divide-[#3E3355]">
         <thead className="bg-[#26193F]">
           <tr>

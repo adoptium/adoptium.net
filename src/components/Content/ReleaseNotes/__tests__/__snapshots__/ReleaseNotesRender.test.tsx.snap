@@ -3,13 +3,13 @@
 exports[`ReleaseNotesRender component > should render correctly - no release notes 1`] = `
 <div>
   <div
-    class="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+    class="release-notes-container mx-auto w-full max-w-7xl px-6 pb-12 pt-6 sm:px-8"
   >
     <div
-      class="text-center mb-10"
+      class="mb-6"
     >
       <h2
-        class="text-[42px] font-semibold tracking-tight text-white mb-1"
+        class="mb-2 break-words text-2xl font-semibold tracking-tight text-white sm:text-3xl"
       >
         release_name_mock
       </h2>
@@ -26,12 +26,12 @@ exports[`ReleaseNotesRender component > should render correctly - no release not
           <h2
             class="text-2xl font-semibold text-white tracking-tight mb-3"
           >
-            Text
+            Oops... We couldn't find those release notes
           </h2>
           <span
             class="text-white/50 text-base"
           >
-            Text
+            Please ensure that you have a specified a version using the version URL parameter:
              
             <code
               class="bg-white/[0.06] px-2 py-1 rounded-md text-pink text-sm font-mono"
@@ -49,13 +49,13 @@ exports[`ReleaseNotesRender component > should render correctly - no release not
 exports[`ReleaseNotesRender component > should render correctly - version not defined 1`] = `
 <div>
   <div
-    class="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+    class="release-notes-container mx-auto w-full max-w-7xl px-6 pb-12 pt-6 sm:px-8"
   >
     <div
-      class="text-center mb-10"
+      class="mb-6"
     >
       <h2
-        class="text-[42px] font-semibold tracking-tight text-white mb-1"
+        class="mb-2 break-words text-2xl font-semibold tracking-tight text-white sm:text-3xl"
       >
         release_name_mock
       </h2>
@@ -67,12 +67,12 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
         class="w-full"
       >
         <div
-          class="text-center mb-10 max-w-2xl mx-auto"
+          class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
         >
           <p
-            class="text-base text-white/50 leading-relaxed mb-4"
+            class="mb-0 max-w-2xl text-sm leading-relaxed text-grey"
           >
-            Text
+            This section organizes the changes in the selected update release by the main component under which each issue is filed.
           </p>
           <div
             class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-4 py-1.5"
@@ -83,30 +83,39 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
             <span
               class="text-sm text-white/60"
             >
-              <span
-                class="font-medium text-white/80"
-              >
-                2
-              </span>
-               
-              P1 fixes
+              2 critical issues
             </span>
           </div>
         </div>
         <div
-          class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6"
+          class="mb-5 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <div
-            class="flex items-center gap-2 flex-wrap"
+            class="mb-4 flex flex-wrap items-center justify-between gap-3"
+          >
+            <h3
+              class="m-0 text-base font-semibold"
+            >
+              Filter changes
+            </h3>
+            <span
+              class="text-xs text-grey"
+              role="status"
+            >
+              2 changes
+            </span>
+          </div>
+          <div
+            class="grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto]"
           >
             <select
-              aria-label="Filter by priority"
-              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+              aria-label="Priority"
+              class="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
             >
               <option
                 value=""
               >
-                All Priorities
+                All priorities
               </option>
               <option
                 value="1"
@@ -116,13 +125,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
               </option>
             </select>
             <select
-              aria-label="Filter by type"
-              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+              aria-label="Type"
+              class="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
             >
               <option
-                value=""
+                value="all"
               >
-                All Types
+                All types
               </option>
               <option
                 value="Bug"
@@ -131,13 +140,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
               </option>
             </select>
             <select
-              aria-label="Filter by component"
-              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+              aria-label="Component"
+              class="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
             >
               <option
                 value=""
               >
-                All Components
+                All components
               </option>
               <option
                 value="component_mock"
@@ -145,15 +154,18 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 component_mock
               </option>
             </select>
+            <button
+              class="min-h-11 rounded-xl border border-white/15 px-4 py-2 text-sm font-medium text-[#ff91b7] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+            >
+              Export CSV
+            </button>
           </div>
-          <button
-            class="text-sm font-medium text-white/50 hover:text-white bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-2 hover:bg-white/[0.08] hover:border-white/[0.14] transition-all duration-200"
-          >
-            Export CSV
-          </button>
         </div>
         <div
-          class="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl"
+          aria-label="Release Notes"
+          class="relative overflow-x-auto rounded-2xl border border-white/10 bg-[#10052d]"
+          role="region"
+          tabindex="0"
         >
           <table
             aria-label="Release Notes"
@@ -164,15 +176,23 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 class="border-b border-white/[0.08]"
               >
                 <th
+                  aria-sort="ascending"
                   class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase cursor-pointer select-none hover:text-white/70 transition-colors duration-200 w-[100px]"
                 >
-                  Priority
-                   
-                  <span
-                    class="text-white/20"
+                  <button
+                    aria-label="Sort by priority"
+                    class="inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                    type="button"
                   >
-                    ▲
-                  </span>
+                    <span>
+                      Priority
+                    </span>
+                    <span
+                      class="text-white/20"
+                    >
+                      ▲
+                    </span>
+                  </button>
                 </th>
                 <th
                   class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[120px]"
@@ -192,7 +212,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 <th
                   class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase min-w-[300px]"
                 >
-                  Title
+                  Summary
                 </th>
               </tr>
             </thead>
@@ -207,7 +227,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 >
                   <span
                     class="badge priority-1"
-                    title="P1 - Blocks development and/or testing work, production could not run."
+                    title="Blocks development or testing; production cannot run."
                   >
                     P1
                   </span>
@@ -254,7 +274,7 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 >
                   <span
                     class="badge priority-1"
-                    title="P1 - Blocks development and/or testing work, production could not run."
+                    title="Blocks development or testing; production cannot run."
                   >
                     P1
                   </span>
@@ -295,13 +315,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
           </table>
         </div>
         <div
-          class="flex items-center justify-between gap-4 mt-4 px-1"
+          class="mt-4 flex flex-wrap items-center justify-between gap-4 px-1 text-grey"
         >
-          <div
-            class="flex items-center gap-2 text-sm text-white/40"
+          <label
+            class="flex items-center gap-2 text-sm"
           >
             <span>
-              Rows
+              Rows per page
             </span>
             <select
               class="appearance-none bg-white/[0.04] text-white/60 border border-white/[0.08] rounded-lg px-2 py-1 text-sm focus:outline-none focus:border-white/20 transition-all duration-200 cursor-pointer"
@@ -322,23 +342,25 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
                 75
               </option>
             </select>
-          </div>
+          </label>
           <div
-            class="flex items-center gap-4 text-sm text-white/40"
+            class="flex flex-wrap items-center gap-4 text-sm"
           >
             <span>
-              1–2 of 2
+              Page 1 of 1
             </span>
             <div
               class="flex items-center gap-1"
             >
               <button
+                aria-label="Previous"
                 class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
                 disabled=""
               >
                 ‹
               </button>
               <button
+                aria-label="Next"
                 class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
                 disabled=""
               >
@@ -356,13 +378,13 @@ exports[`ReleaseNotesRender component > should render correctly - version not de
 exports[`ReleaseNotesRender component > should render correctly 1`] = `
 <div>
   <div
-    class="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+    class="release-notes-container mx-auto w-full max-w-7xl px-6 pb-12 pt-6 sm:px-8"
   >
     <div
-      class="text-center mb-10"
+      class="mb-6"
     >
       <h2
-        class="text-[42px] font-semibold tracking-tight text-white mb-1"
+        class="mb-2 break-words text-2xl font-semibold tracking-tight text-white sm:text-3xl"
       >
         release_name_mock
       </h2>
@@ -374,12 +396,12 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
         class="w-full"
       >
         <div
-          class="text-center mb-10 max-w-2xl mx-auto"
+          class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
         >
           <p
-            class="text-base text-white/50 leading-relaxed mb-4"
+            class="mb-0 max-w-2xl text-sm leading-relaxed text-grey"
           >
-            Text
+            This section organizes the changes in the selected update release by the main component under which each issue is filed.
           </p>
           <div
             class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-4 py-1.5"
@@ -390,30 +412,39 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
             <span
               class="text-sm text-white/60"
             >
-              <span
-                class="font-medium text-white/80"
-              >
-                2
-              </span>
-               
-              P1 fixes
+              2 critical issues
             </span>
           </div>
         </div>
         <div
-          class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6"
+          class="mb-5 rounded-2xl border border-white/10 bg-white/[0.025] p-5"
         >
           <div
-            class="flex items-center gap-2 flex-wrap"
+            class="mb-4 flex flex-wrap items-center justify-between gap-3"
+          >
+            <h3
+              class="m-0 text-base font-semibold"
+            >
+              Filter changes
+            </h3>
+            <span
+              class="text-xs text-grey"
+              role="status"
+            >
+              2 changes
+            </span>
+          </div>
+          <div
+            class="grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto]"
           >
             <select
-              aria-label="Filter by priority"
-              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+              aria-label="Priority"
+              class="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
             >
               <option
                 value=""
               >
-                All Priorities
+                All priorities
               </option>
               <option
                 value="1"
@@ -423,13 +454,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
               </option>
             </select>
             <select
-              aria-label="Filter by type"
-              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+              aria-label="Type"
+              class="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
             >
               <option
-                value=""
+                value="all"
               >
-                All Types
+                All types
               </option>
               <option
                 value="Bug"
@@ -438,13 +469,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
               </option>
             </select>
             <select
-              aria-label="Filter by component"
-              class="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+              aria-label="Component"
+              class="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
             >
               <option
                 value=""
               >
-                All Components
+                All components
               </option>
               <option
                 value="component_mock"
@@ -452,15 +483,18 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 component_mock
               </option>
             </select>
+            <button
+              class="min-h-11 rounded-xl border border-white/15 px-4 py-2 text-sm font-medium text-[#ff91b7] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+            >
+              Export CSV
+            </button>
           </div>
-          <button
-            class="text-sm font-medium text-white/50 hover:text-white bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-2 hover:bg-white/[0.08] hover:border-white/[0.14] transition-all duration-200"
-          >
-            Export CSV
-          </button>
         </div>
         <div
-          class="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl"
+          aria-label="Release Notes"
+          class="relative overflow-x-auto rounded-2xl border border-white/10 bg-[#10052d]"
+          role="region"
+          tabindex="0"
         >
           <table
             aria-label="Release Notes"
@@ -471,15 +505,23 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 class="border-b border-white/[0.08]"
               >
                 <th
+                  aria-sort="ascending"
                   class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase cursor-pointer select-none hover:text-white/70 transition-colors duration-200 w-[100px]"
                 >
-                  Priority
-                   
-                  <span
-                    class="text-white/20"
+                  <button
+                    aria-label="Sort by priority"
+                    class="inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                    type="button"
                   >
-                    ▲
-                  </span>
+                    <span>
+                      Priority
+                    </span>
+                    <span
+                      class="text-white/20"
+                    >
+                      ▲
+                    </span>
+                  </button>
                 </th>
                 <th
                   class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[120px]"
@@ -499,7 +541,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 <th
                   class="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase min-w-[300px]"
                 >
-                  Title
+                  Summary
                 </th>
               </tr>
             </thead>
@@ -514,7 +556,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 >
                   <span
                     class="badge priority-1"
-                    title="P1 - Blocks development and/or testing work, production could not run."
+                    title="Blocks development or testing; production cannot run."
                   >
                     P1
                   </span>
@@ -561,7 +603,7 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 >
                   <span
                     class="badge priority-1"
-                    title="P1 - Blocks development and/or testing work, production could not run."
+                    title="Blocks development or testing; production cannot run."
                   >
                     P1
                   </span>
@@ -602,13 +644,13 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
           </table>
         </div>
         <div
-          class="flex items-center justify-between gap-4 mt-4 px-1"
+          class="mt-4 flex flex-wrap items-center justify-between gap-4 px-1 text-grey"
         >
-          <div
-            class="flex items-center gap-2 text-sm text-white/40"
+          <label
+            class="flex items-center gap-2 text-sm"
           >
             <span>
-              Rows
+              Rows per page
             </span>
             <select
               class="appearance-none bg-white/[0.04] text-white/60 border border-white/[0.08] rounded-lg px-2 py-1 text-sm focus:outline-none focus:border-white/20 transition-all duration-200 cursor-pointer"
@@ -629,23 +671,25 @@ exports[`ReleaseNotesRender component > should render correctly 1`] = `
                 75
               </option>
             </select>
-          </div>
+          </label>
           <div
-            class="flex items-center gap-4 text-sm text-white/40"
+            class="flex flex-wrap items-center gap-4 text-sm"
           >
             <span>
-              1–2 of 2
+              Page 1 of 1
             </span>
             <div
               class="flex items-center gap-1"
             >
               <button
+                aria-label="Previous"
                 class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
                 disabled=""
               >
                 ‹
               </button>
               <button
+                aria-label="Next"
                 class="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
                 disabled=""
               >

@@ -72,6 +72,8 @@ interface Filters {
 
 const ReleaseNotesRender = () => {
   const t = useTranslations("ReleaseNotes");
+  const tModern = useTranslations("ModernPages.release-notes");
+  const tCommon = useTranslations("ModernPages.common");
   const searchParams = useSearchParams();
   const rawVersion = searchParams.get("version");
   const version = rawVersion ? rawVersion.replace(/ /g, "+") : undefined;
@@ -138,7 +140,9 @@ const ReleaseNotesRender = () => {
     let rows = [...releaseNotes.release_notes];
 
     const activeTypeFilter =
-      filters.type || (isEnhancementDefault ? "Enhancement" : "");
+      filters.type === "all"
+        ? ""
+        : filters.type || (isEnhancementDefault ? "Enhancement" : "");
     if (filters.priority)
       rows = rows.filter((r) => r.priority === filters.priority);
     if (activeTypeFilter)
@@ -197,26 +201,24 @@ const ReleaseNotesRender = () => {
   return (
     <div
       ref={ref}
-      className="release-notes-container mx-auto w-full max-w-5xl px-6 lg:px-0 pb-20 pt-2"
+      className="release-notes-container mx-auto w-full max-w-7xl px-6 pb-12 pt-6 sm:px-8"
     >
       {/* Version title */}
-      <div className="text-center mb-10">
-        <h2 className="text-[42px] font-semibold tracking-tight text-white mb-1">
+      <div className="mb-6">
+        <h2 className="mb-2 break-words text-2xl font-semibold tracking-tight text-white sm:text-3xl">
           {releaseNotesVersion}
         </h2>
       </div>
 
       <div className="w-full">
         {!releaseNoteDataBag ? (
-          <div className="flex items-center justify-center py-32">
+          <div className="flex items-center justify-center py-16" role="status">
             <div className="flex flex-col items-center gap-4">
               <div
                 className="h-8 w-8 rounded-full border-2 border-white/10 border-t-pink animate-spin"
-                aria-label="loading spinner"
+                aria-hidden="true"
               />
-              <span className="text-sm text-white/30 tracking-wide">
-                Loading release notes…
-              </span>
+              <span className="text-sm text-grey">{tModern("loading")}</span>
             </div>
           </div>
         ) : (
@@ -236,31 +238,36 @@ const ReleaseNotesRender = () => {
             ) : (
               <>
                 {/* Description + stats */}
-                <div className="text-center mb-10 max-w-2xl mx-auto">
-                  <p className="text-base text-white/50 leading-relaxed mb-4">
+                <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="mb-0 max-w-2xl text-sm leading-relaxed text-grey">
                     {t("description")}
                   </p>
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-4 py-1.5">
                     <span className="w-2 h-2 rounded-full bg-pink/80" />
                     <span className="text-sm text-white/60">
-                      <span className="font-medium text-white/80">
-                        {totalP1}
-                      </span>{" "}
-                      P1 fixes
+                      {tModern("p1", { count: totalP1 ?? 0 })}
                     </span>
                   </div>
                 </div>
 
                 {/* Toolbar */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                  <div className="flex items-center gap-2 flex-wrap">
+                <div className="mb-5 rounded-2xl border border-white/10 bg-white/[0.025] p-5">
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                    <h3 className="m-0 text-base font-semibold">
+                      {tModern("filters")}
+                    </h3>
+                    <span className="text-xs text-grey" role="status">
+                      {tModern("results", { count: totalRows })}
+                    </span>
+                  </div>
+                  <div className="grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto]">
                     <select
-                      aria-label="Filter by priority"
+                      aria-label={tModern("priority")}
                       value={filters.priority}
                       onChange={(e) => updateFilter("priority", e.target.value)}
-                      className="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+                      className="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
                     >
-                      <option value="">All Priorities</option>
+                      <option value="">{tModern("all-priorities")}</option>
                       {priorities.map((p) => (
                         <option key={p} value={p}>
                           P{p !== "6" ? p : "?"}
@@ -268,15 +275,15 @@ const ReleaseNotesRender = () => {
                       ))}
                     </select>
                     <select
-                      aria-label="Filter by type"
+                      aria-label={tModern("type")}
                       value={
                         filters.type ||
-                        (isEnhancementDefault ? "Enhancement" : "")
+                        (isEnhancementDefault ? "Enhancement" : "all")
                       }
                       onChange={(e) => updateFilter("type", e.target.value)}
-                      className="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+                      className="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
                     >
-                      <option value="">All Types</option>
+                      <option value="all">{tModern("all-types")}</option>
                       {types.map((ty) => (
                         <option key={ty} value={ty}>
                           {ty}
@@ -284,57 +291,68 @@ const ReleaseNotesRender = () => {
                       ))}
                     </select>
                     <select
-                      aria-label="Filter by component"
+                      aria-label={tModern("component")}
                       value={filters.component}
                       onChange={(e) =>
                         updateFilter("component", e.target.value)
                       }
-                      className="appearance-none bg-white/[0.04] text-white/70 text-sm border border-white/[0.08] rounded-lg px-3 py-2 focus:outline-none focus:border-white/20 focus:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+                      className="min-h-11 w-full min-w-0 rounded-xl border border-white/15 bg-[#1c1040] px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-pink"
                     >
-                      <option value="">All Components</option>
+                      <option value="">{tModern("all-components")}</option>
                       {components.map((c) => (
                         <option key={c} value={c}>
                           {c}
                         </option>
                       ))}
                     </select>
+                    <button
+                      onClick={handleExport}
+                      className="min-h-11 rounded-xl border border-white/15 px-4 py-2 text-sm font-medium text-[#ff91b7] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink"
+                    >
+                      {tModern("export")}
+                    </button>
                   </div>
-                  <button
-                    onClick={handleExport}
-                    className="text-sm font-medium text-white/50 hover:text-white bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-2 hover:bg-white/[0.08] hover:border-white/[0.14] transition-all duration-200"
-                  >
-                    Export CSV
-                  </button>
                 </div>
 
                 {/* Table */}
-                <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl">
-                  <table
-                    className="w-full text-left"
-                    aria-label="Release Notes"
-                  >
+                <div
+                  className="relative overflow-x-auto rounded-2xl border border-white/10 bg-[#10052d]"
+                  tabIndex={0}
+                  role="region"
+                  aria-label={t("title")}
+                >
+                  <table className="w-full text-left" aria-label={t("title")}>
                     <thead>
                       <tr className="border-b border-white/[0.08]">
                         <th
                           className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase cursor-pointer select-none hover:text-white/70 transition-colors duration-200 w-[100px]"
-                          onClick={toggleSort}
+                          aria-sort={
+                            sortDirection === "asc" ? "ascending" : "descending"
+                          }
                         >
-                          Priority{" "}
-                          <span className="text-white/20">
-                            {sortDirection === "asc" ? "\u25B2" : "\u25BC"}
-                          </span>
+                          <button
+                            type="button"
+                            onClick={toggleSort}
+                            className="inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                            aria-label={tModern("sort")}
+                          >
+                            <span>{tModern("priority")}</span>
+                            <span className="text-white/20">
+                              {sortDirection === "asc" ? "\u25B2" : "\u25BC"}
+                            </span>
+                          </button>
                         </th>
                         <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[120px]">
-                          Type
+                          {tModern("type")}
                         </th>
                         <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[160px]">
-                          Component
+                          {tModern("component")}
                         </th>
                         <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase w-[130px]">
-                          Issue
+                          {tModern("issue")}
                         </th>
                         <th className="px-5 py-3.5 text-white/40 font-medium text-xs tracking-wider uppercase min-w-[300px]">
-                          Title
+                          {tModern("summary")}
                         </th>
                       </tr>
                     </thead>
@@ -349,9 +367,7 @@ const ReleaseNotesRender = () => {
                         >
                           <td data-field="priority" className="px-5 py-3.5">
                             <span
-                              title={fetchTitle(
-                                (row.priority as string) || "6",
-                              )}
+                              title={tModern(`priority-${row.priority || "6"}`)}
                               className={`badge priority-${row.priority}`}
                             >
                               {row.priority && row.priority !== "6"
@@ -363,7 +379,7 @@ const ReleaseNotesRender = () => {
                             data-field="type"
                             className="px-5 py-3.5 text-white/60 text-sm"
                           >
-                            {row.type || "Hidden"}
+                            {row.type || tModern("hidden")}
                           </td>
                           <td
                             data-field="component"
@@ -395,7 +411,7 @@ const ReleaseNotesRender = () => {
                             colSpan={5}
                             className="px-5 py-16 text-center text-white/30 text-sm"
                           >
-                            No results found
+                            {tModern("empty")}
                           </td>
                         </tr>
                       )}
@@ -404,9 +420,9 @@ const ReleaseNotesRender = () => {
                 </div>
 
                 {/* Pagination */}
-                <div className="flex items-center justify-between gap-4 mt-4 px-1">
-                  <div className="flex items-center gap-2 text-sm text-white/40">
-                    <span>Rows</span>
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-4 px-1 text-grey">
+                  <label className="flex items-center gap-2 text-sm">
+                    <span>{tModern("rows")}</span>
                     <select
                       value={pageSize}
                       onChange={(e) => {
@@ -421,15 +437,17 @@ const ReleaseNotesRender = () => {
                         </option>
                       ))}
                     </select>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-white/40">
+                  </label>
+                  <div className="flex flex-wrap items-center gap-4 text-sm">
                     <span>
-                      {totalRows > 0
-                        ? `${safePage * pageSize + 1}\u2013${Math.min((safePage + 1) * pageSize, totalRows)} of ${totalRows}`
-                        : "0 of 0"}
+                      {tModern("page", {
+                        page: safePage + 1,
+                        total: totalPages,
+                      })}
                     </span>
                     <div className="flex items-center gap-1">
                       <button
+                        aria-label={tCommon("previous")}
                         onClick={() => setPage((p) => Math.max(0, p - 1))}
                         disabled={safePage === 0}
                         className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] disabled:opacity-25 disabled:cursor-not-allowed transition-all duration-200 text-white/60"
@@ -437,6 +455,7 @@ const ReleaseNotesRender = () => {
                         &lsaquo;
                       </button>
                       <button
+                        aria-label={tCommon("next")}
                         onClick={() =>
                           setPage((p) => Math.min(totalPages - 1, p + 1))
                         }

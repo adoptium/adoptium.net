@@ -40,6 +40,99 @@
     "title": "很抱歉，无法找到此页面",
     "back-to-home": "返回首页"
   },
+  "BusinessBenefits": {
+    "support": {
+      "title": "需要 Temurin 支持？",
+      "description": "Eclipse Temurin 拥有活跃的开发者和用户社区。如果您需要帮助，请联系我们。",
+      "cta": "获取支持"
+    },
+    "contact": {
+      "title": "联系我们，了解 Temurin 如何助力您的业务",
+      "description": "准备好参与了吗？请填写成员申请表，迈出共同塑造 Adoptium 未来的第一步。",
+      "cta": "联系我们"
+    },
+    "usage": {
+      "title": "其他企业如何使用 Temurin",
+      "description": "了解行业领先企业如何利用 Temurin 提升性能，并推动开发流程创新。"
+    },
+    "adopters": {
+      "title": "Eclipse Temurin® 用户企业",
+      "description": "在生产环境中使用 Eclipse Temurin 的企业。"
+    },
+    "header": {
+      "title": "Eclipse Temurin® 如何助力您的业务",
+      "subtitle": "业务优势",
+      "description": "Eclipse Temurin 提供高性能、跨平台的开源 Java 运行时二进制文件，适用于企业环境，并经过 Java SE TCK 测试，可广泛用于 Java 生态系统。",
+      "contact": "联系我们"
+    }
+  },
+  "JoinPage": {
+    "title": "加入工作组",
+    "subtitle": "加入 Eclipse Adoptium® 工作组",
+    "form-title": "联系我们",
+    "form-description": "请介绍您的组织，以及您希望如何参与 Eclipse Adoptium。",
+    "options-title": "探索参与方式",
+    "options-description": "了解成员资格、赞助以及为我们的项目做贡献的方式。"
+  },
+  "SupportingAnnouncement": {
+    "brand": "ECLIPSE ADOPTIUM",
+    "member": {
+      "title": "成为 Adoptium 成员",
+      "description": "加入 Adoptium 工作组，支持开源 Java 的未来。了解成员资格选项及其权益。",
+      "cta": "了解更多"
+    },
+    "sustainer": {
+      "title": "成为支持者",
+      "description": "加入 Eclipse Temurin 支持计划，支持发展最快的开源 JDK。您的支持将助力更强的安全性、更快的发布、可直接部署的构建、质量测试和社区发展。",
+      "cta": "了解更多"
+    },
+    "bloomberg": {
+      "title": "案例研究：Bloomberg 转向开源 Java",
+      "description": "了解 Eclipse Temurin 如何助力全球金融基础设施。",
+      "cta": "阅读案例研究"
+    }
+  },
+  "NavBar": {
+    "Join Us": "加入我们",
+    "Become a Member": "成为成员",
+    "Our Members": "我们的成员",
+    "Become an Individual Sustainer": "成为个人支持者",
+    "Become a Corporate Sustainer": "成为企业支持者",
+    "Our Sustainers": "我们的支持者",
+    "Contribute to Adoptium": "为 Adoptium 做贡献",
+    "Become an Adopter": "登记使用案例",
+    "Our Adopters": "我们的用户企业",
+    "Latest Releases": "最新发行版",
+    "Marketplace": "市场",
+    "Projects": "项目",
+    "What We Do": "我们的工作",
+    "Eclipse Temurin": "Eclipse Temurin",
+    "Eclipse AQAvit": "Eclipse AQAvit",
+    "Eclipse Mission Control": "Eclipse Mission Control",
+    "Eclipse Migration Toolkit": "Eclipse Migration Toolkit",
+    "Resources": "资源",
+    "Status": "服务状态",
+    "Release Notes": "发行说明",
+    "Installation Guide": "安装指南",
+    "Documentation": "文档",
+    "FAQs": "常见问题",
+    "Brand & Promotion": "品牌与推广",
+    "Community": "社区",
+    "Support": "支持",
+    "News": "新闻",
+    "Events": "活动",
+    "Slack": "Slack",
+    "Membership": "成员资格",
+    "Sponsorship": "赞助",
+    "Contribute": "贡献",
+    "Adopt": "使用",
+    "Join Us Overview": "参与方式",
+    "Global": "主导航",
+    "Adoptium Logo": "Adoptium 标志",
+    "notifications": "通知",
+    "Open main menu": "打开主菜单",
+    "Close menu": "关闭菜单"
+  },
   "WhatWeDo": {
     "mission": "携手共建开放的 Java",
     "community": "社区主导的协作",
@@ -121,6 +214,7 @@
     }
   },
   "RandomContributors": {
+    "become-contributor": "成为贡献者",
     "thank-you": "感谢我们的 <highlight>300+</highlight> 位贡献者",
     "thank-you-mobile": "感谢 <linebreak></linebreak> 我们的 <highlight>300+</highlight> 位贡献者"
   },
@@ -328,5 +422,156 @@
   },
   "Byline": {
     "reading-time": "{minutes} 分钟阅读"
+  },
+  "ModernPages": {
+    "common": {
+      "learn-more": "了解更多",
+      "loading": "加载中…",
+      "all": "全部",
+      "previous": "上一页",
+      "next": "下一页"
+    },
+    "temurin": {
+      "resources-title": "开始使用 Temurin",
+      "resources-description": "安装 Temurin、查阅文档，或帮助支持项目的持续发展。",
+      "install-description": "查找适用于您的操作系统和开发工具的安装说明。",
+      "docs-description": "查阅 Eclipse Temurin 的配置和使用指南。",
+      "sponsor-title": "支持项目",
+      "sponsor-description": "捐助将用于支持 Eclipse Temurin 背后的基础设施和社区。",
+      "contact-title": "让 Temurin 为您的企业服务",
+      "contact-description": "与我们的社区一起探索成本节约、商业支持和软件供应链安全。",
+      "contact": "联系我们",
+      "community": "与社区交流"
+    },
+    "platforms": {
+      "title": "支持的平台",
+      "description": "了解最新 Eclipse Temurin 版本的操作系统兼容性。",
+      "intro": "展开操作系统条目，比较 JDK 版本和 Docker 可用性。",
+      "supported": "支持",
+      "unsupported": "不支持",
+      "docker": "提供 Docker 镜像",
+      "community-title": "选择平台时需要帮助？",
+      "community-description": "与 Adoptium 社区讨论您的运行环境。",
+      "community-cta": "加入讨论"
+    },
+    "sustainer": {
+      "title": "成为企业长期赞助者",
+      "subtitle": "支持 Eclipse Temurin",
+      "description": "帮助维持基础设施、测试和分发服务，让每个人都能使用 Eclipse Temurin。",
+      "form-title": "与我们交流",
+      "form-description": "向我们介绍您的组织，我们的团队将帮助您找到合适的方式来支持 Temurin。",
+      "thanks-title": "感谢您的支持",
+      "thanks-description": "我们已收到您的咨询。我们的团队将与您联系，讨论成为企业长期赞助者的相关事宜。",
+      "options-title": "探索参与方式",
+      "options-description": "了解长期赞助者权益、会员资格及其他参与方式。"
+    },
+    "slack": {
+      "title": "加入讨论",
+      "subtitle": "Adoptium 社区",
+      "description": "在 Slack 上与 Eclipse Adoptium 的用户、贡献者和维护者交流。",
+      "card-title": "围绕开源 Java 构建的社区",
+      "card-description": "提出问题、分享经验，并参与 Eclipse Temurin 及其他 Adoptium 项目的协作。",
+      "cta": "加入 Slack",
+      "hint": "在新标签页中打开 Adoptium Slack 邀请链接。",
+      "support": "需要 Temurin 方面的帮助？",
+      "support-description": "了解社区帮助和商业支持选项。",
+      "support-cta": "获取支持"
+    },
+    "events": {
+      "title": "结识社区成员",
+      "subtitle": "活动与社区",
+      "description": "查找在线上和世界各地举办的 Adoptium 社区会议及 Eclipse 基金会活动。",
+      "upcoming": "Eclipse 基金会活动",
+      "calendar-title": "Adoptium 社区日历",
+      "calendar-description": "掌握社区会议动态，结识其他贡献者，分享您的工作进展。",
+      "view-calendar": "查看日历",
+      "subscribe": "订阅 iCal 日历",
+      "calendar-hint": "社区会议、安全会议、AQAvit 和网站会议、发布日期以及其他线上聚会。",
+      "all-events": "查看所有 Eclipse 基金会活动",
+      "submit": "提交活动",
+      "empty": "目前没有可显示的活动。请查看日历以了解社区会议安排。"
+    },
+    "news": {
+      "title": "新闻与动态",
+      "subtitle": "来自 Adoptium 社区",
+      "description": "项目公告、版本发布新闻以及整个 Java 生态系统的精彩故事。",
+      "filters": "浏览最新资讯",
+      "sources": "所有来源",
+      "tags": "所有标签",
+      "authors": "所有作者",
+      "remove-tag": "移除标签：{tag}",
+      "read-more": "阅读更多",
+      "read-article": "阅读文章",
+      "tag-title": "带有 {tag} 标签的文章",
+      "tag": "标签",
+      "source": "来源",
+      "author": "作者",
+      "submit": "提交新闻",
+      "empty": "没有符合筛选条件的文章。",
+      "empty-description": "请尝试调整或清除筛选条件。",
+      "no-results": "未找到结果"
+    },
+    "stats": {
+      "title": "Adoptium 下载统计",
+      "subtitle": "项目数据概览",
+      "description": "了解各版本和平台的 Eclipse Temurin 下载量及 Docker 镜像拉取量。",
+      "trends-title": "下载趋势",
+      "trends-description": "比较下载量和 Docker 镜像拉取量随时间的变化。",
+      "downloads": "下载量",
+      "trends": "趋势",
+      "total": "总下载量",
+      "github": "GitHub 下载量",
+      "docker": "Docker 拉取量",
+      "popular": "最受欢迎的 JDK 版本",
+      "github-version": "按版本统计的 GitHub 下载量",
+      "daily": "每日下载量",
+      "monthly": "每月下载量",
+      "version": "JDK 版本",
+      "source": "来源",
+      "visible": "显示数据系列",
+      "type": "类型",
+      "days": "天数",
+      "series": "系列 {number}",
+      "daily-label": "每日",
+      "monthly-label": "每月",
+      "total-label": "总计",
+      "docker-note": "JDK 版本筛选不包含 Docker 官方仓库的结果。",
+      "by-source": "按来源统计的下载量",
+      "drilldown": "按发行版本查看下载量"
+    },
+    "release-notes": {
+      "description": "了解 Eclipse Temurin 各版本的变更、修复和改进。",
+      "lts": "长期支持",
+      "features": "功能版本",
+      "back": "所有版本",
+      "loading": "正在加载发行说明…",
+      "filters": "筛选变更",
+      "export": "导出 CSV",
+      "rows": "每页行数",
+      "priority": "优先级",
+      "type": "类型",
+      "component": "组件",
+      "issue": "问题",
+      "summary": "摘要",
+      "all-priorities": "所有优先级",
+      "all-types": "所有类型",
+      "all-components": "所有组件",
+      "empty": "没有符合筛选条件的变更。",
+      "results": "{count} 项变更",
+      "page": "第 {page} 页，共 {total} 页",
+      "p1": "{count} 个严重问题",
+      "sort": "按优先级排序",
+      "view": "查看发行说明",
+      "hidden": "不公开",
+      "priority-1": "阻碍开发或测试，生产环境无法运行。",
+      "priority-2": "崩溃、数据丢失或严重的内存泄漏。",
+      "priority-3": "重大功能缺失。",
+      "priority-4": "轻微功能缺失，或有简单规避方法的问题。",
+      "priority-5": "拼写或对齐等外观问题。",
+      "priority-6": "此问题不公开。"
+    },
+    "nightly": {
+      "filter-title": "查找早期访问构建"
+    }
   }
 }

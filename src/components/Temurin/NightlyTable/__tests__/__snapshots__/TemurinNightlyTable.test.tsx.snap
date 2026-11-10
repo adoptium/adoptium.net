@@ -13,7 +13,10 @@ exports[`TemurinNightlyTable component > renders correctly - no data 1`] = `
 exports[`TemurinNightlyTable component > renders correctly 1`] = `
 <div>
   <div
-    class="overflow-x-auto rounded-xl bg-[#1B1132]"
+    aria-label="Text"
+    class="relative overflow-x-auto rounded-2xl border border-white/10 bg-[#10052d]"
+    role="region"
+    tabindex="0"
   >
     <table
       class="min-w-full divide-y divide-[#3E3355]"

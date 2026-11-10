@@ -3,32 +3,163 @@
 exports[`UsingTemurin component > should render correctly 1`] = `
 <div>
   <section
-    class="py-16 max-w-[1048px] w-full mx-auto lg:flex justify-center lg:justify-between xl:px-0 px-6 "
+    class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16"
   >
     <div
-      class="lg:max-w-[560px] w-full"
+      class="mb-8 max-w-3xl"
     >
       <h2
-        class="md:text-5xl text-[40px] font-normal leading-[48px] md:leading-[56px]"
+        class="mb-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
       >
         How other companies are using Temurin
       </h2>
       <p
-        class="md:mt-6 my-10 text-grey text-base leading-6 font-normal"
+        class="mb-0 text-sm leading-relaxed text-grey sm:text-base"
       >
         Discover how industry leaders leverage Temurin to enhance performance and drive innovation in their development processes.
       </p>
     </div>
     <div
-      class="max-w-[400px] w-full hidden lg:block"
+      class="grid gap-4 md:grid-cols-3"
     >
-      <img
-        alt="scroll-divider"
-        class="mb-0"
-        height="400"
-        src="/images/icons/experience.webp"
-        width="400"
-      />
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <div
+          class="mb-5 flex items-center justify-between gap-3"
+        >
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10 text-[#ff91b7]"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="22 12 18 12 15 21 9 3 6 12 2 12"
+              />
+            </svg>
+          </span>
+          <span
+            aria-hidden="true"
+            class="font-mono text-xs text-white/30"
+          >
+            01
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-lg font-semibold leading-snug tracking-tight text-white"
+        >
+          Performance & Reliability
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Run your enterprise applications with confidence using Eclipse Temurin, a secure, high-performance Java runtime rigorously tested for stability and optimized for seamless operation across diverse environments.
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <div
+          class="mb-5 flex items-center justify-between gap-3"
+        >
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10 text-[#ff91b7]"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="23 6 13.5 15.5 8.5 10.5 1 18"
+              />
+              <polyline
+                points="17 6 23 6 23 12"
+              />
+            </svg>
+          </span>
+          <span
+            aria-hidden="true"
+            class="font-mono text-xs text-white/30"
+          >
+            02
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-lg font-semibold leading-snug tracking-tight text-white"
+        >
+          Cost-Effective Innovation
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Adopt high-quality open source Java with no licensing fees. Reduce costs while benefiting from a robust ecosystem that ensures long-term sustainability and enterprise-ready runtime performance.
+        </p>
+      </article>
+      <article
+        class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-6"
+      >
+        <div
+          class="mb-5 flex items-center justify-between gap-3"
+        >
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-pink/10 text-[#ff91b7]"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="16 18 22 12 16 6"
+              />
+              <polyline
+                points="8 6 2 12 8 18"
+              />
+            </svg>
+          </span>
+          <span
+            aria-hidden="true"
+            class="font-mono text-xs text-white/30"
+          >
+            03
+          </span>
+        </div>
+        <h3
+          class="mb-3 text-lg font-semibold leading-snug tracking-tight text-white"
+        >
+          Empowering Developers
+        </h3>
+        <p
+          class="mb-0 text-sm leading-relaxed text-grey"
+        >
+          Boost developer productivity with Eclipse Temurin's consistent, cross-platform builds. Focus on innovation while relying on a dependable, high-quality runtime trusted by millions worldwide.
+        </p>
+      </article>
     </div>
   </section>
 </div>

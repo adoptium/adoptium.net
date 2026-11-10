@@ -4,11 +4,25 @@ import { render, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import ClientPagination from "../ClientPagination";
 
+vi.mock("next-intl", async () => {
+  const actual = await vi.importActual<typeof import("next-intl")>("next-intl");
+  const messages = (await import("@/../locales/en.json")).default;
+  return {
+    ...actual,
+    useTranslations: (namespace: "ModernPages.common") =>
+      actual.createTranslator({ locale: "en", messages, namespace }),
+  };
+});
+
 describe("ClientPagination", () => {
   it("renders all pages when totalPages <= 7", () => {
     const onNavigate = vi.fn();
     const { getByText } = render(
-      <ClientPagination currentPage={1} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={1}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
     expect(getByText("1")).toBeTruthy();
     expect(getByText("2")).toBeTruthy();
@@ -18,7 +32,11 @@ describe("ClientPagination", () => {
   it("renders Previous and Next buttons", () => {
     const onNavigate = vi.fn();
     const { getAllByText } = render(
-      <ClientPagination currentPage={2} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={2}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
     expect(getAllByText("Previous").length).toBeGreaterThan(0);
     expect(getAllByText("Next").length).toBeGreaterThan(0);
@@ -27,9 +45,15 @@ describe("ClientPagination", () => {
   it("disables Previous button on first page", () => {
     const onNavigate = vi.fn();
     const { getAllByText } = render(
-      <ClientPagination currentPage={1} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={1}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
-    const prevButtons = getAllByText("Previous").map((el) => el.closest("button")).filter(Boolean);
+    const prevButtons = getAllByText("Previous")
+      .map((el) => el.closest("button"))
+      .filter(Boolean);
     // At least one previous button should be disabled
     expect(prevButtons.some((btn) => btn?.disabled)).toBe(true);
   });
@@ -37,16 +61,26 @@ describe("ClientPagination", () => {
   it("disables Next button on last page", () => {
     const onNavigate = vi.fn();
     const { getAllByText } = render(
-      <ClientPagination currentPage={5} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={5}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
-    const nextButtons = getAllByText("Next").map((el) => el.closest("button")).filter(Boolean);
+    const nextButtons = getAllByText("Next")
+      .map((el) => el.closest("button"))
+      .filter(Boolean);
     expect(nextButtons.some((btn) => btn?.disabled)).toBe(true);
   });
 
   it("calls onNavigate with correct page when clicking Next", () => {
     const onNavigate = vi.fn();
     const { container } = render(
-      <ClientPagination currentPage={2} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={2}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
     // Find the Next button - it's the last button in the component
     const buttons = container.querySelectorAll("button");
@@ -61,7 +95,11 @@ describe("ClientPagination", () => {
   it("calls onNavigate with correct page when clicking Previous", () => {
     const onNavigate = vi.fn();
     const { container } = render(
-      <ClientPagination currentPage={3} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={3}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
     const buttons = container.querySelectorAll("button");
     const prevButton = Array.from(buttons).find(
@@ -75,7 +113,11 @@ describe("ClientPagination", () => {
   it("calls onNavigate when clicking a page number", () => {
     const onNavigate = vi.fn();
     const { container } = render(
-      <ClientPagination currentPage={1} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={1}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
     const buttons = container.querySelectorAll("button");
     const page3Button = Array.from(buttons).find(
@@ -89,7 +131,11 @@ describe("ClientPagination", () => {
   it("renders ellipsis for large page counts at beginning", () => {
     const onNavigate = vi.fn();
     const { getAllByText } = render(
-      <ClientPagination currentPage={1} totalPages={10} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={1}
+        totalPages={10}
+        onNavigate={onNavigate}
+      />,
     );
     // Should show first and last page
     expect(getAllByText("1").length).toBeGreaterThan(0);
@@ -99,7 +145,11 @@ describe("ClientPagination", () => {
   it("renders ellipsis for large page counts at end", () => {
     const onNavigate = vi.fn();
     const { getAllByText } = render(
-      <ClientPagination currentPage={10} totalPages={10} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={10}
+        totalPages={10}
+        onNavigate={onNavigate}
+      />,
     );
     expect(getAllByText("...").length).toBeGreaterThan(0);
   });
@@ -107,7 +157,11 @@ describe("ClientPagination", () => {
   it("renders ellipsis for large page counts in middle", () => {
     const onNavigate = vi.fn();
     const { getAllByText } = render(
-      <ClientPagination currentPage={5} totalPages={10} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={5}
+        totalPages={10}
+        onNavigate={onNavigate}
+      />,
     );
     // With middle page selected, should have ellipsis on both sides
     const ellipses = getAllByText("...");
@@ -117,7 +171,11 @@ describe("ClientPagination", () => {
   it("highlights current page with bold styling", () => {
     const onNavigate = vi.fn();
     const { container } = render(
-      <ClientPagination currentPage={2} totalPages={5} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={2}
+        totalPages={5}
+        onNavigate={onNavigate}
+      />,
     );
     // The current page button should have the "font-bold" class
     const buttons = container.querySelectorAll("button");
@@ -130,7 +188,11 @@ describe("ClientPagination", () => {
   it("renders correctly with 1 page", () => {
     const onNavigate = vi.fn();
     const { container } = render(
-      <ClientPagination currentPage={1} totalPages={1} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={1}
+        totalPages={1}
+        onNavigate={onNavigate}
+      />,
     );
     expect(container).toBeTruthy();
   });
@@ -138,7 +200,11 @@ describe("ClientPagination", () => {
   it("renders near-end pages correctly (currentPage >= totalPages - 2)", () => {
     const onNavigate = vi.fn();
     const { container } = render(
-      <ClientPagination currentPage={8} totalPages={10} onNavigate={onNavigate} />,
+      <ClientPagination
+        currentPage={8}
+        totalPages={10}
+        onNavigate={onNavigate}
+      />,
     );
     expect(container).toBeTruthy();
     // Should show pages near the end
