@@ -34,7 +34,11 @@
     "installation-guide-title": "Installation Guide",
     "installation-guide-desc": "Step-by-step instructions for getting up and running with your new Java runtime.",
     "documentation-title": "Documentation",
-    "documentation-desc": "Comprehensive documentation for Eclipse Temurin and the Adoptium ecosystem."
+    "documentation-desc": "Comprehensive documentation for Eclipse Temurin and the Adoptium ecosystem.",
+    "checksum-title": "SHA-256 checksum",
+    "checksum-copy": "Copy checksum",
+    "checksum-copied": "Copied!",
+    "checksum-verify": "Compare this value with the checksum of the downloaded file (e.g. sha256sum on Linux, shasum -a 256 on macOS, certutil -hashfile on Windows)."
   },
   "NotFoundPage": {
     "title": "Sorry, we couldn't find this page",

@@ -84,7 +84,11 @@ const OneClickDownload = ({
             key={os}
             href={{
               pathname: "/download",
-              query: { link, vendor: "Adoptium" },
+              query: {
+                link,
+                vendor: "Adoptium",
+                ...(artifact.checksum ? { checksum: artifact.checksum } : {}),
+              },
             }}
             aria-label={t("download-package", { os: name })}
             data-testid={`quick-download-${os}`}

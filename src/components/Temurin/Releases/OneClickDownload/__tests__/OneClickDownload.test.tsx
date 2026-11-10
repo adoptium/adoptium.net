@@ -242,11 +242,11 @@ describe("OneClickDownload component", () => {
 
     expect(macOSLink).toHaveAttribute(
       "href",
-      "/download?link=https%3A%2F%2Fexample.com%2Fdownload%2F11.0.28%2B6-jdk.pkg&vendor=Adoptium",
+      "/download?link=https%3A%2F%2Fexample.com%2Fdownload%2F11.0.28%2B6-jdk.pkg&vendor=Adoptium&checksum=def456",
     );
     expect(windowsLink).toHaveAttribute(
       "href",
-      "/download?link=https%3A%2F%2Fexample.com%2Fdownload%2F11.0.28%2B6-jdk.msi&vendor=Adoptium",
+      "/download?link=https%3A%2F%2Fexample.com%2Fdownload%2F11.0.28%2B6-jdk.msi&vendor=Adoptium&checksum=def456",
     );
   });
 

@@ -209,6 +209,9 @@ const AllReleaseCard = ({ results, onReset }: AllReleaseCardProps) => {
                     query: {
                       link: binary.package.link,
                       vendor: capitalize(release.vendor),
+                      ...(binary.package.sha256sum
+                        ? { checksum: binary.package.sha256sum }
+                        : {}),
                     },
                   }}
                   onClick={() =>

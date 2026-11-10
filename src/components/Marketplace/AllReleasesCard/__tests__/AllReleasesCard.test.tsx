@@ -183,7 +183,7 @@ describe("AllReleaseCard", () => {
     const link = screen.getByRole("link", { name: /Download/ });
     expect(link).toHaveAttribute(
       "href",
-      "/download?link=https%3A%2F%2Fexample.com%2Fdownload.tar.gz&vendor=Adoptium",
+      "/download?link=https%3A%2F%2Fexample.com%2Fdownload.tar.gz&vendor=Adoptium&checksum=sha256abc123",
     );
     fireEvent.click(link);
     expect(sendDownloadEvent).toHaveBeenCalledWith({
