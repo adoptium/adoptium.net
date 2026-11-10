@@ -1,0 +1,64 @@
+name: Update Support Table
+
+# Run after every quarterly OpenJDK CPU release (third Tuesday of Jan/Apr/Jul/Oct),
+# plus one day for Temurin binaries to become available.
+# Also allows manual triggering at any time.
+on:
+  schedule:
+    # Third Wednesday of January, April, July, and October at 09:00 UTC.
+    # Cron cannot express "third Tuesday" directly, so this approximates it.
+    # Adjust the day-of-month range as needed (15–21 covers the third week).
+    - cron: "0 9 15-21 1,4,7,10 3"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-support-table:
+    if: github.repository_owner == 'adoptium'
+    name: Update Support Table
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run update script
+        run: python3 .github/workflows/update-support-table.py
+
+      - name: Create or update pull request
+        uses: gr2m/create-or-update-pull-request-action@b65137ca591da0b9f43bad7b24df13050ea45d1b # v1.10.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ADOPTIUM_BOT_TOKEN }}
+        with:
+          title: "support: update support table with latest Temurin release names"
+          body: |
+            This is an automatically generated pull request.
+
+            The [update-support-table](https://github.com/adoptium/adoptium.net/blob/main/.github/workflows/update-support-table.yml) workflow has fetched the latest release data from the [Adoptium API](https://api.adoptium.net/v3/assets/latest) and updated `content/asciidoc-pages/support/_partials/support-table.adoc` with:
+
+            - **Latest Release** — updated release tag and publication month
+            - **Next Release Due** — derived interim-patch tag (e.g. `jdk-21.0.12.1`)
+
+            It will be automatically merged if all CI tests pass.
+
+            Related issue: https://github.com/adoptium/adoptium.net/issues/1328
+          branch: "support-table-bot"
+          commit-message: "support: update support table with latest Temurin release names"
+          author: "adoptium-bot <adoptium-bot@eclipse.org>"
