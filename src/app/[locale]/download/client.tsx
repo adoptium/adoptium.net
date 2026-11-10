@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useSearchParams, redirect } from "next/navigation";
 import { capitalize } from "@/utils/capitalize";
 import { useTranslations } from "next-intl";
@@ -10,6 +11,8 @@ import {
   FaCheckCircle,
   FaExclamationTriangle,
   FaHeart,
+  FaClipboard,
+  FaCheck,
 } from "react-icons/fa";
 import { Link } from "@/i18n/navigation";
 
@@ -18,6 +21,30 @@ export default function DownloadPageClient() {
   const searchParams = useSearchParams();
   const link = searchParams.get("link") || "";
   const vendor = searchParams.get("vendor") || "Adoptium";
+  // Only accept a well-formed SHA-256 hex digest so arbitrary text can never
+  // be rendered from the query string.
+  const rawChecksum = searchParams.get("checksum") || "";
+  const checksum = /^[a-f0-9]{64}$/i.test(rawChecksum)
+    ? rawChecksum.toLowerCase()
+    : null;
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!copied) return;
+    const timer = setTimeout(() => setCopied(false), 3000);
+    return () => clearTimeout(timer);
+  }, [copied]);
+
+  const handleCopyChecksum = async () => {
+    if (!checksum) return;
+    try {
+      await navigator.clipboard.writeText(checksum);
+      setCopied(true);
+    } catch {
+      // Clipboard unavailable (e.g. insecure context) - the value stays
+      // selectable on the page so users can still copy it manually.
+    }
+  };
 
   if (!link) {
     redirect("/temurin/releases");
@@ -109,6 +136,41 @@ export default function DownloadPageClient() {
             .
           </span>
         </p>
+
+        {checksum && (
+          <div
+            className="max-w-2xl mx-auto text-left bg-[#0d002a] border border-white/10 rounded-xl p-4"
+            data-testid="download-checksum"
+          >
+            <p className="text-sm font-semibold text-white mb-2">
+              {t("checksum-title")}
+            </p>
+            <div className="flex items-center gap-2 bg-[#1A0B38] rounded-lg">
+              <code className="flex-1 min-w-0 px-3 py-2 font-mono text-xs sm:text-sm text-gray-200 break-all select-all">
+                {checksum}
+              </code>
+              <button
+                type="button"
+                onClick={handleCopyChecksum}
+                aria-label={copied ? t("checksum-copied") : t("checksum-copy")}
+                title={copied ? t("checksum-copied") : t("checksum-copy")}
+                data-testid="copy-checksum-button"
+                className={`shrink-0 min-h-11 px-3 flex items-center justify-center rounded-lg transition-colors focus-visible:outline-2 focus-visible:outline-pink ${
+                  copied ? "text-green-400" : "text-gray-200 hover:text-white"
+                }`}
+              >
+                {copied ? (
+                  <FaCheck aria-hidden="true" />
+                ) : (
+                  <FaClipboard aria-hidden="true" />
+                )}
+              </button>
+            </div>
+            <p className="text-xs text-[#c4bfce] mt-2">
+              {t("checksum-verify")}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* The Appeal Section - The "Sexy" Part */}

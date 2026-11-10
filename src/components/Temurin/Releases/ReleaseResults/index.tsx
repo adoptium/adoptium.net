@@ -71,7 +71,14 @@ const DownloadRow = ({
     >
       <div className="flex flex-wrap items-center gap-3">
         <Link
-          href={{ pathname: "/download", query: { link, vendor: "Adoptium" } }}
+          href={{
+            pathname: "/download",
+            query: {
+              link,
+              vendor: "Adoptium",
+              ...(artifact.checksum ? { checksum: artifact.checksum } : {}),
+            },
+          }}
           aria-label={`${tPage("download")} ${os} ${arch} ${imageType} ${extension}`}
           onClick={() =>
             sendDownloadEvent({

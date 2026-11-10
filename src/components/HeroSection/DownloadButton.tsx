@@ -58,7 +58,11 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ latestLTS }) => {
           binary?.link
             ? {
                 pathname: "/download",
-                query: { link: binary.link, vendor: "Adoptium" },
+                query: {
+                  link: binary.link,
+                  vendor: "Adoptium",
+                  ...(binary.checksum ? { checksum: binary.checksum } : {}),
+                },
               }
             : "/temurin/releases"
         }
