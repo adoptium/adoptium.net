@@ -14,7 +14,7 @@
     "generate:api-types": "openapi-typescript && prettier --write src/types/adoptiumApiTypes.ts src/types/marketplaceApiTypes.ts"
   },
   "dependencies": {
-    "@asciidoctor/core": "^4.1.1",
+    "@asciidoctor/core": "^4.2.1",
     "@headlessui/react": "^2.2.10",
     "@highcharts/react": "^5.4.0",
     "@next/third-parties": "^16.4.2",
