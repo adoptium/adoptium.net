@@ -23,7 +23,7 @@
 
 | Java 25 (LTS)
 | {month-sep} 2025
-| {month-oc} 2026 +
+| {month-oct} 2026 +
 [.small]#jdk-25.0.5+8#
 | {month-nov} 2027 +
 [.small]#jdk-25.0.5.1#
