@@ -10,7 +10,7 @@
 | {month-sep} 2026
 | {month-oct} 2026 +
 [.small]#jdk-27.0.1.0.2+1#
-| {month-nov} 2027 +
+| {month-nov} 2026 +
 [.small]#jdk-27.0.1.1#
 | {month-mar} 2027
 
@@ -25,7 +25,7 @@
 | {month-sep} 2025
 | {month-oct} 2026 +
 [.small]#jdk-25.0.5+8#
-| {month-nov} 2027 +
+| {month-nov} 2026 +
 [.small]#jdk-25.0.5.1#
 | {at-least} {month-sep} 2031
 
@@ -54,7 +54,7 @@
 | {month-sep} 2023
 | {month-oct} 2026 +
 [.small]#jdk-21.0.13+9#
-| {month-nov} 2027 +
+| {month-nov} 2026 +
 [.small]#jdk-21.0.13.1#
 | {at-least} {month-dec} 2029
 
@@ -83,7 +83,7 @@
 | {month-sep} 2021
 | {month-oct} 2026 +
 [.small]#jdk-17.0.21+9#
-| {month-nov} 2027 +
+| {month-nov} 2026 +
 [.small]#jdk-17.0.21.1#
 | {at-least} {month-oct} 2027
 
@@ -98,7 +98,7 @@
 | {month-sep} 2018
 | {month-oct} 2026 +
 [.small]#jdk-11.0.33+10#
-| {month-nov} 2027 +
+| {month-nov} 2026 +
 [.small]#jdk-11.0.33.1#
 | {at-least} {month-oct} 2027
 
@@ -106,7 +106,7 @@
 | {month-mar} 2014
 | {month-oct} 2026 +
 [.small]#jdk8u512-b09#
-| {month-nov} 2027 +
+| {month-nov} 2026 +
 [.small]#jdk8u514#
 | {at-least} {month-dec} 2030
 
