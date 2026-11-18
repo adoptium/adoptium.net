@@ -146,7 +146,7 @@ export const currentBanners: BannerProps[] = [
     releaseBanner: true,
   },
   {
-    title: "November 2026 CPSU Binaries - In Progress",
+    title: "November 2026 CSPU Binaries - In Progress",
     description:
       "We are creating the November 2026 CSPU binaries for Eclipse Temurin",
     cta: "View Progress by Platform",
