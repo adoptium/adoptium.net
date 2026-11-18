@@ -13,7 +13,7 @@ A memory corruption vulnerability in OpenJDK 17 and later allows an unauthentica
 
 **The November 2026 Eclipse Temurin releases address this issue.** We are actively releasing binaries with the fix for this issue. JDK 27, JDK 25, JDK 21, and JDK 17 release pipelines have been launched and binaries are published as testing completes. You can keep track of the progress by following the [November 2026 release status issue](https://github.com/adoptium/temurin/issues/326).
 
-If you can wait for these releases, upgrading is the simplest and recommended mitigation. In the interim, disabling the Base64 intrinsic can be used to mitigate this issue. Add `-XX:-UseBASE64Intrinsics` to your start-up script or Java command-line to disable the affected code path.
+If you can wait for these releases, upgrading is the simplest and recommended mitigation. In the interim, disabling the base64 intrinsic can be used to mitigate this issue. Add `-XX:-UseBASE64Intrinsics` to your start-up script or Java command-line to disable the affected code path.
 
 ## Which Temurin versions contain the fix?
 
