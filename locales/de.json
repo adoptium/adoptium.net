@@ -522,6 +522,7 @@
       "total": "Downloads insgesamt",
       "github": "GitHub-Downloads",
       "docker": "Docker-Pulls",
+      "packages": "Paket-Downloads",
       "popular": "Beliebteste JDK-Versionen",
       "github-version": "GitHub-Downloads nach Version",
       "daily": "Tägliche Downloads",
@@ -537,7 +538,18 @@
       "total-label": "Gesamt",
       "docker-note": "Die Filter für JDK-Versionen berücksichtigen keine Ergebnisse aus dem offiziellen Docker-Repository.",
       "by-source": "Downloads nach Quelle",
-      "drilldown": "Downloads nach Veröffentlichung erkunden"
+      "drilldown": "Downloads nach Veröffentlichung erkunden",
+      "platform-title": "Downloads nach Plattform",
+      "platform-description": "GitHub-Release-Downloads nach Asset-Typ. Docker-Pulls sind nicht enthalten.",
+      "platform-hint": "Klicken Sie auf ein Segment oder seinen Legendeneintrag, um es auszuschließen. Klicken Sie erneut auf den Legendeneintrag, um es wieder einzubeziehen.",
+      "clear-filters": "Filter zurücksetzen",
+      "by-os": "Betriebssystem",
+      "by-arch": "Architektur",
+      "by-image-type": "Image-Typ",
+      "by-package": "Pakettyp",
+      "archive": "Archiv",
+      "installer": "Installer",
+      "other": "Sonstige"
     },
     "release-notes": {
       "description": "Entdecken Sie Änderungen, Fehlerbehebungen und Verbesserungen in Eclipse Temurin-Versionen.",

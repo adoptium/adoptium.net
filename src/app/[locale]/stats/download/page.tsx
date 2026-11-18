@@ -6,9 +6,10 @@ import { IoCloudDownloadOutline } from "react-icons/io5";
 import { FaGithub, FaDocker } from "react-icons/fa";
 import { fetchDownloadStats } from "@/utils/fetchDownloadStats";
 import { fetchAvailableReleases } from "@/utils/fetchAvailableReleases";
+import { fetchPlatformBreakdown } from "@/utils/fetchPlatformBreakdown";
 import PieChart from "@/components/Dashboard/PieChart";
 import ColumnDrilldown from "@/components/Dashboard/ColumnDrilldown";
-import StackedBarChart from "@/components/Dashboard/StackedBarChart";
+import PlatformBreakdown from "@/components/Dashboard/PlatformBreakdown";
 
 export const metadata: Metadata = {
   title: "Download Dashboard",
@@ -26,19 +27,29 @@ export default async function DownloadStatsPage() {
   const availableReleases = await fetchAvailableReleases();
   (availableReleases.available_releases ?? []).sort((a, b) => a - b);
 
-  const data = await fetchDownloadStats();
+  const [data, platformBreakdown] = await Promise.all([
+    fetchDownloadStats(),
+    fetchPlatformBreakdown(availableReleases.available_releases ?? []).catch(
+      () => null,
+    ),
+  ]);
   const total = data.total_downloads.total;
   const totalDocker = data.total_downloads.docker_pulls;
   const totalGithub = data.total_downloads.github_downloads;
 
-  // Source breakdown pie chart
+  // Source breakdown pie chart; unknown API sources fall back to their raw key
+  const sourceLabels: Record<string, string> = {
+    docker_pulls: t("docker"),
+    github_downloads: t("github"),
+    package_downloads: t("packages"),
+  };
   let totalPieChartData: Array<{ name: string; y: number }> = [];
   if (data && data.total_downloads) {
-    totalPieChartData = Object.keys(data.total_downloads)
-      .filter((key) => key !== "total")
-      .map((key) => ({
-        name: key === "docker_pulls" ? t("docker") : t("github"),
-        y: data.total_downloads[key as keyof typeof data.total_downloads],
+    totalPieChartData = Object.entries(data.total_downloads)
+      .filter(([key]) => key !== "total")
+      .map(([key, value]) => ({
+        name: sourceLabels[key] ?? key,
+        y: value ?? 0,
       }));
   }
 
@@ -47,7 +58,6 @@ export default async function DownloadStatsPage() {
   const githubVersionKeys = Object.keys(data.github_downloads ?? {}).sort(
     (a, b) => parseInt(a, 10) - parseInt(b, 10),
   );
-  const versionLabels = githubVersionKeys.map((k) => `JDK ${k}`);
   const githubPerVersion = githubVersionKeys.map(
     (k) => (data.github_downloads ?? {})[k] ?? 0,
   );
@@ -145,20 +155,7 @@ export default async function DownloadStatsPage() {
           </div>
         </div>
 
-        {/* GitHub downloads per version bar chart */}
-        <div className="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-4 sm:p-6">
-          <StackedBarChart
-            categories={versionLabels}
-            series={[
-              {
-                name: t("github"),
-                data: githubPerVersion,
-                color: "#feae62",
-              },
-            ]}
-            name={t("github-version")}
-          />
-        </div>
+        {platformBreakdown && <PlatformBreakdown stats={platformBreakdown} />}
 
         {/* Detailed drilldown */}
         <section className="min-w-0 rounded-2xl border border-white/10 bg-white/[0.025] p-4 sm:p-6">

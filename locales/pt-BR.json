@@ -522,6 +522,7 @@
       "total": "Total de downloads",
       "github": "Downloads do GitHub",
       "docker": "Downloads de imagens Docker",
+      "packages": "Downloads de pacotes",
       "popular": "Versões mais populares do JDK",
       "github-version": "Downloads do GitHub por versão",
       "daily": "Downloads diários",
@@ -537,7 +538,18 @@
       "total-label": "Total",
       "docker-note": "Os filtros de versão do JDK não incluem resultados do repositório oficial do Docker.",
       "by-source": "Downloads por fonte",
-      "drilldown": "Explore os downloads por lançamento"
+      "drilldown": "Explore os downloads por lançamento",
+      "platform-title": "Downloads por plataforma",
+      "platform-description": "Downloads de versões do GitHub por tipo de recurso. Downloads de imagens Docker não estão incluídos.",
+      "platform-hint": "Clique em uma fatia ou em sua legenda para excluí-la. Clique novamente na legenda para restaurá-la.",
+      "clear-filters": "Limpar filtros",
+      "by-os": "Sistema operacional",
+      "by-arch": "Arquitetura",
+      "by-image-type": "Tipo de imagem",
+      "by-package": "Tipo de pacote",
+      "archive": "Arquivo compactado",
+      "installer": "Instalador",
+      "other": "Outros"
     },
     "release-notes": {
       "description": "Explore as alterações, correções e melhorias nas versões do Eclipse Temurin.",

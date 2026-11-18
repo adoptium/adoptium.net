@@ -522,6 +522,7 @@
       "total": "总下载量",
       "github": "GitHub 下载量",
       "docker": "Docker 拉取量",
+      "packages": "软件包下载量",
       "popular": "最受欢迎的 JDK 版本",
       "github-version": "按版本统计的 GitHub 下载量",
       "daily": "每日下载量",
@@ -537,7 +538,18 @@
       "total-label": "总计",
       "docker-note": "JDK 版本筛选不包含 Docker 官方仓库的结果。",
       "by-source": "按来源统计的下载量",
-      "drilldown": "按发行版本查看下载量"
+      "drilldown": "按发行版本查看下载量",
+      "platform-title": "按平台统计的下载量",
+      "platform-description": "按资产类型统计的 GitHub 发布下载量，不包括 Docker 拉取量。",
+      "platform-hint": "点击扇区或图例将其排除；再次点击图例即可恢复。",
+      "clear-filters": "清除筛选",
+      "by-os": "操作系统",
+      "by-arch": "架构",
+      "by-image-type": "镜像类型",
+      "by-package": "软件包类型",
+      "archive": "归档文件",
+      "installer": "安装程序",
+      "other": "其他"
     },
     "release-notes": {
       "description": "了解 Eclipse Temurin 各版本的变更、修复和改进。",
