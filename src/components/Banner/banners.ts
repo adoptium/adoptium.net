@@ -146,6 +146,17 @@ export const currentBanners: BannerProps[] = [
     releaseBanner: true,
   },
   {
+    title: "November 2026 CSPU Binaries - In Progress",
+    description:
+      "We are creating the November 2026 CSPU binaries for Eclipse Temurin",
+    cta: "View Progress by Platform",
+    ctaLink:
+      "https://github.com/adoptium/temurin/issues/326",
+    startDate: "2026-11-18T00:00:00Z",
+    endDate: "2026-11-30T23:59:59Z",
+    releaseBanner: true,
+  },
+  {
     title: "January 2027 PSU Binaries - In Progress",
     description:
       "We are creating the January 2027 PSU binaries for Eclipse Temurin",
