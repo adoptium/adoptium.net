@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin guidance for CVE-2026-114938 "java4shell"
-date: "2026-11-28"
+date: "2026-11-18"
 author: pmc
 description: The ongoing November 2026 CSPU release includes the fix for CVE-2026-114938. Read up on some guidance to mitigate and which platforms and versions are affected.
 tags:
