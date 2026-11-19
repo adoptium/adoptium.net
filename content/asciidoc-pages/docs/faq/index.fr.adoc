@@ -38,7 +38,7 @@ modifier et partager le code comme décrit dans les licences incluses dans le t�
 L’équipe Adoptium accueille l’aide de différentes manières. Par exemple:
 
 * N'importe qui peut contribuer aux fonds qui assurent le bon déroulement du projet, que ce soit
-sous forme d'un https://www.eclipse.org/donate/adoptium/[don] ou au travers d'un link:/sponsors[mécénat de projets] plus structurés.
+sous forme d'un https://www.eclipse.org/sponsor/adoptium/[don] ou au travers d'un link:/sponsors[mécénat de projets] plus structurés.
 
 * Les organisations qui dépendent d'Adoptium sont encouragées à rejoindre le link:/members[Adoptium Working Group] 
 et à exprimer leur voix quand à la direction du projet.

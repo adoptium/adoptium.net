@@ -43,7 +43,7 @@ Classpath Exception". Usted puede utilizar, modificar y compartir libremente el 
 El equipo de Adoptium recibe ayuda de muchas maneras. Por ejemplo:
 
 * Cualquiera puede contribuir a los fondos que mantienen la ejecución del proyecto, ya sea
-como https://www.eclipse.org/donate/adoptium/[donación única] o a través de un
+como https://www.eclipse.org/sponsor/adoptium/[donación única] o a través de un
 link:/sponsors[patrocinio de proyecto] más estructurado.
 
 * Las organizaciones que dependen de Adoptium son bienvenidas a unirse al

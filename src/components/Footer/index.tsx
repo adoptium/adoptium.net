@@ -43,7 +43,7 @@ const footerData: FooterData[] = [
       },
       {
         text: { key: "footer.donate", defaultText: "Donate" },
-        url: "https://www.eclipse.org/donate/adoptium",
+        url: "https://www.eclipse.org/sponsor/adoptium/",
       },
       {
         text: { key: "footer.members", defaultText: "Members" },

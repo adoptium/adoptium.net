@@ -54,7 +54,7 @@ exports[`Footer component > renders correctly 1`] = `
               <li>
                 <a
                   class="text-gray-400 text-sm hover:text-white hover:translate-x-1 transition-all duration-200 inline-block"
-                  href="https://www.eclipse.org/donate/adoptium"
+                  href="https://www.eclipse.org/sponsor/adoptium/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -751,7 +751,7 @@ exports[`Footer component > renders correctly 1`] = `
                   <li>
                     <a
                       class="text-gray-400 text-base hover:text-white transition-colors duration-200 block py-1"
-                      href="https://www.eclipse.org/donate/adoptium"
+                      href="https://www.eclipse.org/sponsor/adoptium/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >

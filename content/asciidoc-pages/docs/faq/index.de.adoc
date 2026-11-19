@@ -33,7 +33,7 @@ Ja. Eclipse Temurin wird von Adoptium kostenlos und dauerhaft unter der "GNU Gen
 Das Adoptium-Team freut sich über Hilfe in vielen verschiedenen Formen. Zum Beispiel:
 
 * Jeder kann zu den Mitteln beitragen, die das Projekt am Laufen halten, entweder als
-https://www.eclipse.org/donate/adoptium/[einmalige Spende] oder durch eine
+https://www.eclipse.org/sponsor/adoptium/[einmalige Spende] oder durch eine
 strukturiertere link:/sponsors[Projektförderung].
 
 * Organisationen, die von Adoptium abhängen, sind eingeladen, der

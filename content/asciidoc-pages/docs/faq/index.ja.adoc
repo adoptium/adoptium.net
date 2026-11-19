@@ -31,7 +31,7 @@ https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc#exampl
 
 Adoptium チームはさまざまな形での支援を歓迎しています。例えば:
 
-* プロジェクトの円滑な運営を支える資金への貢献として、https://www.eclipse.org/donate/adoptium/[一回限りの寄付] または
+* プロジェクトの円滑な運営を支える資金への貢献として、https://www.eclipse.org/sponsor/adoptium/[一回限りの寄付] または
 link:/sponsors[プロジェクトスポンサーシップ] があります。
 
 * Adoptium に依存している組織には、link:/members[Adoptium ワーキンググループ] への参加を通じてプロジェクトの方向性に意見を持つことをお勧めします。

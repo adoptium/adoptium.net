@@ -44,7 +44,7 @@ conforme descrito nas licenças incluídas no download.
 A equipe do Adoptium aceita ajuda de muitas formas diferentes. Por exemplo:
 
 * Qualquer pessoa pode contribuir com os fundos que mantêm o projeto funcionando
-sem problemas, seja como uma https://www.eclipse.org/donate/adoptium/[doação única] ou por meio de um
+sem problemas, seja como uma https://www.eclipse.org/sponsor/adoptium/[doação única] ou por meio de um
 link:/sponsors[patrocínio de projeto] mais estruturado.
 
 * Organizações que dependem do Adoptium são encorajadas a ingressar no

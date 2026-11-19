@@ -38,7 +38,7 @@ Adoptium 将永久免费提供 Eclipse Temurin 二进制文件供您使用。
 
 Adoptium 团队对各种不同方式的支持表示欢迎。 例如：
 
-* 任何人都可以通过https://www.eclipse.org/donate/adoptium/[一次性捐赠]或者通过link:/sponsors[项目赞助]的链接资助项目，使其能够顺利运行。
+* 任何人都可以通过https://www.eclipse.org/sponsor/adoptium/[一次性捐赠]或者通过link:/sponsors[项目赞助]的链接资助项目，使其能够顺利运行。
 * 我们鼓励依赖 Adoptium 的组织加入 Adoptium 工作组，并在项目发展方向上发表意见
 * 我们欢迎技术和创意的支持，例如通过推广和营销来推进我们的目标，
 写一篇关于您对 Adoptium 项目的体验博客，回答我们 link:/slack[Slack 社区]的问题，
