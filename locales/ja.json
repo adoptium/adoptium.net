@@ -522,6 +522,7 @@
       "total": "総ダウンロード数",
       "github": "GitHubダウンロード数",
       "docker": "Dockerプル数",
+      "packages": "パッケージのダウンロード数",
       "popular": "人気のJDKバージョン",
       "github-version": "バージョン別GitHubダウンロード数",
       "daily": "日別ダウンロード数",
@@ -537,7 +538,18 @@
       "total-label": "合計",
       "docker-note": "JDKバージョンのフィルターには、Docker公式リポジトリの結果は含まれません。",
       "by-source": "ダウンロード元別のダウンロード数",
-      "drilldown": "リリース別のダウンロード数を見る"
+      "drilldown": "リリース別のダウンロード数を見る",
+      "platform-title": "プラットフォーム別のダウンロード数",
+      "platform-description": "アセットの種類別の GitHub リリースのダウンロード数です。Docker プル数は含まれません。",
+      "platform-hint": "セグメントまたは凡例をクリックして除外し、もう一度凡例をクリックして戻します。",
+      "clear-filters": "フィルターをクリア",
+      "by-os": "オペレーティングシステム",
+      "by-arch": "アーキテクチャ",
+      "by-image-type": "イメージの種類",
+      "by-package": "パッケージの種類",
+      "archive": "アーカイブ",
+      "installer": "インストーラー",
+      "other": "その他"
     },
     "release-notes": {
       "description": "Eclipse Temurinの各リリースの変更、修正、改善をご確認ください。",
