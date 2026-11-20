@@ -4,20 +4,23 @@
 :page-description: 下载并安装 Eclipse Temurin，一个开源的 OpenJDK 发行版。
 :page-keywords: java, jdk, jre, openjdk, eclipse temurin, 安装, 下载
 
-link:/temurin/releases[Eclipse Temurin] 提供多种安装包格式下载：
+link:/temurin/releases[Eclipse Temurin] 提供多种安装包格式供下载，并支持 link:/supported-platforms[支持的平台] 中所列的架构和操作系统。如果您正在迁移到 Temurin，可以在我们的 link:/temurin/migration[迁移指南] 中了解 Oracle JDK 与 Temurin 之间的差异，以及您可能需要采取的任何步骤。
 
-* 包管理器（如上所示）
-* link:#_installers[安装程序]
-* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[编程 API]
-* link:/installation/archives[压缩归档文件]
-* link:https://hub.docker.com/_/eclipse-temurin[容器镜像]（DockerHub 上的外部文档）
+== 包管理器
 
-二进制文件支持 link:/supported-platforms[支持的平台] 中列出的架构和操作系统。如果您正在迁移到 Temurin，可以在我们的 link:/temurin/migration[迁移指南] 中了解 Oracle JDK 和 Temurin 之间的差异以及您可能需要采取的任何步骤。
+在大多数系统上均推荐使用包管理器安装 Eclipse Temurin。请在上方选择您的操作系统，或直接跳转到针对您平台的说明：
 
-== 安装程序
-
-目前提供 Windows(R) 和 macOS(R) JDK 和 JRE 包的安装程序。安装步骤包含在以下部分中：
-
-* link:/installation/windows[Windows MSI 安装包]
-* link:/installation/macOS[macOS PKG 安装包]
 * link:/installation/linux[Linux (RPM/DEB/APK) 安装包]
+* link:/installation/macOS[macOS PKG 安装包]
+* link:/installation/windows[Windows MSI 安装包]
+
+== CI/CD 集成
+
+* link:/installation/github-actions[GitHub Actions] — 使用 actions/setup-java，并设置 distribution: 'temurin'
+* link:/installation/ci-scripts[其他 CI/CD 平台] — 在 Azure DevOps、GitLab CI、Jenkins 等平台中通过 Adoptium API 下载并验证 Temurin
+
+== 其他安装方法
+
+* link:/installation/archives[归档文件] — 从 .tar.gz 或 .zip 归档文件手动安装
+* link:/installation/containers[容器镜像] — 适用于 Ubuntu、Alpine、UBI 和 Windows 的官方 Docker 镜像
+* link:https://github.com/adoptium/api.adoptium.net/blob/main/docs/cookbook.adoc[编程 API] — 通过 Adoptium API 自动化下载
