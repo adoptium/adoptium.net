@@ -15,9 +15,9 @@ Eclipse Temurin にはさまざまな商業サポートオプションがあり�
 ^.^|
 image:https://adoptium.net/images/members/ibm-logo.png[IBM,150]
 |
-あらゆる規模および業種のエンタープライズに対して Java を実装、提供、サポートしてきた 20 年以上の経験を持つ https://www.ibm.com[IBM] は、Eclipse Temurin の高品質なコミュニティ主導の提供をサポートおよび貢献する Adoptium ワーキンググループの誇らしいメンバーです。Temurin ユーザーは IBM Runtimes for Business を通じて、ミッションクリティカルな Java ワークロードに対してコスト効率の高い柔軟なライセンスのエンタープライズグレードサポートを受けられます。
+あらゆる規模および業種のエンタープライズに対して Java を実装、提供、サポートしてきた 30 年以上の経験を持つ https://www.ibm.com[IBM] は、Eclipse Temurin の高品質なコミュニティ主導の提供をサポートおよび貢献する Adoptium ワーキンググループの誇らしいメンバーです。Temurin ユーザーは IBM Enterprise Support for OpenJDK を通じて、ミッションクリティカルな Java ワークロードに対してコスト効率の高い柔軟なライセンスのエンタープライズグレードサポートを受けられます。
 
-詳細については、https://www.ibm.com/products/support-for-runtimes[IBM Runtimes for Business] をご覧ください。
+詳細については、https://www.ibm.com/products/openjdk-support[IBM Enterprise Support for OpenJDK] をご覧ください。
 
 ^.^|
 image:https://adoptium.net/images/vendors/vendor-managecat.png[ManageCat,150]
