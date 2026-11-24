@@ -15,9 +15,9 @@ En orden alfabético:
 ^.^|
 image:https://adoptium.net/images/members/ibm-logo.png[IBM,150]
 |
-Con más de dos décadas de experiencia implementando, entregando y brindando soporte de Java para empresas de todos los tamaños e industrias, https://www.ibm.com[IBM] es un orgulloso miembro del grupo de trabajo Adoptium, apoyando y contribuyendo a la entrega de alta calidad liderada por la comunidad de Eclipse Temurin. Los usuarios de Temurin pueden recibir soporte empresarial rentable y con licencias flexibles para sus cargas de trabajo Java de misión crítica con IBM Runtimes for Business.
+Con más de tres décadas de experiencia implementando, entregando y brindando soporte de Java para empresas de todos los tamaños e industrias, https://www.ibm.com[IBM] es un orgulloso miembro del grupo de trabajo Adoptium, apoyando y contribuyendo a la entrega de alta calidad liderada por la comunidad de Eclipse Temurin. Los usuarios de Temurin pueden recibir soporte empresarial rentable y con licencias flexibles para sus cargas de trabajo Java de misión crítica con IBM Enterprise Support for OpenJDK (anteriormente IBM Runtimes for Business).
 
-Visite https://www.ibm.com/products/support-for-runtimes[IBM Runtimes for Business] hoy mismo para más información.
+Visite https://www.ibm.com/products/openjdk-support[IBM Enterprise Support for OpenJDK] hoy mismo para más información.
 
 ^.^|
 image:https://adoptium.net/images/vendors/vendor-managecat.png[ManageCat,150]
