@@ -25,7 +25,7 @@ levels, that open-source projects can use to assess and demonstrate their
 security posture. Level 2 is aimed at projects with at least two maintainers
 and a consistent user base, and builds on Level 1.
 
-A full breakdown of the OpenSSF OSPS Baseline criteria can be found on the [OpenSSF Baseline web site](https://baseline.openssf.org/versions/2025-10-10).
+A full breakdown of the OpenSSF OSPS Baseline criteria can be found on the [OpenSSF Baseline site](https://baseline.openssf.org/versions/2025-10-10).
 
 ## Evidence
 
