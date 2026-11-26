@@ -154,7 +154,7 @@ export default function TemurinReleasesPage({
       </header>
 
       <div className="mx-auto max-w-7xl px-6 pb-12 pt-6 sm:px-8 sm:pb-16">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-4">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-4 relative z-10">
           <VersionSelector
             activeVersionTab={isAllVersionsMode ? 1 : Number(selectedVersion)}
             setActiveVersionTab={(tab) =>
