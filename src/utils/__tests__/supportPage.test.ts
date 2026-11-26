@@ -23,7 +23,8 @@ describe("support page", () => {
       ["8", "Dec 2032"],
     ]) {
       const row = rows.find(
-        (element) => element.cells[0]?.textContent?.trim() === `Java ${version} (LTS)`,
+        (element) =>
+          element.cells[0]?.textContent?.trim() === `Java ${version} (LTS)`,
       );
       expect(row?.cells[4]?.textContent?.trim()).toBe(`At least ${date}`);
     }
