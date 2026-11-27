@@ -43,15 +43,6 @@ This release changes that. Roots whose server distrust-after date has passed are
 
 #### What this means for you
 
-Four roots that were previously included are now removed from the Temurin `cacerts` file:
-
-- `emSign Root CA - G1`
-- `DigiCert Trusted Root G4`
-- `Izenpe.com`
-- `Autoridad de Certificacion Firmaprofesional CIF A62634068`
-
-The truststore goes from 113 to 109 CA certificates.
-
 TLS connections that depend on certificates chaining to one of these roots may fail validation after upgrading. Check the certificate chains of any servers or services you connect to. If a service still depends on one of these roots, ask its operator to move to a chain that is still trusted.
 
 This is deliberately stricter than Mozilla's policy. Mozilla distrusts only certificates issued after the cutoff, and older certificates remain valid until they expire. Java keystores can't express date-based or partial distrust, so Temurin removes the whole root once its cutoff has passed.
@@ -62,7 +53,7 @@ The change applies to the default `SERVER_AUTH` trust purpose that Temurin build
 
 ### Updated CA Certificates
 
-The CA certificate bundle shipped with Eclipse Temurin has also been refreshed to incorporate the latest Mozilla root-certificate updates.
+The CA certificate bundle shipped with Eclipse Temurin has also been refreshed to incorporate the latest Mozilla root-certificate updates. Up to date as of 17th November 2026.
 
 ## How Can You Help
 
