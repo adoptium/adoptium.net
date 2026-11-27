@@ -1,5 +1,5 @@
 = Kommerziell Unterstützungsoptionen für Eclipse Temurin(TM)
-:page-authors: gdams, tellison, hendrikebbers, gerdogdu
+:page-authors: gdams, tellison, hendrikebbers, gerdogdu, mstoodle
 :page-based-on: 6868e004288a663890845c4ce0774e5bbbb37ac7
 
 Es gibt verschiedene kommerzielle Supportoptionen für Eclipse Temurin. Bitte beachten Sie, dass keiner der folgenden Anbieter vom Adoptium(R) Projekt evaluiert wurde oder offiziell empfohlen wird. Jeder kommerzielle Supportanbieter hat in der Regel unterschiedliche Schwerpunkte und Anwendungsfälle für seine Produkte. Daher wird empfohlen, jede Option sorgfältig im Hinblick auf Ihre spezifischen Bedürfnisse und Anforderungen hin zu evaluieren.
@@ -14,9 +14,9 @@ In alphabetischer Reihenfolge:
 ^.^|
 image:https://adoptium.net/images/members/ibm-logo.png[IBM,150]
 |
-With more than two decades experience implementing, delivering, and supporting Java for enterprises of all sizes and industries, https://www.ibm.com[IBM] is a proud member of the Adoptium working group, supporting and contributing to the high quality community led delivery of Eclipse Temurin. Temurin consumers can receive cost effective and flexibly licensed enterprise-grade support for their mission critical Java workloads with IBM Runtimes for Business.
+With more than three decades experience implementing, delivering, and supporting Java for enterprises of all sizes and industries, https://www.ibm.com[IBM] is a proud member of the Adoptium working group, supporting and contributing to the high quality community led delivery of Eclipse Temurin. Temurin consumers can receive cost effective and flexibly licensed enterprise-grade support for their mission critical Java workloads with IBM Enterprise Support for OpenJDK.
 
-Visit https://www.ibm.com/products/support-for-runtimes[IBM Runtimes for Business] today for more information.
+Visit https://www.ibm.com/products/openjdk-support[IBM Enterprise Support for OpenJDK] today for more information.
 
 ^.^|
 image:https://adoptium.net/images/vendors/vendor-managecat.png[ManageCat,150]
