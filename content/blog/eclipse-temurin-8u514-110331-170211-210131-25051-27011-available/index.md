@@ -1,6 +1,6 @@
 ---
 title: Eclipse Temurin 8u514, 11.0.33.1, 17.0.21.1, 21.0.13.1, 25.0.5.1 and 27.0.1.1 Available
-date: "2026-11-26"
+date: "2026-11-27"
 author: pmc
 description: Adoptium is happy to announce the immediate availability of Eclipse Temurin 8u514, 11.0.33.1, 17.0.21.1, 21.0.13.1, 25.0.5.1 and 27.0.1.1. This release includes the fix for CVE-2026-114938 "java4shell" and stricter handling of distrusted CA roots in the cacerts truststore.
 tags:
